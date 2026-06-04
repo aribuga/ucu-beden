@@ -8,7 +8,6 @@ export function LogoHeader({ compact = false }: LogoHeaderProps) {
   return (
     <div className={compact ? "logo-lockup compact" : "logo-lockup"}>
       <img className="site-logo" src={`${basePath}/logo.svg`} alt="UCU BEDEN" />
-      <h1 className="brand">UCU BEDEN</h1>
     </div>
   );
 }
