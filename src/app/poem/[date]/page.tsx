@@ -5,6 +5,8 @@ import { LatestPoemView } from "../../../components/LatestPoemView";
 import { MoodPanel } from "../../../components/MoodPanel";
 import { NowPanel } from "../../../components/NowPanel";
 import { UcuBedenHeader } from "../../../components/UcuBedenHeader";
+import { WalkPanel } from "../../../components/WalkPanel";
+import { WordMutationPanel } from "../../../components/WordMutationPanel";
 import { getLatestPoem, listGeneratedPoems, readState } from "../../../lib/fileStorage";
 
 type Props = {
@@ -28,9 +30,10 @@ export default async function PoemDetailPage({ params }: Props) {
   return (
     <main className="site-shell">
       <UcuBedenHeader latest={latest} state={state} />
+      <LatestPoemView poem={poem} eyebrow="" />
       <MoodPanel mood={poem.mood} sentence={poem.mood_sentence} />
       <NowPanel dailyLife={poem.daily_life} walkState={poem.walk_state} />
-      <LatestPoemView poem={poem} />
+      <WalkPanel walkState={poem.walk_state} />
       <InfluenceSummary poem={poem} />
       <section className="section">
         <h2 className="section-title">Çağrılan Hafıza</h2>
@@ -40,6 +43,7 @@ export default async function PoemDetailPage({ params }: Props) {
           ))}
         </ul>
       </section>
+      <WordMutationPanel mutations={poem.analysis.image_mutations} />
     </main>
   );
 }

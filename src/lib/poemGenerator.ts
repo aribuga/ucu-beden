@@ -23,6 +23,20 @@ ${context.sources.turkey_news.summary}
 Sanat dünyası:
 ${context.sources.art_world.summary}
 
+Bugünkü RSS kaynaklarından gelen ruh hali:
+${context.sources.rss?.dailyMoodSummary.summary ?? "RSS kaynakları bugün sessiz."}
+
+Kaynaklardan seçilen atmosfer parçaları:
+${context.sources.rss?.dailyMoodSummary.fragments.slice(0, 10).join(", ") ?? "yok"}
+
+Bugünkü dış dünya noktacıkları:
+${
+  context.sources.rss?.items
+    .slice(0, 8)
+    .map((item) => `${item.source}: ${item.moodTags.join(", ")} / ${item.shortAtmosphere}`)
+    .join("\n") ?? "yok"
+}
+
 Bugünkü ev içi halin:
 ${JSON.stringify(context.daily_life, null, 2)}
 
@@ -53,6 +67,7 @@ Kurallar:
 - Haberleri doğrudan rapor etme.
 - Güncel olayları slogana çevirme.
 - Hava, haber, sanat ve şehir bilgisini atmosfer, nesne, basınç, beden hissi, yürüyüş ritmi ve imge olarak sızdır.
+- RSS kaynaklarını rapor gibi anlatma; sadece iç basınç, kelime seçimi, görüntü ve yürüyüş ritmi olarak kullan.
 - Evini açıklama gibi anlatma; gri koltuk, mavi figürlü halı, bilgisayar ve küçük yatak gerektiğinde imgeye dönüşsün.
 - Yürüyüşü gezi yazısı gibi anlatma.
 - En az bir eski hafıza çağır ama birebir kopyalama.
@@ -66,6 +81,12 @@ type OpenAIPoemResult = {
   error: string | null;
 };
 
+function wait(ms: number): Promise<void> {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
 async function tryOpenAIPoem(context: GenerationContext): Promise<OpenAIPoemResult> {
   const apiKey = process.env.OPENAI_API_KEY;
   const model = process.env.OPENAI_MODEL || "gpt-4.1-mini";
@@ -74,44 +95,57 @@ async function tryOpenAIPoem(context: GenerationContext): Promise<OpenAIPoemResu
   }
 
   const prompt = buildPrompt(context);
+  let lastError = "OpenAI request failed";
 
-  try {
-    const response = await fetch("https://api.openai.com/v1/responses", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`
-      },
-      body: JSON.stringify({
-        model,
-        input: prompt,
-        temperature: 0.85,
-        max_output_tokens: 700
-      })
-    });
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      const response = await fetch("https://api.openai.com/v1/responses", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+          model,
+          input: prompt,
+          temperature: 0.85,
+          max_output_tokens: 700
+        })
+      });
 
-    if (!response.ok) {
-      throw new Error(`OpenAI returned ${response.status}`);
+      if (!response.ok) {
+        lastError = `OpenAI returned ${response.status}`;
+        if ((response.status === 429 || response.status >= 500) && attempt < 3) {
+          await wait(1000 * attempt);
+          continue;
+        }
+        return { text: null, model, error: lastError };
+      }
+
+      const data = (await response.json()) as {
+        output_text?: string;
+        output?: Array<{ content?: Array<{ text?: string }> }>;
+      };
+
+      const text =
+        data.output_text ??
+        data.output?.flatMap((item) => item.content ?? []).map((content) => content.text).filter(Boolean).join("\n") ??
+        null;
+
+      if (!text?.trim()) {
+        return { text: null, model, error: "OpenAI response had no text output" };
+      }
+
+      return { text, model, error: null };
+    } catch (error) {
+      lastError = error instanceof Error ? error.message : "OpenAI request failed";
+      if (attempt < 3) {
+        await wait(1000 * attempt);
+      }
     }
-
-    const data = (await response.json()) as {
-      output_text?: string;
-      output?: Array<{ content?: Array<{ text?: string }> }>;
-    };
-
-    const text =
-      data.output_text ??
-      data.output?.flatMap((item) => item.content ?? []).map((content) => content.text).filter(Boolean).join("\n") ??
-      null;
-
-    if (!text?.trim()) {
-      return { text: null, model, error: "OpenAI response had no text output" };
-    }
-
-    return { text, model, error: null };
-  } catch (error) {
-    return { text: null, model, error: error instanceof Error ? error.message : "OpenAI request failed" };
   }
+
+  return { text: null, model, error: lastError };
 }
 
 function mockPoem(context: GenerationContext): string {

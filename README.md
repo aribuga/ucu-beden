@@ -24,6 +24,8 @@ NEXT_PUBLIC_BASE_PATH=
 
 If keys are missing, UCU BEDEN keeps working with deterministic mock sources and a mock poem generator.
 
+OpenAI 500/429 responses are treated as temporary failures and retried before the mock poem generator is used. Generated poem JSON includes `generation.provider` so API usage can be checked after a run.
+
 ## Input Poems
 
 Put `.txt` files in `poems_input/`. Poems are separated only by a single-line `-` separator.
@@ -87,8 +89,28 @@ The home page shows the latest poem, age, mood sentence, current home/walk state
 - `/archive`
 - `/memory`
 - `/sources`
+- `/mood-map`
 - `/settings`
 - `/poem/YYYY-MM-DD`
+
+## Themes And Logos
+
+Theme selection is controlled by `data/settings/site_settings.json`.
+
+```json
+{
+  "theme": "minimal",
+  "showMoodDots": true,
+  "showFooterDedication": true
+}
+```
+
+Supported themes:
+
+- `minimal`: the original Space Mono archive theme.
+- `sims2000`: a 2000s life-sim inspired skin.
+
+Logo files live in `public/logo.svg`, `public/footer-logo.svg`, and `public/assets/favicon.svg`.
 
 ## Age
 
@@ -114,7 +136,17 @@ Every 12 generated poems creates a report in `data/yearly_reports/year_XX.json`.
 
 ## Sources
 
-The source collector is adapter-shaped. Open-Meteo can be used for weather. News and art sources can be replaced with RSS or API-backed collectors. Missing APIs fall back to local mock summaries.
+The source collector is adapter-shaped. Open-Meteo can be used for weather. RSS sources are managed in `data/settings/rss_sources.json` and are mood-tagged into `data/sources/YYYY-MM-DD.json`.
+
+RSS categories:
+
+- `science_culture`
+- `entertainment`
+- `art`
+- `news`
+- `life`
+
+The `/mood-map` page visualizes RSS items as mood-colored dots. Missing APIs or failing RSS feeds fall back to local mock summaries without breaking generation.
 
 ## GitHub Actions And Pages
 

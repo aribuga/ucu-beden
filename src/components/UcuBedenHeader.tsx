@@ -1,12 +1,13 @@
 import Link from "next/link";
 
 import type { DailyPoem, UcuBedenState } from "../lib/types";
+import { LogoHeader } from "./LogoHeader";
 
 export function UcuBedenHeader({ latest, state }: { latest: DailyPoem | null; state: UcuBedenState }) {
   return (
     <header className="header">
       <div className="header-top">
-        <h1 className="brand">UCU BEDEN</h1>
+        <LogoHeader />
         <div className="meta">
           <div>Yaş: {latest?.age_display ?? `${state.age_months} ay`}</div>
           <div>Gün: {state.generated_days}</div>
@@ -18,6 +19,7 @@ export function UcuBedenHeader({ latest, state }: { latest: DailyPoem | null; st
         <Link href="/archive">arşiv</Link>
         <Link href="/memory">hafıza</Link>
         <Link href="/sources">kaynaklar</Link>
+        <Link href="/mood-map">mood-map</Link>
         <Link href="/settings">ayarlar</Link>
       </nav>
     </header>

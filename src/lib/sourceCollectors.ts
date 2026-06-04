@@ -1,4 +1,18 @@
-import type { ArtSource, NewsSource, SourceBundle, WeatherSource } from "./types";
+import { readRssSources } from "./fileStorage";
+import { tokenize, topWords } from "./inputPoems";
+import { clamp } from "./random";
+import type {
+  ArtSource,
+  Mood,
+  MoodKey,
+  MoodTaggedSourceItem,
+  NewsSource,
+  RssDailyMoodSummary,
+  RssSource,
+  RssSourceBundle,
+  SourceBundle,
+  WeatherSource
+} from "./types";
 
 const KADIKOY_LAT = 40.9907;
 const KADIKOY_LON = 29.0277;
@@ -11,6 +25,278 @@ async function fetchWithTimeout(url: string, timeoutMs = 6000): Promise<Response
   } finally {
     clearTimeout(timeout);
   }
+}
+
+const moodKeys: MoodKey[] = ["melancholy", "anger", "tenderness", "fatigue", "absurdity", "clarity", "desire", "hope"];
+
+const moodLabels: Record<MoodKey, string> = {
+  melancholy: "melankoli",
+  anger: "öfke",
+  tenderness: "şefkat",
+  fatigue: "yorgunluk",
+  absurdity: "absürtlük",
+  clarity: "açıklık",
+  desire: "arzu",
+  hope: "umut"
+};
+
+const categoryBias: Record<RssSource["category"], Partial<Mood>> = {
+  science_culture: { clarity: 5, melancholy: 2, hope: 2 },
+  entertainment: { absurdity: 4, desire: 3, clarity: 2 },
+  art: { clarity: 4, desire: 4, absurdity: 3, hope: 2 },
+  news: { fatigue: 5, anger: 4, melancholy: 2 },
+  life: { tenderness: 4, desire: 2, hope: 3 }
+};
+
+const moodLexicon: Record<MoodKey, string[]> = {
+  melancholy: ["kayıp", "yas", "ölüm", "yalnız", "eski", "veda", "hatıra", "kriz", "gölge"],
+  anger: ["protesto", "mahkeme", "yasak", "şiddet", "savaş", "kriz", "istifa", "tepki", "suç", "grev"],
+  tenderness: ["bakım", "çocuk", "aile", "dayanışma", "ev", "iyileşme", "hayvan", "komşu", "şefkat"],
+  fatigue: ["ekonomi", "zam", "enflasyon", "trafik", "yoğun", "yorgun", "bekleme", "sıcak", "nem", "çöküş"],
+  absurdity: ["tuhaf", "garip", "viral", "skandal", "oyun", "şaka", "fantastik", "deney", "sahne"],
+  clarity: ["bilim", "arkeoloji", "araştırma", "kazı", "evrim", "rapor", "sergi", "inceleme", "keşif"],
+  desire: ["sinema", "müzik", "sahne", "beden", "aşk", "gece", "tasarım", "şehir", "festival"],
+  hope: ["ödül", "başarı", "yeni", "umut", "başladı", "açıldı", "buluşma", "dayanışma", "gelecek"]
+};
+
+function emptyMood(): Mood {
+  return {
+    melancholy: 0,
+    anger: 0,
+    tenderness: 0,
+    fatigue: 0,
+    absurdity: 0,
+    clarity: 0,
+    desire: 0,
+    hope: 0
+  };
+}
+
+function addMood(target: Mood, source: Partial<Mood>, weight = 1): void {
+  for (const key of moodKeys) {
+    target[key] += (source[key] ?? 0) * weight;
+  }
+}
+
+function decodeXml(text: string): string {
+  return text
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
+    .replace(/&#x([a-f0-9]+);/gi, (_, code) => String.fromCharCode(Number.parseInt(code, 16)))
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, "\"")
+    .replace(/&apos;/g, "'");
+}
+
+function stripHtml(text: string): string {
+  return decodeXml(text).replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+}
+
+function extractTag(block: string, tag: string): string | undefined {
+  const match = block.match(new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`, "i"));
+  return match ? stripHtml(match[1]) : undefined;
+}
+
+function extractAtomLink(block: string): string | undefined {
+  const alternate = block.match(/<link[^>]+rel=["']alternate["'][^>]+href=["']([^"']+)["'][^>]*>/i);
+  const anyLink = block.match(/<link[^>]+href=["']([^"']+)["'][^>]*>/i);
+  return decodeXml(alternate?.[1] ?? anyLink?.[1] ?? "").trim() || undefined;
+}
+
+type RawRssItem = {
+  title: string;
+  link?: string;
+  publishedAt?: string;
+  description?: string;
+};
+
+function parseFeedItems(xml: string): RawRssItem[] {
+  const rssItems = Array.from(xml.matchAll(/<item\b[\s\S]*?<\/item>/gi), (match) => match[0]);
+  const atomItems = rssItems.length === 0 ? Array.from(xml.matchAll(/<entry\b[\s\S]*?<\/entry>/gi), (match) => match[0]) : [];
+  const blocks = rssItems.length > 0 ? rssItems : atomItems;
+
+  return blocks
+    .map((block) => ({
+      title: extractTag(block, "title") ?? "",
+      link: extractTag(block, "link") ?? extractAtomLink(block),
+      publishedAt: extractTag(block, "pubDate") ?? extractTag(block, "published") ?? extractTag(block, "updated"),
+      description: extractTag(block, "description") ?? extractTag(block, "summary")
+    }))
+    .filter((item) => item.title.length > 0);
+}
+
+function atmosphereFor(dominant: MoodKey, category: RssSource["category"]): string {
+  const categoryText: Record<RssSource["category"], string> = {
+    science_culture: "derin zaman ve bilgi kırıntısı",
+    entertainment: "sahne, yüz ve yapay ışık",
+    art: "sergi duvarı ve görüntü basıncı",
+    news: "gündelik politik basınç",
+    life: "şehir içi küçük gündelik temas"
+  };
+  const moodText: Record<MoodKey, string> = {
+    melancholy: "hafif kararan",
+    anger: "içeride kabaran",
+    tenderness: "yumuşayan",
+    fatigue: "ağırlaşan",
+    absurdity: "tuhaflaşan",
+    clarity: "açılan",
+    desire: "parlayan",
+    hope: "yeşeren"
+  };
+  return `${moodText[dominant]} ${categoryText[category]}`;
+}
+
+function scoreRssItem(raw: RawRssItem, source: RssSource): MoodTaggedSourceItem {
+  const scores = emptyMood();
+  const text = `${raw.title} ${raw.description ?? ""}`.toLocaleLowerCase("tr");
+  addMood(scores, categoryBias[source.category]);
+  addMood(scores, source.moodBias ?? {});
+
+  for (const mood of moodKeys) {
+    for (const keyword of moodLexicon[mood]) {
+      if (text.includes(keyword)) {
+        scores[mood] += 2;
+      }
+    }
+  }
+
+  for (const mood of moodKeys) {
+    scores[mood] = clamp(scores[mood], 0, 10);
+  }
+
+  const ranked = moodKeys
+    .slice()
+    .sort((a, b) => scores[b] - scores[a])
+    .filter((mood) => scores[mood] > 0);
+  const moodTags = ranked.slice(0, 3);
+  const dominant = moodTags[0] ?? "clarity";
+  const words = topWords(tokenize(`${raw.title} ${raw.description ?? ""}`), 6);
+
+  return {
+    title: raw.title,
+    source: source.name,
+    category: source.category,
+    url: raw.link,
+    publishedAt: raw.publishedAt,
+    moodTags,
+    moodScores: scores,
+    keywords: words,
+    shortAtmosphere: atmosphereFor(dominant, source.category)
+  };
+}
+
+async function fetchRssSource(source: RssSource): Promise<RssSourceBundle["sources"][number] & { items: MoodTaggedSourceItem[] }> {
+  if (!source.enabled || !source.url) {
+    return { name: source.name, category: source.category, enabled: source.enabled, fetched: false, item_count: 0, items: [] };
+  }
+
+  try {
+    const response = await fetchWithTimeout(source.url, 8000);
+    if (!response.ok) {
+      throw new Error(`RSS returned ${response.status}`);
+    }
+    const xml = await response.text();
+    const items = parseFeedItems(xml)
+      .slice(0, 3)
+      .map((item) => scoreRssItem(item, source));
+    return { name: source.name, category: source.category, enabled: true, fetched: true, item_count: items.length, items };
+  } catch (error) {
+    return {
+      name: source.name,
+      category: source.category,
+      enabled: true,
+      fetched: false,
+      item_count: 0,
+      error: error instanceof Error ? error.message : "RSS fetch failed",
+      items: []
+    };
+  }
+}
+
+function summarizeRssItems(items: MoodTaggedSourceItem[]): RssDailyMoodSummary {
+  const moodScores = emptyMood();
+  for (const item of items) {
+    addMood(moodScores, item.moodScores);
+  }
+  for (const key of moodKeys) {
+    moodScores[key] = items.length > 0 ? clamp(moodScores[key] / items.length, 0, 10) : 0;
+  }
+
+  const ranked = moodKeys.slice().sort((a, b) => moodScores[b] - moodScores[a]);
+  const dominantMood = ranked[0] ?? "clarity";
+  const secondaryMood = ranked[1] ?? "fatigue";
+  const fragments = Array.from(new Set(items.flatMap((item) => [item.shortAtmosphere, ...item.keywords.slice(0, 2)]))).slice(0, 10);
+
+  return {
+    dominantMood,
+    secondaryMood,
+    moodScores,
+    summary:
+      items.length === 0
+        ? "Bugün RSS kaynakları sessiz; dış dünya eski veriyle ve ev içi basınçla duyuluyor."
+        : `Bugün dış dünya ${moodLabels[dominantMood]} ağırlıklı; ikinci damar ${moodLabels[secondaryMood]}. Başlıklar şiire haber olarak değil, iç basınç olarak sızıyor.`,
+    fragments
+  };
+}
+
+function fallbackRss(date: string): RssSourceBundle {
+  const items: MoodTaggedSourceItem[] = [
+    {
+      title: "Erişilemeyen başlıklar ekranda beyaz boşluk bıraktı",
+      source: "mock-rss",
+      category: "news",
+      moodTags: ["fatigue", "melancholy"],
+      moodScores: { melancholy: 5, anger: 2, tenderness: 0, fatigue: 7, absurdity: 2, clarity: 1, desire: 0, hope: 1 },
+      keywords: ["ekran", "boşluk", "başlık"],
+      shortAtmosphere: "erişilemeyen gündem ve kapalı sekme"
+    },
+    {
+      title: "Uzak bir sergi katalog gibi ışık verdi",
+      source: "mock-rss",
+      category: "art",
+      moodTags: ["clarity", "desire"],
+      moodScores: { melancholy: 2, anger: 0, tenderness: 1, fatigue: 1, absurdity: 3, clarity: 6, desire: 5, hope: 2 },
+      keywords: ["sergi", "ışık", "katalog"],
+      shortAtmosphere: "uzak katalog ve görüntü basıncı"
+    }
+  ];
+
+  return {
+    items,
+    dailyMoodSummary: {
+      ...summarizeRssItems(items),
+      summary: `RSS fallback günü ${date}: kaynaklar erişilemedi, eski ekran gürültüsü mood haritasına dönüştü.`
+    },
+    sources: [{ name: "mock-rss", category: "news", enabled: true, fetched: false, item_count: items.length, error: "No live RSS items collected" }]
+  };
+}
+
+async function collectRss(date: string): Promise<{ rss: RssSourceBundle; fallback: boolean; notes: string[] }> {
+  const sources = await readRssSources();
+  const results = await Promise.all(sources.map((source) => fetchRssSource(source)));
+  const allItems = results.flatMap((result) => result.items);
+  const categories: RssSource["category"][] = ["news", "art", "science_culture", "entertainment", "life"];
+  const items = categories.flatMap((category) => allItems.filter((item) => item.category === category).slice(0, category === "news" ? 8 : 5)).slice(0, 30);
+  const sourceSummaries = results.map(({ items: _items, ...summary }) => summary);
+  const errors = sourceSummaries
+    .filter((source) => source.error)
+    .map((source) => `RSS ${source.name}: ${source.error}`);
+
+  if (items.length === 0) {
+    return { rss: fallbackRss(date), fallback: true, notes: ["RSS fallback: canlı RSS item toplanamadı.", ...errors] };
+  }
+
+  return {
+    rss: {
+      items,
+      dailyMoodSummary: summarizeRssItems(items),
+      sources: sourceSummaries
+    },
+    fallback: false,
+    notes: errors.slice(0, 8)
+  };
 }
 
 function fallbackWeather(date: string): WeatherSource {
@@ -179,19 +465,48 @@ async function collectArtWorld(date: string): Promise<{ art: ArtSource; fallback
 }
 
 export async function collectSources(date: string): Promise<SourceBundle> {
-  const [weatherResult, newsResult, artResult] = await Promise.all([
+  const [weatherResult, newsResult, artResult, rssResult] = await Promise.all([
     collectWeather(date),
     collectTurkeyNews(date),
-    collectArtWorld(date)
+    collectArtWorld(date),
+    collectRss(date)
   ]);
+  const rssNewsItems = rssResult.rss.items.filter((item) => item.category === "news");
+  const rssArtItems = rssResult.rss.items.filter((item) => item.category === "art" || item.category === "entertainment");
+
+  const turkeyNews =
+    newsResult.fallback && rssNewsItems.length > 0
+      ? {
+          provider: "rss-news",
+          summary: rssResult.rss.dailyMoodSummary.summary,
+          emotional_weight: clamp(42 + rssResult.rss.dailyMoodSummary.moodScores.anger * 4 + rssResult.rss.dailyMoodSummary.moodScores.fatigue * 3),
+          fragments: rssNewsItems.flatMap((item) => [item.shortAtmosphere, ...item.keywords.slice(0, 2)]).slice(0, 8)
+        }
+      : newsResult.news;
+
+  const artWorld =
+    rssArtItems.length > 0
+      ? {
+          provider: "rss-art",
+          summary: "Sanat ve eğlence RSS kaynakları görüntü, sahne, katalog ve şehir ışığı olarak toplandı.",
+          curiosity: clamp(42 + rssResult.rss.dailyMoodSummary.moodScores.clarity * 4 + rssResult.rss.dailyMoodSummary.moodScores.desire * 3),
+          fragments: rssArtItems.flatMap((item) => [item.shortAtmosphere, ...item.keywords.slice(0, 2)]).slice(0, 8)
+        }
+      : artResult.art;
+
+  const newsFallback = newsResult.fallback && rssNewsItems.length === 0;
+  const artFallback = artResult.fallback && rssArtItems.length === 0;
+  const newsNote = newsResult.fallback && rssNewsItems.length > 0 ? "NEWS_API_KEY yok; RSS gündem kullanıldı." : newsResult.note;
+  const artNote = rssArtItems.length > 0 ? undefined : artResult.note;
 
   return {
     date,
     collected_at: new Date().toISOString(),
-    fallback_used: weatherResult.fallback || newsResult.fallback || artResult.fallback,
+    fallback_used: weatherResult.fallback || newsFallback || artFallback || rssResult.fallback,
     weather: weatherResult.weather,
-    turkey_news: newsResult.news,
-    art_world: artResult.art,
-    notes: [weatherResult.note, newsResult.note, artResult.note].filter((note): note is string => Boolean(note))
+    turkey_news: turkeyNews,
+    art_world: artWorld,
+    rss: rssResult.rss,
+    notes: [weatherResult.note, newsNote, artNote, ...rssResult.notes].filter((note): note is string => Boolean(note))
   };
 }

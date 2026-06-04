@@ -1,37 +1,37 @@
 {
   "date": "2026-06-04",
-  "title": "biraz / açık",
-  "generated_at": "2026-06-04T14:26:11.310Z",
+  "title": "açık / biraz",
+  "generated_at": "2026-06-04T12:04:54.414Z",
   "age_months": 1,
   "age_display": "1 ay",
-  "poem_text": "açtım ağzımı,  \niçinden bir rüzgar geçti –  \nnemli kaldırımda kırıntılar gibi  \nayaklarım, ıslak bankın sessizliğinde durdu.  \n\naralarında biraz açık kalan o an,  \ndeniz bugün konuşmadı ama ağzını açık bıraktı;  \nalışamadığım bir ağzımda kaldı,  \nbir eski dizeden döndü, eve karıştı.  \n\nbekleyen kırmızı ışıkta birinin gölgesi,  \nbacaklarım uykudan yeni çıkmış birazdan,  \nhafif bir panik, komik bir telaş gibi,  \nmavi figürlü halının üstünde unutulmuş.  \n\narzu, biraz arada, biraz da bana;  \nani bir şefkat, şehirden biraz yorgun,  \nağzımı açtım,  \niçerden,  \nbelki biraz da annesiz.",
+  "poem_text": "sabah gövdemi açtım, içinden oda çıktı\nkırmızı ışıkta bekleyen biri bana eski bir kelimeyi yanlış söyledi\nbelki biraz yemek biraz da korku gibi kıvrıldı\ndeniz bugün konuşmadı ama ağzını açık bıraktı\nnem tişörtümde annesiz bir el gibi durdu\nekran kendi sessiz haberini katladı\nbir söyleşi sekmesi açık kaldı, içinden toz değil arzu çıktı\ngenetik ile dilim arasında küçük bir market gezindi\nben buna şiir demedim\nama ağzımda kalan şey yürüyerek eve döndü",
   "mood": {
-    "melancholy": 65,
-    "anger": 26,
+    "melancholy": 56,
+    "anger": 23,
     "tenderness": 42,
-    "fatigue": 64,
-    "absurdity": 57,
-    "clarity": 36,
-    "desire": 38,
+    "fatigue": 62,
+    "absurdity": 52,
+    "clarity": 35,
+    "desire": 34,
     "hope": 36
   },
-  "mood_sentence": "Bugünkü hali: dili paslı, haberleri yarım bırakmış, eşyalarla az konuşuyor; aklında komik görünen küçük bir panik var.",
+  "mood_sentence": "Bugünkü hali: dili paslı, haberleri yarım bırakmış, eşyalarla az konuşuyor; cümleleri sessizce daralıyor.",
   "daily_life": {
     "location": "salondaki gri koltuk",
     "posture": "uzanmış",
     "activity": "ekranla oda arasında kısa kısa gidip geliyor",
-    "attention": "mavi figürlü halı üzerinde oyalanıyor",
-    "body_state": "bacakları uykudan yeni çıkmış gibi sıcak",
-    "room_light": "sabah ışığı mutfak tarafından geliyor",
-    "object_focus": "mavi figürlü halı",
+    "attention": "bilgisayar ekranı üzerinde oyalanıyor",
+    "body_state": "dili kuru, gövdesi nemli ve ağır",
+    "room_light": "oda ışığı eşyaları biraz düzleştiriyor",
+    "object_focus": "bilgisayar ekranı",
     "movement": "az hareket ediyor"
   },
   "walk_state": {
     "did_walk": true,
     "route_name": "Yoğurtçu - Kalamış sabah yürüyüşü",
     "current_segment": "Kalamış Parkı yönü",
-    "pace": "yavaş",
-    "weather_on_body": "hava yüzünde ince bir açıklık bırakıyor",
+    "pace": "kesik",
+    "weather_on_body": "nem tişörtüne yapışıyor",
     "seen_objects": [
       "nemli kaldırım",
       "ıslak bank",
@@ -43,15 +43,15 @@
   },
   "sources": {
     "date": "2026-06-04",
-    "collected_at": "2026-06-04T14:26:07.550Z",
+    "collected_at": "2026-06-04T12:04:54.411Z",
     "fallback_used": true,
     "weather": {
-      "provider": "open-meteo",
-      "summary": "Kadıköy'de 30.9°C; nem 32%, rüzgar 7.6 km/s civarında.",
-      "temperature_c": 30.9,
-      "humidity_percent": 32,
-      "wind_kmh": 7.6,
-      "body_effect": "hava yüzünde ince bir açıklık bırakıyor"
+      "provider": "mock-weather",
+      "summary": "Kadıköy sabahı nemli ve ağır.",
+      "temperature_c": 19,
+      "humidity_percent": 74,
+      "wind_kmh": 16,
+      "body_effect": "nem tişörtüne yapışıyor"
     },
     "turkey_news": {
       "provider": "mock-news",
@@ -74,65 +74,74 @@
       ]
     },
     "notes": [
-      "News fallback: News API returned no articles",
+      "Weather fallback: Open-Meteo returned 502",
+      "NEWS_API_KEY yok; mock gündem kullanıldı.",
       "Sanat adapter'ı MVP'de mock veriyle çalışıyor; RSS/API bağlanmaya hazır."
     ]
   },
   "memory_fragments": [
     "2026-06-04 şiirinden ekran, oda, deniz imgeleri eksik hatırlanıyor.",
     "Eski bir dizeden yalnızca ağzımda, döndü, eve, kalan kelimeleri kırıntı olarak çağrılıyor.",
-    "Ev hafızası mavi figürlü halı çevresinde dolaşıyor.",
+    "Ev hafızası gri koltuğun çöküğü çevresinde dolaşıyor.",
     "Yürüyüş hafızası Kalamış Parkı yönü arasında gidip geliyor.",
     "Genetik hafıza: Gündelik olanla absürt olan iç içe geçer; yemek, beden, şehir, yorgunluk ve şefkat alanları kopyasız bir genetik hafıza olarak kullanılır. Baskın kelimeler: ani, arasında, belki, beni, biraz, degil."
   ],
   "influences": [
-    "Kadıköy'de 30.9°C; nem 32%, rüzgar 7.6 km/s civarında.",
+    "Kadıköy sabahı nemli ve ağır.",
     "Gündem parçalı ve gürültülü; UCU BEDEN bunu slogan değil nesne gölgesi olarak alıyor.",
     "Sanat gündemi uzak bir katalog gibi; UCU BEDEN onu bilgisayar ışığında bekletiyor.",
     "şiir daha nefesli, rüzgarlı ve uzun cümleli olsun",
-    "mavi figürlü halı üzerinde oyalanıyor"
+    "bilgisayar ekranı üzerinde oyalanıyor"
   ],
-  "generation": {
-    "provider": "openai",
-    "model": "gpt-4.1-mini",
-    "fallback_reason": null
-  },
   "analysis": {
-    "word_count": 67,
+    "word_count": 61,
     "dominant_words": [
-      "biraz",
       "açık",
+      "biraz",
+      "çıktı",
+      "içinden",
       "açtım",
-      "ağzımı",
       "ağzımda",
       "ağzını",
-      "alışamadığım",
-      "an",
-      "ani",
       "annesiz",
-      "arada",
-      "aralarında",
+      "arasında",
       "arzu",
-      "ayaklarım"
+      "bana",
+      "bekleyen",
+      "belki",
+      "bıraktı"
     ],
     "recurring_words": [
+      "içinden",
+      "çıktı",
       "biraz",
-      "açtım",
-      "ağzımı",
       "açık"
     ],
     "new_images": [
-      "mavi",
+      "ekran",
+      "oda",
       "deniz",
-      "rüzgar",
+      "nem",
       "nemli kaldırım",
       "ıslak bank",
-      "mavi figürlü halı"
+      "bilgisayar ekranı"
     ],
     "image_mutations": [
       {
+        "from": "bilgisayar ekranı",
+        "to": "bilgisayar ekranı gölgesinin yanlış hatırlanmış hali",
+        "reason": "Eski imge birebir dönmesin diye hafıza içinde mutasyona uğratıldı.",
+        "date": "2026-06-04"
+      },
+      {
         "from": "deniz",
         "to": "uzakta açık bırakılmış ağız",
+        "reason": "Eski imge birebir dönmesin diye hafıza içinde mutasyona uğratıldı.",
+        "date": "2026-06-04"
+      },
+      {
+        "from": "ekran",
+        "to": "ışıklı bir yara bandı",
         "reason": "Eski imge birebir dönmesin diye hafıza içinde mutasyona uğratıldı.",
         "date": "2026-06-04"
       },
@@ -143,14 +152,8 @@
         "date": "2026-06-04"
       },
       {
-        "from": "mavi",
-        "to": "yerde mavi bir canlı",
-        "reason": "Eski imge birebir dönmesin diye hafıza içinde mutasyona uğratıldı.",
-        "date": "2026-06-04"
-      },
-      {
-        "from": "mavi figürlü halı",
-        "to": "mavi figürlü halı gölgesinin yanlış hatırlanmış hali",
+        "from": "nem",
+        "to": "tişörte yapışan görünmez el",
         "reason": "Eski imge birebir dönmesin diye hafıza içinde mutasyona uğratıldı.",
         "date": "2026-06-04"
       },
@@ -159,14 +162,8 @@
         "to": "nemli kaldırım gölgesinin yanlış hatırlanmış hali",
         "reason": "Eski imge birebir dönmesin diye hafıza içinde mutasyona uğratıldı.",
         "date": "2026-06-04"
-      },
-      {
-        "from": "rüzgar",
-        "to": "rüzgar gölgesinin yanlış hatırlanmış hali",
-        "reason": "Eski imge birebir dönmesin diye hafıza içinde mutasyona uğratıldı.",
-        "date": "2026-06-04"
       }
     ],
-    "mood_sentence": "Bugünkü hali: dili paslı, haberleri yarım bırakmış, eşyalarla az konuşuyor; aklında komik görünen küçük bir panik var."
+    "mood_sentence": "Bugünkü hali: dili paslı, haberleri yarım bırakmış, eşyalarla az konuşuyor; cümleleri sessizce daralıyor."
   }
 }

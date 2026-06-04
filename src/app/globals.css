@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import "../styles/themes/minimal.css";
+@import "../styles/themes/sims2000.css";
 
 :root {
   --bg: #fbfbf8;
@@ -7,7 +9,14 @@
   --line: #1f1f1f;
   --soft-line: #cfcfc8;
   --surface: #ffffff;
+  --surface-2: #f2f2ed;
   --focus: #005fcc;
+  --accent: #111111;
+  --accent-2: #005fcc;
+  --shadow: none;
+  --radius: 0;
+  --font-body: "Space Mono", monospace;
+  --font-poem: "Space Mono", monospace;
 }
 
 * {
@@ -23,7 +32,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Space Mono", monospace;
+  font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.65;
 }
@@ -47,7 +56,11 @@ textarea {
 .site-shell {
   width: min(760px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 40px 0 72px;
+  padding: 40px 0 48px;
+}
+
+.theme-root {
+  min-height: 100vh;
 }
 
 .header {
@@ -63,9 +76,27 @@ textarea {
   gap: 24px;
 }
 
+.logo-lockup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.logo-lockup.compact {
+  gap: 10px;
+}
+
+.site-logo {
+  width: clamp(58px, 12vw, 112px);
+  height: auto;
+  flex: 0 0 auto;
+  display: block;
+}
+
 .brand {
   margin: 0;
-  font-size: clamp(38px, 8vw, 76px);
+  font-size: clamp(30px, 6vw, 62px);
   line-height: 0.92;
   letter-spacing: 0;
   font-weight: 700;
@@ -94,6 +125,7 @@ textarea {
 .section {
   padding: 25px 0;
   border-top: 1px solid var(--soft-line);
+  border-radius: var(--radius);
 }
 
 .section:first-child {
@@ -114,11 +146,26 @@ textarea {
   font-weight: 700;
 }
 
+.poem-eyebrow {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
 .poem-text {
   margin: 0;
   white-space: pre-wrap;
   font-size: 17px;
   line-height: 1.85;
+  font-family: var(--font-poem);
+}
+
+.poem-signature {
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: right;
 }
 
 .two-column {
@@ -207,6 +254,19 @@ textarea {
   background: var(--surface);
 }
 
+.source-mini-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.source-mini-item {
+  display: grid;
+  gap: 4px;
+  border-top: 1px dotted var(--soft-line);
+  padding-top: 8px;
+}
+
 .mood-grid {
   display: grid;
   gap: 10px;
@@ -231,6 +291,89 @@ textarea {
   background: var(--line);
 }
 
+.mood-map-section {
+  display: grid;
+  gap: 18px;
+}
+
+.mood-dot-map {
+  position: relative;
+  min-height: 420px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.mood-dot {
+  position: absolute;
+  left: var(--dot-x);
+  top: var(--dot-y);
+  width: var(--dot-size);
+  height: var(--dot-size);
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--dot-color);
+  color: #111;
+  text-decoration: none;
+  font-size: 12px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.18);
+}
+
+.mood-dot:hover,
+.mood-dot:focus {
+  z-index: 2;
+  outline: 2px solid var(--focus);
+}
+
+.mood-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  width: min(260px, 70vw);
+  transform: translateX(-50%);
+  display: none;
+  padding: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 11px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.mood-dot:hover .mood-tooltip,
+.mood-dot:focus .mood-tooltip {
+  display: block;
+}
+
+.mood-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mood-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.legend-swatch {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--swatch);
+}
+
 .empty-state {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -252,6 +395,22 @@ textarea {
   font-size: 12px;
 }
 
+.site-footer {
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto 36px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer-logo {
+  width: min(180px, 52vw);
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 640px) {
   .site-shell {
     width: min(100% - 24px, 760px);
@@ -259,6 +418,7 @@ textarea {
   }
 
   .header-top,
+  .logo-lockup,
   .two-column,
   .label-row,
   .mood-row,
@@ -271,7 +431,15 @@ textarea {
     font-size: 42px;
   }
 
+  .site-logo {
+    width: 74px;
+  }
+
   .poem-text {
     font-size: 16px;
+  }
+
+  .mood-dot-map {
+    min-height: 360px;
   }
 }

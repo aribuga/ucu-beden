@@ -20,7 +20,24 @@ export function SourceInfluencePanel({ source }: { source: SourceBundle }) {
           <span className="label">sanat</span>
           <span>{source.art_world.summary}</span>
         </div>
+        {source.rss ? (
+          <div className="label-row">
+            <span className="label">rss mood</span>
+            <span>{source.rss.dailyMoodSummary.summary}</span>
+          </div>
+        ) : null}
       </div>
+      {source.rss ? (
+        <div className="source-mini-list">
+          {source.rss.items.slice(0, 6).map((item) => (
+            <div className="source-mini-item" key={`${item.source}-${item.title}`}>
+              <strong>{item.source}</strong>
+              <span>{item.title}</span>
+              <span className="tiny">{item.moodTags.join(", ")} / {item.shortAtmosphere}</span>
+            </div>
+          ))}
+        </div>
+      ) : null}
     </article>
   );
 }

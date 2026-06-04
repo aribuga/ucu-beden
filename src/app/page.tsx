@@ -1,4 +1,3 @@
-import { AgePanel } from "../components/AgePanel";
 import { InfluenceSummary } from "../components/InfluenceSummary";
 import { LatestPoemView } from "../components/LatestPoemView";
 import { MoodPanel } from "../components/MoodPanel";
@@ -22,15 +21,13 @@ export default async function HomePage() {
         </section>
       ) : (
         <>
-          <AgePanel latest={latest} state={state} />
+          <LatestPoemView poem={latest} />
           <MoodPanel mood={latest.mood} sentence={latest.mood_sentence} />
           <NowPanel dailyLife={latest.daily_life} walkState={latest.walk_state} />
-          <LatestPoemView poem={latest} />
           <InfluenceSummary poem={latest} />
           <PoemTimeline poems={poems.slice(-12)} />
         </>
       )}
-      <p className="footer-note">Yerel dosyalar: data/generated_poems, data/state, data/sources, data/analysis.</p>
     </main>
   );
 }

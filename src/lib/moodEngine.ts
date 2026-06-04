@@ -12,6 +12,17 @@ const defaultMood: Mood = {
   hope: 34
 };
 
+const moodLabels: Record<keyof Mood, string> = {
+  melancholy: "melankoli",
+  anger: "öfke",
+  tenderness: "şefkat",
+  fatigue: "yorgunluk",
+  absurdity: "absürtlük",
+  clarity: "açıklık",
+  desire: "arzu",
+  hope: "umut"
+};
+
 function drift(previous: number, target: number, weight = 0.35): number {
   return previous * (1 - weight) + target * weight;
 }
@@ -26,6 +37,7 @@ export function calculateMood(params: {
   const weather = params.sources.weather;
   const newsWeight = params.sources.turkey_news.emotional_weight;
   const artCuriosity = params.sources.art_world.curiosity;
+  const rssScores = params.sources.rss?.dailyMoodSummary.moodScores;
   const geneticTone = params.inputAnalysis.global.tone;
   const age = params.state.age_months;
   const random = seededNumber(`${params.date}:mood`);
@@ -43,6 +55,17 @@ export function calculateMood(params: {
     desire: 24 + artCuriosity * 0.2 + (geneticTone.includes("yemekle bozulan") ? 7 : 0),
     hope: 26 + artCuriosity * 0.25 + wind * 0.22 - newsWeight * 0.08
   };
+
+  if (rssScores) {
+    target.melancholy += rssScores.melancholy * 1.8;
+    target.anger += rssScores.anger * 2;
+    target.tenderness += rssScores.tenderness * 1.6;
+    target.fatigue += rssScores.fatigue * 2;
+    target.absurdity += rssScores.absurdity * 1.8;
+    target.clarity += rssScores.clarity * 1.6;
+    target.desire += rssScores.desire * 1.7;
+    target.hope += rssScores.hope * 1.5;
+  }
 
   const mood: Mood = {
     melancholy: clamp(drift(previous.melancholy, target.melancholy)),
@@ -62,7 +85,8 @@ export function moodSentence(mood: Mood, sources: SourceBundle): string {
   const body = mood.fatigue > 65 ? "gövdesi ağır" : mood.clarity > 45 ? "yüzü biraz açılmış" : "dili paslı";
   const news = sources.turkey_news.emotional_weight > 60 ? "haberlerden sonra içi kalabalık" : "haberleri yarım bırakmış";
   const tenderness = mood.tenderness > 55 ? "yine de koltuğa şefkatli bakıyor" : "eşyalarla az konuşuyor";
-  const absurd = mood.absurdity > 55 ? "aklında komik görünen küçük bir panik var" : "cümleleri sessizce daralıyor";
+  const rss = sources.rss ? `${moodLabels[sources.rss.dailyMoodSummary.dominantMood]} noktaları çevresinde dönüyor` : "cümleleri sessizce daralıyor";
+  const absurd = mood.absurdity > 55 ? "aklında komik görünen küçük bir panik var" : rss;
 
   return `Bugünkü hali: ${body}, ${news}, ${tenderness}; ${absurd}.`;
 }

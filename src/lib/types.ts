@@ -11,6 +11,14 @@ export type Mood = {
 
 export type MoodKey = keyof Mood;
 
+export type SiteTheme = "minimal" | "sims2000";
+
+export type SiteSettings = {
+  theme: SiteTheme;
+  showMoodDots: boolean;
+  showFooterDedication: boolean;
+};
+
 export type DailyLife = {
   location: string;
   posture: string;
@@ -63,7 +71,51 @@ export type SourceBundle = {
   weather: WeatherSource;
   turkey_news: NewsSource;
   art_world: ArtSource;
+  rss?: RssSourceBundle;
   notes: string[];
+};
+
+export type RssSourceCategory = "science_culture" | "entertainment" | "art" | "news" | "life";
+
+export type RssSource = {
+  name: string;
+  category: RssSourceCategory;
+  url: string;
+  enabled: boolean;
+  moodBias?: Partial<Mood>;
+};
+
+export type MoodTaggedSourceItem = {
+  title: string;
+  source: string;
+  category: RssSourceCategory;
+  url?: string;
+  publishedAt?: string;
+  moodTags: MoodKey[];
+  moodScores: Mood;
+  keywords: string[];
+  shortAtmosphere: string;
+};
+
+export type RssDailyMoodSummary = {
+  dominantMood: MoodKey;
+  secondaryMood: MoodKey;
+  moodScores: Mood;
+  summary: string;
+  fragments: string[];
+};
+
+export type RssSourceBundle = {
+  items: MoodTaggedSourceItem[];
+  dailyMoodSummary: RssDailyMoodSummary;
+  sources: Array<{
+    name: string;
+    category: RssSourceCategory;
+    enabled: boolean;
+    fetched: boolean;
+    item_count: number;
+    error?: string;
+  }>;
 };
 
 export type PoemAnalysis = {

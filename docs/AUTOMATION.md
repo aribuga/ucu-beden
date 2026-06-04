@@ -28,6 +28,8 @@ Use a manual override only when you intentionally want to rewrite the current da
 npm run generate:today -- --force
 ```
 
+GitHub Actions manual runs expose the same behavior through the `force_regenerate` checkbox. Leave `target_date` empty to use the current Istanbul date.
+
 ## Secrets
 
 Optional secrets:
@@ -40,6 +42,30 @@ WEATHER_API_KEY
 ```
 
 Missing keys do not stop the workflow. Sources and poems fall back to deterministic mock data.
+
+OpenAI 500/429 responses are retried before falling back to the mock poem generator. Check generated JSON at:
+
+```txt
+data/generated_poems/YYYY-MM-DD.json
+```
+
+Look for:
+
+```txt
+generation.provider
+generation.fallback_reason
+```
+
+## Settings
+
+Theme and source settings live in:
+
+```txt
+data/settings/site_settings.json
+data/settings/rss_sources.json
+```
+
+Changing `theme` between `minimal` and `sims2000` changes the visual skin without code changes.
 
 ## GitHub Pages
 
@@ -59,6 +85,7 @@ After generation, the workflow commits changed files under:
 data/generated_poems/
 data/state/
 data/sources/
+data/settings/
 data/analysis/
 data/yearly_reports/
 ```

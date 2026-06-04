@@ -16,12 +16,16 @@ This project is a local-first poetic archive and daily generation system for a d
 - Old poems should influence new poems as memory, but never as direct copy.
 - UCU BEDEN may remember its old poems correctly, partially, or incorrectly.
 - External sources should influence atmosphere, not create news summaries.
+- RSS source items should be mood-tagged and used as pressure, atmosphere, image field, and walking rhythm.
 - UCU BEDEN lives in Osmanaga, Kadikoy, in Kirimli Apartmani.
 - UCU BEDEN has a 35 m2 1+1 home with a grey couch, blue-figure rug, computer in the living room, and a small bedroom.
 - UCU BEDEN often writes poems while walking around Yogurtcu Park and Kalamis Park.
 - Walking should influence rhythm, breath, image, and memory.
 - The UI should feel like a poetic archive, not a SaaS dashboard.
-- The visual design should be basic, minimal, black-and-white, and use Space Mono.
+- The `minimal` theme should preserve the basic black-and-white Space Mono archive feel.
+- The `sims2000` theme is an experimental life-sim/old-computer skin and must keep poems readable.
+- Active theme is controlled by `data/settings/site_settings.json`, not code changes.
+- Logo assets in `public/` should be used as provided and not optimized destructively.
 
 ## Engineering principles
 
@@ -31,6 +35,8 @@ This project is a local-first poetic archive and daily generation system for a d
 - Make data models explicit.
 - Avoid hardcoded API keys.
 - Add fallbacks for missing external services.
+- Keep RSS sources configurable through `data/settings/rss_sources.json`.
+- OpenAI transient failures should retry before falling back to mock generation.
 - Keep functions small and testable.
 - Add clear scripts for generation and analysis.
 - Do not break existing generated archives.

@@ -1,0 +1,59 @@
+body[data-theme="sims2000"] {
+  --bg: #78c7bd;
+  --text: #172421;
+  --muted: #38544f;
+  --line: #17423e;
+  --soft-line: #63a99f;
+  --surface: #f8fff2;
+  --surface-2: #dff3c3;
+  --focus: #2357c5;
+  --accent: #a6ef43;
+  --accent-2: #ffde59;
+  --shadow: 5px 5px 0 #214f4a;
+  --radius: 8px;
+  --font-body: "Comic Sans MS", "Comic Neue", "Space Mono", cursive;
+  --font-poem: "Space Mono", monospace;
+}
+
+body[data-theme="sims2000"] {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+    var(--bg);
+  background-size: 28px 28px;
+}
+
+body[data-theme="sims2000"] .header,
+body[data-theme="sims2000"] .section,
+body[data-theme="sims2000"] .site-footer {
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding-inline: 18px;
+}
+
+body[data-theme="sims2000"] .header {
+  padding-top: 18px;
+}
+
+body[data-theme="sims2000"] .section {
+  margin-block: 18px;
+}
+
+body[data-theme="sims2000"] .nav a,
+body[data-theme="sims2000"] .tag-list li,
+body[data-theme="sims2000"] .command {
+  background: linear-gradient(#ffffff, var(--surface-2));
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 2px 2px 0 var(--line);
+  color: var(--text);
+  padding: 3px 8px;
+  text-decoration: none;
+}
+
+body[data-theme="sims2000"] .section-title,
+body[data-theme="sims2000"] .poem-eyebrow {
+  color: #0d4b44;
+}

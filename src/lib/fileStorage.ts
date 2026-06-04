@@ -1,7 +1,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
-import type { DailyPoem, InputPoemsAnalysis, SourceBundle, UcuBedenState, World, YearlyReport } from "./types";
+import type { DailyPoem, InputPoemsAnalysis, RssSource, SiteSettings, SourceBundle, UcuBedenState, World, YearlyReport } from "./types";
 
 export const rootDir = process.cwd();
 
@@ -12,6 +12,8 @@ export const storagePaths = {
   generatedPoems: "data/generated_poems",
   yearlyReports: "data/yearly_reports",
   sources: "data/sources",
+  siteSettings: "data/settings/site_settings.json",
+  rssSources: "data/settings/rss_sources.json",
   inputAnalysis: "data/analysis/input_poems_analysis.json",
   vocabularyMemory: "data/analysis/vocabulary_memory.json",
   imageMutations: "data/analysis/image_mutations.json"
@@ -24,6 +26,7 @@ const dataDirs = [
   "data/generated_poems",
   "data/yearly_reports",
   "data/sources",
+  "data/settings",
   "data/analysis"
 ];
 
@@ -170,6 +173,19 @@ export async function readInputAnalysis(): Promise<InputPoemsAnalysis> {
       taboo_copying_rules: "Do not reproduce full lines from input poems."
     }
   });
+}
+
+export async function readSiteSettings(): Promise<SiteSettings> {
+  const settings = await readJsonFile<Partial<SiteSettings>>(storagePaths.siteSettings, {});
+  return {
+    theme: settings.theme === "sims2000" || settings.theme === "minimal" ? settings.theme : "minimal",
+    showMoodDots: settings.showMoodDots ?? true,
+    showFooterDedication: settings.showFooterDedication ?? true
+  };
+}
+
+export async function readRssSources(): Promise<RssSource[]> {
+  return readJsonFile<RssSource[]>(storagePaths.rssSources, []);
 }
 
 export async function listYearlyReports(): Promise<YearlyReport[]> {
