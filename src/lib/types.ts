@@ -11,7 +11,7 @@ export type Mood = {
 
 export type MoodKey = keyof Mood;
 
-export type SiteTheme = "minimal" | "sims2000";
+export type SiteTheme = "minimal" | "sims2000" | "fresh90s";
 
 export type SiteSettings = {
   theme: SiteTheme;
