@@ -47,8 +47,8 @@ jobs:
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
           NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-          FORCE_REGENERATE: ${{ inputs.force_regenerate || false }}
-          TARGET_DATE: ${{ inputs.target_date || '' }}
+          FORCE_REGENERATE: ${{ github.event.inputs.force_regenerate || false }}
+          TARGET_DATE: ${{ github.event.inputs.target_date || '' }}
         run: |
           DATE_ARG=""
           if [ -n "$TARGET_DATE" ]; then
