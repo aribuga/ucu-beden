@@ -13,6 +13,7 @@ export const storagePaths = {
   yearlyReports: "data/yearly_reports",
   sources: "data/sources",
   siteSettings: "data/settings/site_settings.json",
+  customCode: "data/settings/custom_code.html",
   rssSources: "data/settings/rss_sources.json",
   inputAnalysis: "data/analysis/input_poems_analysis.json",
   vocabularyMemory: "data/analysis/vocabulary_memory.json",
@@ -64,6 +65,14 @@ export async function writeJsonFile(relativePath: string, data: unknown): Promis
 
 export async function readTextFile(relativePath: string): Promise<string> {
   return fs.readFile(resolvePath(relativePath), "utf8");
+}
+
+export async function readOptionalTextFile(relativePath: string): Promise<string> {
+  try {
+    return await readTextFile(relativePath);
+  } catch {
+    return "";
+  }
 }
 
 export async function writeTextFile(relativePath: string, text: string): Promise<void> {
