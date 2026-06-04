@@ -1,18 +1,18 @@
 {
   "date": "2026-06-04",
   "title": "açık / biraz",
-  "generated_at": "2026-06-04T12:04:54.414Z",
+  "generated_at": "2026-06-04T14:14:07.050Z",
   "age_months": 1,
   "age_display": "1 ay",
   "poem_text": "sabah gövdemi açtım, içinden oda çıktı\nkırmızı ışıkta bekleyen biri bana eski bir kelimeyi yanlış söyledi\nbelki biraz yemek biraz da korku gibi kıvrıldı\ndeniz bugün konuşmadı ama ağzını açık bıraktı\nnem tişörtümde annesiz bir el gibi durdu\nekran kendi sessiz haberini katladı\nbir söyleşi sekmesi açık kaldı, içinden toz değil arzu çıktı\ngenetik ile dilim arasında küçük bir market gezindi\nben buna şiir demedim\nama ağzımda kalan şey yürüyerek eve döndü",
   "mood": {
-    "melancholy": 56,
-    "anger": 23,
+    "melancholy": 63,
+    "anger": 25,
     "tenderness": 42,
-    "fatigue": 62,
-    "absurdity": 52,
-    "clarity": 35,
-    "desire": 34,
+    "fatigue": 65,
+    "absurdity": 55,
+    "clarity": 36,
+    "desire": 36,
     "hope": 36
   },
   "mood_sentence": "Bugünkü hali: dili paslı, haberleri yarım bırakmış, eşyalarla az konuşuyor; cümleleri sessizce daralıyor.",
@@ -20,17 +20,17 @@
     "location": "salondaki gri koltuk",
     "posture": "uzanmış",
     "activity": "ekranla oda arasında kısa kısa gidip geliyor",
-    "attention": "bilgisayar ekranı üzerinde oyalanıyor",
+    "attention": "mavi figürlü halı üzerinde oyalanıyor",
     "body_state": "dili kuru, gövdesi nemli ve ağır",
-    "room_light": "oda ışığı eşyaları biraz düzleştiriyor",
-    "object_focus": "bilgisayar ekranı",
+    "room_light": "sabah ışığı mutfak tarafından geliyor",
+    "object_focus": "mavi figürlü halı",
     "movement": "az hareket ediyor"
   },
   "walk_state": {
     "did_walk": true,
     "route_name": "Yoğurtçu - Kalamış sabah yürüyüşü",
     "current_segment": "Kalamış Parkı yönü",
-    "pace": "kesik",
+    "pace": "yavaş",
     "weather_on_body": "nem tişörtüne yapışıyor",
     "seen_objects": [
       "nemli kaldırım",
@@ -43,7 +43,7 @@
   },
   "sources": {
     "date": "2026-06-04",
-    "collected_at": "2026-06-04T12:04:54.411Z",
+    "collected_at": "2026-06-04T14:14:00.964Z",
     "fallback_used": true,
     "weather": {
       "provider": "mock-weather",
@@ -75,14 +75,14 @@
     },
     "notes": [
       "Weather fallback: Open-Meteo returned 502",
-      "NEWS_API_KEY yok; mock gündem kullanıldı.",
+      "News fallback: News API returned no articles",
       "Sanat adapter'ı MVP'de mock veriyle çalışıyor; RSS/API bağlanmaya hazır."
     ]
   },
   "memory_fragments": [
     "2026-06-04 şiirinden ekran, oda, deniz imgeleri eksik hatırlanıyor.",
     "Eski bir dizeden yalnızca ağzımda, döndü, eve, kalan kelimeleri kırıntı olarak çağrılıyor.",
-    "Ev hafızası gri koltuğun çöküğü çevresinde dolaşıyor.",
+    "Ev hafızası bilgisayar ekranı çevresinde dolaşıyor.",
     "Yürüyüş hafızası Kalamış Parkı yönü arasında gidip geliyor.",
     "Genetik hafıza: Gündelik olanla absürt olan iç içe geçer; yemek, beden, şehir, yorgunluk ve şefkat alanları kopyasız bir genetik hafıza olarak kullanılır. Baskın kelimeler: ani, arasında, belki, beni, biraz, degil."
   ],
@@ -91,8 +91,13 @@
     "Gündem parçalı ve gürültülü; UCU BEDEN bunu slogan değil nesne gölgesi olarak alıyor.",
     "Sanat gündemi uzak bir katalog gibi; UCU BEDEN onu bilgisayar ışığında bekletiyor.",
     "şiir daha nefesli, rüzgarlı ve uzun cümleli olsun",
-    "bilgisayar ekranı üzerinde oyalanıyor"
+    "mavi figürlü halı üzerinde oyalanıyor"
   ],
+  "generation": {
+    "provider": "mock",
+    "model": "gpt-4.1-mini",
+    "fallback_reason": "OpenAI returned 500"
+  },
   "analysis": {
     "word_count": 61,
     "dominant_words": [
@@ -124,15 +129,9 @@
       "nem",
       "nemli kaldırım",
       "ıslak bank",
-      "bilgisayar ekranı"
+      "mavi figürlü halı"
     ],
     "image_mutations": [
-      {
-        "from": "bilgisayar ekranı",
-        "to": "bilgisayar ekranı gölgesinin yanlış hatırlanmış hali",
-        "reason": "Eski imge birebir dönmesin diye hafıza içinde mutasyona uğratıldı.",
-        "date": "2026-06-04"
-      },
       {
         "from": "deniz",
         "to": "uzakta açık bırakılmış ağız",
@@ -148,6 +147,12 @@
       {
         "from": "ıslak bank",
         "to": "ıslak bank gölgesinin yanlış hatırlanmış hali",
+        "reason": "Eski imge birebir dönmesin diye hafıza içinde mutasyona uğratıldı.",
+        "date": "2026-06-04"
+      },
+      {
+        "from": "mavi figürlü halı",
+        "to": "mavi figürlü halı gölgesinin yanlış hatırlanmış hali",
         "reason": "Eski imge birebir dönmesin diye hafıza içinde mutasyona uğratıldı.",
         "date": "2026-06-04"
       },
