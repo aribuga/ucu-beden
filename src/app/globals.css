@@ -88,7 +88,7 @@ textarea {
 }
 
 .site-logo {
-  width: clamp(58px, 12vw, 112px);
+  width: clamp(150px, 18vw, 230px);
   height: auto;
   flex: 0 0 auto;
   display: block;
@@ -204,7 +204,7 @@ textarea {
 }
 
 .timeline-item,
-.daily-card,
+daily-card,
 .source-row,
 .report-row {
   display: grid;
@@ -432,7 +432,7 @@ textarea {
   }
 
   .site-logo {
-    width: 74px;
+    width: min(180px, 72vw);
   }
 
   .poem-text {
