@@ -4,12 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "generate:today": "tsx src/scripts/generateDailyPoem.ts",
-    "analyze:input": "tsx src/scripts/analyzeInputPoems.ts",
-    "rebuild:memory": "tsx src/scripts/rebuildMemory.ts",
-    "typecheck": "tsc --noEmit"
+    "dev": "node --preserve-symlinks --preserve-symlinks-main node_modules/next/dist/bin/next dev",
+    "build": "node --preserve-symlinks --preserve-symlinks-main node_modules/next/dist/bin/next build",
+    "generate:today": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/generateDailyPoem.ts",
+    "analyze:input": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/analyzeInputPoems.ts",
+    "rebuild:memory": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/rebuildMemory.ts",
+    "typecheck": "node --preserve-symlinks --preserve-symlinks-main node_modules/typescript/bin/tsc --noEmit"
   },
   "dependencies": {
     "next": "^15.0.0",
