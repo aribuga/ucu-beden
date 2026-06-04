@@ -2,6 +2,17 @@ name: Daily poem and deploy
 
 on:
   workflow_dispatch:
+    inputs:
+      force_regenerate:
+        description: "Regenerate today's poem even if it already exists"
+        required: false
+        default: false
+        type: boolean
+      target_date:
+        description: "Optional date to generate, in YYYY-MM-DD format"
+        required: false
+        default: ""
+        type: string
   schedule:
     - cron: "0 6 * * *"
 
@@ -30,13 +41,25 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Generate today's poem
+      - name: Generate poem
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
           NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-        run: npm run generate:today
+          FORCE_REGENERATE: ${{ inputs.force_regenerate || false }}
+          TARGET_DATE: ${{ inputs.target_date || '' }}
+        run: |
+          DATE_ARG=""
+          if [ -n "$TARGET_DATE" ]; then
+            DATE_ARG="--date=$TARGET_DATE"
+          fi
+
+          if [ "$FORCE_REGENERATE" = "true" ]; then
+            npm run generate:today -- $DATE_ARG --force
+          else
+            npm run generate:today -- $DATE_ARG
+          fi
 
       - name: Commit generated data
         run: |
