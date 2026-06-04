@@ -99,7 +99,7 @@ Theme selection is controlled by `data/settings/site_settings.json`.
 
 ```json
 {
-  "theme": "minimal",
+  "theme": "fresh90s",
   "showMoodDots": true,
   "showFooterDedication": true
 }
@@ -109,6 +109,7 @@ Supported themes:
 
 - `minimal`: the original Space Mono archive theme.
 - `sims2000`: a 2000s life-sim inspired skin.
+- `fresh90s`: a dark 90s web skin with rainbow logo, side-menu styling, cyan text, and loud borders.
 
 Logo files live in `public/logo.svg`, `public/footer-logo.svg`, and `public/assets/favicon.svg`.
 
