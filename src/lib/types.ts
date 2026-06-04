@@ -75,6 +75,12 @@ export type PoemAnalysis = {
   mood_sentence: string;
 };
 
+export type PoemGenerationMeta = {
+  provider: "openai" | "mock";
+  model: string | null;
+  fallback_reason: string | null;
+};
+
 export type ImageMutation = {
   from: string;
   to: string;
@@ -96,6 +102,7 @@ export type DailyPoem = {
   sources: SourceBundle;
   memory_fragments: string[];
   influences: string[];
+  generation: PoemGenerationMeta;
   analysis: PoemAnalysis;
 };
 
