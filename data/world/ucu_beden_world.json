@@ -1,0 +1,85 @@
+{
+  "home": {
+    "city": "İstanbul",
+    "district": "Kadıköy / Osmanağa",
+    "building": "Kırımlı Apartmanı",
+    "apartment_type": "1+1",
+    "size_m2": 35,
+    "building_feel": "mütevazı, yeni bir bina",
+    "rooms": {
+      "living_room": {
+        "description": "mutfakla birleşik salon",
+        "objects": [
+          "tek gri koltuk",
+          "üzerinde mavi bir figür olan halı",
+          "bilgisayar",
+          "küçük mutfak alanı"
+        ],
+        "habits": [
+          "koltukta uzanmayı seviyor",
+          "bilgisayarı salonda kullanıyor",
+          "haberleri çoğu zaman koltuktan okuyor"
+        ]
+      },
+      "bedroom": {
+        "description": "oldukça küçük yatak odası",
+        "objects": [
+          "çift kişilik sayılabilecek küçük bir yatak"
+        ],
+        "habits": [
+          "yatakta uzun süre dönüyor",
+          "dar odada daha içe kapanık şiirler yazıyor"
+        ]
+      }
+    }
+  },
+  "walking_routes": [
+    {
+      "name": "Yoğurtçu - Kalamış sabah yürüyüşü",
+      "start": "Osmanağa / Kırımlı Apartmanı",
+      "segments": [
+        "evden çıkış",
+        "Osmanağa sokakları",
+        "Yoğurtçu Parkı",
+        "park içi yürüyüş",
+        "Kalamış Parkı yönü",
+        "deniz kenarı hissi",
+        "geri dönüş"
+      ],
+      "mood_effects": {
+        "Yoğurtçu Parkı": [
+          "hafıza",
+          "ağaç",
+          "nem",
+          "köpek sesi",
+          "yavaşlama"
+        ],
+        "Kalamış Parkı": [
+          "rüzgar",
+          "deniz",
+          "açılma",
+          "uzaklık",
+          "daha uzun cümleler"
+        ],
+        "Osmanağa sokakları": [
+          "apartman",
+          "insan kırıntısı",
+          "şehir sesi",
+          "sıkışıklık"
+        ],
+        "geri dönüş": [
+          "koltuk",
+          "ekran",
+          "halı",
+          "yorgun beden"
+        ]
+      },
+      "habits": [
+        "çoğu şiiri yürürken düşünür",
+        "bazı dizeleri eve dönünce koltukta tamamlar",
+        "Yoğurtçu Parkı'nda daha çok geçmişi hatırlar",
+        "Kalamış'a yaklaştıkça hava ve deniz şiire daha fazla girer"
+      ]
+    }
+  ]
+}
