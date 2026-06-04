@@ -88,7 +88,7 @@ textarea {
 }
 
 .site-logo {
-  width: clamp(150px, 18vw, 230px);
+  width: min(300px, 48vw);
   height: auto;
   flex: 0 0 auto;
   display: block;
@@ -432,7 +432,7 @@ textarea {
   }
 
   .site-logo {
-    width: min(180px, 72vw);
+    width: min(220px, 78vw);
   }
 
   .poem-text {
