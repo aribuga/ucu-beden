@@ -21,7 +21,7 @@ export default async function HomePage() {
         </section>
       ) : (
         <>
-          <LatestPoemView poem={latest} />
+          <LatestPoemView poem={latest} showTodayTicker />
           <MoodPanel mood={latest.mood} sentence={latest.mood_sentence} />
           <NowPanel dailyLife={latest.daily_life} walkState={latest.walk_state} />
           <InfluenceSummary poem={latest} />
