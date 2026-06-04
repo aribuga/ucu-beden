@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 @import "../styles/themes/minimal.css";
 @import "../styles/themes/sims2000.css";
+@import "../styles/themes/fresh90s.css";
 
 :root {
   --bg: #fbfbf8;
@@ -204,7 +205,7 @@ textarea {
 }
 
 .timeline-item,
-.daily-card,
+daily-card,
 .source-row,
 .report-row {
   display: grid;
