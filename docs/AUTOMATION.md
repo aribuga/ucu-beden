@@ -65,7 +65,7 @@ data/settings/site_settings.json
 data/settings/rss_sources.json
 ```
 
-Changing `theme` between `minimal` and `sims2000` changes the visual skin without code changes.
+Changing `theme` between `minimal`, `sims2000`, and `fresh90s` changes the visual skin without code changes.
 
 ## GitHub Pages
 
