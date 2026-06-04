@@ -187,7 +187,7 @@ export async function readInputAnalysis(): Promise<InputPoemsAnalysis> {
 export async function readSiteSettings(): Promise<SiteSettings> {
   const settings = await readJsonFile<Partial<SiteSettings>>(storagePaths.siteSettings, {});
   return {
-    theme: settings.theme === "sims2000" || settings.theme === "minimal" ? settings.theme : "minimal",
+    theme: settings.theme === "sims2000" || settings.theme === "minimal" || settings.theme === "fresh90s" ? settings.theme : "fresh90s",
     showMoodDots: settings.showMoodDots ?? true,
     showFooterDedication: settings.showFooterDedication ?? true
   };
