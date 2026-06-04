@@ -162,9 +162,29 @@ body[data-theme="fresh90s"] .poem-eyebrow {
 }
 
 body[data-theme="fresh90s"] .poem-eyebrow {
-  margin-bottom: 18px;
-  transform: scale(1, 1.25);
-  transform-origin: center;
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+  background: none;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+  text-shadow: none;
+  transform: none;
+}
+
+body[data-theme="fresh90s"] .poem-eyebrow::before {
+  content: "";
+  display: block;
+  width: min(560px, 100%);
+  aspect-ratio: 610 / 215;
+  background: linear-gradient(to right, #b306a9, #ef2667, #f42e2c, #ffa509, #fdfc00, #55ac2f, #0b13fd, #a804af);
+  filter: drop-shadow(10px 12px 0 rgba(0, 0, 0, 0.78));
+  mask: url("/logo.svg") center / contain no-repeat;
+  -webkit-mask: url("/logo.svg") center / contain no-repeat;
+}
+
+body[data-theme="fresh90s"] .section-title {
   background: linear-gradient(to right, #b306a9, #ef2667, #f42e2c, #ffa509, #fdfc00, #55ac2f, #0b13fd, #a804af);
   background-clip: text;
   color: transparent;
@@ -243,10 +263,32 @@ body[data-theme="fresh90s"] .site-footer {
   margin: 0 0 40px 270px;
   padding: 18px;
   color: var(--text);
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+body[data-theme="fresh90s"] .site-footer::before {
+  content: "";
+  display: block;
+  width: min(230px, 52vw);
+  aspect-ratio: 1;
+  margin: 0 0 14px;
+  background: linear-gradient(135deg, #b306a9, #ef2667, #f42e2c, #ffa509, #fdfc00, #55ac2f, #0b13fd, #a804af);
+  filter: drop-shadow(7px 8px 0 rgba(0, 0, 0, 0.78));
+  mask: url("/footer-logo.svg") center / contain no-repeat;
+  -webkit-mask: url("/footer-logo.svg") center / contain no-repeat;
+}
+
+body[data-theme="fresh90s"] .site-footer p {
+  margin: 0;
+  color: var(--text);
+  font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+  font-size: clamp(20px, 3vw, 28px);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.85);
 }
 
 body[data-theme="fresh90s"] .footer-logo {
-  filter: drop-shadow(4px 4px 0 #000);
+  display: none;
 }
 
 @keyframes fresh90s-hue {
