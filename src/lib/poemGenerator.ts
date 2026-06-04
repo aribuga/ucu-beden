@@ -60,13 +60,19 @@ Kurallar:
 - Şiirin sonunda açıklama yazma.`;
 }
 
-async function tryOpenAIPoem(context: GenerationContext): Promise<string | null> {
+type OpenAIPoemResult = {
+  text: string | null;
+  model: string | null;
+  error: string | null;
+};
+
+async function tryOpenAIPoem(context: GenerationContext): Promise<OpenAIPoemResult> {
   const apiKey = process.env.OPENAI_API_KEY;
+  const model = process.env.OPENAI_MODEL || "gpt-4.1-mini";
   if (!apiKey) {
-    return null;
+    return { text: null, model, error: "OPENAI_API_KEY is not set" };
   }
 
-  const model = process.env.OPENAI_MODEL || "gpt-4.1-mini";
   const prompt = buildPrompt(context);
 
   try {
@@ -93,13 +99,18 @@ async function tryOpenAIPoem(context: GenerationContext): Promise<string | null>
       output?: Array<{ content?: Array<{ text?: string }> }>;
     };
 
-    return (
+    const text =
       data.output_text ??
       data.output?.flatMap((item) => item.content ?? []).map((content) => content.text).filter(Boolean).join("\n") ??
-      null
-    );
-  } catch {
-    return null;
+      null;
+
+    if (!text?.trim()) {
+      return { text: null, model, error: "OpenAI response had no text output" };
+    }
+
+    return { text, model, error: null };
+  } catch (error) {
+    return { text: null, model, error: error instanceof Error ? error.message : "OpenAI request failed" };
   }
 }
 
@@ -183,8 +194,9 @@ function titleFor(text: string, context: GenerationContext): string {
 }
 
 export async function generatePoemWithLLM(context: GenerationContext): Promise<DailyPoem> {
-  const llmText = await tryOpenAIPoem(context);
-  const poemText = (llmText?.trim() || mockPoem(context)).trim();
+  const llmResult = await tryOpenAIPoem(context);
+  const openAIText = llmResult.text?.trim();
+  const poemText = (openAIText || mockPoem(context)).trim();
   const analysis = analyzeGeneratedPoem(poemText, context);
 
   return {
@@ -207,6 +219,11 @@ export async function generatePoemWithLLM(context: GenerationContext): Promise<D
       context.walk_state.walk_influence,
       context.daily_life.attention
     ],
+    generation: {
+      provider: openAIText ? "openai" : "mock",
+      model: llmResult.model,
+      fallback_reason: openAIText ? null : llmResult.error
+    },
     analysis
   };
 }
