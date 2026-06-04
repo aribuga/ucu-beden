@@ -1,14 +1,14 @@
 {
   "date": "2026-06-04",
-  "collected_at": "2026-06-04T14:14:00.964Z",
+  "collected_at": "2026-06-04T14:26:07.550Z",
   "fallback_used": true,
   "weather": {
-    "provider": "mock-weather",
-    "summary": "Kadıköy sabahı nemli ve ağır.",
-    "temperature_c": 19,
-    "humidity_percent": 74,
-    "wind_kmh": 16,
-    "body_effect": "nem tişörtüne yapışıyor"
+    "provider": "open-meteo",
+    "summary": "Kadıköy'de 30.9°C; nem 32%, rüzgar 7.6 km/s civarında.",
+    "temperature_c": 30.9,
+    "humidity_percent": 32,
+    "wind_kmh": 7.6,
+    "body_effect": "hava yüzünde ince bir açıklık bırakıyor"
   },
   "turkey_news": {
     "provider": "mock-news",
@@ -31,7 +31,6 @@
     ]
   },
   "notes": [
-    "Weather fallback: Open-Meteo returned 502",
     "News fallback: News API returned no articles",
     "Sanat adapter'ı MVP'de mock veriyle çalışıyor; RSS/API bağlanmaya hazır."
   ]
