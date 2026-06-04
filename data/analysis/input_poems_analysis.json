@@ -1,23 +1,130 @@
 {
-  "files": [],
+  "files": [
+    {
+      "file": "yasin_siirleri.txt",
+      "poem_count": 19,
+      "word_count": 605,
+      "dominant_words": [
+        "ani",
+        "hello",
+        "belki",
+        "yine",
+        "yüz",
+        "biraz",
+        "degil",
+        "dolu",
+        "arasında",
+        "beni",
+        "içimde",
+        "şimdi"
+      ],
+      "image_fields": [
+        "yemek",
+        "beden",
+        "hayvan",
+        "absürt gündelik"
+      ],
+      "food_images": [
+        "tavuk",
+        "pilav",
+        "makarna",
+        "sucuk",
+        "salata",
+        "ekşi"
+      ],
+      "body_images": [
+        "yüz"
+      ],
+      "animal_images": [
+        "kurbağa",
+        "kuzu",
+        "yunus",
+        "sinek",
+        "kedi",
+        "kuş"
+      ],
+      "city_images": [],
+      "absurd_fragments": [],
+      "repeated_phrases": [
+        "ani hello",
+        "panik halindeyim",
+        "yüz şişko",
+        "şişko kurbağa",
+        "kurbağa yüz"
+      ],
+      "tone": [
+        "gündelik",
+        "absürt",
+        "bedensel",
+        "yemekle bozulan",
+        "panic-comic",
+        "konuşma dili bozukluğu"
+      ],
+      "syntax_notes": "Tek satır tireyle ayrılan serbest parçalar; kırık cümle, gündelik konuşma ve ani yön değişimi korunur.",
+      "style_notes": "Analiz yalnızca genetik iz çıkarır: ritim, nesne alanı, konuşma bozulması, bedensel mizah ve panik kırıntısı şiire kopyasız taşınır."
+    }
+  ],
   "global": {
-    "poem_count": 0,
-    "word_count": 0,
-    "dominant_words": [],
-    "image_fields": [],
-    "food_images": [],
-    "body_images": [],
-    "animal_images": [],
+    "poem_count": 19,
+    "word_count": 605,
+    "dominant_words": [
+      "ani",
+      "arasında",
+      "belki",
+      "beni",
+      "biraz",
+      "degil",
+      "dolu",
+      "hello",
+      "içimde",
+      "şimdi",
+      "yine",
+      "yüz"
+    ],
+    "image_fields": [
+      "yemek",
+      "beden",
+      "hayvan",
+      "absürt gündelik"
+    ],
+    "food_images": [
+      "tavuk",
+      "pilav",
+      "makarna",
+      "sucuk",
+      "salata",
+      "ekşi"
+    ],
+    "body_images": [
+      "yüz"
+    ],
+    "animal_images": [
+      "kurbağa",
+      "kuzu",
+      "yunus",
+      "sinek",
+      "kedi",
+      "kuş"
+    ],
     "city_images": [],
     "absurd_fragments": [],
-    "repeated_phrases": [],
+    "repeated_phrases": [
+      "ani hello",
+      "panik halindeyim",
+      "yüz şişko",
+      "şişko kurbağa",
+      "kurbağa yüz"
+    ],
     "tone": [
       "gündelik",
       "absürt",
-      "bedensel"
+      "bedensel",
+      "yemekle bozulan",
+      "panic-comic",
+      "konuşma dili bozukluğu"
     ],
-    "rhythm_notes": "Kullanıcı şiirleri analiz edilince ritim notları burada oluşur.",
-    "style_notes": "Gündelik olanla absürt olan iç içe geçebilir; UCU BEDEN bunu kopya olarak değil genetik eğilim olarak kullanır.",
+    "rhythm_notes": "Serbest dize, gündelik konuşma kırılması, ani nesne çarpışması ve kısa/taşan cümleler birlikte izleniyor.",
+    "style_notes": "Gündelik olanla absürt olan iç içe geçer; yemek, beden, şehir, yorgunluk ve şefkat alanları kopyasız bir genetik hafıza olarak kullanılır.",
     "taboo_copying_rules": "Do not reproduce full lines from input poems."
   }
 }
