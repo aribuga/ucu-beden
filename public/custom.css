@@ -13,3 +13,22 @@
 body[data-theme=sims2000] {
     --bg: #5a32ff;
 }
+
+body[data-theme=sims2000] .command, body[data-theme=sims2000] .nav a, body[data-theme=sims2000] .tag-list li {
+    background: linear-gradient(#ffffff, #ffd4ec);
+    border: 2px solid var(--line);
+    border-radius: 6px;
+    box-shadow: 2px 2px 0 #8c00a4;
+    color: var(--text);
+    padding: 3px 8px;
+    text-decoration: none;
+}
+
+
+.site-logo {
+    width: clamp(150px, 18vw, 300px);
+    height: auto;
+    flex: 0 0 auto;
+    display: block;
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(253deg) brightness(119%) contrast(119%);
+}
