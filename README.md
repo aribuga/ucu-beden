@@ -151,7 +151,7 @@ The `/mood-map` page visualizes RSS items as mood-colored dots. Missing APIs or 
 
 ## GitHub Actions And Pages
 
-`.github/workflows/daily-poem-and-deploy.yml` runs at `06:00 UTC`, which is `09:00 Europe/Istanbul`, generates the daily poem, commits data changes when needed, builds the static site, and deploys to GitHub Pages.
+`.github/workflows/daily-poem-and-deploy.yml` runs at `06:17 UTC`, which is `09:17 Europe/Istanbul`, with a backup run at `06:47 UTC` / `09:47 Europe/Istanbul`. GitHub can delay or drop schedules at the top of the hour, so the workflow avoids `09:00` exactly. It generates the daily poem, commits data changes when needed, builds the static site, and deploys to GitHub Pages.
 
 For project pages under a repository subpath, set `NEXT_PUBLIC_BASE_PATH` in the workflow or repository variables.
 
