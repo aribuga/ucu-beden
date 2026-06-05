@@ -109,7 +109,7 @@ export async function readWorld(): Promise<World> {
     home: {
       city: "İstanbul",
       district: "Kadıköy / Osmanağa",
-      building: "Kırımlı Apartmanı",
+      building: "apartman detayı gizli",
       apartment_type: "1+1",
       size_m2: 35,
       building_feel: "mütevazı, yeni bir bina",
