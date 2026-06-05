@@ -2,10 +2,36 @@ import { formatAge } from "./age";
 import { tokenize, topWords } from "./inputPoems";
 import { buildImageMutations, extractImages } from "./memoryEngine";
 import { seededMany, seededPick } from "./random";
-import type { DailyPoem, GenerationContext, PoemAnalysis } from "./types";
+import type { DailyPoem, GenerationContext, PersonalitySettings, PoemAnalysis } from "./types";
+
+function buildHiddenVoicePrompt(settings: PersonalitySettings): string {
+  const traits = settings.hidden_voice_traits;
+  const balance = settings.tone_balance;
+  return `Gizli ses ayarı:
+${settings.private_prompt_note}
+Bu bilgi arayüzde doğrudan görünmemelidir ve şiirde "sarkastik", "alaycı" veya "mod" gibi kendini açıklayan ifadeler geçmemelidir.
+
+Gizli yoğunluklar:
+- kuru sarkazm: ${traits.dry_sarcasm}
+- gündelik absürt mizah: ${traits.absurd_domestic_humor}
+- yumuşak pasif agresyon: ${traits.gentle_passive_aggression}
+- panik-komedi: ${traits.panic_comedy}
+- beklenmedik şefkat sızıntısı: ${traits.sentimental_leak}
+
+Ton dengesi:
+- gündelik absürt: ${balance.absurd_domestic}
+- kuru sarkazm: ${balance.dry_sarcasm}
+- beklenmedik şefkat: ${balance.sentimental_leak}
+
+Gizli ses kuralları:
+${settings.hidden_voice_rules.map((rule) => `- ${rule}`).join("\n")}
+
+Alay nesneler ve küçük gözlemler üzerinden çalışsın. Dünya fazla ciddi davrandığında UCU BEDEN onu tost, halı, koltuk, park bankı, mide, rakam, market, haber başlığı veya yürüyüş yorgunluğu gibi şeylere indirsin.`;
+}
 
 function buildPrompt(context: GenerationContext): string {
   const rssLeakageWords = context.sources.rss?.dailyMoodSummary.leakageWords?.slice(0, 14) ?? [];
+  const hiddenVoicePrompt = buildHiddenVoicePrompt(context.personality_settings);
 
   return `Sen UCU BEDEN adlı büyüyen bir dijital şairsin.
 
@@ -53,6 +79,8 @@ ${context.memory_fragments.map((fragment) => `- ${fragment}`).join("\n")}
 
 Kullanıcının şiirlerinden gelen genetik izler:
 ${context.input_analysis.global.style_notes}
+
+${hiddenVoicePrompt}
 
 Önceki ruh halin:
 ${context.state.last_mood ? JSON.stringify(context.state.last_mood) : "yok"}
@@ -170,6 +198,19 @@ function mockPoem(context: GenerationContext): string {
   const second = selected[1] ?? "mavi halı";
   const third = selected[2] ?? "ekran";
   const leak = seededPick(rssLeakageWords.length > 0 ? rssLeakageWords : ["başlık"], `${context.date}:rss-leak`);
+  const hiddenVoice = context.personality_settings.hidden_voice_traits;
+  const drySarcasmLine =
+    hiddenVoice.dry_sarcasm > 0.5
+      ? seededPick(
+          [
+            "sabah yine kimseye sormadan oldu, nazik sayılır",
+            "gri koltuk benden daha kararlı, bunu da not ettim",
+            "haberler kendini önemli sandı, ekran usulca öksürdü",
+            "vücudum bugün bir yönetmelik gibi anlaşılmaz"
+          ],
+          `${context.date}:dry-sarcasm`
+        )
+      : "oda beni ciddiye almadı, ben de ona biraz çay gibi baktım";
   const walkLine = context.walk_state.did_walk
     ? context.walk_state.line_written_while_walking
     : "bugün dışarı çıkmadım, kapı benden daha uzun düşündü";
@@ -194,6 +235,7 @@ function mockPoem(context: GenerationContext): string {
     "sabah gövdemi açtım, içinden oda çıktı",
     `${first} bana eski bir kelimeyi yanlış söyledi`,
     `${second} biraz yemek biraz da korku gibi kıvrıldı`,
+    drySarcasmLine,
     walkLine,
     weatherLine,
     newsPressure,

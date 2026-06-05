@@ -1,5 +1,14 @@
 import { formatAge, nextAgeMonths } from "../lib/age";
-import { ensureDataDirs, pathExists, readJsonFile, readState, readWorld, storagePaths, writeJsonFile } from "../lib/fileStorage";
+import {
+  ensureDataDirs,
+  pathExists,
+  readJsonFile,
+  readPersonalitySettings,
+  readState,
+  readWorld,
+  storagePaths,
+  writeJsonFile
+} from "../lib/fileStorage";
 import { analyzeAndSaveInputPoems } from "../lib/inputPoems";
 import { updateMemoryAfterPoem, selectMemoryFragments } from "../lib/memoryEngine";
 import { calculateMood } from "../lib/moodEngine";
@@ -25,11 +34,12 @@ async function main(): Promise<void> {
 
   const existingPoem = args.force ? await readJsonFile<DailyPoem | null>(poemPath, null) : null;
 
-  const [world, previousState, inputAnalysis, sources] = await Promise.all([
+  const [world, previousState, inputAnalysis, sources, personalitySettings] = await Promise.all([
     readWorld(),
     readState(),
     analyzeAndSaveInputPoems(),
-    collectSources(date)
+    collectSources(date),
+    readPersonalitySettings()
   ]);
   await writeJsonFile(`${storagePaths.sources}/${date}.json`, sources);
 
@@ -61,6 +71,7 @@ async function main(): Promise<void> {
     mood_sentence: sentence,
     daily_life: dailyLife,
     walk_state: walkState,
+    personality_settings: personalitySettings,
     memory_fragments: memoryFragments
   };
 

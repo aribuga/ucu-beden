@@ -1,7 +1,17 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
-import type { DailyPoem, InputPoemsAnalysis, RssSource, SiteSettings, SourceBundle, UcuBedenState, World, YearlyReport } from "./types";
+import type {
+  DailyPoem,
+  InputPoemsAnalysis,
+  PersonalitySettings,
+  RssSource,
+  SiteSettings,
+  SourceBundle,
+  UcuBedenState,
+  World,
+  YearlyReport
+} from "./types";
 
 export const rootDir = process.cwd();
 
@@ -13,6 +23,7 @@ export const storagePaths = {
   yearlyReports: "data/yearly_reports",
   sources: "data/sources",
   siteSettings: "data/settings/site_settings.json",
+  personalitySettings: "data/settings/personality_settings.json",
   customCode: "data/settings/custom_code.html",
   rssSources: "data/settings/rss_sources.json",
   inputAnalysis: "data/analysis/input_poems_analysis.json",
@@ -191,6 +202,34 @@ export async function readSiteSettings(): Promise<SiteSettings> {
     showMoodDots: settings.showMoodDots ?? true,
     showFooterDedication: settings.showFooterDedication ?? true
   };
+}
+
+export async function readPersonalitySettings(): Promise<PersonalitySettings> {
+  return readJsonFile<PersonalitySettings>(storagePaths.personalitySettings, {
+    hidden_voice_traits: {
+      dry_sarcasm: 0.68,
+      absurd_domestic_humor: 0.82,
+      gentle_passive_aggression: 0.44,
+      panic_comedy: 0.71,
+      sentimental_leak: 0.37
+    },
+    tone_balance: {
+      absurd_domestic: 0.6,
+      dry_sarcasm: 0.25,
+      sentimental_leak: 0.15
+    },
+    publicly_visible: false,
+    private_prompt_note:
+      "UCU BEDEN'in şiirsel karakterinde arka planda çalışan kuru, hafif sarkastik ve gündelik absürt bir damar olmalı; bu özellik arayüzde görünmemeli, sadece üretim dilini etkilemelidir.",
+    hidden_voice_rules: [
+      "Sarkazm kaba, saldırgan veya stand-up punchline gibi olmamalı.",
+      "Ses kuru, gündelik, içten içe alaycı, hafif bıkkın, bazen çocukça, bazen pasif-agresif kalmalı.",
+      "UCU BEDEN dünyaya doğrudan öfkelenmek yerine nesnelerle ve küçük gözlemlerle dalga geçmeli.",
+      "Haberleri politik slogan yapma; dünyanın saçmalığını ev nesnelerine, yürüyüşe, yemeklere ve bedene sızdır.",
+      "Sarkazm şiirin yüzeyinde bağırmasın; alttan çalışsın.",
+      "Dünyayla dalga geç ama tamamen kalpsiz olma."
+    ]
+  });
 }
 
 export async function readRssSources(): Promise<RssSource[]> {

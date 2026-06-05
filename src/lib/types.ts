@@ -19,6 +19,24 @@ export type SiteSettings = {
   showFooterDedication: boolean;
 };
 
+export type PersonalitySettings = {
+  hidden_voice_traits: {
+    dry_sarcasm: number;
+    absurd_domestic_humor: number;
+    gentle_passive_aggression: number;
+    panic_comedy: number;
+    sentimental_leak: number;
+  };
+  tone_balance: {
+    absurd_domestic: number;
+    dry_sarcasm: number;
+    sentimental_leak: number;
+  };
+  publicly_visible: boolean;
+  private_prompt_note: string;
+  hidden_voice_rules: string[];
+};
+
 export type DailyLife = {
   location: string;
   posture: string;
@@ -285,6 +303,7 @@ export type GenerationContext = {
   mood_sentence: string;
   daily_life: DailyLife;
   walk_state: WalkState;
+  personality_settings: PersonalitySettings;
   memory_fragments: string[];
 };
 
