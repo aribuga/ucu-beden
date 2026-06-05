@@ -4,13 +4,16 @@ UCU BEDEN is designed to run locally and on GitHub Actions.
 
 ## Daily Time
 
-The daily poem should be generated at 09:00 Europe/Istanbul.
+The daily poem should be generated around 09:17 Europe/Istanbul, with a 09:47 backup.
 
-GitHub cron uses UTC, and Turkey is UTC+3, so the workflow runs at:
+GitHub cron uses UTC, and Turkey is UTC+3. GitHub can delay or drop schedules at the top of the hour, so the workflow avoids 09:00 exactly:
 
 ```yaml
-cron: "0 6 * * *"
+cron: "17 6 * * *" # 09:17 Europe/Istanbul
+cron: "47 6 * * *" # 09:47 Europe/Istanbul backup
 ```
+
+If the first run works, the backup sees that today's poem already exists and skips generation.
 
 ## Commands
 
