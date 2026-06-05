@@ -1,6 +1,11 @@
 name: Daily poem and deploy
 
 on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "data/**"
   workflow_dispatch:
     inputs:
       force_regenerate:
