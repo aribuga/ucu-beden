@@ -15,9 +15,10 @@ on:
         type: string
   schedule:
     # GitHub can delay or drop schedules at the top of the hour.
-    # 06:17 UTC = 09:17 Europe/Istanbul; 06:47 UTC is a backup.
+    # 06:17 UTC = 09:17 Europe/Istanbul; later runs are backups.
     - cron: "17 6 * * *"
     - cron: "47 6 * * *"
+    - cron: "10 7 * * *"
 
 permissions:
   contents: write
