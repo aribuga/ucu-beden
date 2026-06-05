@@ -16,6 +16,8 @@ cron: "10 7 * * *" # 10:10 Europe/Istanbul backup
 
 If the first run works, the backups see that today's poem already exists and skip generation.
 
+The workflow also runs on normal pushes to `main`, except data-only commits. This lets code, theme, and documentation updates deploy immediately without creating a data commit loop.
+
 ## Commands
 
 ```bash
