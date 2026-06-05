@@ -148,6 +148,54 @@ function atmosphereFor(dominant: MoodKey, category: RssSource["category"]): stri
   return `${moodText[dominant]} ${categoryText[category]}`;
 }
 
+const blockedLeakageWords = new Set([
+  "son",
+  "dakika",
+  "haber",
+  "bugün",
+  "türkiye",
+  "dünya",
+  "yeni",
+  "başladı",
+  "açıklandı",
+  "sonrası",
+  "öncesi",
+  "olarak",
+  "üzerine",
+  "karşı",
+  "ilgili",
+  "göre",
+  "etti",
+  "oldu",
+  "var",
+  "yok"
+]);
+
+const categoryLeakage: Record<RssSource["category"], string[]> = {
+  science_culture: ["kazı", "fosil", "rapor", "gözlem", "derinlik"],
+  entertainment: ["sahne", "ışık", "ses", "yüz", "gece"],
+  art: ["sergi", "duvar", "katalog", "görüntü", "atölye"],
+  news: ["başlık", "kalabalık", "basınç", "sokak", "ekran"],
+  life: ["mahalle", "masa", "kapı", "temas", "gündelik"]
+};
+
+function collectLeakageWords(items: MoodTaggedSourceItem[]): string[] {
+  const candidates = items.flatMap((item) => [
+    ...item.keywords,
+    ...categoryLeakage[item.category],
+    ...item.shortAtmosphere.split(/\s+/g)
+  ]);
+
+  return Array.from(
+    new Set(
+      candidates
+        .flatMap((candidate) => tokenize(candidate))
+        .filter((word) => word.length > 2 && word.length < 18 && !blockedLeakageWords.has(word) && !/^\d+$/.test(word))
+    )
+  )
+    .slice(0, 14);
+}
+
 function scoreRssItem(raw: RawRssItem, source: RssSource): MoodTaggedSourceItem {
   const scores = emptyMood();
   const text = `${raw.title} ${raw.description ?? ""}`.toLocaleLowerCase("tr");
@@ -228,6 +276,7 @@ function summarizeRssItems(items: MoodTaggedSourceItem[]): RssDailyMoodSummary {
   const dominantMood = ranked[0] ?? "clarity";
   const secondaryMood = ranked[1] ?? "fatigue";
   const fragments = Array.from(new Set(items.flatMap((item) => [item.shortAtmosphere, ...item.keywords.slice(0, 2)]))).slice(0, 10);
+  const leakageWords = collectLeakageWords(items);
 
   return {
     dominantMood,
@@ -237,7 +286,8 @@ function summarizeRssItems(items: MoodTaggedSourceItem[]): RssDailyMoodSummary {
       items.length === 0
         ? "Bugün RSS kaynakları sessiz; dış dünya eski veriyle ve ev içi basınçla duyuluyor."
         : `Bugün dış dünya ${moodLabels[dominantMood]} ağırlıklı; ikinci damar ${moodLabels[secondaryMood]}. Başlıklar şiire haber olarak değil, iç basınç olarak sızıyor.`,
-    fragments
+    fragments,
+    leakageWords
   };
 }
 

@@ -5,6 +5,8 @@ import { seededMany, seededPick } from "./random";
 import type { DailyPoem, GenerationContext, PoemAnalysis } from "./types";
 
 function buildPrompt(context: GenerationContext): string {
+  const rssLeakageWords = context.sources.rss?.dailyMoodSummary.leakageWords?.slice(0, 14) ?? [];
+
   return `Sen UCU BEDEN adlı büyüyen bir dijital şairsin.
 
 Her gün 1 ay yaşlanıyorsun.
@@ -28,6 +30,9 @@ ${context.sources.rss?.dailyMoodSummary.summary ?? "RSS kaynakları bugün sessi
 
 Kaynaklardan seçilen atmosfer parçaları:
 ${context.sources.rss?.dailyMoodSummary.fragments.slice(0, 10).join(", ") ?? "yok"}
+
+RSS kaynaklarından şiire sızabilecek kelimeler:
+${rssLeakageWords.length > 0 ? rssLeakageWords.join(", ") : "yok"}
 
 Bugünkü dış dünya noktacıkları:
 ${
@@ -68,6 +73,7 @@ Kurallar:
 - Güncel olayları slogana çevirme.
 - Hava, haber, sanat ve şehir bilgisini atmosfer, nesne, basınç, beden hissi, yürüyüş ritmi ve imge olarak sızdır.
 - RSS kaynaklarını rapor gibi anlatma; sadece iç basınç, kelime seçimi, görüntü ve yürüyüş ritmi olarak kullan.
+- RSS sızıntı kelimelerinden 1-3 tanesi şiire girebilir; kelimeleri doğrudan başlık gibi değil, bozarak, yanına ev/beden/yürüyüş imgesi koyarak kullan.
 - Evini açıklama gibi anlatma; gri koltuk, mavi figürlü halı, bilgisayar ve küçük yatak gerektiğinde imgeye dönüşsün.
 - Yürüyüşü gezi yazısı gibi anlatma.
 - En az bir eski hafıza çağır ama birebir kopyalama.
@@ -151,16 +157,19 @@ async function tryOpenAIPoem(context: GenerationContext): Promise<OpenAIPoemResu
 function mockPoem(context: GenerationContext): string {
   const geneticWords = context.input_analysis.global.dominant_words;
   const memoryWords = topWords(tokenize(context.memory_fragments.join(" ")), 8);
+  const rssLeakageWords = context.sources.rss?.dailyMoodSummary.leakageWords ?? [];
   const images = [
     ...context.walk_state.seen_objects,
     context.daily_life.object_focus,
     ...geneticWords.slice(0, 4),
-    ...memoryWords.slice(0, 4)
+    ...memoryWords.slice(0, 4),
+    ...rssLeakageWords.slice(0, 5)
   ].filter(Boolean);
   const selected = seededMany(images.length > 0 ? images : ["gri koltuk", "mavi halı", "ekran"], `${context.date}:poem-images`, 6);
   const first = selected[0] ?? "gri koltuk";
   const second = selected[1] ?? "mavi halı";
   const third = selected[2] ?? "ekran";
+  const leak = seededPick(rssLeakageWords.length > 0 ? rssLeakageWords : ["başlık"], `${context.date}:rss-leak`);
   const walkLine = context.walk_state.did_walk
     ? context.walk_state.line_written_while_walking
     : "bugün dışarı çıkmadım, kapı benden daha uzun düşündü";
@@ -189,6 +198,7 @@ function mockPoem(context: GenerationContext): string {
     weatherLine,
     newsPressure,
     artLine,
+    `${leak} kelimesi kapının altında ince bir ışık gibi kaldı`,
     `${third} ile dilim arasında küçük bir market gezindi`,
     "ben buna şiir demedim",
     "ama ağzımda kalan şey yürüyerek eve döndü"

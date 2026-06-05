@@ -103,6 +103,7 @@ export type RssDailyMoodSummary = {
   moodScores: Mood;
   summary: string;
   fragments: string[];
+  leakageWords?: string[];
 };
 
 export type RssSourceBundle = {

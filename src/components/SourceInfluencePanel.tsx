@@ -26,6 +26,12 @@ export function SourceInfluencePanel({ source }: { source: SourceBundle }) {
             <span>{source.rss.dailyMoodSummary.summary}</span>
           </div>
         ) : null}
+        {source.rss?.dailyMoodSummary.leakageWords?.length ? (
+          <div className="label-row">
+            <span className="label">rss sızıntı</span>
+            <span>{source.rss.dailyMoodSummary.leakageWords.slice(0, 10).join(", ")}</span>
+          </div>
+        ) : null}
       </div>
       {source.rss ? (
         <div className="source-mini-list">

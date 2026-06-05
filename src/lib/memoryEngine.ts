@@ -122,6 +122,14 @@ export async function selectMemoryFragments(params: {
     fragments.push(`Yürüyüş hafızası ${params.state.walk_memory.frequent_segments.slice(0, 2).join(" ve ")} arasında gidip geliyor.`);
   }
 
+  const rssLeakWords = topFromStrings(
+    recentPoems.flatMap((poem) => poem.sources.rss?.dailyMoodSummary.leakageWords ?? []),
+    8
+  );
+  if (rssLeakWords.length > 0) {
+    fragments.push(`Dış kaynak hafızasından ${rssLeakWords.slice(0, 6).join(", ")} kelimeleri hafifçe sızıyor.`);
+  }
+
   if (params.inputAnalysis.global.poem_count > 0) {
     fragments.push(
       `Genetik hafıza: ${params.inputAnalysis.global.style_notes} Baskın kelimeler: ${params.inputAnalysis.global.dominant_words
@@ -159,6 +167,15 @@ export async function rebuildMemoryState(params: {
   const bodyStates = poems.slice(-8).map((poem) => poem.daily_life.body_state);
   const walkSegments = topFromStrings(poems.map((poem) => poem.walk_state.current_segment), 8);
   const seenObjects = topFromStrings(poems.flatMap((poem) => poem.walk_state.seen_objects), 12);
+  const rssLeakWords = topFromStrings(
+    poems.flatMap((poem) => poem.sources.rss?.dailyMoodSummary.leakageWords ?? []),
+    20
+  );
+  const recentRssLeakWords = new Set(
+    poems
+      .slice(-7)
+      .flatMap((poem) => poem.sources.rss?.dailyMoodSummary.leakageWords ?? [])
+  );
   const routeMoodAssociations = topFromStrings(
     poems.map((poem) => `${poem.walk_state.current_segment}: ${poem.walk_state.walk_influence}`),
     8
@@ -215,7 +232,9 @@ export async function rebuildMemoryState(params: {
     recurring_words: dominantWords.slice(0, 12),
     avoided_words: avoidedWords,
     forgotten_words: forgottenWords,
-    new_words: dominantWords.filter((word) => !previousDominant.includes(word)).slice(0, 12)
+    new_words: dominantWords.filter((word) => !previousDominant.includes(word)).slice(0, 12),
+    rss_leak_words: rssLeakWords,
+    recent_rss_leak_words: rssLeakWords.filter((word) => recentRssLeakWords.has(word)).slice(0, 12)
   });
 
   const mutations = topFromStrings(recurringImages, 12).map((image) => mutateImage(image, lastPoem?.date ?? new Date().toISOString().slice(0, 10)));
