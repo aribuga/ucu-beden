@@ -28,7 +28,9 @@ async function main(): Promise<void> {
   const poemPath = `${storagePaths.generatedPoems}/${date}.json`;
 
   if (!args.force && (await pathExists(poemPath))) {
-    console.log(JSON.stringify({ status: "skipped", reason: "today already exists", date }, null, 2));
+    const sources = await collectSources(date);
+    await writeJsonFile(`${storagePaths.sources}/${date}.json`, sources);
+    console.log(JSON.stringify({ status: "skipped", reason: "today already exists", date, sources_refreshed: true }, null, 2));
     return;
   }
 
