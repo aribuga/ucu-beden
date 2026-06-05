@@ -14,6 +14,8 @@ export default async function SourcesPage() {
         <h2 className="section-title">Kaynak Günlüğü</h2>
         <p>
           <Link href="/mood-map">Mood-map sayfasına git</Link>
+          {" / "}
+          <Link href="/sources/health">Kaynak sağlığı</Link>
         </p>
         {sources.length === 0 ? (
           <p>Henüz kaynak günlüğü yok.</p>

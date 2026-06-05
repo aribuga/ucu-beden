@@ -16,12 +16,19 @@ import type {
 
 const KADIKOY_LAT = 40.9907;
 const KADIKOY_LON = 29.0277;
+const MIN_LIVE_RSS_ITEMS = 3;
 
-async function fetchWithTimeout(url: string, timeoutMs = 6000): Promise<Response> {
+const RSS_HEADERS = {
+  "User-Agent": "Mozilla/5.0 (compatible; UcuBedenBot/1.0)",
+  Accept: "application/rss+xml, application/xml, text/xml, text/html;q=0.9, */*;q=0.8",
+  "Accept-Language": "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7"
+};
+
+async function fetchWithTimeout(url: string, timeoutMs = 6000, init?: RequestInit): Promise<Response> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
   try {
-    return await fetch(url, { signal: controller.signal });
+    return await fetch(url, { ...init, signal: controller.signal });
   } finally {
     clearTimeout(timeout);
   }
@@ -95,7 +102,7 @@ function stripHtml(text: string): string {
 }
 
 function extractTag(block: string, tag: string): string | undefined {
-  const match = block.match(new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`, "i"));
+  const match = block.match(new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\/${tag}>`, "i"));
   return match ? stripHtml(match[1]) : undefined;
 }
 
@@ -111,6 +118,8 @@ type RawRssItem = {
   publishedAt?: string;
   description?: string;
 };
+
+type RssRuntimeSource = RssSourceBundle["sources"][number];
 
 function parseFeedItems(xml: string): RawRssItem[] {
   const rssItems = Array.from(xml.matchAll(/<item\b[\s\S]*?<\/item>/gi), (match) => match[0]);
@@ -235,13 +244,67 @@ function scoreRssItem(raw: RawRssItem, source: RssSource): MoodTaggedSourceItem 
   };
 }
 
-async function fetchRssSource(source: RssSource): Promise<RssSourceBundle["sources"][number] & { items: MoodTaggedSourceItem[] }> {
+function rssSourceHealth(source: RssSource, health: Omit<RssRuntimeSource, "name" | "category" | "url" | "enabled">): RssRuntimeSource {
+  return {
+    name: source.name,
+    category: source.category,
+    url: source.url,
+    enabled: source.enabled,
+    ...health
+  };
+}
+
+async function fetchRssSource(source: RssSource): Promise<RssRuntimeSource & { items: MoodTaggedSourceItem[] }> {
+  const lastCheckedAt = new Date().toISOString();
+
   if (!source.enabled || !source.url) {
-    return { name: source.name, category: source.category, enabled: source.enabled, fetched: false, item_count: 0, items: [] };
+    return {
+      ...rssSourceHealth(source, {
+        fetched: false,
+        status: "disabled",
+        item_count: 0,
+        lastCheckedAt,
+        error: "Disabled in rss_sources.json"
+      }),
+      items: []
+    };
+  }
+
+  if (source.softDisabled && source.softDisabledReason === "blocked_403") {
+    return {
+      ...rssSourceHealth(source, {
+        fetched: false,
+        status: "blocked_403",
+        item_count: 0,
+        lastCheckedAt,
+        error: "Soft-disabled after repeated 403"
+      }),
+      items: []
+    };
   }
 
   try {
-    const response = await fetchWithTimeout(source.url, 8000);
+    let retriedWithBrowserHeaders = false;
+    let response = await fetchWithTimeout(source.url, 8000);
+    if (response.status === 403) {
+      retriedWithBrowserHeaders = true;
+      response = await fetchWithTimeout(source.url, 8000, { headers: RSS_HEADERS });
+    }
+
+    if (response.status === 403) {
+      return {
+        ...rssSourceHealth(source, {
+          fetched: false,
+          status: "blocked_403",
+          item_count: 0,
+          lastCheckedAt,
+          retriedWithBrowserHeaders,
+          error: "403 Forbidden"
+        }),
+        items: []
+      };
+    }
+
     if (!response.ok) {
       throw new Error(`RSS returned ${response.status}`);
     }
@@ -249,15 +312,25 @@ async function fetchRssSource(source: RssSource): Promise<RssSourceBundle["sourc
     const items = parseFeedItems(xml)
       .slice(0, 3)
       .map((item) => scoreRssItem(item, source));
-    return { name: source.name, category: source.category, enabled: true, fetched: true, item_count: items.length, items };
+    return {
+      ...rssSourceHealth(source, {
+        fetched: true,
+        status: items.length > 0 ? "ok" : "empty",
+        item_count: items.length,
+        lastCheckedAt,
+        retriedWithBrowserHeaders
+      }),
+      items
+    };
   } catch (error) {
     return {
-      name: source.name,
-      category: source.category,
-      enabled: true,
-      fetched: false,
-      item_count: 0,
-      error: error instanceof Error ? error.message : "RSS fetch failed",
+      ...rssSourceHealth(source, {
+        fetched: false,
+        status: "error",
+        item_count: 0,
+        lastCheckedAt,
+        error: error instanceof Error ? error.message : "RSS fetch failed"
+      }),
       items: []
     };
   }
@@ -292,6 +365,7 @@ function summarizeRssItems(items: MoodTaggedSourceItem[]): RssDailyMoodSummary {
 }
 
 function fallbackRss(date: string): RssSourceBundle {
+  const lastCheckedAt = new Date().toISOString();
   const items: MoodTaggedSourceItem[] = [
     {
       title: "Erişilemeyen başlıklar ekranda beyaz boşluk bıraktı",
@@ -319,7 +393,19 @@ function fallbackRss(date: string): RssSourceBundle {
       ...summarizeRssItems(items),
       summary: `RSS fallback günü ${date}: kaynaklar erişilemedi, eski ekran gürültüsü mood haritasına dönüştü.`
     },
-    sources: [{ name: "mock-rss", category: "news", enabled: true, fetched: false, item_count: items.length, error: "No live RSS items collected" }]
+    sources: [
+      {
+        name: "mock-rss",
+        category: "news",
+        url: "local://mock-rss",
+        enabled: true,
+        fetched: true,
+        status: "ok",
+        item_count: items.length,
+        lastCheckedAt,
+        error: "No live RSS items collected"
+      }
+    ]
   };
 }
 
@@ -334,8 +420,16 @@ async function collectRss(date: string): Promise<{ rss: RssSourceBundle; fallbac
     .filter((source) => source.error)
     .map((source) => `RSS ${source.name}: ${source.error}`);
 
-  if (items.length === 0) {
-    return { rss: fallbackRss(date), fallback: true, notes: ["RSS fallback: canlı RSS item toplanamadı.", ...errors] };
+  if (items.length < MIN_LIVE_RSS_ITEMS) {
+    const fallback = fallbackRss(date);
+    return {
+      rss: {
+        ...fallback,
+        sources: [...sourceSummaries, ...fallback.sources]
+      },
+      fallback: true,
+      notes: [`RSS fallback: yeterli canlı RSS item yok (${items.length}/${MIN_LIVE_RSS_ITEMS}).`, ...errors].slice(0, 12)
+    };
   }
 
   return {

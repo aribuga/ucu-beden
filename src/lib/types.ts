@@ -100,6 +100,8 @@ export type RssSource = {
   category: RssSourceCategory;
   url: string;
   enabled: boolean;
+  softDisabled?: boolean;
+  softDisabledReason?: string;
   moodBias?: Partial<Mood>;
 };
 
@@ -130,9 +132,13 @@ export type RssSourceBundle = {
   sources: Array<{
     name: string;
     category: RssSourceCategory;
+    url?: string;
     enabled: boolean;
     fetched: boolean;
+    status: "ok" | "empty" | "disabled" | "blocked_403" | "error";
     item_count: number;
+    lastCheckedAt: string;
+    retriedWithBrowserHeaders?: boolean;
     error?: string;
   }>;
 };
