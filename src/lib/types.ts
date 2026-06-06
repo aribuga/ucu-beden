@@ -176,6 +176,8 @@ export type PoemGenerationMeta = {
   fallback_reason: string | null;
 };
 
+export type TitleGenerationSource = "llm" | "fallback_dominant_words";
+
 export type ImageMutation = {
   from: string;
   to: string;
@@ -186,6 +188,7 @@ export type ImageMutation = {
 export type DailyPoem = {
   date: string;
   title: string;
+  title_generation?: TitleGenerationSource;
   generated_at: string;
   age_months: number;
   age_display: string;

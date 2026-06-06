@@ -2,7 +2,7 @@ import { formatAge } from "./age";
 import { tokenize, topWords } from "./inputPoems";
 import { buildImageMutations, extractImages } from "./memoryEngine";
 import { seededMany, seededPick } from "./random";
-import type { DailyPoem, GenerationContext, PersonalitySettings, PoemAnalysis } from "./types";
+import type { DailyPoem, GenerationContext, PersonalitySettings, PoemAnalysis, TitleGenerationSource } from "./types";
 
 function buildHiddenVoicePrompt(settings: PersonalitySettings): string {
   const traits = settings.hidden_voice_traits;
@@ -106,14 +106,85 @@ Kurallar:
 - Yürüyüşü gezi yazısı gibi anlatma.
 - En az bir eski hafıza çağır ama birebir kopyalama.
 - Kullanıcının şiirlerini asla birebir taklit etme.
-- Şiirin sonunda açıklama yazma.`;
+- Şiirin sonunda açıklama yazma.
+
+Şiirle birlikte bir başlık da üret.
+Başlık UCU BEDEN'in o günkü halinden doğmalı.
+Başlık kelime frekansı analizi gibi mekanik görünmemeli.
+Başlık şiiri açıklamamalı; şiire başka bir kapı açmalı.
+Başlık haber özeti gibi veya fazla açıklayıcı olmamalı.
+Başlık bazen kısa, bazen uzun olabilir.
+Başlık bazen kuru, bazen absürt, bazen sarkastik, bazen kırılgan olabilir.
+Başlık UCU BEDEN'in kuru, hafif sarkastik ve absürt gündelik sesini taşıyabilir; ama "komik başlık" gibi davranmamalı.
+Başlık şiirin ilk dizesiyle aynı olmamalı.
+Başlık kullanıcının input şiirlerinden birebir dize kopyalamamalı.
+Başlık "kelime / kelime" formatına zorlanmamalı.
+
+Yalnızca şu JSON formatında cevap ver:
+{
+  "title": "...",
+  "poem": "...",
+  "mood_sentence": "..."
+}`;
 }
 
 type OpenAIPoemResult = {
-  text: string | null;
+  poem: string | null;
+  title: string | null;
+  moodSentence: string | null;
   model: string | null;
   error: string | null;
 };
+
+type StructuredPoemResponse = {
+  title?: unknown;
+  poem?: unknown;
+  mood_sentence?: unknown;
+};
+
+function parseStructuredPoemResponse(text: string): StructuredPoemResponse | null {
+  const withoutFence = text.trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
+  const start = withoutFence.indexOf("{");
+  const end = withoutFence.lastIndexOf("}");
+  const jsonText = start >= 0 && end > start ? withoutFence.slice(start, end + 1) : withoutFence;
+
+  try {
+    const parsed = JSON.parse(jsonText) as unknown;
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? (parsed as StructuredPoemResponse) : null;
+  } catch {
+    return null;
+  }
+}
+
+function cleanSingleLine(value: string): string {
+  return value.replace(/\s+/g, " ").trim().replace(/^["'“”]+|["'“”]+$/g, "");
+}
+
+function normalizedForComparison(value: string): string {
+  return cleanSingleLine(value).toLocaleLowerCase("tr").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+}
+
+function validLlmTitle(value: string | null, poemText: string): string | null {
+  if (!value) {
+    return null;
+  }
+
+  const title = cleanSingleLine(value);
+  const firstLine = poemText.split(/\r?\n/).find((line) => line.trim().length > 0) ?? "";
+  if (title.length < 2 || title.length > 100 || normalizedForComparison(title) === normalizedForComparison(firstLine)) {
+    return null;
+  }
+
+  return title;
+}
+
+function validMoodSentence(value: string | null): string | null {
+  if (!value) {
+    return null;
+  }
+  const sentence = cleanSingleLine(value);
+  return sentence.length >= 4 && sentence.length <= 280 ? sentence : null;
+}
 
 function wait(ms: number): Promise<void> {
   return new Promise((resolve) => {
@@ -125,7 +196,7 @@ async function tryOpenAIPoem(context: GenerationContext): Promise<OpenAIPoemResu
   const apiKey = process.env.OPENAI_API_KEY;
   const model = process.env.OPENAI_MODEL || "gpt-4.1-mini";
   if (!apiKey) {
-    return { text: null, model, error: "OPENAI_API_KEY is not set" };
+    return { poem: null, title: null, moodSentence: null, model, error: "OPENAI_API_KEY is not set" };
   }
 
   const prompt = buildPrompt(context);
@@ -143,7 +214,24 @@ async function tryOpenAIPoem(context: GenerationContext): Promise<OpenAIPoemResu
           model,
           input: prompt,
           temperature: 0.85,
-          max_output_tokens: 700
+          max_output_tokens: 700,
+          text: {
+            format: {
+              type: "json_schema",
+              name: "ucu_beden_daily_poem",
+              strict: true,
+              schema: {
+                type: "object",
+                properties: {
+                  title: { type: "string" },
+                  poem: { type: "string" },
+                  mood_sentence: { type: "string" }
+                },
+                required: ["title", "poem", "mood_sentence"],
+                additionalProperties: false
+              }
+            }
+          }
         })
       });
 
@@ -153,7 +241,7 @@ async function tryOpenAIPoem(context: GenerationContext): Promise<OpenAIPoemResu
           await wait(1000 * attempt);
           continue;
         }
-        return { text: null, model, error: lastError };
+        return { poem: null, title: null, moodSentence: null, model, error: lastError };
       }
 
       const data = (await response.json()) as {
@@ -167,10 +255,21 @@ async function tryOpenAIPoem(context: GenerationContext): Promise<OpenAIPoemResu
         null;
 
       if (!text?.trim()) {
-        return { text: null, model, error: "OpenAI response had no text output" };
+        return { poem: null, title: null, moodSentence: null, model, error: "OpenAI response had no text output" };
       }
 
-      return { text, model, error: null };
+      const structured = parseStructuredPoemResponse(text);
+      if (!structured || typeof structured.poem !== "string" || !structured.poem.trim()) {
+        return { poem: text.trim(), title: null, moodSentence: null, model, error: null };
+      }
+
+      return {
+        poem: structured.poem.trim(),
+        title: typeof structured.title === "string" ? structured.title : null,
+        moodSentence: typeof structured.mood_sentence === "string" ? structured.mood_sentence : null,
+        model,
+        error: null
+      };
     } catch (error) {
       lastError = error instanceof Error ? error.message : "OpenAI request failed";
       if (attempt < 3) {
@@ -179,7 +278,7 @@ async function tryOpenAIPoem(context: GenerationContext): Promise<OpenAIPoemResu
     }
   }
 
-  return { text: null, model, error: lastError };
+  return { poem: null, title: null, moodSentence: null, model, error: lastError };
 }
 
 function mockPoem(context: GenerationContext): string {
@@ -271,7 +370,7 @@ export function analyzeGeneratedPoem(text: string, context: GenerationContext): 
   };
 }
 
-function titleFor(text: string, context: GenerationContext): string {
+function fallbackTitleFor(text: string, context: GenerationContext): string {
   const words = topWords(tokenize(text), 4);
   if (words.length >= 2) {
     return `${words[0]} / ${words[1]}`;
@@ -281,19 +380,27 @@ function titleFor(text: string, context: GenerationContext): string {
 
 export async function generatePoemWithLLM(context: GenerationContext): Promise<DailyPoem> {
   const llmResult = await tryOpenAIPoem(context);
-  const openAIText = llmResult.text?.trim();
+  const openAIText = llmResult.poem?.trim();
   const poemText = (openAIText || mockPoem(context)).trim();
-  const analysis = analyzeGeneratedPoem(poemText, context);
+  const llmTitle = openAIText ? validLlmTitle(llmResult.title, poemText) : null;
+  const titleGeneration: TitleGenerationSource = llmTitle ? "llm" : "fallback_dominant_words";
+  const title = llmTitle ?? fallbackTitleFor(poemText, context);
+  const moodSentence = openAIText ? validMoodSentence(llmResult.moodSentence) ?? context.mood_sentence : context.mood_sentence;
+  const analysis = {
+    ...analyzeGeneratedPoem(poemText, context),
+    mood_sentence: moodSentence
+  };
 
   return {
     date: context.date,
-    title: titleFor(poemText, context),
+    title,
+    title_generation: titleGeneration,
     generated_at: new Date().toISOString(),
     age_months: context.age_months,
     age_display: context.age_display,
     poem_text: poemText,
     mood: context.mood,
-    mood_sentence: context.mood_sentence,
+    mood_sentence: moodSentence,
     daily_life: context.daily_life,
     walk_state: context.walk_state,
     sources: context.sources,

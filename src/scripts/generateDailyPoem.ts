@@ -91,6 +91,7 @@ async function main(): Promise<void> {
         poem_file: poemPath,
         poem_provider: poem.generation.provider,
         openai_fallback_reason: poem.generation.fallback_reason,
+        title_generation: poem.title_generation,
         generated_days: updatedState.generated_days,
         memory_density: updatedState.memory_density,
         yearly_report: yearlyReport ? `year_${String(yearlyReport.year).padStart(2, "0")}.json` : null
