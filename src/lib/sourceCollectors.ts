@@ -10,6 +10,8 @@ import type {
   RssDailyMoodSummary,
   RssSource,
   RssSourceBundle,
+  RssHealthStatus,
+  RssSourceHealth,
   SourceBundle,
   WeatherSource
 } from "./types";
@@ -17,18 +19,22 @@ import type {
 const KADIKOY_LAT = 40.9907;
 const KADIKOY_LON = 29.0277;
 const MIN_LIVE_RSS_ITEMS = 3;
+const RSS_TIMEOUT_MS = 8000;
+const MAX_ITEMS_PER_SOURCE = 6;
+const RSS_CONCURRENCY = 3;
 
 const RSS_HEADERS = {
-  "User-Agent": "Mozilla/5.0 (compatible; UcuBedenBot/1.0)",
-  Accept: "application/rss+xml, application/xml, text/xml, text/html;q=0.9, */*;q=0.8",
-  "Accept-Language": "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7"
+  "User-Agent": "Mozilla/5.0 (compatible; UcuBedenBot/1.0; +https://github.com/aribuga/ucu-beden)",
+  Accept: "application/rss+xml, application/xml, text/xml, application/atom+xml, text/html;q=0.9, */*;q=0.8",
+  "Accept-Language": "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Cache-Control": "no-cache"
 };
 
 async function fetchWithTimeout(url: string, timeoutMs = 6000, init?: RequestInit): Promise<Response> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
   try {
-    return await fetch(url, { ...init, signal: controller.signal });
+    return await fetch(url, { redirect: "follow", ...init, signal: controller.signal });
   } finally {
     clearTimeout(timeout);
   }
@@ -102,7 +108,7 @@ function stripHtml(text: string): string {
 }
 
 function extractTag(block: string, tag: string): string | undefined {
-  const match = block.match(new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\/${tag}>`, "i"));
+  const match = block.match(new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`, "i"));
   return match ? stripHtml(match[1]) : undefined;
 }
 
@@ -120,6 +126,15 @@ type RawRssItem = {
 };
 
 type RssRuntimeSource = RssSourceBundle["sources"][number];
+type RssFetchAttempt = {
+  url: string;
+  withBrowserHeaders: boolean;
+};
+type RssFetchFailure = {
+  status: RssHealthStatus;
+  error: string;
+  usedUrl?: string;
+};
 
 function parseFeedItems(xml: string): RawRssItem[] {
   const rssItems = Array.from(xml.matchAll(/<item\b[\s\S]*?<\/item>/gi), (match) => match[0]);
@@ -244,14 +259,91 @@ function scoreRssItem(raw: RawRssItem, source: RssSource): MoodTaggedSourceItem 
   };
 }
 
-function rssSourceHealth(source: RssSource, health: Omit<RssRuntimeSource, "name" | "category" | "url" | "enabled">): RssRuntimeSource {
+function rssSourceHealth(source: RssSource, health: Omit<RssSourceHealth, "name" | "category" | "url" | "enabled" | "itemCount">): RssRuntimeSource {
   return {
     name: source.name,
     category: source.category,
     url: source.url,
     enabled: source.enabled,
-    ...health
+    ...health,
+    itemCount: health.item_count
   };
+}
+
+function uniq(items: string[]): string[] {
+  return Array.from(new Set(items.filter(Boolean)));
+}
+
+function shouldTryBrowserHeaders(status: number, source: RssSource): boolean {
+  return source.fetchStrategy === "browser_headers" || status === 401 || status === 403 || status === 406 || status === 429;
+}
+
+function statusFromResponse(response: Response): RssFetchFailure {
+  if (response.status === 401 || response.status === 403 || response.status === 406) {
+    return {
+      status: "blocked_403",
+      error: `${response.status} ${response.statusText || "Forbidden"}`.trim(),
+      usedUrl: response.url
+    };
+  }
+
+  if (response.status === 429) {
+    return {
+      status: "rate_limited_429",
+      error: "429 Too Many Requests",
+      usedUrl: response.url
+    };
+  }
+
+  if (response.status === 404) {
+    return {
+      status: "not_found_404",
+      error: "404 Not Found",
+      usedUrl: response.url
+    };
+  }
+
+  return {
+    status: "failed",
+    error: `RSS returned ${response.status}`,
+    usedUrl: response.url
+  };
+}
+
+function failureFromError(error: unknown): RssFetchFailure {
+  if (error instanceof Error && error.name === "AbortError") {
+    return { status: "timeout", error: `Timeout after ${RSS_TIMEOUT_MS}ms` };
+  }
+
+  return {
+    status: "failed",
+    error: error instanceof Error ? error.message : "RSS fetch failed"
+  };
+}
+
+function buildRssAttempts(source: RssSource): RssFetchAttempt[] {
+  const urls = uniq([source.url, ...(source.alternateUrls ?? [])]);
+  return urls.flatMap((url) => [
+    { url, withBrowserHeaders: false },
+    { url, withBrowserHeaders: true }
+  ]);
+}
+
+async function tryRssAttempt(source: RssSource, attempt: RssFetchAttempt): Promise<{ response?: Response; failure?: RssFetchFailure }> {
+  try {
+    const response = await fetchWithTimeout(attempt.url, RSS_TIMEOUT_MS, attempt.withBrowserHeaders ? { headers: RSS_HEADERS } : undefined);
+    if (response.ok) {
+      return { response };
+    }
+
+    if (!attempt.withBrowserHeaders && shouldTryBrowserHeaders(response.status, source)) {
+      return { failure: statusFromResponse(response) };
+    }
+
+    return { failure: statusFromResponse(response) };
+  } catch (error) {
+    return { failure: failureFromError(error) };
+  }
 }
 
 async function fetchRssSource(source: RssSource): Promise<RssRuntimeSource & { items: MoodTaggedSourceItem[] }> {
@@ -264,76 +356,76 @@ async function fetchRssSource(source: RssSource): Promise<RssRuntimeSource & { i
         status: "disabled",
         item_count: 0,
         lastCheckedAt,
+        attemptedUrls: source.url ? [source.url] : [],
         error: "Disabled in rss_sources.json"
       }),
       items: []
     };
   }
 
-  if (source.softDisabled && source.softDisabledReason === "blocked_403") {
-    return {
-      ...rssSourceHealth(source, {
-        fetched: false,
-        status: "blocked_403",
-        item_count: 0,
-        lastCheckedAt,
-        error: "Soft-disabled after repeated 403"
-      }),
-      items: []
-    };
-  }
+  const attempts = buildRssAttempts(source);
+  const attemptedUrls: string[] = [];
+  let lastFailure: RssFetchFailure = { status: "failed", error: "RSS fetch failed" };
+  let retriedWithBrowserHeaders = false;
+  let emptyUrl: string | undefined;
 
-  try {
-    let retriedWithBrowserHeaders = false;
-    let response = await fetchWithTimeout(source.url, 8000);
-    if (response.status === 403) {
+  for (const attempt of attempts) {
+    if (attempt.withBrowserHeaders) {
       retriedWithBrowserHeaders = true;
-      response = await fetchWithTimeout(source.url, 8000, { headers: RSS_HEADERS });
+    }
+    attemptedUrls.push(attempt.url);
+
+    const result = await tryRssAttempt(source, attempt);
+    if (!result.response) {
+      lastFailure = result.failure ?? lastFailure;
+      continue;
     }
 
-    if (response.status === 403) {
+    try {
+      const xml = await result.response.text();
+      const items = parseFeedItems(xml)
+        .slice(0, MAX_ITEMS_PER_SOURCE)
+        .map((item) => scoreRssItem(item, source));
+      if (items.length === 0) {
+        emptyUrl = result.response.url || attempt.url;
+        lastFailure = { status: "empty", error: "RSS returned no items", usedUrl: emptyUrl };
+        continue;
+      }
+
       return {
         ...rssSourceHealth(source, {
-          fetched: false,
-          status: "blocked_403",
-          item_count: 0,
+          fetched: true,
+          status: "ok",
+          item_count: items.length,
+          usedUrl: result.response.url || attempt.url,
           lastCheckedAt,
-          retriedWithBrowserHeaders,
-          error: "403 Forbidden"
+          attemptedUrls: uniq(attemptedUrls),
+          retriedWithBrowserHeaders
         }),
-        items: []
+        items
+      };
+    } catch (error) {
+      lastFailure = {
+        status: "parse_error",
+        error: error instanceof Error ? error.message : "RSS parse failed",
+        usedUrl: result.response.url || attempt.url
       };
     }
-
-    if (!response.ok) {
-      throw new Error(`RSS returned ${response.status}`);
-    }
-    const xml = await response.text();
-    const items = parseFeedItems(xml)
-      .slice(0, 3)
-      .map((item) => scoreRssItem(item, source));
-    return {
-      ...rssSourceHealth(source, {
-        fetched: true,
-        status: items.length > 0 ? "ok" : "empty",
-        item_count: items.length,
-        lastCheckedAt,
-        retriedWithBrowserHeaders
-      }),
-      items
-    };
-  } catch (error) {
-    return {
-      ...rssSourceHealth(source, {
-        fetched: false,
-        status: "error",
-        item_count: 0,
-        lastCheckedAt,
-        error: error instanceof Error ? error.message : "RSS fetch failed"
-      }),
-      items: []
-    };
   }
+
+  return {
+    ...rssSourceHealth(source, {
+      fetched: false,
+      status: lastFailure.status,
+      item_count: 0,
+      usedUrl: lastFailure.usedUrl ?? emptyUrl,
+      lastCheckedAt,
+      attemptedUrls: uniq(attemptedUrls),
+      retriedWithBrowserHeaders,
+      error: lastFailure.error
+    }),
+    items: []
+  };
 }
 
 function summarizeRssItems(items: MoodTaggedSourceItem[]): RssDailyMoodSummary {
@@ -402,6 +494,8 @@ function fallbackRss(date: string): RssSourceBundle {
         fetched: true,
         status: "ok",
         item_count: items.length,
+        itemCount: items.length,
+        usedUrl: "local://mock-rss",
         lastCheckedAt,
         error: "No live RSS items collected"
       }
@@ -409,9 +503,25 @@ function fallbackRss(date: string): RssSourceBundle {
   };
 }
 
+async function mapWithConcurrency<T, R>(items: T[], limit: number, worker: (item: T) => Promise<R>): Promise<R[]> {
+  const results: R[] = [];
+  let nextIndex = 0;
+
+  async function runWorker(): Promise<void> {
+    while (nextIndex < items.length) {
+      const currentIndex = nextIndex;
+      nextIndex += 1;
+      results[currentIndex] = await worker(items[currentIndex]);
+    }
+  }
+
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, () => runWorker()));
+  return results;
+}
+
 async function collectRss(date: string): Promise<{ rss: RssSourceBundle; fallback: boolean; notes: string[] }> {
   const sources = await readRssSources();
-  const results = await Promise.all(sources.map((source) => fetchRssSource(source)));
+  const results = await mapWithConcurrency(sources, RSS_CONCURRENCY, fetchRssSource);
   const allItems = results.flatMap((result) => result.items);
   const categories: RssSource["category"][] = ["news", "art", "science_culture", "entertainment", "life"];
   const items = categories.flatMap((category) => allItems.filter((item) => item.category === category).slice(0, category === "news" ? 8 : 5)).slice(0, 30);
@@ -651,6 +761,13 @@ export async function collectSources(date: string): Promise<SourceBundle> {
     turkey_news: turkeyNews,
     art_world: artWorld,
     rss: rssResult.rss,
+    rssHealth: rssResult.rss.sources.map((source) => ({
+      name: source.name,
+      status: source.status,
+      itemCount: source.itemCount,
+      usedUrl: source.usedUrl,
+      error: source.error
+    })),
     notes: [weatherResult.note, newsNote, artNote, ...rssResult.notes].filter((note): note is string => Boolean(note))
   };
 }

@@ -90,6 +90,7 @@ export type SourceBundle = {
   turkey_news: NewsSource;
   art_world: ArtSource;
   rss?: RssSourceBundle;
+  rssHealth?: RssHealthDailyEntry[];
   notes: string[];
 };
 
@@ -99,9 +100,9 @@ export type RssSource = {
   name: string;
   category: RssSourceCategory;
   url: string;
+  alternateUrls?: string[];
   enabled: boolean;
-  softDisabled?: boolean;
-  softDisabledReason?: string;
+  fetchStrategy?: "default" | "browser_headers";
   moodBias?: Partial<Mood>;
 };
 
@@ -129,18 +130,35 @@ export type RssDailyMoodSummary = {
 export type RssSourceBundle = {
   items: MoodTaggedSourceItem[];
   dailyMoodSummary: RssDailyMoodSummary;
-  sources: Array<{
+  sources: RssSourceHealth[];
+};
+
+export type RssHealthStatus = "ok" | "empty" | "disabled" | "blocked_403" | "rate_limited_429" | "not_found_404" | "timeout" | "parse_error" | "failed";
+
+export type RssSourceHealth = {
     name: string;
     category: RssSourceCategory;
     url?: string;
+    usedUrl?: string;
     enabled: boolean;
     fetched: boolean;
-    status: "ok" | "empty" | "disabled" | "blocked_403" | "error";
+    status: RssHealthStatus;
     item_count: number;
+    itemCount: number;
     lastCheckedAt: string;
     retriedWithBrowserHeaders?: boolean;
+    attemptedUrls?: string[];
     error?: string;
-  }>;
+};
+
+export type RssHealthEntry = RssSourceHealth;
+
+export type RssHealthDailyEntry = {
+  name: string;
+  status: RssHealthStatus;
+  itemCount: number;
+  usedUrl?: string;
+  error?: string;
 };
 
 export type PoemAnalysis = {

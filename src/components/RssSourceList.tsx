@@ -13,17 +13,16 @@ function sourceStatusText(source: RssSource | RuntimeRssSource): string {
             : "empty"
           : source.error?.includes("403")
             ? "blocked_403"
-            : "error";
+            : "failed";
     const retry = source.retriedWithBrowserHeaders ? " / header retry" : "";
+    const usedUrl = source.usedUrl ? ` / ${source.usedUrl}` : "";
     const error = source.error ? ` / ${source.error}` : "";
-    return `${status} / ${source.item_count} item${retry}${error}`;
+    return `${status} / ${source.item_count} item${retry}${usedUrl}${error}`;
   }
 
-  if (source.softDisabled && source.softDisabledReason === "blocked_403") {
-    return "blocked_403 / soft-disabled";
-  }
-
-  return `${source.enabled ? "açık" : "kapalı"} / ${source.category}`;
+  const strategy = source.fetchStrategy ? ` / ${source.fetchStrategy}` : "";
+  const alternates = source.alternateUrls?.length ? ` / ${source.alternateUrls.length} alternatif` : "";
+  return `${source.enabled ? "açık" : "kapalı"} / ${source.category}${strategy}${alternates}`;
 }
 
 export function RssSourceList({ sources, collected }: { sources?: RssSource[]; collected?: SourceBundle["rss"] }) {

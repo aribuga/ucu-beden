@@ -4,6 +4,7 @@
     "category": "science_culture",
     "url": "https://arkeofili.com/feed/",
     "enabled": true,
+    "fetchStrategy": "default",
     "moodBias": {
       "clarity": 8,
       "melancholy": 2,
@@ -15,6 +16,7 @@
     "category": "science_culture",
     "url": "https://evrimagaci.org/rss.xml",
     "enabled": true,
+    "fetchStrategy": "default",
     "moodBias": {
       "clarity": 9,
       "absurdity": 2,
@@ -25,12 +27,16 @@
     "name": "Altyazı",
     "category": "entertainment",
     "url": "https://altyazi.net/feed/",
+    "alternateUrls": [
+      "https://altyazi.net/feed",
+      "https://altyazi.net/rss",
+      "https://altyazi.net/feed.xml"
+    ],
     "enabled": true,
-    "softDisabled": true,
-    "softDisabledReason": "blocked_403",
+    "fetchStrategy": "browser_headers",
     "moodBias": {
-      "desire": 4,
-      "clarity": 3,
+      "clarity": 4,
+      "absurdity": 2,
       "melancholy": 2
     }
   },
@@ -39,6 +45,7 @@
     "category": "entertainment",
     "url": "https://www.otekisinema.com/feed/",
     "enabled": true,
+    "fetchStrategy": "default",
     "moodBias": {
       "absurdity": 6,
       "desire": 3,
@@ -46,10 +53,23 @@
     }
   },
   {
+    "name": "Bağımsız Sinema",
+    "category": "entertainment",
+    "url": "https://www.bagimsizsinema.com/feed",
+    "enabled": true,
+    "fetchStrategy": "default",
+    "moodBias": {
+      "clarity": 3,
+      "melancholy": 2,
+      "absurdity": 2
+    }
+  },
+  {
     "name": "Artdog",
     "category": "art",
     "url": "https://artdogistanbul.com/feed/",
     "enabled": true,
+    "fetchStrategy": "default",
     "moodBias": {
       "clarity": 5,
       "desire": 4,
@@ -57,12 +77,103 @@
     }
   },
   {
+    "name": "Argonotlar",
+    "category": "art",
+    "url": "https://argonotlar.com/feed/",
+    "enabled": true,
+    "fetchStrategy": "default",
+    "moodBias": {
+      "clarity": 4,
+      "melancholy": 2,
+      "absurdity": 2
+    }
+  },
+  {
+    "name": "Arkitera",
+    "category": "art",
+    "url": "https://www.arkitera.com/feed/",
+    "enabled": true,
+    "fetchStrategy": "default",
+    "moodBias": {
+      "clarity": 5,
+      "fatigue": 1,
+      "hope": 2
+    }
+  },
+  {
+    "name": "Artkolik",
+    "category": "art",
+    "url": "https://www.artkolik.net/feed",
+    "enabled": true,
+    "fetchStrategy": "default",
+    "moodBias": {
+      "clarity": 3,
+      "desire": 2,
+      "hope": 2
+    }
+  },
+  {
+    "name": "Terrabayt",
+    "category": "art",
+    "url": "https://terrabayt.com/feed/",
+    "enabled": true,
+    "fetchStrategy": "default",
+    "moodBias": {
+      "clarity": 5,
+      "anger": 2,
+      "absurdity": 3,
+      "fatigue": 2
+    }
+  },
+  {
+    "name": "NouvArt",
+    "category": "art",
+    "url": "https://www.nouvart.net/feed/",
+    "enabled": true,
+    "fetchStrategy": "default",
+    "moodBias": {
+      "clarity": 3,
+      "desire": 2,
+      "hope": 2
+    }
+  },
+  {
+    "name": "It’s Nice That",
+    "category": "art",
+    "url": "https://feeds2.feedburner.com/itsnicethat/SlXC",
+    "enabled": true,
+    "fetchStrategy": "default",
+    "moodBias": {
+      "clarity": 4,
+      "desire": 3,
+      "hope": 3,
+      "absurdity": 2
+    }
+  },
+  {
+    "name": "The Creative Independent",
+    "category": "art",
+    "url": "https://thecreativeindependent.com/feed.xml",
+    "enabled": true,
+    "fetchStrategy": "default",
+    "moodBias": {
+      "clarity": 5,
+      "tenderness": 3,
+      "melancholy": 2,
+      "hope": 3
+    }
+  },
+  {
     "name": "Bant Mag",
     "category": "art",
     "url": "https://bantmag.com/feed/",
+    "alternateUrls": [
+      "https://bantmag.com/feed",
+      "https://bantmag.com/rss",
+      "https://bantmag.com/feed.xml"
+    ],
     "enabled": true,
-    "softDisabled": true,
-    "softDisabledReason": "blocked_403",
+    "fetchStrategy": "browser_headers",
     "moodBias": {
       "absurdity": 4,
       "desire": 4,
@@ -73,9 +184,13 @@
     "name": "Manifold",
     "category": "art",
     "url": "https://manifold.press/rss",
+    "alternateUrls": [
+      "https://manifold.press/feed",
+      "https://manifold.press/rss.xml",
+      "https://manifold.press/feed.xml"
+    ],
     "enabled": true,
-    "softDisabled": true,
-    "softDisabledReason": "blocked_403",
+    "fetchStrategy": "browser_headers",
     "moodBias": {
       "clarity": 6,
       "melancholy": 2,
@@ -86,9 +201,13 @@
     "name": "Play Tuşu",
     "category": "art",
     "url": "https://playtusu.com/feed/",
+    "alternateUrls": [
+      "https://playtusu.com/feed",
+      "https://playtusu.com/rss",
+      "https://playtusu.com/feed.xml"
+    ],
     "enabled": true,
-    "softDisabled": true,
-    "softDisabledReason": "blocked_403",
+    "fetchStrategy": "browser_headers",
     "moodBias": {
       "absurdity": 5,
       "desire": 3,
@@ -100,6 +219,7 @@
     "category": "art",
     "url": "https://vesaire.press/feed/",
     "enabled": true,
+    "fetchStrategy": "default",
     "moodBias": {
       "clarity": 5,
       "fatigue": 2,
@@ -111,6 +231,7 @@
     "category": "news",
     "url": "https://feeds.bbci.co.uk/turkce/rss.xml",
     "enabled": true,
+    "fetchStrategy": "default",
     "moodBias": {
       "fatigue": 5,
       "anger": 3,
@@ -122,6 +243,7 @@
     "category": "news",
     "url": "https://www.birgun.net/rss/home",
     "enabled": true,
+    "fetchStrategy": "default",
     "moodBias": {
       "anger": 6,
       "fatigue": 5,
@@ -132,9 +254,13 @@
     "name": "Diken",
     "category": "news",
     "url": "https://www.diken.com.tr/feed/",
+    "alternateUrls": [
+      "https://www.diken.com.tr/feed",
+      "https://www.diken.com.tr/rss",
+      "https://www.diken.com.tr/feed.xml"
+    ],
     "enabled": true,
-    "softDisabled": true,
-    "softDisabledReason": "blocked_403",
+    "fetchStrategy": "browser_headers",
     "moodBias": {
       "anger": 5,
       "fatigue": 5,
@@ -146,6 +272,7 @@
     "category": "news",
     "url": "https://www.radikal.com.tr/feed/",
     "enabled": true,
+    "fetchStrategy": "default",
     "moodBias": {
       "melancholy": 4,
       "fatigue": 3
@@ -156,6 +283,7 @@
     "category": "news",
     "url": "https://www.cumhuriyet.com.tr/rss/son_dakika.xml",
     "enabled": true,
+    "fetchStrategy": "default",
     "moodBias": {
       "anger": 5,
       "fatigue": 5,
@@ -167,6 +295,7 @@
     "category": "life",
     "url": "https://istanbullife.com.tr/feed/",
     "enabled": true,
+    "fetchStrategy": "default",
     "moodBias": {
       "tenderness": 4,
       "desire": 3,

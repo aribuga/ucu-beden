@@ -6,12 +6,13 @@ import { getLatestPoem, listSources, readRssSources, readState } from "../../../
 import type { RssSource, SourceBundle } from "../../../lib/types";
 
 type RuntimeRssSource = NonNullable<SourceBundle["rss"]>["sources"][number];
-type MaybeLegacyRuntimeRssSource = Partial<RuntimeRssSource> & {
+type MaybeLegacyRuntimeRssSource = Omit<Partial<RuntimeRssSource>, "status"> & {
   name: string;
   category: RuntimeRssSource["category"];
   enabled: boolean;
   fetched: boolean;
   item_count: number;
+  status?: RuntimeRssSource["status"] | "error";
 };
 
 function fallbackRuntimeSources(sources: RssSource[]): RuntimeRssSource[] {
@@ -22,16 +23,18 @@ function fallbackRuntimeSources(sources: RssSource[]): RuntimeRssSource[] {
     url: source.url,
     enabled: source.enabled,
     fetched: false,
-    status: source.softDisabled && source.softDisabledReason === "blocked_403" ? "blocked_403" : source.enabled ? "empty" : "disabled",
+    status: source.enabled ? "empty" : "disabled",
     item_count: 0,
-    lastCheckedAt: checkedAt,
-    error: source.softDisabled && source.softDisabledReason === "blocked_403" ? "Soft-disabled after repeated 403" : undefined
+    itemCount: 0,
+    usedUrl: source.url,
+    lastCheckedAt: checkedAt
   }));
 }
 
 function normalizeRuntimeSource(source: MaybeLegacyRuntimeRssSource, collectedAt?: string): RuntimeRssSource {
+  const explicitStatus = source.status === "error" ? "failed" : source.status;
   const status =
-    source.status ??
+    explicitStatus ??
     (source.fetched
       ? source.item_count > 0
         ? "ok"
@@ -39,40 +42,24 @@ function normalizeRuntimeSource(source: MaybeLegacyRuntimeRssSource, collectedAt
       : source.error?.includes("403")
         ? "blocked_403"
         : source.enabled
-          ? "error"
+          ? "failed"
           : "disabled");
 
   return {
     name: source.name,
     category: source.category,
     url: source.url,
+    usedUrl: source.usedUrl,
     enabled: source.enabled,
     fetched: source.fetched,
     status,
     item_count: source.item_count,
+    itemCount: source.itemCount ?? source.item_count,
     lastCheckedAt: source.lastCheckedAt ?? collectedAt ?? new Date().toISOString(),
     retriedWithBrowserHeaders: source.retriedWithBrowserHeaders,
+    attemptedUrls: source.attemptedUrls,
     error: source.error
   };
-}
-
-function applyConfiguredOverrides(runtimeSources: RuntimeRssSource[], configuredSources: RssSource[]): RuntimeRssSource[] {
-  const configuredByName = new Map(configuredSources.map((source) => [source.name, source]));
-
-  return runtimeSources.map((source) => {
-    const configured = configuredByName.get(source.name);
-    if (configured?.softDisabled && configured.softDisabledReason === "blocked_403") {
-      return {
-        ...source,
-        fetched: false,
-        status: "blocked_403",
-        item_count: 0,
-        error: source.error ?? "Soft-disabled after repeated 403"
-      };
-    }
-
-    return source;
-  });
 }
 
 function statusLabel(status: RuntimeRssSource["status"]): string {
@@ -81,23 +68,28 @@ function statusLabel(status: RuntimeRssSource["status"]): string {
     empty: "BOŞ",
     disabled: "KAPALI",
     blocked_403: "403",
-    error: "HATA"
+    rate_limited_429: "429",
+    not_found_404: "404",
+    timeout: "TIMEOUT",
+    parse_error: "PARSE",
+    failed: "HATA"
   };
   return labels[status];
 }
 
 function sourceLine(source: RuntimeRssSource): string {
   const retry = source.retriedWithBrowserHeaders ? " / header retry" : "";
+  const url = source.usedUrl ? ` / ${source.usedUrl}` : source.url ? ` / ${source.url}` : "";
   const error = source.error ? ` / ${source.error}` : "";
-  return `${statusLabel(source.status)} / ${source.item_count} item${retry}${error}`;
+  return `${source.category} / ${statusLabel(source.status)} / ${source.itemCount ?? source.item_count} item${retry}${url}${error}`;
 }
 
 export default async function SourceHealthPage() {
   const [latest, state, sourceHistory, configuredSources] = await Promise.all([getLatestPoem(), readState(), listSources(), readRssSources()]);
   const latestSource = sourceHistory.at(-1);
-  const runtimeSources = applyConfiguredOverrides(latestSource?.rss?.sources
+  const runtimeSources = latestSource?.rss?.sources
     ? latestSource.rss.sources.map((source) => normalizeRuntimeSource(source, latestSource.collected_at))
-    : fallbackRuntimeSources(configuredSources), configuredSources);
+    : fallbackRuntimeSources(configuredSources);
   const blockedCount = runtimeSources.filter((source) => source.status === "blocked_403").length;
   const okCount = runtimeSources.filter((source) => source.status === "ok").length;
 

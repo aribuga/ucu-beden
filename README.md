@@ -137,7 +137,7 @@ Every 12 generated poems creates a report in `data/yearly_reports/year_XX.json`.
 
 ## Sources
 
-The source collector is adapter-shaped. Open-Meteo can be used for weather. RSS sources are managed in `data/settings/rss_sources.json` and are mood-tagged into `data/sources/YYYY-MM-DD.json`.
+The source collector is adapter-shaped. Open-Meteo can be used for weather. RSS sources are managed directly in `data/settings/rss_sources.json`; no feed combiner is required. Successful RSS items are mood-tagged into `data/sources/YYYY-MM-DD.json`.
 
 RSS categories:
 
@@ -147,7 +147,34 @@ RSS categories:
 - `news`
 - `life`
 
-The `/mood-map` page visualizes RSS items as mood-colored dots. Missing APIs or failing RSS feeds fall back to local mock summaries without breaking generation.
+Each RSS source can define:
+
+```json
+{
+  "name": "Example",
+  "category": "art",
+  "url": "https://example.com/feed/",
+  "alternateUrls": ["https://example.com/feed", "https://example.com/rss"],
+  "enabled": true,
+  "fetchStrategy": "default",
+  "moodBias": {
+    "clarity": 4,
+    "desire": 2
+  }
+}
+```
+
+- `fetchStrategy: "default"` tries the normal feed request first.
+- `fetchStrategy: "browser_headers"` still avoids scraping or challenge bypassing, but makes the browser-like header retry more explicit for sources that often block simple fetches.
+- `alternateUrls` lets WordPress-style feeds try `/feed`, `/rss`, or `/feed.xml` variants before giving up.
+
+RSS fetching is intentionally polite: it follows redirects, uses timeouts, limits items per source, and fetches with small concurrency. If a source returns `401`, `403`, `406`, or `429`, UCU BEDEN retries with browser-like RSS headers. If it is still blocked, that source is marked in health data and ignored by mood generation for that day.
+
+Daily source JSON includes `rssHealth` and per-source health rows under `rss.sources`. Possible statuses include `ok`, `empty`, `blocked_403`, `rate_limited_429`, `not_found_404`, `timeout`, `parse_error`, and `failed`.
+
+The `/sources/health` page shows source name, category, status, item count, last check time, used URL, and any short error message. Cloudflare or bot-protection challenges are not bypassed; the system only tries browser-like headers, alternate feed URLs, and graceful fallback.
+
+The `/mood-map` page visualizes successful RSS items as mood-colored dots. Blocked or failed sources do not appear as dots, but remain visible in `/sources/health`. Missing APIs or failing RSS feeds fall back to local mock summaries without breaking generation.
 
 ## GitHub Actions And Pages
 
