@@ -9,6 +9,7 @@
     "generate:today": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/generateDailyPoem.ts",
     "analyze:input": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/analyzeInputPoems.ts",
     "rebuild:memory": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/rebuildMemory.ts",
+    "debug:mood-sentences": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/debugMoodSentences.ts",
     "typecheck": "node --preserve-symlinks --preserve-symlinks-main node_modules/typescript/bin/tsc --noEmit"
   },
   "dependencies": {

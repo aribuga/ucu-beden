@@ -1,6 +1,7 @@
 import { formatAge } from "./age";
 import { tokenize, topWords } from "./inputPoems";
 import { buildImageMutations, extractImages } from "./memoryEngine";
+import { formatMoodSentence } from "./moodSentence";
 import { seededMany, seededPick } from "./random";
 import type { DailyPoem, GenerationContext, PersonalitySettings, PoemAnalysis, TitleGenerationSource } from "./types";
 
@@ -88,6 +89,9 @@ ${context.state.last_mood ? JSON.stringify(context.state.last_mood) : "yok"}
 Bugünkü ruh halin:
 ${context.mood_sentence}
 
+Son günlerin mood cümleleri, bunları tekrar etme:
+${context.state.mood_history.slice(-5).map((entry) => `- ${entry.sentence}`).join("\n") || "yok"}
+
 Tekrar eden kelimeler:
 ${context.state.dominant_words.slice(0, 12).join(", ")}
 
@@ -119,6 +123,10 @@ Başlık UCU BEDEN'in kuru, hafif sarkastik ve absürt gündelik sesini taşıya
 Başlık şiirin ilk dizesiyle aynı olmamalı.
 Başlık kullanıcının input şiirlerinden birebir dize kopyalamamalı.
 Başlık "kelime / kelime" formatına zorlanmamalı.
+
+Mood cümlesi yalnızca bugünün mood, ev, yürüyüş, hava, RSS, hafıza ve şiir bağlamından doğmalı.
+Önceki günlerin mood cümlesini tekrarlamamalı ve sabit bir şablon gibi görünmemeli.
+Mood cümlesi "Bugünkü hali:" ile başlamalı, kısa ve şiirsel bir günlük durum özeti olmalı.
 
 Yalnızca şu JSON formatında cevap ver:
 {
@@ -183,7 +191,64 @@ function validMoodSentence(value: string | null): string | null {
     return null;
   }
   const sentence = cleanSingleLine(value);
-  return sentence.length >= 4 && sentence.length <= 280 ? sentence : null;
+  return sentence.length >= 4 && sentence.length <= 280 ? formatMoodSentence(sentence) : null;
+}
+
+function buildFallbackMoodSentence(context: GenerationContext, variant = 0): string {
+  const seed = `${context.date}:fallback-mood-sentence:${variant}`;
+  const body = seededPick(
+    [
+      `${context.daily_life.posture}, ${context.daily_life.activity}`,
+      `${context.daily_life.location} içinde ${context.daily_life.body_state}`,
+      `${context.daily_life.object_focus} yanında ${context.daily_life.body_state}`
+    ],
+    `${seed}:body`
+  );
+  const walk = context.walk_state.did_walk
+    ? seededPick(
+        [
+          `${context.walk_state.current_segment} yürüyüşünden bir iz taşıyor`,
+          `${context.walk_state.route_name} yolunu hâlâ bedeninde tutuyor`,
+          `${context.walk_state.weather_on_body}; yürüyüşü eve kadar gelmiş`
+        ],
+        `${seed}:walk`
+      )
+    : seededPick(
+        [
+          "yürüyüşü bugün kapının içinde kalmış",
+          "dışarı çıkma fikrini odanın bir köşesine bırakmış",
+          "bugün yolu değil, odadaki mesafeleri ölçmüş"
+        ],
+        `${seed}:inside`
+      );
+  const sourceCandidates = context.sources.rss?.dailyMoodSummary.leakageWords?.length
+    ? context.sources.rss.dailyMoodSummary.leakageWords.map((word) => `${word} kelimesini gereğinden fazla ciddiye almıyor`)
+    : [
+        context.daily_life.attention,
+        context.sources.art_world.fragments[0],
+        context.sources.turkey_news.fragments[0],
+        context.sources.weather.body_effect
+      ].filter((item): item is string => Boolean(item));
+  const distinctSourceCandidates = sourceCandidates.filter((item) => !walk.includes(item));
+  const source = seededPick(distinctSourceCandidates.length > 0 ? distinctSourceCandidates : sourceCandidates, `${seed}:source`).replace(/[.!?]+$/, "");
+
+  return `Bugünkü hali: ${body}; ${walk}, ${source}.`;
+}
+
+function uniqueMoodSentence(context: GenerationContext, candidate: string | null): string {
+  const previous = new Set(context.state.mood_history.map((entry) => normalizedForComparison(entry.sentence)));
+  if (candidate && !previous.has(normalizedForComparison(candidate))) {
+    return candidate;
+  }
+
+  for (let variant = 0; variant < 8; variant += 1) {
+    const fallback = buildFallbackMoodSentence(context, variant);
+    if (!previous.has(normalizedForComparison(fallback))) {
+      return fallback;
+    }
+  }
+
+  return `${buildFallbackMoodSentence(context)} ${context.daily_life.attention}.`;
 }
 
 function wait(ms: number): Promise<void> {
@@ -385,7 +450,8 @@ export async function generatePoemWithLLM(context: GenerationContext): Promise<D
   const llmTitle = openAIText ? validLlmTitle(llmResult.title, poemText) : null;
   const titleGeneration: TitleGenerationSource = llmTitle ? "llm" : "fallback_dominant_words";
   const title = llmTitle ?? fallbackTitleFor(poemText, context);
-  const moodSentence = openAIText ? validMoodSentence(llmResult.moodSentence) ?? context.mood_sentence : context.mood_sentence;
+  const llmMoodSentence = openAIText ? validMoodSentence(llmResult.moodSentence) : null;
+  const moodSentence = uniqueMoodSentence(context, llmMoodSentence);
   const analysis = {
     ...analyzeGeneratedPoem(poemText, context),
     mood_sentence: moodSentence

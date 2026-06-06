@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { formatMoodSentence } from "../lib/moodSentence";
 import type { DailyPoem } from "../lib/types";
 
 export function TimelineItem({ poem }: { poem: DailyPoem }) {
@@ -11,7 +12,7 @@ export function TimelineItem({ poem }: { poem: DailyPoem }) {
           <span className="tiny">{poem.age_display}</span>
         </div>
         <div>{poem.title}</div>
-        <div className="tiny">{poem.mood_sentence}</div>
+        {poem.mood_sentence ? <div className="tiny">{formatMoodSentence(poem.mood_sentence)}</div> : null}
       </Link>
     </article>
   );

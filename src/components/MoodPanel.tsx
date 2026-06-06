@@ -1,3 +1,4 @@
+import { formatMoodSentence } from "../lib/moodSentence";
 import type { Mood } from "../lib/types";
 
 const labels: Array<[keyof Mood, string]> = [
@@ -15,7 +16,7 @@ export function MoodPanel({ mood, sentence }: { mood: Mood; sentence: string }) 
   return (
     <section className="section">
       <h2 className="section-title">Ruh Hali</h2>
-      <p>{sentence}</p>
+      <p>{formatMoodSentence(sentence)}</p>
       <div className="mood-grid">
         {labels.map(([key, label]) => (
           <div className="mood-row" key={key}>

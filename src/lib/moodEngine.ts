@@ -1,4 +1,4 @@
-import { clamp, seededNumber } from "./random";
+import { clamp, seededNumber, seededPick } from "./random";
 import type { InputPoemsAnalysis, Mood, SourceBundle, UcuBedenState } from "./types";
 
 const defaultMood: Mood = {
@@ -78,15 +78,52 @@ export function calculateMood(params: {
     hope: clamp(drift(previous.hope, target.hope))
   };
 
-  return { mood, sentence: moodSentence(mood, params.sources) };
+  return { mood, sentence: moodSentence(params.date, mood, params.sources) };
 }
 
-export function moodSentence(mood: Mood, sources: SourceBundle): string {
-  const body = mood.fatigue > 65 ? "gövdesi ağır" : mood.clarity > 45 ? "yüzü biraz açılmış" : "dili paslı";
-  const news = sources.turkey_news.emotional_weight > 60 ? "haberlerden sonra içi kalabalık" : "haberleri yarım bırakmış";
-  const tenderness = mood.tenderness > 55 ? "yine de koltuğa şefkatli bakıyor" : "eşyalarla az konuşuyor";
-  const rss = sources.rss ? `${moodLabels[sources.rss.dailyMoodSummary.dominantMood]} noktaları çevresinde dönüyor` : "cümleleri sessizce daralıyor";
-  const absurd = mood.absurdity > 55 ? "aklında komik görünen küçük bir panik var" : rss;
+export function moodSentence(date: string, mood: Mood, sources: SourceBundle): string {
+  const seed = `${date}:${sources.date}:${mood.fatigue}:${mood.absurdity}:${mood.tenderness}`;
+  const body = seededPick(
+    mood.fatigue > 65
+      ? ["gövdesi ağır bir çekmece gibi açılıyor", "omuzları günü biraz geç taşıyor", "bedeni oturduğu yere ikna olmuş"]
+      : mood.clarity > 45
+        ? ["yüzü biraz açılmış", "dili pencereye yaklaşmış", "aklı havanın küçük bir yerini temizlemiş"]
+        : ["dili paslı", "gövdesi ne demek istediğini tam seçemiyor", "yüzü odanın ışığıyla pazarlık ediyor"],
+    `${seed}:body`
+  );
+  const world = seededPick(
+    sources.turkey_news.emotional_weight > 60
+      ? ["haberleri içeri alınca oda daralmış", "dış dünya ekranda gereğinden fazla yer kaplamış", "haberlerden sonra içi kalabalık"]
+      : ["haberleri yarım bırakmış", "dış dünyayı sessizce masanın kenarına koymuş", "ekranın ciddiyetine pek inanmamış"],
+    `${seed}:world`
+  );
+  const object = seededPick(
+    mood.tenderness > 55
+      ? ["koltuğa gereğinden nazik bakıyor", "eşyaların sessizliğini incitmemeye çalışıyor", "odadaki küçük şeyleri bugün affetmiş"]
+      : ["eşyalarla az konuşuyor", "masayla arasına ölçülü bir mesafe koymuş", "odanın fikrini şimdilik sormuyor"],
+    `${seed}:object`
+  );
+  const rss = sources.rss
+    ? seededPick(
+        [
+          `${moodLabels[sources.rss.dailyMoodSummary.dominantMood]} ile ${moodLabels[sources.rss.dailyMoodSummary.secondaryMood]} arasında dolaşıyor`,
+          `${moodLabels[sources.rss.dailyMoodSummary.dominantMood]} kapının altında ince bir iz bırakmış`,
+          `kaynaklardan kalan ${moodLabels[sources.rss.dailyMoodSummary.secondaryMood]} sesini evde küçültüyor`
+        ],
+        `${seed}:rss`
+      )
+    : seededPick(["cümleleri sessizce daralıyor", "dışarıdan gelen sesleri ev ölçüsüne indiriyor", "günün artığını küçük bir cümlede saklıyor"], `${seed}:quiet`);
+  const ending =
+    mood.absurdity > 55
+      ? seededPick(
+          [
+            "aklındaki küçük panik kendini önemli sanıyor",
+            "günün saçmalığını ciddi bir eşya gibi taşıyor",
+            "içindeki telaş bir süreliğine mobilya olmuş"
+          ],
+          `${seed}:absurd`
+        )
+      : rss;
 
-  return `Bugünkü hali: ${body}, ${news}, ${tenderness}; ${absurd}.`;
+  return `Bugünkü hali: ${body}, ${world}, ${object}; ${ending}.`;
 }
