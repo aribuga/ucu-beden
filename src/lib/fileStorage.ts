@@ -142,7 +142,7 @@ export async function readWorld(): Promise<World> {
 }
 
 export async function readState(): Promise<UcuBedenState> {
-  return readJsonFile<UcuBedenState>(storagePaths.state, {
+  const fallback: UcuBedenState = {
     name: "UCU BEDEN",
     generated_days: 0,
     age_months: 0,
@@ -164,13 +164,25 @@ export async function readState(): Promise<UcuBedenState> {
       seen_objects: [],
       route_mood_associations: []
     },
+    external_memory: {
+      recurring_source_words: [],
+      recent_learning_fragments: [],
+      source_mood_history: []
+    },
     poetic_drift: {
       style_notes: "Henüz kendi şiir hafızasını toplamaya başladı.",
       recent_changes: [],
       things_it_is_forgetting: [],
       things_it_keeps_returning_to: []
     }
-  });
+  };
+  const state = await readJsonFile<Partial<UcuBedenState>>(storagePaths.state, {});
+
+  return {
+    ...fallback,
+    ...state,
+    external_memory: state.external_memory ?? fallback.external_memory
+  };
 }
 
 export async function readInputAnalysis(): Promise<InputPoemsAnalysis> {

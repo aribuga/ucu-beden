@@ -25,6 +25,14 @@ export function MemoryPanel({ state }: { state: UcuBedenState }) {
           <span className="label">unuttuğu</span>
           <span>{state.poetic_drift.things_it_is_forgetting.join(", ") || "henüz yok"}</span>
         </div>
+        <div className="label-row">
+          <span className="label">dış dünya hafızası</span>
+          <span>{state.external_memory.recurring_source_words.join(", ") || "henüz yok"}</span>
+        </div>
+        <div className="label-row">
+          <span className="label">yanlış öğrendiği</span>
+          <span>{state.external_memory.recent_learning_fragments.slice(-4).join(" / ") || "henüz yok"}</span>
+        </div>
       </div>
     </section>
   );

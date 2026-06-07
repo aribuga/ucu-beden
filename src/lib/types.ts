@@ -118,6 +118,16 @@ export type MoodTaggedSourceItem = {
   shortAtmosphere: string;
 };
 
+export type ExternalKnowledgeFragment = {
+  source: string;
+  category: RssSourceCategory;
+  title: string;
+  moodTags: MoodKey[];
+  usableWords: string[];
+  transformedImage: string;
+  humanMisreading: string;
+};
+
 export type RssDailyMoodSummary = {
   dominantMood: MoodKey;
   secondaryMood: MoodKey;
@@ -125,6 +135,8 @@ export type RssDailyMoodSummary = {
   summary: string;
   fragments: string[];
   leakageWords?: string[];
+  learningFragments?: string[];
+  externalKnowledgeFragments?: ExternalKnowledgeFragment[];
 };
 
 export type RssSourceBundle = {
@@ -216,6 +228,12 @@ export type WalkMemory = {
   route_mood_associations: string[];
 };
 
+export type ExternalMemory = {
+  recurring_source_words: string[];
+  recent_learning_fragments: string[];
+  source_mood_history: string[];
+};
+
 export type PoeticDrift = {
   style_notes: string;
   recent_changes: string[];
@@ -241,6 +259,7 @@ export type UcuBedenState = {
   memory_density: number;
   home_memory: HomeMemory;
   walk_memory: WalkMemory;
+  external_memory: ExternalMemory;
   poetic_drift: PoeticDrift;
 };
 

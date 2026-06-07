@@ -124,6 +124,17 @@ export function moodSentence(date: string, mood: Mood, sources: SourceBundle): s
           `${seed}:absurd`
         )
       : rss;
+  const learnedImage = sources.rss?.dailyMoodSummary.externalKnowledgeFragments?.[0]?.transformedImage;
+  const external = learnedImage
+    ? seededPick(
+        [
+          learnedImage,
+          sources.rss?.dailyMoodSummary.externalKnowledgeFragments?.[0]?.humanMisreading ?? learnedImage,
+          ending
+        ],
+        `${seed}:external`
+      )
+    : ending;
 
-  return `Bugünkü hali: ${body}, ${world}, ${object}; ${ending}.`;
+  return `Bugünkü hali: ${body}, ${world}, ${object}; ${external}.`;
 }

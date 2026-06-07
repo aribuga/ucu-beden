@@ -11,7 +11,11 @@ export function UcuBedenHeader({ latest, state }: { latest: DailyPoem | null; st
         <div className="meta">
           <div>Yaş: {latest?.age_display ?? `${state.age_months} ay`}</div>
           <div>Gün: {state.generated_days}</div>
-          <div>Hafıza: {state.memory_density}/100</div>
+          <div
+            title="Şiir sayısı, tekrar eden imgeler, dış dünya kırıntıları ve input şiirlerden hesaplanan arşiv yoğunluğu."
+          >
+            Hafıza yoğunluğu: {state.memory_density}/100
+          </div>
         </div>
       </div>
       <nav className="nav" aria-label="Ana gezinme">
