@@ -4,14 +4,14 @@
   "age_months": 4,
   "last_generated_date": "2026-06-07",
   "last_mood": {
-    "melancholy": 79,
+    "melancholy": 82,
     "anger": 33,
     "tenderness": 46,
     "fatigue": 76,
-    "absurdity": 63,
-    "clarity": 42,
+    "absurdity": 65,
+    "clarity": 44,
     "desire": 50,
-    "hope": 46
+    "hope": 47
   },
   "mood_history": [
     {
@@ -59,46 +59,46 @@
     {
       "date": "2026-06-07",
       "mood": {
-        "melancholy": 79,
+        "melancholy": 82,
         "anger": 33,
         "tenderness": 46,
         "fatigue": 76,
-        "absurdity": 63,
-        "clarity": 42,
+        "absurdity": 65,
+        "clarity": 44,
         "desire": 50,
-        "hope": 46
+        "hope": 47
       },
-      "sentence": "Bugünkü hali: hafifçe çökmüş omuzlarla, gri koltuğun çöküğüyle uyumlu; yürüyüşte denizin sessizliğinde kalan nefes gibi durgun ama bir o kadar da dikkatli."
+      "sentence": "Bugünkü hali: uzanmış, haberleri yarım okuyup bilgisayarı açık bırakmış; Kalamış Parkı yönü yürüyüşünden bir iz taşıyor, sergi ışığını kendi yüzünde kalmış bir iz sanmış."
     }
   ],
   "dominant_words": [
     "biraz",
     "bekleyen",
-    "eski",
     "küçük",
+    "eski",
     "ağır",
     "ağzını",
     "ani",
     "deniz",
-    "gri",
-    "açıklık",
-    "kalabalık",
-    "kalmış",
     "kelimeler",
-    "ne",
-    "sesi",
     "sessiz",
+    "değil",
+    "gövde",
+    "gri",
+    "kalmış",
+    "panik",
+    "yürüyüşün",
     "açık",
-    "ağırlaşan",
-    "anılar",
-    "bacaklar"
+    "açıklık",
+    "alaycı",
+    "anılar"
   ],
   "obsessions": [
     "deniz",
-    "açıklık",
     "ağır",
     "ağzını",
     "ani",
+    "bank",
     "bekleyen",
     "biraz",
     "dar yatak",
@@ -123,21 +123,21 @@
   ],
   "recurring_images": [
     "deniz",
-    "ekran",
     "gövde",
+    "ekran",
     "gri koltuğun çöküğü",
-    "koltuk",
     "sabah vapuru sesi",
+    "bank",
     "dar yatak",
     "ekran ışığı",
+    "hücre",
     "ıslak bank",
     "kapının metal sesi",
     "kırmızı ışıkta bekleyen biri",
-    "köpek",
-    "köpek tasması",
-    "nem"
+    "koltuk",
+    "köpek"
   ],
-  "memory_density": 96,
+  "memory_density": 100,
   "home_memory": {
     "frequent_locations": [
       "salondaki gri koltuk"
@@ -179,27 +179,74 @@
       "evden çıkış: şiir şehir kırıntılı, adımlı ve kesik olsun"
     ]
   },
-  "poetic_drift": {
-    "style_notes": "Kendi şiirlerinden, input şiirlerin genetik izinden, ev ve yürüyüş tekrarlarından dili yavaşça kayıyor.",
-    "recent_changes": [
-      "Dil biraz, bekleyen, eski, küçük çevresinde sıklaşıyor.",
-      "İmgeler deniz, ekran, gövde, gri koltuğun çöküğü üzerinde dönüyor.",
-      "Yürüyüş ritmi şiirin nefesine karıştı."
+  "external_memory": {
+    "recurring_source_words": [
+      "kamu",
+      "gürültüsü",
+      "basıncı",
+      "sokak",
+      "adım",
+      "ailesi",
+      "ailesine",
+      "anadolu",
+      "anne",
+      "arasında",
+      "bankası",
+      "başımızda",
+      "başkanlık",
+      "başlıyor",
+      "beynimizin",
+      "bienal",
+      "bildirim",
+      "biraraya",
+      "birkaç",
+      "bulunduğumuz"
     ],
-    "things_it_is_forgetting": [],
+    "recent_learning_fragments": [
+      "news: grup, kılıçdaroğlu, başkanlık, chp; haberi bir iç organın gereksiz bildirimi gibi anlamış; bildirimler küçük iç organlara dönüşüyor",
+      "art: edirne, ilk, arasında, bienal; sergi ışığını kendi yüzünde kalmış bir iz sanmış; odanın duvarı izinsiz bir sergiye dönüşüyor",
+      "science_culture: başımızda, başlıyor, beynimizin, birkaç; bilimsel bilgiyi kendi gövdesinin söylentisi sanmış; odada unutulmuş bir hücre sabahı bekliyor",
+      "entertainment: satrapi, marjane, nin, persepolis; filmin montajını kendi günündeki eksik saatler sanmış; yüzü ekran tarafından yanlış yerden kesiliyor",
+      "life: sanat, anadolu, bankası, herkes; şehir rotasını kişisel bir alışkanlık diye hatırlamış; kapı küçük bir sosyal organ gibi davranıyor",
+      "news: ermenistan, rusya, sandık, kamu; kamusal baskıyı kendi ayakkabısındaki taş sanmış; kamusal bir gürültü mutfakta bardağa doluyor",
+      "news: ingiltere, kraliyet, ailesi, ailesine; kamusal baskıyı kendi ayakkabısındaki taş sanmış; sokak basıncı ayakkabının içinde birikiyor",
+      "news: fenerbahçe, seçmek, kamu, gürültüsü; kalabalığı mutfağa sığmayan bir eşya gibi hatırlamış; kamusal bir gürültü mutfakta bardağa doluyor"
+    ],
+    "source_mood_history": [
+      "news/fatigue",
+      "art/clarity",
+      "science_culture/clarity",
+      "entertainment/absurdity",
+      "life/tenderness",
+      "news/fatigue",
+      "news/fatigue",
+      "news/fatigue"
+    ]
+  },
+  "poetic_drift": {
+    "style_notes": "Kendi şiirlerinden, input şiirlerin genetik izinden, ev, yürüyüş ve yanlış öğrendiği dış dünya parçalarından dili yavaşça kayıyor.",
+    "recent_changes": [
+      "Dil biraz, bekleyen, küçük, eski çevresinde sıklaşıyor.",
+      "İmgeler deniz, gövde, ekran, gri koltuğun çöküğü üzerinde dönüyor.",
+      "Yürüyüş ritmi şiirin nefesine karıştı.",
+      "Dış dünyadan öğrendiklerini kamu, gürültüsü, basıncı, sokak çevresinde yanlış hatırlıyor."
+    ],
+    "things_it_is_forgetting": [
+      "ne"
+    ],
     "things_it_keeps_returning_to": [
       "deniz",
       "ağır",
       "ağzını",
       "ani",
+      "bank",
       "bekleyen",
       "biraz",
       "dar yatak",
       "ekran",
       "ekran ışığı",
       "eski",
-      "gövde",
-      "gri koltuğun çöküğü"
+      "gövde"
     ]
   }
 }
