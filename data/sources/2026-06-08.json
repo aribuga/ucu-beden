@@ -1,18 +1,18 @@
 {
   "date": "2026-06-08",
-  "collected_at": "2026-06-08T09:02:53.783Z",
+  "collected_at": "2026-06-08T09:15:23.217Z",
   "fallback_used": false,
   "weather": {
     "provider": "open-meteo",
-    "summary": "Kadıköy'de 25.3°C; nem 60%, rüzgar 19.1 km/s civarında.",
-    "temperature_c": 25.3,
-    "humidity_percent": 60,
-    "wind_kmh": 19.1,
+    "summary": "Kadıköy'de 25.5°C; nem 59%, rüzgar 19.4 km/s civarında.",
+    "temperature_c": 25.5,
+    "humidity_percent": 59,
+    "wind_kmh": 19.4,
     "body_effect": "hava yüzünde ince bir açıklık bırakıyor"
   },
   "turkey_news": {
     "provider": "rss-news",
-    "summary": "Bugün dış dünya açıklık ağırlıklı; ikinci damar yorgunluk. Başlıklar şiire haber olarak değil, iç basınç olarak sızıyor.",
+    "summary": "Bugün dış dünya açıklık ağırlıklı; ikinci damar arzu. Başlıklar şiire haber olarak değil, iç basınç olarak sızıyor.",
     "emotional_weight": 59,
     "fragments": [
       "ağırlaşan gündelik politik basınç",
@@ -28,7 +28,7 @@
   "art_world": {
     "provider": "rss-art",
     "summary": "Sanat ve eğlence RSS kaynakları görüntü, sahne, katalog ve şehir ışığı olarak toplandı.",
-    "curiosity": 71,
+    "curiosity": 74,
     "fragments": [
       "açılan sergi duvarı ve görüntü basıncı",
       "akdeniz",
@@ -601,6 +601,37 @@
         "shortAtmosphere": "açılan derin zaman ve bilgi kırıntısı"
       },
       {
+        "title": "29. Uçan Süpürge Uluslararası Kadın Filmleri Festivali’nde FIPRESCI Ödülü’nün Sahibi Belli Oldu",
+        "source": "Altyazı",
+        "category": "entertainment",
+        "url": "https://altyazi.net/haberler/29-ucan-supurge-uluslararasi-kadin-filmleri-festivalinde-fipresci-odulunun-sahibi-belli-oldu/",
+        "publishedAt": "Mon, 08 Jun 2026 09:06:52 +0000",
+        "moodTags": [
+          "desire",
+          "absurdity",
+          "clarity"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 0,
+          "tenderness": 0,
+          "fatigue": 0,
+          "absurdity": 6,
+          "clarity": 6,
+          "desire": 7,
+          "hope": 2
+        },
+        "keywords": [
+          "29",
+          "festivali",
+          "fıprescı",
+          "filmleri",
+          "kadın",
+          "nde"
+        ],
+        "shortAtmosphere": "parlayan sahne, yüz ve yapay ışık"
+      },
+      {
         "title": "Bir Adım Geri Çekilmek ve Soru Sormak: Marjane Satrapi’nin Gözünden Persepolis",
         "source": "Altyazı",
         "category": "entertainment",
@@ -721,37 +752,6 @@
           "29",
           "süpürge",
           "uçan"
-        ],
-        "shortAtmosphere": "tuhaflaşan sahne, yüz ve yapay ışık"
-      },
-      {
-        "title": "Backrooms: Haritasız Bir Muamma",
-        "source": "Altyazı",
-        "category": "entertainment",
-        "url": "https://altyazi.net/yazilar/elestiriler/backrooms/",
-        "publishedAt": "Mon, 01 Jun 2026 11:27:47 +0000",
-        "moodTags": [
-          "absurdity",
-          "clarity",
-          "desire"
-        ],
-        "moodScores": {
-          "melancholy": 2,
-          "anger": 0,
-          "tenderness": 0,
-          "fatigue": 0,
-          "absurdity": 6,
-          "clarity": 6,
-          "desire": 3,
-          "hope": 0
-        },
-        "keywords": [
-          "backrooms",
-          "bilinçdışının",
-          "çıkarıyor",
-          "çıkışsız",
-          "haritasız",
-          "imzalı"
         ],
         "shortAtmosphere": "tuhaflaşan sahne, yüz ve yapay ışık"
       },
@@ -913,7 +913,7 @@
     ],
     "dailyMoodSummary": {
       "dominantMood": "clarity",
-      "secondaryMood": "fatigue",
+      "secondaryMood": "desire",
       "moodScores": {
         "melancholy": 2,
         "anger": 2,
@@ -921,10 +921,10 @@
         "fatigue": 3,
         "absurdity": 2,
         "clarity": 5,
-        "desire": 3,
+        "desire": 4,
         "hope": 3
       },
-      "summary": "Bugün dış dünya açıklık ağırlıklı; ikinci damar yorgunluk. Başlıklar şiire haber olarak değil, iç basınç olarak sızıyor.",
+      "summary": "Bugün dış dünya açıklık ağırlıklı; ikinci damar arzu. Başlıklar şiire haber olarak değil, iç basınç olarak sızıyor.",
       "fragments": [
         "ağırlaşan gündelik politik basınç",
         "ın",
@@ -957,7 +957,7 @@
         "news: partisi, paşinyan, ermenistan, oyların; kalabalığı mutfağa sığmayan bir eşya gibi hatırlamış; ekonomi masanın bir ayağını kısaltıyor",
         "art: akdeniz, rodos, seramik, aracılığıyla; üretim meselesini mutfağın kişisel sorunu sanmış; pencere yüzüne yarım bir katalog sürüyor",
         "science_culture: bulundu, dame, katedrali, kazılarında; bilimsel bilgiyi kendi gövdesinin söylentisi sanmış; gövde gece boyunca başka bir türe dönüşüyor",
-        "entertainment: satrapi, marjane, nin, persepolis; filmin montajını kendi günündeki eksik saatler sanmış; yüzü ekran tarafından yanlış yerden kesiliyor",
+        "entertainment: festivali, fıprescı, filmleri, kadın; altyazıyı bedeninin açıklaması gibi okumuş; gövde sabah kendisi için altyazı istiyor",
         "life: sanat, anadolu, bankası, herkes; şehir rotasını kişisel bir alışkanlık diye hatırlamış; kapı küçük bir sosyal organ gibi davranıyor",
         "news: afd, aşırı, nin, sağcı; kamusal baskıyı kendi ayakkabısındaki taş sanmış; bildirimler küçük iç organlara dönüşüyor",
         "news: daki, delcy, erdoğan, görüşecek; kalabalığı mutfağa sığmayan bir eşya gibi hatırlamış; bildirimler küçük iç organlara dönüşüyor",
@@ -1030,23 +1030,23 @@
         {
           "source": "Altyazı",
           "category": "entertainment",
-          "title": "Bir Adım Geri Çekilmek ve Soru Sormak: Marjane Satrapi’nin Gözünden Persepolis",
+          "title": "29. Uçan Süpürge Uluslararası Kadın Filmleri Festivali’nde FIPRESCI Ödülü’nün Sahibi Belli Oldu",
           "moodTags": [
+            "desire",
             "absurdity",
-            "clarity",
-            "tenderness"
+            "clarity"
           ],
           "usableWords": [
-            "satrapi",
-            "marjane",
-            "nin",
-            "persepolis",
-            "adım",
+            "festivali",
+            "fıprescı",
+            "filmleri",
+            "kadın",
+            "nde",
             "sahne",
             "montaj"
           ],
-          "transformedImage": "yüzü ekran tarafından yanlış yerden kesiliyor",
-          "humanMisreading": "filmin montajını kendi günündeki eksik saatler sanmış"
+          "transformedImage": "gövde sabah kendisi için altyazı istiyor",
+          "humanMisreading": "altyazıyı bedeninin açıklaması gibi okumuş"
         },
         {
           "source": "Istanbul Life",
@@ -1144,7 +1144,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://arkeofili.com/feed/",
-        "lastCheckedAt": "2026-06-08T09:02:48.346Z",
+        "lastCheckedAt": "2026-06-08T09:15:17.436Z",
         "attemptedUrls": [
           "https://arkeofili.com/feed/"
         ],
@@ -1160,7 +1160,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://evrimagaci.org/rss.xml",
-        "lastCheckedAt": "2026-06-08T09:02:48.347Z",
+        "lastCheckedAt": "2026-06-08T09:15:17.437Z",
         "attemptedUrls": [
           "https://evrimagaci.org/rss.xml"
         ],
@@ -1176,7 +1176,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://altyazi.net/feed/",
-        "lastCheckedAt": "2026-06-08T09:02:48.348Z",
+        "lastCheckedAt": "2026-06-08T09:15:17.438Z",
         "attemptedUrls": [
           "https://altyazi.net/feed/"
         ],
@@ -1192,7 +1192,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.otekisinema.com/feed/",
-        "lastCheckedAt": "2026-06-08T09:02:48.961Z",
+        "lastCheckedAt": "2026-06-08T09:15:18.284Z",
         "attemptedUrls": [
           "https://www.otekisinema.com/feed/"
         ],
@@ -1208,7 +1208,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.bagimsizsinema.com/feed",
-        "lastCheckedAt": "2026-06-08T09:02:49.217Z",
+        "lastCheckedAt": "2026-06-08T09:15:18.288Z",
         "attemptedUrls": [
           "https://www.bagimsizsinema.com/feed"
         ],
@@ -1224,7 +1224,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://artdogistanbul.com/feed/",
-        "lastCheckedAt": "2026-06-08T09:02:49.537Z",
+        "lastCheckedAt": "2026-06-08T09:15:18.304Z",
         "attemptedUrls": [
           "https://artdogistanbul.com/feed/"
         ],
@@ -1240,7 +1240,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://argonotlar.com/feed/",
-        "lastCheckedAt": "2026-06-08T09:02:49.748Z",
+        "lastCheckedAt": "2026-06-08T09:15:18.909Z",
         "attemptedUrls": [
           "https://argonotlar.com/feed/"
         ],
@@ -1256,7 +1256,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.arkitera.com/feed/",
-        "lastCheckedAt": "2026-06-08T09:02:50.343Z",
+        "lastCheckedAt": "2026-06-08T09:15:19.499Z",
         "attemptedUrls": [
           "https://www.arkitera.com/feed/"
         ],
@@ -1272,7 +1272,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.artkolik.net/feed",
-        "lastCheckedAt": "2026-06-08T09:02:50.557Z",
+        "lastCheckedAt": "2026-06-08T09:15:19.514Z",
         "attemptedUrls": [
           "https://www.artkolik.net/feed"
         ],
@@ -1288,7 +1288,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://terrabayt.com/feed/",
-        "lastCheckedAt": "2026-06-08T09:02:50.599Z",
+        "lastCheckedAt": "2026-06-08T09:15:20.408Z",
         "attemptedUrls": [
           "https://terrabayt.com/feed/"
         ],
@@ -1304,7 +1304,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.nouvart.net/feed/",
-        "lastCheckedAt": "2026-06-08T09:02:51.411Z",
+        "lastCheckedAt": "2026-06-08T09:15:20.545Z",
         "attemptedUrls": [
           "https://www.nouvart.net/feed/"
         ],
@@ -1320,7 +1320,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds2.feedburner.com/itsnicethat/SlXC",
-        "lastCheckedAt": "2026-06-08T09:02:51.417Z",
+        "lastCheckedAt": "2026-06-08T09:15:20.869Z",
         "attemptedUrls": [
           "https://feeds2.feedburner.com/itsnicethat/SlXC"
         ],
@@ -1336,7 +1336,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://thecreativeindependent.com/feed.xml",
-        "lastCheckedAt": "2026-06-08T09:02:51.499Z",
+        "lastCheckedAt": "2026-06-08T09:15:20.959Z",
         "attemptedUrls": [
           "https://thecreativeindependent.com/feed.xml"
         ],
@@ -1352,7 +1352,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://bantmag.com/feed/",
-        "lastCheckedAt": "2026-06-08T09:02:51.584Z",
+        "lastCheckedAt": "2026-06-08T09:15:21.022Z",
         "attemptedUrls": [
           "https://bantmag.com/feed/"
         ],
@@ -1368,7 +1368,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://manifold.press/rss",
-        "lastCheckedAt": "2026-06-08T09:02:51.644Z",
+        "lastCheckedAt": "2026-06-08T09:15:21.190Z",
         "attemptedUrls": [
           "https://manifold.press/rss"
         ],
@@ -1384,7 +1384,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://playtusu.com/feed/",
-        "lastCheckedAt": "2026-06-08T09:02:51.766Z",
+        "lastCheckedAt": "2026-06-08T09:15:21.343Z",
         "attemptedUrls": [
           "https://playtusu.com/feed/"
         ],
@@ -1400,7 +1400,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://vesaire.press/feed/",
-        "lastCheckedAt": "2026-06-08T09:02:51.889Z",
+        "lastCheckedAt": "2026-06-08T09:15:21.347Z",
         "attemptedUrls": [
           "https://vesaire.press/feed/"
         ],
@@ -1416,7 +1416,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds.bbci.co.uk/turkce/rss.xml",
-        "lastCheckedAt": "2026-06-08T09:02:51.991Z",
+        "lastCheckedAt": "2026-06-08T09:15:21.492Z",
         "attemptedUrls": [
           "https://feeds.bbci.co.uk/turkce/rss.xml"
         ],
@@ -1432,7 +1432,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.birgun.net/rss/home",
-        "lastCheckedAt": "2026-06-08T09:02:52.313Z",
+        "lastCheckedAt": "2026-06-08T09:15:21.733Z",
         "attemptedUrls": [
           "https://www.birgun.net/rss/home"
         ],
@@ -1448,7 +1448,7 @@
         "status": "blocked_403",
         "item_count": 0,
         "usedUrl": "https://www.diken.com.tr/feed.xml",
-        "lastCheckedAt": "2026-06-08T09:02:52.393Z",
+        "lastCheckedAt": "2026-06-08T09:15:21.852Z",
         "attemptedUrls": [
           "https://www.diken.com.tr/feed/",
           "https://www.diken.com.tr/feed",
@@ -1468,7 +1468,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.radikal.com.tr/feed/",
-        "lastCheckedAt": "2026-06-08T09:02:52.397Z",
+        "lastCheckedAt": "2026-06-08T09:15:21.876Z",
         "attemptedUrls": [
           "https://www.radikal.com.tr/feed/"
         ],
@@ -1484,7 +1484,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.cumhuriyet.com.tr/rss",
-        "lastCheckedAt": "2026-06-08T09:02:52.489Z",
+        "lastCheckedAt": "2026-06-08T09:15:22.061Z",
         "attemptedUrls": [
           "https://www.cumhuriyet.com.tr/rss/son_dakika.xml"
         ],
@@ -1500,7 +1500,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://istanbullife.com.tr/feed/",
-        "lastCheckedAt": "2026-06-08T09:02:52.751Z",
+        "lastCheckedAt": "2026-06-08T09:15:22.178Z",
         "attemptedUrls": [
           "https://istanbullife.com.tr/feed/"
         ],
