@@ -17,12 +17,17 @@ Copy `.env.example` to `.env.local` if you want live services.
 ```txt
 OPENAI_API_KEY=
 OPENAI_MODEL=
+OPENAI_IMAGE_MODEL=gpt-image-1
+OPENAI_IMAGE_SIZE=1024x1280
+OPENAI_IMAGE_QUALITY=low
+OPENAI_IMAGE_FORMAT=png
+OPENAI_IMAGE_DELAY_MS=1200
 NEWS_API_KEY=
 WEATHER_API_KEY=
 NEXT_PUBLIC_BASE_PATH=
 ```
 
-If keys are missing, UCU BEDEN keeps working with deterministic mock sources and a mock poem generator.
+If keys are missing, UCU BEDEN keeps working with deterministic mock sources, a mock poem generator, and visual metadata fallbacks.
 
 OpenAI 500/429 responses are treated as temporary failures and retried before the mock poem generator is used. Generated poem JSON includes `generation.provider` so API usage can be checked after a run.
 
@@ -67,7 +72,7 @@ The script:
 - skips today if a poem already exists,
 - scans and analyzes `poems_input/`,
 - gathers live or fallback sources,
-- creates mood, a rich daily life record, and walking state,
+- creates mood, a rich daily life record, and walking state,,
 - analyzes the last 30 poems for soft repetition pressure,
 - recalls at least one memory,
 - writes `data/generated_poems/YYYY-MM-DD.json`,
@@ -107,6 +112,7 @@ npm run dev
 The home page preserves the poem archive on the left and adds a visual consciousness field on the right. It shows the latest poem feeling, latest dream, and a live Istanbul-time activity selected from the daily schedule. Additional pages:
 
 - `/archive`
+- `/dreams`
 - `/memory`
 - `/sources`
 - `/mood-map`
@@ -154,11 +160,25 @@ Old lines are not copied into new poems. Images and rhythms can return as mutati
 
 The last 30 poems also create soft repetition pressure. Frequently returning title shapes, locations, images, word pairs, and gestures are discouraged in the next prompt without being completely banned.
 
-The UI no longer exposes `memory_density` as a score. The numeric value remains internal and is translated into states such as `hafif`, `bulanık`, `sızıntılı`, or `taşmış`.
+The UI no longer exposes `memory_density` as a score. The numeric value remains internal and is translated into states such as `hafif`, `bulanık`, `ızıntılı`, or `taşmış`.
 
-## Visual Metadata
+## Visual Generation
 
-Poem and dream visuals use separate prompt rules and a `4:5` portrait aspect ratio. Until a real image provider is connected, the system stores aspect ratio, prompt, negative prompt, alt text, style tags, palette, and fallback seed. The UI renders these as lo-fi visual records instead of blocking generation.
+Poem and dream visuals use separate prompt rules and a `4:5` portrait aspect ratio. With `OPENAI_API_KEY`, the Image API generates the nearest supported portrait size and `sharp` crops it to a final `1024x1280` image. Files are stored under `public/generated/visuals/`; metadata under `data/visuals/` records the public `image_path`, provider, model, API size, final size, quality, format, prompt hash, fallback state, and any short error.
+
+The default model is `gpt-image-1`, quality is `low`, and format is `png`. These can be changed with the image environment variables above. If the key is missing or the API fails, poem and dream generation continue and the existing deterministic lo-fi metadata fallback remains visible.
+
+Generate missing historical metadata and images sequentially:
+
+```bash
+npm run backfill:visuals
+npm run backfill:visuals -- --from=2026-06-01
+npm run backfill:visuals -- --from=2026-06-01 --to=2026-06-11
+npm run backfill:visuals -- --images-only
+npm run backfill:visuals -- --force --limit=2 --delay-ms=2000
+```
+
+Default backfill preserves existing real images. `--force` regenerates them, `--images-only` does not create missing metadata, `--from` limits dates, `--limit` caps API attempts, and `--delay-ms` controls the pause between attempts. Use a limit for cost-sensitive tests.
 
 ## Yearly Reports
 
