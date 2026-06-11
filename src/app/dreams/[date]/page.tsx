@@ -10,7 +10,7 @@ type Props = { params: Promise<{ date: string }> };
 
 export async function generateStaticParams() {
   const dreams = await listDreams();
-  return dreams.map((dream) => ({ date: dream.date }));
+  return dreams.length ? dreams.map((dream) => ({ date: dream.date })) : [{ date: "__empty__" }];
 }
 
 export default async function DreamDetailPage({ params }: Props) {
