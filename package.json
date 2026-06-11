@@ -8,6 +8,7 @@
     "build": "node --preserve-symlinks --preserve-symlinks-main node_modules/next/dist/bin/next build",
     "generate:today": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/generateDailyPoem.ts",
     "generate:dream": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/generateDream.ts",
+    "backfill:visuals": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/backfillVisuals.ts",
     "analyze:input": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/analyzeInputPoems.ts",
     "rebuild:memory": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/rebuildMemory.ts",
     "debug:mood-sentences": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/debugMoodSentences.ts",
