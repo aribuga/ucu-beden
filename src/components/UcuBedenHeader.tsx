@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import type { DailyPoem, UcuBedenState } from "../lib/types";
 import { memoryWeather } from "../lib/dayStateEngine";
+import type { DailyPoem, UcuBedenState } from "../lib/types";
 import { LogoHeader } from "./LogoHeader";
 
 export function UcuBedenHeader({ latest, state }: { latest: DailyPoem | null; state: UcuBedenState }) {
@@ -19,6 +19,7 @@ export function UcuBedenHeader({ latest, state }: { latest: DailyPoem | null; st
       <nav className="nav" aria-label="Ana gezinme">
         <Link href="/">bugün</Link>
         <Link href="/archive">arşiv</Link>
+        <Link href="/dreams">rüyalar</Link>
         <Link href="/memory">hafıza</Link>
         <Link href="/sources">kaynaklar</Link>
         <Link href="/mood-map">mood-map</Link>

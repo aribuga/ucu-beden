@@ -1,2 +1,77 @@
 "use client";
-import type {CSSProperties} from "react";import{useEffect,useMemo,useState}from"react";type S=CSSProperties&{"--day-position":string};function now(){const p=new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Istanbul",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());const h=Number(p.find(x=>x.type==="hour")?.value??0),m=Number(p.find(x=>x.type==="minute")?.value??0);return{label:`${String(h).padStart(2,"0")}:${String(m).padStart(2,"0")}`,hour:h,minute:m}}function phase(h:number){if(h>=5&&h<10)return"sabah";if(h<14&&h>=10)return"öğle";if(h<18&&h>=14)return"akşamüstü";if(h<22&&h>=18)return"rüyaya yakın";return"gece"}export function DayCyclePanel(){const[t,setT]=useState({label:"--:--",hour:0,minute:0});useEffect(()=>{setT(now());const id=window.setInterval(()=>setT(now()),60000);return()=>window.clearInterval(id)},[]);const c=useMemo(()=>({icon:t.hour>=6&&t.hour<19?"☼":"☾",phase:phase(t.hour),style:{"--day-position":`${94-((t.hour*60+t.minute)/1440)*88}%`}as S}),[t]);return <section className="consciousness-module day-cycle-module"><div className="consciousness-heading"><h2>gün döngüsü</h2><span>{t.label} / İstanbul</span></div><div className="day-cycle-track" style={c.style} aria-label={`Günün evresi: ${c.phase}`}><span className="day-cycle-icon" aria-hidden="true">{c.icon}</span><span className="day-cycle-line" aria-hidden="true"/></div><div className="day-cycle-meta"><span>{c.phase}</span><span>sağdan sola</span></div></section>}
+
+import type { CSSProperties } from "react";
+import { useEffect, useMemo, useState } from "react";
+
+type DayCycleStyle = CSSProperties & {
+  "--day-position": string;
+};
+
+function istanbulTime(): { label: string; hour: number; minute: number } {
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Europe/Istanbul",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  }).formatToParts(new Date());
+  const hour = Number(parts.find((part) => part.type === "hour")?.value ?? 0);
+  const minute = Number(parts.find((part) => part.type === "minute")?.value ?? 0);
+  return { label: `${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`, hour, minute };
+}
+
+function timeFromRecord(value: string | undefined): { label: string; hour: number; minute: number } {
+  const match = value?.match(/T(\d{2}):(\d{2})/) ?? value?.match(/^(\d{2}):(\d{2})/);
+  const hour = Number(match?.[1] ?? 12);
+  const minute = Number(match?.[2] ?? 0);
+  return { label: `${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`, hour, minute };
+}
+
+function phaseFor(hour: number): string {
+  if (hour >= 5 && hour < 10) return "sabah";
+  if (hour >= 10 && hour < 14) return "öğle";
+  if (hour >= 14 && hour < 18) return "akşamüstü";
+  if (hour >= 18 && hour < 22) return "rüyaya yakın";
+  return "gece";
+}
+
+export function DayCyclePanel({ historical = false, recordedTime }: { historical?: boolean; recordedTime?: string }) {
+  const [time, setTime] = useState({ label: "--:--", hour: 0, minute: 0 });
+
+  useEffect(() => {
+    if (historical) {
+      setTime(timeFromRecord(recordedTime));
+      return;
+    }
+    setTime(istanbulTime());
+    const timer = window.setInterval(() => setTime(istanbulTime()), 60_000);
+    return () => window.clearInterval(timer);
+  }, [historical, recordedTime]);
+
+  const cycle = useMemo(() => {
+    const progress = (time.hour * 60 + time.minute) / (24 * 60);
+    const rightToLeft = 94 - progress * 88;
+    const isDay = time.hour >= 6 && time.hour < 19;
+    return {
+      icon: isDay ? "☼" : "☾",
+      phase: phaseFor(time.hour),
+      style: { "--day-position": `${rightToLeft}%` } as DayCycleStyle
+    };
+  }, [time.hour, time.minute]);
+
+  return (
+    <section className="consciousness-module day-cycle-module">
+      <div className="consciousness-heading">
+        <h2>{historical ? "o günün zamanı" : "gün döngüsü"}</h2>
+        <span>{time.label} / İstanbul</span>
+      </div>
+      <div className="day-cycle-track" style={cycle.style} aria-label={`Günün evresi: ${cycle.phase}`}>
+        <span className="day-cycle-icon" aria-hidden="true">{cycle.icon}</span>
+        <span className="day-cycle-line" aria-hidden="true" />
+      </div>
+      <div className="day-cycle-meta">
+        <span>{cycle.phase}</span>
+        <span>{historical ? "kayıtlı an" : "sağdan sola"}</span>
+      </div>
+    </section>
+  );
+}
