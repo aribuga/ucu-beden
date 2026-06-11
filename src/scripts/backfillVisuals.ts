@@ -159,7 +159,7 @@ async function main(): Promise<void> {
       stats: dreamStats,
       updateDream: async (visual) => {
         const updatedDream: DreamRecord = { ...dream, image_path: visual.image_path };
-        await writeJsonFile(`${storagePats.dreams}/${dream.date}.json`, updatedDream);
+        await writeJsonFile(`${storagePaths.dreams}/${dream.date}.json`, updatedDream);
       }
     });
   }
