@@ -1,56 +1,98 @@
 name: Night dream and deploy
+
 on:
   workflow_dispatch:
     inputs:
-      force_regenerate: { description: "Regenerate the selected dream even if it already exists", required: false, default: false, type: boolean }
-      target_date: { description: "Optional completed day to dream from, in YYYY-MM-DD format", required: false, default: "", type: string }
+      force_regenerate:
+        description: "Regenerate the selected dream even if it already exists"
+        required: false
+        default: false
+        type: boolean
+      target_date:
+        description: "Optional completed day to dream from, in YYYY-MM-DD format"
+        required: false
+        default: ""
+        type: string
   schedule:
     - cron: "0 23 * * *"
     - cron: "27 23 * * *"
-permissions: { contents: write, pages: write, id-token: write }
-concurrency: { group: ucu-beden-generation-and-pages, cancel-in-progress: false }
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: ucu-beden-generation-and-pages
+  cancel-in-progress: false
+
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: 22, cache: npm }
-      - run: npm ci
-      - name: Generate dream and dream visual metadata
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: Generate dream and dream visual
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+          OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
+          OPENAI_IMAGE_SIZE: ${{ vars.OPENAI_IMAGE_SIZE }}
+          OPENAI_IMAGE_QUALITY: ${{ vars.OPENAI_IMAGE_QUALITY }}
+          OPENAI_IMAGE_FORMAT: ${{ vars.OPENAI_IMAGE_FORMAT }}
           FORCE_REGENERATE: ${{ github.event.inputs.force_regenerate || false }}
           TARGET_DATE: ${{ github.event.inputs.target_date || '' }}
         run: |
-          DATE_ARG=""; [ -n "$TARGET_DATE" ] && DATE_ARG="--date=$TARGET_DATE"
+          DATE_ARG=""
+          if [ -n "$TARGET_DATE" ]; then DATE_ARG="--date=$TARGET_DATE"; fi
           if [ "$FORCE_REGENERATE" = "true" ]; then npm run generate:dream -- $DATE_ARG --force; else npm run generate:dream -- $DATE_ARG; fi
-      - name: Backfill missing poem and dream visual metadata
-        run: npm run backfill:visuals
+      - name: Backfill missing poem and dream visuals
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
+          OPENAI_IMAGE_SIZE: ${{ vars.OPENAI_IMAGE_SIZE }}
+          OPENAI_IMAGE_QUALITY: ${{ vars.OPENAI_IMAGE_QUALITY }}
+          OPENAI_IMAGE_FORMAT: ${{ vars.OPENAI_IMAGE_FORMAT }}
+        run: npm run backfill:visuals -- --limit=4
       - name: Commit and push night data
         run: |
-          if git diff --quiet -- data; then echo "No night data changes; dream generation was safely skipped."; exit 0; fi
+          if git diff --quiet -- data public/generated/visuals; then echo "No night data changes; dream generation was safely skipped."; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data
+          git add data public/generated/visuals
           git commit -m "UCU BEDEN / gece rüya kaydı"
           git push
+
   deploy:
     needs: generate
     runs-on: ubuntu-latest
-    environment: { name: github-pages, url: "${{ steps.deployment.outputs.page_url }}" }
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-        with: { ref: "${{ github.ref }}" }
+        with:
+          ref: ${{ github.ref }}
       - run: git pull
       - uses: actions/setup-node@v4
-        with: { node-version: 22, cache: npm }
+        with:
+          node-version: 22
+          cache: npm
       - run: npm ci
-      - run: npm run build
-        env: { NEXT_PUBLIC_BASE_PATH: "${{ vars.NEXT_PUBLIC_BASE_PATH }}" }
+      - name: Build static site
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH }}
+        run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
-        with: { path: out }
+        with:
+          path: out
       - id: deployment
         uses: actions/deploy-pages@v4
