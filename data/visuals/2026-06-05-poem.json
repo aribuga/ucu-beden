@@ -4,12 +4,12 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-06-05",
   "title": "biraz / küçük",
-  "generated_at": "2026-06-11T13:24:31.922Z",
+  "generated_at": "2026-06-11T13:44:44.380Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN poem interior screen; biraz / küçük; ekran, deniz, gövde, köpek, köpek tasması; soft airbrush, hazy old postcard, low resolution",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, photorealism, literal scene",
   "alt_text": "biraz / küçük şiirinin bulanık iç ekranı.",
-  "image_path": null,
-  "provider": "metadata-fallback",
+  "image_path": "/generated/visuals/2026-06-05-poem.png",
+  "provider": "openai",
   "style_tags": [
     "airbrush",
     "soft blur",
@@ -24,5 +24,13 @@
     "#f0a3d3",
     "#152b38"
   ],
-  "fallback_seed": 3478669304
+  "fallback_seed": 3478669304,
+  "model": "gpt-image-1",
+  "size": "1024x1280",
+  "api_size": "1024x1536",
+  "quality": "low",
+  "output_format": "png",
+  "prompt_hash": "0fba7e5a2e8d2f08450575e78a8b785e1fc04fb3de6c1f6cb0f01b83d3238c03",
+  "fallback": false,
+  "error": null
 }

@@ -4,12 +4,12 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-06-04",
   "title": "ağzını / bekleyen",
-  "generated_at": "2026-06-11T13:24:31.921Z",
+  "generated_at": "2026-06-11T13:44:24.656Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN poem interior screen; ağzını / bekleyen; deniz, gövde, nemli kaldırım, ıslak bank, kapının metal sesi; soft airbrush, hazy old postcard, low resolution",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, photorealism, literal scene",
   "alt_text": "ağzını / bekleyen şiirinin bulanık iç ekranı.",
-  "image_path": null,
-  "provider": "metadata-fallback",
+  "image_path": "/generated/visuals/2026-06-04-poem.png",
+  "provider": "openai",
   "style_tags": [
     "airbrush",
     "soft blur",
@@ -24,5 +24,13 @@
     "#7bd5c7",
     "#172b5b"
   ],
-  "fallback_seed": 3661252467
+  "fallback_seed": 3661252467,
+  "model": "gpt-image-1",
+  "size": "1024x1280",
+  "api_size": "1024x1536",
+  "quality": "low",
+  "output_format": "png",
+  "prompt_hash": "8452862616fed958ffcf4412ef61d636d58e5f714c6461436a253d939cfa27a3",
+  "fallback": false,
+  "error": null
 }

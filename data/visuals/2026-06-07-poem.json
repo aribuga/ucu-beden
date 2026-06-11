@@ -4,12 +4,12 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-06-07",
   "title": "Nefesin Arasında Kalan Park",
-  "generated_at": "2026-06-11T13:24:31.923Z",
+  "generated_at": "2026-06-11T13:45:23.525Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN poem interior screen; Nefesin Arasında Kalan Park; bank, deniz, rüzgar, gövde, hücre; soft airbrush, hazy old postcard, low resolution",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, photorealism, literal scene",
   "alt_text": "Nefesin Arasında Kalan Park şiirinin bulanık iç ekranı.",
-  "image_path": null,
-  "provider": "metadata-fallback",
+  "image_path": "/generated/visuals/2026-06-07-poem.png",
+  "provider": "openai",
   "style_tags": [
     "airbrush",
     "soft blur",
@@ -24,5 +24,13 @@
     "#7bd5c7",
     "#172b5b"
   ],
-  "fallback_seed": 4183294038
+  "fallback_seed": 4183294038,
+  "model": "gpt-image-1",
+  "size": "1024x1280",
+  "api_size": "1024x1536",
+  "quality": "low",
+  "output_format": "png",
+  "prompt_hash": "8df364f9ec62881cd6867bb85feb07b3d84e0028e715604b00ea9c9696ae93d0",
+  "fallback": false,
+  "error": null
 }
