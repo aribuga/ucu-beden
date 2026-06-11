@@ -67,9 +67,12 @@ The script:
 - skips today if a poem already exists,
 - scans and analyzes `poems_input/`,
 - gathers live or fallback sources,
-- creates mood, daily life, and walking state,
+- creates mood, a rich daily life record, and walking state,
+- analyzes the last 30 poems for soft repetition pressure,
 - recalls at least one memory,
 - writes `data/generated_poems/YYYY-MM-DD.json`,
+- writes `data/daily_life/YYYY-MM-DD.json`,
+- writes poem visual metadata to `data/visuals/YYYY-MM-DD-poem.json`,
 - updates state, vocabulary memory, image mutations, and yearly reports.
 
 Force regeneration:
@@ -78,13 +81,30 @@ Force regeneration:
 npm run generate:today -- --force
 ```
 
+## Night Dream Generation
+
+```bash
+npm run generate:dream
+```
+
+The default night run dreams from the completed previous Istanbul calendar day. It writes:
+
+```txt
+data/dreams/YYYY-MM-DD.json
+data/visuals/YYYY-MM-DD-dream.json
+```
+
+Use `npm run generate:dream -- --date=YYYY-MM-DD` for a specific completed day. Existing dreams are safely skipped unless `--force` is supplied.
+
+Dreams can use the day's poem, rich daily life, repeated motifs, outside residue, and dim/suppressed memory. Dream memory mutations are returned to the dim memory layer.
+
 ## UI
 
 ```bash
 npm run dev
 ```
 
-The home page shows the latest poem, age, mood sentence, current home/walk state, influences, and a timeline. Additional pages:
+The home page preserves the poem archive on the left and adds a visual consciousness field on the right. It shows the latest poem feeling, latest dream, and a live Istanbul-time activity selected from the daily schedule. Additional pages:
 
 - `/archive`
 - `/memory`
@@ -121,6 +141,7 @@ Every generated day adds 1 month. 12 generated days equal 1 year. Life stages ar
 
 Memory is file-based for the MVP:
 
+- short-term, mid-term, long-term, and dim/suppressed memory,
 - recent poems,
 - word frequencies,
 - repeated images,
@@ -130,6 +151,14 @@ Memory is file-based for the MVP:
 - yearly reports.
 
 Old lines are not copied into new poems. Images and rhythms can return as mutations.
+
+The last 30 poems also create soft repetition pressure. Frequently returning title shapes, locations, images, word pairs, and gestures are discouraged in the next prompt without being completely banned.
+
+The UI no longer exposes `memory_density` as a score. The numeric value remains internal and is translated into states such as `hafif`, `bulanık`, `sızıntılı`, or `taşmış`.
+
+## Visual Metadata
+
+Poem and dream visuals use separate prompt rules and a `4:5` portrait aspect ratio. Until a real image provider is connected, the system stores aspect ratio, prompt, negative prompt, alt text, style tags, palette, and fallback seed. The UI renders these as lo-fi visual records instead of blocking generation.
 
 ## Yearly Reports
 
@@ -178,7 +207,9 @@ The `/mood-map` page visualizes successful RSS items as mood-colored dots. Block
 
 ## GitHub Actions And Pages
 
-`.github/workflows/daily-poem-and-deploy.yml` runs at `06:17 UTC`, which is `09:17 Europe/Istanbul`, with backup runs at `06:47 UTC` / `09:47 Europe/Istanbul` and `07:10 UTC` / `10:10 Europe/Istanbul`. GitHub can delay or drop schedules at the top of the hour, so the workflow avoids exact hour marks. The same workflow also runs on normal pushes to `main`, except data-only commits, so site updates deploy without waiting for cron. It generates the daily poem, commits data changes when needed, builds the static site, and deploys to GitHub Pages.
+`.github/workflows/daily-poem-and-deploy.yml` targets `05:00 UTC`, which is `08:00 Europe/Istanbul`, with an idempotent `05:23 UTC` backup.
+
+`.github/workflows/night-dream-and-deploy.yml` targets `23:00 UTC`, which is `02:00 Europe/Istanbul` on the next calendar day, with an idempotent `23:27 UTC` backup. GitHub schedules are best-effort and can arrive late; duplicate-safe generation prevents the backups from rewriting existing content.
 
 For project pages under a repository subpath, set `NEXT_PUBLIC_BASE_PATH` in the workflow or repository variables.
 

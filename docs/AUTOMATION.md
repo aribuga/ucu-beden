@@ -2,27 +2,40 @@
 
 UCU BEDEN is designed to run locally and on GitHub Actions.
 
-## Daily Time
+## Morning Time
 
-The daily poem should be generated around 09:17 Europe/Istanbul, with 09:47 and 10:10 backups.
+The morning record targets 08:00 Europe/Istanbul.
 
-GitHub cron uses UTC, and Turkey is UTC+3. GitHub can delay or drop schedules at the top of the hour, so the workflow avoids 09:00 exactly:
+GitHub cron uses UTC, and Turkey is UTC+3 year-round:
 
 ```yaml
-cron: "17 6 * * *" # 09:17 Europe/Istanbul
-cron: "47 6 * * *" # 09:47 Europe/Istanbul backup
-cron: "10 7 * * *" # 10:10 Europe/Istanbul backup
+cron: "0 5 * * *"  # 08:00 Europe/Istanbul
+cron: "23 5 * * *" # 08:23 Europe/Istanbul backup
 ```
 
-If the first run works, the backups see that today's poem already exists and skip generation.
+The morning workflow writes daily life, poem, poem visual metadata, sources, and updated memory. If the first run works, the backup sees that the day already exists and skips duplicate generation.
 
 The workflow also runs on normal pushes to `main`, except data-only commits. This lets code, theme, and documentation updates deploy immediately without creating a data commit loop.
+
+## Night Time
+
+The night workflow targets 02:00 Europe/Istanbul:
+
+```yaml
+cron: "0 23 * * *"  # 02:00 Europe/Istanbul on the next day
+cron: "27 23 * * *" # 02:27 Europe/Istanbul backup
+```
+
+By default the night script dreams from the completed previous Istanbul calendar day. This guarantees that its poem and daily life record already exist.
+
+GitHub scheduled workflows are best-effort and may start late. The backup schedules and safe skip behavior improve reliability without creating duplicate poems or dreams.
 
 ## Commands
 
 ```bash
 npm ci
 npm run generate:today
+npm run generate:dream
 npm run build
 ```
 
@@ -35,6 +48,8 @@ npm run generate:today -- --force
 ```
 
 GitHub Actions manual runs expose the same behavior through the `force_regenerate` checkbox. Leave `target_date` empty to use the current Istanbul date.
+
+The night workflow's empty `target_date` means the previous completed Istanbul day.
 
 ## Secrets
 
@@ -60,6 +75,17 @@ Look for:
 ```txt
 generation.provider
 generation.fallback_reason
+```
+
+Morning and night logs expose stage names such as:
+
+```txt
+daily_life
+poem
+poem_visual_prompt
+dream
+dream_visual_prompt
+memory
 ```
 
 ## Settings
@@ -89,6 +115,9 @@ After generation, the workflow commits changed files under:
 
 ```txt
 data/generated_poems/
+data/daily_life/
+data/dreams/
+data/visuals/
 data/state/
 data/sources/
 data/settings/
@@ -97,3 +126,9 @@ data/yearly_reports/
 ```
 
 If no files changed, commit is skipped.
+
+## Visual Fallback And Current State
+
+Visual metadata contains prompts and a deterministic fallback palette/seed. A real image provider can later fill `image_path`; until then the site renders a lo-fi visual record from metadata.
+
+The current state panel uses the latest `data/daily_life/YYYY-MM-DD.json` schedule and the current Europe/Istanbul time in the visitor's browser. Because the site is a static export, new daily data becomes public after the workflow rebuilds and deploys the site.

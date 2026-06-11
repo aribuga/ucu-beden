@@ -18,6 +18,12 @@ export function todayInIstanbul(date = new Date()): string {
   return `${year}-${month}-${day}`;
 }
 
+export function previousCalendarDate(date: string): string {
+  const [year, month, day] = date.split("-").map(Number);
+  const previous = new Date(Date.UTC(year, month - 1, day - 1));
+  return previous.toISOString().slice(0, 10);
+}
+
 export function parseGenerationArgs(args: string[]): { force: boolean; date?: string } {
   const force = args.includes("--force") || args.includes("-f");
   const dateArg = args.find((arg) => arg.startsWith("--date="));
