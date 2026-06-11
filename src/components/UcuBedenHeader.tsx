@@ -1,9 +1,11 @@
 import Link from "next/link";
 
 import type { DailyPoem, UcuBedenState } from "../lib/types";
+import { memoryWeather } from "../lib/dayStateEngine";
 import { LogoHeader } from "./LogoHeader";
 
 export function UcuBedenHeader({ latest, state }: { latest: DailyPoem | null; state: UcuBedenState }) {
+  const memory = memoryWeather(state.memory_density);
   return (
     <header className="header">
       <div className="header-top">
@@ -11,11 +13,7 @@ export function UcuBedenHeader({ latest, state }: { latest: DailyPoem | null; st
         <div className="meta">
           <div>Yaş: {latest?.age_display ?? `${state.age_months} ay`}</div>
           <div>Gün: {state.generated_days}</div>
-          <div
-            title="Şiir sayısı, tekrar eden imgeler, dış dünya kırıntıları ve input şiirlerden hesaplanan arşiv yoğunluğu."
-          >
-            Hafıza yoğunluğu: {state.memory_density}/100
-          </div>
+          <div title={memory.sentence}>Hafıza: {memory.state}</div>
         </div>
       </div>
       <nav className="nav" aria-label="Ana gezinme">
