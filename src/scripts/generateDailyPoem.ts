@@ -13,6 +13,7 @@ import { analyzeAndSaveInputPoems } from "../lib/inputPoems";
 import { createDailyLifeRecord } from "../lib/dayStateEngine";
 import { updateMemoryAfterPoem, selectMemoryFragments } from "../lib/memoryEngine";
 import { calculateMood } from "../lib/moodEngine";
+import { generateVisualImage } from "../lib/openaiImageProvider";
 import { generatePoemWithLLM } from "../lib/poemGenerator";
 import { parseGenerationArgs, todayInIstanbul } from "../lib/scheduler";
 import { collectSources } from "../lib/sourceCollectors";
@@ -50,12 +51,19 @@ async function main(): Promise<void> {
       } else {
         console.log(JSON.stringify({ stage: "daily_life", status: "skipped", reason: "already exists", date }));
       }
-      if (!(await pathExists(`${storagePaths.visuals}/${date}-poem.json`))) {
-        await writeJsonFile(`${storagePaths.visuals}/${date}-poem.json`, createPoemVisual(existingPoem));
-        console.log(JSON.stringify({ stage: "poem_visual_prompt", status: "backfilled", date }));
-      } else {
-        console.log(JSON.stringify({ stage: "poem_visual_prompt", status: "skipped", reason: "already exists", date }));
-      }
+      const visualPath = `${storagePaths.visuals}/${date}-poem.json`;
+      const storedVisual = await readJsonFile(visualPath, createPoemVisual(existingPoem));
+      const visual = await generateVisualImage(storedVisual);
+      await writeJsonFile(visualPath, visual);
+      console.log(
+        JSON.stringify({
+          stage: "poem_visual",
+          status: visual.provider === "openai" ? "ready" : "fallback kept",
+          date,
+          provider: visual.provider,
+          error: visual.error ?? null
+        })
+      );
     }
     console.log(JSON.stringify({ stage: "poem", status: "skipped", reason: "today already exists", date, sources_refreshed: true }, null, 2));
     return;
@@ -74,30 +82,14 @@ async function main(): Promise<void> {
 
   const ageMonths = existingPoem?.age_months ?? nextAgeMonths(previousState.age_months);
   const ageDisplay = formatAge(ageMonths);
-  const { mood, sentence } = calculateMood({
-    date,
-    state: previousState,
-    sources,
-    inputAnalysis
-  });
+  const { mood, sentence } = calculateMood({ date, state: previousState, sources, inputAnalysis });
   const baseDailyLife = createDailyLife({ date, world, mood, sources });
-  const dailyLife = createDailyLifeRecord({
-    date,
-    base: baseDailyLife,
-    mood,
-    sources,
-    state: previousState,
-    personality: personalitySettings
-  });
+  const dailyLife = createDailyLifeRecord({ date, base: baseDailyLife, mood, sources, state: previousState, personality: personalitySettings });
   await writeJsonFile(`${storagePaths.dailyLife}/${date}.json`, dailyLife);
   console.log(JSON.stringify({ stage: "daily_life", status: "generated", date }));
   const walkState = createWalkState({ date, world, mood, sources, dailyLife });
   const [memoryFragments, repetitionPressure] = await Promise.all([
-    selectMemoryFragments({
-      date,
-      state: previousState,
-      inputAnalysis
-    }),
+    selectMemoryFragments({ date, state: previousState, inputAnalysis }),
     analyzeRepetitionPressure()
   ]);
 
@@ -121,30 +113,13 @@ async function main(): Promise<void> {
   const poem = await generatePoemWithLLM(context);
   await writeJsonFile(poemPath, poem);
   console.log(JSON.stringify({ stage: "poem", status: "generated", date, provider: poem.generation.provider }));
-  await writeJsonFile(`${storagePaths.visuals}/${date}-poem.json`, createPoemVisual(poem));
-  console.log(JSON.stringify({ stage: "poem_visual_prompt", status: "generated", date, provider: "metadata-fallback" }));
+  const visual = await generateVisualImage(createPoemVisual(poem), { force: args.force });
+  await writeJsonFile(`${storagePaths.visuals}/${date}-poem.json`, visual);
+  console.log(JSON.stringify({ stage: "poem_visual", status: visual.provider === "openai" ? "generated" : "fallback kept", date, provider: visual.provider, error: visual.error ?? null }));
   const updatedState = await updateMemoryAfterPoem({ previousState, inputAnalysis });
   const yearlyReport = await maybeCreateYearlyReport(poem);
 
-  console.log(
-    JSON.stringify(
-      {
-        status: "generated",
-        date,
-        age: poem.age_display,
-        poem_file: poemPath,
-        poem_provider: poem.generation.provider,
-        openai_fallback_reason: poem.generation.fallback_reason,
-        title_generation: poem.title_generation,
-        mood_sentence: poem.mood_sentence,
-        generated_days: updatedState.generated_days,
-        memory_density: updatedState.memory_density,
-        yearly_report: yearlyReport ? `year_${String(yearlyReport.year).padStart(2, "0")}.json` : null
-      },
-      null,
-      2
-    )
-  );
+  console.log(JSON.stringify({ status: "generated", date, age: poem.age_display, poem_file: poemPath, poem_provider: poem.generation.provider, openai_fallback_reason: poem.generation.fallback_reason, title_generation: poem.title_generation, mood_sentence: poem.mood_sentence, generated_days: updatedState.generated_days, memory_density: updatedState.memory_density, yearly_report: yearlyReport ? `year_${String(yearlyReport.year).padStart(2, "0")}.json` : null }, null, 2));
 }
 
 main().catch((error) => {

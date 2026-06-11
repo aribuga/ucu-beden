@@ -6,6 +6,7 @@ on:
       - main
     paths-ignore:
       - "data/**"
+      - "public/generated/visuals/**"
   workflow_dispatch:
     inputs:
       force_regenerate:
@@ -19,8 +20,6 @@ on:
         default: ""
         type: string
   schedule:
-    # Turkey is UTC+3 year-round. 05:00 UTC = 08:00 Europe/Istanbul.
-    # GitHub schedules are best-effort, so 05:23 UTC is an idempotent backup.
     - cron: "0 5 * * *"
     - cron: "23 5 * * *"
 
@@ -39,52 +38,46 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-
       - name: Install
         run: npm ci
-
-      - name: Generate daily life, poem, and poem visual metadata
+      - name: Generate daily life, poem, and poem visual
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+          OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
+          OPENAI_IMAGE_SIZE: ${{ vars.OPENAI_IMAGE_SIZE }}
+          OPENAI_IMAGE_QUALITY: ${{ vars.OPENAI_IMAGE_QUALITY }}
+          OPENAI_IMAGE_FORMAT: ${{ vars.OPENAI_IMAGE_FORMAT }}
           NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
           FORCE_REGENERATE: ${{ github.event.inputs.force_regenerate || false }}
           TARGET_DATE: ${{ github.event.inputs.target_date || '' }}
         run: |
           DATE_ARG=""
-          if [ -n "$TARGET_DATE" ]; then
-            DATE_ARG="--date=$TARGET_DATE"
-          fi
-
-          if [ "$FORCE_REGENERATE" = "true" ]; then
-            npm run generate:today -- $DATE_ARG --force
-          else
-            npm run generate:today -- $DATE_ARG
-          fi
-
-      - name: Backfill missing poem and dream visual metadata
-        run: npm run backfill:visuals
-
+          if [ -n "$TARGET_DATE" ]; then DATE_ARG="--date=$TARGET_DATE"; fi
+          if [ "$FORCE_REGENERATE" = "true" ]; then npm run generate:today -- $DATE_ARG --force; else npm run generate:today -- $DATE_ARG; fi
+      - name: Backfill missing poem and dream visuals
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
+          OPENAI_IMAGE_SIZE: ${{ vars.OPENAI_IMAGE_SIZE }}
+          OPENAI_IMAGE_QUALITY: ${{ vars.OPENAI_IMAGE_QUALITY }}
+          OPENAI_IMAGE_FORMAT: ${{ vars.OPENAI_IMAGE_FORMAT }}
+        run: npm run backfill:visuals -- --limit=4
       - name: Commit and push morning data
         run: |
-          if git diff --quiet -- data; then
-            echo "No generated data changes."
-            exit 0
-          fi
+          if git diff --quiet -- data public/generated/visuals; then echo "No generated data changes."; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           AGE=$(node -e "const fs=require('fs'); const s=JSON.parse(fs.readFileSync('data/state/ucu_beden_state.json','utf8')); console.log(s.age_months + ' ay')")
-          git add data
+          git add data public/generated/visuals
           git commit -m "UCU BEDEN / ${AGE} / sabah kaydı"
           git push
-          echo "Morning data commit/push succeeded."
 
   deploy:
     needs: generate
@@ -93,36 +86,22 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout updated repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
-
-      - name: Pull generated data
-        run: git pull
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - run: git pull
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-
-      - name: Install
-        run: npm ci
-
+      - run: npm ci
       - name: Build static site
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH }}
         run: npm run build
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: out
-
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
