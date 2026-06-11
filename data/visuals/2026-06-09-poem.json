@@ -4,12 +4,12 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-06-09",
   "title": "Ayakkabının İçinde Birikmiş Sokak",
-  "generated_at": "2026-06-11T13:24:31.923Z",
+  "generated_at": "2026-06-11T15:29:16.044Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN poem interior screen; Ayakkabının İçinde Birikmiş Sokak; nem, dil, gövde, ağaç gölgesi, kırmızı ışıkta bekleyen biri; soft airbrush, hazy old postcard, low resolution",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, photorealism, literal scene",
   "alt_text": "Ayakkabının İçinde Birikmiş Sokak şiirinin bulanık iç ekranı.",
-  "image_path": null,
-  "provider": "metadata-fallback",
+  "image_path": "/generated/visuals/2026-06-09-poem.png",
+  "provider": "openai",
   "style_tags": [
     "airbrush",
     "soft blur",
@@ -24,5 +24,13 @@
     "#c56ecf",
     "#15385f"
   ],
-  "fallback_seed": 2540045428
+  "fallback_seed": 2540045428,
+  "model": "gpt-image-1",
+  "size": "1024x1280",
+  "api_size": "1024x1536",
+  "quality": "low",
+  "output_format": "png",
+  "prompt_hash": "60368d04ee9b95ca94009ecdac77b82d13733fbe1a9f778d23eae4c35018a3c4",
+  "fallback": false,
+  "error": null
 }
