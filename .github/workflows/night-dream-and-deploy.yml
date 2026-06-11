@@ -26,6 +26,8 @@ jobs:
         run: |
           DATE_ARG=""; [ -n "$TARGET_DATE" ] && DATE_ARG="--date=$TARGET_DATE"
           if [ "$FORCE_REGENERATE" = "true" ]; then npm run generate:dream -- $DATE_ARG --force; else npm run generate:dream -- $DATE_ARG; fi
+      - name: Backfill missing poem and dream visual metadata
+        run: npm run backfill:visuals
       - name: Commit and push night data
         run: |
           if git diff --quiet -- data; then echo "No night data changes; dream generation was safely skipped."; exit 0; fi

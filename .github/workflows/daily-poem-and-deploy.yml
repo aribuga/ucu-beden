@@ -69,6 +69,9 @@ jobs:
             npm run generate:today -- $DATE_ARG
           fi
 
+      - name: Backfill missing poem and dream visual metadata
+        run: npm run backfill:visuals
+
       - name: Commit and push morning data
         run: |
           if git diff --quiet -- data; then
