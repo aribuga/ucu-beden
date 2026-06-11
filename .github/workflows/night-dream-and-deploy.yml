@@ -1,0 +1,54 @@
+name: Night dream and deploy
+on:
+  workflow_dispatch:
+    inputs:
+      force_regenerate: { description: "Regenerate the selected dream even if it already exists", required: false, default: false, type: boolean }
+      target_date: { description: "Optional completed day to dream from, in YYYY-MM-DD format", required: false, default: "", type: string }
+  schedule:
+    - cron: "0 23 * * *"
+    - cron: "27 23 * * *"
+permissions: { contents: write, pages: write, id-token: write }
+concurrency: { group: ucu-beden-generation-and-pages, cancel-in-progress: false }
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - name: Generate dream and dream visual metadata
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+          FORCE_REGENERATE: ${{ github.event.inputs.force_regenerate || false }}
+          TARGET_DATE: ${{ github.event.inputs.target_date || '' }}
+        run: |
+          DATE_ARG=""; [ -n "$TARGET_DATE" ] && DATE_ARG="--date=$TARGET_DATE"
+          if [ "$FORCE_REGENERATE" = "true" ]; then npm run generate:dream -- $DATE_ARG --force; else npm run generate:dream -- $DATE_ARG; fi
+      - name: Commit and push night data
+        run: |
+          if git diff --quiet -- data; then echo "No night data changes; dream generation was safely skipped."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "UCU BEDEN / gece rüya kaydı"
+          git push
+  deploy:
+    needs: generate
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.deployment.outputs.page_url }}" }
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: "${{ github.ref }}" }
+      - run: git pull
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run build
+        env: { NEXT_PUBLIC_BASE_PATH: "${{ vars.NEXT_PUBLIC_BASE_PATH }}" }
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: out }
+      - id: deployment
+        uses: actions/deploy-pages@v4
