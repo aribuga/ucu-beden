@@ -118,92 +118,21 @@ textarea {
 
 .visual-field {
   position: relative;
-  isolation: isolate;
-  display: grid;
-  place-items: end start;
   width: 100%;
   min-height: 0;
   aspect-ratio: 4 / 5;
   overflow: hidden;
   border: 1px solid var(--line);
   background-color: var(--visual-c);
-  background-image:
-    repeating-linear-gradient(90deg, transparent 0 19px, color-mix(in srgb, var(--visual-a) 48%, transparent) 20px 22px),
-    repeating-linear-gradient(0deg, color-mix(in srgb, var(--visual-b) 22%, transparent) 0 2px, transparent 2px 7px);
-  box-shadow: inset 0 0 52px var(--visual-a);
-}
-
-.visual-field::before {
-  content: "";
-  position: absolute;
-  inset: 9% 13%;
-  z-index: -1;
-  border: 18px double color-mix(in srgb, var(--visual-b) 70%, transparent);
-  background: color-mix(in srgb, var(--visual-a) 58%, var(--visual-c));
-  box-shadow:
-    var(--visual-shift) 18px 0 color-mix(in srgb, var(--visual-b) 42%, transparent),
-    -14px -13px 0 color-mix(in srgb, var(--visual-a) 38%, transparent);
-  filter: blur(5px);
-  transform: rotate(-3deg);
-}
-
-.visual-field::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  opacity: 0.32;
-  background-image: repeating-linear-gradient(0deg, transparent 0 3px, #000 3px 4px);
-  mix-blend-mode: multiply;
-  pointer-events: none;
-}
-
-.visual-field-dream::before {
-  inset: 17% 8% 8% 22%;
-  border-style: dashed;
-  transform: rotate(7deg) skew(-8deg);
-  filter: blur(9px);
 }
 
 .visual-field img {
-  position: absolute;
-  inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   image-rendering: auto;
 }
-
-.visual-field p {
-  position: relative;
-  z-index: 3;
-  margin: 10px;
-  padding: 2px 5px;
-  background: #000;
-  color: #fff;
-  font-size: 8px;
-  text-transform: uppercase;
-}
-
-.visual-field-signal {
-  position: absolute;
-  inset: 14% 15%;
-  z-index: 1;
-}
-
-.visual-field-signal span {
-  position: absolute;
-  display: block;
-  width: 42%;
-  height: 7px;
-  background: var(--visual-b);
-  box-shadow: 4px 4px 0 color-mix(in srgb, var(--visual-a) 70%, transparent);
-  filter: blur(2px);
-}
-
-.visual-field-signal span:nth-child(1) { top: 19%; left: 8%; transform: rotate(12deg); }
-.visual-field-signal span:nth-child(2) { top: 51%; right: 2%; transform: rotate(-18deg); }
-.visual-field-signal span:nth-child(3) { bottom: 12%; left: 22%; width: 58%; transform: rotate(4deg); }
 
 .consciousness-title {
   margin: 8px 0 0;

@@ -31,7 +31,7 @@ body[data-theme="fresh90s"] .section, body[data-theme="fresh90s"] .empty-state, 
 body[data-theme="fresh90s"] .consciousness-module { border-width:5px; background:rgba(2,10,34,.94); font-size:11px; }
 body[data-theme="fresh90s"] .consciousness-heading h2 { color:var(--soft-line); font-size:12px; text-shadow:2px 2px 0 var(--accent); }
 body[data-theme="fresh90s"] .consciousness-heading span, body[data-theme="fresh90s"] .dream-snippet, body[data-theme="fresh90s"] .dream-empty, body[data-theme="fresh90s"] .memory-weather, body[data-theme="fresh90s"] .state-list dt { color:var(--muted); }
-body[data-theme="fresh90s"] .visual-field { border:5px ridge var(--line); box-shadow:7px 7px 0 #000,inset 0 0 52px var(--visual-a); }
+body[data-theme="fresh90s"] .visual-field { border:5px ridge var(--line); box-shadow:7px 7px 0 #000; }
 body[data-theme="fresh90s"] .current-activity, body[data-theme="fresh90s"] .consciousness-title { color:var(--text); text-shadow:2px 2px 0 #000; }
 body[data-theme="fresh90s"] .inner-note { color:var(--soft-line); }
 body[data-theme="fresh90s"] .day-cycle-track { border:3px ridge var(--line); background:repeating-linear-gradient(0deg,transparent 0 4px,rgba(253,252,0,.13) 4px 5px),#02060f; box-shadow:4px 4px 0 #000; }
