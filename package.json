@@ -11,6 +11,9 @@
     "backfill:visuals": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/backfillVisuals.ts",
     "analyze:input": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/analyzeInputPoems.ts",
     "rebuild:memory": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/rebuildMemory.ts",
+    "validate:memory": "npm run rebuild:memory -- --dry-run --validate",
+    "debug:memory-cycle": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/debugMemoryCycle.ts",
+    "debug:latest-memory": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/debugLatestMemory.ts",
     "debug:mood-sentences": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/debugMoodSentences.ts",
     "typecheck": "node --preserve-symlinks --preserve-symlinks-main node_modules/typescript/bin/tsc --noEmit"
   },

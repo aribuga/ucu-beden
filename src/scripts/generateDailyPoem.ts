@@ -12,6 +12,7 @@ import {
 import { analyzeAndSaveInputPoems } from "../lib/inputPoems";
 import { createDailyLifeRecord } from "../lib/dayStateEngine";
 import { updateMemoryAfterPoem, selectMemoryFragments } from "../lib/memoryEngine";
+import { buildMemoryArchive, selectMemoryForGeneration, validateMemoryPromptFragments, writeMemoryArchive } from "../lib/memoryTraceEngine";
 import { calculateMood } from "../lib/moodEngine";
 import { generateVisualImage } from "../lib/openaiImageProvider";
 import { generatePoemWithLLM } from "../lib/poemGenerator";
@@ -88,10 +89,13 @@ async function main(): Promise<void> {
   await writeJsonFile(`${storagePaths.dailyLife}/${date}.json`, dailyLife);
   console.log(JSON.stringify({ stage: "daily_life", status: "generated", date }));
   const walkState = createWalkState({ date, world, mood, sources, dailyLife });
-  const [memoryFragments, repetitionPressure] = await Promise.all([
-    selectMemoryFragments({ date, state: previousState, inputAnalysis }),
-    analyzeRepetitionPressure()
-  ]);
+  const repetitionPressure = await analyzeRepetitionPressure();
+  const memorySelection = await selectMemoryForGeneration({ date, mood, mode: "poem", repetition: repetitionPressure });
+  const legacyMemoryFragments =
+    memorySelection.prompt_fragments.length === 0 ? await selectMemoryFragments({ date, state: previousState, inputAnalysis }) : [];
+  const promptValidation = await validateMemoryPromptFragments(memorySelection.prompt_fragments.length > 0 ? memorySelection.prompt_fragments : legacyMemoryFragments);
+  const memoryFragments = promptValidation.safe_fragments;
+  const effectiveMemorySelection = { ...memorySelection, prompt_fragments: memoryFragments, memory_prompt_fragments: memoryFragments };
 
   const context: GenerationContext = {
     date,
@@ -107,6 +111,7 @@ async function main(): Promise<void> {
     walk_state: walkState,
     personality_settings: personalitySettings,
     memory_fragments: memoryFragments,
+    memory_selection: effectiveMemorySelection,
     repetition_pressure: repetitionPressure
   };
 
@@ -117,9 +122,11 @@ async function main(): Promise<void> {
   await writeJsonFile(`${storagePaths.visuals}/${date}-poem.json`, visual);
   console.log(JSON.stringify({ stage: "poem_visual", status: visual.provider === "openai" ? "generated" : "fallback kept", date, provider: visual.provider, error: visual.error ?? null }));
   const updatedState = await updateMemoryAfterPoem({ previousState, inputAnalysis });
+  const memoryArchive = await buildMemoryArchive();
+  await writeMemoryArchive(memoryArchive);
   const yearlyReport = await maybeCreateYearlyReport(poem);
 
-  console.log(JSON.stringify({ status: "generated", date, age: poem.age_display, poem_file: poemPath, poem_provider: poem.generation.provider, openai_fallback_reason: poem.generation.fallback_reason, title_generation: poem.title_generation, mood_sentence: poem.mood_sentence, generated_days: updatedState.generated_days, memory_density: updatedState.memory_density, yearly_report: yearlyReport ? `year_${String(yearlyReport.year).padStart(2, "0")}.json` : null }, null, 2));
+  console.log(JSON.stringify({ status: "generated", date, age: poem.age_display, poem_file: poemPath, poem_provider: poem.generation.provider, openai_fallback_reason: poem.generation.fallback_reason, title_generation: poem.title_generation, mood_sentence: poem.mood_sentence, generated_days: updatedState.generated_days, memory_density: updatedState.memory_density, selected_trace_ids: poem.memory_selection?.selected_trace_ids ?? [], memory_trace_count: memoryArchive.index.trace_count, yearly_report: yearlyReport ? `year_${String(yearlyReport.year).padStart(2, "0")}.json` : null }, null, 2));
 }
 
 main().catch((error) => {

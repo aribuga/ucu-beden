@@ -69,6 +69,10 @@ textarea {
   width: min(1240px, calc(100% - 32px));
 }
 
+.site-shell.mutation-shell {
+  width: min(1320px, calc(100% - 32px));
+}
+
 .home-columns {
   display: grid;
   grid-template-columns: minmax(0, 760px) minmax(290px, 1fr);
@@ -436,6 +440,460 @@ textarea {
   font-size: 10px;
 }
 
+.plain-list {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plain-list li {
+  line-height: 1.45;
+}
+
+.plain-list small {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.memory-section-nav {
+  display: flex;
+  gap: 6px;
+  margin: 18px 0 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.memory-section-nav a {
+  border: 1px solid var(--soft-line);
+  padding: 4px 9px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.memory-section-nav a:hover,
+.memory-section-nav a:focus-visible,
+.memory-section-nav a.is-active {
+  border-color: var(--line);
+  color: var(--text);
+}
+
+.memory-section-nav a.is-active {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.memory-report {
+  display: grid;
+  gap: 20px;
+}
+
+.memory-climate {
+  display: grid;
+  gap: 7px;
+  border: 1px solid var(--line);
+  padding: 14px;
+  background: var(--surface);
+}
+
+.memory-climate span,
+.memory-trace-meta,
+.memory-group-header span {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.memory-climate h3,
+.memory-group h3 {
+  margin: 0;
+  font-size: 12px;
+}
+
+.memory-climate p,
+.memory-trace-item p,
+.memory-empty {
+  margin: 0;
+}
+
+.memory-climate p {
+  max-width: 660px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.memory-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.memory-group {
+  min-width: 0;
+  border: 1px solid var(--soft-line);
+  padding: 12px;
+  background: var(--surface);
+}
+
+.memory-group-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px dotted var(--soft-line);
+}
+
+.memory-trace-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.memory-trace-item {
+  display: grid;
+  gap: 6px;
+  padding: 9px 0;
+  border-top: 1px dotted var(--soft-line);
+}
+
+.memory-trace-item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.memory-trace-item p {
+  display: -webkit-box;
+  overflow: hidden;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.memory-trace-meta,
+.mutation-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.memory-trace-meta span,
+.mutation-detail-tags span,
+.mutation-status {
+  border: 1px solid var(--soft-line);
+  padding: 1px 5px;
+}
+
+.memory-empty {
+  color: var(--muted);
+}
+
+.memory-more {
+  margin-top: 10px;
+  border-top: 1px dotted var(--soft-line);
+  padding-top: 8px;
+}
+
+.memory-more summary,
+.mutation-linked-more summary,
+.mutation-technical summary {
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 9px;
+}
+
+.mutation-layout {
+  display: grid;
+  gap: 16px;
+}
+
+.mutation-controls {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.75fr) minmax(360px, 1.5fr) minmax(220px, 0.75fr);
+  gap: 18px;
+  align-items: start;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mutation-controls h1,
+.mutation-detail h2,
+.mutation-detail h3 {
+  margin: 0 0 8px;
+  font-size: 12px;
+}
+
+.mutation-controls p,
+.mutation-detail p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.mutation-filters,
+.mutation-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mutation-filter-area {
+  display: grid;
+  gap: 8px;
+}
+
+.mutation-filters button {
+  border: 1px solid var(--soft-line);
+  padding: 3px 7px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 9px;
+}
+
+.mutation-filters button span {
+  color: inherit;
+  opacity: 0.7;
+}
+
+.mutation-filters button:hover,
+.mutation-filters button:focus-visible,
+.mutation-filters button.is-active {
+  border-color: var(--line);
+  background: var(--text);
+  color: var(--bg);
+}
+
+.mutation-edge-toggle {
+  justify-self: start;
+  border: 0;
+  border-bottom: 1px dotted var(--muted);
+  padding: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 9px;
+}
+
+.mutation-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.mutation-legend i {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--line);
+}
+
+.mutation-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  gap: 18px;
+  align-items: start;
+}
+
+.mutation-graph-wrap {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.mutation-graph {
+  display: block;
+  width: 100%;
+  min-height: 580px;
+  color: var(--text);
+}
+
+.mutation-edge {
+  stroke: var(--soft-line);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.mutation-edge.edge-dream_return {
+  stroke: #7253b6;
+  stroke-dasharray: 6 4;
+  stroke-width: 1.6;
+}
+
+.mutation-edge.edge-indirect {
+  stroke: var(--muted);
+  stroke-dasharray: 2 5;
+}
+
+.mutation-edge.is-focused {
+  stroke: var(--focus);
+  stroke-width: 2;
+  opacity: 1;
+}
+
+.mutation-node {
+  cursor: pointer;
+  outline: none;
+}
+
+.mutation-node:hover,
+.mutation-node:focus-visible,
+.mutation-node.is-hovered,
+.mutation-node.is-selected {
+  color: var(--focus);
+}
+
+.mutation-node:hover > *,
+.mutation-node:focus-visible > *,
+.mutation-node.is-hovered > *,
+.mutation-node.is-selected > * {
+  stroke-width: 3;
+}
+
+.mutation-node-halo {
+  fill: none;
+  stroke: var(--focus);
+  stroke-width: 2;
+  stroke-dasharray: 2 3;
+  vector-effect: non-scaling-stroke;
+}
+
+.mutation-hover {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+  width: min(440px, calc(100% - 20px));
+  padding: 8px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  font-size: 9px;
+  pointer-events: none;
+}
+
+.mutation-hover strong,
+.mutation-hover span {
+  display: block;
+}
+
+.mutation-hover span {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.mutation-detail {
+  position: sticky;
+  top: 14px;
+  max-height: calc(100vh - 28px);
+  overflow: auto;
+  border: 1px solid var(--line);
+  padding: 12px;
+  background: var(--surface);
+}
+
+.mutation-detail-text {
+  margin-bottom: 12px !important;
+  color: var(--text) !important;
+  line-height: 1.5;
+}
+
+.mutation-detail-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.mutation-status {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.mutation-detail-tags {
+  margin: 10px 0 16px;
+}
+
+.mutation-detail-tags span {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.mutation-detail-block {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dotted var(--soft-line);
+}
+
+.mutation-detail-block p + p {
+  margin-top: 6px;
+}
+
+.mutation-linked-list {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mutation-linked-list button {
+  width: 100%;
+  display: grid;
+  gap: 4px;
+  border: 1px solid var(--soft-line);
+  padding: 7px;
+  background: var(--surface-2);
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+}
+
+.mutation-linked-list button:hover,
+.mutation-linked-list button:focus-visible {
+  border-color: var(--focus);
+}
+
+.mutation-linked-list strong {
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.mutation-linked-list span {
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.mutation-linked-more,
+.mutation-technical {
+  margin-top: 10px;
+}
+
+.mutation-technical .state-list {
+  margin-top: 10px;
+}
+
+.mutation-detail .state-list {
+  margin-bottom: 18px;
+}
+
+.mutation-detail .state-list div {
+  grid-template-columns: minmax(84px, 0.35fr) 1fr;
+}
+
+.mutation-detail dd {
+  overflow-wrap: anywhere;
+}
+
 .timeline {
   display: grid;
   gap: 0;
@@ -695,6 +1153,34 @@ textarea {
 
   .mood-dot-map {
     min-height: 360px;
+  }
+
+  .mutation-controls,
+  .mutation-main {
+    grid-template-columns: 1fr;
+  }
+
+  .memory-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .memory-section-nav {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .mutation-graph-wrap {
+    overflow-x: auto;
+  }
+
+  .mutation-graph {
+    min-width: 720px;
+    min-height: 440px;
+  }
+
+  .mutation-detail {
+    position: static;
+    max-height: none;
   }
 
 }
