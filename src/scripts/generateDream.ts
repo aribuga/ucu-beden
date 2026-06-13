@@ -11,6 +11,7 @@ import {
   writeJsonFile
 } from "../lib/fileStorage";
 import { generateVisualImage } from "../lib/openaiImageProvider";
+import { buildMemoryArchive, selectMemoryForGeneration, validateMemoryPromptFragments, writeMemoryArchive } from "../lib/memoryTraceEngine";
 import { analyzeRepetitionPressure } from "../lib/repetitionPressure";
 import { parseGenerationArgs, previousCalendarDate, todayInIstanbul } from "../lib/scheduler";
 import type { DailyPoem, DreamRecord } from "../lib/types";
@@ -28,8 +29,7 @@ async function main(): Promise<void> {
     if (existingDream) {
       const storedVisual = await readJsonFile(visualPath, createDreamVisual(existingDream));
       const visual = await generateVisualImage(storedVisual);
-      existingDream.image_path = visual.image_path;
-      await Promise.all([writeJsonFile(visualPath, visual), writeJsonFile(dreamPath, existingDream)]);
+      await writeJsonFile(visualPath, visual);
       console.log(
         JSON.stringify({
           stage: "dream_visual",
@@ -70,7 +70,14 @@ async function main(): Promise<void> {
     console.log(JSON.stringify({ stage: "daily_life", status: "backfilled", date: sourceDate }));
   }
 
-  const dream = await generateDream({ date: sourceDate, poem, dailyLife, state, repetition });
+  const memorySelection = await selectMemoryForGeneration({ date: sourceDate, mood: poem.mood, mode: "dream", repetition });
+  const promptValidation = await validateMemoryPromptFragments(memorySelection.memory_prompt_fragments);
+  const safeMemorySelection = {
+    ...memorySelection,
+    prompt_fragments: promptValidation.safe_fragments,
+    memory_prompt_fragments: promptValidation.safe_fragments
+  };
+  const dream = await generateDream({ date: sourceDate, poem, dailyLife, state, repetition, memorySelection: safeMemorySelection });
   const visual = await generateVisualImage(createDreamVisual(dream), { force: args.force });
   dream.visual_prompt = visual.visual_prompt;
   dream.image_path = visual.image_path;
@@ -86,6 +93,9 @@ async function main(): Promise<void> {
       error: visual.error ?? null
     })
   );
+  const memoryArchive = await buildMemoryArchive();
+  await writeMemoryArchive(memoryArchive);
+  console.log(JSON.stringify({ stage: "memory_traces", status: "rebuilt", date: sourceDate, trace_count: memoryArchive.index.trace_count, selected_trace_ids: dream.memory_selection?.selected_trace_ids ?? [] }));
 
   const previousLayers = state.memory_layers ?? { short_term: [], mid_term: [], long_term: [], dim_suppressed: [] };
   await writeJsonFile(storagePaths.state, {

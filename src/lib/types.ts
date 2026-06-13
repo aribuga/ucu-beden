@@ -255,6 +255,7 @@ export type DailyPoem = {
   walk_state: WalkState;
   sources: SourceBundle;
   memory_fragments: string[];
+  memory_selection?: MemorySelection;
   influences: string[];
   generation: PoemGenerationMeta;
   analysis: PoemAnalysis;
@@ -299,7 +300,134 @@ export type DreamRecord = {
   visual_prompt: string;
   image_path: string | null;
   memory_mutations: string[];
+  memory_selection?: MemorySelection;
   generation: PoemGenerationMeta;
+};
+
+export type MemoryTraceSource = "poem" | "dream" | "daily_life" | "source" | "walk" | "visual" | "contact_residue";
+
+export type MemoryTraceKind =
+  | "episodic"
+  | "body"
+  | "attention"
+  | "avoidance"
+  | "route"
+  | "external_pressure"
+  | "dream_return"
+  | "legacy_inferred";
+
+export type MemoryTraceStatus = "active" | "dim" | "suppressed" | "fossilized" | "overexposed" | "unstable";
+
+export type MemoryTrace = {
+  id: string;
+  date: string;
+  source: MemoryTraceSource;
+  source_ref: string;
+  kind: MemoryTraceKind;
+  text: string;
+  transformed_text: string;
+  emotional_weight: number;
+  recallability: number;
+  decay: number;
+  repression: number;
+  mutation_rate: number;
+  status: MemoryTraceStatus;
+  linked_traces: string[];
+  mood_tags: MoodKey[];
+  origin: "observed" | "legacy_inferred";
+  last_recalled_at: string | null;
+  times_recalled: number;
+  last_dream_return_at: string | null;
+  times_returned_in_dream: number;
+};
+
+export type MemoryTraceFile = {
+  version: 1;
+  date: string;
+  traces: MemoryTrace[];
+};
+
+export type MemoryIndex = {
+  version: 1;
+  built_through: string | null;
+  trace_count: number;
+  trace_ids: string[];
+  by_date: Record<string, string[]>;
+  by_source: Record<MemoryTraceSource, string[]>;
+  by_status: Record<MemoryTraceStatus, string[]>;
+};
+
+export type MemoryClimateDimension = {
+  value: number;
+  trace_ids: string[];
+  summary: string;
+};
+
+export type MemoryReport = {
+  version: 1;
+  built_through: string | null;
+  trace_count: number;
+  climate: {
+    pressure: MemoryClimateDimension;
+    clarity: MemoryClimateDimension;
+    leakage: MemoryClimateDimension;
+    decay: MemoryClimateDimension;
+    repression: MemoryClimateDimension;
+    recallability: MemoryClimateDimension;
+  };
+  easily_recalled: string[];
+  suppressed: string[];
+  external_leakage: string[];
+  dream_returns: string[];
+  indirect_only: string[];
+};
+
+export type MemorySelection = {
+  mode: "poem" | "dream";
+  selected_trace_ids: string[];
+  direct_trace_ids: string[];
+  indirect_trace_ids: string[];
+  suppressed_trace_ids: string[];
+  prompt_fragments: string[];
+  memory_prompt_fragments: string[];
+};
+
+export type MemoryGraphEdgeKind = "linked" | "dream_return" | "indirect";
+
+export type MemoryGraphNode = {
+  id: string;
+  date: string;
+  source: MemoryTraceSource;
+  kind: MemoryTraceKind;
+  status: MemoryTraceStatus;
+  transformed_text: string;
+  source_ref: string | null;
+  recallability: number;
+  emotional_weight: number;
+  decay: number;
+  repression: number;
+  times_recalled: number;
+  last_recalled_at: string | null;
+  times_returned_in_dream: number;
+  last_dream_return_at: string | null;
+  linked_traces: string[];
+  recall_modes: Array<"poem" | "dream">;
+};
+
+export type MemoryGraphEdge = {
+  id: string;
+  source: string;
+  target: string;
+  kind: MemoryGraphEdgeKind;
+};
+
+export type MemoryGraphData = {
+  built_through: string | null;
+  trace_count: number;
+  linked_trace_count: number;
+  linked_edge_count: number;
+  nodes: MemoryGraphNode[];
+  edges: MemoryGraphEdge[];
 };
 
 export type MemoryLayers = {
@@ -445,6 +573,7 @@ export type GenerationContext = {
   walk_state: WalkState;
   personality_settings: PersonalitySettings;
   memory_fragments: string[];
+  memory_selection: MemorySelection;
   repetition_pressure: RepetitionPressure;
 };
 
