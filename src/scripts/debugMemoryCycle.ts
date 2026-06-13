@@ -11,6 +11,7 @@ import {
 } from "../lib/memoryTraceEngine";
 import { analyzeRepetitionPressure } from "../lib/repetitionPressure";
 import type { MemoryReport, MemorySelection } from "../lib/types";
+import { buildUcuBedenVoicePrompt } from "../lib/ucuBedenVoicePrompt";
 
 function nextDate(date: string | null): string {
   const value = new Date(`${date ?? new Date().toISOString().slice(0, 10)}T00:00:00Z`);
@@ -100,6 +101,8 @@ async function main(): Promise<void> {
     poem_preview: poemSelection,
     dream_preview: dreamSelection
   });
+  const poemVoice = buildUcuBedenVoicePrompt({ mode: "poem" });
+  const dreamVoice = buildUcuBedenVoicePrompt({ mode: "dream" });
 
   console.log(
     JSON.stringify(
@@ -113,6 +116,24 @@ async function main(): Promise<void> {
           second_memory_state_signature: memoryArchiveStateSignature(repeatedArchive)
         },
         poem_mode: selectionSummary(poemSelection),
+        generation_voice: {
+          poem: {
+            persona_voice_prompt: poemVoice.persona_voice_prompt,
+            surface_constraints: poemVoice.surface_constraints,
+            source_influence_constraints: poemVoice.source_influence_constraints,
+            sarcasm_settings: poemVoice.sarcasm_settings,
+            voice_constraints: poemVoice.voice_constraints,
+            mode_constraints: poemVoice.mode_constraints
+          },
+          dream: {
+            persona_voice_prompt: dreamVoice.persona_voice_prompt,
+            surface_constraints: dreamVoice.surface_constraints,
+            source_influence_constraints: dreamVoice.source_influence_constraints,
+            sarcasm_settings: dreamVoice.sarcasm_settings,
+            voice_constraints: dreamVoice.voice_constraints,
+            mode_constraints: dreamVoice.mode_constraints
+          }
+        },
         poem_prompt_guard: {
           valid: poemGuard.valid,
           safe_fragment_count: poemGuard.safe_fragments.length,
