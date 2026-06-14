@@ -1,9 +1,9 @@
 {
   "date": "2026-06-14",
-  "generated_at": "2026-06-14T08:33:52.519Z",
+  "generated_at": "2026-06-14T08:52:04.092Z",
   "provider": "deterministic",
   "model": null,
-  "fallback_reason": "OPENAI_API_KEY is not set",
+  "fallback_reason": "OpenAI response had no valid source digest",
   "private_factual_digest": {
     "items": [
       {
@@ -25,23 +25,41 @@
         ]
       },
       {
-        "source_title": "Vincenzo Montella: 'Bir ulusun kalbini kazanan' teknik direktör",
-        "url": "https://www.bbc.com/turkce/articles/c77yjgkg225o?at_medium=RSS&at_campaign=rss",
+        "source_title": "Can Uzun: 'Gol makinesi, mucizevi çocuk'",
+        "url": "https://www.bbc.com/turkce/articles/c0ky52kp1lgo?at_medium=RSS&at_campaign=rss",
         "source_name": "BBC Türkçe",
         "category": "news",
-        "factual_summary": "Vincenzo Montella: 'Bir ulusun kalbini kazanan' teknik direktör",
+        "factual_summary": "Can Uzun: 'Gol makinesi, mucizevi çocuk'",
         "detected_entities": [
-          "Vincenzo",
-          "Montella",
-          "Bir"
+          "Can",
+          "Uzun",
+          "Gol"
         ],
         "topics": [
-          "anları",
-          "çıkacak",
-          "geçmişte",
-          "günü",
-          "ilk",
-          "kader"
+          "arasında",
+          "büyüyen",
+          "çocuk",
+          "doğup",
+          "futbol",
+          "geleceğin"
+        ]
+      },
+      {
+        "source_title": "Osmanlı'da aşk nasıl yaşanırdı?",
+        "url": "https://www.bbc.com/turkce/articles/c9v2pmvnw2yo?at_medium=RSS&at_campaign=rss",
+        "source_name": "BBC Türkçe",
+        "category": "news",
+        "factual_summary": "Osmanlı'da aşk nasıl yaşanırdı?",
+        "detected_entities": [
+          "Osmanlı'da"
+        ],
+        "topics": [
+          "altından",
+          "aracılığıyla",
+          "aşk",
+          "aşkın",
+          "bakışlarını",
+          "cariyesi"
         ]
       },
       {
@@ -66,95 +84,80 @@
         ]
       },
       {
-        "source_title": "İsviçre, nüfusu 10 milyonla sınırlandırma planını oyluyor",
-        "url": "https://www.bbc.com/turkce/articles/c79yd3jd1q9o?at_medium=RSS&at_campaign=rss",
+        "source_title": "'Ozempic kalçası': Zayıflama iğnelerinin yarattığı kas kaybına karşı yeni ilaç",
+        "url": "https://www.bbc.com/turkce/articles/cy8w03g3p27o?at_medium=RSS&at_campaign=rss",
         "source_name": "BBC Türkçe",
         "category": "news",
-        "factual_summary": "İsviçre, nüfusu 10 milyonla sınırlandırma planını oyluyor",
+        "factual_summary": "'Ozempic kalçası': Zayıflama iğnelerinin yarattığı kas kaybına karşı yeni ilaç",
         "detected_entities": [
-          "İsviçre"
+          "Ozempic",
+          "Zayıflama"
         ],
         "topics": [
-          "nüfusu",
-          "altında",
-          "amaçlayan",
-          "arasındaki",
-          "ekonomik",
-          "gerilimi"
+          "ilaç",
+          "birçok",
+          "düz",
+          "ettiği",
+          "geliştirildi",
+          "iğnelerinin"
         ]
       },
       {
-        "source_title": "Yoğurdun sağlığa faydaları",
-        "url": "https://www.bbc.com/turkce/articles/cp9lnnjn27do?at_medium=RSS&at_campaign=rss",
+        "source_title": "İtalya basını: 'Montella'nın Türkiye'si favoriydi', 'Avustralya duvarına çarptı'",
+        "url": "https://www.bbc.com/turkce/articles/c78yxkmvm55o?at_medium=RSS&at_campaign=rss",
         "source_name": "BBC Türkçe",
         "category": "news",
-        "factual_summary": "Yoğurdun sağlığa faydaları",
+        "factual_summary": "İtalya basını: 'Montella'nın Türkiye'si favoriydi', 'Avustralya duvarına çarptı'",
         "detected_entities": [
-          "Yoğurdun"
+          "İtalya",
+          "Montella'nın",
+          "Türkiye'si",
+          "Avustralya"
         ],
         "topics": [
-          "açısından",
-          "besleyici",
-          "canlı",
-          "doğal",
-          "faydalar",
-          "faydaları"
+          "ağırlıkla",
+          "basın",
+          "basını",
+          "başlangıç",
+          "çarptı",
+          "duvarına"
         ]
       },
       {
-        "source_title": "'Hiç bu kadar yakın olmamıştı': İran ve ABD arasındaki ateşkes anlaşmasında son durum ne?",
-        "url": "https://www.bbc.com/turkce/articles/cd95x7xl1jpo?at_medium=RSS&at_campaign=rss",
-        "source_name": "BBC Türkçe",
-        "category": "news",
-        "factual_summary": "'Hiç bu kadar yakın olmamıştı': İran ve ABD arasındaki ateşkes anlaşmasında son durum ne?",
-        "detected_entities": [
-          "Hiç",
-          "İran",
-          "ABD"
-        ],
-        "topics": [
-          "olmamıştı",
-          "yakın",
-          "anlaşma",
-          "anlaşmasında",
-          "arasındaki",
-          "ateşkes"
-        ]
-      },
-      {
-        "source_title": "İstanbul'da bariyerlere çarpan midibüs devrildi: 1'i çocuk 12 yaralı",
-        "url": "https://www.birgun.net/haber/istanbul-da-bariyerlere-carpan-midibus-devrildi-1-i-cocuk-12-yarali-718137",
+        "source_title": "İstanbul’da en çok tüketilen meyve ve sebze belli oldu",
+        "url": "https://www.birgun.net/haber/istanbulda-en-cok-tuketilen-meyve-ve-sebze-belli-oldu-718152",
         "source_name": "BirGün",
         "category": "news",
-        "factual_summary": "İstanbul'da bariyerlere çarpan midibüs devrildi: 1'i çocuk 12 yaralı",
+        "factual_summary": "İstanbul’da en çok tüketilen meyve ve sebze belli oldu",
         "detected_entities": [
-          "İstanbul'da"
+          "İstanbul’da"
         ],
         "topics": [
-          "bariyerlere",
-          "çocuk",
-          "devrildi",
-          "midibüs",
-          "çarpan",
-          "çarparak"
+          "ayın",
+          "ayında",
+          "belli",
+          "domatesi",
+          "ise",
+          "karpuzu"
         ]
       },
       {
-        "source_title": "Repression will bring resistance, and resistance will bring victory",
-        "url": "https://www.birgun.net/haber/repression-will-bring-resistance-and-resistance-will-bring-victory-718136",
+        "source_title": "AKOM tarih verdi: İstanbul için sağanak uyarısı",
+        "url": "https://www.birgun.net/haber/akom-tarih-verdi-istanbul-icin-saganak-uyarisi-718151",
         "source_name": "BirGün",
         "category": "news",
-        "factual_summary": "Repression will bring resistance, and resistance will bring victory",
+        "factual_summary": "AKOM tarih verdi: İstanbul için sağanak uyarısı",
         "detected_entities": [
-          "Repression"
+          "AKOM",
+          "İstanbul"
         ],
         "topics": [
-          "and",
-          "bring",
-          "has",
-          "into",
-          "politics",
-          "resistance"
+          "sağanak",
+          "bekleniyor",
+          "günü",
+          "haftada",
+          "kentte",
+          "raporuna"
         ]
       },
       {
@@ -603,7 +606,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://arkeofili.com/feed/",
-        "lastCheckedAt": "2026-06-14T07:11:10.227Z",
+        "lastCheckedAt": "2026-06-14T08:51:47.342Z",
         "attemptedUrls": [
           "https://arkeofili.com/feed/"
         ],
@@ -619,7 +622,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://evrimagaci.org/rss.xml",
-        "lastCheckedAt": "2026-06-14T07:11:10.229Z",
+        "lastCheckedAt": "2026-06-14T08:51:47.344Z",
         "attemptedUrls": [
           "https://evrimagaci.org/rss.xml"
         ],
@@ -635,7 +638,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://altyazi.net/feed/",
-        "lastCheckedAt": "2026-06-14T07:11:10.230Z",
+        "lastCheckedAt": "2026-06-14T08:51:47.344Z",
         "attemptedUrls": [
           "https://altyazi.net/feed/"
         ],
@@ -651,7 +654,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.otekisinema.com/feed/",
-        "lastCheckedAt": "2026-06-14T07:11:10.553Z",
+        "lastCheckedAt": "2026-06-14T08:51:47.904Z",
         "attemptedUrls": [
           "https://www.otekisinema.com/feed/"
         ],
@@ -667,7 +670,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.bagimsizsinema.com/feed",
-        "lastCheckedAt": "2026-06-14T07:11:11.017Z",
+        "lastCheckedAt": "2026-06-14T08:51:48.458Z",
         "attemptedUrls": [
           "https://www.bagimsizsinema.com/feed"
         ],
@@ -683,7 +686,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://artdogistanbul.com/feed/",
-        "lastCheckedAt": "2026-06-14T07:11:11.741Z",
+        "lastCheckedAt": "2026-06-14T08:51:48.480Z",
         "attemptedUrls": [
           "https://artdogistanbul.com/feed/"
         ],
@@ -699,7 +702,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://argonotlar.com/feed/",
-        "lastCheckedAt": "2026-06-14T07:11:12.147Z",
+        "lastCheckedAt": "2026-06-14T08:51:49.024Z",
         "attemptedUrls": [
           "https://argonotlar.com/feed/"
         ],
@@ -715,7 +718,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.arkitera.com/feed/",
-        "lastCheckedAt": "2026-06-14T07:11:12.915Z",
+        "lastCheckedAt": "2026-06-14T08:51:49.287Z",
         "attemptedUrls": [
           "https://www.arkitera.com/feed/"
         ],
@@ -731,7 +734,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.artkolik.net/feed",
-        "lastCheckedAt": "2026-06-14T07:11:12.999Z",
+        "lastCheckedAt": "2026-06-14T08:51:49.646Z",
         "attemptedUrls": [
           "https://www.artkolik.net/feed"
         ],
@@ -747,7 +750,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://terrabayt.com/feed/",
-        "lastCheckedAt": "2026-06-14T07:11:13.859Z",
+        "lastCheckedAt": "2026-06-14T08:51:49.877Z",
         "attemptedUrls": [
           "https://terrabayt.com/feed/"
         ],
@@ -763,7 +766,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.nouvart.net/feed/",
-        "lastCheckedAt": "2026-06-14T07:11:14.633Z",
+        "lastCheckedAt": "2026-06-14T08:51:50.425Z",
         "attemptedUrls": [
           "https://www.nouvart.net/feed/"
         ],
@@ -779,7 +782,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds2.feedburner.com/itsnicethat/SlXC",
-        "lastCheckedAt": "2026-06-14T07:11:14.869Z",
+        "lastCheckedAt": "2026-06-14T08:51:50.505Z",
         "attemptedUrls": [
           "https://feeds2.feedburner.com/itsnicethat/SlXC"
         ],
@@ -795,7 +798,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://thecreativeindependent.com/feed.xml",
-        "lastCheckedAt": "2026-06-14T07:11:15.013Z",
+        "lastCheckedAt": "2026-06-14T08:51:50.652Z",
         "attemptedUrls": [
           "https://thecreativeindependent.com/feed.xml"
         ],
@@ -811,7 +814,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://bantmag.com/feed/",
-        "lastCheckedAt": "2026-06-14T07:11:15.064Z",
+        "lastCheckedAt": "2026-06-14T08:51:50.733Z",
         "attemptedUrls": [
           "https://bantmag.com/feed/"
         ],
@@ -827,7 +830,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://manifold.press/rss",
-        "lastCheckedAt": "2026-06-14T07:11:15.233Z",
+        "lastCheckedAt": "2026-06-14T08:51:50.781Z",
         "attemptedUrls": [
           "https://manifold.press/rss"
         ],
@@ -843,7 +846,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://playtusu.com/feed/",
-        "lastCheckedAt": "2026-06-14T07:11:15.342Z",
+        "lastCheckedAt": "2026-06-14T08:51:51.159Z",
         "attemptedUrls": [
           "https://playtusu.com/feed/"
         ],
@@ -859,7 +862,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://vesaire.press/feed/",
-        "lastCheckedAt": "2026-06-14T07:11:16.003Z",
+        "lastCheckedAt": "2026-06-14T08:51:51.209Z",
         "attemptedUrls": [
           "https://vesaire.press/feed/"
         ],
@@ -875,7 +878,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds.bbci.co.uk/turkce/rss.xml",
-        "lastCheckedAt": "2026-06-14T07:11:16.036Z",
+        "lastCheckedAt": "2026-06-14T08:51:51.369Z",
         "attemptedUrls": [
           "https://feeds.bbci.co.uk/turkce/rss.xml"
         ],
@@ -891,7 +894,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.birgun.net/rss/home",
-        "lastCheckedAt": "2026-06-14T07:11:16.078Z",
+        "lastCheckedAt": "2026-06-14T08:51:51.587Z",
         "attemptedUrls": [
           "https://www.birgun.net/rss/home"
         ],
@@ -907,7 +910,7 @@
         "status": "blocked_403",
         "item_count": 0,
         "usedUrl": "https://www.diken.com.tr/feed.xml",
-        "lastCheckedAt": "2026-06-14T07:11:16.326Z",
+        "lastCheckedAt": "2026-06-14T08:51:51.603Z",
         "attemptedUrls": [
           "https://www.diken.com.tr/feed/",
           "https://www.diken.com.tr/feed",
@@ -927,7 +930,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.radikal.com.tr/feed/",
-        "lastCheckedAt": "2026-06-14T07:11:16.351Z",
+        "lastCheckedAt": "2026-06-14T08:51:51.744Z",
         "attemptedUrls": [
           "https://www.radikal.com.tr/feed/"
         ],
@@ -943,7 +946,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.cumhuriyet.com.tr/rss",
-        "lastCheckedAt": "2026-06-14T07:11:16.510Z",
+        "lastCheckedAt": "2026-06-14T08:51:51.837Z",
         "attemptedUrls": [
           "https://www.cumhuriyet.com.tr/rss/son_dakika.xml"
         ],
@@ -959,7 +962,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://istanbullife.com.tr/feed/",
-        "lastCheckedAt": "2026-06-14T07:11:16.779Z",
+        "lastCheckedAt": "2026-06-14T08:51:52.012Z",
         "attemptedUrls": [
           "https://istanbullife.com.tr/feed/"
         ],
@@ -973,13 +976,13 @@
       "gündelik",
       "politik",
       "ağırlaşan",
-      "arasındaki",
       "içeride",
       "kabaran",
-      "açısından",
+      "ağırlıkla",
       "alması",
-      "altında",
-      "amaçlayan",
+      "altından",
+      "anlama",
+      "aracılığıyla",
       "basıncı",
       "duvarı",
       "görüntü",
@@ -1033,13 +1036,14 @@
       "interrupted clause movement"
     ],
     "internalized_effect": [
+      "gündelik / politik / ağırlaşan / içeride",
       "basıncı / duvarı / görüntü / sergi",
       "açılan / bilgi / burada / derin",
       "ışık / sahne / yapay / yüz",
       "gündelik / içi / şehir / temas"
     ],
     "rejected_unsafe_terms": [
-      "raw_entity_or_source:2",
+      "raw_entity_or_source:1",
       "repeated_abstract_term:1"
     ],
     "do_not_surface_terms": [
@@ -1093,34 +1097,34 @@
         "gündelik",
         "politik",
         "ağırlaşan",
-        "ilk",
-        "arasındaki",
         "içeride",
+        "ilk",
         "kabaran",
-        "açısından",
+        "ağırlıkla",
         "alması",
-        "altında",
-        "amaçlayan",
+        "altından",
+        "anlama",
+        "aracılığıyla",
         "basıncı"
       ],
       "novelty_terms": [
-        "açısından",
+        "ağırlıkla",
         "alması",
-        "altında",
-        "amaçlayan",
+        "altından",
+        "anlama",
+        "aracılığıyla",
         "basıncı"
       ],
       "repeated_terms": [
         "gündelik",
         "politik",
         "ağırlaşan",
-        "ilk",
-        "arasındaki",
         "içeride",
+        "ilk",
         "kabaran"
       ],
       "rejected_terms": [
-        "raw_entity_or_source:2",
+        "raw_entity_or_source:1",
         "repeated_abstract_term:1"
       ],
       "mood_bias": [
@@ -1128,11 +1132,11 @@
         "anger",
         "clarity"
       ],
-      "aesthetic_weight": 0.12,
-      "conceptual_weight": 0.33,
-      "rhythm_weight": 0.43,
+      "aesthetic_weight": 0.13,
+      "conceptual_weight": 0.34,
+      "rhythm_weight": 0.44,
       "pressure_weight": 1,
-      "summary_for_prompt": "basıncı / duvarı / görüntü / sergi; short-long sentence alternation"
+      "summary_for_prompt": "gündelik / politik / ağırlaşan / içeride; short-long sentence alternation"
     },
     {
       "category": "art",
@@ -1172,7 +1176,7 @@
         "hafıza"
       ],
       "rejected_terms": [
-        "raw_entity_or_source:2",
+        "raw_entity_or_source:1",
         "repeated_abstract_term:1"
       ],
       "mood_bias": [
@@ -1184,7 +1188,7 @@
       "conceptual_weight": 0.7,
       "rhythm_weight": 0.49,
       "pressure_weight": 0.18,
-      "summary_for_prompt": "açılan / bilgi / burada / derin; question-led turn without direct answer"
+      "summary_for_prompt": "basıncı / duvarı / görüntü / sergi; question-led turn without direct answer"
     },
     {
       "category": "science_culture",
@@ -1224,7 +1228,7 @@
         "bulunan"
       ],
       "rejected_terms": [
-        "raw_entity_or_source:2",
+        "raw_entity_or_source:1",
         "repeated_abstract_term:1"
       ],
       "mood_bias": [
@@ -1236,7 +1240,7 @@
       "conceptual_weight": 1,
       "rhythm_weight": 0.28,
       "pressure_weight": 0.21,
-      "summary_for_prompt": "ışık / sahne / yapay / yüz; mid-sentence hinge"
+      "summary_for_prompt": "açılan / bilgi / burada / derin; mid-sentence hinge"
     },
     {
       "category": "entertainment",
@@ -1277,7 +1281,7 @@
       ],
       "rejected_terms": [
         "proper_or_source_name:1",
-        "raw_entity_or_source:2",
+        "raw_entity_or_source:1",
         "repeated_abstract_term:1"
       ],
       "mood_bias": [
@@ -1289,7 +1293,7 @@
       "conceptual_weight": 0.42,
       "rhythm_weight": 1,
       "pressure_weight": 0.26,
-      "summary_for_prompt": "gündelik / içi / şehir / temas; interrupted clause movement"
+      "summary_for_prompt": "ışık / sahne / yapay / yüz; interrupted clause movement"
     },
     {
       "category": "life",
@@ -1330,7 +1334,7 @@
       ],
       "rejected_terms": [
         "proper_or_source_name:5",
-        "raw_entity_or_source:2",
+        "raw_entity_or_source:1",
         "repeated_abstract_term:1"
       ],
       "mood_bias": [
@@ -1342,7 +1346,7 @@
       "conceptual_weight": 0.33,
       "rhythm_weight": 0.5,
       "pressure_weight": 0.24,
-      "summary_for_prompt": "basıncı / duvarı / görüntü / sergi; short-long sentence alternation"
+      "summary_for_prompt": "gündelik / içi / şehir / temas; short-long sentence alternation"
     }
   ],
   "safety": {
