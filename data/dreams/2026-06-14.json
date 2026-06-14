@@ -1,25 +1,23 @@
 {
   "date": "2026-06-14",
   "source_date": "2026-06-14",
-  "generated_at": "2026-06-14T08:54:34.079Z",
-  "title": "folding silence between breaths",
-  "dream_text": "A hollow pulse, where voices once weighed too much, drips across a chilled skin—faint, as if remembering to forget.\nThe edges of days fold inward, pressing with a cool insistence, neither sharp nor soft, just quietly tangled.\nA shadow leans, not heavy but unwilling, its outlines diffusing in a thin smog of maybes and unasked questions.\nBreath caught between inhale and release, a suspended note somewhere beneath the steady hum of what doesn’t quite close.\nMovement slowed to careful fragments, each step a small paragraph rewritten in the language of absence.\nTendrils of clarity tease the edges, but tremble and withdraw, leaving the loosened stitches of blurred recollections to pulse subtle and sporadic.",
+  "generated_at": "2026-06-14T09:42:27.488Z",
+  "title": "gündelik politik ağırlaşan",
+  "dream_text": "Yarı açık bir kapı ardında, eski sesler asılı kalmıştı; anlamlar çıkmıyordu, çıkarılamıyordu. Bulanık anılar, ağırlıkla gölgelerin ağzını açtı ama kelimeler hala aralarında gizlilikle oynuyordu. Hafızanın derinliklerinde, bugünle geçmiş birbirine karışırken, izin vermediğim ağırlıklar omuzlarımı yumuşatmaya çalışıyordu. Açıklık yalnızca bir yanılsama, kalanlar ise sıkışmış bir düşün kıyısındaydı; bu kapıda durmak, açılanla kapanan arasında kalmaktı.",
   "symbols": [
-    "hollow pulse",
-    "folding edges",
-    "diffusing shadow",
-    "suspended breath",
-    "rewritten step",
-    "loosened stitches"
+    "yarı açık kapı",
+    "bulanık anılar",
+    "ağırlık",
+    "gölge",
+    "ses asılı kalması"
   ],
-  "mood_after": "quiet fatigue with soft insistence",
-  "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of suspended breath, loosened stitches, hollow pulse, folding edges, rewritten step; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible",
+  "mood_after": "Karmaşık, dirençli ancak bir parça hafiflemiş",
+  "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of ağırlık, ses asılı kalması, yarı açık kapı, bulanık anılar, gölge; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible",
   "image_path": "/generated/visuals/2026-06-14-dream.png",
   "memory_mutations": [
-    "voices that weigh less than silence",
-    "edges folding without sharpness",
-    "shadows that refuse to settle",
-    "breath caught mid-release"
+    "anlamların derinleşmesiyle bulanıklaşması",
+    "eskinin gölgesiyle bugünün karışımı",
+    "açıklığın yanılsama olarak yeniden biçimlenmesi"
   ],
   "memory_selection": {
     "mode": "dream",
@@ -87,24 +85,61 @@
     "provider": "openai",
     "model": "gpt-4.1-mini",
     "fallback_reason": null,
-    "surface_validation_passed": true,
+    "surface_validation_passed": false,
     "surface_violations": [
       {
+        "kind": "title_overexposed_surface",
+        "severity": "severe",
+        "matches": [
+          "gündelik",
+          "politik",
+          "ağırlaşan"
+        ]
+      },
+      {
+        "kind": "title_object_list",
+        "severity": "severe",
+        "matches": [
+          "gündelik",
+          "politik",
+          "ağırlaşan"
+        ]
+      },
+      {
         "kind": "repeated_surface",
+        "severity": "severe",
+        "matches": [
+          "açıklık",
+          "açık",
+          "ağzını",
+          "hafıza",
+          "kalmış",
+          "kelimeler",
+          "çıkmış",
+          "yumuşayan",
+          "ağırlaşan",
+          "ardından",
+          "açılan"
+        ]
+      },
+      {
+        "kind": "poem_surface_reuse",
         "severity": "warning",
         "matches": [
-          "weights",
-          "pressure",
-          "clarity"
+          "açık"
         ]
       }
     ],
-    "retry_count": 1,
-    "blocked_surface_terms_count": 147,
-    "title_violation": false,
+    "retry_count": 2,
+    "blocked_surface_terms_count": 144,
+    "title_violation": true,
     "home_place_leak_score": 0,
     "repeated_phrase_score": 0,
     "signature_ignored_from_analysis": true,
-    "surface_validation_status": "accepted_with_warning"
+    "surface_validation_status": "accepted_with_warning",
+    "language_validation_passed": true,
+    "language_violations": [],
+    "english_ratio": 0,
+    "language_retry_count": 0
   }
 }
