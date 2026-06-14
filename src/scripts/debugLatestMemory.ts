@@ -1,7 +1,9 @@
-import { getLatestDream, getLatestPoem, listDreams, listGeneratedPoems, listSources } from "../lib/fileStorage";
+import { getLatestDream, getLatestPoem, listDreams, listGeneratedPoems, listSources, readWorld } from "../lib/fileStorage";
 import { buildMemoryGraphData } from "../lib/memoryGraph";
 import { memoryClimateDetail, memoryClimateHeadline } from "../lib/memoryPresentation";
 import { buildMemoryArchive, validateMemoryArchive, validateMemoryPromptFragments } from "../lib/memoryTraceEngine";
+import { analyzeRepetitionPressure } from "../lib/repetitionPressure";
+import { analyzeGeneratedDreamSurface, analyzeGeneratedPoemSurface } from "../lib/surfaceValidator";
 import type { DailyPoem, DreamRecord, MemorySelection, MemoryTrace, SourceBundle } from "../lib/types";
 
 function selectionFields(selection: MemorySelection): Record<string, boolean> {
@@ -88,16 +90,33 @@ function dreamReturnState(dream: DreamRecord | null, traces: MemoryTrace[]) {
   };
 }
 
+function surfaceDebug(record: DailyPoem | DreamRecord | null, computed: Awaited<ReturnType<typeof analyzeGeneratedPoemSurface>> | null) {
+  return {
+    stored_metadata_present: record?.generation.surface_validation_passed !== undefined,
+    retry_count: record?.generation.retry_count ?? null,
+    title_violation: computed?.title_violation ?? null,
+    repeated_surfaces: computed?.repeated_surfaces ?? [],
+    home_place_leak_score: computed?.home_place_leak_score ?? null,
+    repeated_phrase_score: computed?.repeated_phrase_score ?? null,
+    final_status: record?.generation.surface_validation_status ?? computed?.final_status ?? null,
+    signature_ignored_from_analysis: computed?.signature_ignored_from_analysis ?? null,
+    computed,
+    stored: record?.generation ?? null
+  };
+}
+
 async function main(): Promise<void> {
   if (process.argv.slice(2).includes("--write")) throw new Error("debug:latest-memory is read-only and does not support --write.");
   const archive = await buildMemoryArchive();
-  const [latestPoem, latestDream, poems, dreams, sources, archiveValidation] = await Promise.all([
+  const [latestPoem, latestDream, poems, dreams, sources, archiveValidation, world, repetition] = await Promise.all([
     getLatestPoem(),
     getLatestDream(),
     listGeneratedPoems(),
     listDreams(),
     listSources(),
-    validateMemoryArchive(archive)
+    validateMemoryArchive(archive),
+    readWorld(),
+    analyzeRepetitionPressure()
   ]);
   const graph = await buildMemoryGraphData({
     traces: archive.traces,
@@ -124,11 +143,42 @@ async function main(): Promise<void> {
     traces: archive.traces,
     sources
   });
+  const latestPoemSurface = latestPoem
+    ? await analyzeGeneratedPoemSurface(
+        { title: latestPoem.title, poem_text: latestPoem.poem_text },
+        {
+          mode: "poem",
+          world,
+          repetition,
+          recentPoems: poems.filter((poem) => poem.date < latestPoem.date),
+          traces: archive.traces,
+          sources
+        }
+      )
+    : null;
+  const latestDreamSurface = latestDream
+    ? await analyzeGeneratedDreamSurface(
+        { title: latestDream.title, dream_text: latestDream.dream_text },
+        {
+          mode: "dream",
+          world,
+          repetition,
+          recentPoems: poems.filter((poem) => poem.date < latestDream.date),
+          traces: archive.traces,
+          sources,
+          sourcePoem: poems.find((poem) => poem.date === latestDream.source_date)
+        }
+      )
+    : null;
   const result = {
     status: "read_only",
     writes_performed: false,
     latest_poem: poem,
     latest_dream: dream,
+    surface_validation: {
+      latest_poem: surfaceDebug(latestPoem, latestPoemSurface),
+      latest_dream: surfaceDebug(latestDream, latestDreamSurface)
+    },
     dream_return: dreamReturnState(latestDream, archive.traces),
     graph_latest_cycle_contribution: {
       dates: Array.from(latestDates).sort(),

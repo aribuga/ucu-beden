@@ -1,4 +1,4 @@
-import { ensureDataDirs, getLatestPoem, listDreams, listGeneratedPoems, listSources } from "../lib/fileStorage";
+import { ensureDataDirs, getLatestPoem, listDreams, listGeneratedPoems, listSources, readWorld } from "../lib/fileStorage";
 import { validateMemoryCycleIntegrity } from "../lib/memoryCycle";
 import { buildMemoryGraphData } from "../lib/memoryGraph";
 import {
@@ -10,6 +10,8 @@ import {
   writeMemoryArchive
 } from "../lib/memoryTraceEngine";
 import { analyzeRepetitionPressure } from "../lib/repetitionPressure";
+import { analyzeSourceDigest, validateSourceInfluence } from "../lib/sourceInfluence";
+import { validateStoredSurfaceRecords } from "../lib/surfaceValidator";
 import type { MemorySelection, MemoryTrace } from "../lib/types";
 
 function nextDate(date: string | null): string {
@@ -35,12 +37,13 @@ async function main(): Promise<void> {
   const repeatedArchive = shouldValidate ? await buildMemoryArchive() : null;
   if (!dryRun) await writeMemoryArchive(archive);
   const validation = shouldValidate ? await validateMemoryArchive(archive) : null;
-  const [latestPoem, sources, poems, dreams, repetition] = await Promise.all([
+  const [latestPoem, sources, poems, dreams, repetition, world] = await Promise.all([
     getLatestPoem(),
     listSources(),
     listGeneratedPoems(),
     listDreams(),
-    analyzeRepetitionPressure()
+    analyzeRepetitionPressure(),
+    readWorld()
   ]);
   const previewDate = nextDate(archive.index.built_through);
   const previewMood = latestPoem?.mood ?? { melancholy: 0, anger: 0, tenderness: 0, fatigue: 0, absurdity: 0, clarity: 0, desire: 0, hope: 0 };
@@ -61,7 +64,18 @@ async function main(): Promise<void> {
       })
     : null;
   const deterministicRebuild = !repeatedArchive || memoryArchiveStateSignature(archive) === memoryArchiveStateSignature(repeatedArchive);
-  const valid = (validation?.valid ?? true) && (cycleValidation?.valid ?? true) && promptValidation.valid && deterministicRebuild;
+  const sourceDigest = analyzeSourceDigest(sources);
+  const sourceInfluenceValidation = validateSourceInfluence(sources);
+  const surfaceValidation = shouldValidate
+    ? await validateStoredSurfaceRecords({ poems, dreams, traces: archive.traces, sources, world, repetition })
+    : null;
+  const valid =
+    (validation?.valid ?? true) &&
+    (cycleValidation?.valid ?? true) &&
+    promptValidation.valid &&
+    sourceInfluenceValidation.valid &&
+    (surfaceValidation?.valid ?? true) &&
+    deterministicRebuild;
   console.log(
     JSON.stringify(
       {
@@ -84,6 +98,9 @@ async function main(): Promise<void> {
         overexposed_direct_prompt: cycleValidation?.overexposed_direct_prompt ?? [],
         graph_public_node_count_matches_public_safe_trace_count: cycleValidation?.graph_public_node_count_matches_public_safe_trace_count ?? null,
         dream_suppressed_preference: cycleValidation?.dream_suppressed_preference ?? null,
+        source_digest: sourceDigest,
+        source_influence_validation: sourceInfluenceValidation,
+        surface_validation: surfaceValidation,
         metadata_records: cycleValidation?.metadata_records ?? null,
         deterministic_rebuild: {
           valid: deterministicRebuild,

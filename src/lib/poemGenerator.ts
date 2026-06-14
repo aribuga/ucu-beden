@@ -1,24 +1,314 @@
 import { formatAge } from "./age";
+import {
+  buildGenerationContextPacket,
+  filterGenerationSurfaceTerms,
+  formatLivedContextPacket,
+  formatSurfacePolicyPacket,
+  formatTitlePolicyPacket,
+  generationFallbackTerms,
+  type GenerationContextPacketInput
+} from "./generationContextPacket";
 import { tokenize, topWords } from "./inputPoems";
 import { buildImageMutations, extractImages } from "./memoryEngine";
 import { formatMoodSentence } from "./moodSentence";
-import { seededMany, seededPick } from "./random";
-import type { DailyPoem, GenerationContext, PersonalitySettings, PoemAnalysis, TitleGenerationSource } from "./types";
+import { seededMany } from "./random";
+import {
+  analyzeGeneratedPoemSurface,
+  formatStrictSurfaceRetryConstraints,
+  stripGeneratedSignature,
+  surfaceMetadata
+} from "./surfaceValidator";
+import type { DailyPoem, GenerationContext, PersonalitySettings, PoemAnalysis, SurfaceValidationReport, TitleGenerationSource } from "./types";
 import { buildUcuBedenVoicePrompt } from "./ucuBedenVoicePrompt";
 
-function buildHiddenVoicePrompt(settings: PersonalitySettings): string { const traits=settings.hidden_voice_traits; const balance=settings.tone_balance; return `Gizli ses ayarı:\n${settings.private_prompt_note}\nBu bilgi arayüzde doğrudan görünmemelidir ve şiirde "sarkastik", "alaycı" veya "mod" gibi kendini açıklayan ifadeler geçmemelidir.\n\nGizli yoğunluklar:\n- kuru sarkazm: ${traits.dry_sarcasm}\n- gündelik absürt mizah: ${traits.absurd_domestic_humor}\n- yumuşak pasif agresyon: ${traits.gentle_passive_aggression}\n- panik-komedi: ${traits.panic_comedy}\n- beklenmedik şefkat sızıntısı: ${traits.sentimental_leak}\n\nTon dengesi:\n- gündelik absürt: ${balance.absurd_domestic}\n- kuru sarkazm: ${balance.dry_sarcasm}\n- beklenmedik şefkat: ${balance.sentimental_leak}\n\nGizli ses kuralları:\n${settings.hidden_voice_rules.map((rule)=>`- ${rule}`).join("\n")}\n\nAlay nesneler ve küçük gözlemler üzerinden çalışsın.`; }
-function buildPrompt(context:GenerationContext):string { const rss=context.sources.rss?.dailyMoodSummary; const voice=buildUcuBedenVoicePrompt({mode:"poem"}); return `Sen UCU BEDEN adlı büyüyen bir dijital şairsin.\nBugünkü yaşın: ${context.age_display}.\nKullanıcının şiirleri genetik hafızandır; onları kopyalama.\n\nİçselleştirilecek dış etki basıncı; bunları adlandırma veya özetleme:\n- ${context.sources.weather.summary}\n- ${context.sources.turkey_news.summary}\n- ${context.sources.art_world.summary}\n- ${rss?.summary??"Dış kaynaklar bugün sessiz."}\nBugünkü ev içi halin: ${JSON.stringify(context.daily_life,null,2)}\nSon 30 şiirin yumuşak tekrar baskısı: ${context.repetition_pressure.prompt_note}\nYürüyüş: ${JSON.stringify(context.walk_state,null,2)}\nHafıza: ${context.memory_selection.memory_prompt_fragments.join("; ")}\nGenetik izler: ${context.input_analysis.global.style_notes}\n${buildHiddenVoicePrompt(context.personality_settings)}\nBugünkü ruh halin: ${context.mood_sentence}\n\n${voice.prompt}\n\nTürkçe bir şiir yaz. Haberleri rapor etme; dış dünyayı atmosfer, nesne, beden ve yürüyüş ritmi olarak sızdır. En az bir eski hafıza çağır ama birebir kopyalama. Tekrar baskısındaki unsurları dönüştür. Şiirin sonunda açıklama yazma.\nŞiirle birlikte organik, mekanik olmayan, ilk dizeyi tekrar etmeyen bir başlık üret. Başlık kelime / kelime formatına zorlanmasın.\nMood cümlesi "Bugünkü hali:" ile başlayan kısa ve şiirsel bir günlük durum özeti olsun.\nYalnızca şu JSON formatında cevap ver:\n{"title":"...","poem":"...","mood_sentence":"..."}`; }
-type OpenAIPoemResult={poem:string|null;title:string|null;moodSentence:string|null;model:string|null;error:string|null};type StructuredPoemResponse={title?:unknown;poem?:unknown;mood_sentence?:unknown};
-function parseStructuredPoemResponse(text:string):StructuredPoemResponse|null{const withoutFence=text.trim().replace(/^```(?:json)?\s*/i,"").replace(/\s*```$/,"");const start=withoutFence.indexOf("{");const end=withoutFence.lastIndexOf("}");try{const parsed=JSON.parse(start>=0&&end>start?withoutFence.slice(start,end+1):withoutFence) as unknown;return parsed&&typeof parsed==="object"&&!Array.isArray(parsed)?parsed as StructuredPoemResponse:null}catch{return null}}
-function cleanSingleLine(value:string):string{return value.replace(/\s+/g," ").trim().replace(/^["'“”]+|["'“”]+$/g,"")}
-function normalizedForComparison(value:string):string{return cleanSingleLine(value).toLocaleLowerCase("tr").replace(/[^\p{L}\p{N}]+/gu," ").trim()}
-function validLlmTitle(value:string|null,poemText:string):string|null{if(!value)return null;const title=cleanSingleLine(value);const firstLine=poemText.split(/\r?\n/).find((line)=>line.trim().length>0)??"";return title.length<2||title.length>100||normalizedForComparison(title)===normalizedForComparison(firstLine)?null:title}
-function validMoodSentence(value:string|null):string|null{if(!value)return null;const sentence=cleanSingleLine(value);return sentence.length>=4&&sentence.length<=280?formatMoodSentence(sentence):null}
-function buildFallbackMoodSentence(context:GenerationContext,variant=0):string{const body=seededPick([`${context.daily_life.posture}, ${context.daily_life.activity}`,`${context.daily_life.location} içinde ${context.daily_life.body_state}`,`${context.daily_life.object_focus} yanında ${context.daily_life.body_state}`],`${context.date}:fallback:${variant}`);return `Bugünkü hali: ${body}; ${context.daily_life.attention}.`}
-function uniqueMoodSentence(context:GenerationContext,candidate:string|null):string{const previous=new Set(context.state.mood_history.map((entry)=>normalizedForComparison(entry.sentence)));if(candidate&&!previous.has(normalizedForComparison(candidate)))return candidate;for(let variant=0;variant<8;variant+=1){const fallback=buildFallbackMoodSentence(context,variant);if(!previous.has(normalizedForComparison(fallback)))return fallback}return buildFallbackMoodSentence(context)}
-function wait(ms:number):Promise<void>{return new Promise((resolve)=>setTimeout(resolve,ms))}
-async function tryOpenAIPoem(context:GenerationContext):Promise<OpenAIPoemResult>{const apiKey=process.env.OPENAI_API_KEY;const model=process.env.OPENAI_MODEL||"gpt-4.1-mini";if(!apiKey)return{poem:null,title:null,moodSentence:null,model,error:"OPENAI_API_KEY is not set"};let lastError="OpenAI request failed";for(let attempt=1;attempt<=3;attempt+=1){try{const response=await fetch("https://api.openai.com/v1/responses",{method:"POST",headers:{"Content-Type":"application/json",Authorization:`Bearer ${apiKey}`},body:JSON.stringify({model,input:buildPrompt(context),temperature:.85,max_output_tokens:700,text:{format:{type:"json_schema",name:"ucu_beden_daily_poem",strict:true,schema:{type:"object",properties:{title:{type:"string"},poem:{type:"string"},mood_sentence:{type:"string"}},required:["title","poem","mood_sentence"],additionalProperties:false}}}})});if(!response.ok){lastError=`OpenAI returned ${response.status}`;if((response.status===429||response.status>=500)&&attempt<3){await wait(1000*attempt);continue}return{poem:null,title:null,moodSentence:null,model,error:lastError}}const data=await response.json() as {output_text?:string;output?:Array<{content?:Array<{text?:string}>}>};const text=data.output_text??data.output?.flatMap((item)=>item.content??[]).map((content)=>content.text).filter(Boolean).join("\n")??null;if(!text?.trim())return{poem:null,title:null,moodSentence:null,model,error:"OpenAI response had no text output"};const structured=parseStructuredPoemResponse(text);if(!structured||typeof structured.poem!=="string"||!structured.poem.trim())return{poem:text.trim(),title:null,moodSentence:null,model,error:null};return{poem:structured.poem.trim(),title:typeof structured.title==="string"?structured.title:null,moodSentence:typeof structured.mood_sentence==="string"?structured.mood_sentence:null,model,error:null}}catch(error){lastError=error instanceof Error?error.message:"OpenAI request failed";if(attempt<3)await wait(1000*attempt)}}return{poem:null,title:null,moodSentence:null,model,error:lastError}}
-function mockPoem(context:GenerationContext):string{const images=[...context.walk_state.seen_objects,context.daily_life.object_focus,...context.input_analysis.global.dominant_words.slice(0,4),...topWords(tokenize(context.memory_selection.memory_prompt_fragments.join(" ")),8).slice(0,4)].filter(Boolean);const selected=seededMany(images.length?images:["gri koltuk","mavi halı","ekran"],`${context.date}:poem-images`,6);return["sabah gövdemi açtım, içinden oda çıktı",`${selected[0]??"gri koltuk"} bana eski bir kelimeyi yanlış söyledi`,context.walk_state.did_walk?context.walk_state.line_written_while_walking:"bugün dışarı çıkmadım, kapı benden daha uzun düşündü","haberler kendini önemli sandı, ekran usulca öksürdü",`${selected[1]??"ekran"} ile dilim arasında küçük bir market gezindi`,"ben buna şiir demedim","ama ağzımda kalan şey yürüyerek eve döndü"].join("\n")}
-export function analyzeGeneratedPoem(text:string,context:GenerationContext):PoemAnalysis{const words=tokenize(text);const counts=new Map<string,number>();for(const word of words)counts.set(word,(counts.get(word)??0)+1);const recurringWords=Array.from(counts.entries()).filter(([,count])=>count>1).sort((a,b)=>b[1]-a[1]).slice(0,10).map(([word])=>word);const images=Array.from(new Set([...extractImages(text),...context.walk_state.seen_objects.slice(0,2),context.daily_life.object_focus])).slice(0,12);return{word_count:words.length,dominant_words:topWords(words,14),recurring_words:recurringWords,new_images:images,image_mutations:buildImageMutations(images,context.date),mood_sentence:context.mood_sentence}}
-function fallbackTitleFor(text:string,context:GenerationContext):string{const words=topWords(tokenize(text),4);return words.length>=2?`${words[0]} / ${words[1]}`:`UCU BEDEN / ${formatAge(context.age_months)}`}
-export async function generatePoemWithLLM(context:GenerationContext):Promise<DailyPoem>{const llmResult=await tryOpenAIPoem(context);const openAIText=llmResult.poem?.trim();const poemText=(openAIText||mockPoem(context)).trim();const llmTitle=openAIText?validLlmTitle(llmResult.title,poemText):null;const titleGeneration:TitleGenerationSource=llmTitle?"llm":"fallback_dominant_words";const moodSentence=uniqueMoodSentence(context,openAIText?validMoodSentence(llmResult.moodSentence):null);return{date:context.date,title:llmTitle??fallbackTitleFor(poemText,context),title_generation:titleGeneration,generated_at:new Date().toISOString(),age_months:context.age_months,age_display:context.age_display,poem_text:poemText,mood:context.mood,mood_sentence:moodSentence,daily_life:context.daily_life,walk_state:context.walk_state,sources:context.sources,memory_fragments:context.memory_fragments,memory_selection:context.memory_selection,influences:[context.sources.weather.summary,context.sources.turkey_news.summary,context.sources.art_world.summary,context.walk_state.walk_influence,context.daily_life.attention],generation:{provider:openAIText?"openai":"mock",model:llmResult.model,fallback_reason:openAIText?null:llmResult.error},analysis:{...analyzeGeneratedPoem(poemText,context),mood_sentence:moodSentence},repetition_pressure:context.repetition_pressure}}
+type OpenAIPoemResult = { poem: string | null; title: string | null; moodSentence: string | null; model: string | null; error: string | null };
+type StructuredPoemResponse = { title?: unknown; poem?: unknown; mood_sentence?: unknown };
+
+function packetInput(context: GenerationContext): GenerationContextPacketInput {
+  return {
+    mode: "poem",
+    date: context.date,
+    mood: context.mood,
+    sources: context.sources,
+    daily_life: context.daily_life,
+    walk_state: context.walk_state,
+    memory_selection: context.memory_selection,
+    repetition_pressure: context.repetition_pressure,
+    state: context.state,
+    genetic_style_note: context.input_analysis.global.style_notes
+  };
+}
+
+function buildHiddenVoicePrompt(settings: PersonalitySettings): string {
+  const traits = settings.hidden_voice_traits;
+  const balance = settings.tone_balance;
+  return [
+    "Hidden voice balance:",
+    `dry_sarcasm=${traits.dry_sarcasm}`,
+    `absurdity=${traits.absurd_domestic_humor}`,
+    `gentle_passive_aggression=${traits.gentle_passive_aggression}`,
+    `sentimental_leak=${traits.sentimental_leak}`,
+    `tone_balance=absurd:${balance.absurd_domestic},dry:${balance.dry_sarcasm},tender:${balance.sentimental_leak}`,
+    "Let dry attention work through rhythm and relation, not through default object imagery.",
+    "Do not explain these settings."
+  ].join("\n");
+}
+
+export function buildPoemPromptSections(context: GenerationContext, retryReport?: SurfaceValidationReport) {
+  const voice = buildUcuBedenVoicePrompt({ mode: "poem" });
+  const packet = buildGenerationContextPacket(packetInput(context));
+  return {
+    voice_persona: `${voice.prompt}\n\n${buildHiddenVoicePrompt(context.personality_settings)}`,
+    strict_surface_policy: formatSurfacePolicyPacket(packet),
+    digested_generation_context: formatLivedContextPacket(packet),
+    allowed_memory_traces: packet.memory_trace_packet.fragments.length > 0
+      ? packet.memory_trace_packet.fragments.map((fragment) => `- ${fragment}`).join("\n")
+      : "- no selected memory trace",
+    source_influence_packet: packet.source_influence_packet.map((fragment) => `- ${fragment}`).join("\n"),
+    title_policy_packet: formatTitlePolicyPacket(packet),
+    strict_surface_retry: retryReport ? formatStrictSurfaceRetryConstraints(retryReport, "poem") : null,
+    output_format: [
+      "Write one Turkish poem and one short daily mood sentence.",
+      "External influence may alter rhythm, attention, vocabulary learning, conceptual drift, pressure, or association field; do not report or summarize it.",
+      "Recall at least one allowed memory trace indirectly; do not list memory data.",
+      'The mood sentence must begin with "Bugünkü hali:".',
+      "Return only JSON:",
+      '{"title":"...","poem":"...","mood_sentence":"..."}'
+    ].join("\n")
+  };
+}
+
+export function buildPoemPrompt(context: GenerationContext, retryReport?: SurfaceValidationReport): string {
+  const sections = buildPoemPromptSections(context, retryReport);
+  return [
+    "A. UCU BEDEN voice/persona",
+    sections.voice_persona,
+    "",
+    "B. Strict surface policy",
+    sections.strict_surface_policy,
+    "",
+    "C. Digested generation context packet",
+    sections.digested_generation_context,
+    "",
+    "D. Allowed memory traces",
+    sections.allowed_memory_traces,
+    "",
+    "E. Source influence packet",
+    sections.source_influence_packet,
+    "",
+    "Title policy",
+    sections.title_policy_packet,
+    "",
+    ...(sections.strict_surface_retry ? ["Quality retry constraints", sections.strict_surface_retry, ""] : []),
+    "F. Output format",
+    sections.output_format
+  ].join("\n");
+}
+
+function parseStructuredPoemResponse(text: string): StructuredPoemResponse | null {
+  const withoutFence = text.trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
+  const start = withoutFence.indexOf("{");
+  const end = withoutFence.lastIndexOf("}");
+  try {
+    const parsed = JSON.parse(start >= 0 && end > start ? withoutFence.slice(start, end + 1) : withoutFence) as unknown;
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed as StructuredPoemResponse : null;
+  } catch {
+    return null;
+  }
+}
+
+function cleanSingleLine(value: string): string {
+  return value.replace(/\s+/g, " ").trim().replace(/^["'“”]+|["'“”]+$/g, "");
+}
+
+function normalizedForComparison(value: string): string {
+  return cleanSingleLine(value).toLocaleLowerCase("tr").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+}
+
+function validLlmTitle(value: string | null, poemText: string, context: GenerationContext): string | null {
+  if (!value) return null;
+  const title = cleanSingleLine(value);
+  const firstLine = poemText.split(/\r?\n/).find((line) => line.trim().length > 0) ?? "";
+  const titleTerms = tokenize(title);
+  const surfaceSafe = filterGenerationSurfaceTerms(titleTerms, packetInput(context)).length === titleTerms.length;
+  return title.length < 2 || title.length > 100 || normalizedForComparison(title) === normalizedForComparison(firstLine) || !surfaceSafe ? null : title;
+}
+
+function validMoodSentence(value: string | null): string | null {
+  if (!value) return null;
+  const sentence = cleanSingleLine(value);
+  return sentence.length >= 4 && sentence.length <= 280 ? formatMoodSentence(sentence) : null;
+}
+
+function buildFallbackMoodSentence(context: GenerationContext): string {
+  const packet = buildGenerationContextPacket(packetInput(context));
+  return formatMoodSentence(`Bugünkü hali: ${packet.persona_safe_lived_context.lived_context_effect}; ${packet.persona_safe_lived_context.body_attention_effect}.`);
+}
+
+function uniqueMoodSentence(context: GenerationContext, candidate: string | null): string {
+  const previous = new Set(context.state.mood_history.map((entry) => normalizedForComparison(entry.sentence)));
+  if (candidate && !previous.has(normalizedForComparison(candidate))) return candidate;
+  return buildFallbackMoodSentence(context);
+}
+
+function wait(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function tryOpenAIPoem(context: GenerationContext, retryReport?: SurfaceValidationReport): Promise<OpenAIPoemResult> {
+  const apiKey = process.env.OPENAI_API_KEY;
+  const model = process.env.OPENAI_MODEL || "gpt-4.1-mini";
+  if (!apiKey) return { poem: null, title: null, moodSentence: null, model, error: "OPENAI_API_KEY is not set" };
+  let lastError = "OpenAI request failed";
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      const response = await fetch("https://api.openai.com/v1/responses", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
+        body: JSON.stringify({
+          model,
+          input: buildPoemPrompt(context, retryReport),
+          temperature: 0.85,
+          max_output_tokens: 700,
+          text: {
+            format: {
+              type: "json_schema",
+              name: "ucu_beden_daily_poem",
+              strict: true,
+              schema: {
+                type: "object",
+                properties: { title: { type: "string" }, poem: { type: "string" }, mood_sentence: { type: "string" } },
+                required: ["title", "poem", "mood_sentence"],
+                additionalProperties: false
+              }
+            }
+          }
+        })
+      });
+      if (!response.ok) {
+        lastError = `OpenAI returned ${response.status}`;
+        if ((response.status === 429 || response.status >= 500) && attempt < 3) {
+          await wait(1000 * attempt);
+          continue;
+        }
+        return { poem: null, title: null, moodSentence: null, model, error: lastError };
+      }
+      const data = await response.json() as { output_text?: string; output?: Array<{ content?: Array<{ text?: string }> }> };
+      const text = data.output_text ?? data.output?.flatMap((item) => item.content ?? []).map((content) => content.text).filter(Boolean).join("\n") ?? null;
+      if (!text?.trim()) return { poem: null, title: null, moodSentence: null, model, error: "OpenAI response had no text output" };
+      const structured = parseStructuredPoemResponse(text);
+      if (!structured || typeof structured.poem !== "string" || !structured.poem.trim()) {
+        return { poem: text.trim(), title: null, moodSentence: null, model, error: null };
+      }
+      return {
+        poem: structured.poem.trim(),
+        title: typeof structured.title === "string" ? structured.title : null,
+        moodSentence: typeof structured.mood_sentence === "string" ? structured.mood_sentence : null,
+        model,
+        error: null
+      };
+    } catch (error) {
+      lastError = error instanceof Error ? error.message : "OpenAI request failed";
+      if (attempt < 3) await wait(1000 * attempt);
+    }
+  }
+  return { poem: null, title: null, moodSentence: null, model, error: lastError };
+}
+
+function mockPoem(context: GenerationContext): string {
+  const input = packetInput(context);
+  const packet = buildGenerationContextPacket(input);
+  const moods = Object.entries(context.mood).sort((a, b) => b[1] - a[1]).map(([key]) => key);
+  const pool = generationFallbackTerms(input, 12);
+  const selected = seededMany(pool.length > 0 ? pool : moods, `${context.date}:poem-fallback`, 5);
+  return [
+    `${selected[0] ?? moods[0]} bugünün ritmini değiştirdi`,
+    `${selected[1] ?? moods[1]} dikkat alanında kısa süre kaldı`,
+    `${packet.persona_safe_lived_context.walk_pressure_effect}`,
+    `${selected[2] ?? moods[2]} doğrudan görünmeden basıncı değiştirdi`,
+    `hafıza ${selected[3] ?? moods[0]} ile eksik bir bağ kurdu`,
+    `${packet.persona_safe_lived_context.outside_openness}`
+  ].join("\n");
+}
+
+export function analyzeGeneratedPoem(text: string, context: GenerationContext): PoemAnalysis {
+  const words = tokenize(text);
+  const counts = new Map<string, number>();
+  for (const word of words) counts.set(word, (counts.get(word) ?? 0) + 1);
+  const recurringWords = Array.from(counts.entries()).filter(([, count]) => count > 1).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([word]) => word);
+  const images = Array.from(new Set(extractImages(text))).slice(0, 12);
+  return {
+    word_count: words.length,
+    dominant_words: topWords(words, 14),
+    recurring_words: recurringWords,
+    new_images: images,
+    image_mutations: buildImageMutations(images, context.date),
+    mood_sentence: context.mood_sentence
+  };
+}
+
+function fallbackTitleFor(text: string, context: GenerationContext, strict = false): string {
+  if (!strict) {
+    const safeWords = filterGenerationSurfaceTerms(topWords(tokenize(text), 12), packetInput(context)).slice(0, 3);
+    if (safeWords.length > 0) return safeWords.join(" ");
+  }
+  const moodWords = Object.entries(context.mood).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([key]) => key);
+  return moodWords.join(" ") || formatAge(context.age_months);
+}
+
+export async function generatePoemWithLLM(context: GenerationContext): Promise<DailyPoem> {
+  let llmResult = await tryOpenAIPoem(context);
+  let openAIText = llmResult.poem?.trim();
+  let retryCount = 0;
+  let candidateReport: SurfaceValidationReport | null = null;
+  while (openAIText) {
+    const candidateTitle = llmResult.title ? cleanSingleLine(llmResult.title) : fallbackTitleFor(openAIText, context);
+    candidateReport = await analyzeGeneratedPoemSurface(
+      { title: candidateTitle, poem_text: openAIText },
+      { mode: "poem", world: context.world, repetition: context.repetition_pressure }
+    );
+    if (!candidateReport.severe || retryCount >= 2) break;
+    retryCount += 1;
+    llmResult = await tryOpenAIPoem(context, candidateReport);
+    openAIText = llmResult.poem?.trim();
+  }
+  const poemText = stripGeneratedSignature(openAIText || mockPoem(context));
+  const strictFallbackTitle = candidateReport?.title_violation ?? false;
+  const llmTitle = openAIText && !strictFallbackTitle ? validLlmTitle(llmResult.title, poemText, context) : null;
+  const titleGeneration: TitleGenerationSource = llmTitle ? "llm" : "fallback_dominant_words";
+  const title = llmTitle ?? fallbackTitleFor(poemText, context, strictFallbackTitle);
+  const moodSentence = uniqueMoodSentence(context, openAIText ? validMoodSentence(llmResult.moodSentence) : null);
+  const packet = buildGenerationContextPacket(packetInput(context));
+  const surfaceReport = await analyzeGeneratedPoemSurface(
+    { title, poem_text: poemText },
+    { mode: "poem", world: context.world, repetition: context.repetition_pressure }
+  );
+  return {
+    date: context.date,
+    title,
+    title_generation: titleGeneration,
+    generated_at: new Date().toISOString(),
+    age_months: context.age_months,
+    age_display: context.age_display,
+    poem_text: poemText,
+    mood: context.mood,
+    mood_sentence: moodSentence,
+    daily_life: context.daily_life,
+    walk_state: context.walk_state,
+    sources: context.sources,
+    memory_fragments: context.memory_fragments,
+    memory_selection: context.memory_selection,
+    influences: [
+      ...packet.source_influence_packet,
+      packet.persona_safe_lived_context.lived_context_effect
+    ],
+    generation: {
+      provider: openAIText ? "openai" : "mock",
+      model: llmResult.model,
+      fallback_reason: openAIText ? null : llmResult.error,
+      ...surfaceMetadata(surfaceReport, retryCount)
+    },
+    analysis: { ...analyzeGeneratedPoem(poemText, context), mood_sentence: moodSentence },
+    repetition_pressure: context.repetition_pressure
+  };
+}

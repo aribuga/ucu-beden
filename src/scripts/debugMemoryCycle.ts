@@ -1,4 +1,5 @@
-import { getLatestPoem, listDreams, listGeneratedPoems, listSources } from "../lib/fileStorage";
+import { getLatestPoem, listDreams, listGeneratedPoems, listSources, readDailyLife, readInputAnalysis, readPersonalitySettings, readState, readWorld } from "../lib/fileStorage";
+import { generationContextDebug, type GenerationContextPacketInput } from "../lib/generationContextPacket";
 import { validateMemoryCycleIntegrity } from "../lib/memoryCycle";
 import { buildMemoryGraphData } from "../lib/memoryGraph";
 import {
@@ -10,7 +11,10 @@ import {
   validateMemoryPromptFragments
 } from "../lib/memoryTraceEngine";
 import { analyzeRepetitionPressure } from "../lib/repetitionPressure";
-import type { MemoryReport, MemorySelection } from "../lib/types";
+import { analyzeSourceDigest, validateSourceInfluence } from "../lib/sourceInfluence";
+import { buildDreamPromptSections } from "../lib/dreamEngine";
+import { buildPoemPromptSections } from "../lib/poemGenerator";
+import type { GenerationContext, MemoryReport, MemorySelection } from "../lib/types";
 import { buildUcuBedenVoicePrompt } from "../lib/ucuBedenVoicePrompt";
 
 function nextDate(date: string | null): string {
@@ -58,13 +62,18 @@ async function main(): Promise<void> {
   if (args.includes("--write")) throw new Error("debug:memory-cycle is read-only and does not support --write.");
   const archive = await buildMemoryArchive();
   const repeatedArchive = await buildMemoryArchive();
-  const [latestPoem, poems, dreams, sources, repetition] = await Promise.all([
+  const [latestPoem, poems, dreams, sources, repetition, state, world, inputAnalysis, personality] = await Promise.all([
     getLatestPoem(),
     listGeneratedPoems(),
     listDreams(),
     listSources(),
-    analyzeRepetitionPressure()
+    analyzeRepetitionPressure(),
+    readState(),
+    readWorld(),
+    readInputAnalysis(),
+    readPersonalitySettings()
   ]);
+  const latestDailyLife = latestPoem ? await readDailyLife(latestPoem.date) : null;
   const date = requestedDate(args, nextDate(archive.index.built_through));
   const mood = latestPoem?.mood ?? { melancholy: 0, anger: 0, tenderness: 0, fatigue: 0, absurdity: 0, clarity: 0, desire: 0, hope: 0 };
   const [poemSelection, dreamSelection] = await Promise.all([
@@ -103,6 +112,60 @@ async function main(): Promise<void> {
   });
   const poemVoice = buildUcuBedenVoicePrompt({ mode: "poem" });
   const dreamVoice = buildUcuBedenVoicePrompt({ mode: "dream" });
+  const sourceDigest = analyzeSourceDigest(sources);
+  const sourceInfluenceValidation = validateSourceInfluence(sources);
+  const generationContext =
+    latestPoem && latestDailyLife
+      ? (() => {
+          const poemInput: GenerationContextPacketInput = {
+            mode: "poem",
+            date,
+            mood,
+            sources: latestPoem.sources,
+            daily_life: latestDailyLife,
+            walk_state: latestPoem.walk_state,
+            memory_selection: poemSelection,
+            repetition_pressure: repetition,
+            state,
+            genetic_style_note: inputAnalysis.global.style_notes
+          };
+          const dreamInput: GenerationContextPacketInput = { ...poemInput, mode: "dream", memory_selection: dreamSelection, poem: latestPoem };
+          const poemContext: GenerationContext = {
+            date,
+            age_months: latestPoem.age_months,
+            age_display: latestPoem.age_display,
+            state,
+            world,
+            sources: latestPoem.sources,
+            input_analysis: inputAnalysis,
+            mood,
+            mood_sentence: latestPoem.mood_sentence,
+            daily_life: latestDailyLife,
+            walk_state: latestPoem.walk_state,
+            personality_settings: personality,
+            memory_fragments: poemSelection.memory_prompt_fragments,
+            memory_selection: poemSelection,
+            repetition_pressure: repetition
+          };
+          const dreamParams = { date, poem: latestPoem, dailyLife: latestDailyLife, state, repetition, memorySelection: dreamSelection };
+          return {
+            poem: { ...generationContextDebug(poemInput), prompt_sections: buildPoemPromptSections(poemContext) },
+            dream: { ...generationContextDebug(dreamInput), prompt_sections: buildDreamPromptSections(dreamParams) }
+          };
+        })()
+      : null;
+  const generationContextValidation = {
+    valid:
+      generationContext === null ||
+      [generationContext.poem, generationContext.dream].every(
+        (item) =>
+          item.raw_json_context_removed &&
+          item.home_place_deanchored &&
+          item.source_influence_packet_present &&
+          item.fallback_surface_safe
+      ),
+    available: generationContext !== null
+  };
 
   console.log(
     JSON.stringify(
@@ -134,6 +197,12 @@ async function main(): Promise<void> {
             mode_constraints: dreamVoice.mode_constraints
           }
         },
+        source_digest: {
+          ...sourceDigest,
+          validation: sourceInfluenceValidation
+        },
+        generation_context: generationContext,
+        generation_context_validation: generationContextValidation,
         poem_prompt_guard: {
           valid: poemGuard.valid,
           safe_fragment_count: poemGuard.safe_fragments.length,
@@ -178,6 +247,8 @@ async function main(): Promise<void> {
   if (
     !archiveValidation.valid ||
     !cycleValidation.valid ||
+    !sourceInfluenceValidation.valid ||
+    !generationContextValidation.valid ||
     !poemGuard.valid ||
     !dreamGuard.valid ||
     memoryArchiveStateSignature(archive) !== memoryArchiveStateSignature(repeatedArchive)

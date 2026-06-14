@@ -1,0 +1,1712 @@
+{
+  "date": "2026-06-14",
+  "collected_at": "2026-06-14T07:11:17.844Z",
+  "fallback_used": false,
+  "weather": {
+    "provider": "open-meteo",
+    "summary": "Kadıköy'de 20.7°C; nem 64%, rüzgar 7.3 km/s civarında.",
+    "temperature_c": 20.7,
+    "humidity_percent": 64,
+    "wind_kmh": 7.3,
+    "body_effect": "hava yüzünde ince bir açıklık bırakıyor"
+  },
+  "turkey_news": {
+    "provider": "rss-news",
+    "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,clarity; safe_terms=basınç,gündelik,politik,ağırlaşan,ilk,arasındaki; weights=aesthetic:0.12,conceptual:0.33,rhythm:0.43,pressure:1",
+    "emotional_weight": 59,
+    "fragments": [
+      "basınç",
+      "gündelik",
+      "politik",
+      "ağırlaşan",
+      "ilk",
+      "arasındaki",
+      "içeride",
+      "kabaran"
+    ]
+  },
+  "art_world": {
+    "provider": "rss-art",
+    "summary": "category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=basıncı,duvarı,görüntü,sergi,açılan,hafıza; weights=aesthetic:1,conceptual:0.7,rhythm:0.49,pressure:0.18 | category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yapay,yüz,tuhaflaşan,beşinci; weights=aesthetic:0.61,conceptual:0.42,rhythm:1,pressure:0.26",
+    "curiosity": 71,
+    "fragments": [
+      "basıncı",
+      "duvarı",
+      "görüntü",
+      "sergi",
+      "açılan",
+      "hafıza",
+      "aidiyet",
+      "alan"
+    ]
+  },
+  "rss": {
+    "items": [
+      {
+        "title": "Türkiye, 2026 Dünya Kupası'ndaki ilk maçında Avustralya'ya 2-0 yenildi",
+        "source": "BBC Türkçe",
+        "category": "news",
+        "url": "https://www.bbc.com/turkce/articles/c5yzv5vg0yyo?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Sun, 14 Jun 2026 06:56:02 GMT",
+        "moodTags": [
+          "fatigue",
+          "anger",
+          "clarity"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 7,
+          "tenderness": 0,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 3,
+          "desire": 0,
+          "hope": 2
+        },
+        "keywords": [
+          "ilk",
+          "maçında",
+          "yenildi"
+        ],
+        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
+      },
+      {
+        "title": "Vincenzo Montella: 'Bir ulusun kalbini kazanan' teknik direktör",
+        "source": "BBC Türkçe",
+        "category": "news",
+        "url": "https://www.bbc.com/turkce/articles/c77yjgkg225o?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Sat, 13 Jun 2026 07:42:54 GMT",
+        "moodTags": [
+          "fatigue",
+          "anger",
+          "clarity"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 7,
+          "tenderness": 0,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 3,
+          "desire": 0,
+          "hope": 0
+        },
+        "keywords": [
+          "anları",
+          "çıkacak",
+          "geçmişte",
+          "günü",
+          "ilk",
+          "kader"
+        ],
+        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
+      },
+      {
+        "title": "Avrupa Parlamentosu'nun Bakan Gürlek'e yaptırım çağrısı ne anlama geliyor?",
+        "source": "BBC Türkçe",
+        "category": "news",
+        "url": "https://www.bbc.com/turkce/articles/cwy0eq16v70o?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Sat, 13 Jun 2026 16:38:42 GMT",
+        "moodTags": [
+          "fatigue",
+          "anger",
+          "clarity"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 7,
+          "tenderness": 0,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 5,
+          "desire": 0,
+          "hope": 0
+        },
+        "keywords": [
+          "yaptırım",
+          "anlama",
+          "çağrısı",
+          "ilk",
+          "alması",
+          "aşamada"
+        ],
+        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
+      },
+      {
+        "title": "İsviçre, nüfusu 10 milyonla sınırlandırma planını oyluyor",
+        "source": "BBC Türkçe",
+        "category": "news",
+        "url": "https://www.bbc.com/turkce/articles/c79yd3jd1q9o?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Sat, 13 Jun 2026 14:14:04 GMT",
+        "moodTags": [
+          "fatigue",
+          "anger",
+          "clarity"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 7,
+          "tenderness": 0,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 3,
+          "desire": 0,
+          "hope": 0
+        },
+        "keywords": [
+          "nüfusu",
+          "altında",
+          "amaçlayan",
+          "arasındaki",
+          "ekonomik",
+          "gerilimi"
+        ],
+        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
+      },
+      {
+        "title": "Yoğurdun sağlığa faydaları",
+        "source": "BBC Türkçe",
+        "category": "news",
+        "url": "https://www.bbc.com/turkce/articles/cp9lnnjn27do?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Sat, 13 Jun 2026 07:31:13 GMT",
+        "moodTags": [
+          "fatigue",
+          "anger",
+          "clarity"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 7,
+          "tenderness": 0,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 3,
+          "desire": 0,
+          "hope": 0
+        },
+        "keywords": [
+          "açısından",
+          "besleyici",
+          "canlı",
+          "doğal",
+          "faydalar",
+          "faydaları"
+        ],
+        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
+      },
+      {
+        "title": "'Hiç bu kadar yakın olmamıştı': İran ve ABD arasındaki ateşkes anlaşmasında son durum ne?",
+        "source": "BBC Türkçe",
+        "category": "news",
+        "url": "https://www.bbc.com/turkce/articles/cd95x7xl1jpo?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Sat, 13 Jun 2026 13:43:33 GMT",
+        "moodTags": [
+          "fatigue",
+          "anger",
+          "clarity"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 9,
+          "tenderness": 0,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 3,
+          "desire": 0,
+          "hope": 0
+        },
+        "keywords": [
+          "olmamıştı",
+          "yakın",
+          "anlaşma",
+          "anlaşmasında",
+          "arasındaki",
+          "ateşkes"
+        ],
+        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
+      },
+      {
+        "title": "İstanbul'da bariyerlere çarpan midibüs devrildi: 1'i çocuk 12 yaralı",
+        "source": "BirGün",
+        "category": "news",
+        "url": "https://www.birgun.net/haber/istanbul-da-bariyerlere-carpan-midibus-devrildi-1-i-cocuk-12-yarali-718137",
+        "publishedAt": "Sun, 14 Jun 2026 09:15:00 +0300",
+        "moodTags": [
+          "anger",
+          "fatigue",
+          "tenderness"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 10,
+          "tenderness": 4,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 0,
+          "desire": 0,
+          "hope": 1
+        },
+        "keywords": [
+          "bariyerlere",
+          "çocuk",
+          "devrildi",
+          "midibüs",
+          "çarpan",
+          "çarparak"
+        ],
+        "shortAtmosphere": "içeride kabaran gündelik politik basınç"
+      },
+      {
+        "title": "Repression will bring resistance, and resistance will bring victory",
+        "source": "BirGün",
+        "category": "news",
+        "url": "https://www.birgun.net/haber/repression-will-bring-resistance-and-resistance-will-bring-victory-718136",
+        "publishedAt": "Sun, 14 Jun 2026 09:03:00 +0300",
+        "moodTags": [
+          "anger",
+          "fatigue",
+          "melancholy"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 10,
+          "tenderness": 0,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 0,
+          "desire": 0,
+          "hope": 1
+        },
+        "keywords": [
+          "and",
+          "bring",
+          "has",
+          "into",
+          "politics",
+          "resistance"
+        ],
+        "shortAtmosphere": "içeride kabaran gündelik politik basınç"
+      },
+      {
+        "title": "Ayşe Ceylan Topçu’dan İlk Öykü Kitabı: Yüzünü Güneşe Dön",
+        "source": "Artdog",
+        "category": "art",
+        "url": "https://artdogistanbul.com/ayse-ceylan-topcudan-ilk-oyku-kitabi-yuzunu-gunese-don/",
+        "publishedAt": "Sat, 13 Jun 2026 17:45:38 +0000",
+        "moodTags": [
+          "clarity",
+          "desire",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 0,
+          "anger": 0,
+          "tenderness": 2,
+          "fatigue": 0,
+          "absurdity": 3,
+          "clarity": 9,
+          "desire": 8,
+          "hope": 4
+        },
+        "keywords": [
+          "aidiyet",
+          "bugüne",
+          "etrafında",
+          "geçmişin",
+          "göç",
+          "hafıza"
+        ],
+        "shortAtmosphere": "açılan sergi duvarı ve görüntü basıncı"
+      },
+      {
+        "title": "TALDANS’ın 30 Yıllık Yolculuğu",
+        "source": "Artdog",
+        "category": "art",
+        "url": "https://artdogistanbul.com/taldansin-30-yillik-yolculugu/",
+        "publishedAt": "Thu, 11 Jun 2026 13:11:50 +0000",
+        "moodTags": [
+          "clarity",
+          "desire",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 0,
+          "anger": 0,
+          "tenderness": 2,
+          "fatigue": 0,
+          "absurdity": 3,
+          "clarity": 9,
+          "desire": 8,
+          "hope": 4
+        },
+        "keywords": [
+          "ara",
+          "dayanan",
+          "devam",
+          "ediyor",
+          "hızla",
+          "hiç"
+        ],
+        "shortAtmosphere": "açılan sergi duvarı ve görüntü basıncı"
+      },
+      {
+        "title": "Güzel Taşıyoruz",
+        "source": "Artdog",
+        "category": "art",
+        "url": "https://artdogistanbul.com/guzel-tasiyoruz/",
+        "publishedAt": "Wed, 10 Jun 2026 15:48:46 +0000",
+        "moodTags": [
+          "clarity",
+          "desire",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 0,
+          "anger": 0,
+          "tenderness": 0,
+          "fatigue": 0,
+          "absurdity": 3,
+          "clarity": 9,
+          "desire": 8,
+          "hope": 4
+        },
+        "keywords": [
+          "alan",
+          "dönüşümle",
+          "duruşu",
+          "görünürlük",
+          "ilişkiyi",
+          "kişisel"
+        ],
+        "shortAtmosphere": "açılan sergi duvarı ve görüntü basıncı"
+      },
+      {
+        "title": "Venedik, Bugünün Aynası",
+        "source": "Artdog",
+        "category": "art",
+        "url": "https://artdogistanbul.com/venedik-bugunun-aynasi/",
+        "publishedAt": "Tue, 09 Jun 2026 16:26:42 +0000",
+        "moodTags": [
+          "clarity",
+          "desire",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 0,
+          "anger": 0,
+          "tenderness": 0,
+          "fatigue": 0,
+          "absurdity": 3,
+          "clarity": 10,
+          "desire": 8,
+          "hope": 6
+        },
+        "keywords": [
+          "biçimleri",
+          "diyalog",
+          "hafıza",
+          "kültürel",
+          "tarihsel"
+        ],
+        "shortAtmosphere": "açılan sergi duvarı ve görüntü basıncı"
+      },
+      {
+        "title": "Şehrin Yaz Sahneleri",
+        "source": "Artdog",
+        "category": "art",
+        "url": "https://artdogistanbul.com/sehrin-yaz-sahneleri/",
+        "publishedAt": "Mon, 08 Jun 2026 15:01:27 +0000",
+        "moodTags": [
+          "desire",
+          "clarity",
+          "absurdity"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 0,
+          "tenderness": 0,
+          "fatigue": 0,
+          "absurdity": 5,
+          "clarity": 9,
+          "desire": 10,
+          "hope": 4
+        },
+        "keywords": [
+          "farklı",
+          "değil",
+          "detaylı",
+          "harita",
+          "kesişeceği",
+          "konser"
+        ],
+        "shortAtmosphere": "parlayan sergi duvarı ve görüntü basıncı"
+      },
+      {
+        "title": "Bu 3.000 Yıllık Peynir, Öbür Dünya İçin Yiyecek Olarak Sunulmuş",
+        "source": "Arkeofili",
+        "category": "science_culture",
+        "url": "https://arkeofili.com/bu-3-000-yillik-peynir-obur-dunya-icin-yiyecek-olarak-sunulmus/",
+        "publishedAt": "Sun, 14 Jun 2026 00:27:28 +0000",
+        "moodTags": [
+          "clarity",
+          "melancholy",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 6,
+          "anger": 0,
+          "tenderness": 2,
+          "fatigue": 0,
+          "absurdity": 0,
+          "clarity": 10,
+          "desire": 0,
+          "hope": 4
+        },
+        "keywords": [
+          "bulunan",
+          "burada",
+          "eski",
+          "fazla",
+          "olabilir"
+        ],
+        "shortAtmosphere": "açılan derin zaman ve bilgi kırıntısı"
+      },
+      {
+        "title": "Homininler 800.000 Yıl Önce Belirli Kaynakları Seçiyordu",
+        "source": "Arkeofili",
+        "category": "science_culture",
+        "url": "https://arkeofili.com/homininler-800-000-yil-once-belirli-kaynaklari-seciyordu/",
+        "publishedAt": "Sat, 13 Jun 2026 11:46:48 +0000",
+        "moodTags": [
+          "clarity",
+          "melancholy",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 4,
+          "anger": 0,
+          "tenderness": 2,
+          "fatigue": 0,
+          "absurdity": 0,
+          "clarity": 10,
+          "desire": 0,
+          "hope": 4
+        },
+        "keywords": [
+          "alet",
+          "aşamaları",
+          "bazalt",
+          "burada",
+          "farklı",
+          "herhangi"
+        ],
+        "shortAtmosphere": "açılan derin zaman ve bilgi kırıntısı"
+      },
+      {
+        "title": "Cengiz Han’ın Mezarı Ölümünden 800 Yıl Sonra Hâlâ Bulunamadı",
+        "source": "Arkeofili",
+        "category": "science_culture",
+        "url": "https://arkeofili.com/cengiz-hanin-mezari-olumunden-800-yil-sonra-hala-bulunamadi/",
+        "publishedAt": "Sat, 13 Jun 2026 06:25:27 +0000",
+        "moodTags": [
+          "clarity",
+          "melancholy",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 6,
+          "anger": 0,
+          "tenderness": 2,
+          "fatigue": 0,
+          "absurdity": 0,
+          "clarity": 10,
+          "desire": 0,
+          "hope": 4
+        },
+        "keywords": [
+          "ancak",
+          "beri",
+          "biri",
+          "burada",
+          "etkili"
+        ],
+        "shortAtmosphere": "açılan derin zaman ve bilgi kırıntısı"
+      },
+      {
+        "title": "İnsanların Saat Yönünün Tersine Yürümeye Güçlü Bir Eğilimi Var",
+        "source": "Arkeofili",
+        "category": "science_culture",
+        "url": "https://arkeofili.com/insanlarin-saat-yonunun-tersine-yurumeye-guclu-bir-egilimi-var/",
+        "publishedAt": "Sat, 13 Jun 2026 05:24:53 +0000",
+        "moodTags": [
+          "clarity",
+          "melancholy",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 4,
+          "anger": 0,
+          "tenderness": 2,
+          "fatigue": 2,
+          "absurdity": 0,
+          "clarity": 10,
+          "desire": 0,
+          "hope": 4
+        },
+        "keywords": [
+          "akla",
+          "benzer",
+          "biçimde",
+          "bireylerin",
+          "burada",
+          "davranıyor"
+        ],
+        "shortAtmosphere": "açılan derin zaman ve bilgi kırıntısı"
+      },
+      {
+        "title": "Homo Erectus 1,79 Milyon Yıl Önce Mağaraya Ateş Taşımış",
+        "source": "Arkeofili",
+        "category": "science_culture",
+        "url": "https://arkeofili.com/homo-erectus-179-milyon-yil-once-magaraya-ates-tasimis/",
+        "publishedAt": "Fri, 12 Jun 2026 12:53:59 +0000",
+        "moodTags": [
+          "clarity",
+          "melancholy",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 4,
+          "anger": 0,
+          "tenderness": 2,
+          "fatigue": 0,
+          "absurdity": 0,
+          "clarity": 10,
+          "desire": 0,
+          "hope": 4
+        },
+        "keywords": [
+          "başlamış",
+          "bulunan",
+          "burada"
+        ],
+        "shortAtmosphere": "açılan derin zaman ve bilgi kırıntısı"
+      },
+      {
+        "title": "Aynalar No.3: Aynalara Küsmek",
+        "source": "Altyazı",
+        "category": "entertainment",
+        "url": "https://altyazi.net/yazilar/elestiriler/aynalar-no-3/",
+        "publishedAt": "Thu, 11 Jun 2026 15:55:07 +0000",
+        "moodTags": [
+          "absurdity",
+          "clarity",
+          "desire"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 0,
+          "tenderness": 4,
+          "fatigue": 2,
+          "absurdity": 6,
+          "clarity": 6,
+          "desire": 5,
+          "hope": 2
+        },
+        "keywords": [
+          "ailenin",
+          "ardından",
+          "aşinalık",
+          "evine",
+          "filmi",
+          "geçirdiği"
+        ],
+        "shortAtmosphere": "tuhaflaşan sahne, yüz ve yapay ışık"
+      },
+      {
+        "title": "19. Documentarist İstanbul Belgesel Günleri",
+        "source": "Altyazı",
+        "category": "entertainment",
+        "url": "https://altyazi.net/matine/19-documentarist-istanbul-belgesel-gunleri/",
+        "publishedAt": "Thu, 11 Jun 2026 13:36:28 +0000",
+        "moodTags": [
+          "absurdity",
+          "clarity",
+          "desire"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 0,
+          "tenderness": 0,
+          "fatigue": 2,
+          "absurdity": 6,
+          "clarity": 6,
+          "desire": 3,
+          "hope": 0
+        },
+        "keywords": [
+          "alanında",
+          "birisi",
+          "etkinliklerden",
+          "gerçekleşiyor",
+          "kez",
+          "olma"
+        ],
+        "shortAtmosphere": "tuhaflaşan sahne, yüz ve yapay ışık"
+      },
+      {
+        "title": "5. Kaş Uluslararası Film Festivali",
+        "source": "Altyazı",
+        "category": "entertainment",
+        "url": "https://altyazi.net/matine/5-kas-uluslararasi-film-festivali/",
+        "publishedAt": "Wed, 10 Jun 2026 08:39:34 +0000",
+        "moodTags": [
+          "absurdity",
+          "clarity",
+          "desire"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 0,
+          "tenderness": 0,
+          "fatigue": 0,
+          "absurdity": 6,
+          "clarity": 6,
+          "desire": 5,
+          "hope": 0
+        },
+        "keywords": [
+          "açıyor",
+          "beşinci",
+          "kapılarını",
+          "kez",
+          "tarihlerinde"
+        ],
+        "shortAtmosphere": "tuhaflaşan sahne, yüz ve yapay ışık"
+      },
+      {
+        "title": "5. Sinematek Günleri: Sektör Buluşmaları Başlıyor",
+        "source": "Altyazı",
+        "category": "entertainment",
+        "url": "https://altyazi.net/haberler/5-sinematek-gunleri-sektor-bulusmalari-basliyor/",
+        "publishedAt": "Tue, 09 Jun 2026 11:16:43 +0000",
+        "moodTags": [
+          "absurdity",
+          "clarity",
+          "desire"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 0,
+          "tenderness": 2,
+          "fatigue": 2,
+          "absurdity": 6,
+          "clarity": 6,
+          "desire": 5,
+          "hope": 2
+        },
+        "keywords": [
+          "alıyor",
+          "beşinci",
+          "buluşturan",
+          "etkinlikte",
+          "film"
+        ],
+        "shortAtmosphere": "tuhaflaşan sahne, yüz ve yapay ışık"
+      },
+      {
+        "title": "29. Uçan Süpürge Uluslararası Kadın Filmleri Festivali’nde FIPRESCI Ödülü’nün Sahibi Belli Oldu",
+        "source": "Altyazı",
+        "category": "entertainment",
+        "url": "https://altyazi.net/haberler/29-ucan-supurge-uluslararasi-kadin-filmleri-festivalinde-fipresci-odulunun-sahibi-belli-oldu/",
+        "publishedAt": "Mon, 08 Jun 2026 09:06:52 +0000",
+        "moodTags": [
+          "desire",
+          "absurdity",
+          "clarity"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 0,
+          "tenderness": 0,
+          "fatigue": 0,
+          "absurdity": 6,
+          "clarity": 6,
+          "desire": 7,
+          "hope": 2
+        },
+        "keywords": [],
+        "shortAtmosphere": "parlayan sahne, yüz ve yapay ışık"
+      },
+      {
+        "title": "Herkes İçin Sanat: Anadolu Sergileri",
+        "source": "Istanbul Life",
+        "category": "life",
+        "url": "https://istanbullife.com.tr/genel/herkes-icin-sanat-anadolu-sergileri-2-5574/",
+        "publishedAt": "Mon, 06 Oct 2025 08:42:34 +0000",
+        "moodTags": [
+          "tenderness",
+          "desire",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 0,
+          "anger": 0,
+          "tenderness": 10,
+          "fatigue": 0,
+          "absurdity": 0,
+          "clarity": 2,
+          "desire": 5,
+          "hope": 5
+        },
+        "keywords": [
+          "açılan",
+          "aldıkları",
+          "appeared",
+          "birçok",
+          "değerli"
+        ],
+        "shortAtmosphere": "yumuşayan şehir içi küçük gündelik temas"
+      },
+      {
+        "title": "“Yeni Nesil Aile” Dikey Dizisi Bmag’in Yeni Nesil İçerik Evreninde!",
+        "source": "Istanbul Life",
+        "category": "life",
+        "url": "https://istanbullife.com.tr/genel/yeni-nesil-aile-dikey-dizisi-bmagin-yeni-nesil-icerik-evreninde-5564/",
+        "publishedAt": "Fri, 03 Oct 2025 17:28:26 +0000",
+        "moodTags": [
+          "tenderness",
+          "hope",
+          "desire"
+        ],
+        "moodScores": {
+          "melancholy": 0,
+          "anger": 0,
+          "tenderness": 10,
+          "fatigue": 2,
+          "absurdity": 0,
+          "clarity": 0,
+          "desire": 5,
+          "hope": 7
+        },
+        "keywords": [
+          "akşam",
+          "aldığı",
+          "appeared",
+          "başrollerinde"
+        ],
+        "shortAtmosphere": "yumuşayan şehir içi küçük gündelik temas"
+      },
+      {
+        "title": "Nestlé Waters & Premium Beverages, Water Dine etkinliğinin ikincisini Casa Lavanda’da yapıldı",
+        "source": "Istanbul Life",
+        "category": "life",
+        "url": "https://istanbullife.com.tr/ajanda/nestle-waters-premium-beverages-water-dine-etkinliginin-ikincisini-casa-lavandada-yapildi-5557/",
+        "publishedAt": "Thu, 02 Oct 2025 08:27:54 +0000",
+        "moodTags": [
+          "tenderness",
+          "hope",
+          "desire"
+        ],
+        "moodScores": {
+          "melancholy": 0,
+          "anger": 0,
+          "tenderness": 10,
+          "fatigue": 0,
+          "absurdity": 2,
+          "clarity": 0,
+          "desire": 5,
+          "hope": 7
+        },
+        "keywords": [
+          "etkinliğinin",
+          "ikincisini",
+          "yapıldı",
+          "aktarma",
+          "amacıyla",
+          "appeared"
+        ],
+        "shortAtmosphere": "yumuşayan şehir içi küçük gündelik temas"
+      },
+      {
+        "title": "İş Sanat’ta yeni sezon başlıyor",
+        "source": "Istanbul Life",
+        "category": "life",
+        "url": "https://istanbullife.com.tr/eglence/is-sanatta-yeni-sezon-basliyor-5554/",
+        "publishedAt": "Fri, 26 Sep 2025 08:31:29 +0000",
+        "moodTags": [
+          "hope",
+          "tenderness",
+          "desire"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 0,
+          "tenderness": 8,
+          "fatigue": 0,
+          "absurdity": 0,
+          "clarity": 0,
+          "desire": 5,
+          "hope": 9
+        },
+        "keywords": [
+          "sezon",
+          "başlıyor",
+          "akşamı",
+          "appeared",
+          "basın",
+          "başarılı"
+        ],
+        "shortAtmosphere": "yeşeren şehir içi küçük gündelik temas"
+      },
+      {
+        "title": "Yerli kahve markası Maestro konseptini yoğun katılımla tanıttı",
+        "source": "Istanbul Life",
+        "category": "life",
+        "url": "https://istanbullife.com.tr/ajanda/yerli-kahve-markasi-maestro-konseptini-yogun-katilimla-tanitti-5549/",
+        "publishedAt": "Fri, 26 Sep 2025 08:26:02 +0000",
+        "moodTags": [
+          "tenderness",
+          "hope",
+          "desire"
+        ],
+        "moodScores": {
+          "melancholy": 0,
+          "anger": 0,
+          "tenderness": 8,
+          "fatigue": 4,
+          "absurdity": 2,
+          "clarity": 0,
+          "desire": 5,
+          "hope": 7
+        },
+        "keywords": [
+          "kahve",
+          "markası",
+          "katılımla",
+          "konseptini",
+          "tanıttı",
+          "yoğun"
+        ],
+        "shortAtmosphere": "yumuşayan şehir içi küçük gündelik temas"
+      }
+    ],
+    "dailyMoodSummary": {
+      "dominantMood": "clarity",
+      "secondaryMood": "tenderness",
+      "moodScores": {
+        "melancholy": 2,
+        "anger": 2,
+        "tenderness": 3,
+        "fatigue": 3,
+        "absurdity": 2,
+        "clarity": 5,
+        "desire": 3,
+        "hope": 3
+      },
+      "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,clarity; safe_terms=basınç,gündelik,politik,ağırlaşan,ilk,arasındaki; weights=aesthetic:0.12,conceptual:0.33,rhythm:0.43,pressure:1 | category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=basıncı,duvarı,görüntü,sergi,açılan,hafıza; weights=aesthetic:1,conceptual:0.7,rhythm:0.49,pressure:0.18 | category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,melancholy,hope; safe_terms=açılan,bilgi,burada,derin,kırıntısı,zaman; weights=aesthetic:0.34,conceptual:1,rhythm:0.28,pressure:0.21 | category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yapay,yüz,tuhaflaşan,beşinci; weights=aesthetic:0.61,conceptual:0.42,rhythm:1,pressure:0.26 | category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,hope,desire; safe_terms=gündelik,içi,şehir,temas,appeared,yumuşayan; weights=aesthetic:0.51,conceptual:0.33,rhythm:0.5,pressure:0.24",
+      "fragments": [
+        "basınç",
+        "gündelik",
+        "politik",
+        "ağırlaşan",
+        "ilk",
+        "arasındaki",
+        "içeride",
+        "kabaran",
+        "açısından",
+        "alması"
+      ],
+      "leakageWords": [
+        "basınç",
+        "gündelik",
+        "politik",
+        "ağırlaşan",
+        "ilk",
+        "arasındaki",
+        "içeride",
+        "kabaran",
+        "açısından",
+        "alması",
+        "altında",
+        "amaçlayan",
+        "basıncı",
+        "duvarı"
+      ],
+      "learningFragments": [
+        "category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=basıncı,duvarı,görüntü,sergi,açılan,hafıza; weights=aesthetic:1,conceptual:0.7,rhythm:0.49,pressure:0.18",
+        "category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,melancholy,hope; safe_terms=açılan,bilgi,burada,derin,kırıntısı,zaman; weights=aesthetic:0.34,conceptual:1,rhythm:0.28,pressure:0.21",
+        "category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yapay,yüz,tuhaflaşan,beşinci; weights=aesthetic:0.61,conceptual:0.42,rhythm:1,pressure:0.26",
+        "category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,hope,desire; safe_terms=gündelik,içi,şehir,temas,appeared,yumuşayan; weights=aesthetic:0.51,conceptual:0.33,rhythm:0.5,pressure:0.24"
+      ]
+    },
+    "source_influence_packet": [
+      {
+        "category": "news",
+        "item_count": 8,
+        "influence_kind": [
+          "pressure",
+          "mood_pressure"
+        ],
+        "safe_terms": [
+          "basınç",
+          "gündelik",
+          "politik",
+          "ağırlaşan",
+          "ilk",
+          "arasındaki",
+          "içeride",
+          "kabaran",
+          "açısından",
+          "alması",
+          "altında",
+          "amaçlayan"
+        ],
+        "novelty_terms": [
+          "alması"
+        ],
+        "repeated_terms": [
+          "basınç",
+          "gündelik",
+          "politik",
+          "ağırlaşan",
+          "ilk",
+          "arasındaki",
+          "içeride",
+          "kabaran"
+        ],
+        "rejected_terms": [],
+        "mood_bias": [
+          "fatigue",
+          "anger",
+          "clarity"
+        ],
+        "aesthetic_weight": 0.12,
+        "conceptual_weight": 0.33,
+        "rhythm_weight": 0.43,
+        "pressure_weight": 1,
+        "summary_for_prompt": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,clarity; safe_terms=basınç,gündelik,politik,ağırlaşan,ilk,arasındaki; weights=aesthetic:0.12,conceptual:0.33,rhythm:0.43,pressure:1"
+      },
+      {
+        "category": "art",
+        "item_count": 5,
+        "influence_kind": [
+          "aesthetic_learning",
+          "image_expansion"
+        ],
+        "safe_terms": [
+          "basıncı",
+          "duvarı",
+          "görüntü",
+          "sergi",
+          "açılan",
+          "hafıza",
+          "aidiyet",
+          "alan",
+          "ara",
+          "biçimleri",
+          "bugüne",
+          "dayanan"
+        ],
+        "novelty_terms": [
+          "aidiyet",
+          "bugüne"
+        ],
+        "repeated_terms": [
+          "basıncı",
+          "duvarı",
+          "görüntü",
+          "sergi",
+          "açılan",
+          "hafıza",
+          "alan",
+          "ara"
+        ],
+        "rejected_terms": [],
+        "mood_bias": [
+          "clarity",
+          "desire",
+          "hope"
+        ],
+        "aesthetic_weight": 1,
+        "conceptual_weight": 0.7,
+        "rhythm_weight": 0.49,
+        "pressure_weight": 0.18,
+        "summary_for_prompt": "category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=basıncı,duvarı,görüntü,sergi,açılan,hafıza; weights=aesthetic:1,conceptual:0.7,rhythm:0.49,pressure:0.18"
+      },
+      {
+        "category": "science_culture",
+        "item_count": 5,
+        "influence_kind": [
+          "conceptual_drift",
+          "vocabulary_learning"
+        ],
+        "safe_terms": [
+          "açılan",
+          "bilgi",
+          "burada",
+          "derin",
+          "kırıntısı",
+          "zaman",
+          "bulunan",
+          "akla",
+          "alet",
+          "ancak",
+          "aşamaları",
+          "başlamış"
+        ],
+        "novelty_terms": [
+          "burada",
+          "bulunan",
+          "akla",
+          "alet",
+          "aşamaları",
+          "başlamış"
+        ],
+        "repeated_terms": [
+          "açılan",
+          "bilgi",
+          "burada",
+          "derin",
+          "kırıntısı",
+          "zaman",
+          "bulunan",
+          "ancak"
+        ],
+        "rejected_terms": [],
+        "mood_bias": [
+          "clarity",
+          "melancholy",
+          "hope"
+        ],
+        "aesthetic_weight": 0.34,
+        "conceptual_weight": 1,
+        "rhythm_weight": 0.28,
+        "pressure_weight": 0.21,
+        "summary_for_prompt": "category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,melancholy,hope; safe_terms=açılan,bilgi,burada,derin,kırıntısı,zaman; weights=aesthetic:0.34,conceptual:1,rhythm:0.28,pressure:0.21"
+      },
+      {
+        "category": "entertainment",
+        "item_count": 5,
+        "influence_kind": [
+          "rhythm_shift",
+          "attention_shift"
+        ],
+        "safe_terms": [
+          "ışık",
+          "sahne",
+          "yapay",
+          "yüz",
+          "tuhaflaşan",
+          "beşinci",
+          "kez",
+          "açıyor",
+          "ailenin",
+          "alanında",
+          "alıyor",
+          "ardından"
+        ],
+        "novelty_terms": [
+          "beşinci",
+          "kez",
+          "açıyor",
+          "alanında",
+          "alıyor"
+        ],
+        "repeated_terms": [
+          "ışık",
+          "sahne",
+          "yapay",
+          "yüz",
+          "tuhaflaşan",
+          "beşinci",
+          "kez",
+          "ailenin"
+        ],
+        "rejected_terms": [
+          "proper_or_source_name:1"
+        ],
+        "mood_bias": [
+          "absurdity",
+          "clarity",
+          "desire"
+        ],
+        "aesthetic_weight": 0.61,
+        "conceptual_weight": 0.42,
+        "rhythm_weight": 1,
+        "pressure_weight": 0.26,
+        "summary_for_prompt": "category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yapay,yüz,tuhaflaşan,beşinci; weights=aesthetic:0.61,conceptual:0.42,rhythm:1,pressure:0.26"
+      },
+      {
+        "category": "life",
+        "item_count": 5,
+        "influence_kind": [
+          "memory_association",
+          "attention_shift"
+        ],
+        "safe_terms": [
+          "gündelik",
+          "içi",
+          "şehir",
+          "temas",
+          "appeared",
+          "yumuşayan",
+          "açılan",
+          "akşam",
+          "akşamı",
+          "aktarma",
+          "aldığı",
+          "aldıkları"
+        ],
+        "novelty_terms": [
+          "appeared",
+          "açılan",
+          "akşam",
+          "akşamı",
+          "aktarma",
+          "aldığı",
+          "aldıkları"
+        ],
+        "repeated_terms": [
+          "gündelik",
+          "içi",
+          "şehir",
+          "temas",
+          "appeared",
+          "yumuşayan"
+        ],
+        "rejected_terms": [
+          "proper_or_source_name:5"
+        ],
+        "mood_bias": [
+          "tenderness",
+          "hope",
+          "desire"
+        ],
+        "aesthetic_weight": 0.51,
+        "conceptual_weight": 0.33,
+        "rhythm_weight": 0.5,
+        "pressure_weight": 0.24,
+        "summary_for_prompt": "category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,hope,desire; safe_terms=gündelik,içi,şehir,temas,appeared,yumuşayan; weights=aesthetic:0.51,conceptual:0.33,rhythm:0.5,pressure:0.24"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Arkeofili",
+        "category": "science_culture",
+        "url": "https://arkeofili.com/feed/",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://arkeofili.com/feed/",
+        "lastCheckedAt": "2026-06-14T07:11:10.227Z",
+        "attemptedUrls": [
+          "https://arkeofili.com/feed/"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "Evrim Ağacı",
+        "category": "science_culture",
+        "url": "https://evrimagaci.org/rss.xml",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://evrimagaci.org/rss.xml",
+        "lastCheckedAt": "2026-06-14T07:11:10.229Z",
+        "attemptedUrls": [
+          "https://evrimagaci.org/rss.xml"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "Altyazı",
+        "category": "entertainment",
+        "url": "https://altyazi.net/feed/",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://altyazi.net/feed/",
+        "lastCheckedAt": "2026-06-14T07:11:10.230Z",
+        "attemptedUrls": [
+          "https://altyazi.net/feed/"
+        ],
+        "retriedWithBrowserHeaders": true,
+        "itemCount": 6
+      },
+      {
+        "name": "Öteki Sinema",
+        "category": "entertainment",
+        "url": "https://www.otekisinema.com/feed/",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://www.otekisinema.com/feed/",
+        "lastCheckedAt": "2026-06-14T07:11:10.553Z",
+        "attemptedUrls": [
+          "https://www.otekisinema.com/feed/"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "Bağımsız Sinema",
+        "category": "entertainment",
+        "url": "https://www.bagimsizsinema.com/feed",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://www.bagimsizsinema.com/feed",
+        "lastCheckedAt": "2026-06-14T07:11:11.017Z",
+        "attemptedUrls": [
+          "https://www.bagimsizsinema.com/feed"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "Artdog",
+        "category": "art",
+        "url": "https://artdogistanbul.com/feed/",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://artdogistanbul.com/feed/",
+        "lastCheckedAt": "2026-06-14T07:11:11.741Z",
+        "attemptedUrls": [
+          "https://artdogistanbul.com/feed/"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "Argonotlar",
+        "category": "art",
+        "url": "https://argonotlar.com/feed/",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://argonotlar.com/feed/",
+        "lastCheckedAt": "2026-06-14T07:11:12.147Z",
+        "attemptedUrls": [
+          "https://argonotlar.com/feed/"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "Arkitera",
+        "category": "art",
+        "url": "https://www.arkitera.com/feed/",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://www.arkitera.com/feed/",
+        "lastCheckedAt": "2026-06-14T07:11:12.915Z",
+        "attemptedUrls": [
+          "https://www.arkitera.com/feed/"
+        ],
+        "retriedWithBrowserHeaders": true,
+        "itemCount": 6
+      },
+      {
+        "name": "Artkolik",
+        "category": "art",
+        "url": "https://www.artkolik.net/feed",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://www.artkolik.net/feed",
+        "lastCheckedAt": "2026-06-14T07:11:12.999Z",
+        "attemptedUrls": [
+          "https://www.artkolik.net/feed"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "Terrabayt",
+        "category": "art",
+        "url": "https://terrabayt.com/feed/",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://terrabayt.com/feed/",
+        "lastCheckedAt": "2026-06-14T07:11:13.859Z",
+        "attemptedUrls": [
+          "https://terrabayt.com/feed/"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "NouvArt",
+        "category": "art",
+        "url": "https://www.nouvart.net/feed/",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://www.nouvart.net/feed/",
+        "lastCheckedAt": "2026-06-14T07:11:14.633Z",
+        "attemptedUrls": [
+          "https://www.nouvart.net/feed/"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "It’s Nice That",
+        "category": "art",
+        "url": "https://feeds2.feedburner.com/itsnicethat/SlXC",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://feeds2.feedburner.com/itsnicethat/SlXC",
+        "lastCheckedAt": "2026-06-14T07:11:14.869Z",
+        "attemptedUrls": [
+          "https://feeds2.feedburner.com/itsnicethat/SlXC"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "The Creative Independent",
+        "category": "art",
+        "url": "https://thecreativeindependent.com/feed.xml",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://thecreativeindependent.com/feed.xml",
+        "lastCheckedAt": "2026-06-14T07:11:15.013Z",
+        "attemptedUrls": [
+          "https://thecreativeindependent.com/feed.xml"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "Bant Mag",
+        "category": "art",
+        "url": "https://bantmag.com/feed/",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://bantmag.com/feed/",
+        "lastCheckedAt": "2026-06-14T07:11:15.064Z",
+        "attemptedUrls": [
+          "https://bantmag.com/feed/"
+        ],
+        "retriedWithBrowserHeaders": true,
+        "itemCount": 6
+      },
+      {
+        "name": "Manifold",
+        "category": "art",
+        "url": "https://manifold.press/rss",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://manifold.press/rss",
+        "lastCheckedAt": "2026-06-14T07:11:15.233Z",
+        "attemptedUrls": [
+          "https://manifold.press/rss"
+        ],
+        "retriedWithBrowserHeaders": true,
+        "itemCount": 6
+      },
+      {
+        "name": "Play Tuşu",
+        "category": "art",
+        "url": "https://playtusu.com/feed/",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://playtusu.com/feed/",
+        "lastCheckedAt": "2026-06-14T07:11:15.342Z",
+        "attemptedUrls": [
+          "https://playtusu.com/feed/"
+        ],
+        "retriedWithBrowserHeaders": true,
+        "itemCount": 6
+      },
+      {
+        "name": "Vesaire",
+        "category": "art",
+        "url": "https://vesaire.press/feed/",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://vesaire.press/feed/",
+        "lastCheckedAt": "2026-06-14T07:11:16.003Z",
+        "attemptedUrls": [
+          "https://vesaire.press/feed/"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "BBC Türkçe",
+        "category": "news",
+        "url": "https://feeds.bbci.co.uk/turkce/rss.xml",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://feeds.bbci.co.uk/turkce/rss.xml",
+        "lastCheckedAt": "2026-06-14T07:11:16.036Z",
+        "attemptedUrls": [
+          "https://feeds.bbci.co.uk/turkce/rss.xml"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "BirGün",
+        "category": "news",
+        "url": "https://www.birgun.net/rss/home",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://www.birgun.net/rss/home",
+        "lastCheckedAt": "2026-06-14T07:11:16.078Z",
+        "attemptedUrls": [
+          "https://www.birgun.net/rss/home"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "Diken",
+        "category": "news",
+        "url": "https://www.diken.com.tr/feed/",
+        "enabled": true,
+        "fetched": false,
+        "status": "blocked_403",
+        "item_count": 0,
+        "usedUrl": "https://www.diken.com.tr/feed.xml",
+        "lastCheckedAt": "2026-06-14T07:11:16.326Z",
+        "attemptedUrls": [
+          "https://www.diken.com.tr/feed/",
+          "https://www.diken.com.tr/feed",
+          "https://www.diken.com.tr/rss",
+          "https://www.diken.com.tr/feed.xml"
+        ],
+        "retriedWithBrowserHeaders": true,
+        "error": "403 Forbidden",
+        "itemCount": 0
+      },
+      {
+        "name": "Radikal",
+        "category": "news",
+        "url": "https://www.radikal.com.tr/feed/",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://www.radikal.com.tr/feed/",
+        "lastCheckedAt": "2026-06-14T07:11:16.351Z",
+        "attemptedUrls": [
+          "https://www.radikal.com.tr/feed/"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "Cumhuriyet",
+        "category": "news",
+        "url": "https://www.cumhuriyet.com.tr/rss/son_dakika.xml",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://www.cumhuriyet.com.tr/rss",
+        "lastCheckedAt": "2026-06-14T07:11:16.510Z",
+        "attemptedUrls": [
+          "https://www.cumhuriyet.com.tr/rss/son_dakika.xml"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      },
+      {
+        "name": "Istanbul Life",
+        "category": "life",
+        "url": "https://istanbullife.com.tr/feed/",
+        "enabled": true,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://istanbullife.com.tr/feed/",
+        "lastCheckedAt": "2026-06-14T07:11:16.779Z",
+        "attemptedUrls": [
+          "https://istanbullife.com.tr/feed/"
+        ],
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
+      }
+    ]
+  },
+  "rssHealth": [
+    {
+      "name": "Arkeofili",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://arkeofili.com/feed/"
+    },
+    {
+      "name": "Evrim Ağacı",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://evrimagaci.org/rss.xml"
+    },
+    {
+      "name": "Altyazı",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://altyazi.net/feed/"
+    },
+    {
+      "name": "Öteki Sinema",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://www.otekisinema.com/feed/"
+    },
+    {
+      "name": "Bağımsız Sinema",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://www.bagimsizsinema.com/feed"
+    },
+    {
+      "name": "Artdog",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://artdogistanbul.com/feed/"
+    },
+    {
+      "name": "Argonotlar",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://argonotlar.com/feed/"
+    },
+    {
+      "name": "Arkitera",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://www.arkitera.com/feed/"
+    },
+    {
+      "name": "Artkolik",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://www.artkolik.net/feed"
+    },
+    {
+      "name": "Terrabayt",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://terrabayt.com/feed/"
+    },
+    {
+      "name": "NouvArt",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://www.nouvart.net/feed/"
+    },
+    {
+      "name": "It’s Nice That",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://feeds2.feedburner.com/itsnicethat/SlXC"
+    },
+    {
+      "name": "The Creative Independent",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://thecreativeindependent.com/feed.xml"
+    },
+    {
+      "name": "Bant Mag",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://bantmag.com/feed/"
+    },
+    {
+      "name": "Manifold",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://manifold.press/rss"
+    },
+    {
+      "name": "Play Tuşu",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://playtusu.com/feed/"
+    },
+    {
+      "name": "Vesaire",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://vesaire.press/feed/"
+    },
+    {
+      "name": "BBC Türkçe",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://feeds.bbci.co.uk/turkce/rss.xml"
+    },
+    {
+      "name": "BirGün",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://www.birgun.net/rss/home"
+    },
+    {
+      "name": "Diken",
+      "status": "blocked_403",
+      "itemCount": 0,
+      "usedUrl": "https://www.diken.com.tr/feed.xml",
+      "error": "403 Forbidden"
+    },
+    {
+      "name": "Radikal",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://www.radikal.com.tr/feed/"
+    },
+    {
+      "name": "Cumhuriyet",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://www.cumhuriyet.com.tr/rss"
+    },
+    {
+      "name": "Istanbul Life",
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://istanbullife.com.tr/feed/"
+    }
+  ],
+  "notes": [
+    "NEWS_API_KEY yok; RSS gündem kullanıldı.",
+    "RSS Diken: 403 Forbidden"
+  ]
+}
