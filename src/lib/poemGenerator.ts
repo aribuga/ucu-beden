@@ -30,6 +30,7 @@ function packetInput(context: GenerationContext): GenerationContextPacketInput {
     date: context.date,
     mood: context.mood,
     sources: context.sources,
+    source_digest: context.source_digest,
     daily_life: context.daily_life,
     walk_state: context.walk_state,
     memory_selection: context.memory_selection,

@@ -10,6 +10,7 @@
     "generate:dream": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/generateDream.ts",
     "backfill:visuals": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/backfillVisuals.ts",
     "analyze:input": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/analyzeInputPoems.ts",
+    "digest:sources": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/digestSources.ts",
     "rebuild:memory": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/rebuildMemory.ts",
     "validate:memory": "npm run rebuild:memory -- --dry-run --validate",
     "debug:memory-cycle": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/debugMemoryCycle.ts",

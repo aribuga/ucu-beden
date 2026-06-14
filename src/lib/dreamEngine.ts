@@ -14,7 +14,7 @@ import {
   formatStrictSurfaceRetryConstraints,
   surfaceMetadata
 } from "./surfaceValidator";
-import type { DailyLifeRecord, DailyPoem, DreamRecord, MemorySelection, RepetitionPressure, SurfaceValidationReport, UcuBedenState } from "./types";
+import type { DailyLifeRecord, DailyPoem, DreamRecord, MemorySelection, RepetitionPressure, SourceDigestRecord, SurfaceValidationReport, UcuBedenState } from "./types";
 import { buildUcuBedenVoicePrompt } from "./ucuBedenVoicePrompt";
 
 type DreamParams = {
@@ -24,6 +24,7 @@ type DreamParams = {
   state: UcuBedenState;
   repetition: RepetitionPressure;
   memorySelection: MemorySelection;
+  sourceDigest?: SourceDigestRecord | null;
 };
 
 type DreamPayload = { title?: unknown; dream_text?: unknown; symbols?: unknown; mood_after?: unknown; memory_mutations?: unknown };
@@ -34,6 +35,7 @@ function packetInput(params: DreamParams): GenerationContextPacketInput {
     date: params.date,
     mood: params.poem.mood,
     sources: params.poem.sources,
+    source_digest: params.sourceDigest,
     daily_life: params.dailyLife,
     walk_state: params.poem.walk_state,
     memory_selection: params.memorySelection,

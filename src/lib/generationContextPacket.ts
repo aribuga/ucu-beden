@@ -1,4 +1,5 @@
 import { tokenize, topWords } from "./inputPoems";
+import { publicPoeticDigestPromptFragments } from "./sourceDigestion";
 import { sourceInfluencePacketsForBundle } from "./sourceInfluence";
 import type {
   DailyLifeRecord,
@@ -7,6 +8,7 @@ import type {
   Mood,
   RepetitionPressure,
   SourceBundle,
+  SourceDigestRecord,
   UcuBedenState,
   WalkState
 } from "./types";
@@ -16,6 +18,7 @@ export type GenerationContextPacketInput = {
   date: string;
   mood: Mood;
   sources: SourceBundle;
+  source_digest?: SourceDigestRecord | null;
   daily_life: DailyLifeRecord;
   walk_state: WalkState;
   memory_selection: MemorySelection;
@@ -180,10 +183,9 @@ export function filterGenerationSurfaceTerms(terms: string[], input: GenerationC
 }
 
 export function generationFallbackTerms(input: GenerationContextPacketInput, limit = 10): string[] {
-  const sourceTerms = sourceInfluencePacketsForBundle(input.sources).flatMap((packet) => [
-    ...packet.novelty_terms,
-    ...packet.safe_terms
-  ]);
+  const sourceTerms = input.source_digest?.safety.valid
+    ? input.source_digest.public_poetic_digest.safe_vocabulary_candidates
+    : sourceInfluencePacketsForBundle(input.sources).flatMap((packet) => [...packet.novelty_terms, ...packet.safe_terms]);
   const memoryTerms = topWords(tokenize(input.memory_selection.memory_prompt_fragments.join(" ")), 24);
   const poemTerms = input.poem ? [...input.poem.analysis.recurring_words, ...input.poem.analysis.dominant_words] : [];
   return filterGenerationSurfaceTerms([...sourceTerms, ...memoryTerms, ...poemTerms], input).slice(0, limit);
@@ -207,7 +209,8 @@ function poemResidueSummary(input: GenerationContextPacketInput): string | undef
 export function buildGenerationContextPacket(input: GenerationContextPacketInput): GenerationContextPacket {
   const daily = input.daily_life;
   const walk = input.walk_state;
-  const packets = sourceInfluencePacketsForBundle(input.sources);
+  const packets = sourceInfluencePacketsForBundle(input.sources, [], input.source_digest);
+  const digestPrompt = publicPoeticDigestPromptFragments(input.source_digest);
   const surfaceCount = surfaceTerms(input).size;
   const weatherOpenness = level(
     Math.max(0, Math.min(1, ((input.sources.weather.wind_kmh ?? 10) / 30 + (100 - (input.sources.weather.humidity_percent ?? 60)) / 100) / 2))
@@ -247,7 +250,9 @@ export function buildGenerationContextPacket(input: GenerationContextPacketInput
         : "Use accumulated style without copying source lines.",
       poem_residue_summary: poemResidueSummary(input)
     },
-    source_influence_packet: packets.length > 0
+    source_influence_packet: digestPrompt.length > 0
+      ? digestPrompt
+      : packets.length > 0
       ? packets.map((packet) => packet.summary_for_prompt)
       : [
           `influence=attention_shift,mood_pressure; mood=${dominantMood(input.mood).join(",")}; weights=pressure:${level(input.sources.turkey_news.emotional_weight / 100)},aesthetic:${level(input.sources.art_world.curiosity / 100)}`
@@ -330,6 +335,8 @@ export function generationContextDebug(input: GenerationContextPacketInput, pack
       packet.surface_policy_packet.home_place_walk_are_identity_tokens === false &&
       !tokenize(livedText).some((term) => blocked.has(term)),
     source_influence_packet_present: packet.source_influence_packet.length > 0,
+    source_digest_available: Boolean(input.source_digest?.safety.valid),
+    source_digest_provider: input.source_digest?.provider ?? null,
     surface_policy_packet: surfaceText,
     title_policy_packet: formatTitlePolicyPacket(packet),
     fallback_surface_safe: fallbackTerms.every((term) => !blocked.has(term) && !genericSurfacePrefixes.some((prefix) => term.startsWith(prefix))),

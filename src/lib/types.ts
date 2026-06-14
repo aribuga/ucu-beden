@@ -154,6 +154,67 @@ export type SourceInfluencePacket = {
   summary_for_prompt: string;
 };
 
+export type SourcePrivateFactualDigest = {
+  items: Array<{
+    source_title: string;
+    url: string | null;
+    source_name: string;
+    category: RssSourceCategory;
+    factual_summary: string;
+    detected_entities: string[];
+    topics: string[];
+  }>;
+  source_health: RssSourceHealth[];
+};
+
+export type SourcePublicPoeticDigest = {
+  safe_vocabulary_candidates: string[];
+  conceptual_drifts: string[];
+  aesthetic_cues: string[];
+  rhythm_cues: string[];
+  attention_shifts: string[];
+  image_expansion_candidates: string[];
+  sentence_moves: string[];
+  internalized_effect: string[];
+  rejected_unsafe_terms: string[];
+  do_not_surface_terms: string[];
+  repeated_abstract_terms: string[];
+};
+
+export type SourceDigestRecord = {
+  date: string;
+  generated_at: string;
+  provider: "openai" | "deterministic";
+  model: string | null;
+  fallback_reason: string | null;
+  private_factual_digest: SourcePrivateFactualDigest;
+  public_poetic_digest: SourcePublicPoeticDigest;
+  source_influence_packet: SourceInfluencePacket[];
+  safety: {
+    valid: boolean;
+    private_public_separation: boolean;
+    unsafe_public_matches: string[];
+    raw_sentence_overlap: string[];
+  };
+  similarity: {
+    compared_digest_count: number;
+    recent_digest_similarity: number;
+    repeated_abstract_terms: string[];
+  };
+};
+
+export type SourceDigestValidation = {
+  valid: boolean;
+  digest_count: number;
+  source_digest_available: boolean;
+  invalid_digest_dates: string[];
+  missing_source_dates: string[];
+  unsafe_public_digest: Array<{ date: string; matches: string[] }>;
+  private_public_separation_failures: string[];
+  missing_digest_influence_packet: string[];
+  repeated_abstract_terms_available: boolean;
+};
+
 export type SourceDigestAnalysis = {
   window_days: number;
   rss_summary_similarity: {
@@ -678,6 +739,7 @@ export type GenerationContext = {
   state: UcuBedenState;
   world: World;
   sources: SourceBundle;
+  source_digest?: SourceDigestRecord | null;
   input_analysis: InputPoemsAnalysis;
   mood: Mood;
   mood_sentence: string;
