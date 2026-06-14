@@ -121,7 +121,7 @@ function probableEntityTerms(title: string): string[] {
   return title
     .split(/\s+/g)
     .map(cleanRawToken)
-    .filter((token) => token.length > 1 && (/^\p{Lu}/u.test(token) || token === token.toLocaleUpperCase("tr")))
+    .filter((token) => token.length > 1 && /\p{L}/u.test(token) && (/^\p{Lu}/u.test(token) || token === token.toLocaleUpperCase("tr")))
     .flatMap(tokenize);
 }
 
@@ -146,7 +146,7 @@ function unsafeTermSet(items: MoodTaggedSourceItem[], bundle?: SourceBundle): Se
   }
   return new Set([
     ...countryUnsafeTerms,
-    ...rawTerms.flatMap(tokenize).map(normalized).filter((term) => term.length > 1)
+    ...rawTerms.flatMap(tokenize).map(normalized).filter((term) => term.length > 1 && !/^\d+$/.test(term))
   ].filter((term) => !technicalSafeTerms.has(term)));
 }
 
