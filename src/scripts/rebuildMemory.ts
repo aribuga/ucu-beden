@@ -13,6 +13,7 @@ import { analyzeRepetitionPressure } from "../lib/repetitionPressure";
 import { analyzeSourceDigest, validateSourceInfluence } from "../lib/sourceInfluence";
 import { validateSourceDigests } from "../lib/sourceDigestion";
 import { validateStoredSurfaceRecords } from "../lib/surfaceValidator";
+import { validateStoredLanguageRecords } from "../lib/languageValidator";
 import type { MemorySelection, MemoryTrace } from "../lib/types";
 
 function nextDate(date: string | null): string {
@@ -72,6 +73,7 @@ async function main(): Promise<void> {
   const surfaceValidation = shouldValidate
     ? await validateStoredSurfaceRecords({ poems, dreams, traces: archive.traces, sources, world, repetition })
     : null;
+  const languageValidation = shouldValidate ? validateStoredLanguageRecords(poems, dreams) : null;
   const valid =
     (validation?.valid ?? true) &&
     (cycleValidation?.valid ?? true) &&
@@ -79,6 +81,7 @@ async function main(): Promise<void> {
     sourceInfluenceValidation.valid &&
     sourceDigestionValidation.valid &&
     (surfaceValidation?.valid ?? true) &&
+    (languageValidation?.valid ?? true) &&
     deterministicRebuild;
   console.log(
     JSON.stringify(
@@ -106,6 +109,7 @@ async function main(): Promise<void> {
         source_influence_validation: sourceInfluenceValidation,
         source_digestion_validation: sourceDigestionValidation,
         surface_validation: surfaceValidation,
+        language_validation: languageValidation,
         metadata_records: cycleValidation?.metadata_records ?? null,
         deterministic_rebuild: {
           valid: deterministicRebuild,

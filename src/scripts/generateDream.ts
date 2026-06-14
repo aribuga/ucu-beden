@@ -92,7 +92,10 @@ async function main(): Promise<void> {
       provider: dream.generation.provider,
       surface_validation_passed: dream.generation.surface_validation_passed,
       surface_validation_status: dream.generation.surface_validation_status,
-      retry_count: dream.generation.retry_count
+      retry_count: dream.generation.retry_count,
+      language_validation_passed: dream.generation.language_validation_passed,
+      english_ratio: dream.generation.english_ratio,
+      language_retry_count: dream.generation.language_retry_count
     })
   );
   await writeJsonFile(visualPath, visual);

@@ -4,6 +4,7 @@ import { memoryClimateDetail, memoryClimateHeadline } from "../lib/memoryPresent
 import { buildMemoryArchive, validateMemoryArchive, validateMemoryPromptFragments } from "../lib/memoryTraceEngine";
 import { analyzeRepetitionPressure } from "../lib/repetitionPressure";
 import { analyzeGeneratedDreamSurface, analyzeGeneratedPoemSurface } from "../lib/surfaceValidator";
+import { analyzeGeneratedDreamLanguage, analyzeGeneratedPoemLanguage } from "../lib/languageValidator";
 import type { DailyPoem, DreamRecord, MemorySelection, MemoryTrace, SourceBundle } from "../lib/types";
 
 function selectionFields(selection: MemorySelection): Record<string, boolean> {
@@ -105,6 +106,18 @@ function surfaceDebug(record: DailyPoem | DreamRecord | null, computed: Awaited<
   };
 }
 
+function languageDebug(record: DailyPoem | DreamRecord | null, computed: ReturnType<typeof analyzeGeneratedPoemLanguage> | null) {
+  return {
+    stored_metadata_present: record?.generation.language_validation_passed !== undefined,
+    language_validation_passed: record?.generation.language_validation_passed ?? computed?.language_validation_passed ?? null,
+    english_ratio: record?.generation.english_ratio ?? computed?.english_ratio ?? null,
+    language_retry_count: record?.generation.language_retry_count ?? null,
+    language_violations: record?.generation.language_violations ?? computed?.language_violations ?? [],
+    computed,
+    stored: record?.generation ?? null
+  };
+}
+
 async function main(): Promise<void> {
   if (process.argv.slice(2).includes("--write")) throw new Error("debug:latest-memory is read-only and does not support --write.");
   const archive = await buildMemoryArchive();
@@ -178,6 +191,10 @@ async function main(): Promise<void> {
     surface_validation: {
       latest_poem: surfaceDebug(latestPoem, latestPoemSurface),
       latest_dream: surfaceDebug(latestDream, latestDreamSurface)
+    },
+    language_validation: {
+      latest_poem: languageDebug(latestPoem, latestPoem ? analyzeGeneratedPoemLanguage(latestPoem) : null),
+      latest_dream: languageDebug(latestDream, latestDream ? analyzeGeneratedDreamLanguage(latestDream) : null)
     },
     dream_return: dreamReturnState(latestDream, archive.traces),
     graph_latest_cycle_contribution: {

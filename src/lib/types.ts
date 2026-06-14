@@ -213,6 +213,7 @@ export type SourceDigestValidation = {
   private_public_separation_failures: string[];
   missing_digest_influence_packet: string[];
   repeated_abstract_terms_available: boolean;
+  non_turkish_public_digest: Array<{ date: string; matches: string[] }>;
 };
 
 export type SourceDigestAnalysis = {
@@ -390,6 +391,25 @@ export type SurfaceValidationReport = {
   final_status: "accepted" | "accepted_with_warning" | "rejected_for_retry";
 };
 
+export type LanguageViolationField = "text" | "title" | "poem_text" | "mood_sentence" | "dream_text" | "mood_after";
+
+export type LanguageViolation = {
+  field: LanguageViolationField;
+  kind: "english_ratio" | "non_turkish_lines" | "english_title";
+  severity: "warning" | "severe";
+  matches: string[];
+};
+
+export type LanguageValidationReport = {
+  language_validation_passed: boolean;
+  severe: boolean;
+  english_ratio: number;
+  non_turkish_line_ratio: number;
+  detected_language: "turkish" | "mixed" | "english" | "undetermined";
+  english_matches: string[];
+  language_violations: LanguageViolation[];
+};
+
 export type PoemGenerationMeta = {
   provider: "openai" | "mock";
   model: string | null;
@@ -403,6 +423,10 @@ export type PoemGenerationMeta = {
   repeated_phrase_score?: number;
   signature_ignored_from_analysis?: boolean;
   surface_validation_status?: SurfaceValidationReport["final_status"];
+  language_validation_passed?: boolean;
+  language_violations?: LanguageViolation[];
+  english_ratio?: number;
+  language_retry_count?: number;
 };
 
 export type TitleGenerationSource = "llm" | "fallback_dominant_words";

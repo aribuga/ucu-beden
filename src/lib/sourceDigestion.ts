@@ -1,4 +1,5 @@
 import { tokenize } from "./inputPoems";
+import { analyzeGeneratedLanguage } from "./languageValidator";
 import { buildSourceInfluencePackets, sourcePublicTextUnsafeMatches, sourceUnsafeTermSet } from "./sourceInfluence";
 import type {
   DailyPoem,
@@ -95,18 +96,23 @@ function repeatedAbstractTerms(poems: DailyPoem[], windowSize = 20): string[] {
 function titleSentenceMoves(items: MoodTaggedSourceItem[]): string[] {
   const moves: string[] = [];
   const lengths = items.map((item) => tokenize(item.title).length);
-  if (lengths.some((length) => length <= 6) && lengths.some((length) => length >= 12)) moves.push("short-long sentence alternation");
-  if (items.some((item) => item.title.includes("?"))) moves.push("question-led turn without direct answer");
-  if (items.some((item) => /[:;]/u.test(item.title))) moves.push("mid-sentence hinge");
-  if (items.some((item) => /[-–—]/u.test(item.title))) moves.push("interrupted clause movement");
-  if (items.some((item) => item.title.split(",").length >= 3)) moves.push("dense clause sequence");
-  if (moves.length === 0) moves.push(lengths.reduce((sum, value) => sum + value, 0) / Math.max(1, lengths.length) > 10 ? "sustained sentence movement" : "compressed sentence movement");
+  if (lengths.some((length) => length <= 6) && lengths.some((length) => length >= 12)) moves.push("kısa ve uzun cümlelerin dönüşümlü kullanımı");
+  if (items.some((item) => item.title.includes("?"))) moves.push("doğrudan yanıt vermeyen soru dönüşü");
+  if (items.some((item) => /[:;]/u.test(item.title))) moves.push("cümle ortasında yön değiştiren bağlantı");
+  if (items.some((item) => /[-–—]/u.test(item.title))) moves.push("kesintili cümle hareketi");
+  if (items.some((item) => item.title.split(",").length >= 3)) moves.push("yoğun yan cümle dizisi");
+  if (moves.length === 0) moves.push(lengths.reduce((sum, value) => sum + value, 0) / Math.max(1, lengths.length) > 10 ? "uzatılmış cümle hareketi" : "sıkıştırılmış cümle hareketi");
   return distinct(moves);
+}
+
+function turkishPublicText(value: string): boolean {
+  const report = analyzeGeneratedLanguage(value);
+  return !report.severe && report.english_matches.length === 0;
 }
 
 function categoryTerms(items: MoodTaggedSourceItem[], category: MoodTaggedSourceItem["category"]): string[] {
   return distinct(items.filter((item) => item.category === category).flatMap((item) => [...item.keywords, ...tokenize(item.shortAtmosphere)]))
-    .filter((term) => term.length >= 3 && !commonTerms.has(term))
+    .filter((term) => term.length >= 3 && !commonTerms.has(term) && turkishPublicText(term))
     .slice(0, 12);
 }
 
@@ -118,7 +124,7 @@ function deterministicPublicDigest(source: SourceBundle, repeated: string[]): Op
   const items = source.rss?.items ?? [];
   const packets = buildSourceInfluencePackets(items, [], source);
   const safeVocabulary = distinct(packets.flatMap((packet) => [...packet.novelty_terms, ...packet.safe_terms]))
-    .filter((term) => !repeated.includes(term))
+    .filter((term) => !repeated.includes(term) && turkishPublicText(term))
     .slice(0, 24);
   const art = categoryTerms(items, "art");
   const science = categoryTerms(items, "science_culture");
@@ -159,10 +165,12 @@ function sanitizePublicDigest(candidate: OpenAIPublicDigest, source: SourceBundl
         const unsafe = sourcePublicTextUnsafeMatches(fragment, unsafeTerms);
         const overlaps = rawSentenceOverlaps(fragment, source);
         const repeatsBlockedTerm = tokenize(fragment).some((term) => repeatedSet.has(term));
+        const language = analyzeGeneratedLanguage(fragment);
         if (unsafe.length > 0) rejected.set("raw_entity_or_source", (rejected.get("raw_entity_or_source") ?? 0) + 1);
         if (overlaps.length > 0) rejected.set("raw_sentence_overlap", (rejected.get("raw_sentence_overlap") ?? 0) + 1);
         if (repeatsBlockedTerm) rejected.set("repeated_abstract_term", (rejected.get("repeated_abstract_term") ?? 0) + 1);
-        return unsafe.length === 0 && overlaps.length === 0 && !repeatsBlockedTerm && !/https?:|www\.|@/iu.test(fragment);
+        if (language.english_matches.length > 0) rejected.set("ingilizce_terim", (rejected.get("ingilizce_terim") ?? 0) + 1);
+        return unsafe.length === 0 && overlaps.length === 0 && !repeatsBlockedTerm && language.english_matches.length === 0 && !/https?:|www\.|@/iu.test(fragment);
       })
       .slice(0, field === "safe_vocabulary_candidates" ? 24 : 10);
   const safe = Object.fromEntries(publicFields.map((field) => [field, cleanField(field)])) as OpenAIPublicDigest;
@@ -170,7 +178,7 @@ function sanitizePublicDigest(candidate: OpenAIPublicDigest, source: SourceBundl
     .filter((term) => {
       const unsafe = sourcePublicTextUnsafeMatches(term, unsafeTerms);
       const overlaps = rawSentenceOverlaps(term, source);
-      return unsafe.length === 0 && overlaps.length === 0 && !/https?:|www\.|@/iu.test(term);
+      return unsafe.length === 0 && overlaps.length === 0 && turkishPublicText(term) && !/https?:|www\.|@/iu.test(term);
     })
     .slice(0, 24);
   return {
@@ -215,7 +223,7 @@ function digestInfluencePackets(source: SourceBundle, publicDigest: SourcePublic
   const fallback = buildSourceInfluencePackets(source.rss?.items ?? [], [], source);
   return fallback.map((packet, index) => {
     const terms = distinct([...packet.safe_terms, ...publicDigest.safe_vocabulary_candidates])
-      .filter((term) => !blocked.has(normalized(term)))
+      .filter((term) => !blocked.has(normalized(term)) && turkishPublicText(term))
       .slice(0, 12);
     const effect = publicDigest.internalized_effect[index % Math.max(1, publicDigest.internalized_effect.length)] ?? terms.slice(0, 4).join(" / ");
     const movement = publicDigest.sentence_moves[index % Math.max(1, publicDigest.sentence_moves.length)] ?? publicDigest.rhythm_cues[0] ?? "";
@@ -264,11 +272,12 @@ async function openAIPublicDigest(source: SourceBundle): Promise<{ digest: OpenA
         temperature: 0.4,
         max_output_tokens: 900,
         input: [
-          "Digest source material into safe language-learning material for UCU BEDEN.",
-          "Do not write a poem, news summary, factual report, or source recap.",
-          "Do not repeat titles, sentences, names, providers, people, organizations, countries, URLs, or facts.",
-          "Extract only transferable vocabulary, conceptual relations, aesthetic cues, rhythm behavior, attention movement, image expansion, sentence behavior, and internalized effects.",
-          "Sentence moves must describe behavior without copying a source sentence.",
+          "Kaynak malzemeyi UCU BEDEN için güvenli dil öğrenme malzemesine sindir.",
+          "Şiir, haber özeti, olgu raporu veya kaynak özeti yazma.",
+          "Başlıkları, cümleleri, adları, sağlayıcıları, kişileri, kurumları, ülkeleri, bağlantıları veya olguları tekrarlama.",
+          "Yalnızca aktarılabilir Türkçe kelimeler, kavramsal ilişkiler, estetik ipuçları, ritim davranışları, dikkat hareketleri, imge genişlemeleri, cümle davranışları ve içselleştirilmiş etkiler çıkar.",
+          "Bütün alanların bütün değerleri Türkçe olmalı. İngilizce kaynaklardan gelen kavramları Türkçeye sindir.",
+          "Cümle hareketleri kaynak cümleyi kopyalamadan davranışı Türkçe tarif etmeli.",
           JSON.stringify(inputItems)
         ].join("\n"),
         text: {
@@ -312,6 +321,7 @@ export async function digestSourcesWithOpenAI(params: {
   const unsafePublicMatches = distinct(publicDigestText(publicDigest).flatMap((text) => sourcePublicTextUnsafeMatches(text, unsafeTerms)));
   const rawSentenceOverlap = distinct(publicDigestText(publicDigest).flatMap((text) => rawSentenceOverlaps(text, params.source)));
   const privatePublicSeparation = unsafePublicMatches.length === 0 && rawSentenceOverlap.length === 0;
+  const publicLanguageSafe = publicDigestText(publicDigest).every(turkishPublicText);
   return {
     date: params.source.date,
     generated_at: new Date().toISOString(),
@@ -322,7 +332,7 @@ export async function digestSourcesWithOpenAI(params: {
     public_poetic_digest: publicDigest,
     source_influence_packet: packets,
     safety: {
-      valid: privatePublicSeparation,
+      valid: privatePublicSeparation && publicLanguageSafe,
       private_public_separation: privatePublicSeparation,
       unsafe_public_matches: unsafePublicMatches,
       raw_sentence_overlap: rawSentenceOverlap
@@ -339,15 +349,15 @@ export function publicPoeticDigestPromptFragments(digest: SourceDigestRecord | n
   if (!digest?.safety.valid) return [];
   const publicDigest = digest.public_poetic_digest;
   const rows: Array<[string, string[]]> = [
-    ["vocabulary_learning", publicDigest.safe_vocabulary_candidates],
-    ["conceptual_drift", publicDigest.conceptual_drifts],
-    ["aesthetic_cues", publicDigest.aesthetic_cues],
-    ["rhythm_cues", publicDigest.rhythm_cues],
-    ["attention_shifts", publicDigest.attention_shifts],
-    ["image_expansion", publicDigest.image_expansion_candidates],
-    ["sentence_moves", publicDigest.sentence_moves],
-    ["internalized_effect", publicDigest.internalized_effect],
-    ["do_not_surface", publicDigest.do_not_surface_terms]
+    ["Kelime öğrenme", publicDigest.safe_vocabulary_candidates],
+    ["Kavramsal kayma", publicDigest.conceptual_drifts],
+    ["Estetik ipuçları", publicDigest.aesthetic_cues],
+    ["Ritim ipuçları", publicDigest.rhythm_cues],
+    ["Dikkat kaymaları", publicDigest.attention_shifts],
+    ["İmge genişlemesi", publicDigest.image_expansion_candidates],
+    ["Cümle hareketleri", publicDigest.sentence_moves],
+    ["İçselleştirilmiş etki", publicDigest.internalized_effect],
+    ["Doğrudan yüzeye çıkarma", publicDigest.do_not_surface_terms]
   ];
   return rows.filter(([, values]) => values.length > 0).map(([label, values]) => `${label}: ${values.slice(0, 8).join(" | ")}`);
 }
@@ -359,6 +369,7 @@ export function validateSourceDigests(digests: SourceDigestRecord[], sources: So
   const unsafePublic: Array<{ date: string; matches: string[] }> = [];
   const separationFailures: string[] = [];
   const missingPackets: string[] = [];
+  const nonTurkishPublic: Array<{ date: string; matches: string[] }> = [];
   for (const digest of digests) {
     const source = sourceByDate.get(digest.date);
     if (!source) {
@@ -368,13 +379,15 @@ export function validateSourceDigests(digests: SourceDigestRecord[], sources: So
     const unsafe = sourceUnsafeTermSet(source.rss?.items ?? [], source);
     const matches = distinct(publicDigestText(digest.public_poetic_digest).flatMap((text) => sourcePublicTextUnsafeMatches(text, unsafe)));
     const overlaps = distinct(publicDigestText(digest.public_poetic_digest).flatMap((text) => rawSentenceOverlaps(text, source)));
+    const nonTurkish = distinct(publicDigestText(digest.public_poetic_digest).flatMap((text) => analyzeGeneratedLanguage(text).english_matches));
     if (matches.length > 0 || overlaps.length > 0) unsafePublic.push({ date: digest.date, matches: distinct([...matches, ...overlaps.map(() => "raw_sentence_overlap")]) });
     if (!digest.safety.private_public_separation || matches.length > 0 || overlaps.length > 0) separationFailures.push(digest.date);
     if (digest.source_influence_packet.length === 0) missingPackets.push(digest.date);
+    if (nonTurkish.length > 0) nonTurkishPublic.push({ date: digest.date, matches: nonTurkish });
     if (!digest.safety.valid || !Array.isArray(digest.public_poetic_digest.repeated_abstract_terms)) invalidDates.push(digest.date);
   }
   return {
-    valid: invalidDates.length === 0 && missingSourceDates.length === 0 && unsafePublic.length === 0 && separationFailures.length === 0 && missingPackets.length === 0,
+    valid: invalidDates.length === 0 && missingSourceDates.length === 0 && unsafePublic.length === 0 && separationFailures.length === 0 && missingPackets.length === 0 && nonTurkishPublic.length === 0,
     digest_count: digests.length,
     source_digest_available: digests.length > 0,
     invalid_digest_dates: distinct(invalidDates),
@@ -382,6 +395,7 @@ export function validateSourceDigests(digests: SourceDigestRecord[], sources: So
     unsafe_public_digest: unsafePublic,
     private_public_separation_failures: distinct(separationFailures),
     missing_digest_influence_packet: distinct(missingPackets),
-    repeated_abstract_terms_available: digests.every((digest) => Array.isArray(digest.public_poetic_digest.repeated_abstract_terms))
+    repeated_abstract_terms_available: digests.every((digest) => Array.isArray(digest.public_poetic_digest.repeated_abstract_terms)),
+    non_turkish_public_digest: nonTurkishPublic
   };
 }

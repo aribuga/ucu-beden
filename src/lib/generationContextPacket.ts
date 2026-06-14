@@ -1,4 +1,5 @@
 import { tokenize, topWords } from "./inputPoems";
+import { analyzeGeneratedLanguage } from "./languageValidator";
 import { publicPoeticDigestPromptFragments } from "./sourceDigestion";
 import { sourceInfluencePacketsForBundle } from "./sourceInfluence";
 import type {
@@ -121,15 +122,59 @@ function level(value: number): "low" | "medium" | "high" {
   return "low";
 }
 
+function levelTurkish(value: number): "düşük" | "orta" | "yüksek" {
+  return value >= 0.67 ? "yüksek" : value >= 0.34 ? "orta" : "düşük";
+}
+
 function moodLevel(value: number): "low" | "medium" | "high" {
   return level(value / 100);
 }
+
+function moodLevelTurkish(value: number): "düşük" | "orta" | "yüksek" {
+  return levelTurkish(value / 100);
+}
+
+const moodLabels: Record<keyof Mood, string> = {
+  melancholy: "melankoli",
+  anger: "öfke",
+  tenderness: "şefkat",
+  fatigue: "yorgunluk",
+  absurdity: "absürtlük",
+  clarity: "açıklık",
+  desire: "arzu",
+  hope: "umut"
+};
 
 function dominantMood(mood: Mood, limit = 3): string[] {
   return (Object.entries(mood) as Array<[keyof Mood, number]>)
     .sort((a, b) => b[1] - a[1])
     .slice(0, limit)
     .map(([key]) => key);
+}
+
+function dominantMoodTurkish(mood: Mood, limit = 3): string[] {
+  return (Object.entries(mood) as Array<[keyof Mood, number]>)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit)
+    .map(([key]) => moodLabels[key]);
+}
+
+const influenceLabels: Record<string, string> = {
+  pressure: "basınç",
+  aesthetic_learning: "estetik öğrenme",
+  vocabulary_learning: "kelime öğrenme",
+  rhythm_shift: "ritim kayması",
+  conceptual_drift: "kavramsal kayma",
+  image_expansion: "imge genişlemesi",
+  attention_shift: "dikkat kayması",
+  memory_association: "hafıza çağrışımı",
+  mood_pressure: "ruh hali etkisi"
+};
+
+function sourcePacketPrompt(packet: ReturnType<typeof sourceInfluencePacketsForBundle>[number]): string {
+  const influences = packet.influence_kind.map((kind) => influenceLabels[kind] ?? kind).join(", ");
+  const terms = packet.safe_terms.filter((term) => analyzeGeneratedLanguage(term).english_matches.length === 0).slice(0, 8).join(" | ");
+  return `Öğrenme yönü: ${influences || "dikkat kayması"}; güvenli dil malzemesi: ${terms || "yok"}.`;
 }
 
 function identitySurfaceTerms(input: GenerationContextPacketInput): Set<string> {
@@ -167,8 +212,9 @@ function surfaceTerms(input: GenerationContextPacketInput): Set<string> {
 function digestedMemoryFragments(input: GenerationContextPacketInput): string[] {
   return input.memory_selection.memory_prompt_fragments
     .map((fragment, index) => {
+      if (analyzeGeneratedLanguage(fragment).severe) return "";
       const terms = filterGenerationSurfaceTerms(topWords(tokenize(fragment), 18), input).slice(0, 8);
-      return terms.length > 0 ? `trace_effect_${index + 1}=${terms.join(",")}` : "";
+      return terms.length > 0 ? `hafıza_izi_etkisi_${index + 1}: ${terms.join(",")}` : "";
     })
     .filter(Boolean);
 }
@@ -178,7 +224,14 @@ export function filterGenerationSurfaceTerms(terms: string[], input: GenerationC
   return distinct(
     terms
       .flatMap(tokenize)
-      .filter((term) => term.length > 2 && !blocked.has(term) && !genericSurfacePrefixes.some((prefix) => term.startsWith(prefix)) && !/^\d+$/.test(term))
+      .filter(
+        (term) =>
+          term.length > 2 &&
+          !blocked.has(term) &&
+          !genericSurfacePrefixes.some((prefix) => term.startsWith(prefix)) &&
+          !/^\d+$/.test(term) &&
+          analyzeGeneratedLanguage(term).english_matches.length === 0
+      )
   );
 }
 
@@ -198,11 +251,11 @@ function poemResidueSummary(input: GenerationContextPacketInput): string | undef
     input
   ).slice(0, 6);
   return [
-    `word_count=${input.poem.analysis.word_count}`,
-    `mood=${dominantMood(input.poem.mood).join(",")}`,
-    `language_residue=${residueTerms.join(",") || "none"}`,
-    `memory_links=${input.poem.memory_selection?.selected_trace_ids.length ?? 0}`,
-    "reuse_surface_terms_directly=false"
+    `Sözcük sayısı: ${input.poem.analysis.word_count}`,
+    `Ruh hali: ${dominantMoodTurkish(input.poem.mood).join(",")}`,
+    `Dil kalıntısı: ${residueTerms.join(",") || "yok"}`,
+    `Hafıza bağlantısı: ${input.poem.memory_selection?.selected_trace_ids.length ?? 0}`,
+    "Yüzey terimlerini doğrudan yeniden kullanma."
   ].join("; ");
 }
 
@@ -215,47 +268,47 @@ export function buildGenerationContextPacket(input: GenerationContextPacketInput
   const weatherOpenness = level(
     Math.max(0, Math.min(1, ((input.sources.weather.wind_kmh ?? 10) / 30 + (100 - (input.sources.weather.humidity_percent ?? 60)) / 100) / 2))
   );
-  const outsideOpenness = walk.did_walk && daily.energy >= 0.45 ? "available" : daily.energy >= 0.35 ? "limited" : "closed";
+  const outsideOpenness = walk.did_walk && daily.energy >= 0.45 ? "açık" : daily.energy >= 0.35 ? "sınırlı" : "kapalı";
 
   return {
     persona_safe_lived_context: {
       lived_context_effect: [
-        `energy=${level(daily.energy)}`,
-        `irritation=${level(daily.irritation)}`,
-        `tenderness=${level(daily.tenderness)}`,
-        `self_awareness=${level(daily.shame_self_awareness)}`,
-        `dominant_mood=${dominantMood(input.mood).join(",")}`
+        `enerji: ${levelTurkish(daily.energy)}`,
+        `huzursuzluk: ${levelTurkish(daily.irritation)}`,
+        `şefkat: ${levelTurkish(daily.tenderness)}`,
+        `öz farkındalık: ${levelTurkish(daily.shame_self_awareness)}`,
+        `baskın ruh hali: ${dominantMoodTurkish(input.mood).join(",")}`
       ].join("; "),
       body_attention_effect: [
-        `fatigue=${moodLevel(input.mood.fatigue)}`,
-        `clarity=${moodLevel(input.mood.clarity)}`,
-        `desire=${moodLevel(input.mood.desire)}`,
-        `attention_load=${daily.energy < 0.4 ? "inward" : "distributed"}`
+        `yorgunluk: ${moodLevelTurkish(input.mood.fatigue)}`,
+        `açıklık: ${moodLevelTurkish(input.mood.clarity)}`,
+        `arzu: ${moodLevelTurkish(input.mood.desire)}`,
+        `dikkat yükü: ${daily.energy < 0.4 ? "içe dönük" : "dağılmış"}`
       ].join("; "),
       walk_pressure_effect: [
-        `walk_occurred=${walk.did_walk}`,
-        `movement_pressure=${walk.did_walk ? "present" : "withheld"}`,
-        `route_identity_allowed=false`,
-        `surface_objects_allowed=false`
+        `yürüyüş oldu: ${walk.did_walk ? "evet" : "hayır"}`,
+        `hareket etkisi: ${walk.did_walk ? "mevcut" : "tutulmuş"}`,
+        "rota kimlik işareti olmasın",
+        "yüzey nesnelerini doğrudan kullanma"
       ].join("; "),
       home_pressure_effect: [
-        `memory_pressure=${level(daily.memory_pressure)}`,
-        `social_distance=${daily.energy < 0.4 ? "high" : "measured"}`,
-        `home_identity_allowed=false`
+        `hafıza etkisi: ${levelTurkish(daily.memory_pressure)}`,
+        `toplumsal mesafe: ${daily.energy < 0.4 ? "yüksek" : "ölçülü"}`,
+        "ev kimlik işareti olmasın"
       ].join("; "),
-      outside_openness: `outside_openness=${outsideOpenness}; weather_openness=${weatherOpenness}; place_identity_allowed=false`,
-      surface_policy_summary: "Translate home, place, walk, and object surfaces into rhythm, pressure, fatigue, avoidance, attention, distance, mood, or association.",
+      outside_openness: `dışarıya açıklık: ${outsideOpenness}; hava açıklığı: ${weatherOpenness === "high" ? "yüksek" : weatherOpenness === "medium" ? "orta" : "düşük"}; yer kimlik işareti olmasın`,
+      surface_policy_summary: "Ev, yer, yürüyüş ve nesne yüzeylerini ritme, yorgunluğa, kaçınmaya, dikkate, mesafeye, ruh haline veya çağrışıma dönüştür.",
       genetic_style_effect: input.genetic_style_note
-        ? "genetic_style_available=true; copy_lines=false; reuse_surface_vocabulary=false; retain_only=tone,syntax,rhythm"
-        : "Use accumulated style without copying source lines.",
+        ? "Birikmiş üslup kullanılabilir; satırları veya yüzey kelimelerini kopyalama; yalnızca ton, sözdizimi ve ritmi koru."
+        : "Kaynak satırlarını kopyalamadan birikmiş üslubu kullan.",
       poem_residue_summary: poemResidueSummary(input)
     },
     source_influence_packet: digestPrompt.length > 0
       ? digestPrompt
       : packets.length > 0
-      ? packets.map((packet) => packet.summary_for_prompt)
+      ? packets.map(sourcePacketPrompt)
       : [
-          `influence=attention_shift,mood_pressure; mood=${dominantMood(input.mood).join(",")}; weights=pressure:${level(input.sources.turkey_news.emotional_weight / 100)},aesthetic:${level(input.sources.art_world.curiosity / 100)}`
+          `Dış etki dikkat ve ruh hali üzerinden çalışsın; baskın ruh hali: ${dominantMoodTurkish(input.mood).join(",")}.`
         ],
     memory_trace_packet: {
       selected_trace_ids: input.memory_selection.selected_trace_ids,
@@ -267,16 +320,16 @@ export function buildGenerationContextPacket(input: GenerationContextPacketInput
     surface_policy_packet: {
       home_place_walk_are_identity_tokens: false,
       direct_surface_default: "blocked",
-      allowed_surface_use: "Only after transformation, and never as default imagery or identity anchor.",
-      translation_targets: ["rhythm", "pressure", "fatigue", "avoidance", "attention", "distance", "mood", "association_field"],
+      allowed_surface_use: "Yalnızca dönüştürüldükten sonra kullan; varsayılan imge veya kimlik dayanağı yapma.",
+      translation_targets: ["ritim", "yorgunluk", "kaçınma", "dikkat", "mesafe", "ruh hali", "çağrışım alanı"],
       repeated_surface_term_count: surfaceCount,
-      summary: "Do not repeat supplied home/place/walk/object details directly. Convert their effects before writing."
+      summary: "Verilen ev, yer, yürüyüş ve nesne ayrıntılarını doğrudan tekrarlama; yazmadan önce etkilerine dönüştür."
     },
     title_policy_packet: {
       avoid_repeated_home_place_walk_objects: true,
       avoid_first_line_restatement: true,
-      preferred_basis: ["emotional_shift", "conceptual_drift", "attention_change", "memory_mutation", "rhythm_change"],
-      summary: "Build the title from a change or relation, not from repeated home, place, walk, or object vocabulary."
+      preferred_basis: ["duygusal değişim", "kavramsal kayma", "dikkat değişimi", "hafıza mutasyonu", "ritim değişimi"],
+      summary: "Başlığı tekrar eden ev, yer, yürüyüş veya nesne sözlüğünden değil, bir değişim veya ilişkiden kur."
     }
   };
 }
@@ -284,25 +337,25 @@ export function buildGenerationContextPacket(input: GenerationContextPacketInput
 export function formatLivedContextPacket(packet: GenerationContextPacket): string {
   const lived = packet.persona_safe_lived_context;
   return [
-    `lived_context_effect: ${lived.lived_context_effect}`,
-    `body_attention_effect: ${lived.body_attention_effect}`,
-    `walk_pressure_effect: ${lived.walk_pressure_effect}`,
-    `home_pressure_effect: ${lived.home_pressure_effect}`,
-    `outside_openness: ${lived.outside_openness}`,
-    `surface_policy_summary: ${lived.surface_policy_summary}`,
-    `genetic_style_effect: ${lived.genetic_style_effect}`,
-    ...(lived.poem_residue_summary ? [`poem_residue_summary: ${lived.poem_residue_summary}`] : [])
+    `Yaşanmış bağlam etkisi: ${lived.lived_context_effect}`,
+    `Beden ve dikkat etkisi: ${lived.body_attention_effect}`,
+    `Yürüyüş etkisi: ${lived.walk_pressure_effect}`,
+    `Ev etkisi: ${lived.home_pressure_effect}`,
+    `Dışarı açıklığı: ${lived.outside_openness}`,
+    `Yüzey politikası özeti: ${lived.surface_policy_summary}`,
+    `Birikmiş üslup etkisi: ${lived.genetic_style_effect}`,
+    ...(lived.poem_residue_summary ? [`Şiir kalıntısı özeti: ${lived.poem_residue_summary}`] : [])
   ].join("\n");
 }
 
 export function formatSurfacePolicyPacket(packet: GenerationContextPacket): string {
   const surface = packet.surface_policy_packet;
   return [
-    `home_place_walk_are_identity_tokens: ${surface.home_place_walk_are_identity_tokens}`,
-    `direct_surface_default: ${surface.direct_surface_default}`,
-    `allowed_surface_use: ${surface.allowed_surface_use}`,
-    `translation_targets: ${surface.translation_targets.join(", ")}`,
-    `repeated_surface_term_count: ${surface.repeated_surface_term_count}`,
+    "Ev, yer ve yürüyüş kimlik işareti değildir.",
+    "Doğrudan yüzey kullanımı varsayılan olarak engellidir.",
+    `İzin verilen yüzey kullanımı: ${surface.allowed_surface_use}`,
+    `Dönüşüm hedefleri: ${surface.translation_targets.join(", ")}`,
+    `Tekrar eden yüzey terimi sayısı: ${surface.repeated_surface_term_count}`,
     surface.summary
   ].join("\n");
 }
@@ -310,15 +363,19 @@ export function formatSurfacePolicyPacket(packet: GenerationContextPacket): stri
 export function formatTitlePolicyPacket(packet: GenerationContextPacket): string {
   const title = packet.title_policy_packet;
   return [
-    `avoid_repeated_home_place_walk_objects: ${title.avoid_repeated_home_place_walk_objects}`,
-    `avoid_first_line_restatement: ${title.avoid_first_line_restatement}`,
-    `preferred_basis: ${title.preferred_basis.join(", ")}`,
+    "Tekrar eden ev, yer ve yürüyüş nesnelerinden kaçın.",
+    "İlk satırı başlıkta yeniden söyleme.",
+    `Tercih edilen başlık temeli: ${title.preferred_basis.join(", ")}`,
     title.summary
   ].join("\n");
 }
 
 export function generationContextDebug(input: GenerationContextPacketInput, packet = buildGenerationContextPacket(input)) {
   const livedText = formatLivedContextPacket(packet);
+  const deanchoredLivedText = [
+    packet.persona_safe_lived_context.lived_context_effect,
+    packet.persona_safe_lived_context.body_attention_effect
+  ].join("\n");
   const surfaceText = formatSurfacePolicyPacket(packet);
   const packetText = [
     livedText,
@@ -333,7 +390,7 @@ export function generationContextDebug(input: GenerationContextPacketInput, pack
     raw_json_context_removed: !packetText.includes(JSON.stringify(input.daily_life)) && !packetText.includes(JSON.stringify(input.walk_state)),
     home_place_deanchored:
       packet.surface_policy_packet.home_place_walk_are_identity_tokens === false &&
-      !tokenize(livedText).some((term) => blocked.has(term)),
+      !tokenize(deanchoredLivedText).some((term) => blocked.has(term)),
     source_influence_packet_present: packet.source_influence_packet.length > 0,
     source_digest_available: Boolean(input.source_digest?.safety.valid),
     source_digest_provider: input.source_digest?.provider ?? null,
