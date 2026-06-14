@@ -1,11 +1,31 @@
 {
   "date": "2026-06-14",
-  "generated_at": "2026-06-14T09:27:53.081Z",
+  "generated_at": "2026-06-14T09:39:56.159Z",
   "provider": "deterministic",
   "model": null,
-  "fallback_reason": "OPENAI_API_KEY is not set",
+  "fallback_reason": "OpenAI response had no valid source digest",
   "private_factual_digest": {
     "items": [
+      {
+        "source_title": "Trump'a göre ABD-İran anlaşması pazar günü imzalanacak, İran zamanlama konusunda şüpheli",
+        "url": "https://www.bbc.com/turkce/articles/crel8lqpeleo?at_medium=RSS&at_campaign=rss",
+        "source_name": "BBC Türkçe",
+        "category": "news",
+        "factual_summary": "Trump'a göre ABD-İran anlaşması pazar günü imzalanacak, İran zamanlama konusunda şüpheli",
+        "detected_entities": [
+          "Trump'a",
+          "ABD-İran",
+          "İran"
+        ],
+        "topics": [
+          "günü",
+          "konusunda",
+          "zamanlama",
+          "anlaşmanın",
+          "anlaşması",
+          "arasındaki"
+        ]
+      },
       {
         "source_title": "Türkiye, 2026 Dünya Kupası'ndaki ilk maçında Avustralya'ya 2-0 yenildi",
         "url": "https://www.bbc.com/turkce/articles/c5yzv5vg0yyo?at_medium=RSS&at_campaign=rss",
@@ -63,27 +83,6 @@
         ]
       },
       {
-        "source_title": "Avrupa Parlamentosu'nun Bakan Gürlek'e yaptırım çağrısı ne anlama geliyor?",
-        "url": "https://www.bbc.com/turkce/articles/cwy0eq16v70o?at_medium=RSS&at_campaign=rss",
-        "source_name": "BBC Türkçe",
-        "category": "news",
-        "factual_summary": "Avrupa Parlamentosu'nun Bakan Gürlek'e yaptırım çağrısı ne anlama geliyor?",
-        "detected_entities": [
-          "Avrupa",
-          "Parlamentosu'nun",
-          "Bakan",
-          "Gürlek'e"
-        ],
-        "topics": [
-          "yaptırım",
-          "anlama",
-          "çağrısı",
-          "ilk",
-          "alması",
-          "aşamada"
-        ]
-      },
-      {
         "source_title": "'Ozempic kalçası': Zayıflama iğnelerinin yarattığı kas kaybına karşı yeni ilaç",
         "url": "https://www.bbc.com/turkce/articles/cy8w03g3p27o?at_medium=RSS&at_campaign=rss",
         "source_name": "BBC Türkçe",
@@ -124,40 +123,38 @@
         ]
       },
       {
-        "source_title": "İstanbul’da en çok tüketilen meyve ve sebze belli oldu",
-        "url": "https://www.birgun.net/haber/istanbulda-en-cok-tuketilen-meyve-ve-sebze-belli-oldu-718152",
+        "source_title": "12 il için kuvvetli yağış uyarısı",
+        "url": "https://www.birgun.net/haber/12-il-icin-kuvvetli-yagis-uyarisi-718159",
         "source_name": "BirGün",
         "category": "news",
-        "factual_summary": "İstanbul’da en çok tüketilen meyve ve sebze belli oldu",
-        "detected_entities": [
-          "İstanbul’da"
-        ],
+        "factual_summary": "12 il için kuvvetli yağış uyarısı",
+        "detected_entities": [],
         "topics": [
-          "ayın",
-          "ayında",
-          "belli",
-          "domatesi",
-          "ise",
-          "karpuzu"
+          "kuvvetli",
+          "baskını",
+          "bulundu",
+          "dikkatli",
+          "dolu",
+          "gök"
         ]
       },
       {
-        "source_title": "AKOM tarih verdi: İstanbul için sağanak uyarısı",
-        "url": "https://www.birgun.net/haber/akom-tarih-verdi-istanbul-icin-saganak-uyarisi-718151",
+        "source_title": "Sendika barajına yargı freni: İkramiyeler faiziyle geri ödenecek",
+        "url": "https://www.birgun.net/haber/sendika-barajina-yargi-freni-ikramiyeler-faiziyle-geri-odenecek-718158",
         "source_name": "BirGün",
         "category": "news",
-        "factual_summary": "AKOM tarih verdi: İstanbul için sağanak uyarısı",
+        "factual_summary": "Sendika barajına yargı freni: İkramiyeler faiziyle geri ödenecek",
         "detected_entities": [
-          "AKOM",
-          "İstanbul"
+          "Sendika",
+          "İkramiyeler"
         ],
         "topics": [
-          "sağanak",
-          "bekleniyor",
-          "günü",
-          "haftada",
-          "kentte",
-          "raporuna"
+          "faiziyle",
+          "geri",
+          "açısından",
+          "açtığı",
+          "barajı",
+          "barajına"
         ]
       },
       {
@@ -265,6 +262,29 @@
         ]
       },
       {
+        "source_title": "Etrüsk Kuyusundaki Çekirdekler, Şarabın Kökenini Gösteriyor",
+        "url": "https://arkeofili.com/etrusk-kuyusundaki-cekirdekler-sarabin-kokenini-gosteriyor/",
+        "source_name": "Arkeofili",
+        "category": "science_culture",
+        "factual_summary": "Etrüsk Kuyusundaki Çekirdekler, Şarabın Kökenini Gösteriyor",
+        "detected_entities": [
+          "Etrüsk",
+          "Kuyusundaki",
+          "Çekirdekler",
+          "Şarabın",
+          "Kökenini",
+          "Gösteriyor"
+        ],
+        "topics": [
+          "bulunan",
+          "burada",
+          "çekirdekleri",
+          "derinlikteki",
+          "hakkında",
+          "koyuyor"
+        ]
+      },
+      {
         "source_title": "Bu 3.000 Yıllık Peynir, Öbür Dünya İçin Yiyecek Olarak Sunulmuş",
         "url": "https://arkeofili.com/bu-3-000-yillik-peynir-obur-dunya-icin-yiyecek-olarak-sunulmus/",
         "source_name": "Arkeofili",
@@ -360,28 +380,6 @@
           "bireylerin",
           "burada",
           "davranıyor"
-        ]
-      },
-      {
-        "source_title": "Homo Erectus 1,79 Milyon Yıl Önce Mağaraya Ateş Taşımış",
-        "url": "https://arkeofili.com/homo-erectus-179-milyon-yil-once-magaraya-ates-tasimis/",
-        "source_name": "Arkeofili",
-        "category": "science_culture",
-        "factual_summary": "Homo Erectus 1,79 Milyon Yıl Önce Mağaraya Ateş Taşımış",
-        "detected_entities": [
-          "Homo",
-          "Erectus",
-          "Milyon",
-          "Yıl",
-          "Önce",
-          "Mağaraya",
-          "Ateş",
-          "Taşımış"
-        ],
-        "topics": [
-          "başlamış",
-          "bulunan",
-          "burada"
         ]
       },
       {
@@ -606,7 +604,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://arkeofili.com/feed/",
-        "lastCheckedAt": "2026-06-14T08:51:47.342Z",
+        "lastCheckedAt": "2026-06-14T09:39:30.383Z",
         "attemptedUrls": [
           "https://arkeofili.com/feed/"
         ],
@@ -622,7 +620,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://evrimagaci.org/rss.xml",
-        "lastCheckedAt": "2026-06-14T08:51:47.344Z",
+        "lastCheckedAt": "2026-06-14T09:39:30.385Z",
         "attemptedUrls": [
           "https://evrimagaci.org/rss.xml"
         ],
@@ -638,7 +636,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://altyazi.net/feed/",
-        "lastCheckedAt": "2026-06-14T08:51:47.344Z",
+        "lastCheckedAt": "2026-06-14T09:39:30.386Z",
         "attemptedUrls": [
           "https://altyazi.net/feed/"
         ],
@@ -654,7 +652,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.otekisinema.com/feed/",
-        "lastCheckedAt": "2026-06-14T08:51:47.904Z",
+        "lastCheckedAt": "2026-06-14T09:39:30.911Z",
         "attemptedUrls": [
           "https://www.otekisinema.com/feed/"
         ],
@@ -670,7 +668,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.bagimsizsinema.com/feed",
-        "lastCheckedAt": "2026-06-14T08:51:48.458Z",
+        "lastCheckedAt": "2026-06-14T09:39:31.621Z",
         "attemptedUrls": [
           "https://www.bagimsizsinema.com/feed"
         ],
@@ -686,7 +684,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://artdogistanbul.com/feed/",
-        "lastCheckedAt": "2026-06-14T08:51:48.480Z",
+        "lastCheckedAt": "2026-06-14T09:39:31.763Z",
         "attemptedUrls": [
           "https://artdogistanbul.com/feed/"
         ],
@@ -702,7 +700,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://argonotlar.com/feed/",
-        "lastCheckedAt": "2026-06-14T08:51:49.024Z",
+        "lastCheckedAt": "2026-06-14T09:39:32.724Z",
         "attemptedUrls": [
           "https://argonotlar.com/feed/"
         ],
@@ -718,7 +716,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.arkitera.com/feed/",
-        "lastCheckedAt": "2026-06-14T08:51:49.287Z",
+        "lastCheckedAt": "2026-06-14T09:39:32.987Z",
         "attemptedUrls": [
           "https://www.arkitera.com/feed/"
         ],
@@ -734,7 +732,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.artkolik.net/feed",
-        "lastCheckedAt": "2026-06-14T08:51:49.646Z",
+        "lastCheckedAt": "2026-06-14T09:39:33.017Z",
         "attemptedUrls": [
           "https://www.artkolik.net/feed"
         ],
@@ -750,7 +748,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://terrabayt.com/feed/",
-        "lastCheckedAt": "2026-06-14T08:51:49.877Z",
+        "lastCheckedAt": "2026-06-14T09:39:33.965Z",
         "attemptedUrls": [
           "https://terrabayt.com/feed/"
         ],
@@ -766,7 +764,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.nouvart.net/feed/",
-        "lastCheckedAt": "2026-06-14T08:51:50.425Z",
+        "lastCheckedAt": "2026-06-14T09:39:34.002Z",
         "attemptedUrls": [
           "https://www.nouvart.net/feed/"
         ],
@@ -782,7 +780,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds2.feedburner.com/itsnicethat/SlXC",
-        "lastCheckedAt": "2026-06-14T08:51:50.505Z",
+        "lastCheckedAt": "2026-06-14T09:39:34.543Z",
         "attemptedUrls": [
           "https://feeds2.feedburner.com/itsnicethat/SlXC"
         ],
@@ -798,7 +796,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://thecreativeindependent.com/feed.xml",
-        "lastCheckedAt": "2026-06-14T08:51:50.652Z",
+        "lastCheckedAt": "2026-06-14T09:39:34.967Z",
         "attemptedUrls": [
           "https://thecreativeindependent.com/feed.xml"
         ],
@@ -814,7 +812,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://bantmag.com/feed/",
-        "lastCheckedAt": "2026-06-14T08:51:50.733Z",
+        "lastCheckedAt": "2026-06-14T09:39:34.988Z",
         "attemptedUrls": [
           "https://bantmag.com/feed/"
         ],
@@ -830,7 +828,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://manifold.press/rss",
-        "lastCheckedAt": "2026-06-14T08:51:50.781Z",
+        "lastCheckedAt": "2026-06-14T09:39:35.104Z",
         "attemptedUrls": [
           "https://manifold.press/rss"
         ],
@@ -846,7 +844,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://playtusu.com/feed/",
-        "lastCheckedAt": "2026-06-14T08:51:51.159Z",
+        "lastCheckedAt": "2026-06-14T09:39:35.126Z",
         "attemptedUrls": [
           "https://playtusu.com/feed/"
         ],
@@ -862,7 +860,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://vesaire.press/feed/",
-        "lastCheckedAt": "2026-06-14T08:51:51.209Z",
+        "lastCheckedAt": "2026-06-14T09:39:35.659Z",
         "attemptedUrls": [
           "https://vesaire.press/feed/"
         ],
@@ -878,7 +876,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds.bbci.co.uk/turkce/rss.xml",
-        "lastCheckedAt": "2026-06-14T08:51:51.369Z",
+        "lastCheckedAt": "2026-06-14T09:39:35.828Z",
         "attemptedUrls": [
           "https://feeds.bbci.co.uk/turkce/rss.xml"
         ],
@@ -894,7 +892,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.birgun.net/rss/home",
-        "lastCheckedAt": "2026-06-14T08:51:51.587Z",
+        "lastCheckedAt": "2026-06-14T09:39:35.963Z",
         "attemptedUrls": [
           "https://www.birgun.net/rss/home"
         ],
@@ -910,7 +908,7 @@
         "status": "blocked_403",
         "item_count": 0,
         "usedUrl": "https://www.diken.com.tr/feed.xml",
-        "lastCheckedAt": "2026-06-14T08:51:51.603Z",
+        "lastCheckedAt": "2026-06-14T09:39:35.992Z",
         "attemptedUrls": [
           "https://www.diken.com.tr/feed/",
           "https://www.diken.com.tr/feed",
@@ -930,7 +928,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.radikal.com.tr/feed/",
-        "lastCheckedAt": "2026-06-14T08:51:51.744Z",
+        "lastCheckedAt": "2026-06-14T09:39:36.030Z",
         "attemptedUrls": [
           "https://www.radikal.com.tr/feed/"
         ],
@@ -946,7 +944,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.cumhuriyet.com.tr/rss",
-        "lastCheckedAt": "2026-06-14T08:51:51.837Z",
+        "lastCheckedAt": "2026-06-14T09:39:36.179Z",
         "attemptedUrls": [
           "https://www.cumhuriyet.com.tr/rss/son_dakika.xml"
         ],
@@ -962,7 +960,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://istanbullife.com.tr/feed/",
-        "lastCheckedAt": "2026-06-14T08:51:52.012Z",
+        "lastCheckedAt": "2026-06-14T09:39:36.359Z",
         "attemptedUrls": [
           "https://istanbullife.com.tr/feed/"
         ],
@@ -978,11 +976,12 @@
       "ağırlaşan",
       "içeride",
       "kabaran",
+      "açısından",
+      "açtığı",
       "ağırlıkla",
-      "alması",
       "altından",
-      "anlama",
-      "aracılığıyla",
+      "anlaşmanın",
+      "anlaşması",
       "basıncı",
       "duvarı",
       "görüntü",
@@ -999,8 +998,9 @@
     ],
     "conceptual_drifts": [
       "bulunan / burada",
-      "olabilir / açılan",
-      "derin / zaman"
+      "çekirdekleri / derinlikteki",
+      "hakkında / koyuyor",
+      "açılan / derin"
     ],
     "aesthetic_cues": [
       "aidiyet / bugüne",
@@ -1040,8 +1040,8 @@
       "gündelik / içi / şehir / temas"
     ],
     "rejected_unsafe_terms": [
-      "raw_entity_or_source:4",
-      "repeated_abstract_term:2"
+      "raw_entity_or_source:3",
+      "repeated_abstract_term:1"
     ],
     "do_not_surface_terms": [
       "ağır",
@@ -1095,21 +1095,22 @@
         "politik",
         "ağırlaşan",
         "içeride",
-        "ilk",
         "kabaran",
+        "açısından",
+        "açtığı",
         "ağırlıkla",
-        "alması",
         "altından",
-        "anlama",
-        "aracılığıyla",
+        "anlaşmanın",
+        "anlaşması",
         "basıncı"
       ],
       "novelty_terms": [
+        "açısından",
+        "açtığı",
         "ağırlıkla",
-        "alması",
         "altından",
-        "anlama",
-        "aracılığıyla",
+        "anlaşmanın",
+        "anlaşması",
         "basıncı"
       ],
       "repeated_terms": [
@@ -1117,20 +1118,19 @@
         "politik",
         "ağırlaşan",
         "içeride",
-        "ilk",
         "kabaran"
       ],
       "rejected_terms": [
-        "raw_entity_or_source:4",
-        "repeated_abstract_term:2"
+        "raw_entity_or_source:3",
+        "repeated_abstract_term:1"
       ],
       "mood_bias": [
         "fatigue",
         "anger",
         "clarity"
       ],
-      "aesthetic_weight": 0.13,
-      "conceptual_weight": 0.34,
+      "aesthetic_weight": 0.14,
+      "conceptual_weight": 0.33,
       "rhythm_weight": 0.44,
       "pressure_weight": 1,
       "summary_for_prompt": "gündelik / politik / ağırlaşan / içeride; doğrudan yanıt vermeyen soru dönüşü"
@@ -1173,8 +1173,8 @@
         "hafıza"
       ],
       "rejected_terms": [
-        "raw_entity_or_source:4",
-        "repeated_abstract_term:2"
+        "raw_entity_or_source:3",
+        "repeated_abstract_term:1"
       ],
       "mood_bias": [
         "clarity",
@@ -1206,14 +1206,14 @@
         "alet",
         "ancak",
         "aşamaları",
-        "başlamış"
+        "bazalt"
       ],
       "novelty_terms": [
         "akla",
         "alet",
         "ancak",
         "aşamaları",
-        "başlamış"
+        "bazalt"
       ],
       "repeated_terms": [
         "açılan",
@@ -1225,8 +1225,8 @@
         "bulunan"
       ],
       "rejected_terms": [
-        "raw_entity_or_source:4",
-        "repeated_abstract_term:2"
+        "raw_entity_or_source:3",
+        "repeated_abstract_term:1"
       ],
       "mood_bias": [
         "clarity",
@@ -1278,8 +1278,8 @@
       ],
       "rejected_terms": [
         "proper_or_source_name:1",
-        "raw_entity_or_source:4",
-        "repeated_abstract_term:2"
+        "raw_entity_or_source:3",
+        "repeated_abstract_term:1"
       ],
       "mood_bias": [
         "absurdity",
@@ -1332,8 +1332,8 @@
       ],
       "rejected_terms": [
         "proper_or_source_name:5",
-        "raw_entity_or_source:4",
-        "repeated_abstract_term:2"
+        "raw_entity_or_source:3",
+        "repeated_abstract_term:1"
       ],
       "mood_bias": [
         "tenderness",
