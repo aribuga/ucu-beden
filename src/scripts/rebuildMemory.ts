@@ -1,4 +1,4 @@
-import { ensureDataDirs, getLatestPoem, listDreams, listGeneratedPoems, listSources, readWorld } from "../lib/fileStorage";
+import { ensureDataDirs, getLatestPoem, listDreams, listGeneratedPoems, listSourceDigests, listSources, readWorld } from "../lib/fileStorage";
 import { validateMemoryCycleIntegrity } from "../lib/memoryCycle";
 import { buildMemoryGraphData } from "../lib/memoryGraph";
 import {
@@ -11,6 +11,7 @@ import {
 } from "../lib/memoryTraceEngine";
 import { analyzeRepetitionPressure } from "../lib/repetitionPressure";
 import { analyzeSourceDigest, validateSourceInfluence } from "../lib/sourceInfluence";
+import { validateSourceDigests } from "../lib/sourceDigestion";
 import { validateStoredSurfaceRecords } from "../lib/surfaceValidator";
 import type { MemorySelection, MemoryTrace } from "../lib/types";
 
@@ -37,9 +38,10 @@ async function main(): Promise<void> {
   const repeatedArchive = shouldValidate ? await buildMemoryArchive() : null;
   if (!dryRun) await writeMemoryArchive(archive);
   const validation = shouldValidate ? await validateMemoryArchive(archive) : null;
-  const [latestPoem, sources, poems, dreams, repetition, world] = await Promise.all([
+  const [latestPoem, sources, sourceDigests, poems, dreams, repetition, world] = await Promise.all([
     getLatestPoem(),
     listSources(),
+    listSourceDigests(),
     listGeneratedPoems(),
     listDreams(),
     analyzeRepetitionPressure(),
@@ -66,6 +68,7 @@ async function main(): Promise<void> {
   const deterministicRebuild = !repeatedArchive || memoryArchiveStateSignature(archive) === memoryArchiveStateSignature(repeatedArchive);
   const sourceDigest = analyzeSourceDigest(sources);
   const sourceInfluenceValidation = validateSourceInfluence(sources);
+  const sourceDigestionValidation = validateSourceDigests(sourceDigests, sources);
   const surfaceValidation = shouldValidate
     ? await validateStoredSurfaceRecords({ poems, dreams, traces: archive.traces, sources, world, repetition })
     : null;
@@ -74,6 +77,7 @@ async function main(): Promise<void> {
     (cycleValidation?.valid ?? true) &&
     promptValidation.valid &&
     sourceInfluenceValidation.valid &&
+    sourceDigestionValidation.valid &&
     (surfaceValidation?.valid ?? true) &&
     deterministicRebuild;
   console.log(
@@ -100,6 +104,7 @@ async function main(): Promise<void> {
         dream_suppressed_preference: cycleValidation?.dream_suppressed_preference ?? null,
         source_digest: sourceDigest,
         source_influence_validation: sourceInfluenceValidation,
+        source_digestion_validation: sourceDigestionValidation,
         surface_validation: surfaceValidation,
         metadata_records: cycleValidation?.metadata_records ?? null,
         deterministic_rebuild: {

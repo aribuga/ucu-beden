@@ -1,4 +1,4 @@
-import { getLatestPoem, listDreams, listGeneratedPoems, listSources, readDailyLife, readInputAnalysis, readPersonalitySettings, readState, readWorld } from "../lib/fileStorage";
+import { getLatestPoem, listDreams, listGeneratedPoems, listSourceDigests, listSources, readDailyLife, readInputAnalysis, readPersonalitySettings, readState, readWorld } from "../lib/fileStorage";
 import { generationContextDebug, type GenerationContextPacketInput } from "../lib/generationContextPacket";
 import { validateMemoryCycleIntegrity } from "../lib/memoryCycle";
 import { buildMemoryGraphData } from "../lib/memoryGraph";
@@ -12,6 +12,7 @@ import {
 } from "../lib/memoryTraceEngine";
 import { analyzeRepetitionPressure } from "../lib/repetitionPressure";
 import { analyzeSourceDigest, validateSourceInfluence } from "../lib/sourceInfluence";
+import { validateSourceDigests } from "../lib/sourceDigestion";
 import { buildDreamPromptSections } from "../lib/dreamEngine";
 import { buildPoemPromptSections } from "../lib/poemGenerator";
 import type { GenerationContext, MemoryReport, MemorySelection } from "../lib/types";
@@ -62,11 +63,12 @@ async function main(): Promise<void> {
   if (args.includes("--write")) throw new Error("debug:memory-cycle is read-only and does not support --write.");
   const archive = await buildMemoryArchive();
   const repeatedArchive = await buildMemoryArchive();
-  const [latestPoem, poems, dreams, sources, repetition, state, world, inputAnalysis, personality] = await Promise.all([
+  const [latestPoem, poems, dreams, sources, sourceDigests, repetition, state, world, inputAnalysis, personality] = await Promise.all([
     getLatestPoem(),
     listGeneratedPoems(),
     listDreams(),
     listSources(),
+    listSourceDigests(),
     analyzeRepetitionPressure(),
     readState(),
     readWorld(),
@@ -114,6 +116,8 @@ async function main(): Promise<void> {
   const dreamVoice = buildUcuBedenVoicePrompt({ mode: "dream" });
   const sourceDigest = analyzeSourceDigest(sources);
   const sourceInfluenceValidation = validateSourceInfluence(sources);
+  const latestStoredDigest = latestPoem ? sourceDigests.find((digest) => digest.date === latestPoem.date) ?? null : sourceDigests.at(-1) ?? null;
+  const sourceDigestionValidation = validateSourceDigests(sourceDigests, sources);
   const generationContext =
     latestPoem && latestDailyLife
       ? (() => {
@@ -122,6 +126,7 @@ async function main(): Promise<void> {
             date,
             mood,
             sources: latestPoem.sources,
+            source_digest: latestStoredDigest,
             daily_life: latestDailyLife,
             walk_state: latestPoem.walk_state,
             memory_selection: poemSelection,
@@ -147,7 +152,7 @@ async function main(): Promise<void> {
             memory_selection: poemSelection,
             repetition_pressure: repetition
           };
-          const dreamParams = { date, poem: latestPoem, dailyLife: latestDailyLife, state, repetition, memorySelection: dreamSelection };
+          const dreamParams = { date, poem: latestPoem, dailyLife: latestDailyLife, state, repetition, memorySelection: dreamSelection, sourceDigest: latestStoredDigest };
           return {
             poem: { ...generationContextDebug(poemInput), prompt_sections: buildPoemPromptSections(poemContext) },
             dream: { ...generationContextDebug(dreamInput), prompt_sections: buildDreamPromptSections(dreamParams) }
@@ -201,6 +206,30 @@ async function main(): Promise<void> {
           ...sourceDigest,
           validation: sourceInfluenceValidation
         },
+        source_digestion: latestStoredDigest
+          ? {
+              source_digest_available: true,
+              source_digest_provider: latestStoredDigest.provider,
+              source_count: latestStoredDigest.private_factual_digest.items.length,
+              category_distribution: Object.fromEntries(
+                Array.from(new Set(latestStoredDigest.private_factual_digest.items.map((item) => item.category))).map((category) => [
+                  category,
+                  latestStoredDigest.private_factual_digest.items.filter((item) => item.category === category).length
+                ])
+              ),
+              safe_vocabulary_candidates: latestStoredDigest.public_poetic_digest.safe_vocabulary_candidates,
+              conceptual_drifts: latestStoredDigest.public_poetic_digest.conceptual_drifts,
+              aesthetic_cues: latestStoredDigest.public_poetic_digest.aesthetic_cues,
+              rhythm_cues: latestStoredDigest.public_poetic_digest.rhythm_cues,
+              sentence_moves: latestStoredDigest.public_poetic_digest.sentence_moves,
+              rejected_unsafe_terms: latestStoredDigest.public_poetic_digest.rejected_unsafe_terms,
+              repeated_abstract_terms: latestStoredDigest.public_poetic_digest.repeated_abstract_terms,
+              validation: sourceDigestionValidation
+            }
+          : {
+              source_digest_available: false,
+              validation: sourceDigestionValidation
+            },
         generation_context: generationContext,
         generation_context_validation: generationContextValidation,
         poem_prompt_guard: {
@@ -248,6 +277,7 @@ async function main(): Promise<void> {
     !archiveValidation.valid ||
     !cycleValidation.valid ||
     !sourceInfluenceValidation.valid ||
+    !sourceDigestionValidation.valid ||
     !generationContextValidation.valid ||
     !poemGuard.valid ||
     !dreamGuard.valid ||

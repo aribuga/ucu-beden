@@ -6,6 +6,7 @@ import type {
   RssSourceCategory,
   SourceBundle,
   SourceDigestAnalysis,
+  SourceDigestRecord,
   SourceInfluenceKind,
   SourceInfluencePacket,
   SourceInfluenceValidation
@@ -134,7 +135,7 @@ function urlTerms(value: string | undefined): string[] {
   }
 }
 
-function unsafeTermSet(items: MoodTaggedSourceItem[], bundle?: SourceBundle): Set<string> {
+export function sourceUnsafeTermSet(items: MoodTaggedSourceItem[], bundle?: SourceBundle): Set<string> {
   const rawTerms = items.flatMap((item) => [
     item.source,
     ...probableEntityTerms(item.title),
@@ -178,7 +179,7 @@ export function filterSafeSourceTerms(params: { terms: string[]; raw_text: strin
 }
 
 function termCandidates(items: MoodTaggedSourceItem[], bundle?: SourceBundle) {
-  const unsafeTerms = unsafeTermSet(items, bundle);
+  const unsafeTerms = sourceUnsafeTermSet(items, bundle);
   const counts = new Map<string, number>();
   const rejected = new Map<string, number>();
   for (const term of items.flatMap((item) => [...item.keywords, ...tokenize(item.shortAtmosphere)])) {
@@ -262,8 +263,10 @@ export function buildSourceInfluencePackets(
   });
 }
 
-export function sourceInfluencePacketsForBundle(bundle: SourceBundle, history: SourceBundle[] = []): SourceInfluencePacket[] {
-  return bundle.rss?.source_influence_packet ?? buildSourceInfluencePackets(bundle.rss?.items ?? [], history, bundle);
+export function sourceInfluencePacketsForBundle(bundle: SourceBundle, history: SourceBundle[] = [], digest?: SourceDigestRecord | null): SourceInfluencePacket[] {
+  return digest?.date === bundle.date && digest.source_influence_packet.length > 0
+    ? digest.source_influence_packet
+    : bundle.rss?.source_influence_packet ?? buildSourceInfluencePackets(bundle.rss?.items ?? [], history, bundle);
 }
 
 export function sourceInfluenceSummaryForPrompt(packets: SourceInfluencePacket[]): string {
@@ -358,7 +361,7 @@ export function analyzeSourceDigest(sources: SourceBundle[], windowDays = 7): So
   };
 }
 
-function textUnsafeMatches(text: string, unsafeTerms: Set<string>): string[] {
+export function sourcePublicTextUnsafeMatches(text: string, unsafeTerms: Set<string>): string[] {
   const words = new Set(tokenize(text));
   return distinct([
     ...(/https?:|www\.|@/i.test(text) ? ["url_or_contact"] : []),
@@ -377,9 +380,9 @@ export function validateSourceInfluence(sources: SourceBundle[], windowDays = 7)
   const nonNewsRepresented = categoriesWithPackets.filter((category) => category !== "news");
   const nonNewsIgnored = nonNewsAvailable.filter((category) => !nonNewsRepresented.includes(category));
   const unsafePacketText = rows.flatMap(({ bundle, packet }) => {
-    const unsafe = unsafeTermSet((bundle.rss?.items ?? []).filter((item) => item.category === packet.category), bundle);
+    const unsafe = sourceUnsafeTermSet((bundle.rss?.items ?? []).filter((item) => item.category === packet.category), bundle);
     const text = `${packet.safe_terms.join(" ")} ${packet.novelty_terms.join(" ")} ${packet.repeated_terms.join(" ")} ${packet.summary_for_prompt}`;
-    const matches = textUnsafeMatches(text, unsafe);
+    const matches = sourcePublicTextUnsafeMatches(text, unsafe);
     return matches.length > 0 ? [{ date: bundle.date, category: packet.category, matches }] : [];
   });
   const digest = analyzeSourceDigest(sources, windowDays);

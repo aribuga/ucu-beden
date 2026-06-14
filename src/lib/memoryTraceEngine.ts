@@ -5,6 +5,7 @@ import {
   listFiles,
   listGeneratedPoems,
   listMemoryTraces,
+  listSourceDigests,
   listSources,
   pathExists,
   readJsonFile,
@@ -29,6 +30,7 @@ import type {
   MoodKey,
   RepetitionPressure,
   SourceBundle,
+  SourceDigestRecord,
   WalkState
 } from "./types";
 
@@ -337,14 +339,16 @@ function walkDraft(date: string, walk: WalkState, mood: Mood): TraceDraft | null
   });
 }
 
-function sourceDrafts(bundle: SourceBundle, dailyLife: DailyLifeRecord | undefined, history: SourceBundle[]): TraceDraft[] {
-  const packets = sourceInfluencePacketsForBundle(bundle, history);
+function sourceDrafts(bundle: SourceBundle, dailyLife: DailyLifeRecord | undefined, history: SourceBundle[], digest?: SourceDigestRecord): TraceDraft[] {
+  const packets = sourceInfluencePacketsForBundle(bundle, history, digest);
   if (packets.length > 0) {
     return packets.map((packet) =>
       draft({
         date: bundle.date,
         source: "source",
-        source_ref: `${storagePaths.sources}/${bundle.date}.json#source_influence_packet:${packet.category}`,
+        source_ref: digest
+          ? `${storagePaths.sourceDigests}/${bundle.date}.json#source_influence_packet:${packet.category}`
+          : `${storagePaths.sources}/${bundle.date}.json#source_influence_packet:${packet.category}`,
         kind: "external_pressure",
         text: compact([packet.category, packet.influence_kind.join(" / "), packet.mood_bias.join(" / ")].filter(Boolean).join(" | ")),
         transformed_text: compact(packet.summary_for_prompt),
@@ -586,7 +590,7 @@ async function readDailyLifeRecords(): Promise<DailyLifeRecord[]> {
 }
 
 export async function buildMemoryArchive(): Promise<MemoryArchive> {
-  const [poems, dreams, dailyLife, sources] = await Promise.all([listGeneratedPoems(), listDreams(), readDailyLifeRecords(), listSources()]);
+  const [poems, dreams, dailyLife, sources, sourceDigests] = await Promise.all([listGeneratedPoems(), listDreams(), readDailyLifeRecords(), listSources(), listSourceDigests()]);
   const poemByDate = new Map(poems.map((poem) => [poem.date, poem]));
   const dailyByDate = new Map(dailyLife.map((record) => [record.date, record]));
   const drafts: TraceDraft[] = [];
@@ -597,7 +601,8 @@ export async function buildMemoryArchive(): Promise<MemoryArchive> {
     if (walkItem) drafts.push(walkItem);
   }
   for (const record of dailyLife) drafts.push(...dailyLifeDrafts(record));
-  for (const source of sources) drafts.push(...sourceDrafts(source, dailyByDate.get(source.date), sources.filter((item) => item.date < source.date)));
+  const digestByDate = new Map(sourceDigests.map((digest) => [digest.date, digest]));
+  for (const source of sources) drafts.push(...sourceDrafts(source, dailyByDate.get(source.date), sources.filter((item) => item.date < source.date), digestByDate.get(source.date)));
   for (const dream of dreams) {
     const item = dreamDraft(dream, poemByDate.get(dream.source_date));
     if (item) drafts.push(item);

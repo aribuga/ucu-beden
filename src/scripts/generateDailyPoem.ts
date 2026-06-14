@@ -18,6 +18,7 @@ import { generateVisualImage } from "../lib/openaiImageProvider";
 import { generatePoemWithLLM } from "../lib/poemGenerator";
 import { parseGenerationArgs, todayInIstanbul } from "../lib/scheduler";
 import { collectSources } from "../lib/sourceCollectors";
+import { ensureSourceDigest } from "../lib/sourceDigestService";
 import { createWalkState } from "../lib/walkEngine";
 import { createDailyLife } from "../lib/worldEngine";
 import { analyzeRepetitionPressure } from "../lib/repetitionPressure";
@@ -35,6 +36,8 @@ async function main(): Promise<void> {
   if (!args.force && (await pathExists(poemPath))) {
     const sources = await collectSources(date);
     await writeJsonFile(`${storagePaths.sources}/${date}.json`, sources);
+    const digestResult = await ensureSourceDigest({ source: sources, force: args.force });
+    console.log(JSON.stringify({ stage: "source_digest", status: digestResult.status, date, provider: digestResult.digest.provider, safety_valid: digestResult.digest.safety.valid }));
     const existingPoem = await readJsonFile<DailyPoem | null>(poemPath, null);
     if (existingPoem) {
       if (!(await pathExists(`${storagePaths.dailyLife}/${date}.json`))) {
@@ -80,6 +83,9 @@ async function main(): Promise<void> {
     readPersonalitySettings()
   ]);
   await writeJsonFile(`${storagePaths.sources}/${date}.json`, sources);
+  const digestResult = await ensureSourceDigest({ source: sources, force: args.force });
+  const sourceDigest = digestResult.digest;
+  console.log(JSON.stringify({ stage: "source_digest", status: digestResult.status, date, provider: sourceDigest.provider, safety_valid: sourceDigest.safety.valid }));
 
   const ageMonths = existingPoem?.age_months ?? nextAgeMonths(previousState.age_months);
   const ageDisplay = formatAge(ageMonths);
@@ -104,6 +110,7 @@ async function main(): Promise<void> {
     state: previousState,
     world,
     sources,
+    source_digest: sourceDigest,
     input_analysis: inputAnalysis,
     mood,
     mood_sentence: sentence,

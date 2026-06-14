@@ -6,6 +6,7 @@ import {
   readDailyLife,
   readJsonFile,
   readPersonalitySettings,
+  readSourceDigest,
   readState,
   storagePaths,
   writeJsonFile
@@ -49,10 +50,11 @@ async function main(): Promise<void> {
     throw new Error(`Dream generation needs a completed poem for ${sourceDate}.`);
   }
 
-  const [state, personality, repetition] = await Promise.all([
+  const [state, personality, repetition, sourceDigest] = await Promise.all([
     readState(),
     readPersonalitySettings(),
-    analyzeRepetitionPressure()
+    analyzeRepetitionPressure(),
+    readSourceDigest(sourceDate)
   ]);
   const existingDailyLife = await readDailyLife(sourceDate);
   const dailyLife =
@@ -77,7 +79,7 @@ async function main(): Promise<void> {
     prompt_fragments: promptValidation.safe_fragments,
     memory_prompt_fragments: promptValidation.safe_fragments
   };
-  const dream = await generateDream({ date: sourceDate, poem, dailyLife, state, repetition, memorySelection: safeMemorySelection });
+  const dream = await generateDream({ date: sourceDate, poem, dailyLife, state, repetition, memorySelection: safeMemorySelection, sourceDigest });
   const visual = await generateVisualImage(createDreamVisual(dream), { force: args.force });
   dream.visual_prompt = visual.visual_prompt;
   dream.image_path = visual.image_path;
