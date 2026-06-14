@@ -28,8 +28,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-06-10_contact_residue_legacy_inferred_e1c7a94f0c50",
-      "recallability": 0.861,
-      "decay": 0.025,
+      "recallability": 0.85,
+      "decay": 0.033,
       "status": "active"
     },
     {
@@ -50,8 +50,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-06-10_daily_life_attention_df3ea20970ae",
-      "recallability": 0.759,
-      "decay": 0.025,
+      "recallability": 0.748,
+      "decay": 0.033,
       "status": "active"
     },
     {
@@ -74,8 +74,8 @@
       "last_dream_return_at": "2026-06-13T17:35:44.337Z",
       "times_returned_in_dream": 1,
       "id": "mem_2026-06-10_daily_life_avoidance_335d91bb5b7d",
-      "recallability": 0.686,
-      "decay": 0.025,
+      "recallability": 0.676,
+      "decay": 0.033,
       "status": "suppressed"
     },
     {
@@ -96,8 +96,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-06-10_daily_life_body_1f4c788ffe67",
-      "recallability": 0.698,
-      "decay": 0.025,
+      "recallability": 0.688,
+      "decay": 0.033,
       "status": "overexposed"
     },
     {
@@ -125,8 +125,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-06-10_dream_dream_return_c3b7e2f1d33c",
-      "recallability": 0.794,
-      "decay": 0.025,
+      "recallability": 0.784,
+      "decay": 0.033,
       "status": "unstable"
     },
     {
@@ -143,7 +143,11 @@
         "mem_2026-06-10_daily_life_attention_df3ea20970ae",
         "mem_2026-06-10_daily_life_avoidance_335d91bb5b7d",
         "mem_2026-06-10_daily_life_body_1f4c788ffe67",
-        "mem_2026-06-10_source_external_pressure_82597274c1e9",
+        "mem_2026-06-10_source_external_pressure_104445266da7",
+        "mem_2026-06-10_source_external_pressure_295a01f2f800",
+        "mem_2026-06-10_source_external_pressure_533da8ec3266",
+        "mem_2026-06-10_source_external_pressure_724a1c612af1",
+        "mem_2026-06-10_source_external_pressure_a69a4f58bb0d",
         "mem_2026-06-10_walk_route_56c7ca52f677"
       ],
       "mood_tags": [
@@ -152,31 +156,92 @@
         "absurdity"
       ],
       "origin": "observed",
-      "last_recalled_at": "2026-06-13T17:35:44.337Z",
-      "times_recalled": 2,
+      "last_recalled_at": "2026-06-14T07:11:34.926Z",
+      "times_recalled": 3,
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-06-10_poem_episodic_61cadcc4b58a",
-      "recallability": 0.861,
-      "decay": 0.025,
+      "recallability": 0.85,
+      "decay": 0.033,
       "status": "active"
     },
     {
       "date": "2026-06-10",
       "source": "source",
-      "source_ref": "data/sources/2026-06-10.json",
+      "source_ref": "data/sources/2026-06-10.json#source_influence_packet:science_culture",
       "kind": "external_pressure",
-      "text": "clarity / desire",
-      "transformed_text": "dış dünya masanın kenarında küçük bir parazit gibi duruyor | hava yüzünde ince bir açıklık bırakıyor | kalabalığa kapıyı içeriden tutuyor | clarity / desire",
-      "emotional_weight": 0.045,
-      "repression": 0.25,
-      "mutation_rate": 0.65,
+      "text": "science_culture | conceptual_drift / vocabulary_learning | clarity / melancholy / hope",
+      "transformed_text": "category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,melancholy,hope; safe_terms=açılan,bilgi,derin,kırıntısı,zaman,antik; weights=aesthetic:0.35,conceptual:1,rhythm:0.29,pressure:0.2",
+      "emotional_weight": 0.46,
+      "repression": 0.19,
+      "mutation_rate": 0.547,
       "linked_traces": [
         "mem_2026-06-10_daily_life_attention_df3ea20970ae",
         "mem_2026-06-10_daily_life_avoidance_335d91bb5b7d",
         "mem_2026-06-10_daily_life_body_1f4c788ffe67"
       ],
       "mood_tags": [
+        "clarity",
+        "melancholy",
+        "hope"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-06-10_source_external_pressure_104445266da7",
+      "recallability": 0.707,
+      "decay": 0.033,
+      "status": "active"
+    },
+    {
+      "date": "2026-06-10",
+      "source": "source",
+      "source_ref": "data/sources/2026-06-10.json#source_influence_packet:life",
+      "kind": "external_pressure",
+      "text": "life | memory_association / attention_shift | tenderness / hope / desire",
+      "transformed_text": "category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,hope,desire; safe_terms=gündelik,içi,şehir,temas,yumuşayan,bankası; weights=aesthetic:0.51,conceptual:0.33,rhythm:0.5,pressure:0.24",
+      "emotional_weight": 0.395,
+      "repression": 0.198,
+      "mutation_rate": 0.447,
+      "linked_traces": [
+        "mem_2026-06-10_daily_life_attention_df3ea20970ae",
+        "mem_2026-06-10_daily_life_avoidance_335d91bb5b7d",
+        "mem_2026-06-10_daily_life_body_1f4c788ffe67"
+      ],
+      "mood_tags": [
+        "tenderness",
+        "hope",
+        "desire"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-06-10_source_external_pressure_295a01f2f800",
+      "recallability": 0.68,
+      "decay": 0.033,
+      "status": "overexposed"
+    },
+    {
+      "date": "2026-06-10",
+      "source": "source",
+      "source_ref": "data/sources/2026-06-10.json#source_influence_packet:entertainment",
+      "kind": "external_pressure",
+      "text": "entertainment | rhythm_shift / attention_shift | absurdity / clarity / desire",
+      "transformed_text": "category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yapay,yüz,tuhaflaşan,ardından; weights=aesthetic:0.61,conceptual:0.43,rhythm:1,pressure:0.26",
+      "emotional_weight": 0.575,
+      "repression": 0.202,
+      "mutation_rate": 0.68,
+      "linked_traces": [
+        "mem_2026-06-10_daily_life_attention_df3ea20970ae",
+        "mem_2026-06-10_daily_life_avoidance_335d91bb5b7d",
+        "mem_2026-06-10_daily_life_body_1f4c788ffe67"
+      ],
+      "mood_tags": [
+        "absurdity",
         "clarity",
         "desire"
       ],
@@ -185,10 +250,70 @@
       "times_recalled": 0,
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
-      "id": "mem_2026-06-10_source_external_pressure_82597274c1e9",
-      "recallability": 0.541,
-      "decay": 0.025,
+      "id": "mem_2026-06-10_source_external_pressure_533da8ec3266",
+      "recallability": 0.751,
+      "decay": 0.033,
       "status": "overexposed"
+    },
+    {
+      "date": "2026-06-10",
+      "source": "source",
+      "source_ref": "data/sources/2026-06-10.json#source_influence_packet:art",
+      "kind": "external_pressure",
+      "text": "art | aesthetic_learning / image_expansion | clarity / desire / hope",
+      "transformed_text": "category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=basıncı,duvarı,görüntü,sergi,açılan,aracılığıyla; weights=aesthetic:1,conceptual:0.7,rhythm:0.49,pressure:0.18",
+      "emotional_weight": 0.593,
+      "repression": 0.186,
+      "mutation_rate": 0.73,
+      "linked_traces": [
+        "mem_2026-06-10_daily_life_attention_df3ea20970ae",
+        "mem_2026-06-10_daily_life_avoidance_335d91bb5b7d",
+        "mem_2026-06-10_daily_life_body_1f4c788ffe67"
+      ],
+      "mood_tags": [
+        "clarity",
+        "desire",
+        "hope"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-06-10_source_external_pressure_724a1c612af1",
+      "recallability": 0.761,
+      "decay": 0.033,
+      "status": "unstable"
+    },
+    {
+      "date": "2026-06-10",
+      "source": "source",
+      "source_ref": "data/sources/2026-06-10.json#source_influence_packet:news",
+      "kind": "external_pressure",
+      "text": "news | pressure / mood_pressure | fatigue / anger / melancholy",
+      "transformed_text": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,melancholy; safe_terms=basınç,gündelik,politik,ağırlaşan,ardından,içeride; weights=aesthetic:0.13,conceptual:0.33,rhythm:0.43,pressure:1",
+      "emotional_weight": 0.473,
+      "repression": 0.35,
+      "mutation_rate": 0.297,
+      "linked_traces": [
+        "mem_2026-06-10_daily_life_attention_df3ea20970ae",
+        "mem_2026-06-10_daily_life_avoidance_335d91bb5b7d",
+        "mem_2026-06-10_daily_life_body_1f4c788ffe67"
+      ],
+      "mood_tags": [
+        "fatigue",
+        "anger",
+        "melancholy"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-06-10_source_external_pressure_a69a4f58bb0d",
+      "recallability": 0.684,
+      "decay": 0.033,
+      "status": "active"
     },
     {
       "date": "2026-06-10",
@@ -212,8 +337,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-06-10_walk_route_56c7ca52f677",
-      "recallability": 0.861,
-      "decay": 0.025,
+      "recallability": 0.85,
+      "decay": 0.033,
       "status": "active"
     }
   ]
