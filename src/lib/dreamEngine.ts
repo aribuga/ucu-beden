@@ -8,13 +8,14 @@ import {
   type GenerationContextPacketInput
 } from "./generationContextPacket";
 import { tokenize } from "./inputPoems";
+import { analyzeGeneratedDreamLanguage, formatLanguagePolicy, formatLanguageRetryConstraints, languageMetadata } from "./languageValidator";
 import { seededMany } from "./random";
 import {
   analyzeGeneratedDreamSurface,
   formatStrictSurfaceRetryConstraints,
   surfaceMetadata
 } from "./surfaceValidator";
-import type { DailyLifeRecord, DailyPoem, DreamRecord, MemorySelection, RepetitionPressure, SourceDigestRecord, SurfaceValidationReport, UcuBedenState } from "./types";
+import type { DailyLifeRecord, DailyPoem, DreamRecord, LanguageValidationReport, MemorySelection, RepetitionPressure, SourceDigestRecord, SurfaceValidationReport, UcuBedenState } from "./types";
 import { buildUcuBedenVoicePrompt } from "./ucuBedenVoicePrompt";
 
 type DreamParams = {
@@ -28,6 +29,17 @@ type DreamParams = {
 };
 
 type DreamPayload = { title?: unknown; dream_text?: unknown; symbols?: unknown; mood_after?: unknown; memory_mutations?: unknown };
+
+const turkishMoodLabels: Record<string, string> = {
+  melancholy: "melankoli",
+  anger: "öfke",
+  tenderness: "şefkat",
+  fatigue: "yorgunluk",
+  absurdity: "absürtlük",
+  clarity: "açıklık",
+  desire: "arzu",
+  hope: "umut"
+};
 
 function packetInput(params: DreamParams): GenerationContextPacketInput {
   return {
@@ -58,60 +70,68 @@ function cleanJson(text: string): DreamPayload | null {
 
 const wait = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
 
-export function buildDreamPromptSections(params: DreamParams, retryReport?: SurfaceValidationReport) {
+export function buildDreamPromptSections(params: DreamParams, retryReport?: SurfaceValidationReport, languageRetryReport?: LanguageValidationReport) {
   const voice = buildUcuBedenVoicePrompt({ mode: "dream" });
   const packet = buildGenerationContextPacket(packetInput(params));
   return {
+    language_policy: formatLanguagePolicy(),
     voice_persona: voice.prompt,
     strict_surface_policy: [
       formatSurfacePolicyPacket(packet),
-      "The source poem is represented only as residue. Do not reconstruct it or reuse its surface terms directly."
+      "Kaynak şiir yalnızca kalıntı olarak temsil edilir. Onu yeniden kurma veya yüzey terimlerini doğrudan kullanma."
     ].join("\n"),
     digested_generation_context: formatLivedContextPacket(packet),
     allowed_memory_traces: packet.memory_trace_packet.fragments.length > 0
       ? packet.memory_trace_packet.fragments.map((fragment) => `- ${fragment}`).join("\n")
-      : "- no selected memory trace",
+      : "- seçilmiş hafıza izi yok",
     source_influence_packet: packet.source_influence_packet.map((fragment) => `- ${fragment}`).join("\n"),
     title_policy_packet: formatTitlePolicyPacket(packet),
     strict_surface_retry: retryReport ? formatStrictSurfaceRetryConstraints(retryReport, "dream") : null,
+    language_retry: languageRetryReport?.severe ? formatLanguageRetryConstraints(languageRetryReport) : null,
     output_format: [
-      "Generate a broken, symbolic dream that is emotionally related but is not a second version of the poem.",
-      "Let suppressed traces return through altered association, not through copied surfaces.",
-      "Create 3-7 symbols and 1-4 memory mutations.",
-      "Return only JSON:",
+      formatLanguagePolicy(),
+      "Şiirle duygusal bağı olan ama şiirin ikinci sürümü olmayan kırık ve simgesel bir Türkçe rüya üret.",
+      "Bastırılmış izler kopyalanmış yüzeylerle değil, değişmiş çağrışımlarla geri dönsün.",
+      "3-7 simge ve 1-4 hafıza mutasyonu oluştur.",
+      "Yalnızca JSON döndür:",
       '{"title":"...","dream_text":"...","symbols":["..."],"mood_after":"...","memory_mutations":["..."]}'
     ].join("\n")
   };
 }
 
-export function buildDreamPrompt(params: DreamParams, retryReport?: SurfaceValidationReport): string {
-  const sections = buildDreamPromptSections(params, retryReport);
+export function buildDreamPrompt(params: DreamParams, retryReport?: SurfaceValidationReport, languageRetryReport?: LanguageValidationReport): string {
+  const sections = buildDreamPromptSections(params, retryReport, languageRetryReport);
   return [
-    "A. UCU BEDEN voice/persona",
+    sections.language_policy,
+    "",
+    "A. UCU BEDEN sesi ve personası",
     sections.voice_persona,
     "",
-    "B. Strict surface policy",
+    "B. Sıkı yüzey politikası",
     sections.strict_surface_policy,
     "",
-    "C. Digested generation context packet",
+    "C. Sindirilmiş gün bağlamı",
     sections.digested_generation_context,
     "",
-    "D. Allowed memory traces",
+    "D. İzin verilen hafıza izleri",
     sections.allowed_memory_traces,
     "",
-    "E. Source influence packet",
+    "E. Kaynak etkisi paketi",
     sections.source_influence_packet,
     "",
-    "Title policy",
+    "Başlık politikası",
     sections.title_policy_packet,
     "",
-    ...(sections.strict_surface_retry ? ["Quality retry constraints", sections.strict_surface_retry, ""] : []),
-    "F. Output format",
+    ...(sections.strict_surface_retry ? ["Yüzey doğrulaması tekrar kısıtları", sections.strict_surface_retry, ""] : []),
+    ...(sections.language_retry ? ["Dil doğrulaması tekrar kısıtları", sections.language_retry, ""] : []),
+    sections.language_policy,
+    "",
+    "F. Çıktı biçimi",
     sections.output_format
   ].join("\n");
 }
 
-async function tryOpenAIDream(params: DreamParams, retryReport?: SurfaceValidationReport) {
+async function tryOpenAIDream(params: DreamParams, retryReport?: SurfaceValidationReport, languageRetryReport?: LanguageValidationReport) {
   const apiKey = process.env.OPENAI_API_KEY;
   const model = process.env.OPENAI_MODEL || "gpt-4.1-mini";
   if (!apiKey) return { payload: null, model, error: "OPENAI_API_KEY is not set" };
@@ -123,7 +143,7 @@ async function tryOpenAIDream(params: DreamParams, retryReport?: SurfaceValidati
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
         body: JSON.stringify({
           model,
-          input: buildDreamPrompt(params, retryReport),
+          input: buildDreamPrompt(params, retryReport, languageRetryReport),
           temperature: 0.9,
           max_output_tokens: 600,
           text: {
@@ -170,7 +190,7 @@ async function tryOpenAIDream(params: DreamParams, retryReport?: SurfaceValidati
 function mockDream(params: DreamParams): DreamPayload {
   const input = packetInput(params);
   const packet = buildGenerationContextPacket(input);
-  const moodTerms = Object.entries(params.poem.mood).sort((a, b) => b[1] - a[1]).map(([key]) => key);
+  const moodTerms = Object.entries(params.poem.mood).sort((a, b) => b[1] - a[1]).map(([key]) => turkishMoodLabels[key] ?? key);
   const pool = generationFallbackTerms(input, 12);
   const symbols = seededMany(pool.length > 0 ? pool : moodTerms, `${params.poem.date}:mock-dream`, 5);
   return {
@@ -195,36 +215,43 @@ function safeDreamTitle(payload: DreamPayload, params: DreamParams, strict = fal
     const terms = generationFallbackTerms(packetInput(params), 3);
     if (terms.length > 0) return terms.join(" ");
   }
-  return Object.entries(params.poem.mood).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([key]) => key).join(" ");
+  return Object.entries(params.poem.mood).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([key]) => turkishMoodLabels[key] ?? key).join(" ");
 }
 
 export async function generateDream(params: DreamParams): Promise<DreamRecord> {
   let llm = await tryOpenAIDream(params);
   let candidatePayload = llm.payload && typeof llm.payload.dream_text === "string" ? llm.payload : null;
   let retryCount = 0;
+  let languageRetryCount = 0;
   let candidateReport: SurfaceValidationReport | null = null;
-  if (candidatePayload) {
+  let candidateLanguageReport: LanguageValidationReport | null = null;
+  while (candidatePayload) {
+    const candidateTitle = typeof candidatePayload.title === "string" ? candidatePayload.title : safeDreamTitle(candidatePayload, params);
     candidateReport = await analyzeGeneratedDreamSurface(
       {
-        title: typeof candidatePayload.title === "string" ? candidatePayload.title : safeDreamTitle(candidatePayload, params),
+        title: candidateTitle,
         dream_text: candidatePayload.dream_text as string
       },
       { mode: "dream", repetition: params.repetition, sourcePoem: params.poem }
     );
-    if (candidateReport.severe) {
-      retryCount = 1;
-      llm = await tryOpenAIDream(params, candidateReport);
-      candidatePayload = llm.payload && typeof llm.payload.dream_text === "string" ? llm.payload : null;
-      if (candidatePayload) {
-        candidateReport = await analyzeGeneratedDreamSurface(
-          {
-            title: typeof candidatePayload.title === "string" ? candidatePayload.title : safeDreamTitle(candidatePayload, params),
-            dream_text: candidatePayload.dream_text as string
-          },
-          { mode: "dream", repetition: params.repetition, sourcePoem: params.poem }
-        );
-      }
-    }
+    candidateLanguageReport = analyzeGeneratedDreamLanguage({
+      title: candidateTitle,
+      dream_text: candidatePayload.dream_text as string,
+      mood_after: typeof candidatePayload.mood_after === "string" ? candidatePayload.mood_after : ""
+    });
+    if ((!candidateReport.severe && !candidateLanguageReport.severe) || retryCount >= 2) break;
+    retryCount += 1;
+    if (candidateLanguageReport.severe) languageRetryCount += 1;
+    llm = await tryOpenAIDream(
+      params,
+      candidateReport.severe ? candidateReport : undefined,
+      candidateLanguageReport.severe ? candidateLanguageReport : undefined
+    );
+    candidatePayload = llm.payload && typeof llm.payload.dream_text === "string" ? llm.payload : null;
+  }
+  if (candidatePayload && candidateLanguageReport?.severe) {
+    llm = { ...llm, payload: null, error: "OpenAI output was rejected because it was not Turkish" };
+    candidatePayload = null;
   }
   const payload = candidatePayload ?? mockDream(params);
   const fromLlm = payload === llm.payload;
@@ -236,6 +263,8 @@ export async function generateDream(params: DreamParams): Promise<DreamRecord> {
     { title, dream_text: dreamText },
     { mode: "dream", repetition: params.repetition, sourcePoem: params.poem }
   );
+  const moodAfter = typeof payload.mood_after === "string" ? payload.mood_after.trim() : "";
+  const languageReport = analyzeGeneratedDreamLanguage({ title, dream_text: dreamText, mood_after: moodAfter });
   return {
     date: params.date,
     source_date: params.poem.date,
@@ -243,7 +272,7 @@ export async function generateDream(params: DreamParams): Promise<DreamRecord> {
     title,
     dream_text: dreamText,
     symbols,
-    mood_after: typeof payload.mood_after === "string" ? payload.mood_after.trim() : "",
+    mood_after: moodAfter,
     visual_prompt: "",
     image_path: null,
     memory_mutations: mutations,
@@ -252,7 +281,8 @@ export async function generateDream(params: DreamParams): Promise<DreamRecord> {
       provider: fromLlm ? "openai" : "mock",
       model: llm.model,
       fallback_reason: fromLlm ? null : llm.error,
-      ...surfaceMetadata(surfaceReport, retryCount)
+      ...surfaceMetadata(surfaceReport, retryCount),
+      ...languageMetadata(languageReport, languageRetryCount)
     }
   };
 }

@@ -15,6 +15,7 @@ import { analyzeSourceDigest, validateSourceInfluence } from "../lib/sourceInflu
 import { validateSourceDigests } from "../lib/sourceDigestion";
 import { buildDreamPromptSections } from "../lib/dreamEngine";
 import { buildPoemPromptSections } from "../lib/poemGenerator";
+import { analyzeGeneratedDreamLanguage, analyzeGeneratedPoemLanguage } from "../lib/languageValidator";
 import type { GenerationContext, MemoryReport, MemorySelection } from "../lib/types";
 import { buildUcuBedenVoicePrompt } from "../lib/ucuBedenVoicePrompt";
 
@@ -76,6 +77,7 @@ async function main(): Promise<void> {
     readPersonalitySettings()
   ]);
   const latestDailyLife = latestPoem ? await readDailyLife(latestPoem.date) : null;
+  const latestDream = dreams.at(-1) ?? null;
   const date = requestedDate(args, nextDate(archive.index.built_through));
   const mood = latestPoem?.mood ?? { melancholy: 0, anger: 0, tenderness: 0, fatigue: 0, absurdity: 0, clarity: 0, desire: 0, hope: 0 };
   const [poemSelection, dreamSelection] = await Promise.all([
@@ -142,6 +144,7 @@ async function main(): Promise<void> {
             state,
             world,
             sources: latestPoem.sources,
+            source_digest: latestStoredDigest,
             input_analysis: inputAnalysis,
             mood,
             mood_sentence: latestPoem.mood_sentence,
@@ -167,7 +170,9 @@ async function main(): Promise<void> {
           item.raw_json_context_removed &&
           item.home_place_deanchored &&
           item.source_influence_packet_present &&
-          item.fallback_surface_safe
+          item.fallback_surface_safe &&
+          typeof item.prompt_sections.language_policy === "string" &&
+          item.prompt_sections.language_policy.includes("Çıktı dili: Türkçe")
       ),
     available: generationContext !== null
   };
@@ -232,6 +237,15 @@ async function main(): Promise<void> {
             },
         generation_context: generationContext,
         generation_context_validation: generationContextValidation,
+        language_validation: {
+          latest_poem: latestPoem ? analyzeGeneratedPoemLanguage(latestPoem) : null,
+          latest_dream: latestDream ? analyzeGeneratedDreamLanguage(latestDream) : null,
+          prompt_language_policy_present:
+            generationContext === null ||
+            [generationContext.poem, generationContext.dream].every((item) =>
+              item.prompt_sections.language_policy.includes("Çıktı dili: Türkçe")
+            )
+        },
         poem_prompt_guard: {
           valid: poemGuard.valid,
           safe_fragment_count: poemGuard.safe_fragments.length,

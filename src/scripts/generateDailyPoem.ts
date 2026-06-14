@@ -132,7 +132,10 @@ async function main(): Promise<void> {
       provider: poem.generation.provider,
       surface_validation_passed: poem.generation.surface_validation_passed,
       surface_validation_status: poem.generation.surface_validation_status,
-      retry_count: poem.generation.retry_count
+      retry_count: poem.generation.retry_count,
+      language_validation_passed: poem.generation.language_validation_passed,
+      english_ratio: poem.generation.english_ratio,
+      language_retry_count: poem.generation.language_retry_count
     })
   );
   const visual = await generateVisualImage(createPoemVisual(poem), { force: args.force });
@@ -143,7 +146,7 @@ async function main(): Promise<void> {
   await writeMemoryArchive(memoryArchive);
   const yearlyReport = await maybeCreateYearlyReport(poem);
 
-  console.log(JSON.stringify({ status: "generated", date, age: poem.age_display, poem_file: poemPath, poem_provider: poem.generation.provider, openai_fallback_reason: poem.generation.fallback_reason, title_generation: poem.title_generation, mood_sentence: poem.mood_sentence, generated_days: updatedState.generated_days, memory_density: updatedState.memory_density, selected_trace_ids: poem.memory_selection?.selected_trace_ids ?? [], surface_validation_passed: poem.generation.surface_validation_passed, surface_validation_status: poem.generation.surface_validation_status, retry_count: poem.generation.retry_count, memory_trace_count: memoryArchive.index.trace_count, yearly_report: yearlyReport ? `year_${String(yearlyReport.year).padStart(2, "0")}.json` : null }, null, 2));
+  console.log(JSON.stringify({ status: "generated", date, age: poem.age_display, poem_file: poemPath, poem_provider: poem.generation.provider, openai_fallback_reason: poem.generation.fallback_reason, title_generation: poem.title_generation, mood_sentence: poem.mood_sentence, generated_days: updatedState.generated_days, memory_density: updatedState.memory_density, selected_trace_ids: poem.memory_selection?.selected_trace_ids ?? [], surface_validation_passed: poem.generation.surface_validation_passed, surface_validation_status: poem.generation.surface_validation_status, retry_count: poem.generation.retry_count, language_validation_passed: poem.generation.language_validation_passed, english_ratio: poem.generation.english_ratio, language_retry_count: poem.generation.language_retry_count, memory_trace_count: memoryArchive.index.trace_count, yearly_report: yearlyReport ? `year_${String(yearlyReport.year).padStart(2, "0")}.json` : null }, null, 2));
 }
 
 main().catch((error) => {

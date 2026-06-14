@@ -11,6 +11,7 @@ import {
 import { tokenize, topWords } from "./inputPoems";
 import { buildImageMutations, extractImages } from "./memoryEngine";
 import { formatMoodSentence } from "./moodSentence";
+import { analyzeGeneratedPoemLanguage, formatLanguagePolicy, formatLanguageRetryConstraints, languageMetadata } from "./languageValidator";
 import { seededMany } from "./random";
 import {
   analyzeGeneratedPoemSurface,
@@ -18,11 +19,22 @@ import {
   stripGeneratedSignature,
   surfaceMetadata
 } from "./surfaceValidator";
-import type { DailyPoem, GenerationContext, PersonalitySettings, PoemAnalysis, SurfaceValidationReport, TitleGenerationSource } from "./types";
+import type { DailyPoem, GenerationContext, LanguageValidationReport, PersonalitySettings, PoemAnalysis, SurfaceValidationReport, TitleGenerationSource } from "./types";
 import { buildUcuBedenVoicePrompt } from "./ucuBedenVoicePrompt";
 
 type OpenAIPoemResult = { poem: string | null; title: string | null; moodSentence: string | null; model: string | null; error: string | null };
 type StructuredPoemResponse = { title?: unknown; poem?: unknown; mood_sentence?: unknown };
+
+const turkishMoodLabels: Record<string, string> = {
+  melancholy: "melankoli",
+  anger: "öfke",
+  tenderness: "şefkat",
+  fatigue: "yorgunluk",
+  absurdity: "absürtlük",
+  clarity: "açıklık",
+  desire: "arzu",
+  hope: "umut"
+};
 
 function packetInput(context: GenerationContext): GenerationContextPacketInput {
   return {
@@ -44,64 +56,72 @@ function buildHiddenVoicePrompt(settings: PersonalitySettings): string {
   const traits = settings.hidden_voice_traits;
   const balance = settings.tone_balance;
   return [
-    "Hidden voice balance:",
-    `dry_sarcasm=${traits.dry_sarcasm}`,
-    `absurdity=${traits.absurd_domestic_humor}`,
-    `gentle_passive_aggression=${traits.gentle_passive_aggression}`,
-    `sentimental_leak=${traits.sentimental_leak}`,
-    `tone_balance=absurd:${balance.absurd_domestic},dry:${balance.dry_sarcasm},tender:${balance.sentimental_leak}`,
-    "Let dry attention work through rhythm and relation, not through default object imagery.",
-    "Do not explain these settings."
+    "Gizli ses dengesi:",
+    `kuru sarkazm: ${traits.dry_sarcasm}`,
+    `absürtlük: ${traits.absurd_domestic_humor}`,
+    `ince pasif agresyon: ${traits.gentle_passive_aggression}`,
+    `duygusal sızıntı: ${traits.sentimental_leak}`,
+    `ton dengesi: absürt ${balance.absurd_domestic}, kuru ${balance.dry_sarcasm}, şefkatli ${balance.sentimental_leak}`,
+    "Kuru dikkati varsayılan nesne imgeleriyle değil, ritim ve ilişkilerle çalıştır.",
+    "Bu ayarları açıklama."
   ].join("\n");
 }
 
-export function buildPoemPromptSections(context: GenerationContext, retryReport?: SurfaceValidationReport) {
+export function buildPoemPromptSections(context: GenerationContext, retryReport?: SurfaceValidationReport, languageRetryReport?: LanguageValidationReport) {
   const voice = buildUcuBedenVoicePrompt({ mode: "poem" });
   const packet = buildGenerationContextPacket(packetInput(context));
   return {
+    language_policy: formatLanguagePolicy(),
     voice_persona: `${voice.prompt}\n\n${buildHiddenVoicePrompt(context.personality_settings)}`,
     strict_surface_policy: formatSurfacePolicyPacket(packet),
     digested_generation_context: formatLivedContextPacket(packet),
     allowed_memory_traces: packet.memory_trace_packet.fragments.length > 0
       ? packet.memory_trace_packet.fragments.map((fragment) => `- ${fragment}`).join("\n")
-      : "- no selected memory trace",
+      : "- seçilmiş hafıza izi yok",
     source_influence_packet: packet.source_influence_packet.map((fragment) => `- ${fragment}`).join("\n"),
     title_policy_packet: formatTitlePolicyPacket(packet),
     strict_surface_retry: retryReport ? formatStrictSurfaceRetryConstraints(retryReport, "poem") : null,
+    language_retry: languageRetryReport?.severe ? formatLanguageRetryConstraints(languageRetryReport) : null,
     output_format: [
-      "Write one Turkish poem and one short daily mood sentence.",
-      "External influence may alter rhythm, attention, vocabulary learning, conceptual drift, pressure, or association field; do not report or summarize it.",
-      "Recall at least one allowed memory trace indirectly; do not list memory data.",
-      'The mood sentence must begin with "Bugünkü hali:".',
-      "Return only JSON:",
+      formatLanguagePolicy(),
+      "Bir Türkçe şiir ve kısa bir günlük ruh hali cümlesi yaz.",
+      "Dış etki ritmi, dikkati, kelime öğrenmeyi, kavramsal kaymayı veya çağrışım alanını değiştirebilir; onu raporlama veya özetleme.",
+      "İzin verilen hafıza izlerinden en az birini dolaylı çağır; hafıza verilerini listeleme.",
+      'Ruh hali cümlesi "Bugünkü hali:" ile başlamalı.',
+      "Yalnızca JSON döndür:",
       '{"title":"...","poem":"...","mood_sentence":"..."}'
     ].join("\n")
   };
 }
 
-export function buildPoemPrompt(context: GenerationContext, retryReport?: SurfaceValidationReport): string {
-  const sections = buildPoemPromptSections(context, retryReport);
+export function buildPoemPrompt(context: GenerationContext, retryReport?: SurfaceValidationReport, languageRetryReport?: LanguageValidationReport): string {
+  const sections = buildPoemPromptSections(context, retryReport, languageRetryReport);
   return [
-    "A. UCU BEDEN voice/persona",
+    sections.language_policy,
+    "",
+    "A. UCU BEDEN sesi ve personası",
     sections.voice_persona,
     "",
-    "B. Strict surface policy",
+    "B. Sıkı yüzey politikası",
     sections.strict_surface_policy,
     "",
-    "C. Digested generation context packet",
+    "C. Sindirilmiş gün bağlamı",
     sections.digested_generation_context,
     "",
-    "D. Allowed memory traces",
+    "D. İzin verilen hafıza izleri",
     sections.allowed_memory_traces,
     "",
-    "E. Source influence packet",
+    "E. Kaynak etkisi paketi",
     sections.source_influence_packet,
     "",
-    "Title policy",
+    "Başlık politikası",
     sections.title_policy_packet,
     "",
-    ...(sections.strict_surface_retry ? ["Quality retry constraints", sections.strict_surface_retry, ""] : []),
-    "F. Output format",
+    ...(sections.strict_surface_retry ? ["Yüzey doğrulaması tekrar kısıtları", sections.strict_surface_retry, ""] : []),
+    ...(sections.language_retry ? ["Dil doğrulaması tekrar kısıtları", sections.language_retry, ""] : []),
+    sections.language_policy,
+    "",
+    "F. Çıktı biçimi",
     sections.output_format
   ].join("\n");
 }
@@ -143,7 +163,7 @@ function validMoodSentence(value: string | null): string | null {
 
 function buildFallbackMoodSentence(context: GenerationContext): string {
   const packet = buildGenerationContextPacket(packetInput(context));
-  return formatMoodSentence(`Bugünkü hali: ${packet.persona_safe_lived_context.lived_context_effect}; ${packet.persona_safe_lived_context.body_attention_effect}.`);
+  return formatMoodSentence(`${packet.persona_safe_lived_context.lived_context_effect}; ${packet.persona_safe_lived_context.body_attention_effect}.`);
 }
 
 function uniqueMoodSentence(context: GenerationContext, candidate: string | null): string {
@@ -156,7 +176,7 @@ function wait(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function tryOpenAIPoem(context: GenerationContext, retryReport?: SurfaceValidationReport): Promise<OpenAIPoemResult> {
+async function tryOpenAIPoem(context: GenerationContext, retryReport?: SurfaceValidationReport, languageRetryReport?: LanguageValidationReport): Promise<OpenAIPoemResult> {
   const apiKey = process.env.OPENAI_API_KEY;
   const model = process.env.OPENAI_MODEL || "gpt-4.1-mini";
   if (!apiKey) return { poem: null, title: null, moodSentence: null, model, error: "OPENAI_API_KEY is not set" };
@@ -168,7 +188,7 @@ async function tryOpenAIPoem(context: GenerationContext, retryReport?: SurfaceVa
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
         body: JSON.stringify({
           model,
-          input: buildPoemPrompt(context, retryReport),
+          input: buildPoemPrompt(context, retryReport, languageRetryReport),
           temperature: 0.85,
           max_output_tokens: 700,
           text: {
@@ -219,7 +239,7 @@ async function tryOpenAIPoem(context: GenerationContext, retryReport?: SurfaceVa
 function mockPoem(context: GenerationContext): string {
   const input = packetInput(context);
   const packet = buildGenerationContextPacket(input);
-  const moods = Object.entries(context.mood).sort((a, b) => b[1] - a[1]).map(([key]) => key);
+  const moods = Object.entries(context.mood).sort((a, b) => b[1] - a[1]).map(([key]) => turkishMoodLabels[key] ?? key);
   const pool = generationFallbackTerms(input, 12);
   const selected = seededMany(pool.length > 0 ? pool : moods, `${context.date}:poem-fallback`, 5);
   return [
@@ -253,7 +273,7 @@ function fallbackTitleFor(text: string, context: GenerationContext, strict = fal
     const safeWords = filterGenerationSurfaceTerms(topWords(tokenize(text), 12), packetInput(context)).slice(0, 3);
     if (safeWords.length > 0) return safeWords.join(" ");
   }
-  const moodWords = Object.entries(context.mood).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([key]) => key);
+  const moodWords = Object.entries(context.mood).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([key]) => turkishMoodLabels[key] ?? key);
   return moodWords.join(" ") || formatAge(context.age_months);
 }
 
@@ -261,17 +281,33 @@ export async function generatePoemWithLLM(context: GenerationContext): Promise<D
   let llmResult = await tryOpenAIPoem(context);
   let openAIText = llmResult.poem?.trim();
   let retryCount = 0;
+  let languageRetryCount = 0;
   let candidateReport: SurfaceValidationReport | null = null;
+  let candidateLanguageReport: LanguageValidationReport | null = null;
   while (openAIText) {
     const candidateTitle = llmResult.title ? cleanSingleLine(llmResult.title) : fallbackTitleFor(openAIText, context);
     candidateReport = await analyzeGeneratedPoemSurface(
       { title: candidateTitle, poem_text: openAIText },
       { mode: "poem", world: context.world, repetition: context.repetition_pressure }
     );
-    if (!candidateReport.severe || retryCount >= 2) break;
+    candidateLanguageReport = analyzeGeneratedPoemLanguage({
+      title: candidateTitle,
+      poem_text: openAIText,
+      mood_sentence: llmResult.moodSentence ?? ""
+    });
+    if ((!candidateReport.severe && !candidateLanguageReport.severe) || retryCount >= 2) break;
     retryCount += 1;
-    llmResult = await tryOpenAIPoem(context, candidateReport);
+    if (candidateLanguageReport.severe) languageRetryCount += 1;
+    llmResult = await tryOpenAIPoem(
+      context,
+      candidateReport.severe ? candidateReport : undefined,
+      candidateLanguageReport.severe ? candidateLanguageReport : undefined
+    );
     openAIText = llmResult.poem?.trim();
+  }
+  if (openAIText && candidateLanguageReport?.severe) {
+    llmResult = { ...llmResult, poem: null, error: "OpenAI output was rejected because it was not Turkish" };
+    openAIText = undefined;
   }
   const poemText = stripGeneratedSignature(openAIText || mockPoem(context));
   const strictFallbackTitle = candidateReport?.title_violation ?? false;
@@ -284,6 +320,7 @@ export async function generatePoemWithLLM(context: GenerationContext): Promise<D
     { title, poem_text: poemText },
     { mode: "poem", world: context.world, repetition: context.repetition_pressure }
   );
+  const languageReport = analyzeGeneratedPoemLanguage({ title, poem_text: poemText, mood_sentence: moodSentence });
   return {
     date: context.date,
     title,
@@ -307,7 +344,8 @@ export async function generatePoemWithLLM(context: GenerationContext): Promise<D
       provider: openAIText ? "openai" : "mock",
       model: llmResult.model,
       fallback_reason: openAIText ? null : llmResult.error,
-      ...surfaceMetadata(surfaceReport, retryCount)
+      ...surfaceMetadata(surfaceReport, retryCount),
+      ...languageMetadata(languageReport, languageRetryCount)
     },
     analysis: { ...analyzeGeneratedPoem(poemText, context), mood_sentence: moodSentence },
     repetition_pressure: context.repetition_pressure

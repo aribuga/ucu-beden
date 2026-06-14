@@ -1,9 +1,9 @@
 {
   "date": "2026-06-14",
-  "generated_at": "2026-06-14T08:52:04.092Z",
+  "generated_at": "2026-06-14T09:27:53.081Z",
   "provider": "deterministic",
   "model": null,
-  "fallback_reason": "OpenAI response had no valid source digest",
+  "fallback_reason": "OPENAI_API_KEY is not set",
   "private_factual_digest": {
     "items": [
       {
@@ -1009,19 +1009,17 @@
       "açılan / sergi"
     ],
     "rhythm_cues": [
-      "short-long sentence alternation",
-      "question-led turn without direct answer",
-      "mid-sentence hinge",
-      "interrupted clause movement",
+      "doğrudan yanıt vermeyen soru dönüşü",
+      "cümle ortasında yön değiştiren bağlantı",
+      "kesintili cümle hareketi",
       "ailenin / ardından",
       "aşinalık / evine",
       "filmi / geçirdiği"
     ],
     "attention_shifts": [
       "açılan / aldıkları",
-      "appeared / birçok",
-      "değerli / yumuşayan",
-      "şehir / içi"
+      "birçok / değerli",
+      "yumuşayan / şehir"
     ],
     "image_expansion_candidates": [
       "aidiyet / bugüne",
@@ -1030,10 +1028,9 @@
       "açılan / sergi"
     ],
     "sentence_moves": [
-      "short-long sentence alternation",
-      "question-led turn without direct answer",
-      "mid-sentence hinge",
-      "interrupted clause movement"
+      "doğrudan yanıt vermeyen soru dönüşü",
+      "cümle ortasında yön değiştiren bağlantı",
+      "kesintili cümle hareketi"
     ],
     "internalized_effect": [
       "gündelik / politik / ağırlaşan / içeride",
@@ -1043,8 +1040,8 @@
       "gündelik / içi / şehir / temas"
     ],
     "rejected_unsafe_terms": [
-      "raw_entity_or_source:1",
-      "repeated_abstract_term:1"
+      "raw_entity_or_source:4",
+      "repeated_abstract_term:2"
     ],
     "do_not_surface_terms": [
       "ağır",
@@ -1124,8 +1121,8 @@
         "kabaran"
       ],
       "rejected_terms": [
-        "raw_entity_or_source:1",
-        "repeated_abstract_term:1"
+        "raw_entity_or_source:4",
+        "repeated_abstract_term:2"
       ],
       "mood_bias": [
         "fatigue",
@@ -1136,7 +1133,7 @@
       "conceptual_weight": 0.34,
       "rhythm_weight": 0.44,
       "pressure_weight": 1,
-      "summary_for_prompt": "gündelik / politik / ağırlaşan / içeride; short-long sentence alternation"
+      "summary_for_prompt": "gündelik / politik / ağırlaşan / içeride; doğrudan yanıt vermeyen soru dönüşü"
     },
     {
       "category": "art",
@@ -1176,8 +1173,8 @@
         "hafıza"
       ],
       "rejected_terms": [
-        "raw_entity_or_source:1",
-        "repeated_abstract_term:1"
+        "raw_entity_or_source:4",
+        "repeated_abstract_term:2"
       ],
       "mood_bias": [
         "clarity",
@@ -1188,7 +1185,7 @@
       "conceptual_weight": 0.7,
       "rhythm_weight": 0.49,
       "pressure_weight": 0.18,
-      "summary_for_prompt": "basıncı / duvarı / görüntü / sergi; question-led turn without direct answer"
+      "summary_for_prompt": "basıncı / duvarı / görüntü / sergi; cümle ortasında yön değiştiren bağlantı"
     },
     {
       "category": "science_culture",
@@ -1228,8 +1225,8 @@
         "bulunan"
       ],
       "rejected_terms": [
-        "raw_entity_or_source:1",
-        "repeated_abstract_term:1"
+        "raw_entity_or_source:4",
+        "repeated_abstract_term:2"
       ],
       "mood_bias": [
         "clarity",
@@ -1240,7 +1237,7 @@
       "conceptual_weight": 1,
       "rhythm_weight": 0.28,
       "pressure_weight": 0.21,
-      "summary_for_prompt": "açılan / bilgi / burada / derin; mid-sentence hinge"
+      "summary_for_prompt": "açılan / bilgi / burada / derin; kesintili cümle hareketi"
     },
     {
       "category": "entertainment",
@@ -1281,8 +1278,8 @@
       ],
       "rejected_terms": [
         "proper_or_source_name:1",
-        "raw_entity_or_source:1",
-        "repeated_abstract_term:1"
+        "raw_entity_or_source:4",
+        "repeated_abstract_term:2"
       ],
       "mood_bias": [
         "absurdity",
@@ -1293,7 +1290,7 @@
       "conceptual_weight": 0.42,
       "rhythm_weight": 1,
       "pressure_weight": 0.26,
-      "summary_for_prompt": "ışık / sahne / yapay / yüz; interrupted clause movement"
+      "summary_for_prompt": "ışık / sahne / yapay / yüz; doğrudan yanıt vermeyen soru dönüşü"
     },
     {
       "category": "life",
@@ -1307,14 +1304,14 @@
         "içi",
         "şehir",
         "temas",
-        "appeared",
         "yumuşayan",
         "açılan",
         "akşam",
         "akşamı",
         "aktarma",
         "aldığı",
-        "aldıkları"
+        "aldıkları",
+        "politik"
       ],
       "novelty_terms": [
         "açılan",
@@ -1322,7 +1319,8 @@
         "akşamı",
         "aktarma",
         "aldığı",
-        "aldıkları"
+        "aldıkları",
+        "politik"
       ],
       "repeated_terms": [
         "gündelik",
@@ -1334,8 +1332,8 @@
       ],
       "rejected_terms": [
         "proper_or_source_name:5",
-        "raw_entity_or_source:1",
-        "repeated_abstract_term:1"
+        "raw_entity_or_source:4",
+        "repeated_abstract_term:2"
       ],
       "mood_bias": [
         "tenderness",
@@ -1346,7 +1344,7 @@
       "conceptual_weight": 0.33,
       "rhythm_weight": 0.5,
       "pressure_weight": 0.24,
-      "summary_for_prompt": "gündelik / içi / şehir / temas; short-long sentence alternation"
+      "summary_for_prompt": "gündelik / içi / şehir / temas; cümle ortasında yön değiştiren bağlantı"
     }
   ],
   "safety": {

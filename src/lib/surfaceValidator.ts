@@ -306,14 +306,14 @@ export async function analyzeGeneratedDreamSurface(
 export function formatStrictSurfaceRetryConstraints(report: SurfaceValidationReport, mode: "poem" | "dream"): string {
   const kinds = distinct(report.surface_violations.map((violation) => violation.kind));
   return [
-    "Quality retry: the previous candidate failed strict surface validation.",
-    `mode=${mode}`,
-    `violation_kinds=${kinds.join(",") || "none"}`,
-    `blocked_surface_term_count=${report.blocked_surface_terms_count}`,
-    "Use zero direct canonical home/place/walk surfaces.",
-    "Do not reuse recent phrases or overexposed title vocabulary.",
-    mode === "dream" ? "Transform source-poem residue without copying its surface." : "Build the title from a relation or change, not a concrete surface.",
-    "Do not explain the writing process or persona."
+    "Kalite tekrarı: önceki aday sıkı yüzey doğrulamasını geçemedi.",
+    `Kip: ${mode === "dream" ? "rüya" : "şiir"}.`,
+    `İhlal türleri: ${kinds.join(",") || "yok"}.`,
+    `Engellenen yüzey terimi sayısı: ${report.blocked_surface_terms_count}.`,
+    "Ev, yer ve yürüyüş yüzeylerini doğrudan kullanma.",
+    "Yakın dönem cümlelerini veya aşırı görünür başlık kelimelerini yeniden kullanma.",
+    mode === "dream" ? "Kaynak şiirin kalıntısını yüzeyini kopyalamadan dönüştür." : "Başlığı somut bir yüzeyden değil, ilişki veya değişimden kur.",
+    "Yazma sürecini veya personayı açıklama."
   ].join("\n");
 }
 
