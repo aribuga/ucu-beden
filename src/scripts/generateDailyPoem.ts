@@ -117,7 +117,17 @@ async function main(): Promise<void> {
 
   const poem = await generatePoemWithLLM(context);
   await writeJsonFile(poemPath, poem);
-  console.log(JSON.stringify({ stage: "poem", status: "generated", date, provider: poem.generation.provider }));
+  console.log(
+    JSON.stringify({
+      stage: "poem",
+      status: "generated",
+      date,
+      provider: poem.generation.provider,
+      surface_validation_passed: poem.generation.surface_validation_passed,
+      surface_validation_status: poem.generation.surface_validation_status,
+      retry_count: poem.generation.retry_count
+    })
+  );
   const visual = await generateVisualImage(createPoemVisual(poem), { force: args.force });
   await writeJsonFile(`${storagePaths.visuals}/${date}-poem.json`, visual);
   console.log(JSON.stringify({ stage: "poem_visual", status: visual.provider === "openai" ? "generated" : "fallback kept", date, provider: visual.provider, error: visual.error ?? null }));
@@ -126,7 +136,7 @@ async function main(): Promise<void> {
   await writeMemoryArchive(memoryArchive);
   const yearlyReport = await maybeCreateYearlyReport(poem);
 
-  console.log(JSON.stringify({ status: "generated", date, age: poem.age_display, poem_file: poemPath, poem_provider: poem.generation.provider, openai_fallback_reason: poem.generation.fallback_reason, title_generation: poem.title_generation, mood_sentence: poem.mood_sentence, generated_days: updatedState.generated_days, memory_density: updatedState.memory_density, selected_trace_ids: poem.memory_selection?.selected_trace_ids ?? [], memory_trace_count: memoryArchive.index.trace_count, yearly_report: yearlyReport ? `year_${String(yearlyReport.year).padStart(2, "0")}.json` : null }, null, 2));
+  console.log(JSON.stringify({ status: "generated", date, age: poem.age_display, poem_file: poemPath, poem_provider: poem.generation.provider, openai_fallback_reason: poem.generation.fallback_reason, title_generation: poem.title_generation, mood_sentence: poem.mood_sentence, generated_days: updatedState.generated_days, memory_density: updatedState.memory_density, selected_trace_ids: poem.memory_selection?.selected_trace_ids ?? [], surface_validation_passed: poem.generation.surface_validation_passed, surface_validation_status: poem.generation.surface_validation_status, retry_count: poem.generation.retry_count, memory_trace_count: memoryArchive.index.trace_count, yearly_report: yearlyReport ? `year_${String(yearlyReport.year).padStart(2, "0")}.json` : null }, null, 2));
 }
 
 main().catch((error) => {

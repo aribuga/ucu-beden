@@ -127,6 +127,78 @@ export type SourceBundle = {
 
 export type RssSourceCategory = "science_culture" | "entertainment" | "art" | "news" | "life";
 
+export type SourceInfluenceKind =
+  | "pressure"
+  | "aesthetic_learning"
+  | "vocabulary_learning"
+  | "rhythm_shift"
+  | "conceptual_drift"
+  | "image_expansion"
+  | "attention_shift"
+  | "memory_association"
+  | "mood_pressure";
+
+export type SourceInfluencePacket = {
+  category: RssSourceCategory;
+  item_count: number;
+  influence_kind: SourceInfluenceKind[];
+  safe_terms: string[];
+  novelty_terms: string[];
+  repeated_terms: string[];
+  rejected_terms: string[];
+  mood_bias: MoodKey[];
+  aesthetic_weight: number;
+  conceptual_weight: number;
+  rhythm_weight: number;
+  pressure_weight: number;
+  summary_for_prompt: string;
+};
+
+export type SourceDigestAnalysis = {
+  window_days: number;
+  rss_summary_similarity: {
+    compared_days: number;
+    average: number;
+    maximum: number;
+    warning: boolean;
+  };
+  source_category_distribution: Partial<Record<RssSourceCategory, number>>;
+  item_count_by_category: Partial<Record<RssSourceCategory, number>>;
+  selected_non_news_influences: Array<{
+    date: string;
+    category: Exclude<RssSourceCategory, "news">;
+    influence_kind: SourceInfluenceKind[];
+    safe_terms: string[];
+  }>;
+  novelty_terms: string[];
+  repeated_source_phrases: string[];
+  repeated_mood_words: MoodKey[];
+  rejected_unsafe_terms: string[];
+  source_health_summary: {
+    total: number;
+    ok: number;
+    empty: number;
+    blocked: number;
+    failed: number;
+    empty_or_blocked: number;
+  };
+};
+
+export type SourceInfluenceValidation = {
+  valid: boolean;
+  source_influence_packet_produced: boolean;
+  packet_count: number;
+  categories_with_items: RssSourceCategory[];
+  categories_with_packets: RssSourceCategory[];
+  category_diversity_preserved: boolean;
+  non_news_available: RssSourceCategory[];
+  non_news_represented: RssSourceCategory[];
+  non_news_ignored: RssSourceCategory[];
+  unsafe_packet_text: Array<{ date: string; category: RssSourceCategory; matches: string[] }>;
+  vocabulary_candidates_safe: boolean;
+  rss_summary_similarity_warning: boolean;
+};
+
 export type RssSource = {
   name: string;
   category: RssSourceCategory;
@@ -174,6 +246,7 @@ export type RssSourceBundle = {
   items: MoodTaggedSourceItem[];
   dailyMoodSummary: RssDailyMoodSummary;
   sources: RssSourceHealth[];
+  source_influence_packet?: SourceInfluencePacket[];
 };
 
 export type RssHealthStatus = "ok" | "empty" | "disabled" | "blocked_403" | "rate_limited_429" | "not_found_404" | "timeout" | "parse_error" | "failed";
@@ -226,10 +299,49 @@ export type RepetitionPressure = {
   prompt_note: string;
 };
 
+export type SurfaceViolationKind =
+  | "title_overexposed_surface"
+  | "title_object_list"
+  | "repeated_surface"
+  | "repeated_phrase"
+  | "canonical_home_surface"
+  | "canonical_walk_place_surface"
+  | "raw_source_unsafe"
+  | "self_explanation"
+  | "poem_surface_reuse";
+
+export type SurfaceViolation = {
+  kind: SurfaceViolationKind;
+  severity: "warning" | "severe";
+  matches: string[];
+};
+
+export type SurfaceValidationReport = {
+  surface_validation_passed: boolean;
+  severe: boolean;
+  surface_violations: SurfaceViolation[];
+  blocked_surface_terms_count: number;
+  title_violation: boolean;
+  home_place_leak_score: number;
+  repeated_phrase_score: number;
+  signature_ignored_from_analysis: boolean;
+  repeated_surfaces: string[];
+  final_status: "accepted" | "accepted_with_warning" | "rejected_for_retry";
+};
+
 export type PoemGenerationMeta = {
   provider: "openai" | "mock";
   model: string | null;
   fallback_reason: string | null;
+  surface_validation_passed?: boolean;
+  surface_violations?: SurfaceViolation[];
+  retry_count?: number;
+  blocked_surface_terms_count?: number;
+  title_violation?: boolean;
+  home_place_leak_score?: number;
+  repeated_phrase_score?: number;
+  signature_ignored_from_analysis?: boolean;
+  surface_validation_status?: SurfaceValidationReport["final_status"];
 };
 
 export type TitleGenerationSource = "llm" | "fallback_dominant_words";

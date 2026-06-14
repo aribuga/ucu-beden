@@ -12,6 +12,7 @@ import {
   writeJsonFile
 } from "./fileStorage";
 import { tokenize } from "./inputPoems";
+import { sourceInfluencePacketsForBundle } from "./sourceInfluence";
 import type {
   DailyLifeRecord,
   DailyPoem,
@@ -336,7 +337,24 @@ function walkDraft(date: string, walk: WalkState, mood: Mood): TraceDraft | null
   });
 }
 
-function sourceDraft(bundle: SourceBundle, dailyLife: DailyLifeRecord | undefined): TraceDraft | null {
+function sourceDrafts(bundle: SourceBundle, dailyLife: DailyLifeRecord | undefined, history: SourceBundle[]): TraceDraft[] {
+  const packets = sourceInfluencePacketsForBundle(bundle, history);
+  if (packets.length > 0) {
+    return packets.map((packet) =>
+      draft({
+        date: bundle.date,
+        source: "source",
+        source_ref: `${storagePaths.sources}/${bundle.date}.json#source_influence_packet:${packet.category}`,
+        kind: "external_pressure",
+        text: compact([packet.category, packet.influence_kind.join(" / "), packet.mood_bias.join(" / ")].filter(Boolean).join(" | ")),
+        transformed_text: compact(packet.summary_for_prompt),
+        emotional_weight: clamp01((packet.pressure_weight + packet.aesthetic_weight + packet.conceptual_weight + packet.rhythm_weight) / 4),
+        repression: clamp01(0.15 + packet.pressure_weight * 0.2),
+        mutation_rate: clamp01((packet.aesthetic_weight + packet.conceptual_weight + packet.rhythm_weight) / 3),
+        mood_tags: packet.mood_bias
+      })
+    ).filter((item): item is TraceDraft => item !== null);
+  }
   const summary = bundle.rss?.dailyMoodSummary;
   const moodTags = summary ? [summary.dominantMood, summary.secondaryMood] : [];
   const emotionalWeight = summary ? moodWeight(summary.moodScores) : clamp01(bundle.turkey_news.emotional_weight / 100);
@@ -350,7 +368,7 @@ function sourceDraft(bundle: SourceBundle, dailyLife: DailyLifeRecord | undefine
       .filter(Boolean)
       .join(" | ")
   );
-  return draft({
+  const legacyDraft = draft({
     date: bundle.date,
     source: "source",
     source_ref: `${storagePaths.sources}/${bundle.date}.json`,
@@ -362,6 +380,7 @@ function sourceDraft(bundle: SourceBundle, dailyLife: DailyLifeRecord | undefine
     mutation_rate: 0.65,
     mood_tags: moodTags
   });
+  return legacyDraft ? [legacyDraft] : [];
 }
 
 function dreamDraft(dream: Awaited<ReturnType<typeof listDreams>>[number], poem: DailyPoem | undefined): TraceDraft | null {
@@ -578,10 +597,7 @@ export async function buildMemoryArchive(): Promise<MemoryArchive> {
     if (walkItem) drafts.push(walkItem);
   }
   for (const record of dailyLife) drafts.push(...dailyLifeDrafts(record));
-  for (const source of sources) {
-    const item = sourceDraft(source, dailyByDate.get(source.date));
-    if (item) drafts.push(item);
-  }
+  for (const source of sources) drafts.push(...sourceDrafts(source, dailyByDate.get(source.date), sources.filter((item) => item.date < source.date)));
   for (const dream of dreams) {
     const item = dreamDraft(dream, poemByDate.get(dream.source_date));
     if (item) drafts.push(item);

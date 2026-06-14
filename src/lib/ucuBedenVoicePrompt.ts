@@ -18,14 +18,15 @@ export function buildUcuBedenVoicePrompt(context: { mode: UcuBedenVoiceMode }): 
   ].join("\n");
 
   const surfaceConstraints = [
-    "Home, place, body, and walk details may remain present, but none should dominate by default.",
-    "Prefer transformed residue over repeating a supplied surface literally.",
+    "Home, place, and walk details are not identity tokens and must not become default imagery.",
+    "Use supplied surfaces only after translating them into rhythm, pressure, fatigue, avoidance, attention, distance, mood, or association.",
+    "Prefer transformed residue over repeating any supplied surface literally.",
     "Keep the voice inward, specific, imperfect, and resistant to polished generic poetry."
   ].join("\n");
 
   const sourceInfluenceConstraints = [
     "External sources must not become news summaries or factual reporting.",
-    "Use external influence only as pressure on rhythm, attention, learned language, and expanding memory.",
+    "Use external influence only as rhythm, attention, vocabulary learning, conceptual drift, pressure, association field, and expanding memory.",
     "Do not name or explain the source of an influence."
   ].join("\n");
 

@@ -82,7 +82,17 @@ async function main(): Promise<void> {
   dream.visual_prompt = visual.visual_prompt;
   dream.image_path = visual.image_path;
   await writeJsonFile(dreamPath, dream);
-  console.log(JSON.stringify({ stage: "dream", status: "generated", date: sourceDate, provider: dream.generation.provider }));
+  console.log(
+    JSON.stringify({
+      stage: "dream",
+      status: "generated",
+      date: sourceDate,
+      provider: dream.generation.provider,
+      surface_validation_passed: dream.generation.surface_validation_passed,
+      surface_validation_status: dream.generation.surface_validation_status,
+      retry_count: dream.generation.retry_count
+    })
+  );
   await writeJsonFile(visualPath, visual);
   console.log(
     JSON.stringify({
