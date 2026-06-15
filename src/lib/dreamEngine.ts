@@ -7,6 +7,7 @@ import {
   generationFallbackTerms,
   type GenerationContextPacketInput
 } from "./generationContextPacket";
+import { buildCompactDreamPrompt, buildOrganicFallbackTitle } from "./compactCreativePrompt";
 import { tokenize } from "./inputPoems";
 import { analyzeGeneratedDreamLanguage, formatLanguagePolicy, formatLanguageRetryConstraints, languageMetadata } from "./languageValidator";
 import { seededMany } from "./random";
@@ -100,35 +101,7 @@ export function buildDreamPromptSections(params: DreamParams, retryReport?: Surf
 }
 
 export function buildDreamPrompt(params: DreamParams, retryReport?: SurfaceValidationReport, languageRetryReport?: LanguageValidationReport): string {
-  const sections = buildDreamPromptSections(params, retryReport, languageRetryReport);
-  return [
-    sections.language_policy,
-    "",
-    "A. UCU BEDEN sesi ve personası",
-    sections.voice_persona,
-    "",
-    "B. Sıkı yüzey politikası",
-    sections.strict_surface_policy,
-    "",
-    "C. Sindirilmiş gün bağlamı",
-    sections.digested_generation_context,
-    "",
-    "D. İzin verilen hafıza izleri",
-    sections.allowed_memory_traces,
-    "",
-    "E. Kaynak etkisi paketi",
-    sections.source_influence_packet,
-    "",
-    "Başlık politikası",
-    sections.title_policy_packet,
-    "",
-    ...(sections.strict_surface_retry ? ["Yüzey doğrulaması tekrar kısıtları", sections.strict_surface_retry, ""] : []),
-    ...(sections.language_retry ? ["Dil doğrulaması tekrar kısıtları", sections.language_retry, ""] : []),
-    sections.language_policy,
-    "",
-    "F. Çıktı biçimi",
-    sections.output_format
-  ].join("\n");
+  return buildCompactDreamPrompt(params, { surface: retryReport, language: languageRetryReport });
 }
 
 async function tryOpenAIDream(params: DreamParams, retryReport?: SurfaceValidationReport, languageRetryReport?: LanguageValidationReport) {
@@ -143,7 +116,7 @@ async function tryOpenAIDream(params: DreamParams, retryReport?: SurfaceValidati
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
         body: JSON.stringify({
           model,
-          input: buildDreamPrompt(params, retryReport, languageRetryReport),
+          input: buildCompactDreamPrompt(params, { surface: retryReport, language: languageRetryReport }),
           temperature: 0.9,
           max_output_tokens: 600,
           text: {
@@ -211,11 +184,8 @@ function safeDreamTitle(payload: DreamPayload, params: DreamParams, strict = fal
   const candidate = typeof payload.title === "string" ? payload.title.trim() : "";
   const candidateTerms = tokenize(candidate);
   if (!strict && candidate && filterGenerationSurfaceTerms(candidateTerms, packetInput(params)).length === candidateTerms.length) return candidate;
-  if (!strict) {
-    const terms = generationFallbackTerms(packetInput(params), 3);
-    if (terms.length > 0) return terms.join(" ");
-  }
-  return Object.entries(params.poem.mood).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([key]) => turkishMoodLabels[key] ?? key).join(" ");
+  const text = typeof payload.dream_text === "string" ? payload.dream_text : "";
+  return buildOrganicFallbackTitle(packetInput(params), text, `${params.date}:dream-title:${strict ? "strict" : "default"}`);
 }
 
 export async function generateDream(params: DreamParams): Promise<DreamRecord> {
