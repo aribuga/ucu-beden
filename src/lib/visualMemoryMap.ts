@@ -239,3 +239,159 @@ export async function buildVisualMemoryMapData(params: {
 
   return { built_through: params.graph.built_through, window_start: windowStart, nodes, edges };
 }
+
+export async function buildFullVisualMemoryMapData(params: {
+  graph: MemoryGraphData;
+  poems: DailyPoem[];
+  dreams: DreamRecord[];
+  sources: SourceBundle[];
+}): Promise<VisualMemoryMapData> {
+  const direct = new Set(params.poems.flatMap((poem) => poem.memory_selection?.direct_trace_ids ?? []));
+  const indirect = new Set(params.poems.flatMap((poem) => poem.memory_selection?.indirect_trace_ids ?? []));
+  const dreamSelected = new Set(params.dreams.flatMap((dream) => dream.memory_selection?.selected_trace_ids ?? []));
+  const dreamSuppressed = new Set(params.dreams.flatMap((dream) => dream.memory_selection?.suppressed_trace_ids ?? []));
+  for (const dream of params.dreams) {
+    for (const id of dream.memory_selection?.direct_trace_ids ?? []) direct.add(id);
+    for (const id of dream.memory_selection?.indirect_trace_ids ?? []) indirect.add(id);
+  }
+
+  const nodes: VisualMemoryMapNode[] = [
+    ...params.poems.map((poem) => ({
+      id: `poem:${poem.date}`,
+      type: "poem" as const,
+      date: poem.date,
+      label: poem.title,
+      summary: shortText(poem.mood_sentence || poem.poem_text),
+      source: "poem" as const,
+      status: null,
+      recall_type: "none" as const,
+      times_recalled: 0,
+      suppressed: false,
+      dream_return: false,
+      overexposed: false,
+      related_poem_href: `/poem/${poem.date}`,
+      related_dream_href: null
+    })),
+    ...params.dreams.map((dream) => ({
+      id: `dream:${dream.date}`,
+      type: "dream" as const,
+      date: dream.date,
+      label: dream.title,
+      summary: shortText(dream.mood_after || dream.dream_text),
+      source: "dream" as const,
+      status: null,
+      recall_type: "dream_return" as const,
+      times_recalled: 0,
+      suppressed: false,
+      dream_return: true,
+      overexposed: false,
+      related_poem_href: dream.source_date ? `/poem/${dream.source_date}` : null,
+      related_dream_href: `/dreams/${dream.date}`
+    })),
+    ...params.graph.nodes.map((trace) => {
+      const dreamReturn = trace.kind === "dream_return" || trace.times_returned_in_dream > 0;
+      return {
+        id: trace.id,
+        type: trace.source === "source" ? "source_effect" as const : "memory_trace" as const,
+        date: trace.date,
+        label: trace.source === "source" ? "dış etki" : trace.kind.replaceAll("_", " "),
+        summary: shortText(trace.transformed_text),
+        source: trace.source,
+        status: trace.status,
+        recall_type: traceRecallType({ id: trace.id, direct, indirect, dreamSelected, dreamSuppressed, dreamReturn }),
+        times_recalled: trace.times_recalled,
+        suppressed: trace.status === "suppressed",
+        dream_return: dreamReturn,
+        overexposed: trace.status === "overexposed",
+        related_poem_href: `/poem/${trace.date}`,
+        related_dream_href: trace.source === "dream" || dreamReturn ? `/dreams/${trace.date}` : null
+      };
+    })
+  ];
+
+  const rawMutations = [
+    ...params.poems.flatMap((poem) =>
+      poem.analysis.image_mutations.map((mutation, index) => ({
+        id: `mutation:poem:${poem.date}:${index}`,
+        date: poem.date,
+        summary: [mutation.from, mutation.to, mutation.reason].filter(Boolean).join(" → "),
+        anchor: `poem:${poem.date}`,
+        poemHref: `/poem/${poem.date}`,
+        dreamHref: null
+      }))
+    ),
+    ...params.dreams.flatMap((dream) =>
+      dream.memory_mutations.map((summary, index) => ({
+        id: `mutation:dream:${dream.date}:${index}`,
+        date: dream.date,
+        summary,
+        anchor: `dream:${dream.date}`,
+        poemHref: dream.source_date ? `/poem/${dream.source_date}` : null,
+        dreamHref: `/dreams/${dream.date}`
+      }))
+    )
+  ].filter((item) => item.summary.trim());
+  const mutationValidation = await validateMemoryPromptFragments(rawMutations.map((item) => item.summary), params.sources);
+  const safeMutationSet = new Set(mutationValidation.safe_fragments);
+  const mutationAnchors = new Map<string, string>();
+
+  for (const mutation of rawMutations.filter((item) => safeMutationSet.has(item.summary))) {
+    mutationAnchors.set(mutation.id, mutation.anchor);
+    nodes.push({
+      id: mutation.id,
+      type: "mutation",
+      date: mutation.date,
+      label: "mutasyon",
+      summary: shortText(mutation.summary),
+      source: null,
+      status: "unstable",
+      recall_type: "none",
+      times_recalled: 0,
+      suppressed: false,
+      dream_return: false,
+      overexposed: false,
+      related_poem_href: mutation.poemHref,
+      related_dream_href: mutation.dreamHref
+    });
+  }
+
+  const nodeIds = new Set(nodes.map((node) => node.id));
+  const traceIds = new Set(params.graph.nodes.map((node) => node.id));
+  const edges: VisualMemoryMapEdge[] = [];
+  const edgeKeys = new Set<string>();
+
+  for (const poem of params.poems) {
+    const anchor = `poem:${poem.date}`;
+    for (const id of poem.memory_selection?.direct_trace_ids ?? []) if (traceIds.has(id)) addEdge(edges, edgeKeys, anchor, id, "recall");
+    for (const id of poem.memory_selection?.indirect_trace_ids ?? []) if (traceIds.has(id)) addEdge(edges, edgeKeys, anchor, id, "indirect");
+  }
+  for (const dream of params.dreams) {
+    const anchor = `dream:${dream.date}`;
+    const sourcePoem = `poem:${dream.source_date}`;
+    if (nodeIds.has(sourcePoem)) addEdge(edges, edgeKeys, sourcePoem, anchor, "dream_return");
+    const suppressed = new Set(dream.memory_selection?.suppressed_trace_ids ?? []);
+    const dreamIndirect = new Set(dream.memory_selection?.indirect_trace_ids ?? []);
+    for (const id of dream.memory_selection?.selected_trace_ids ?? []) {
+      if (!traceIds.has(id)) continue;
+      addEdge(edges, edgeKeys, anchor, id, suppressed.has(id) ? "dream_return" : dreamIndirect.has(id) ? "indirect" : "recall");
+    }
+  }
+  for (const edge of params.graph.edges) {
+    if (!traceIds.has(edge.source) || !traceIds.has(edge.target)) continue;
+    addEdge(edges, edgeKeys, edge.source, edge.target, edge.kind === "dream_return" ? "dream_return" : edge.kind === "indirect" ? "indirect" : "linked");
+  }
+  for (const node of nodes) {
+    if (node.type === "source_effect") {
+      const sameDatePoem = `poem:${node.date}`;
+      const sameDateDream = `dream:${node.date}`;
+      const target = nodeIds.has(sameDatePoem) ? sameDatePoem : nodeIds.has(sameDateDream) ? sameDateDream : null;
+      if (target) addEdge(edges, edgeKeys, node.id, target, "source_effect");
+    }
+    if (node.type === "mutation") {
+      const target = mutationAnchors.get(node.id);
+      if (target && nodeIds.has(target)) addEdge(edges, edgeKeys, target, node.id, "mutation");
+    }
+  }
+
+  return { built_through: params.graph.built_through, window_start: null, nodes, edges };
+}
