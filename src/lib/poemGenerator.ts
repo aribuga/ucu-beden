@@ -1,4 +1,4 @@
-import { formatAge } from "./age";
+import { buildCompactPoemPrompt, buildOrganicFallbackTitle } from "./compactCreativePrompt";
 import {
   buildGenerationContextPacket,
   filterGenerationSurfaceTerms,
@@ -95,35 +95,7 @@ export function buildPoemPromptSections(context: GenerationContext, retryReport?
 }
 
 export function buildPoemPrompt(context: GenerationContext, retryReport?: SurfaceValidationReport, languageRetryReport?: LanguageValidationReport): string {
-  const sections = buildPoemPromptSections(context, retryReport, languageRetryReport);
-  return [
-    sections.language_policy,
-    "",
-    "A. UCU BEDEN sesi ve personası",
-    sections.voice_persona,
-    "",
-    "B. Sıkı yüzey politikası",
-    sections.strict_surface_policy,
-    "",
-    "C. Sindirilmiş gün bağlamı",
-    sections.digested_generation_context,
-    "",
-    "D. İzin verilen hafıza izleri",
-    sections.allowed_memory_traces,
-    "",
-    "E. Kaynak etkisi paketi",
-    sections.source_influence_packet,
-    "",
-    "Başlık politikası",
-    sections.title_policy_packet,
-    "",
-    ...(sections.strict_surface_retry ? ["Yüzey doğrulaması tekrar kısıtları", sections.strict_surface_retry, ""] : []),
-    ...(sections.language_retry ? ["Dil doğrulaması tekrar kısıtları", sections.language_retry, ""] : []),
-    sections.language_policy,
-    "",
-    "F. Çıktı biçimi",
-    sections.output_format
-  ].join("\n");
+  return buildCompactPoemPrompt(context, { surface: retryReport, language: languageRetryReport });
 }
 
 function parseStructuredPoemResponse(text: string): StructuredPoemResponse | null {
@@ -188,7 +160,7 @@ async function tryOpenAIPoem(context: GenerationContext, retryReport?: SurfaceVa
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
         body: JSON.stringify({
           model,
-          input: buildPoemPrompt(context, retryReport, languageRetryReport),
+          input: buildCompactPoemPrompt(context, { surface: retryReport, language: languageRetryReport }),
           temperature: 0.85,
           max_output_tokens: 700,
           text: {
@@ -269,12 +241,7 @@ export function analyzeGeneratedPoem(text: string, context: GenerationContext): 
 }
 
 function fallbackTitleFor(text: string, context: GenerationContext, strict = false): string {
-  if (!strict) {
-    const safeWords = filterGenerationSurfaceTerms(topWords(tokenize(text), 12), packetInput(context)).slice(0, 3);
-    if (safeWords.length > 0) return safeWords.join(" ");
-  }
-  const moodWords = Object.entries(context.mood).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([key]) => turkishMoodLabels[key] ?? key);
-  return moodWords.join(" ") || formatAge(context.age_months);
+  return buildOrganicFallbackTitle(packetInput(context), text, `${context.date}:poem-title:${strict ? "strict" : "default"}`);
 }
 
 export async function generatePoemWithLLM(context: GenerationContext): Promise<DailyPoem> {
