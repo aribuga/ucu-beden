@@ -994,6 +994,7 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
 }
 
 .memory-map-view-toggle,
+.memory-map-layout-toggle,
 .memory-map-filter-row {
   display: flex;
   flex-wrap: wrap;
@@ -1001,6 +1002,7 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
 }
 
 .memory-map-view-toggle button,
+.memory-map-layout-toggle button,
 .memory-map-filter-row button {
   border: 1px solid var(--soft-line);
   padding: 4px 8px;
@@ -1013,6 +1015,9 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
 .memory-map-view-toggle button:hover,
 .memory-map-view-toggle button:focus-visible,
 .memory-map-view-toggle button.is-active,
+.memory-map-layout-toggle button:hover,
+.memory-map-layout-toggle button:focus-visible,
+.memory-map-layout-toggle button.is-active,
 .memory-map-filter-row button:hover,
 .memory-map-filter-row button:focus-visible,
 .memory-map-filter-row button.is-active {
@@ -1023,6 +1028,12 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
 
 .memory-map-filter-row {
   justify-content: flex-end;
+}
+
+.memory-map-full-controls {
+  display: grid;
+  justify-items: end;
+  gap: 6px;
 }
 
 .memory-map-filter-row button span {
@@ -1059,6 +1070,14 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
     radial-gradient(circle at 18% 22%, color-mix(in srgb, var(--focus) 7%, transparent), transparent 24%),
     radial-gradient(circle at 82% 76%, color-mix(in srgb, #b05e42 6%, transparent), transparent 24%),
     linear-gradient(148deg, color-mix(in srgb, var(--surface) 95%, var(--text)), var(--surface-2));
+}
+
+.memory-map-canvas.archive-field {
+  background:
+    radial-gradient(circle at 50% 50%, color-mix(in srgb, #2ec4c7 8%, transparent), transparent 25%),
+    radial-gradient(circle at 25% 30%, color-mix(in srgb, #ffd34d 7%, transparent), transparent 23%),
+    radial-gradient(circle at 78% 66%, color-mix(in srgb, #7052a3 9%, transparent), transparent 24%),
+    linear-gradient(155deg, color-mix(in srgb, var(--surface) 94%, #071117), color-mix(in srgb, var(--surface-2) 96%, #17202a));
 }
 
 .memory-map-svg {
@@ -1167,6 +1186,34 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
   stroke-width: 2.2;
 }
 
+.archive-field .memory-map-edge.relation-strong {
+  stroke: color-mix(in srgb, #ffd34d 62%, var(--soft-line));
+  stroke-width: 1.8;
+}
+
+.archive-field .memory-map-edge.relation-weak {
+  stroke-width: 0.55;
+  opacity: 0.22 !important;
+}
+
+.archive-field .memory-map-edge.relation-dream {
+  stroke: #46cbd7;
+  stroke-dasharray: 8 6;
+}
+
+.archive-field .memory-map-edge.relation-mutation {
+  stroke: #b7d84b;
+  stroke-dasharray: 2 5;
+  animation: memory-field-edge-pulse 2.8s ease-in-out infinite;
+}
+
+.archive-field .memory-map-edge.relation-suppressed {
+  stroke: #642d6c;
+  stroke-width: 1.4;
+  opacity: 0.12 !important;
+  filter: blur(0.6px);
+}
+
 .memory-map-node {
   fill: var(--text);
   stroke: var(--surface);
@@ -1226,6 +1273,47 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
   filter: url("#memory-map-soft-glow");
 }
 
+.archive-field .memory-map-node.node-poem {
+  fill: #ffd34d;
+  stroke: #8c6d18;
+  filter: url("#memory-map-soft-glow");
+}
+
+.archive-field .memory-map-node.node-dream {
+  fill: #46cbd7;
+  stroke: #227987;
+}
+
+.archive-field .memory-map-node.node-memory_trace {
+  fill: color-mix(in srgb, var(--text) 28%, var(--surface));
+  stroke: color-mix(in srgb, var(--soft-line) 74%, transparent);
+  stroke-width: 1.1;
+}
+
+.archive-field .memory-map-node.node-source_effect {
+  fill: #df7d31;
+  stroke: #874417;
+  opacity: 0.88;
+}
+
+.archive-field .memory-map-node.node-mutation {
+  fill: #b7d84b;
+  stroke: #7c8e28;
+  animation: memory-field-node-pulse 2.4s ease-in-out infinite;
+}
+
+.archive-field .memory-map-node.is-suppressed {
+  fill: #58234f;
+  stroke: #7e3042;
+  opacity: 0.18;
+}
+
+.archive-field .memory-map-node.is-overexposed {
+  fill: #ffca4b;
+  stroke: #e35d37;
+  filter: url("#memory-map-soft-glow");
+}
+
 .memory-map-node:hover,
 .memory-map-node:focus-visible,
 .memory-map-node.is-hovered,
@@ -1240,6 +1328,20 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
   fill: none;
   stroke: var(--focus);
   vector-effect: non-scaling-stroke;
+}
+
+.memory-field-cluster-labels {
+  pointer-events: none;
+}
+
+.memory-field-cluster-labels text {
+  fill: color-mix(in srgb, var(--muted) 72%, transparent);
+  stroke: var(--surface);
+  stroke-width: 5px;
+  paint-order: stroke;
+  font-size: 23px;
+  letter-spacing: 0.08em;
+  opacity: 0.64;
 }
 
 .memory-map-anchor-ring {
@@ -1358,6 +1460,85 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
 
 .memory-map-detail-links a {
   font-size: 8px;
+}
+
+.memory-field-chain {
+  display: grid;
+  gap: 13px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px dotted var(--soft-line);
+}
+
+.memory-field-chain h3,
+.memory-field-chain h4 {
+  margin: 0;
+  font-weight: 400;
+}
+
+.memory-field-chain h3 {
+  font-size: 10px;
+}
+
+.memory-field-chain h4 {
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.memory-field-chain section p {
+  color: var(--text);
+  font-size: 8px;
+  line-height: 1.55;
+}
+
+.memory-field-relation-list {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.memory-field-relation-list button {
+  width: 100%;
+  display: grid;
+  gap: 2px;
+  border: 1px solid var(--soft-line);
+  padding: 5px 6px;
+  background: var(--surface-2);
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+}
+
+.memory-field-relation-list button:hover,
+.memory-field-relation-list button:focus-visible {
+  border-color: var(--focus);
+}
+
+.memory-field-relation-list strong,
+.memory-field-relation-list span {
+  font-size: 7px;
+  font-weight: 400;
+}
+
+.memory-field-relation-list span {
+  color: var(--muted);
+}
+
+@keyframes memory-field-node-pulse {
+  50% {
+    opacity: 0.55;
+    transform: scale(1.08);
+    transform-origin: center;
+  }
+}
+
+@keyframes memory-field-edge-pulse {
+  50% {
+    opacity: 0.28;
+  }
 }
 
 .timeline {
@@ -1656,6 +1837,10 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
 
   .memory-map-scope-bar {
     display: grid;
+  }
+
+  .memory-map-full-controls {
+    justify-items: start;
   }
 
   .memory-map-filter-row {

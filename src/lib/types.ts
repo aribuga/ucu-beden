@@ -644,6 +644,7 @@ export type VisualMemoryMapNode = {
   suppressed: boolean;
   dream_return: boolean;
   overexposed: boolean;
+  affinity_terms?: string[];
   related_poem_href: string | null;
   related_dream_href: string | null;
 };

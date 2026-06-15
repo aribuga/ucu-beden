@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent, type WheelEvent as ReactWheelEvent } from "react";
 
+import { buildMemoryFieldLayout, type MemoryFieldEdge } from "../lib/memoryFieldLayout";
 import type { VisualMemoryMapData, VisualMemoryMapEdge, VisualMemoryMapNode, VisualMemoryMapNodeType } from "../lib/types";
 
 const width = 2800;
@@ -30,7 +31,19 @@ type GraphPoint = {
 
 type ViewMode = "near" | "full";
 
+type ArchiveLayoutMode = "timeline" | "field";
+
 type FullMapFilter = "all" | VisualMemoryMapNodeType | "suppressed" | "overexposed";
+
+type MemoryFieldRelations = {
+  poems: PositionedNode[];
+  dreams: PositionedNode[];
+  sourceEffects: PositionedNode[];
+  mutations: PositionedNode[];
+  suppressed: PositionedNode[];
+  commonWords: string[];
+  commonImages: string[];
+};
 
 const fullMapFilters: Array<[FullMapFilter, string]> = [
   ["all", "tümü"],
@@ -44,8 +57,8 @@ const fullMapFilters: Array<[FullMapFilter, string]> = [
 ];
 
 const typeLabels: Record<VisualMemoryMapNodeType, string> = {
-  poem: "bugünün şiiri",
-  dream: "bugünkü rüya",
+  poem: "şiir",
+  dream: "rüya",
   memory_trace: "hafıza izi",
   source_effect: "içselleştirilmiş dış etki",
   mutation: "mutasyon"
@@ -79,6 +92,14 @@ function nodeRadius(node: VisualMemoryMapNode): number {
   if (node.type === "source_effect") return 6;
   if (node.type === "mutation") return 8;
   return 8 + Math.min(7, node.times_recalled * 1.1) + (node.recall_type === "direct" ? 3 : 0);
+}
+
+function fieldNodeRadius(node: VisualMemoryMapNode): number {
+  if (node.type === "poem") return 43;
+  if (node.type === "dream") return 31;
+  if (node.type === "source_effect") return 9;
+  if (node.type === "mutation") return 12;
+  return 7 + Math.min(8, node.times_recalled * 1.15) + (node.recall_type === "direct" ? 3 : 0);
 }
 
 function positionNearNodes(nodes: VisualMemoryMapNode[]): PositionedNode[] {
@@ -139,8 +160,10 @@ function positionFullNodes(nodes: VisualMemoryMapNode[]): PositionedNode[] {
   });
 }
 
-function positionNodes(nodes: VisualMemoryMapNode[], mode: ViewMode): PositionedNode[] {
-  return mode === "near" ? positionNearNodes(nodes) : positionFullNodes(nodes);
+function positionNodes(nodes: VisualMemoryMapNode[], mode: ViewMode, archiveLayout: ArchiveLayoutMode, fieldPositions: Map<string, { x: number; y: number }>): PositionedNode[] {
+  if (mode === "near") return positionNearNodes(nodes);
+  if (archiveLayout === "timeline") return positionFullNodes(nodes);
+  return nodes.map((node) => ({ ...node, ...(fieldPositions.get(node.id) ?? center), radius: fieldNodeRadius(node) }));
 }
 
 function matchesFullFilter(node: VisualMemoryMapNode, filter: FullMapFilter): boolean {
@@ -189,6 +212,49 @@ function curvePath(edge: VisualMemoryMapEdge, source: PositionedNode, target: Po
   return `M ${source.x} ${source.y} Q ${controlX} ${controlY} ${target.x} ${target.y}`;
 }
 
+function fieldRelationsForNode(
+  node: PositionedNode | null,
+  nodesById: Map<string, PositionedNode>,
+  edges: MemoryFieldEdge[],
+  termsByNode: Map<string, string[]>
+): MemoryFieldRelations | null {
+  if (!node) return null;
+  const touching = edges.filter((edge) => edge.source === node.id || edge.target === node.id);
+  const related = touching
+    .map((edge) => nodesById.get(edge.source === node.id ? edge.target : edge.source))
+    .filter((item): item is PositionedNode => item !== undefined);
+  const distinctRelated = Array.from(new Map(related.map((item) => [item.id, item])).values());
+  const selectedTerms = new Set(termsByNode.get(node.id) ?? []);
+  const commonCounts = new Map<string, number>();
+  for (const relatedNode of distinctRelated) {
+    for (const term of termsByNode.get(relatedNode.id) ?? []) {
+      if (selectedTerms.has(term)) commonCounts.set(term, (commonCounts.get(term) ?? 0) + 1);
+    }
+  }
+  for (const edge of touching) {
+    for (const term of edge.common_terms) commonCounts.set(term, (commonCounts.get(term) ?? 0) + 2);
+  }
+  const commonWords = Array.from(commonCounts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "tr")).slice(0, 10).map(([term]) => term);
+  const imageRelatedIds = new Set(distinctRelated.filter((item) => ["poem", "dream", "mutation"].includes(item.type)).map((item) => item.id));
+  const imageCounts = new Map<string, number>();
+  for (const relatedNode of distinctRelated) {
+    if (!imageRelatedIds.has(relatedNode.id)) continue;
+    for (const term of termsByNode.get(relatedNode.id) ?? []) {
+      if (selectedTerms.has(term) || commonCounts.has(term)) imageCounts.set(term, (imageCounts.get(term) ?? 0) + 1);
+    }
+  }
+  const commonImages = Array.from(imageCounts.entries()).sort((a, b) => b[1] - a[1] || b[0].length - a[0].length).slice(0, 8).map(([term]) => term);
+  return {
+    poems: distinctRelated.filter((item) => item.type === "poem"),
+    dreams: distinctRelated.filter((item) => item.type === "dream"),
+    sourceEffects: distinctRelated.filter((item) => item.type === "source_effect"),
+    mutations: distinctRelated.filter((item) => item.type === "mutation"),
+    suppressed: distinctRelated.filter((item) => item.suppressed),
+    commonWords,
+    commonImages
+  };
+}
+
 function NodeGlyph({ node }: { node: PositionedNode }) {
   if (node.type === "poem") {
     return (
@@ -214,7 +280,27 @@ function NodeGlyph({ node }: { node: PositionedNode }) {
   return <circle cx={node.x} cy={node.y} r={node.radius} />;
 }
 
-function DetailPanel({ node }: { node: VisualMemoryMapNode | null }) {
+function RelationNodeList({ nodes, onSelect }: { nodes: PositionedNode[]; onSelect: (node: PositionedNode) => void }) {
+  if (nodes.length === 0) return <p>Bağlantı yok.</p>;
+  return (
+    <ul className="memory-field-relation-list">
+      {nodes.slice(0, 6).map((node) => (
+        <li key={node.id}>
+          <button type="button" onClick={() => onSelect(node)}>
+            <strong>{node.label}</strong>
+            <span>{node.date} / {typeLabels[node.type]}</span>
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function DetailPanel({ node, fieldRelations, onSelect }: {
+  node: PositionedNode | null;
+  fieldRelations: MemoryFieldRelations | null;
+  onSelect: (node: PositionedNode) => void;
+}) {
   if (!node) {
     return (
       <aside className="memory-map-detail">
@@ -245,12 +331,25 @@ function DetailPanel({ node }: { node: VisualMemoryMapNode | null }) {
         {node.related_poem_href ? <Link href={node.related_poem_href}>ilişkili şiire git</Link> : null}
         {node.related_dream_href ? <Link href={node.related_dream_href}>ilişkili rüyaya git</Link> : null}
       </div>
+      {fieldRelations ? (
+        <div className="memory-field-chain">
+          <h3>İlişkili hafıza zinciri</h3>
+          <section><h4>bağlı şiirler</h4><RelationNodeList nodes={fieldRelations.poems} onSelect={onSelect} /></section>
+          <section><h4>bağlı rüyalar</h4><RelationNodeList nodes={fieldRelations.dreams} onSelect={onSelect} /></section>
+          <section><h4>ortak imgeler</h4><p>{fieldRelations.commonImages.join(", ") || "kayıt yok"}</p></section>
+          <section><h4>ortak kelimeler</h4><p>{fieldRelations.commonWords.join(", ") || "kayıt yok"}</p></section>
+          <section><h4>source effect</h4><RelationNodeList nodes={fieldRelations.sourceEffects} onSelect={onSelect} /></section>
+          <section><h4>mutation geçmişi</h4><RelationNodeList nodes={fieldRelations.mutations} onSelect={onSelect} /></section>
+          <section><h4>suppressed bağlantılar</h4><RelationNodeList nodes={fieldRelations.suppressed} onSelect={onSelect} /></section>
+        </div>
+      ) : null}
     </aside>
   );
 }
 
 export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemoryMapData; fullData: VisualMemoryMapData }) {
   const [viewMode, setViewMode] = useState<ViewMode>("near");
+  const [archiveLayout, setArchiveLayout] = useState<ArchiveLayoutMode>("timeline");
   const [fullFilter, setFullFilter] = useState<FullMapFilter>("all");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
@@ -266,15 +365,33 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
     () => viewMode === "full" ? data.nodes.filter((node) => matchesFullFilter(node, fullFilter)) : data.nodes,
     [data.nodes, fullFilter, viewMode]
   );
-  const nodes = useMemo(() => positionNodes(filteredDataNodes, viewMode), [filteredDataNodes, viewMode]);
+  const fullFieldLayout = useMemo(
+    () => buildMemoryFieldLayout({ nodes: fullData.nodes, edges: fullData.edges, width, height }),
+    [fullData.edges, fullData.nodes]
+  );
+  const nodes = useMemo(
+    () => positionNodes(filteredDataNodes, viewMode, archiveLayout, fullFieldLayout.positions),
+    [archiveLayout, filteredDataNodes, fullFieldLayout.positions, viewMode]
+  );
   const byId = useMemo(() => new Map(nodes.map((node) => [node.id, node])), [nodes]);
   const selected = selectedId ? byId.get(selectedId) ?? null : null;
   const hovered = hoveredId ? byId.get(hoveredId) ?? null : null;
   const activeId = hoveredId ?? selectedId;
   const visibleNodeIds = useMemo(() => new Set(nodes.map((node) => node.id)), [nodes]);
   const visibleEdges = useMemo(
-    () => data.edges.filter((edge) => visibleNodeIds.has(edge.source) && visibleNodeIds.has(edge.target)),
-    [data.edges, visibleNodeIds]
+    () => (viewMode === "full" && archiveLayout === "field" ? fullFieldLayout.edges : data.edges)
+      .filter((edge) => visibleNodeIds.has(edge.source) && visibleNodeIds.has(edge.target)),
+    [archiveLayout, data.edges, fullFieldLayout.edges, viewMode, visibleNodeIds]
+  );
+  const renderedNodes = useMemo(() => {
+    const layerOrder: Record<VisualMemoryMapNodeType, number> = { memory_trace: 0, source_effect: 1, mutation: 2, dream: 3, poem: 4 };
+    return [...nodes].sort((a, b) => layerOrder[a.type] - layerOrder[b.type]);
+  }, [nodes]);
+  const selectedFieldRelations = useMemo(
+    () => viewMode === "full" && archiveLayout === "field"
+      ? fieldRelationsForNode(selected, byId, visibleEdges as MemoryFieldEdge[], fullFieldLayout.terms_by_node)
+      : null,
+    [archiveLayout, byId, fullFieldLayout.terms_by_node, selected, viewMode, visibleEdges]
   );
   const fittedTransform = useMemo(() => fitTransform(nodes), [nodes]);
   const availableFullFilters = useMemo(
@@ -404,11 +521,13 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
     <section className="memory-map-experience">
       <header className="memory-map-intro">
         <div>
-          <span className="memory-map-kicker">{viewMode === "near" ? "son yedi günün yakın alanı" : "public-safe hafıza arşivi"}</span>
+          <span className="memory-map-kicker">{viewMode === "near" ? "son yedi günün yakın alanı" : archiveLayout === "timeline" ? "public-safe zaman atlası" : "ilişkisel hafıza alanı"}</span>
           <h1>Visual Memory Map</h1>
           <p>{viewMode === "near"
             ? "Bugünün şiiri merkezde; rüya, hatırlamalar, dönüşler ve içselleştirilmiş dış etkiler çevresinde."
-            : "Şiirler, rüyalar, hafıza izleri ve dönüşümler tarihler boyunca daha geniş bir arşiv alanına yayılıyor."}</p>
+            : archiveLayout === "timeline"
+              ? "Şiirler, rüyalar, hafıza izleri ve dönüşümler tarihler boyunca daha geniş bir arşiv alanına yayılıyor."
+              : "Kayıtlar tarihe göre değil; ortak dil, tekrar, rüya, mutation ve source ilişkilerinin çekimiyle kümeleniyor."}</p>
         </div>
         <div className="memory-map-legend" aria-label="Harita açıklaması">
           <span><i className="is-direct" />doğrudan çağrı</span>
@@ -423,19 +542,25 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
           <button type="button" className={viewMode === "full" ? "is-active" : ""} onClick={() => setViewMode("full")}>Tüm Hafıza</button>
         </div>
         {viewMode === "full" ? (
-          <div className="memory-map-filter-row" aria-label="Tüm hafıza filtreleri">
-            {availableFullFilters.map(([id, label, count]) => (
-              <button type="button" key={id} className={fullFilter === id ? "is-active" : ""} onClick={() => setFullFilter(id)}>
-                {label} <span>{count}</span>
-              </button>
-            ))}
+          <div className="memory-map-full-controls">
+            <div className="memory-map-layout-toggle" aria-label="Tüm hafıza görünümü">
+              <button type="button" className={archiveLayout === "timeline" ? "is-active" : ""} onClick={() => setArchiveLayout("timeline")}>Zaman Atlası</button>
+              <button type="button" className={archiveLayout === "field" ? "is-active" : ""} onClick={() => setArchiveLayout("field")}>Hafıza Alanı</button>
+            </div>
+            <div className="memory-map-filter-row" aria-label="Tüm hafıza filtreleri">
+              {availableFullFilters.map(([id, label, count]) => (
+                <button type="button" key={id} className={fullFilter === id ? "is-active" : ""} onClick={() => setFullFilter(id)}>
+                  {label} <span>{count}</span>
+                </button>
+              ))}
+            </div>
           </div>
         ) : (
           <span className="memory-map-scope-count">{nearData.nodes.length} yakın düğüm</span>
         )}
       </div>
       <div className="memory-map-layout">
-        <div className={`memory-map-canvas mode-${viewMode}`}>
+        <div className={`memory-map-canvas mode-${viewMode}${viewMode === "full" ? ` archive-${archiveLayout}` : ""}`}>
           <div className="memory-map-controls" aria-label="Harita kontrolleri">
             <button type="button" onClick={() => zoomBy(1.22)} aria-label="Yaklaştır" title="Yaklaştır">+</button>
             <button type="button" onClick={() => zoomBy(1 / 1.22)} aria-label="Uzaklaştır" title="Uzaklaştır">−</button>
@@ -474,17 +599,25 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
             </defs>
             <g className="memory-map-transform-layer" transform={`translate(${transform.x} ${transform.y}) scale(${transform.scale})`}>
               <ellipse className="memory-map-field" cx={center.x} cy={center.y} rx="810" ry="440" />
+              {viewMode === "full" && archiveLayout === "field" && fullFilter === "all" ? (
+                <g className="memory-field-cluster-labels">
+                  {fullFieldLayout.clusters.map((cluster) => (
+                    <text key={cluster.id} x={cluster.x} y={cluster.y} textAnchor="middle">{cluster.label}</text>
+                  ))}
+                </g>
+              ) : null}
               <g className="memory-map-edges">
                 {visibleEdges.map((edge) => {
                   const source = byId.get(edge.source);
                   const target = byId.get(edge.target);
                   if (!source || !target) return null;
                   const focused = Boolean(activeId && (edge.source === activeId || edge.target === activeId));
-                  return <path key={edge.id} className={`memory-map-edge edge-${edge.kind}${focused ? " is-focused" : ""}`} d={curvePath(edge, source, target)} style={{ opacity: focused ? 1 : Math.max(0.2, edge.weight * 0.72) }} />;
+                  const relation = "relation" in edge ? (edge as MemoryFieldEdge).relation : null;
+                  return <path key={edge.id} className={`memory-map-edge edge-${edge.kind}${relation ? ` relation-${relation}` : ""}${focused ? " is-focused" : ""}`} d={curvePath(edge, source, target)} style={{ opacity: focused ? 1 : Math.max(0.12, edge.weight * 0.72) }} />;
                 })}
               </g>
               <g className="memory-map-nodes">
-                {nodes.map((node) => {
+                {renderedNodes.map((node) => {
                   const selectedNode = selectedId === node.id;
                   const hoveredNode = hoveredId === node.id;
                   return (
@@ -503,8 +636,8 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
                       role="button"
                       tabIndex={0}
                       aria-label={`${node.label}, ${typeLabels[node.type]}, ${node.date}`}
-                      onMouseEnter={() => setHoveredId(node.id)}
-                      onMouseLeave={() => setHoveredId(null)}
+                      onPointerEnter={() => setHoveredId(node.id)}
+                      onPointerLeave={() => setHoveredId(null)}
                       onFocus={() => setHoveredId(node.id)}
                       onBlur={() => setHoveredId(null)}
                       onClick={() => selectNode(node)}
@@ -516,6 +649,7 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
                         }
                       }}
                     >
+                      <title>{`${node.label} / ${node.date} / ${typeLabels[node.type]} / ${shortText(node.summary, 110)}`}</title>
                       {selectedNode || hoveredNode ? <circle className="memory-map-node-halo" cx={node.x} cy={node.y} r={node.radius + 10} /> : null}
                       <NodeGlyph node={node} />
                       {(node.type === "poem" || node.type === "dream") ? <text x={node.x} y={node.y + node.radius + 22} textAnchor="middle">{shortText(node.label, 34)}</text> : null}
@@ -526,7 +660,7 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
             </g>
           </svg>
         </div>
-        <DetailPanel node={selected} />
+        <DetailPanel node={selected} fieldRelations={selectedFieldRelations} onSelect={selectNode} />
       </div>
     </section>
   );
