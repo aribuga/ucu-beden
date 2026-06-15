@@ -103,6 +103,7 @@ async function main(): Promise<void> {
         unresolved_selected_trace_ids: cycleValidation?.unresolved_selected_trace_ids ?? [],
         invalid_dream_return_links: cycleValidation?.invalid_dream_return_links ?? [],
         overexposed_direct_prompt: cycleValidation?.overexposed_direct_prompt ?? [],
+        historical_overexposed_direct_prompt_warnings: cycleValidation?.historical_overexposed_direct_prompt_warnings ?? [],
         graph_public_node_count_matches_public_safe_trace_count: cycleValidation?.graph_public_node_count_matches_public_safe_trace_count ?? null,
         dream_suppressed_preference: cycleValidation?.dream_suppressed_preference ?? null,
         source_digest: sourceDigest,
