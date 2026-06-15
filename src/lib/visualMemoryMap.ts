@@ -3,6 +3,7 @@ import type {
   DailyPoem,
   DreamRecord,
   MemoryGraphData,
+  Mood,
   SourceBundle,
   VisualMemoryMapData,
   VisualMemoryMapEdge,
@@ -12,6 +13,16 @@ import type {
 } from "./types";
 
 const maxTraceNodes = 34;
+const moodLabels: Record<keyof Mood, string> = {
+  melancholy: "melankoli",
+  anger: "öfke",
+  tenderness: "şefkat",
+  fatigue: "yorgunluk",
+  absurdity: "absürtlük",
+  clarity: "açıklık",
+  desire: "arzu",
+  hope: "umut"
+};
 
 function distinct<T>(items: T[]): T[] {
   return Array.from(new Set(items));
@@ -29,6 +40,22 @@ function subtractDays(date: string, days: number): string {
   const value = new Date(`${date}T00:00:00Z`);
   value.setUTCDate(value.getUTCDate() - days);
   return value.toISOString().slice(0, 10);
+}
+
+function moodAffinity(mood: Mood): string[] {
+  return (Object.entries(mood) as Array<[keyof Mood, number]>)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3)
+    .map(([key]) => moodLabels[key]);
+}
+
+function poemAffinity(poem: DailyPoem): string[] {
+  return distinct([
+    ...poem.analysis.dominant_words,
+    ...poem.analysis.recurring_words,
+    ...poem.analysis.new_images,
+    ...moodAffinity(poem.mood)
+  ]).slice(0, 24);
 }
 
 function traceRecallType(params: {
@@ -128,6 +155,7 @@ export async function buildVisualMemoryMapData(params: {
       suppressed: false,
       dream_return: false,
       overexposed: false,
+      affinity_terms: poemAffinity(params.latestPoem),
       related_poem_href: `/poem/${params.latestPoem.date}`,
       related_dream_href: null
     });
@@ -147,6 +175,7 @@ export async function buildVisualMemoryMapData(params: {
       suppressed: false,
       dream_return: true,
       overexposed: false,
+      affinity_terms: params.latestDream.symbols,
       related_poem_href: params.latestDream.source_date ? `/poem/${params.latestDream.source_date}` : null,
       related_dream_href: `/dreams/${params.latestDream.date}`
     });
@@ -269,6 +298,7 @@ export async function buildFullVisualMemoryMapData(params: {
       suppressed: false,
       dream_return: false,
       overexposed: false,
+      affinity_terms: poemAffinity(poem),
       related_poem_href: `/poem/${poem.date}`,
       related_dream_href: null
     })),
@@ -285,6 +315,7 @@ export async function buildFullVisualMemoryMapData(params: {
       suppressed: false,
       dream_return: true,
       overexposed: false,
+      affinity_terms: dream.symbols,
       related_poem_href: dream.source_date ? `/poem/${dream.source_date}` : null,
       related_dream_href: `/dreams/${dream.date}`
     })),
