@@ -351,8 +351,8 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
   const [viewMode, setViewMode] = useState<ViewMode>("near");
   const [archiveLayout, setArchiveLayout] = useState<ArchiveLayoutMode>("timeline");
   const [fullFilter, setFullFilter] = useState<FullMapFilter>("all");
-  const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
+  const [hoveredNodeId, setHoveredNodeId] = useState<string | null>(null);
   const [transform, setTransform] = useState<GraphTransform>({ x: 0, y: 0, scale: 1 });
   const [isPanning, setIsPanning] = useState(false);
   const svgRef = useRef<SVGSVGElement | null>(null);
@@ -374,9 +374,9 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
     [archiveLayout, filteredDataNodes, fullFieldLayout.positions, viewMode]
   );
   const byId = useMemo(() => new Map(nodes.map((node) => [node.id, node])), [nodes]);
-  const selected = selectedId ? byId.get(selectedId) ?? null : null;
-  const hovered = hoveredId ? byId.get(hoveredId) ?? null : null;
-  const activeId = hoveredId ?? selectedId;
+  const selected = selectedNodeId ? byId.get(selectedNodeId) ?? null : null;
+  const hovered = hoveredNodeId ? byId.get(hoveredNodeId) ?? null : null;
+  const activeId = hoveredNodeId ?? selectedNodeId;
   const visibleNodeIds = useMemo(() => new Set(nodes.map((node) => node.id)), [nodes]);
   const visibleEdges = useMemo(
     () => (viewMode === "full" && archiveLayout === "field" ? fullFieldLayout.edges : data.edges)
@@ -403,9 +403,12 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
 
   useEffect(() => {
     setTransform(fittedTransform);
-    setSelectedId(null);
-    setHoveredId(null);
   }, [fittedTransform]);
+
+  useEffect(() => {
+    setSelectedNodeId(null);
+    setHoveredNodeId(null);
+  }, [archiveLayout, fullFilter, viewMode]);
 
   const clientToGraphPoint = useCallback((clientX: number, clientY: number): GraphPoint => {
     const rect = svgRef.current?.getBoundingClientRect();
@@ -438,7 +441,7 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
 
   const selectNode = useCallback((node: PositionedNode) => {
     if (movedRef.current) return;
-    setSelectedId(node.id);
+    setSelectedNodeId(node.id);
     focusNode(node);
   }, [focusNode]);
 
@@ -464,6 +467,10 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
   }, [transform]);
 
   const onPointerDown = useCallback((event: ReactPointerEvent<SVGSVGElement>) => {
+    if ((event.target as Element).closest(".memory-map-node")) {
+      movedRef.current = false;
+      return;
+    }
     const point = clientToGraphPoint(event.clientX, event.clientY);
     pointersRef.current.set(event.pointerId, point);
     event.currentTarget.setPointerCapture(event.pointerId);
@@ -586,6 +593,11 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
             onPointerMove={onPointerMove}
             onPointerUp={endPointer}
             onPointerCancel={endPointer}
+            onClick={() => {
+              if (movedRef.current) return;
+              setSelectedNodeId(null);
+              setHoveredNodeId(null);
+            }}
           >
             <defs>
               <filter id="memory-map-soft-glow" x="-80%" y="-80%" width="260%" height="260%">
@@ -618,8 +630,8 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
               </g>
               <g className="memory-map-nodes">
                 {renderedNodes.map((node) => {
-                  const selectedNode = selectedId === node.id;
-                  const hoveredNode = hoveredId === node.id;
+                  const selectedNode = selectedNodeId === node.id;
+                  const hoveredNode = hoveredNodeId === node.id;
                   return (
                     <g
                       key={node.id}
@@ -636,21 +648,29 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
                       role="button"
                       tabIndex={0}
                       aria-label={`${node.label}, ${typeLabels[node.type]}, ${node.date}`}
-                      onPointerEnter={() => setHoveredId(node.id)}
-                      onPointerLeave={() => setHoveredId(null)}
-                      onFocus={() => setHoveredId(node.id)}
-                      onBlur={() => setHoveredId(null)}
-                      onClick={() => selectNode(node)}
+                      onPointerEnter={() => setHoveredNodeId(node.id)}
+                      onPointerLeave={() => setHoveredNodeId(null)}
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        selectNode(node);
+                      }}
                       onKeyDown={(event) => {
                         if (event.key === "Enter" || event.key === " ") {
                           event.preventDefault();
-                          setSelectedId(node.id);
+                          setSelectedNodeId(node.id);
                           focusNode(node);
                         }
                       }}
                     >
                       <title>{`${node.label} / ${node.date} / ${typeLabels[node.type]} / ${shortText(node.summary, 110)}`}</title>
-                      {selectedNode || hoveredNode ? <circle className="memory-map-node-halo" cx={node.x} cy={node.y} r={node.radius + 10} /> : null}
+                      {selectedNode || hoveredNode ? (
+                        <circle
+                          className={`memory-map-node-halo ${selectedNode ? "is-selected-halo" : "is-hover-halo"}`}
+                          cx={node.x}
+                          cy={node.y}
+                          r={node.radius + 10}
+                        />
+                      ) : null}
                       <NodeGlyph node={node} />
                       {(node.type === "poem" || node.type === "dream") ? <text x={node.x} y={node.y + node.radius + 22} textAnchor="middle">{shortText(node.label, 34)}</text> : null}
                     </g>

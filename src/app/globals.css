@@ -730,6 +730,7 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
 .mutation-edge {
   stroke: var(--soft-line);
   stroke-width: 1;
+  pointer-events: none;
   vector-effect: non-scaling-stroke;
 }
 
@@ -755,26 +756,45 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
   outline: none;
 }
 
-.mutation-node:hover,
-.mutation-node:focus-visible,
-.mutation-node.is-hovered,
-.mutation-node.is-selected {
-  color: var(--focus);
+.mutation-graph-background {
+  fill: transparent;
+  pointer-events: all;
 }
 
 .mutation-node:hover > *,
 .mutation-node:focus-visible > *,
-.mutation-node.is-hovered > *,
+.mutation-node.is-hovered > * {
+  stroke-width: 2;
+}
+
+.mutation-node.is-selected {
+  color: var(--focus);
+}
+
 .mutation-node.is-selected > * {
   stroke-width: 3;
+}
+
+.mutation-graph:has(.mutation-node.is-selected) .mutation-node:not(.is-selected):not(.is-hovered) {
+  opacity: 0.34;
 }
 
 .mutation-node-halo {
   fill: none;
   stroke: var(--focus);
-  stroke-width: 2;
-  stroke-dasharray: 2 3;
   vector-effect: non-scaling-stroke;
+}
+
+.mutation-node-halo.is-hover-halo {
+  opacity: 0.52;
+  stroke-width: 1.2;
+  stroke-dasharray: 1 5;
+}
+
+.mutation-node-halo.is-selected-halo {
+  opacity: 1;
+  stroke-width: 2.4;
+  stroke-dasharray: 2 3;
 }
 
 .mutation-hover {
@@ -1152,6 +1172,7 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
   fill: none;
   stroke: var(--soft-line);
   stroke-width: 0.8;
+  pointer-events: none;
   vector-effect: non-scaling-stroke;
   transition: opacity 160ms ease, stroke-width 160ms ease;
 }
@@ -1316,11 +1337,26 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
 
 .memory-map-node:hover,
 .memory-map-node:focus-visible,
-.memory-map-node.is-hovered,
+.memory-map-node.is-hovered {
+  opacity: 1;
+  stroke: color-mix(in srgb, var(--focus) 58%, var(--soft-line));
+  stroke-width: 2.2;
+}
+
 .memory-map-node.is-selected {
   opacity: 1;
   stroke: var(--focus);
-  stroke-width: 3;
+  stroke-width: 3.5;
+  filter: url("#memory-map-soft-glow");
+}
+
+.memory-map-svg:has(.memory-map-node.is-selected) .memory-map-node:not(.is-selected):not(.is-hovered) {
+  opacity: 0.24;
+  filter: none;
+}
+
+.memory-map-svg:has(.memory-map-node.is-selected) .memory-map-edge:not(.is-focused) {
+  opacity: 0.07 !important;
 }
 
 .memory-map-anchor-ring,
@@ -1350,8 +1386,19 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
 }
 
 .memory-map-node-halo {
-  stroke-width: 1.5;
-  stroke-dasharray: 1 4;
+  transition: opacity 120ms ease, stroke-width 120ms ease;
+}
+
+.memory-map-node-halo.is-hover-halo {
+  opacity: 0.46;
+  stroke-width: 1;
+  stroke-dasharray: 1 7;
+}
+
+.memory-map-node-halo.is-selected-halo {
+  opacity: 1;
+  stroke-width: 2;
+  stroke-dasharray: 2 4;
 }
 
 .memory-map-hover {

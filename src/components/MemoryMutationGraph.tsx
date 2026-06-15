@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import type { MemoryGraphData, MemoryGraphNode, MemoryTraceSource, MemoryTraceStatus } from "../lib/types";
 
@@ -204,13 +204,13 @@ function TraceDetail({
 export function MemoryMutationGraph({ data }: { data: MemoryGraphData }) {
   const [filter, setFilter] = useState<FilterId>(() => initialFilter(data));
   const [showAllEdges, setShowAllEdges] = useState(data.edges.length <= 70);
-  const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const [selectedTraceId, setSelectedTraceId] = useState<string | null>(null);
+  const [hoveredTraceId, setHoveredTraceId] = useState<string | null>(null);
   const graphNodes = useMemo(() => positions(data), [data]);
   const nodesById = useMemo(() => new Map(data.nodes.map((node) => [node.id, node])), [data.nodes]);
   const positionedById = useMemo(() => new Map(graphNodes.map((node) => [node.id, node])), [graphNodes]);
   const primaryIds = useMemo(() => new Set(data.nodes.filter((node) => matchesFilter(node, filter)).map((node) => node.id)), [data.nodes, filter]);
-  const activeNodeId = hoveredId ?? selectedId;
+  const activeNodeId = hoveredTraceId ?? selectedTraceId;
   const visibleEdges = useMemo(
     () =>
       data.edges.filter((edge) => {
@@ -235,8 +235,13 @@ export function MemoryMutationGraph({ data }: { data: MemoryGraphData }) {
   const availableFilters = filterLabels
     .map(([id, label]) => [id, label, data.nodes.filter((node) => matchesFilter(node, id)).length] as const)
     .filter(([id, , count]) => id === "all" || count > 0);
-  const hovered = hoveredId ? nodesById.get(hoveredId) ?? null : null;
-  const selected = selectedId ? nodesById.get(selectedId) ?? null : null;
+  const hovered = hoveredTraceId ? nodesById.get(hoveredTraceId) ?? null : null;
+  const selected = selectedTraceId ? nodesById.get(selectedTraceId) ?? null : null;
+
+  useEffect(() => {
+    setSelectedTraceId(null);
+    setHoveredTraceId(null);
+  }, [filter]);
 
   return (
     <section className="mutation-layout">
@@ -273,6 +278,17 @@ export function MemoryMutationGraph({ data }: { data: MemoryGraphData }) {
             </div>
           ) : null}
           <svg className="mutation-graph" viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Hafıza trace bağlantı grafiği">
+            <rect
+              className="mutation-graph-background"
+              x="0"
+              y="0"
+              width={width}
+              height={height}
+              onClick={() => {
+                setSelectedTraceId(null);
+                setHoveredTraceId(null);
+              }}
+            />
             <g className="mutation-edges">
               {visibleEdges.map((edge) => {
                 const source = positionedById.get(edge.source);
@@ -286,8 +302,8 @@ export function MemoryMutationGraph({ data }: { data: MemoryGraphData }) {
               {graphNodes.map((node) => {
                 if (!visibleIds.has(node.id)) return null;
                 const contextOnly = filter !== "all" && !primaryIds.has(node.id);
-                const isSelected = selectedId === node.id;
-                const isHovered = hoveredId === node.id;
+                const isSelected = selectedTraceId === node.id;
+                const isHovered = hoveredTraceId === node.id;
                 return (
                   <g
                     key={node.id}
@@ -295,19 +311,27 @@ export function MemoryMutationGraph({ data }: { data: MemoryGraphData }) {
                     role="button"
                     tabIndex={0}
                     aria-label={`${node.date} ${node.source} ${node.kind} ${node.status}`}
-                    onMouseEnter={() => setHoveredId(node.id)}
-                    onMouseLeave={() => setHoveredId(null)}
-                    onFocus={() => setHoveredId(node.id)}
-                    onBlur={() => setHoveredId(null)}
-                    onClick={() => setSelectedId(node.id)}
+                    onMouseEnter={() => setHoveredTraceId(node.id)}
+                    onMouseLeave={() => setHoveredTraceId(null)}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      setSelectedTraceId(node.id);
+                    }}
                     onKeyDown={(event) => {
                       if (event.key === "Enter" || event.key === " ") {
                         event.preventDefault();
-                        setSelectedId(node.id);
+                        setSelectedTraceId(node.id);
                       }
                     }}
                   >
-                    {isSelected || isHovered ? <circle className="mutation-node-halo" cx={node.x} cy={node.y} r={node.radius + (isSelected ? 8 : 5)} /> : null}
+                    {isSelected || isHovered ? (
+                      <circle
+                        className={`mutation-node-halo ${isSelected ? "is-selected-halo" : "is-hover-halo"}`}
+                        cx={node.x}
+                        cy={node.y}
+                        r={node.radius + (isSelected ? 8 : 5)}
+                      />
+                    ) : null}
                     <NodeShape node={node} contextOnly={contextOnly} />
                   </g>
                 );
@@ -315,7 +339,7 @@ export function MemoryMutationGraph({ data }: { data: MemoryGraphData }) {
             </g>
           </svg>
         </div>
-        <TraceDetail node={selected} nodes={nodesById} onSelect={setSelectedId} />
+        <TraceDetail node={selected} nodes={nodesById} onSelect={setSelectedTraceId} />
       </div>
     </section>
   );
