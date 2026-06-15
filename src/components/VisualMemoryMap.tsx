@@ -1,19 +1,47 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent, type WheelEvent as ReactWheelEvent } from "react";
 
 import type { VisualMemoryMapData, VisualMemoryMapEdge, VisualMemoryMapNode, VisualMemoryMapNodeType } from "../lib/types";
 
-const width = 1120;
-const height = 760;
-const center = { x: 535, y: 365 };
+const width = 2800;
+const height = 1700;
+const center = { x: 1400, y: 820 };
+const minZoom = 0.35;
+const maxZoom = 2.8;
 
 type PositionedNode = VisualMemoryMapNode & {
   x: number;
   y: number;
   radius: number;
 };
+
+type GraphTransform = {
+  x: number;
+  y: number;
+  scale: number;
+};
+
+type GraphPoint = {
+  x: number;
+  y: number;
+};
+
+type ViewMode = "near" | "full";
+
+type FullMapFilter = "all" | VisualMemoryMapNodeType | "suppressed" | "overexposed";
+
+const fullMapFilters: Array<[FullMapFilter, string]> = [
+  ["all", "tümü"],
+  ["poem", "poem"],
+  ["dream", "dream"],
+  ["memory_trace", "memory trace"],
+  ["source_effect", "source effect"],
+  ["mutation", "mutation"],
+  ["suppressed", "suppressed"],
+  ["overexposed", "overexposed"]
+];
 
 const typeLabels: Record<VisualMemoryMapNodeType, string> = {
   poem: "bugünün şiiri",
@@ -36,12 +64,12 @@ function shortText(value: string, limit = 170): string {
   return `${boundary > limit * 0.65 ? clipped.slice(0, boundary) : clipped}...`;
 }
 
-function radialPosition(node: VisualMemoryMapNode, index: number, total: number, radius: number, phase: number) {
+function radialPosition(node: VisualMemoryMapNode, index: number, total: number, radius: number, phase: number, verticalScale: number) {
   const jitter = ((hashNumber(node.id) % 41) - 20) * 0.7;
   const angle = phase + (index / Math.max(1, total)) * Math.PI * 2 + jitter * 0.006;
   return {
     x: center.x + Math.cos(angle) * (radius + jitter),
-    y: center.y + Math.sin(angle) * (radius * 0.73 + jitter * 0.5)
+    y: center.y + Math.sin(angle) * (radius * verticalScale + jitter * 0.5)
   };
 }
 
@@ -53,7 +81,7 @@ function nodeRadius(node: VisualMemoryMapNode): number {
   return 8 + Math.min(7, node.times_recalled * 1.1) + (node.recall_type === "direct" ? 3 : 0);
 }
 
-function positionNodes(nodes: VisualMemoryMapNode[]): PositionedNode[] {
+function positionNearNodes(nodes: VisualMemoryMapNode[]): PositionedNode[] {
   const groups = {
     poem: nodes.filter((node) => node.type === "poem"),
     dream: nodes.filter((node) => node.type === "dream"),
@@ -65,18 +93,91 @@ function positionNodes(nodes: VisualMemoryMapNode[]): PositionedNode[] {
 
   return nodes.map((node) => {
     let point = center;
-    if (node.type === "dream") point = { x: center.x + 132, y: center.y - 92 };
+    if (node.type === "dream") point = { x: center.x + 250, y: center.y - 170 };
     if (node.type === "memory_trace") {
       const directIndex = groups.direct.findIndex((item) => item.id === node.id);
       const indirectIndex = groups.indirect.findIndex((item) => item.id === node.id);
       point = directIndex >= 0
-        ? radialPosition(node, directIndex, groups.direct.length, 185, -0.45)
-        : radialPosition(node, indirectIndex, groups.indirect.length, 290, 0.3);
+        ? radialPosition(node, directIndex, groups.direct.length, 440, -0.45, 0.68)
+        : radialPosition(node, indirectIndex, groups.indirect.length, 760, 0.3, 0.63);
     }
-    if (node.type === "source_effect") point = radialPosition(node, groups.source.findIndex((item) => item.id === node.id), groups.source.length, 430, 0.72);
-    if (node.type === "mutation") point = radialPosition(node, groups.mutation.findIndex((item) => item.id === node.id), groups.mutation.length, 112, 1.1);
+    if (node.type === "source_effect") point = radialPosition(node, groups.source.findIndex((item) => item.id === node.id), groups.source.length, 1120, 0.72, 0.56);
+    if (node.type === "mutation") point = radialPosition(node, groups.mutation.findIndex((item) => item.id === node.id), groups.mutation.length, 260, 1.1, 0.78);
     return { ...node, ...point, radius: nodeRadius(node) };
   });
+}
+
+function positionFullNodes(nodes: VisualMemoryMapNode[]): PositionedNode[] {
+  const dates = Array.from(new Set(nodes.map((node) => node.date))).sort();
+  const sameDateTypeIndex = new Map<string, number>();
+  return nodes.map((node) => {
+    const dateIndex = Math.max(0, dates.indexOf(node.date));
+    const xBase = dates.length <= 1 ? center.x : 250 + (dateIndex / (dates.length - 1)) * (width - 500);
+    const groupKey = `${node.date}:${node.type}`;
+    const groupIndex = sameDateTypeIndex.get(groupKey) ?? 0;
+    sameDateTypeIndex.set(groupKey, groupIndex + 1);
+    const jitter = ((hashNumber(node.id) % 53) - 26) * 1.15;
+    let x = xBase + jitter;
+    let y = center.y + jitter * 0.7;
+    if (node.type === "poem") y = center.y - 40;
+    if (node.type === "dream") y = center.y + 210;
+    if (node.type === "memory_trace") {
+      const column = groupIndex % 3;
+      const row = Math.floor(groupIndex / 3);
+      x += (column - 1) * 58;
+      y = center.y - 400 + row * 98 + (column % 2) * 28 + jitter * 0.3;
+    }
+    if (node.type === "source_effect") {
+      x += ((groupIndex % 3) - 1) * 48;
+      y = 150 + Math.floor(groupIndex / 3) * 62 + jitter * 0.25;
+    }
+    if (node.type === "mutation") {
+      x += ((groupIndex % 3) - 1) * 54;
+      y = height - 220 - Math.floor(groupIndex / 3) * 68 + jitter * 0.25;
+    }
+    return { ...node, x, y, radius: nodeRadius(node) };
+  });
+}
+
+function positionNodes(nodes: VisualMemoryMapNode[], mode: ViewMode): PositionedNode[] {
+  return mode === "near" ? positionNearNodes(nodes) : positionFullNodes(nodes);
+}
+
+function matchesFullFilter(node: VisualMemoryMapNode, filter: FullMapFilter): boolean {
+  if (filter === "all") return true;
+  if (filter === "suppressed") return node.suppressed;
+  if (filter === "overexposed") return node.overexposed;
+  return node.type === filter;
+}
+
+function clampZoom(value: number): number {
+  return Math.max(minZoom, Math.min(maxZoom, value));
+}
+
+function nodeBounds(nodes: PositionedNode[]) {
+  const padding = 78;
+  return nodes.reduce(
+    (bounds, node) => ({
+      minX: Math.min(bounds.minX, node.x - node.radius - padding),
+      minY: Math.min(bounds.minY, node.y - node.radius - padding),
+      maxX: Math.max(bounds.maxX, node.x + node.radius + padding),
+      maxY: Math.max(bounds.maxY, node.y + node.radius + padding)
+    }),
+    { minX: Number.POSITIVE_INFINITY, minY: Number.POSITIVE_INFINITY, maxX: Number.NEGATIVE_INFINITY, maxY: Number.NEGATIVE_INFINITY }
+  );
+}
+
+function fitTransform(nodes: PositionedNode[]): GraphTransform {
+  if (nodes.length === 0) return { x: 0, y: 0, scale: 1 };
+  const bounds = nodeBounds(nodes);
+  const boundsWidth = Math.max(1, bounds.maxX - bounds.minX);
+  const boundsHeight = Math.max(1, bounds.maxY - bounds.minY);
+  const scale = clampZoom(Math.min(width / boundsWidth, height / boundsHeight) * 0.94);
+  return {
+    x: width / 2 - ((bounds.minX + bounds.maxX) / 2) * scale,
+    y: height / 2 - ((bounds.minY + bounds.maxY) / 2) * scale,
+    scale
+  };
 }
 
 function curvePath(edge: VisualMemoryMapEdge, source: PositionedNode, target: PositionedNode): string {
@@ -148,22 +249,166 @@ function DetailPanel({ node }: { node: VisualMemoryMapNode | null }) {
   );
 }
 
-export function VisualMemoryMap({ data }: { data: VisualMemoryMapData }) {
+export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemoryMapData; fullData: VisualMemoryMapData }) {
+  const [viewMode, setViewMode] = useState<ViewMode>("near");
+  const [fullFilter, setFullFilter] = useState<FullMapFilter>("all");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
-  const nodes = useMemo(() => positionNodes(data.nodes), [data.nodes]);
+  const [transform, setTransform] = useState<GraphTransform>({ x: 0, y: 0, scale: 1 });
+  const [isPanning, setIsPanning] = useState(false);
+  const svgRef = useRef<SVGSVGElement | null>(null);
+  const pointersRef = useRef(new Map<number, GraphPoint>());
+  const dragRef = useRef<{ pointerId: number; point: GraphPoint; transform: GraphTransform } | null>(null);
+  const pinchRef = useRef<{ distance: number; midpoint: GraphPoint; transform: GraphTransform } | null>(null);
+  const movedRef = useRef(false);
+  const data = viewMode === "near" ? nearData : fullData;
+  const filteredDataNodes = useMemo(
+    () => viewMode === "full" ? data.nodes.filter((node) => matchesFullFilter(node, fullFilter)) : data.nodes,
+    [data.nodes, fullFilter, viewMode]
+  );
+  const nodes = useMemo(() => positionNodes(filteredDataNodes, viewMode), [filteredDataNodes, viewMode]);
   const byId = useMemo(() => new Map(nodes.map((node) => [node.id, node])), [nodes]);
   const selected = selectedId ? byId.get(selectedId) ?? null : null;
   const hovered = hoveredId ? byId.get(hoveredId) ?? null : null;
   const activeId = hoveredId ?? selectedId;
+  const visibleNodeIds = useMemo(() => new Set(nodes.map((node) => node.id)), [nodes]);
+  const visibleEdges = useMemo(
+    () => data.edges.filter((edge) => visibleNodeIds.has(edge.source) && visibleNodeIds.has(edge.target)),
+    [data.edges, visibleNodeIds]
+  );
+  const fittedTransform = useMemo(() => fitTransform(nodes), [nodes]);
+  const availableFullFilters = useMemo(
+    () => fullMapFilters
+      .map(([id, label]) => [id, label, fullData.nodes.filter((node) => matchesFullFilter(node, id)).length] as const)
+      .filter(([id, , count]) => id === "all" || count > 0),
+    [fullData.nodes]
+  );
+
+  useEffect(() => {
+    setTransform(fittedTransform);
+    setSelectedId(null);
+    setHoveredId(null);
+  }, [fittedTransform]);
+
+  const clientToGraphPoint = useCallback((clientX: number, clientY: number): GraphPoint => {
+    const rect = svgRef.current?.getBoundingClientRect();
+    if (!rect || rect.width === 0 || rect.height === 0) return { x: 0, y: 0 };
+    return {
+      x: ((clientX - rect.left) / rect.width) * width,
+      y: ((clientY - rect.top) / rect.height) * height
+    };
+  }, []);
+
+  const zoomAt = useCallback((point: GraphPoint, nextScale: number) => {
+    setTransform((current) => {
+      const scale = clampZoom(nextScale);
+      const worldX = (point.x - current.x) / current.scale;
+      const worldY = (point.y - current.y) / current.scale;
+      return { x: point.x - worldX * scale, y: point.y - worldY * scale, scale };
+    });
+  }, []);
+
+  const zoomBy = useCallback((factor: number) => {
+    zoomAt({ x: width / 2, y: height / 2 }, transform.scale * factor);
+  }, [transform.scale, zoomAt]);
+
+  const focusNode = useCallback((node: PositionedNode) => {
+    setTransform((current) => {
+      const scale = Math.max(current.scale, 0.82);
+      return { x: width * 0.46 - node.x * scale, y: height * 0.5 - node.y * scale, scale };
+    });
+  }, []);
+
+  const selectNode = useCallback((node: PositionedNode) => {
+    if (movedRef.current) return;
+    setSelectedId(node.id);
+    focusNode(node);
+  }, [focusNode]);
+
+  const onWheel = useCallback((event: ReactWheelEvent<SVGSVGElement>) => {
+    event.preventDefault();
+    const point = clientToGraphPoint(event.clientX, event.clientY);
+    const factor = Math.exp(-event.deltaY * 0.0014);
+    zoomAt(point, transform.scale * factor);
+  }, [clientToGraphPoint, transform.scale, zoomAt]);
+
+  const startPinch = useCallback(() => {
+    const points = Array.from(pointersRef.current.values());
+    if (points.length < 2) {
+      pinchRef.current = null;
+      return;
+    }
+    const [first, second] = points;
+    pinchRef.current = {
+      distance: Math.hypot(second.x - first.x, second.y - first.y),
+      midpoint: { x: (first.x + second.x) / 2, y: (first.y + second.y) / 2 },
+      transform
+    };
+  }, [transform]);
+
+  const onPointerDown = useCallback((event: ReactPointerEvent<SVGSVGElement>) => {
+    const point = clientToGraphPoint(event.clientX, event.clientY);
+    pointersRef.current.set(event.pointerId, point);
+    event.currentTarget.setPointerCapture(event.pointerId);
+    movedRef.current = false;
+    setIsPanning(true);
+    if (pointersRef.current.size === 1) dragRef.current = { pointerId: event.pointerId, point, transform };
+    else startPinch();
+  }, [clientToGraphPoint, startPinch, transform]);
+
+  const onPointerMove = useCallback((event: ReactPointerEvent<SVGSVGElement>) => {
+    if (!pointersRef.current.has(event.pointerId)) return;
+    const point = clientToGraphPoint(event.clientX, event.clientY);
+    pointersRef.current.set(event.pointerId, point);
+    if (pointersRef.current.size >= 2 && pinchRef.current) {
+      const points = Array.from(pointersRef.current.values());
+      const [first, second] = points;
+      const distance = Math.hypot(second.x - first.x, second.y - first.y);
+      const midpoint = { x: (first.x + second.x) / 2, y: (first.y + second.y) / 2 };
+      const initial = pinchRef.current;
+      const scale = clampZoom(initial.transform.scale * (distance / Math.max(1, initial.distance)));
+      const worldX = (initial.midpoint.x - initial.transform.x) / initial.transform.scale;
+      const worldY = (initial.midpoint.y - initial.transform.y) / initial.transform.scale;
+      movedRef.current = true;
+      setTransform({ x: midpoint.x - worldX * scale, y: midpoint.y - worldY * scale, scale });
+      return;
+    }
+    const drag = dragRef.current;
+    if (!drag || drag.pointerId !== event.pointerId) return;
+    const deltaX = point.x - drag.point.x;
+    const deltaY = point.y - drag.point.y;
+    if (Math.abs(deltaX) + Math.abs(deltaY) > 3) movedRef.current = true;
+    setTransform({ x: drag.transform.x + deltaX, y: drag.transform.y + deltaY, scale: drag.transform.scale });
+  }, [clientToGraphPoint]);
+
+  const endPointer = useCallback((event: ReactPointerEvent<SVGSVGElement>) => {
+    pointersRef.current.delete(event.pointerId);
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+    if (pointersRef.current.size === 0) {
+      dragRef.current = null;
+      pinchRef.current = null;
+      setIsPanning(false);
+    } else if (pointersRef.current.size === 1) {
+      const [pointerId, point] = Array.from(pointersRef.current.entries())[0];
+      dragRef.current = { pointerId, point, transform };
+      pinchRef.current = null;
+    } else {
+      startPinch();
+    }
+    window.setTimeout(() => {
+      movedRef.current = false;
+    }, 0);
+  }, [startPinch, transform]);
 
   return (
     <section className="memory-map-experience">
       <header className="memory-map-intro">
         <div>
-          <span className="memory-map-kicker">son yedi günün yakın alanı</span>
+          <span className="memory-map-kicker">{viewMode === "near" ? "son yedi günün yakın alanı" : "public-safe hafıza arşivi"}</span>
           <h1>Visual Memory Map</h1>
-          <p>Bugünün şiiri merkezde; rüya, hatırlamalar, dönüşler ve içselleştirilmiş dış etkiler çevresinde.</p>
+          <p>{viewMode === "near"
+            ? "Bugünün şiiri merkezde; rüya, hatırlamalar, dönüşler ve içselleştirilmiş dış etkiler çevresinde."
+            : "Şiirler, rüyalar, hafıza izleri ve dönüşümler tarihler boyunca daha geniş bir arşiv alanına yayılıyor."}</p>
         </div>
         <div className="memory-map-legend" aria-label="Harita açıklaması">
           <span><i className="is-direct" />doğrudan çağrı</span>
@@ -172,8 +417,32 @@ export function VisualMemoryMap({ data }: { data: VisualMemoryMapData }) {
           <span><i className="is-source" />dış etki</span>
         </div>
       </header>
+      <div className="memory-map-scope-bar">
+        <div className="memory-map-view-toggle" aria-label="Harita kapsamı">
+          <button type="button" className={viewMode === "near" ? "is-active" : ""} onClick={() => setViewMode("near")}>Yakın Alan</button>
+          <button type="button" className={viewMode === "full" ? "is-active" : ""} onClick={() => setViewMode("full")}>Tüm Hafıza</button>
+        </div>
+        {viewMode === "full" ? (
+          <div className="memory-map-filter-row" aria-label="Tüm hafıza filtreleri">
+            {availableFullFilters.map(([id, label, count]) => (
+              <button type="button" key={id} className={fullFilter === id ? "is-active" : ""} onClick={() => setFullFilter(id)}>
+                {label} <span>{count}</span>
+              </button>
+            ))}
+          </div>
+        ) : (
+          <span className="memory-map-scope-count">{nearData.nodes.length} yakın düğüm</span>
+        )}
+      </div>
       <div className="memory-map-layout">
-        <div className="memory-map-canvas">
+        <div className={`memory-map-canvas mode-${viewMode}`}>
+          <div className="memory-map-controls" aria-label="Harita kontrolleri">
+            <button type="button" onClick={() => zoomBy(1.22)} aria-label="Yaklaştır" title="Yaklaştır">+</button>
+            <button type="button" onClick={() => zoomBy(1 / 1.22)} aria-label="Uzaklaştır" title="Uzaklaştır">−</button>
+            <button type="button" onClick={() => setTransform({ x: 0, y: 0, scale: 1 })}>reset</button>
+            <button type="button" onClick={() => setTransform(fittedTransform)}>fit</button>
+            <span>{Math.round(transform.scale * 100)}%</span>
+          </div>
           {hovered ? (
             <div className="memory-map-hover">
               <strong>{hovered.label}</strong>
@@ -181,7 +450,18 @@ export function VisualMemoryMap({ data }: { data: VisualMemoryMapData }) {
               <small>{hovered.date} / {typeLabels[hovered.type]} / {hovered.recall_type}</small>
             </div>
           ) : null}
-          <svg className="memory-map-svg" viewBox={`0 0 ${width} ${height}`} role="img" aria-label="UCU BEDEN görsel hafıza haritası">
+          <svg
+            ref={svgRef}
+            className={`memory-map-svg${isPanning ? " is-panning" : ""}${transform.scale < 0.62 ? " is-zoomed-out" : ""}`}
+            viewBox={`0 0 ${width} ${height}`}
+            role="img"
+            aria-label="UCU BEDEN görsel hafıza haritası"
+            onWheel={onWheel}
+            onPointerDown={onPointerDown}
+            onPointerMove={onPointerMove}
+            onPointerUp={endPointer}
+            onPointerCancel={endPointer}
+          >
             <defs>
               <filter id="memory-map-soft-glow" x="-80%" y="-80%" width="260%" height="260%">
                 <feGaussianBlur stdDeviation="5" result="blur" />
@@ -192,54 +472,57 @@ export function VisualMemoryMap({ data }: { data: VisualMemoryMapData }) {
                 <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
               </radialGradient>
             </defs>
-            <ellipse className="memory-map-field" cx={center.x} cy={center.y} rx="465" ry="315" />
-            <g className="memory-map-edges">
-              {data.edges.map((edge) => {
-                const source = byId.get(edge.source);
-                const target = byId.get(edge.target);
-                if (!source || !target) return null;
-                const focused = Boolean(activeId && (edge.source === activeId || edge.target === activeId));
-                return <path key={edge.id} className={`memory-map-edge edge-${edge.kind}${focused ? " is-focused" : ""}`} d={curvePath(edge, source, target)} style={{ opacity: focused ? 1 : Math.max(0.2, edge.weight * 0.72) }} />;
-              })}
-            </g>
-            <g className="memory-map-nodes">
-              {nodes.map((node) => {
-                const selectedNode = selectedId === node.id;
-                const hoveredNode = hoveredId === node.id;
-                return (
-                  <g
-                    key={node.id}
-                    className={[
-                      "memory-map-node",
-                      `node-${node.type}`,
-                      `recall-${node.recall_type}`,
-                      node.suppressed ? "is-suppressed" : "",
-                      node.dream_return ? "is-dream-return" : "",
-                      node.overexposed ? "is-overexposed" : "",
-                      selectedNode ? "is-selected" : "",
-                      hoveredNode ? "is-hovered" : ""
-                    ].filter(Boolean).join(" ")}
-                    role="button"
-                    tabIndex={0}
-                    aria-label={`${node.label}, ${typeLabels[node.type]}, ${node.date}`}
-                    onMouseEnter={() => setHoveredId(node.id)}
-                    onMouseLeave={() => setHoveredId(null)}
-                    onFocus={() => setHoveredId(node.id)}
-                    onBlur={() => setHoveredId(null)}
-                    onClick={() => setSelectedId(node.id)}
-                    onKeyDown={(event) => {
-                      if (event.key === "Enter" || event.key === " ") {
-                        event.preventDefault();
-                        setSelectedId(node.id);
-                      }
-                    }}
-                  >
-                    {selectedNode || hoveredNode ? <circle className="memory-map-node-halo" cx={node.x} cy={node.y} r={node.radius + 10} /> : null}
-                    <NodeGlyph node={node} />
-                    {(node.type === "poem" || node.type === "dream") ? <text x={node.x} y={node.y + node.radius + 22} textAnchor="middle">{shortText(node.label, 34)}</text> : null}
-                  </g>
-                );
-              })}
+            <g className="memory-map-transform-layer" transform={`translate(${transform.x} ${transform.y}) scale(${transform.scale})`}>
+              <ellipse className="memory-map-field" cx={center.x} cy={center.y} rx="810" ry="440" />
+              <g className="memory-map-edges">
+                {visibleEdges.map((edge) => {
+                  const source = byId.get(edge.source);
+                  const target = byId.get(edge.target);
+                  if (!source || !target) return null;
+                  const focused = Boolean(activeId && (edge.source === activeId || edge.target === activeId));
+                  return <path key={edge.id} className={`memory-map-edge edge-${edge.kind}${focused ? " is-focused" : ""}`} d={curvePath(edge, source, target)} style={{ opacity: focused ? 1 : Math.max(0.2, edge.weight * 0.72) }} />;
+                })}
+              </g>
+              <g className="memory-map-nodes">
+                {nodes.map((node) => {
+                  const selectedNode = selectedId === node.id;
+                  const hoveredNode = hoveredId === node.id;
+                  return (
+                    <g
+                      key={node.id}
+                      className={[
+                        "memory-map-node",
+                        `node-${node.type}`,
+                        `recall-${node.recall_type}`,
+                        node.suppressed ? "is-suppressed" : "",
+                        node.dream_return ? "is-dream-return" : "",
+                        node.overexposed ? "is-overexposed" : "",
+                        selectedNode ? "is-selected" : "",
+                        hoveredNode ? "is-hovered" : ""
+                      ].filter(Boolean).join(" ")}
+                      role="button"
+                      tabIndex={0}
+                      aria-label={`${node.label}, ${typeLabels[node.type]}, ${node.date}`}
+                      onMouseEnter={() => setHoveredId(node.id)}
+                      onMouseLeave={() => setHoveredId(null)}
+                      onFocus={() => setHoveredId(node.id)}
+                      onBlur={() => setHoveredId(null)}
+                      onClick={() => selectNode(node)}
+                      onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                          event.preventDefault();
+                          setSelectedId(node.id);
+                          focusNode(node);
+                        }
+                      }}
+                    >
+                      {selectedNode || hoveredNode ? <circle className="memory-map-node-halo" cx={node.x} cy={node.y} r={node.radius + 10} /> : null}
+                      <NodeGlyph node={node} />
+                      {(node.type === "poem" || node.type === "dream") ? <text x={node.x} y={node.y + node.radius + 22} textAnchor="middle">{shortText(node.label, 34)}</text> : null}
+                    </g>
+                  );
+                })}
+              </g>
             </g>
           </svg>
         </div>

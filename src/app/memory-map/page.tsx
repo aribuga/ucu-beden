@@ -13,7 +13,7 @@ import {
   readState
 } from "../../lib/fileStorage";
 import { buildMemoryGraphData } from "../../lib/memoryGraph";
-import { buildVisualMemoryMapData } from "../../lib/visualMemoryMap";
+import { buildFullVisualMemoryMapData, buildVisualMemoryMapData } from "../../lib/visualMemoryMap";
 
 export default async function MemoryMapPage() {
   const [latest, state, report, index, traces, poems, dreams, sources] = await Promise.all([
@@ -30,8 +30,11 @@ export default async function MemoryMapPage() {
   const graph = report && index && traces.length > 0
     ? await buildMemoryGraphData({ traces, report, index, poems, dreams, sources })
     : null;
-  const map = graph
+  const nearMap = graph
     ? await buildVisualMemoryMapData({ graph, latestPoem: latest, latestDream, sources })
+    : null;
+  const fullMap = graph
+    ? await buildFullVisualMemoryMapData({ graph, poems, dreams, sources })
     : null;
 
   return (
@@ -42,12 +45,12 @@ export default async function MemoryMapPage() {
         <Link href="/memory/mutations">mutasyon grafiği</Link>
         <Link className="is-active" aria-current="page" href="/memory-map">memory map</Link>
       </nav>
-      {!map || map.nodes.length === 0 ? (
+      {!nearMap || !fullMap || nearMap.nodes.length === 0 ? (
         <section className="empty-state">
           <p>Yakın hafıza alanını kuracak public-safe iz yok.</p>
         </section>
       ) : (
-        <VisualMemoryMap data={map} />
+        <VisualMemoryMap nearData={nearMap} fullData={fullMap} />
       )}
     </main>
   );
