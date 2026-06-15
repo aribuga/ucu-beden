@@ -23,6 +23,7 @@ export async function UcuBedenHeader({ latest, state }: { latest: DailyPoem | nu
         <Link href="/dreams">rüyalar</Link>
         <Link href="/memory">hafıza</Link>
         <Link href="/memory/mutations">mutasyonlar</Link>
+        <Link href="/memory-map">memory map</Link>
         <Link href="/sources">kaynaklar</Link>
         <Link href="/mood-map">mood-map</Link>
         <Link href="/settings">ayarlar</Link>

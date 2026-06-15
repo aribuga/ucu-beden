@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import { MemoryMutationGraph } from "../../../components/MemoryMutationGraph";
-import { UcuBedenHeader } from "../../../components/UcuBedenHeader";
+import { UcuBedenHeader } from "../../components/UcuBedenHeader";
+import { VisualMemoryMap } from "../../components/VisualMemoryMap";
 import {
   getLatestPoem,
   listDreams,
@@ -11,10 +11,11 @@ import {
   readMemoryIndex,
   readMemoryReport,
   readState
-} from "../../../lib/fileStorage";
-import { buildMemoryGraphData } from "../../../lib/memoryGraph";
+} from "../../lib/fileStorage";
+import { buildMemoryGraphData } from "../../lib/memoryGraph";
+import { buildVisualMemoryMapData } from "../../lib/visualMemoryMap";
 
-export default async function MemoryMutationsPage() {
+export default async function MemoryMapPage() {
   const [latest, state, report, index, traces, poems, dreams, sources] = await Promise.all([
     getLatestPoem(),
     readState(),
@@ -25,24 +26,28 @@ export default async function MemoryMutationsPage() {
     listDreams(),
     listSources()
   ]);
+  const latestDream = dreams.at(-1) ?? null;
   const graph = report && index && traces.length > 0
     ? await buildMemoryGraphData({ traces, report, index, poems, dreams, sources })
     : null;
+  const map = graph
+    ? await buildVisualMemoryMapData({ graph, latestPoem: latest, latestDream, sources })
+    : null;
 
   return (
-    <main className="site-shell mutation-shell">
+    <main className="site-shell memory-map-shell">
       <UcuBedenHeader latest={latest} state={state} />
       <nav className="memory-section-nav" aria-label="Hafıza görünümleri">
         <Link href="/memory">hafıza raporu</Link>
-        <Link className="is-active" aria-current="page" href="/memory/mutations">mutasyon grafiği</Link>
-        <Link href="/memory-map">memory map</Link>
+        <Link href="/memory/mutations">mutasyon grafiği</Link>
+        <Link className="is-active" aria-current="page" href="/memory-map">memory map</Link>
       </nav>
-      {!graph || graph.nodes.length === 0 ? (
+      {!map || map.nodes.length === 0 ? (
         <section className="empty-state">
-          <p>Görselleştirilecek public-safe hafıza bağlantısı yok.</p>
+          <p>Yakın hafıza alanını kuracak public-safe iz yok.</p>
         </section>
       ) : (
-        <MemoryMutationGraph data={graph} />
+        <VisualMemoryMap data={map} />
       )}
     </main>
   );

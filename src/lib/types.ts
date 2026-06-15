@@ -627,6 +627,44 @@ export type MemoryGraphData = {
   edges: MemoryGraphEdge[];
 };
 
+export type VisualMemoryMapNodeType = "poem" | "dream" | "memory_trace" | "source_effect" | "mutation";
+
+export type VisualMemoryMapRecallType = "direct" | "indirect" | "dream_return" | "none";
+
+export type VisualMemoryMapNode = {
+  id: string;
+  type: VisualMemoryMapNodeType;
+  date: string;
+  label: string;
+  summary: string;
+  source: MemoryTraceSource | null;
+  status: MemoryTraceStatus | null;
+  recall_type: VisualMemoryMapRecallType;
+  times_recalled: number;
+  suppressed: boolean;
+  dream_return: boolean;
+  overexposed: boolean;
+  related_poem_href: string | null;
+  related_dream_href: string | null;
+};
+
+export type VisualMemoryMapEdgeKind = "recall" | "indirect" | "dream_return" | "linked" | "mutation" | "source_effect";
+
+export type VisualMemoryMapEdge = {
+  id: string;
+  source: string;
+  target: string;
+  kind: VisualMemoryMapEdgeKind;
+  weight: number;
+};
+
+export type VisualMemoryMapData = {
+  built_through: string | null;
+  window_start: string | null;
+  nodes: VisualMemoryMapNode[];
+  edges: VisualMemoryMapEdge[];
+};
+
 export type MemoryLayers = {
   short_term: string[];
   mid_term: string[];

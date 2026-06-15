@@ -73,6 +73,10 @@ textarea {
   width: min(1320px, calc(100% - 32px));
 }
 
+.site-shell.memory-map-shell {
+  width: min(1420px, calc(100% - 32px));
+}
+
 .home-columns {
   display: grid;
   grid-template-columns: minmax(0, 760px) minmax(290px, 1fr);
@@ -894,6 +898,345 @@ textarea {
   overflow-wrap: anywhere;
 }
 
+.memory-map-experience {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.memory-map-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: end;
+}
+
+.memory-map-intro h1,
+.memory-map-detail h2 {
+  margin: 2px 0 7px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.memory-map-intro p,
+.memory-map-detail p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.memory-map-kicker {
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.memory-map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px 12px;
+}
+
+.memory-map-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.memory-map-legend i {
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface-2);
+}
+
+.memory-map-legend i.is-direct {
+  background: var(--focus);
+}
+
+.memory-map-legend i.is-indirect {
+  opacity: 0.34;
+}
+
+.memory-map-legend i.is-dream {
+  border-style: dashed;
+  border-color: #7253b6;
+  background: color-mix(in srgb, #7253b6 45%, var(--surface));
+}
+
+.memory-map-legend i.is-source {
+  border-color: #347ca8;
+  background: #347ca8;
+  transform: scale(0.65);
+}
+
+.memory-map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 330px);
+  gap: 18px;
+  align-items: start;
+}
+
+.memory-map-canvas {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  background:
+    radial-gradient(circle at 48% 48%, color-mix(in srgb, var(--focus) 7%, transparent), transparent 34%),
+    radial-gradient(circle at 70% 28%, color-mix(in srgb, #7253b6 8%, transparent), transparent 24%),
+    linear-gradient(140deg, color-mix(in srgb, var(--surface) 96%, var(--text)), var(--surface-2));
+}
+
+.memory-map-svg {
+  display: block;
+  width: 100%;
+  min-height: 680px;
+  color: var(--text);
+}
+
+.memory-map-field {
+  fill: url("#memory-map-field");
+  color: var(--focus);
+  stroke: color-mix(in srgb, var(--soft-line) 65%, transparent);
+  stroke-width: 0.7;
+  stroke-dasharray: 1 9;
+}
+
+.memory-map-edge {
+  fill: none;
+  stroke: var(--soft-line);
+  stroke-width: 0.8;
+  vector-effect: non-scaling-stroke;
+  transition: opacity 160ms ease, stroke-width 160ms ease;
+}
+
+.memory-map-edge.edge-recall {
+  stroke: color-mix(in srgb, var(--focus) 70%, var(--soft-line));
+  stroke-width: 1.4;
+}
+
+.memory-map-edge.edge-indirect {
+  stroke-dasharray: 2 7;
+}
+
+.memory-map-edge.edge-dream_return {
+  stroke: #7253b6;
+  stroke-width: 1.25;
+  stroke-dasharray: 8 4 2 5;
+}
+
+.memory-map-edge.edge-mutation {
+  stroke: #b05e42;
+  stroke-dasharray: 1 4;
+}
+
+.memory-map-edge.edge-source_effect {
+  stroke: #347ca8;
+  stroke-dasharray: 1 8;
+}
+
+.memory-map-edge.is-focused {
+  stroke: var(--focus);
+  stroke-width: 2.2;
+}
+
+.memory-map-node {
+  fill: var(--text);
+  stroke: var(--surface);
+  stroke-width: 2;
+  cursor: pointer;
+  outline: none;
+  transition: opacity 160ms ease;
+}
+
+.memory-map-node text {
+  fill: var(--text);
+  stroke: none;
+  font-size: 9px;
+  pointer-events: none;
+}
+
+.memory-map-node.node-poem {
+  fill: var(--focus);
+  filter: url("#memory-map-soft-glow");
+}
+
+.memory-map-node.node-dream {
+  fill: #7253b6;
+}
+
+.memory-map-node.node-source_effect {
+  fill: #347ca8;
+  stroke-width: 1;
+  opacity: 0.75;
+}
+
+.memory-map-node.node-mutation {
+  fill: #b05e42;
+}
+
+.memory-map-node.recall-indirect {
+  opacity: 0.42;
+}
+
+.memory-map-node.recall-direct {
+  fill: color-mix(in srgb, var(--focus) 76%, var(--surface));
+}
+
+.memory-map-node.is-suppressed {
+  opacity: 0.24;
+  stroke-dasharray: 4 4;
+}
+
+.memory-map-node.is-dream-return {
+  stroke: #7253b6;
+  stroke-dasharray: 6 3 1 3;
+}
+
+.memory-map-node.is-overexposed {
+  fill: #d45a3a;
+  stroke: #8f321f;
+  filter: url("#memory-map-soft-glow");
+}
+
+.memory-map-node:hover,
+.memory-map-node:focus-visible,
+.memory-map-node.is-hovered,
+.memory-map-node.is-selected {
+  opacity: 1;
+  stroke: var(--focus);
+  stroke-width: 3;
+}
+
+.memory-map-anchor-ring,
+.memory-map-node-halo {
+  fill: none;
+  stroke: var(--focus);
+  vector-effect: non-scaling-stroke;
+}
+
+.memory-map-anchor-ring {
+  stroke-width: 0.8;
+  stroke-dasharray: 2 7;
+}
+
+.memory-map-node-halo {
+  stroke-width: 1.5;
+  stroke-dasharray: 1 4;
+}
+
+.memory-map-hover {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 12px;
+  width: min(390px, calc(100% - 24px));
+  padding: 9px 10px;
+  border: 1px solid color-mix(in srgb, var(--line) 68%, transparent);
+  background: color-mix(in srgb, var(--surface) 91%, transparent);
+  backdrop-filter: blur(7px);
+  pointer-events: none;
+}
+
+.memory-map-hover strong,
+.memory-map-hover span,
+.memory-map-hover small {
+  display: block;
+}
+
+.memory-map-hover strong {
+  margin-bottom: 3px;
+  font-size: 9px;
+}
+
+.memory-map-hover span,
+.memory-map-hover small {
+  color: var(--muted);
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.memory-map-hover small {
+  margin-top: 5px;
+}
+
+.memory-map-detail {
+  position: sticky;
+  top: 14px;
+  min-height: 250px;
+  max-height: calc(100vh - 28px);
+  overflow: auto;
+  border: 1px solid color-mix(in srgb, var(--line) 68%, transparent);
+  padding: 16px;
+  background: color-mix(in srgb, var(--surface) 96%, var(--surface-2));
+}
+
+.memory-map-detail-summary {
+  margin-top: 13px !important;
+  color: var(--text) !important;
+  line-height: 1.6;
+}
+
+.memory-map-detail-list {
+  display: grid;
+  gap: 0;
+  margin: 16px 0 0;
+}
+
+.memory-map-detail-list div {
+  display: grid;
+  grid-template-columns: minmax(88px, 0.45fr) 1fr;
+  gap: 10px;
+  padding: 6px 0;
+  border-top: 1px dotted var(--soft-line);
+}
+
+.memory-map-detail-list dt,
+.memory-map-detail-list dd {
+  margin: 0;
+  font-size: 8px;
+}
+
+.memory-map-detail-list dt {
+  color: var(--muted);
+}
+
+.memory-map-detail-list dd {
+  overflow-wrap: anywhere;
+}
+
+.memory-map-flags,
+.memory-map-detail-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.memory-map-flags span {
+  border: 1px solid var(--soft-line);
+  padding: 2px 6px;
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.memory-map-detail-links {
+  padding-top: 13px;
+  border-top: 1px dotted var(--soft-line);
+}
+
+.memory-map-detail-links a {
+  font-size: 8px;
+}
+
 .timeline {
   display: grid;
   gap: 0;
@@ -1156,7 +1499,9 @@ textarea {
   }
 
   .mutation-controls,
-  .mutation-main {
+  .mutation-main,
+  .memory-map-intro,
+  .memory-map-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1179,6 +1524,24 @@ textarea {
   }
 
   .mutation-detail {
+    position: static;
+    max-height: none;
+  }
+
+  .memory-map-legend {
+    justify-content: flex-start;
+  }
+
+  .memory-map-canvas {
+    overflow-x: auto;
+  }
+
+  .memory-map-svg {
+    min-width: 760px;
+    min-height: 520px;
+  }
+
+  .memory-map-detail {
     position: static;
     max-height: none;
   }

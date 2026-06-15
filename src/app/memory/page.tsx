@@ -23,6 +23,7 @@ export default async function MemoryPage() {
       <nav className="memory-section-nav" aria-label="Hafıza görünümleri">
         <Link className="is-active" aria-current="page" href="/memory">hafıza raporu</Link>
         <Link href="/memory/mutations">mutasyon grafiği</Link>
+        <Link href="/memory-map">memory map</Link>
       </nav>
       <MemoryPanel state={state} report={memoryReport} traces={memoryTraces} />
       <WordMutationPanel mutations={imageMutations.mutations} />
