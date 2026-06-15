@@ -1754,6 +1754,811 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
   margin-bottom: 10px;
 }
 
+.phone-page-shell {
+  min-height: 100vh;
+  padding: 28px 0 70px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(61, 66, 112, 0.18), transparent 40%),
+    linear-gradient(165deg, #14151c 0%, #090a10 54%, #121018 100%);
+  color: #e4ead7;
+}
+
+.phone-page-header {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto 18px;
+  color: #d9dbd1;
+}
+
+.phone-page-header .header {
+  border-color: rgba(197, 210, 197, 0.3);
+}
+
+.phone-page-header a,
+.phone-page-header .meta {
+  color: #b9c5b8;
+}
+
+.phone-page-header a:hover {
+  color: #d5ff63;
+}
+
+.ucu-phone-experience {
+  width: 100%;
+  overflow-x: auto;
+  padding: 14px 14px 26px;
+  scrollbar-color: #68704f #11131b;
+}
+
+.ucu-phone-device {
+  position: relative;
+  width: min(1180px, 86vw);
+  min-width: 660px;
+  aspect-ratio: 1402 / 744;
+  margin: 0 auto;
+  filter: drop-shadow(0 30px 35px rgba(0, 0, 0, 0.56));
+}
+
+.ucu-phone-frame {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.ucu-phone-screen {
+  position: absolute;
+  z-index: 2;
+  left: 19.83%;
+  top: 23.66%;
+  width: 62.05%;
+  height: 61.02%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  overflow: hidden;
+  border-radius: 3.1% / 5.9%;
+  border: 1px solid rgba(123, 240, 244, 0.22);
+  background:
+    radial-gradient(circle at 66% 15%, rgba(51, 121, 139, 0.16), transparent 34%),
+    radial-gradient(circle at 8% 82%, rgba(124, 42, 137, 0.14), transparent 34%),
+    #071127;
+  color: #d9f1c1;
+  box-shadow:
+    inset 0 0 28px rgba(0, 0, 0, 0.92),
+    inset 0 0 4px #6bd6d5,
+    inset 7px 0 10px rgba(238, 68, 205, 0.1),
+    inset -7px 0 10px rgba(55, 226, 245, 0.11),
+    inset 0 0 24px rgba(100, 223, 216, 0.12),
+    0 0 8px rgba(36, 202, 210, 0.16);
+  font-size: clamp(8px, 0.74vw, 11px);
+  line-height: 1.35;
+  isolation: isolate;
+}
+
+.ucu-phone-lock-screen {
+  position: absolute;
+  z-index: 6;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  border: 0;
+  padding: 4% 5%;
+  overflow: hidden;
+  background: #070b1a;
+  color: #edf0e3;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ucu-phone-lock-screen > img,
+.ucu-phone-lock-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ucu-phone-lock-screen > img {
+  z-index: -3;
+  object-fit: cover;
+  filter: saturate(0.76) contrast(0.92) brightness(0.76);
+  transform: scale(1.015);
+}
+
+.ucu-phone-lock-overlay {
+  z-index: -2;
+  background:
+    linear-gradient(to bottom, rgba(2, 5, 16, 0.58), transparent 34%, transparent 60%, rgba(2, 4, 14, 0.68)),
+    radial-gradient(circle at center, transparent 28%, rgba(1, 3, 13, 0.32) 100%);
+}
+
+.ucu-phone-lock-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(218, 231, 221, 0.74);
+  font-size: 0.78em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ucu-phone-lock-status b {
+  color: rgba(229, 127, 215, 0.88);
+  font-weight: 400;
+  text-shadow: 1px 0 rgba(105, 234, 238, 0.72);
+}
+
+.ucu-phone-lock-content {
+  align-self: center;
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.82);
+}
+
+.ucu-phone-lock-content strong {
+  color: rgba(241, 244, 232, 0.94);
+  font-size: clamp(30px, 5.8vw, 76px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.08em;
+}
+
+.ucu-phone-lock-content span {
+  color: rgba(202, 224, 219, 0.76);
+  font-size: 0.86em;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.ucu-phone-lock-content em {
+  max-width: 70%;
+  margin-top: 7px;
+  overflow: hidden;
+  color: rgba(231, 235, 218, 0.82);
+  font-size: 0.9em;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ucu-phone-unlock-hint {
+  align-self: end;
+  justify-self: center;
+  color: rgba(214, 230, 220, 0.65);
+  font-size: 0.72em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.ucu-phone-unlock-hint::before,
+.ucu-phone-unlock-hint::after {
+  content: "·";
+  margin: 0 8px;
+  color: rgba(236, 111, 212, 0.7);
+}
+
+.ucu-phone-screen::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.34;
+  background-image: radial-gradient(rgba(112, 200, 209, 0.36) 0.7px, transparent 0.8px);
+  background-size: 7px 7px;
+}
+
+.ucu-phone-screen::after {
+  content: "";
+  position: absolute;
+  z-index: 7;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 54%, rgba(0, 0, 13, 0.3) 100%);
+}
+
+.ucu-phone-screen-noise {
+  position: absolute;
+  z-index: 6;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.17;
+  background:
+    linear-gradient(114deg, transparent 28%, rgba(248, 102, 216, 0.2) 29%, transparent 30%),
+    linear-gradient(65deg, transparent 68%, rgba(199, 255, 79, 0.15) 69%, transparent 70%),
+    radial-gradient(rgba(220, 255, 242, 0.32) 0.55px, transparent 0.85px);
+  background-size: auto, auto, 4px 4px;
+  mix-blend-mode: screen;
+}
+
+.ucu-phone-crt-layer,
+.ucu-phone-glass-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ucu-phone-crt-layer {
+  z-index: 8;
+  opacity: 0.42;
+  background:
+    repeating-linear-gradient(to bottom, rgba(4, 8, 24, 0.1) 0 2px, rgba(212, 255, 239, 0.24) 3px, transparent 4px),
+    repeating-linear-gradient(90deg, rgba(255, 58, 203, 0.06) 0 1px, transparent 1px 3px, rgba(62, 231, 255, 0.055) 3px 4px, transparent 4px 6px),
+    linear-gradient(90deg, rgba(255, 62, 211, 0.13), transparent 16%, transparent 84%, rgba(53, 231, 255, 0.14));
+  box-shadow:
+    inset 2px 0 rgba(245, 73, 211, 0.25),
+    inset -2px 0 rgba(68, 231, 241, 0.25),
+    inset 0 0 26px rgba(114, 230, 222, 0.15),
+    inset 0 0 8px rgba(236, 99, 214, 0.12);
+  mix-blend-mode: screen;
+  animation: ucu-phone-crt-flicker 8s steps(2, end) infinite;
+}
+
+.ucu-phone-crt-layer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.3;
+  background-image: radial-gradient(rgba(235, 255, 245, 0.62) 0.5px, transparent 0.8px);
+  background-size: 3px 4px;
+  mix-blend-mode: screen;
+}
+
+.ucu-phone-crt-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.36;
+  background:
+    linear-gradient(90deg, rgba(255, 53, 207, 0.16), transparent 3%, transparent 97%, rgba(51, 234, 255, 0.18)),
+    radial-gradient(ellipse at center, rgba(125, 231, 216, 0.08), transparent 62%);
+  filter: blur(1px);
+  mix-blend-mode: screen;
+}
+
+.ucu-phone-glass-layer {
+  z-index: 10;
+  opacity: 0.22;
+  background-repeat: no-repeat;
+  background-position: 52.5% 61%;
+  background-size: 161.3% 163.8%;
+  mix-blend-mode: screen;
+  filter: brightness(0.82) contrast(1.08);
+}
+
+@keyframes ucu-phone-crt-flicker {
+  0%,
+  17%,
+  53%,
+  100% {
+    opacity: 0.42;
+  }
+
+  18% {
+    opacity: 0.34;
+  }
+
+  54% {
+    opacity: 0.47;
+  }
+}
+
+.ucu-phone-status,
+.ucu-phone-softkeys {
+  position: relative;
+  z-index: 4;
+  display: grid;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 3.5%;
+  color: #9dc9af;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.ucu-phone-status {
+  grid-template-columns: 1fr auto 1fr;
+  min-height: 13%;
+  border-bottom: 1px solid rgba(125, 242, 231, 0.28);
+  background: rgba(3, 8, 26, 0.62);
+}
+
+.ucu-phone-brand {
+  justify-self: start;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: #ef70d1;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-shadow: 1px 0 #64eff5, -1px 0 #deff44;
+  cursor: pointer;
+}
+
+.ucu-phone-clock {
+  justify-self: end;
+  color: #d4ed68;
+  white-space: nowrap;
+}
+
+.ucu-phone-status,
+.ucu-phone-softkeys,
+.ucu-phone-app-heading,
+.ucu-phone-app-icon,
+.ucu-phone-lock-content,
+.ucu-phone-lock-status {
+  text-shadow:
+    0.65px 0 rgba(255, 63, 207, 0.42),
+    -0.65px 0 rgba(63, 231, 255, 0.4),
+    0 0 5px rgba(117, 226, 218, 0.16);
+}
+
+.ucu-phone-workspace {
+  position: relative;
+  z-index: 4;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.ucu-phone-softkeys {
+  grid-template-columns: 1fr auto 1fr;
+  min-height: 10%;
+  border-top: 1px solid rgba(230, 95, 216, 0.28);
+  background: rgba(3, 8, 26, 0.7);
+  color: #8d9b9c;
+  font-size: 0.82em;
+}
+
+.ucu-phone-softkeys button {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: #b7d77a;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.ucu-phone-softkeys button:first-child {
+  justify-self: start;
+}
+
+.ucu-phone-softkeys button:last-child {
+  justify-self: end;
+}
+
+.ucu-phone-home {
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(100px, 0.55fr) minmax(0, 1.45fr);
+  gap: 4%;
+  padding: 3.5%;
+}
+
+.ucu-phone-home-note {
+  align-self: stretch;
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  padding: 12%;
+  border: 1px solid rgba(108, 223, 218, 0.25);
+  background: rgba(12, 25, 51, 0.56);
+  color: #9dc9af;
+  overflow: hidden;
+}
+
+.ucu-phone-home-note::before {
+  content: "///";
+  color: #e565cf;
+  letter-spacing: 0.4em;
+}
+
+.ucu-phone-home-note span,
+.ucu-phone-kicker {
+  color: #93a4a5;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.ucu-phone-home-note strong {
+  display: -webkit-box;
+  overflow: hidden;
+  color: #dce9bd;
+  font-size: 1.05em;
+  font-weight: 400;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+
+.ucu-phone-app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 6% 7%;
+  min-height: 0;
+}
+
+.ucu-phone-app-icon {
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 7%;
+  border: 0;
+  border-bottom: 1px solid rgba(132, 210, 204, 0.18);
+  background: rgba(4, 16, 41, 0.18);
+  color: #d6e98b;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: background 140ms ease, color 140ms ease, transform 140ms ease;
+}
+
+.ucu-phone-app-icon:hover,
+.ucu-phone-app-icon:focus-visible {
+  outline: 1px solid currentColor;
+  background: rgba(25, 44, 71, 0.78);
+  transform: translateY(-2px);
+}
+
+.ucu-phone-app-glyph {
+  width: clamp(28px, 4vw, 58px);
+  aspect-ratio: 1.15;
+  display: grid;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 18% 9% 20% 11%;
+  color: #d5ff63;
+  font-size: 0.78em;
+  font-weight: 700;
+  box-shadow: 2px 2px 0 rgba(237, 89, 207, 0.76), -2px -1px 0 rgba(83, 231, 238, 0.46);
+  transform: rotate(-2deg);
+}
+
+.ucu-phone-app-icon.is-magenta .ucu-phone-app-glyph { color: #f073d4; }
+.ucu-phone-app-icon.is-yellow .ucu-phone-app-glyph { color: #f1dd5b; }
+.ucu-phone-app-icon.is-cyan .ucu-phone-app-glyph { color: #6ce8ee; }
+.ucu-phone-app-icon.is-green .ucu-phone-app-glyph { color: #b8ed61; }
+.ucu-phone-app-icon.is-violet .ucu-phone-app-glyph { color: #ad7cff; }
+.ucu-phone-app-icon.is-orange .ucu-phone-app-glyph { color: #ff9d5c; }
+
+.ucu-phone-app {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  background: rgba(4, 13, 35, 0.42);
+}
+
+.ucu-phone-app-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1.2% 3%;
+  border-bottom: 1px solid rgba(110, 226, 229, 0.18);
+}
+
+.ucu-phone-app-heading button {
+  width: 2em;
+  aspect-ratio: 1;
+  border: 1px solid #ad7cff;
+  background: transparent;
+  color: #d9f1c1;
+  cursor: pointer;
+}
+
+.ucu-phone-app-heading h2 {
+  margin: 0;
+  color: #d6e98b;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ucu-phone-app-body {
+  min-height: 0;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #a162ba rgba(0, 0, 0, 0.2);
+}
+
+.ucu-phone-gallery-layout,
+.ucu-phone-notes-layout {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 3%;
+  padding: 2.5% 3%;
+}
+
+.ucu-phone-gallery-grid,
+.ucu-phone-note-list {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-content: start;
+  gap: 5px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.ucu-phone-gallery-grid button,
+.ucu-phone-note-list button {
+  min-width: 0;
+  border: 1px solid rgba(112, 213, 211, 0.2);
+  background: rgba(10, 25, 48, 0.58);
+  color: #b9c9ad;
+  cursor: pointer;
+}
+
+.ucu-phone-gallery-grid button.is-selected,
+.ucu-phone-note-list button.is-selected {
+  border-color: #dc63c8;
+  box-shadow: inset 0 0 0 1px rgba(223, 226, 77, 0.35);
+}
+
+.ucu-phone-gallery-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  display: block;
+  object-fit: cover;
+  filter: saturate(0.72) contrast(0.92);
+}
+
+.ucu-phone-gallery-grid span {
+  display: block;
+  overflow: hidden;
+  padding: 3px;
+  font-size: 0.65em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ucu-phone-gallery-preview {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(226, 99, 209, 0.3);
+  background: #050c20;
+}
+
+.ucu-phone-gallery-preview img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  filter: saturate(0.82) contrast(0.92);
+}
+
+.ucu-phone-gallery-preview figcaption {
+  overflow: hidden;
+  padding: 5px 8px;
+  color: #cbdc92;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ucu-phone-note-list {
+  grid-template-columns: 1fr;
+}
+
+.ucu-phone-note-list button {
+  display: grid;
+  gap: 3px;
+  padding: 7px;
+  text-align: left;
+}
+
+.ucu-phone-note-list strong {
+  overflow: hidden;
+  color: #d1da98;
+  font-size: 0.9em;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ucu-phone-note-list span {
+  color: #798d91;
+  font-size: 0.72em;
+}
+
+.ucu-phone-note-reader {
+  min-height: 0;
+  overflow: auto;
+  padding: 3% 5%;
+  border-left: 1px solid rgba(227, 105, 206, 0.25);
+  color: #bdcba8;
+  white-space: pre-line;
+}
+
+.ucu-phone-note-reader > span {
+  color: #869b9a;
+  font-size: 0.75em;
+}
+
+.ucu-phone-note-reader h3 {
+  margin: 5px 0 9px;
+  color: #d4ec69;
+  font-size: 1.05em;
+  font-weight: 400;
+}
+
+.ucu-phone-note-reader p {
+  margin: 0;
+  line-height: 1.62;
+}
+
+.ucu-phone-weather {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 0.65fr 1fr;
+  align-items: center;
+  gap: 7%;
+  padding: 4% 9%;
+}
+
+.ucu-phone-weather-orbit {
+  position: relative;
+  width: min(100%, 130px);
+  aspect-ratio: 1;
+  margin: auto;
+  border: 1px dashed #68dfe6;
+  border-radius: 50%;
+  box-shadow: 0 0 18px rgba(92, 226, 224, 0.18), inset 0 0 18px rgba(222, 94, 207, 0.1);
+}
+
+.ucu-phone-weather-orbit::before,
+.ucu-phone-weather-orbit::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(221, 224, 80, 0.6);
+  border-radius: 50%;
+}
+
+.ucu-phone-weather-orbit::before { inset: 20%; }
+.ucu-phone-weather-orbit::after { inset: 38%; background: rgba(119, 223, 224, 0.15); }
+
+.ucu-phone-weather-orbit span {
+  position: absolute;
+  inset: 48% -12%;
+  border-top: 1px solid #e565cf;
+  transform: rotate(-17deg);
+}
+
+.ucu-phone-weather h3,
+.ucu-phone-memory h3 {
+  margin: 5px 0 8px;
+  color: #d7e885;
+  font-size: 1.15em;
+  font-weight: 400;
+}
+
+.ucu-phone-weather dl {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin: 10px 0;
+}
+
+.ucu-phone-weather dt,
+.ucu-phone-weather dd {
+  margin: 0;
+}
+
+.ucu-phone-weather dt {
+  color: #7e9a9d;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+
+.ucu-phone-weather dd {
+  color: #6fe0e4;
+}
+
+.ucu-phone-weather p,
+.ucu-phone-memory p {
+  color: #9db6a5;
+  line-height: 1.55;
+}
+
+.ucu-phone-memory {
+  min-height: 100%;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  padding: 4% 8%;
+}
+
+.ucu-phone-memory-signal {
+  height: 22px;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.ucu-phone-memory-signal i {
+  width: 3px;
+  height: 35%;
+  background: #df63ca;
+  box-shadow: 0 0 4px currentColor;
+}
+
+.ucu-phone-memory-signal i:nth-child(2) { height: 70%; background: #72dae1; }
+.ucu-phone-memory-signal i:nth-child(3) { height: 48%; background: #d8e95e; }
+.ucu-phone-memory-signal i:nth-child(4) { height: 100%; background: #a673ed; }
+.ucu-phone-memory-signal i:nth-child(5) { height: 58%; background: #6ddeaa; }
+
+.ucu-phone-memory dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 8px 0;
+}
+
+.ucu-phone-memory dl div {
+  display: flex;
+  gap: 5px;
+  padding: 3px 6px;
+  border: 1px solid rgba(103, 219, 222, 0.22);
+}
+
+.ucu-phone-memory dt { color: #859c9c; }
+.ucu-phone-memory dd { margin: 0; color: #d0e574; }
+
+.ucu-phone-memory nav {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+  color: #e36ccd;
+}
+
+.ucu-phone-empty {
+  min-height: 100%;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.ucu-phone-empty > span {
+  color: #80619e;
+  letter-spacing: 0.7em;
+}
+
+.ucu-phone-empty strong {
+  margin-top: 8px;
+  color: #d1df91;
+  font-weight: 400;
+}
+
+.ucu-phone-empty p {
+  margin: 4px 0 0;
+  color: #849b99;
+}
+
+.ucu-phone-caption {
+  width: min(1180px, 86vw);
+  min-width: 660px;
+  margin: -4px auto 0;
+  color: rgba(189, 201, 194, 0.48);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 @keyframes poem-ticker-crawl {
   to {
     transform: translateX(-100%);
@@ -1765,6 +2570,10 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
     padding-left: 0;
     animation: none;
     white-space: normal;
+  }
+
+  .ucu-phone-crt-layer {
+    animation: none;
   }
 }
 
@@ -1877,6 +2686,27 @@ body[data-theme="fresh90s"] .site-shell.memory-map-shell {
 
   .memory-map-controls span {
     display: none;
+  }
+
+  .phone-page-shell {
+    padding-top: 16px;
+  }
+
+  .phone-page-header {
+    width: calc(100% - 24px);
+  }
+
+  .ucu-phone-experience {
+    padding-inline: 0;
+  }
+
+  .ucu-phone-device,
+  .ucu-phone-caption {
+    min-width: 640px;
+  }
+
+  .ucu-phone-device {
+    margin-left: max(0px, calc((100vw - 640px) / 2));
   }
 
 }
