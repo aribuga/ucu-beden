@@ -1,10 +1,13 @@
 import { buildMemoryGraphData } from "./memoryGraph";
 import { filterPublicSafeMemoryTraces, validateMemoryPromptFragments, type MemoryArchive } from "./memoryTraceEngine";
-import type { DailyPoem, DreamRecord, MemorySelection, SourceBundle } from "./types";
+import type { DailyPoem, DreamRecord, MemorySelection, MemoryTrace, SourceBundle } from "./types";
 
 type SelectionRecord = {
   origin: string;
   mode: "poem" | "dream";
+  date: string | null;
+  generated_at: string | null;
+  preview: boolean;
   selection: MemorySelection;
 };
 
@@ -16,10 +19,24 @@ function selectionRecords(poems: DailyPoem[], dreams: DreamRecord[]): SelectionR
   return [
     ...poems
       .filter((poem) => poem.memory_selection)
-      .map((poem) => ({ origin: `poem:${poem.date}`, mode: "poem" as const, selection: poem.memory_selection as MemorySelection })),
+      .map((poem) => ({
+        origin: `poem:${poem.date}`,
+        mode: "poem" as const,
+        date: poem.date,
+        generated_at: poem.generated_at,
+        preview: false,
+        selection: poem.memory_selection as MemorySelection
+      })),
     ...dreams
       .filter((dream) => dream.memory_selection)
-      .map((dream) => ({ origin: `dream:${dream.date}`, mode: "dream" as const, selection: dream.memory_selection as MemorySelection }))
+      .map((dream) => ({
+        origin: `dream:${dream.date}`,
+        mode: "dream" as const,
+        date: dream.date,
+        generated_at: dream.generated_at,
+        preview: false,
+        selection: dream.memory_selection as MemorySelection
+      }))
   ];
 }
 
@@ -33,6 +50,38 @@ function selectionArrays(selection: MemorySelection): Array<[string, string[] | 
   ];
 }
 
+function normalizedTraceText(trace: MemoryTrace): string {
+  return trace.transformed_text.toLocaleLowerCase("tr").replace(/\s+/gu, " ").trim();
+}
+
+function traceExistedAtSelection(trace: MemoryTrace, record: SelectionRecord): boolean {
+  if (!record.date) return true;
+  if (trace.date < record.date) return true;
+  return record.mode === "dream" && trace.date === record.date && trace.source !== "dream";
+}
+
+function recordPrecedesSelection(candidate: SelectionRecord, target: SelectionRecord): boolean {
+  if (candidate.preview || target.preview || candidate.origin === target.origin) return false;
+  if (candidate.generated_at && target.generated_at) return candidate.generated_at < target.generated_at;
+  if (!candidate.date || !target.date) return false;
+  if (candidate.date !== target.date) return candidate.date < target.date;
+  return candidate.mode === "poem" && target.mode === "dream";
+}
+
+function overexposedAtSelection(trace: MemoryTrace, record: SelectionRecord, traces: MemoryTrace[], records: SelectionRecord[]): boolean {
+  if (record.preview) return trace.status === "overexposed";
+  const recalledBefore = records.filter(
+    (candidate) => recordPrecedesSelection(candidate, record) && candidate.selection.selected_trace_ids.includes(trace.id)
+  ).length;
+  const traceText = normalizedTraceText(trace);
+  const repeatedAtSelection = traces.filter(
+    (candidate) => traceExistedAtSelection(candidate, record) && normalizedTraceText(candidate) === traceText
+  ).length;
+  if (recalledBefore >= 4) return true;
+  if (trace.repression >= 0.72) return false;
+  return repeatedAtSelection >= 3;
+}
+
 export async function validateMemoryCycleIntegrity(params: {
   archive: MemoryArchive;
   poems: DailyPoem[];
@@ -44,8 +93,8 @@ export async function validateMemoryCycleIntegrity(params: {
   const byId = new Map(params.archive.traces.map((trace) => [trace.id, trace]));
   const records = selectionRecords(params.poems, params.dreams);
   const previews: SelectionRecord[] = [
-    { origin: "preview:poem", mode: "poem", selection: params.poem_preview },
-    { origin: "preview:dream", mode: "dream", selection: params.dream_preview }
+    { origin: "preview:poem", mode: "poem", date: null, generated_at: null, preview: true, selection: params.poem_preview },
+    { origin: "preview:dream", mode: "dream", date: null, generated_at: null, preview: true, selection: params.dream_preview }
   ];
   const allSelections = [...records, ...previews];
   const incompleteSelectionMetadata = records
@@ -77,11 +126,22 @@ export async function validateMemoryCycleIntegrity(params: {
   const invalidDreamReturnLinks = params.archive.traces
     .filter((trace) => trace.kind === "dream_return" || trace.times_returned_in_dream > 0)
     .flatMap((trace) => trace.linked_traces.filter((id) => !byId.has(id)).map((id) => ({ trace_id: trace.id, linked_id: id })));
-  const overexposedDirectPrompt = allSelections.flatMap(({ origin, mode, selection }) =>
-    (Array.isArray(selection.direct_trace_ids) ? selection.direct_trace_ids : [])
-      .filter((id) => byId.get(id)?.status === "overexposed")
-      .map((id) => ({ origin, mode, id }))
+  const currentOverexposedDirectSelections = allSelections.flatMap((record) =>
+    (Array.isArray(record.selection.direct_trace_ids) ? record.selection.direct_trace_ids : [])
+      .map((id) => ({ record, trace: byId.get(id) }))
+      .filter((item): item is { record: SelectionRecord; trace: MemoryTrace } => item.trace?.status === "overexposed")
   );
+  const overexposedDirectPrompt = currentOverexposedDirectSelections
+    .filter(({ record, trace }) => overexposedAtSelection(trace, record, params.archive.traces, records))
+    .map(({ record, trace }) => ({ origin: record.origin, mode: record.mode, id: trace.id }));
+  const historicalOverexposedDirectPromptWarnings = currentOverexposedDirectSelections
+    .filter(({ record, trace }) => !record.preview && !overexposedAtSelection(trace, record, params.archive.traces, records))
+    .map(({ record, trace }) => ({
+      origin: record.origin,
+      mode: record.mode,
+      id: trace.id,
+      warning: "trace_became_overexposed_after_selection"
+    }));
   const publicSafeTraces = await filterPublicSafeMemoryTraces(params.archive.traces, params.sources);
   const graph = await buildMemoryGraphData({
     traces: params.archive.traces,
@@ -122,6 +182,7 @@ export async function validateMemoryCycleIntegrity(params: {
     invalid_linked_trace_ids: invalidLinkedTraceIds,
     invalid_dream_return_links: invalidDreamReturnLinks,
     overexposed_direct_prompt: overexposedDirectPrompt,
+    historical_overexposed_direct_prompt_warnings: historicalOverexposedDirectPromptWarnings,
     public_safe_trace_count: publicSafeTraces.length,
     graph_public_node_count: graph.nodes.length,
     graph_public_node_count_matches_public_safe_trace_count: graphPublicNodeCountMatches,
