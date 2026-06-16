@@ -4,31 +4,31 @@ UCU BEDEN is designed to run locally and on GitHub Actions.
 
 ## Morning Time
 
-The morning record targets 08:00 Europe/Istanbul.
+The morning record targets roughly 08:00 Europe/Istanbul, offset away from the top of the hour.
 
 GitHub cron uses UTC, and Turkey is UTC+3 year-round:
 
 ```yaml
-cron: "0 5 * * *"  # 08:00 Europe/Istanbul
-cron: "23 5 * * *" # 08:23 Europe/Istanbul backup
+# GitHub schedule uses UTC. 05:07 UTC = 08:07 Europe/Istanbul.
+cron: "7 5 * * *"
 ```
 
-The morning workflow writes daily life, poem, poem visual metadata, sources, and updated memory. If the first run works, the backup sees that the day already exists and skips duplicate generation.
+The morning workflow writes daily life, sources, source digest, poem, poem visual metadata, memory traces/report, and updated state. It is idempotent: if today's poem already exists, generation is skipped unless force regeneration is explicitly requested.
 
 The workflow also runs on normal pushes to `main`, except data-only commits. This lets code, theme, and documentation updates deploy immediately without creating a data commit loop.
 
-## Night Time
+## Dream Time
 
-The night workflow targets 02:00 Europe/Istanbul:
+The dream workflow currently runs after the morning poem, targeting roughly 08:30 Europe/Istanbul:
 
 ```yaml
-cron: "0 23 * * *"  # 02:00 Europe/Istanbul on the next day
-cron: "27 23 * * *" # 02:27 Europe/Istanbul backup
+# GitHub schedule uses UTC. 05:37 UTC = 08:37 Europe/Istanbul.
+cron: "37 5 * * *"
 ```
 
-By default the night script dreams from the completed previous Istanbul calendar day. This guarantees that its poem and daily life record already exist.
+By default the dream script dreams from the current Istanbul day when the workflow runs in the morning, or from a selected `target_date` when manually dispatched. This keeps the dream tied to the poem that has just been generated.
 
-GitHub scheduled workflows are best-effort and may start late. The backup schedules and safe skip behavior improve reliability without creating duplicate poems or dreams.
+GitHub scheduled workflows are best-effort and may start late. Late starts only produce a warning in the workflow logs; they do not skip generation. Safe skip behavior prevents duplicates unless `--force` or `force_regenerate` is used.
 
 ## Commands
 
@@ -36,6 +36,9 @@ GitHub scheduled workflows are best-effort and may start late. The backup schedu
 npm ci
 npm run generate:today
 npm run generate:dream
+npm run digest:sources
+npm run rebuild:memory
+npm run validate:memory
 npm run build
 ```
 
@@ -49,7 +52,7 @@ npm run generate:today -- --force
 
 GitHub Actions manual runs expose the same behavior through the `force_regenerate` checkbox. Leave `target_date` empty to use the current Istanbul date.
 
-The night workflow's empty `target_date` means the previous completed Istanbul day.
+The dream workflow's empty `target_date` also means the current Istanbul date.
 
 ## Secrets
 
@@ -81,11 +84,23 @@ Morning and night logs expose stage names such as:
 
 ```txt
 daily_life
+source_digest
 poem
 poem_visual_prompt
 dream
 dream_visual_prompt
 memory
+```
+
+They also log timing fields:
+
+```txt
+run_started_utc
+run_started_europe_istanbul
+target_local_time
+local_generation_date
+github.event.schedule
+schedule_delay_minutes
 ```
 
 ## Settings
@@ -120,9 +135,12 @@ data/dreams/
 data/visuals/
 data/state/
 data/sources/
+data/source_digests/
+data/memory/
 data/settings/
 data/analysis/
 data/yearly_reports/
+public/generated/visuals/
 ```
 
 If no files changed, commit is skipped.

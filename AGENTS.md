@@ -15,10 +15,14 @@ This project is a local-first poetic archive and daily generation system for a d
 - Never copy full lines from input poems into generated poems.
 - Old poems should influence new poems as memory, but never as direct copy.
 - UCU BEDEN may remember its old poems correctly, partially, or incorrectly.
-- External sources should influence atmosphere, not create news summaries.
-- RSS source items should be mood-tagged and used as pressure, atmosphere, image field, and walking rhythm.
+- External sources should influence atmosphere, language, rhythm, attention, and memory association, not create news summaries.
+- RSS/source items must pass through source digestion before they influence public prompts. Keep raw titles, URLs, provider names, people, organizations, countries, entities, and raw source sentences out of poem/dream prompts and public UI.
+- Source digestion has a private factual layer for audit and a public poetic layer for safe Turkish learning material.
+- Memory should be trace-based. Prefer `data/memory/traces/`, `data/memory/index.json`, and `data/memory/report.json` over legacy state lists when building UI or generation context.
+- Do not send the full memory store to OpenAI. Select a small set of direct, indirect, suppressed, and long-term traces, then turn them into short residue sentences.
 - Hidden voice traits live in `data/settings/personality_settings.json`; they may shape poem generation, but should not be surfaced as public UI copy.
-- UCU BEDEN's hidden voice may carry dry sarcasm, absurd domestic humor, panic-comedy, and a small sentimental leak; keep it subtle, object-based, and never a stand-up punchline.
+- UCU BEDEN's hidden voice may carry balanced dry sarcasm, absurd domestic tension, panic-comedy, and a small sentimental leak; keep it inside the poem, never as a stand-up punchline, joke, meme, or aphorism.
+- OpenAI poem/dream prompts should stay compact and creative. Internal debug sections, raw JSON, long deny lists, counts, scores, and full source packets should not be sent to the model.
 - UCU BEDEN lives around Osmanaga, Kadikoy.
 - UCU BEDEN has a 35 m2 1+1 home with a grey couch, blue-figure rug, computer in the living room, and a small bedroom.
 - UCU BEDEN often writes poems while walking around Yogurtcu Park and Kalamis Park.
@@ -39,6 +43,7 @@ This project is a local-first poetic archive and daily generation system for a d
 - Add fallbacks for missing external services.
 - Keep RSS sources configurable through `data/settings/rss_sources.json`.
 - OpenAI transient failures should retry before falling back to mock generation.
+- Language and surface validators should remain active after compact prompt changes.
 - Keep functions small and testable.
 - Add clear scripts for generation and analysis.
 - Do not break existing generated archives.
