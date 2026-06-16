@@ -1,4 +1,5 @@
 import { hashSeed, seededMany } from "./random";
+import { buildCompactPoemVisualPrompt } from "./compactCreativePrompt";
 import type { DailyPoem, DreamRecord, VisualMetadata } from "./types";
 
 const styleTags = [
@@ -22,10 +23,9 @@ const palettes: Array<[string, string, string]> = [
 ];
 
 const negativePrompt =
-  "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene";
+  "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room, couch, bed, table, window, carpet, street, park, apartment interior";
 
 export function createPoemVisual(poem: DailyPoem): VisualMetadata {
-  const images = poem.analysis.new_images.slice(0, 5);
   const palette = palettes[hashSeed(`${poem.date}:poem-visual`) % palettes.length];
   return {
     date: poem.date,
@@ -34,9 +34,9 @@ export function createPoemVisual(poem: DailyPoem): VisualMetadata {
     source_id: poem.date,
     title: poem.title,
     generated_at: new Date().toISOString(),
-    visual_prompt: `4:5 portrait aspect ratio; UCU BEDEN poem interior screen; emotional pressure of "${poem.title}"; associative traces of ${images.join(", ") || "an almost empty room"}; ${poem.mood_sentence}; soft airbrush, hazy old postcard, low resolution enlarged texture, gentle scan dirt, poetic but inexpensive digital archive, emotionally readable without literal illustration`,
+    visual_prompt: buildCompactPoemVisualPrompt(poem),
     negative_prompt: negativePrompt,
-    alt_text: `${poem.title} şiirinin ${images.slice(0, 3).join(", ") || "bulanık oda"} izlerini taşıyan lo-fi iç ekranı.`,
+    alt_text: `${poem.title} şiirinin duygusal iklimini ve hafıza basıncını taşıyan soyut lo-fi görsel.`,
     image_path: null,
     provider: "metadata-fallback",
     model: null,

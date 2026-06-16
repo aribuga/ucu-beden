@@ -29,7 +29,7 @@ const sharedStyle =
   "Airbrush, lo-fi low quality aesthetic, soft blur, dreamy haze, grainy texture, color bleeding, slight chromatic aberration, scan noise, compression artifact feeling, cheap old digital wallpaper, old postcard feeling, low-resolution image enlarged, soft glowing edges, nostalgic, slightly kitsch, poetic and surreal.";
 
 const kindExtensions = {
-  poem: "Create an emotional inner image of the poem. More legible than a dream, symbolic but not literal, atmospheric, connected to the poem's mood.",
+  poem: "Create an abstract emotional field for the poem. Do not illustrate the poem's objects literally; translate mood, memory pressure, rhythm, and attention shifts into atmosphere.",
   dream: "Create abstract subconscious dream residue. Fragmented, unstable, hallucinatory, symbolic, less literal, never a direct illustration."
 } as const;
 

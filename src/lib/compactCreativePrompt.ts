@@ -44,6 +44,39 @@ const moodLabels: Record<keyof Mood, string> = {
 
 const technicalFragment = /\b(category|items|influence|mood|safe_terms|weights|provider|source|http|www)\s*[=:]/iu;
 
+const avoidStopTerms = new Set(
+  tokenize(
+    [
+      "değil hafif arasında içinde dışarıdan içeri geçenler bulunan burada araştırma ekseninde ilişki ilişkisi",
+      "bugün bugünkü kalan etki etkisi biraz küçük büyük eski yeni kısa uzun doğrudan dolaylı yönünde yönü tarafına sabah gri çıkış",
+      "düşük orta yüksek mevcut yok var şiir rüya hafıza dikkat ritim basınç kavramsal estetik çağrışım",
+      "melankoli öfke şefkat yorgunluk absürtlük açıklık arzu umut"
+    ].join(" ")
+  )
+);
+
+const surfaceAvoidHints = new Set(
+  tokenize(
+    "ev oda salon mutfak koltuk yatak halı masa pencere kapı sokak park apartman kaldırım bank ekran sandalye ayakkabı rota yürüyüş mahalle deniz vapur tasma bardak gövde çekmece eşya market yoğurtçu kalamış osmanağa kadıköy salondaki gri"
+  )
+);
+
+const sourceCueStopTerms = new Set(
+  tokenize(
+    [
+      "bulunan burada araştırma ekseninde arasında ilişkisi ilişki tarafına yönünde dışarıdan gelen kalan açılan aldıkları elde aracılığıyla aylarında birçok değerli",
+      "cümle hareketi dikkat bakışı hafifçe değiştirsin çalışsın kayabilsin arka planda kalsın",
+      "safe terms influence category source provider items weights mood"
+    ].join(" ")
+  )
+);
+
+const visualSurfaceStopTerms = new Set(
+  tokenize(
+    "ev oda salon mutfak koltuk yatak halı masa pencere kapı sokak park apartman kaldırım bank ekran sandalye ayakkabı rota yürüyüş mahalle deniz vapur tasma bardak gövde çekmece eşya market yoğurtçu kalamış osmanağa kadıköy salondaki gri"
+  )
+);
+
 function distinct(values: string[]): string[] {
   return Array.from(new Set(values.filter(Boolean)));
 }
@@ -83,6 +116,10 @@ function sentence(value: string): string {
   return /[.!?]$/u.test(value) ? value : `${value}.`;
 }
 
+function stripCountSuffix(value: string): string {
+  return value.replace(/\s+\(\d+\)$/u, "");
+}
+
 function surfaceSafeClause(clause: string, input: GenerationContextPacketInput): boolean {
   const meaningful = distinct(tokenize(clause).filter((term) => term.length > 2 && !analyzeGeneratedLanguage(term).severe));
   return filterGenerationSurfaceTerms(meaningful, input).length === meaningful.length;
@@ -100,31 +137,36 @@ function memoryResidues(selection: MemorySelection, input: GenerationContextPack
 
 function compactSourceValue(value: string, blocked: Set<string>): string {
   if (!value || technicalFragment.test(value) || analyzeGeneratedLanguage(value).severe) return "";
-  const normalized = truncateWords(value.replace(/\s*[/|]\s*/gu, " ile "), 12);
-  return tokenize(normalized).some((term) => blocked.has(term)) ? "" : normalized;
+  const terms = distinct(
+    tokenize(value.replace(/\s*[/|]\s*/gu, " "))
+      .filter((term) => term.length > 2 && !sourceCueStopTerms.has(term) && !avoidStopTerms.has(term) && !blocked.has(term))
+      .filter((term) => !analyzeGeneratedLanguage(term).severe)
+  );
+  return terms.length >= 2 ? terms.slice(0, 5).join(" ") : "";
 }
 
 function sourceEffects(input: GenerationContextPacketInput, limit: number): string[] {
   const digest = input.source_digest?.safety.valid ? input.source_digest.public_poetic_digest : null;
   const blocked = new Set(digest ? [...digest.do_not_surface_terms, ...digest.repeated_abstract_terms].flatMap(tokenize) : []);
   if (digest) {
-    const sentenceMove = compactSourceValue(digest.sentence_moves[0] ?? "", blocked);
-    const attentionShift = compactSourceValue(digest.attention_shifts[0] ?? "", blocked);
-    const conceptualDrift = compactSourceValue(digest.conceptual_drifts[0] ?? "", blocked);
-    const aestheticCue = compactSourceValue(digest.aesthetic_cues[0] ?? "", blocked);
+    const firstUseful = (values: string[]) => values.map((value) => compactSourceValue(value, blocked)).find(Boolean) ?? "";
+    const sentenceMove = firstUseful(digest.sentence_moves);
+    const attentionShift = firstUseful(digest.attention_shifts);
+    const conceptualDrift = firstUseful(digest.conceptual_drifts);
+    const aestheticCue = firstUseful(digest.aesthetic_cues);
     const candidates = [
-      sentenceMove ? `Dışarıdan gelen cümle hareketi ${sentenceMove} yönünde çalışsın.` : "",
-      attentionShift ? `Dikkat ${attentionShift} tarafına kayabilsin.` : "",
-      conceptualDrift ? `${conceptualDrift} ilişkisi arka planda kalsın.` : "",
-      aestheticCue ? `${aestheticCue} ilişkisi bakışı hafifçe değiştirsin.` : ""
+      sentenceMove ? `Cümle ritmi şuradan etkilensin: ${sentenceMove}.` : "",
+      attentionShift ? `Dikkat şu yöne hafifçe kayabilsin: ${attentionShift}.` : "",
+      conceptualDrift ? `Arka planda şu kavramsal sapma kalsın: ${conceptualDrift}.` : "",
+      aestheticCue ? `Görsel ve duygusal ton şuradan beslensin: ${aestheticCue}.` : ""
     ];
-    return distinct(candidates.filter((value) => !/\s{2,}/u.test(value) && !value.includes("  yönünde") && !value.startsWith(" ilişkisi"))).slice(0, limit);
+    return distinct(candidates.filter((value) => !/\s{2,}/u.test(value))).slice(0, limit);
   }
 
   return sourceInfluencePacketsForBundle(input.sources)
     .map((packet) => {
-      const terms = packet.safe_terms.filter((term) => !analyzeGeneratedLanguage(term).severe).slice(0, 2);
-      return terms.length > 0 ? `Dışarıdan kalan etki ${terms.join(" ile ")} arasındaki dikkati değiştirsin.` : "";
+      const terms = distinct(packet.safe_terms.flatMap(tokenize).filter((term) => !avoidStopTerms.has(term) && !analyzeGeneratedLanguage(term).severe)).slice(0, 3);
+      return terms.length > 0 ? `Dış etki şu güvenli malzemeyi yalnızca ritim ve dikkat olarak taşısın: ${terms.join(", ")}.` : "";
     })
     .filter(Boolean)
     .slice(0, limit);
@@ -133,11 +175,12 @@ function sourceEffects(input: GenerationContextPacketInput, limit: number): stri
 function avoidTerms(input: GenerationContextPacketInput, retryHint?: CompactRetryHint): string[] {
   const retryTerms = retryHint?.surface?.surface_violations.flatMap((violation) => violation.matches) ?? [];
   const digestTerms = input.source_digest?.safety.valid ? input.source_digest.public_poetic_digest.do_not_surface_terms : [];
-  return distinct(
-    [...retryTerms, ...input.repetition_pressure.soft_avoid, ...input.repetition_pressure.repeated_locations, ...input.repetition_pressure.repeated_images, ...digestTerms]
-      .flatMap(tokenize)
-      .filter((term) => term.length > 2 && !/^\d+$/u.test(term) && !analyzeGeneratedLanguage(term).severe)
-  ).slice(0, 8);
+  const candidates = [...retryTerms, ...input.repetition_pressure.soft_avoid, ...input.repetition_pressure.repeated_locations, ...input.repetition_pressure.repeated_images, ...digestTerms]
+    .map(stripCountSuffix)
+    .flatMap(tokenize)
+    .filter((term) => term.length > 2 && !/^\d+$/u.test(term) && !avoidStopTerms.has(term) && !analyzeGeneratedLanguage(term).severe);
+  const concrete = candidates.filter((term) => surfaceAvoidHints.has(term) || term.length >= 4);
+  return distinct(concrete).slice(0, 8);
 }
 
 function retryNote(hint?: CompactRetryHint): string[] {
@@ -145,7 +188,12 @@ function retryNote(hint?: CompactRetryHint): string[] {
   const notes: string[] = [];
   if (hint.language?.severe) notes.push("Önceki çıktı dil koşulunu geçemedi; yeniden dene.");
   if (hint.surface?.severe) {
-    const matches = distinct(hint.surface.surface_violations.flatMap((violation) => violation.matches).flatMap(tokenize)).slice(0, 6);
+    const matches = distinct(
+      hint.surface.surface_violations
+        .flatMap((violation) => violation.matches)
+        .flatMap(tokenize)
+        .filter((term) => !avoidStopTerms.has(term))
+    ).slice(0, 6);
     notes.push(`Önceki çıktı yakın yüzeyleri tekrarladı; yeniden kullanma: ${matches.join(", ") || "aynı başlık ve yüzeyler"}.`);
   }
   return notes;
@@ -208,7 +256,8 @@ export function buildCompactPoemPrompt(context: GenerationContext, retryHint?: C
   const outside = sourceEffects(input, 4);
   const avoid = avoidTerms(input, retryHint);
   return [
-    "UCU BEDEN, birikmiş yaşantısının içinden konuşan dijital bir şairdir. İçeriden, kusurlu ve canlı yaz; kuru yan bakış küçük dozda kalsın, şakaya dönüşmesin. Kendini açıklama ve kaynakları özetleme.",
+    "UCU BEDEN birikmiş yaşantısının içinden konuşan dijital bir şair-persona. İnsan gibi, içeriden, kusurlu ve canlı yaz; kendini açıklama, kaynakları özetleme.",
+    "Ton: ince, kuru sarkazm dengeli ve hissedilir olsun. Şiirin her yerine yayılmasın; şakaya, punchline'a, espriye veya aforizmaya dönüşmesin.",
     "",
     "Bugünkü iç durum",
     innerState(input),
@@ -216,11 +265,11 @@ export function buildCompactPoemPrompt(context: GenerationContext, retryHint?: C
     "Hafızadan kalanlar",
     ...(residues.length > 0 ? residues.map((value) => `- ${value}`) : ["- Bugün belirgin bir hafıza kalıntısı yok."]),
     "",
-    "Dışarıdan içeri geçenler",
-    ...(outside.length > 0 ? outside.map((value) => `- ${value}`) : ["- Dışarısı yalnızca ritmi ve dikkati hafifçe değiştirsin."]),
+    "Dış etkiler",
+    ...(outside.length > 0 ? outside.map((value) => `- ${value}`) : ["- Dış etki yalnızca ritmi, dikkati ve çağrışımı hafifçe değiştirsin."]),
     "",
     ...(avoid.length > 0 ? [`Bugün doğrudan kullanma: ${avoid.join(", ")}.`, ""] : []),
-    "Üslup: Cilalı genel şiir tonundan kaçın; ev, yer ve yürüyüşü varsayılan imge yapma. Başlığı bir değişim veya ilişkiden kur.",
+    "Üslup: Daha içerden, daha insan, daha kusurlu. Cilalı genel şiir tonundan kaçın; ev, yer ve yürüyüşü varsayılan imge yapma. Başlık nesne listesi gibi durmasın.",
     ...retryNote(retryHint),
     "",
     'Tamamını Türkçe yaz. Yalnızca JSON döndür: {"title":"...","poem":"...","mood_sentence":"Bugünkü hali: ..."}'
@@ -234,7 +283,8 @@ export function buildCompactDreamPrompt(params: CompactDreamPromptParams, retryH
   const outside = sourceEffects(input, 2);
   const avoid = avoidTerms(input, retryHint);
   return [
-    "UCU BEDEN rüyada daha kırık ve dolaylı konuşur. Bastırılmış kalıntılar tuhaf ilişkilerle geri dönebilir; yine de şiiri yeniden yazma, şaka kurma veya kendini açıklama.",
+    "UCU BEDEN rüyada daha kırık ve dolaylı konuşur. İnce, kuru sarkazm bozuk bir yankı gibi kalabilir; yine de şaka, punchline veya açıklama kurma.",
+    "Bastırılmış kalıntılar tuhaf biçimde geri dönebilir; şiiri yeniden yazma ve kaynakları özetleme.",
     "",
     "Günün şiirinden kalanlar",
     ...(poemLeftovers.length > 0 ? poemLeftovers.map((value) => `- ${value}`) : ["- Şiirin duygusal yönü kalsın, yüzeyi kalmasın."]),
@@ -242,8 +292,8 @@ export function buildCompactDreamPrompt(params: CompactDreamPromptParams, retryH
     "Hafızadan kalanlar",
     ...(residues.length > 0 ? residues.map((value) => `- ${value}`) : ["- Bugün belirgin bir hafıza kalıntısı yok."]),
     "",
-    "Dışarıdan içeri geçenler",
-    ...(outside.length > 0 ? outside.map((value) => `- ${value}`) : ["- Dışarısı yalnızca rüyanın dikkatini hafifçe değiştirsin."]),
+    "Dış etkiler",
+    ...(outside.length > 0 ? outside.map((value) => `- ${value}`) : ["- Dış etki yalnızca rüyanın ritmini ve dikkatini hafifçe değiştirsin."]),
     "",
     ...(avoid.length > 0 ? [`Bugün doğrudan kullanma: ${avoid.join(", ")}.`, ""] : []),
     "Üslup: Kırık ve simgesel kal; kaynak şiirin yüzeyini kopyalama. Başlığı bir mutasyon veya ilişkiden kur.",
@@ -262,4 +312,39 @@ export function buildOrganicFallbackTitle(input: GenerationContextPacketInput, t
   const first = selected[0] ?? moodWords[0];
   const second = selected[1] ?? moodWords[1] ?? moodWords[0];
   return `${first} ile ${second} arasında`;
+}
+
+function visualCueValue(value: string): string {
+  if (!value || technicalFragment.test(value) || analyzeGeneratedLanguage(value).severe) return "";
+  const terms = distinct(
+    tokenize(value)
+      .filter((term) => term.length >= 4)
+      .filter((term) => !visualSurfaceStopTerms.has(term) && !avoidStopTerms.has(term) && !sourceCueStopTerms.has(term))
+      .filter((term) => !analyzeGeneratedLanguage(term).severe)
+  );
+  return terms.slice(0, 6).join(", ");
+}
+
+function visualCueList(values: string[], limit: number): string[] {
+  return distinct(values.map(visualCueValue).filter(Boolean)).slice(0, limit);
+}
+
+export function buildCompactPoemVisualPrompt(poem: DailyPoem): string {
+  const moods = dominantMood(poem.mood, 3).join(", ");
+  const memoryEffects = visualCueList(poem.memory_selection?.memory_prompt_fragments ?? poem.memory_fragments, 3);
+  const sourceEffectsForImage = visualCueList(
+    poem.influences.filter((value) => /estetik|ritim|dikkat|cümle|imge|ton/iu.test(value)),
+    3
+  );
+  return [
+    "4:5 portrait aspect ratio.",
+    "Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme.",
+    `Başlık: ${poem.title}.`,
+    `Duygusal iklim: ${moods}; ${truncateWords(poem.mood_sentence, 18)}.`,
+    memoryEffects.length > 0 ? `Yüzeye çıkmayan hafıza etkileri: ${memoryEffects.join(" / ")}.` : "",
+    sourceEffectsForImage.length > 0 ? `Kaynaklardan kalan estetik, ritim ve dikkat etkisi: ${sourceEffectsForImage.join(" / ")}.` : "",
+    "Oda, koltuk, yatak, masa, pencere, halı, sokak, park ve apartman gibi ev/yer/yürüyüş nesnelerini ana motif yapma.",
+    "Bunun yerine hafıza basıncı, duygusal iklim, çağrışım alanı, ritim kırılması ve dikkat kaymasını görselleştir.",
+    "Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, az literal detay."
+  ].filter(Boolean).join(" ");
 }
