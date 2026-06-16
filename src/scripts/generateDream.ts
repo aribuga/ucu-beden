@@ -14,14 +14,14 @@ import {
 import { generateVisualImage } from "../lib/openaiImageProvider";
 import { buildMemoryArchive, selectMemoryForGeneration, validateMemoryPromptFragments, writeMemoryArchive } from "../lib/memoryTraceEngine";
 import { analyzeRepetitionPressure } from "../lib/repetitionPressure";
-import { parseGenerationArgs, previousCalendarDate, todayInIstanbul } from "../lib/scheduler";
+import { parseGenerationArgs, todayInIstanbul } from "../lib/scheduler";
 import type { DailyPoem, DreamRecord } from "../lib/types";
 import { createDreamVisual } from "../lib/visualEngine";
 
 async function main(): Promise<void> {
   await ensureDataDirs();
   const args = parseGenerationArgs(process.argv.slice(2));
-  const sourceDate = args.date ?? previousCalendarDate(todayInIstanbul());
+  const sourceDate = args.date ?? todayInIstanbul();
   const dreamPath = `${storagePaths.dreams}/${sourceDate}.json`;
   const visualPath = `${storagePaths.visuals}/${sourceDate}-dream.json`;
 

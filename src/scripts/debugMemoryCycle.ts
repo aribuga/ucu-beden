@@ -18,11 +18,10 @@ import { buildPoemPromptSections } from "../lib/poemGenerator";
 import { analyzeGeneratedDreamLanguage, analyzeGeneratedPoemLanguage } from "../lib/languageValidator";
 import type { GenerationContext, MemoryReport, MemorySelection } from "../lib/types";
 import { buildUcuBedenVoicePrompt } from "../lib/ucuBedenVoicePrompt";
+import { addCalendarDays, todayInIstanbul } from "../lib/scheduler";
 
 function nextDate(date: string | null): string {
-  const value = new Date(`${date ?? new Date().toISOString().slice(0, 10)}T00:00:00Z`);
-  value.setUTCDate(value.getUTCDate() + 1);
-  return value.toISOString().slice(0, 10);
+  return addCalendarDays(date ?? todayInIstanbul(), 1);
 }
 
 function requestedDate(args: string[], fallback: string): string {
