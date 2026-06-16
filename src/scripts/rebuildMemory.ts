@@ -15,11 +15,10 @@ import { validateSourceDigests } from "../lib/sourceDigestion";
 import { validateStoredSurfaceRecords } from "../lib/surfaceValidator";
 import { validateStoredLanguageRecords } from "../lib/languageValidator";
 import type { MemorySelection, MemoryTrace } from "../lib/types";
+import { addCalendarDays, todayInIstanbul } from "../lib/scheduler";
 
 function nextDate(date: string | null): string {
-  const value = new Date(`${date ?? new Date().toISOString().slice(0, 10)}T00:00:00Z`);
-  value.setUTCDate(value.getUTCDate() + 1);
-  return value.toISOString().slice(0, 10);
+  return addCalendarDays(date ?? todayInIstanbul(), 1);
 }
 
 function selectionSample(selection: MemorySelection, traces: MemoryTrace[]) {

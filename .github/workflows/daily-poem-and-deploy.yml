@@ -20,8 +20,8 @@ on:
         default: ""
         type: string
   schedule:
-    - cron: "0 5 * * *"
-    - cron: "23 5 * * *"
+    # GitHub schedule uses UTC. 05:07 UTC = 08:07 Europe/Istanbul.
+    - cron: "7 5 * * *"
 
 permissions:
   contents: write
@@ -45,6 +45,46 @@ jobs:
           cache: npm
       - name: Install
         run: npm ci
+      - name: Log schedule timing
+        env:
+          GITHUB_EVENT_SCHEDULE: ${{ github.event.schedule || '' }}
+          TARGET_CRON_UTC: "7 5 * * *"
+          TARGET_LOCAL_TIME: "08:07 Europe/Istanbul"
+        run: |
+          node <<'NODE'
+          const now = new Date();
+          const schedule = process.env.GITHUB_EVENT_SCHEDULE || "manual_or_push";
+          const targetCron = process.env.TARGET_CRON_UTC;
+          const targetLocalTime = process.env.TARGET_LOCAL_TIME;
+          const localParts = new Intl.DateTimeFormat("en-GB", {
+            timeZone: "Europe/Istanbul",
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: false
+          }).formatToParts(now);
+          const part = (type) => localParts.find((item) => item.type === type)?.value;
+          const localGenerationDate = `${part("year")}-${part("month")}-${part("day")}`;
+          const runStartedIstanbul = `${localGenerationDate}T${part("hour")}:${part("minute")}:${part("second")}+03:00`;
+          const [minute, hour] = targetCron.split(" ").map(Number);
+          const scheduledUtc = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), hour, minute));
+          const delayMinutes = Math.round((now.getTime() - scheduledUtc.getTime()) / 60000);
+          const payload = {
+            run_started_utc: now.toISOString(),
+            run_started_europe_istanbul: runStartedIstanbul,
+            target_local_time: targetLocalTime,
+            local_generation_date: localGenerationDate,
+            "github.event.schedule": schedule,
+            schedule_delay_minutes: schedule === "manual_or_push" ? null : delayMinutes
+          };
+          console.log(JSON.stringify(payload, null, 2));
+          if (schedule !== "manual_or_push" && delayMinutes > 20) {
+            console.log(`::warning::Scheduled run started ${delayMinutes} minutes after ${targetLocalTime}; continuing generation.`);
+          }
+          NODE
       - name: Generate daily life, poem, and poem visual
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

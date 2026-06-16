@@ -12,16 +12,21 @@ export function todayInIstanbul(date = new Date()): string {
   const day = parts.find((part) => part.type === "day")?.value;
 
   if (!year || !month || !day) {
-    return date.toISOString().slice(0, 10);
+    const istanbul = new Date(date.getTime() + 3 * 60 * 60 * 1000);
+    return `${istanbul.getUTCFullYear()}-${String(istanbul.getUTCMonth() + 1).padStart(2, "0")}-${String(istanbul.getUTCDate()).padStart(2, "0")}`;
   }
 
   return `${year}-${month}-${day}`;
 }
 
-export function previousCalendarDate(date: string): string {
+export function addCalendarDays(date: string, days: number): string {
   const [year, month, day] = date.split("-").map(Number);
-  const previous = new Date(Date.UTC(year, month - 1, day - 1));
-  return previous.toISOString().slice(0, 10);
+  const target = new Date(Date.UTC(year, month - 1, day + days));
+  return `${target.getUTCFullYear()}-${String(target.getUTCMonth() + 1).padStart(2, "0")}-${String(target.getUTCDate()).padStart(2, "0")}`;
+}
+
+export function previousCalendarDate(date: string): string {
+  return addCalendarDays(date, -1);
 }
 
 export function parseGenerationArgs(args: string[]): { force: boolean; date?: string } {
