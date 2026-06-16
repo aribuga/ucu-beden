@@ -89,6 +89,8 @@ export function buildDreamPromptSections(params: DreamParams, retryReport?: Surf
     title_policy_packet: formatTitlePolicyPacket(packet),
     strict_surface_retry: retryReport ? formatStrictSurfaceRetryConstraints(retryReport, "dream") : null,
     language_retry: languageRetryReport?.severe ? formatLanguageRetryConstraints(languageRetryReport) : null,
+    openai_compact_prompt: buildCompactDreamPrompt(params, { surface: retryReport, language: languageRetryReport }),
+    prompt_comparison_note: "Yukarıdaki teknik bölümler debug içindir; OpenAI rüya çağrısına yalnızca openai_compact_prompt gönderilir.",
     output_format: [
       formatLanguagePolicy(),
       "Şiirle duygusal bağı olan ama şiirin ikinci sürümü olmayan kırık ve simgesel bir Türkçe rüya üret.",

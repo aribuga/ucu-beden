@@ -198,6 +198,14 @@ function identitySurfaceTerms(input: GenerationContextPacketInput): Set<string> 
   return new Set(values.flatMap(tokenize));
 }
 
+function concreteIdentitySurfaceTerms(input: GenerationContextPacketInput): Set<string> {
+  return new Set(
+    Array.from(identitySurfaceTerms(input)).filter(
+      (term) => genericSurfaceTerms.has(term) || genericSurfacePrefixes.some((prefix) => term.startsWith(prefix))
+    )
+  );
+}
+
 function surfaceTerms(input: GenerationContextPacketInput): Set<string> {
   const values = [
     ...genericSurfaceTerms,
@@ -385,7 +393,7 @@ export function generationContextDebug(input: GenerationContextPacketInput, pack
     ...packet.source_influence_packet
   ].join("\n");
   const fallbackTerms = generationFallbackTerms(input);
-  const blocked = identitySurfaceTerms(input);
+  const blocked = concreteIdentitySurfaceTerms(input);
   return {
     raw_json_context_removed: !packetText.includes(JSON.stringify(input.daily_life)) && !packetText.includes(JSON.stringify(input.walk_state)),
     home_place_deanchored:

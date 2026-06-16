@@ -82,6 +82,8 @@ export function buildPoemPromptSections(context: GenerationContext, retryReport?
     title_policy_packet: formatTitlePolicyPacket(packet),
     strict_surface_retry: retryReport ? formatStrictSurfaceRetryConstraints(retryReport, "poem") : null,
     language_retry: languageRetryReport?.severe ? formatLanguageRetryConstraints(languageRetryReport) : null,
+    openai_compact_prompt: buildCompactPoemPrompt(context, { surface: retryReport, language: languageRetryReport }),
+    prompt_comparison_note: "Yukarıdaki teknik bölümler debug içindir; OpenAI şiir çağrısına yalnızca openai_compact_prompt gönderilir.",
     output_format: [
       formatLanguagePolicy(),
       "Bir Türkçe şiir ve kısa bir günlük ruh hali cümlesi yaz.",
