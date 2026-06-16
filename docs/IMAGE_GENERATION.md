@@ -15,6 +15,22 @@ OPENAI_IMAGE_DELAY_MS=1200
 
 OpenAI receives the nearest supported portrait request (`1024x1536` by default). The result is cropped with `sharp` and saved as a real `1024x1280` 4:5 file.
 
+## Prompt Shape
+
+Poem and dream image prompts are built separately from text-generation prompts.
+
+Poem visuals are abstract by design. The prompt should use:
+
+- poem title,
+- mood sentence,
+- dominant mood,
+- selected memory residue that is safe to surface visually,
+- source digest cues related to esthetic tone, rhythm, attention, and sentence movement.
+
+Poem visuals should not literally illustrate the poem line by line. Direct home/place/walk surfaces such as room, couch, bed, table, window, rug, street, park, apartment, route, or neighborhood should not become the main motif. They may be translated into atmosphere, pressure, rhythm, fatigue, attention shift, or associative texture.
+
+Dream visuals can be stranger and more symbolic, but still avoid raw source text and direct reuse of poem surfaces.
+
 ## Files And Metadata
 
 Generated images are written to:

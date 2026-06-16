@@ -1,8 +1,10 @@
 # UCU BEDEN
 
-UCU BEDEN is a local-first poetic archive and daily generation system for a digital poet that ages, remembers, walks, forgets, and changes through its own writing.
+UCU BEDEN is a local-first poetic archive and daily generation system for a digital poet that ages, remembers, walks, dreams, forgets, mutates, and changes through its own writing.
 
-It is not a generic poem generator. User poems placed in `poems_input/` become genetic memory. Generated poems in `data/generated_poems/` become lived memory. Weather, Turkish news, art sources, home state, walking state, recurring words, avoided words, and yearly reports influence the next poem without becoming direct news summaries.
+It is not a generic poem generator. User poems placed in `poems_input/` become genetic memory. Generated poems, dreams, daily life records, source digests, and memory traces become lived memory. Weather, RSS sources, home state, walking state, recurring surfaces, avoided words, and yearly reports influence the next poem without becoming direct news summaries.
+
+The current system keeps complexity mostly inside the engine: sources are digested into safe language and esthetic cues, memory is retrieved as trace residue, OpenAI receives compact creative prompts, and validators guard Turkish output, raw source leakage, and overexposed surfaces.
 
 ## Install
 
@@ -72,13 +74,17 @@ The script:
 - skips today if a poem already exists,
 - scans and analyzes `poems_input/`,
 - gathers live or fallback sources,
-- creates mood, a rich daily life record, and walking state,,
+- digests RSS/source material into private factual records and public-safe poetic cues,
+- creates mood, a rich daily life record, and walking state,
 - analyzes the last 30 poems for soft repetition pressure,
-- recalls at least one memory,
+- selects a small set of memory traces instead of sending the whole memory store,
+- sends a compact Turkish OpenAI prompt,
+- validates language, raw source leakage, repeated surfaces, and title surfaces,
 - writes `data/generated_poems/YYYY-MM-DD.json`,
 - writes `data/daily_life/YYYY-MM-DD.json`,
+- writes source digestion to `data/source_digests/YYYY-MM-DD.json`,
 - writes poem visual metadata to `data/visuals/YYYY-MM-DD-poem.json`,
-- updates state, vocabulary memory, image mutations, and yearly reports.
+- updates state, trace recall metadata, memory reports, vocabulary memory, image mutations, and yearly reports.
 
 Force regeneration:
 
@@ -86,22 +92,22 @@ Force regeneration:
 npm run generate:today -- --force
 ```
 
-## Night Dream Generation
+## Dream Generation
 
 ```bash
 npm run generate:dream
 ```
 
-The default night run dreams from the completed previous Istanbul calendar day. It writes:
+The default dream run uses the current Europe/Istanbul generation date unless `--date` is supplied. It writes:
 
 ```txt
 data/dreams/YYYY-MM-DD.json
 data/visuals/YYYY-MM-DD-dream.json
 ```
 
-Use `npm run generate:dream -- --date=YYYY-MM-DD` for a specific completed day. Existing dreams are safely skipped unless `--force` is supplied.
+Use `npm run generate:dream -- --date=YYYY-MM-DD` for a specific day. Existing dreams are safely skipped unless `--force` is supplied.
 
-Dreams can use the day's poem, rich daily life, repeated motifs, outside residue, and dim/suppressed memory. Dream memory mutations are returned to the dim memory layer.
+Dreams can use the day's poem, rich daily life, repeated motifs, outside residue, and dim/suppressed memory. Dream generation weights suppressed/repressed traces more strongly and can mark dream-return relations in memory.
 
 ## UI
 
@@ -114,10 +120,24 @@ The home page preserves the poem archive on the left and adds a visual conscious
 - `/archive`
 - `/dreams`
 - `/memory`
+- `/memory/mutations`
+- `/memory-map`
+- `/phone`
 - `/sources`
+- `/sources/health`
 - `/mood-map`
 - `/settings`
 - `/poem/YYYY-MM-DD`
+
+`/memory` reads `data/memory/report.json` when available and falls back to legacy state only when the trace report is missing. `/memory/mutations` shows the trace mutation graph. `/memory-map` is a separate visual memory map with a focused near-field view and a full memory view. `/phone` is a standalone UCU BEDEN device interface with live HTML/CSS apps for gallery, notes, weather, memory, contacts, and messages.
+
+More implementation notes:
+
+- `docs/MEMORY_AND_SOURCE_SYSTEM.md`
+- `docs/PHONE_AND_MEMORY_MAP.md`
+- `docs/AUTOMATION.md`
+- `docs/IMAGE_GENERATION.md`
+- `MEMORY_PRODUCTION_CHECKLIST.md`
 
 ## Themes And Logos
 
@@ -145,26 +165,36 @@ Every generated day adds 1 month. 12 generated days equal 1 year. Life stages ar
 
 ## Memory
 
-Memory is file-based for the MVP:
+Memory is file-based and trace-oriented. Rebuild output lives under:
 
-- short-term, mid-term, long-term, and dim/suppressed memory,
-- recent poems,
-- word frequencies,
-- repeated images,
-- avoided or forgotten words,
-- home and walk memory,
-- input poem analysis,
-- yearly reports.
+```txt
+data/memory/traces/YYYY-MM-DD.json
+data/memory/index.json
+data/memory/report.json
+```
 
-Old lines are not copied into new poems. Images and rhythms can return as mutations.
+Each memory trace is a lived residue rather than a simple word counter. Traces can come from poems, dreams, daily life, sources, walks, visuals, or contact residue. They carry status such as `active`, `dim`, `suppressed`, `fossilized`, `overexposed`, or `unstable`, plus recall metadata and linked traces.
 
-The last 30 poems also create soft repetition pressure. Frequently returning title shapes, locations, images, word pairs, and gestures are discouraged in the next prompt without being completely banned.
+Generation does not dump all memory into the prompt. `selectMemoryForGeneration(...)` chooses a small set of direct, indirect, suppressed, and long-term traces. Selected trace IDs are stored in poem/dream metadata, and successful generation updates recall counts, `last_recalled_at`, dream-return links, and the public memory report.
 
-The UI no longer exposes `memory_density` as a score. The numeric value remains internal and is translated into states such as `hafif`, `bulanık`, `ızıntılı`, or `taşmış`.
+`memory_density` remains only for backward compatibility. The UI now presents memory through climate/report language, not as a numeric capacity meter.
+
+Useful commands:
+
+```bash
+npm run rebuild:memory
+npm run validate:memory
+npm run debug:memory-cycle
+npm run debug:latest-memory
+```
+
+
 
 ## Visual Generation
 
 Poem and dream visuals use separate prompt rules and a `4:5` portrait aspect ratio. With `OPENAI_API_KEY`, the Image API generates the nearest supported portrait size and `sharp` crops it to a final `1024x1280` image. Files are stored under `public/generated/visuals/`; metadata under `data/visuals/` records the public `image_path`, provider, model, API size, final size, quality, format, prompt hash, fallback state, and any short error.
+
+Poem visual prompts are intentionally abstract. They visualize emotional climate, memory pressure, rhythm, attention shifts, and associative residue instead of literally illustrating room, couch, bed, table, window, street, park, or walk details from the poem.
 
 The default model is `gpt-image-1`, quality is `low`, and format is `png`. These can be changed with the image environment variables above. If the key is missing or the API fails, poem and dream generation continue and the existing deterministic lo-fi metadata fallback remains visible.
 
@@ -225,11 +255,25 @@ The `/sources/health` page shows source name, category, status, item count, last
 
 The `/mood-map` page visualizes successful RSS items as mood-colored dots. Blocked or failed sources do not appear as dots, but remain visible in `/sources/health`. Missing APIs or failing RSS feeds fall back to local mock summaries without breaking generation.
 
+Source digestion adds a learning layer on top of raw RSS/source data:
+
+```bash
+npm run digest:sources
+npm run digest:sources -- --date YYYY-MM-DD
+npm run digest:sources -- --date YYYY-MM-DD --force
+```
+
+Digest records are stored in `data/source_digests/YYYY-MM-DD.json`. They separate `private_factual_digest` from `public_poetic_digest`. Private digest may keep raw titles, URLs, source names, categories, entities, and health for audit. Public digest is the only layer allowed into poem/dream generation; it contains safe Turkish vocabulary candidates, conceptual drifts, aesthetic cues, rhythm cues, attention shifts, image expansion candidates, sentence moves, rejected unsafe terms, and do-not-surface terms.
+
+If OpenAI is unavailable, deterministic digestion still creates varied category-aware cues. Prompt builders use digest-derived source influence when available and fall back to deterministic source influence packets otherwise.
+
 ## GitHub Actions And Pages
 
-`.github/workflows/daily-poem-and-deploy.yml` targets `05:00 UTC`, which is `08:00 Europe/Istanbul`, with an idempotent `05:23 UTC` backup.
+`.github/workflows/daily-poem-and-deploy.yml` targets `05:07 UTC`, which is `08:07 Europe/Istanbul`.
 
-`.github/workflows/night-dream-and-deploy.yml` targets `23:00 UTC`, which is `02:00 Europe/Istanbul` on the next calendar day, with an idempotent `23:27 UTC` backup. GitHub schedules are best-effort and can arrive late; duplicate-safe generation prevents the backups from rewriting existing content.
+`.github/workflows/night-dream-and-deploy.yml` targets `05:37 UTC`, which is `08:37 Europe/Istanbul`, after the morning poem has had time to finish. GitHub schedules are best-effort and can arrive late; duplicate-safe generation prevents scheduled or manual runs from rewriting existing content unless `--force` or `force_regenerate` is explicitly used.
+
+Both workflows log UTC time, Europe/Istanbul time, local generation date, target local time, and the incoming `github.event.schedule`.
 
 For project pages under a repository subpath, set `NEXT_PUBLIC_BASE_PATH` in the workflow or repository variables.
 
@@ -238,6 +282,5 @@ For project pages under a repository subpath, set `NEXT_PUBLIC_BASE_PATH` in the
 - embeddings for memory retrieval,
 - richer RSS collectors,
 - admin-only regeneration controls,
-- visual memory maps,
 - hand-edited yearly annotations,
 - stronger LLM schema validation.
