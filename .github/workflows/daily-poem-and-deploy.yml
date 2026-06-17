@@ -20,8 +20,11 @@ on:
         default: ""
         type: string
   schedule:
-    # GitHub schedule uses UTC. 05:07 UTC = 08:07 Europe/Istanbul.
+    # GitHub schedule uses UTC. Turkey is UTC+3 year-round.
+    # Backup runs are safe because generation skips when today's poem already exists.
     - cron: "7 5 * * *"
+    - cron: "7 6 * * *"
+    - cron: "7 7 * * *"
 
 permissions:
   contents: write
@@ -49,12 +52,12 @@ jobs:
         env:
           GITHUB_EVENT_SCHEDULE: ${{ github.event.schedule || '' }}
           TARGET_CRON_UTC: "7 5 * * *"
-          TARGET_LOCAL_TIME: "08:07 Europe/Istanbul"
+          TARGET_LOCAL_TIME: "08:07, 09:07, or 10:07 Europe/Istanbul"
         run: |
           node <<'NODE'
           const now = new Date();
           const schedule = process.env.GITHUB_EVENT_SCHEDULE || "manual_or_push";
-          const targetCron = process.env.TARGET_CRON_UTC;
+          const targetCron = schedule === "manual_or_push" ? process.env.TARGET_CRON_UTC : schedule;
           const targetLocalTime = process.env.TARGET_LOCAL_TIME;
           const localParts = new Intl.DateTimeFormat("en-GB", {
             timeZone: "Europe/Istanbul",
