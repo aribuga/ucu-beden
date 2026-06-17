@@ -4,16 +4,18 @@ UCU BEDEN is designed to run locally and on GitHub Actions.
 
 ## Morning Time
 
-The morning record targets roughly 08:00 Europe/Istanbul, offset away from the top of the hour.
+The morning record targets roughly 08:00 Europe/Istanbul, offset away from the top of the hour. Backup runs retry later in the morning in case GitHub skips or delays the first scheduled workflow.
 
 GitHub cron uses UTC, and Turkey is UTC+3 year-round:
 
 ```yaml
-# GitHub schedule uses UTC. 05:07 UTC = 08:07 Europe/Istanbul.
+# GitHub schedule uses UTC. Turkey is UTC+3 year-round.
 cron: "7 5 * * *"
+cron: "7 6 * * *"
+cron: "7 7 * * *"
 ```
 
-The morning workflow writes daily life, sources, source digest, poem, poem visual metadata, memory traces/report, and updated state. It is idempotent: if today's poem already exists, generation is skipped unless force regeneration is explicitly requested.
+These correspond to 08:07, 09:07, and 10:07 Europe/Istanbul. The morning workflow writes daily life, sources, source digest, poem, poem visual metadata, memory traces/report, and updated state. It is idempotent: if today's poem already exists, generation is skipped unless force regeneration is explicitly requested.
 
 The workflow also runs on normal pushes to `main`, except data-only commits. This lets code, theme, and documentation updates deploy immediately without creating a data commit loop.
 
