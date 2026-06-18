@@ -28,8 +28,19 @@ async function main(): Promise<void> {
   if (!args.force && (await pathExists(dreamPath))) {
     const existingDream = await readJsonFile<DreamRecord | null>(dreamPath, null);
     if (existingDream) {
-      const storedVisual = await readJsonFile(visualPath, createDreamVisual(existingDream));
-      const visual = await generateVisualImage(storedVisual);
+      const refreshedVisual = createDreamVisual(existingDream);
+      const storedVisual = await readJsonFile<typeof refreshedVisual | null>(visualPath, null);
+      const visual = await generateVisualImage(
+        storedVisual
+          ? {
+              ...refreshedVisual,
+              ...storedVisual,
+              visual_prompt: refreshedVisual.visual_prompt,
+              negative_prompt: refreshedVisual.negative_prompt,
+              style_tags: refreshedVisual.style_tags
+            }
+          : refreshedVisual
+      );
       await writeJsonFile(visualPath, visual);
       console.log(
         JSON.stringify({
