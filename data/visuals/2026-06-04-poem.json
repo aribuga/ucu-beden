@@ -4,12 +4,18 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-06-04",
   "title": "ağzını / bekleyen",
-  "generated_at": "2026-06-11T13:44:24.656Z",
-  "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN poem interior screen; ağzını / bekleyen; deniz, gövde, nemli kaldırım, ıslak bank, kapının metal sesi; soft airbrush, hazy old postcard, low resolution",
-  "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, photorealism, literal scene",
+  "generated_at": "2026-06-18T13:56:33.312Z",
+  "visual_prompt": "4:5 portrait aspect ratio. Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme. Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; görsel tamamen yazısız, harfsiz, tipografisiz, logosuz ve filigransız olmalı. Duygusal iklim: yorgunluk, melankoli, absürtlük; Bugünkü hali: gövdesi ağır, haberlerden sonra içi kalabalık, eşyalarla az konuşuyor; aklında komik görünen küçük bir panik var.. Yüzeye çıkmayan hafıza etkileri: 2026, şiirinden, imgeleri, eksik, hatırlanıyor / dizeden, yalnızca, ağzımda, döndü, kelimeleri, kırıntı / hafızası, bilgisayar, ekranı, çevresinde, dolaşıyor. Kaynaklardan kalan estetik, ritim ve dikkat etkisi: nefesli, rüzgarlı, cümleli, olsun. Oda, koltuk, yatak, masa, pencere, halı, sokak, park ve apartman gibi ev/yer/yürüyüş nesnelerini ana motif yapma. Bunun yerine hafıza basıncı, duygusal iklim, çağrışım alanı, ritim kırılması ve dikkat kaymasını görselleştir. Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, az literal detay.",
+  "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room, couch, bed, table, window, carpet, street, park, apartment interior, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks",
   "alt_text": "ağzını / bekleyen şiirinin bulanık iç ekranı.",
   "image_path": "/generated/visuals/2026-06-04-poem.png",
   "provider": "openai",
+  "model": "gpt-image-1",
+  "size": "1024x1280",
+  "quality": "low",
+  "output_format": "png",
+  "fallback": false,
+  "error": null,
   "style_tags": [
     "airbrush",
     "soft blur",
@@ -17,7 +23,9 @@
     "dreamy haze",
     "grainy texture",
     "color bleeding",
-    "scan noise"
+    "scan noise",
+    "compression artifacts",
+    "old digital wallpaper"
   ],
   "fallback_palette": [
     "#ef6fb1",
@@ -25,12 +33,6 @@
     "#172b5b"
   ],
   "fallback_seed": 3661252467,
-  "model": "gpt-image-1",
-  "size": "1024x1280",
   "api_size": "1024x1536",
-  "quality": "low",
-  "output_format": "png",
-  "prompt_hash": "8452862616fed958ffcf4412ef61d636d58e5f714c6461436a253d939cfa27a3",
-  "fallback": false,
-  "error": null
+  "prompt_hash": "370b96f28d8ea77fb3088961e85944c98ef242af82bc42d57d02484f05ac0d1e"
 }
