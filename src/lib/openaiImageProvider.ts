@@ -26,11 +26,11 @@ const FINAL_HEIGHT = 1280;
 const RETRY_DELAYS_MS = [1_000, 3_000];
 
 const sharedStyle =
-  "Airbrush, lo-fi low quality aesthetic, soft blur, dreamy haze, grainy texture, color bleeding, slight chromatic aberration, scan noise, compression artifact feeling, cheap old digital wallpaper, old postcard feeling, low-resolution image enlarged, soft glowing edges, nostalgic, slightly kitsch, poetic and surreal.";
+  "Airbrush, lo-fi low quality aesthetic, grainy texture, color bleeding, slight chromatic aberration, scan noise, compression artifact feeling, cheap old digital wallpaper, old postcard feeling, low-resolution image enlarged, soft glowing edges, nostalgic, slightly kitsch, poetic and surreal. Keep recognizable abstract forms and foreground shapes; do not let blur erase the composition.";
 
 const kindExtensions = {
-  poem: "Create an abstract emotional field for the poem. Do not illustrate the poem's objects literally; translate mood, memory pressure, rhythm, and attention shifts into atmosphere.",
-  dream: "Create abstract subconscious dream residue. Fragmented, unstable, hallucinatory, symbolic, less literal, never a direct illustration."
+  poem: "Create a full-frame abstract collage for the poem. Do not illustrate the poem's objects literally; translate mood, memory pressure, rhythm, and attention shifts into visible non-text forms, color blocks, shadows, stains, and movement.",
+  dream: "Create full-frame abstract subconscious dream residue. Fragmented, unstable, hallucinatory, symbolic, less literal, never a direct illustration, but still filled with distinct non-text forms."
 } as const;
 
 function imageFormat(value: string | undefined): ImageFormat {
@@ -59,7 +59,7 @@ function promptFor(visual: VisualMetadata): string {
     kindExtensions[visual.type],
     sharedStyle,
     "Absolute image rule: no visible text of any kind. Do not render letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, UI text, or fake alphabets.",
-    "Do render a rich non-text composition: layered abstract shapes, soft silhouettes, tactile grain, color fields with visible structure, atmospheric depth, and enough visual detail to avoid a blank or empty gradient.",
+    "Mandatory composition rule: include at least four distinct non-text visual elements, such as a dark soft-edged silhouette, a wave-like or spiral form, torn color blocks, stained paper texture, scratch/noise patterns, shadow layers, or glowing non-letter marks. The image should be visibly composed, not just a smooth background.",
     `Avoid: ${visual.negative_prompt}; no premium concept art, no hyperrealistic render, no text, no typography, no UI mockup inside the image.`,
     "Compose for a 4:5 portrait crop. Keep important visual material away from the extreme top and bottom edges."
   ].join("\n\n");
