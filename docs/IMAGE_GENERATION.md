@@ -30,7 +30,7 @@ Poem visuals should not literally illustrate the poem line by line. Direct home/
 
 Generated images must stay text-free. Poem titles, poem lines, captions, handwriting, labels, logos, watermarks, UI text, fake alphabets, and glyph-like marks are explicitly excluded from visual prompts and negative prompts.
 
-The text ban should not flatten the image. Prompts must still request layered abstract forms, visible texture, atmospheric depth, and non-text visual detail rather than a plain background or empty gradient.
+The text ban should not flatten the image. Prompts must still request layered abstract forms, visible texture, atmospheric depth, and non-text visual detail rather than a plain background or empty gradient. A valid visual should contain several distinct non-text elements such as silhouettes, wave-like forms, torn color blocks, scratches, stains, or shadow layers.
 
 Dream visuals can be stranger and more symbolic, but still avoid raw source text and direct reuse of poem surfaces.
 
