@@ -23,7 +23,7 @@ const palettes: Array<[string, string, string]> = [
 ];
 
 const negativePrompt =
-  "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room, couch, bed, table, window, carpet, street, park, apartment interior, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background";
+  "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room, couch, bed, table, window, carpet, street, park, apartment interior, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field";
 
 export function createPoemVisual(poem: DailyPoem): VisualMetadata {
   const palette = palettes[hashSeed(`${poem.date}:poem-visual`) % palettes.length];
