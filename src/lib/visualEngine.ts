@@ -23,7 +23,7 @@ const palettes: Array<[string, string, string]> = [
 ];
 
 const negativePrompt =
-  "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room, couch, bed, table, window, carpet, street, park, apartment interior";
+  "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room, couch, bed, table, window, carpet, street, park, apartment interior, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks";
 
 export function createPoemVisual(poem: DailyPoem): VisualMetadata {
   const palette = palettes[hashSeed(`${poem.date}:poem-visual`) % palettes.length];
@@ -61,7 +61,7 @@ export function createDreamVisual(dream: DreamRecord): VisualMetadata {
     source_id: dream.source_date,
     title: dream.title,
     generated_at: new Date().toISOString(),
-    visual_prompt: `4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of ${symbols.join(", ") || "a misplaced domestic object"}; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible`,
+    visual_prompt: `4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of ${symbols.join(", ") || "a misplaced domestic object"}; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; purely visual image with no writing, no letters, no symbols that resemble text`,
     negative_prompt: negativePrompt,
     alt_text: `${dream.title} rüyasından ${symbols.slice(0, 3).join(", ") || "kırık semboller"} taşıyan bulanık kayıt.`,
     image_path: null,
