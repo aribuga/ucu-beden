@@ -339,7 +339,7 @@ export function buildCompactPoemVisualPrompt(poem: DailyPoem): string {
   return [
     "4:5 portrait aspect ratio.",
     "Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme.",
-    `Başlık: ${poem.title}.`,
+    "Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; görsel tamamen yazısız, harfsiz, tipografisiz, logosuz ve filigransız olmalı.",
     `Duygusal iklim: ${moods}; ${truncateWords(poem.mood_sentence, 18)}.`,
     memoryEffects.length > 0 ? `Yüzeye çıkmayan hafıza etkileri: ${memoryEffects.join(" / ")}.` : "",
     sourceEffectsForImage.length > 0 ? `Kaynaklardan kalan estetik, ritim ve dikkat etkisi: ${sourceEffectsForImage.join(" / ")}.` : "",
