@@ -339,12 +339,13 @@ export function buildCompactPoemVisualPrompt(poem: DailyPoem): string {
   return [
     "4:5 portrait aspect ratio.",
     "Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme.",
-    "Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; görsel tamamen yazısız, harfsiz, tipografisiz, logosuz ve filigransız olmalı.",
+    "Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı.",
     `Duygusal iklim: ${moods}; ${truncateWords(poem.mood_sentence, 18)}.`,
     memoryEffects.length > 0 ? `Yüzeye çıkmayan hafıza etkileri: ${memoryEffects.join(" / ")}.` : "",
     sourceEffectsForImage.length > 0 ? `Kaynaklardan kalan estetik, ritim ve dikkat etkisi: ${sourceEffectsForImage.join(" / ")}.` : "",
     "Oda, koltuk, yatak, masa, pencere, halı, sokak, park ve apartman gibi ev/yer/yürüyüş nesnelerini ana motif yapma.",
     "Bunun yerine hafıza basıncı, duygusal iklim, çağrışım alanı, ritim kırılması ve dikkat kaymasını görselleştir.",
-    "Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, az literal detay."
+    "Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık siluetler ve lo-fi yüzey gürültüsüyle doldur.",
+    "Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay."
   ].filter(Boolean).join(" ");
 }
