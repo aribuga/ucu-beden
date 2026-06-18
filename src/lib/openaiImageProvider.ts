@@ -58,6 +58,7 @@ function promptFor(visual: VisualMetadata): string {
     visual.visual_prompt,
     kindExtensions[visual.type],
     sharedStyle,
+    "Absolute image rule: no visible text of any kind. Do not render letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, UI text, fake alphabets, or glyph-like marks. The image must be purely visual and unreadable as language.",
     `Avoid: ${visual.negative_prompt}; no premium concept art, no hyperrealistic render, no text, no typography, no UI mockup inside the image.`,
     "Compose for a 4:5 portrait crop. Keep important visual material away from the extreme top and bottom edges."
   ].join("\n\n");
@@ -71,8 +72,11 @@ function localImagePath(imagePath: string): string {
   return imagePath.replace(/^\/+/, "");
 }
 
-async function shouldSkip(visual: VisualMetadata, force: boolean): Promise<boolean> {
+async function shouldSkip(visual: VisualMetadata, force: boolean, promptHash: string): Promise<boolean> {
   if (force || visual.provider !== "openai" || !visual.image_path) {
+    return false;
+  }
+  if (visual.prompt_hash !== promptHash) {
     return false;
   }
   return pathExists(`public/${localImagePath(visual.image_path)}`);
@@ -122,10 +126,6 @@ export async function generateVisualImage(
   visual: VisualMetadata,
   options: GenerateVisualOptions = {}
 ): Promise<VisualMetadata> {
-  if (await shouldSkip(visual, options.force ?? false)) {
-    return visual;
-  }
-
   const apiKey = process.env.OPENAI_API_KEY?.trim();
   const model = process.env.OPENAI_IMAGE_MODEL?.trim() || "gpt-image-1";
   const requestedSize = process.env.OPENAI_IMAGE_SIZE?.trim() || "1024x1280";
@@ -134,6 +134,10 @@ export async function generateVisualImage(
   const format = imageFormat(process.env.OPENAI_IMAGE_FORMAT);
   const prompt = promptFor(visual);
   const hash = promptHash(prompt);
+
+  if (await shouldSkip(visual, options.force ?? false, hash)) {
+    return visual;
+  }
 
   if (!apiKey) {
     return {
