@@ -58,7 +58,8 @@ function promptFor(visual: VisualMetadata): string {
     visual.visual_prompt,
     kindExtensions[visual.type],
     sharedStyle,
-    "Absolute image rule: no visible text of any kind. Do not render letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, UI text, fake alphabets, or glyph-like marks. The image must be purely visual and unreadable as language.",
+    "Absolute image rule: no visible text of any kind. Do not render letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, UI text, or fake alphabets.",
+    "Do render a rich non-text composition: layered abstract shapes, soft silhouettes, tactile grain, color fields with visible structure, atmospheric depth, and enough visual detail to avoid a blank or empty gradient.",
     `Avoid: ${visual.negative_prompt}; no premium concept art, no hyperrealistic render, no text, no typography, no UI mockup inside the image.`,
     "Compose for a 4:5 portrait crop. Keep important visual material away from the extreme top and bottom edges."
   ].join("\n\n");
