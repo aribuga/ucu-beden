@@ -56,8 +56,19 @@ async function main(): Promise<void> {
         console.log(JSON.stringify({ stage: "daily_life", status: "skipped", reason: "already exists", date }));
       }
       const visualPath = `${storagePaths.visuals}/${date}-poem.json`;
-      const storedVisual = await readJsonFile(visualPath, createPoemVisual(existingPoem));
-      const visual = await generateVisualImage(storedVisual);
+      const refreshedVisual = createPoemVisual(existingPoem);
+      const storedVisual = await readJsonFile<typeof refreshedVisual | null>(visualPath, null);
+      const visual = await generateVisualImage(
+        storedVisual
+          ? {
+              ...refreshedVisual,
+              ...storedVisual,
+              visual_prompt: refreshedVisual.visual_prompt,
+              negative_prompt: refreshedVisual.negative_prompt,
+              style_tags: refreshedVisual.style_tags
+            }
+          : refreshedVisual
+      );
       await writeJsonFile(visualPath, visual);
       console.log(
         JSON.stringify({
