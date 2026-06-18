@@ -109,15 +109,24 @@ async function main(): Promise<void> {
         return;
       }
       const stored = exists ? await readJsonFile<VisualMetadata | null>(visualPath, null) : null;
-      const visual = stored ?? createVisual();
+      const refreshed = createVisual();
+      const visual = stored
+        ? {
+            ...refreshed,
+            ...stored,
+            visual_prompt: refreshed.visual_prompt,
+            negative_prompt: refreshed.negative_prompt,
+            style_tags: refreshed.style_tags
+          }
+        : refreshed;
       if (!stored) stats.metadata_created += 1;
-      if (!force && (await imageExists(visual))) {
+      const generated = await generateVisualImage(visual, { force });
+      if (generated === visual && !force && (await imageExists(visual))) {
         stats.skipped += 1;
         stats.skipped_dates.push(date);
         return;
       }
 
-      const generated = await generateVisualImage(visual, { force });
       await writeJsonFile(visualPath, generated);
       await updateDream?.(generated);
       attempted += 1;
