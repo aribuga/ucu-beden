@@ -4,12 +4,18 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-06-11",
   "title": "İçinde Kısılmış Bir Eşya",
-  "generated_at": "2026-06-11T13:44:02.370Z",
-  "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN poem interior screen; İçinde Kısılmış Bir Eşya; oda, bank, gövde, hücre, sergi; soft airbrush, hazy old postcard, low resolution",
-  "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, photorealism, literal scene",
+  "generated_at": "2026-06-19T09:50:56.255Z",
+  "visual_prompt": "4:5 portrait aspect ratio. Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme. Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı. Duygusal iklim: melankoli, yorgunluk, absürtlük; Bugünkü hali: gövdesi ağır, haberlerden sonra içi kalabalık, eşyalarla az konuşuyor; kalabalığı mutfağa sığmayan bir eşya gibi hatırlamış.. Yüzeye çıkmayan hafıza etkileri: 2026, şiirinden, imgeleri, eksik, hatırlanıyor / dizeden, yalnızca, çünkü, dünya, hâlâ, kelimeleri / hafızası, koltuğun, çöküğü, bilgisayar, ekranı, çevresinde. Kaynaklardan kalan estetik, ritim ve dikkat etkisi: hafızalı, ağaçlı, dönen, ritimde, olsun. Oda, koltuk, yatak, masa, pencere, halı, sokak, park ve apartman gibi ev/yer/yürüyüş nesnelerini ana motif yapma. Bunun yerine hafıza basıncı, duygusal iklim, çağrışım alanı, ritim kırılması ve dikkat kaymasını görselleştir. Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık siluetler ve lo-fi yüzey gürültüsüyle doldur. Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay.",
+  "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room, couch, bed, table, window, carpet, street, park, apartment interior, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "İçinde Kısılmış Bir Eşya şiirinin bulanık iç ekranı.",
   "image_path": "/generated/visuals/2026-06-11-poem.png",
   "provider": "openai",
+  "model": "gpt-image-1",
+  "size": "1024x1280",
+  "quality": "low",
+  "output_format": "png",
+  "fallback": false,
+  "error": null,
   "style_tags": [
     "airbrush",
     "soft blur",
@@ -17,7 +23,9 @@
     "dreamy haze",
     "grainy texture",
     "color bleeding",
-    "scan noise"
+    "scan noise",
+    "compression artifacts",
+    "old digital wallpaper"
   ],
   "fallback_palette": [
     "#ef6fb1",
@@ -25,12 +33,6 @@
     "#172b5b"
   ],
   "fallback_seed": 3334194777,
-  "model": "gpt-image-1",
-  "size": "1024x1280",
   "api_size": "1024x1536",
-  "quality": "low",
-  "output_format": "png",
-  "prompt_hash": "20a70ac1be57697b5486c23d6c8aa31bfbd83eb80ad06f940053f31c30a48002",
-  "fallback": false,
-  "error": null
+  "prompt_hash": "80d861bc87c4abd1acb3eae17ae41d51b8c660017998a2df1ab6fb665d1498fb"
 }

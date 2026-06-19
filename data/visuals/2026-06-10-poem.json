@@ -4,12 +4,18 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-06-10",
   "title": "Ayakkabının İçinde Biriken Sessizlik",
-  "generated_at": "2026-06-11T15:29:29.911Z",
-  "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN poem interior screen; Ayakkabının İçinde Biriken Sessizlik; koltuk, oda, bank, kazı, market poşeti; soft airbrush, hazy old postcard, low resolution",
-  "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, photorealism, literal scene",
+  "generated_at": "2026-06-19T09:50:36.821Z",
+  "visual_prompt": "4:5 portrait aspect ratio. Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme. Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı. Duygusal iklim: melankoli, yorgunluk, absürtlük; Bugünkü hali: gövdesi ağır, ayakkabısındaki taş kadar sessiz bir basınç taşıyor.. Yüzeye çıkmayan hafıza etkileri: 2026, şiirinden, rüzgar, imgeleri, eksik, hatırlanıyor / 2026, şiirinden, imgeleri, eksik, hatırlanıyor / dizeden, yalnızca, biriken, dünya, kesik, kelimeleri. Oda, koltuk, yatak, masa, pencere, halı, sokak, park ve apartman gibi ev/yer/yürüyüş nesnelerini ana motif yapma. Bunun yerine hafıza basıncı, duygusal iklim, çağrışım alanı, ritim kırılması ve dikkat kaymasını görselleştir. Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık siluetler ve lo-fi yüzey gürültüsüyle doldur. Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay.",
+  "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room, couch, bed, table, window, carpet, street, park, apartment interior, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "Ayakkabının İçinde Biriken Sessizlik şiirinin bulanık iç ekranı.",
   "image_path": "/generated/visuals/2026-06-10-poem.png",
   "provider": "openai",
+  "model": "gpt-image-1",
+  "size": "1024x1280",
+  "quality": "low",
+  "output_format": "png",
+  "fallback": false,
+  "error": null,
   "style_tags": [
     "airbrush",
     "soft blur",
@@ -17,7 +23,9 @@
     "dreamy haze",
     "grainy texture",
     "color bleeding",
-    "scan noise"
+    "scan noise",
+    "compression artifacts",
+    "old digital wallpaper"
   ],
   "fallback_palette": [
     "#ef6fb1",
@@ -25,12 +33,6 @@
     "#172b5b"
   ],
   "fallback_seed": 3523961766,
-  "model": "gpt-image-1",
-  "size": "1024x1280",
   "api_size": "1024x1536",
-  "quality": "low",
-  "output_format": "png",
-  "prompt_hash": "9b19ef4a44dc097739bd58f02552c164eb628b7605070756039700433e6a6c99",
-  "fallback": false,
-  "error": null
+  "prompt_hash": "d2e76b9767b00b5593d492db0370a175074596b929fe71cb444fe2638c53ea13"
 }

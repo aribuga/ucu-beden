@@ -4,12 +4,18 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-06-09",
   "title": "Ayakkabının İçinde Birikmiş Sokak",
-  "generated_at": "2026-06-11T15:29:16.044Z",
-  "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN poem interior screen; Ayakkabının İçinde Birikmiş Sokak; nem, dil, gövde, ağaç gölgesi, kırmızı ışıkta bekleyen biri; soft airbrush, hazy old postcard, low resolution",
-  "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, photorealism, literal scene",
+  "generated_at": "2026-06-19T09:50:15.459Z",
+  "visual_prompt": "4:5 portrait aspect ratio. Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme. Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı. Duygusal iklim: melankoli, yorgunluk, absürtlük; Bugünkü hali: salondaki gri koltuk içinde dili kuru, gövdesi nemli ve ağır; nem gövdesine yapışıyor; yürüyüşü eve kadar. Yüzeye çıkmayan hafıza etkileri: 2026, şiirinden, imgeleri, eksik, hatırlanıyor / 2026, şiirinden, rüzgar, imgeleri, eksik, hatırlanıyor / dizeden, yalnızca, dolaşırken, dönüşür, gövdeye, kelimeleri. Oda, koltuk, yatak, masa, pencere, halı, sokak, park ve apartman gibi ev/yer/yürüyüş nesnelerini ana motif yapma. Bunun yerine hafıza basıncı, duygusal iklim, çağrışım alanı, ritim kırılması ve dikkat kaymasını görselleştir. Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık siluetler ve lo-fi yüzey gürültüsüyle doldur. Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay.",
+  "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room, couch, bed, table, window, carpet, street, park, apartment interior, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "Ayakkabının İçinde Birikmiş Sokak şiirinin bulanık iç ekranı.",
   "image_path": "/generated/visuals/2026-06-09-poem.png",
   "provider": "openai",
+  "model": "gpt-image-1",
+  "size": "1024x1280",
+  "quality": "low",
+  "output_format": "png",
+  "fallback": false,
+  "error": null,
   "style_tags": [
     "airbrush",
     "soft blur",
@@ -17,7 +23,9 @@
     "dreamy haze",
     "grainy texture",
     "color bleeding",
-    "scan noise"
+    "scan noise",
+    "compression artifacts",
+    "old digital wallpaper"
   ],
   "fallback_palette": [
     "#f5d45f",
@@ -25,12 +33,6 @@
     "#15385f"
   ],
   "fallback_seed": 2540045428,
-  "model": "gpt-image-1",
-  "size": "1024x1280",
   "api_size": "1024x1536",
-  "quality": "low",
-  "output_format": "png",
-  "prompt_hash": "60368d04ee9b95ca94009ecdac77b82d13733fbe1a9f778d23eae4c35018a3c4",
-  "fallback": false,
-  "error": null
+  "prompt_hash": "4f767bf3d535a62c5add33ad6ed8845716bdc499a803643348ef9c4c741b9210"
 }
