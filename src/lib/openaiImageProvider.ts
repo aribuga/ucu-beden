@@ -35,7 +35,7 @@ const RETRY_DELAYS_MS = [1_000, 3_000];
 const DEFAULT_VALIDATION_ATTEMPTS = 3;
 
 const sharedStyle =
-  "Airbrush, lo-fi low quality aesthetic, grainy texture, color bleeding, slight chromatic aberration, scan noise, compression artifact feeling, cheap old digital wallpaper, old postcard feeling, low-resolution image enlarged, soft glowing edges, nostalgic, slightly kitsch, poetic and surreal. Keep recognizable abstract forms and foreground shapes; do not let blur erase the composition.";
+  "Airbrush, atmospheric abstract texture, grainy tactile surface, color bleeding, slight chromatic aberration, soft glowing edges, layered painterly forms, shadowy silhouettes, poetic and surreal. Keep recognizable abstract forms and foreground shapes; do not let blur erase the composition.";
 
 const kindExtensions = {
   poem: "Create a full-frame abstract collage for the poem. Do not illustrate the poem's objects literally; translate mood, memory pressure, rhythm, and attention shifts into visible non-text forms, color blocks, shadows, stains, and movement.",
