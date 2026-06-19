@@ -4,8 +4,9 @@ import path from "node:path";
 
 import sharp from "sharp";
 
-import { pathExists, resolvePath } from "./fileStorage";
+import { resolvePath } from "./fileStorage";
 import type { VisualMetadata } from "./types";
+import { publicVisualImagePath, type VisualMetadataWithImageStatus, visualImageExists } from "./visualFileStatus";
 
 type ImageFormat = "png" | "webp" | "jpeg";
 type ImageQuality = "low" | "medium" | "high";
@@ -69,18 +70,15 @@ function promptHash(prompt: string): string {
   return createHash("sha256").update(prompt).digest("hex");
 }
 
-function localImagePath(imagePath: string): string {
-  return imagePath.replace(/^\/+/, "");
+function withImageStatus(visual: VisualMetadata, image_status: VisualMetadataWithImageStatus["image_status"]): VisualMetadata {
+  return { ...visual, image_status } as VisualMetadataWithImageStatus;
 }
 
-async function shouldSkip(visual: VisualMetadata, force: boolean, promptHash: string): Promise<boolean> {
-  if (force || visual.provider !== "openai" || !visual.image_path) {
+async function shouldSkip(visual: VisualMetadata, force: boolean): Promise<boolean> {
+  if (force || !visual.image_path) {
     return false;
   }
-  if (visual.prompt_hash !== promptHash) {
-    return false;
-  }
-  return pathExists(`public/${localImagePath(visual.image_path)}`);
+  return visualImageExists(visual);
 }
 
 async function requestImage(args: {
@@ -136,14 +134,17 @@ export async function generateVisualImage(
   const prompt = promptFor(visual);
   const hash = promptHash(prompt);
 
-  if (await shouldSkip(visual, options.force ?? false, hash)) {
-    return visual;
+  if (await shouldSkip(visual, options.force ?? false)) {
+    return withImageStatus({ ...visual, fallback: false, error: null, prompt_hash: hash }, "ready");
   }
 
+  const staleImagePath = visual.image_path && !(await visualImageExists(visual)) ? visual.image_path : null;
+
   if (!apiKey) {
-    return {
+    return withImageStatus({
       ...visual,
       aspect_ratio: "4:5",
+      image_path: null,
       provider: "metadata-fallback",
       model,
       size: `${FINAL_WIDTH}x${FINAL_HEIGHT}`,
@@ -152,19 +153,21 @@ export async function generateVisualImage(
       output_format: format,
       prompt_hash: hash,
       fallback: true,
-      error: "OPENAI_API_KEY is not configured."
-    };
+      error: staleImagePath
+        ? `OPENAI_API_KEY is not configured and stored image is missing on disk: ${staleImagePath}`
+        : "OPENAI_API_KEY is not configured."
+    }, "failed");
   }
 
   try {
     const rawImage = await requestImage({ apiKey, model, prompt, size: apiSize, quality, format });
     const fileName = `${visual.date}-${visual.type}.${format}`;
-    const publicPath = `/generated/visuals/${fileName}`;
+    const publicPath = publicVisualImagePath(visual.date, visual.type, format);
     const diskPath = resolvePath(`public/generated/visuals/${fileName}`);
     await fs.mkdir(path.dirname(diskPath), { recursive: true });
     await sharp(rawImage).resize(FINAL_WIDTH, FINAL_HEIGHT, { fit: "cover", position: "centre" }).toFormat(format).toFile(diskPath);
 
-    return {
+    return withImageStatus({
       ...visual,
       aspect_ratio: "4:5",
       generated_at: new Date().toISOString(),
@@ -178,11 +181,12 @@ export async function generateVisualImage(
       prompt_hash: hash,
       fallback: false,
       error: null
-    };
+    }, "ready");
   } catch (error) {
-    return {
+    return withImageStatus({
       ...visual,
       aspect_ratio: "4:5",
+      image_path: null,
       provider: "metadata-fallback",
       model,
       size: `${FINAL_WIDTH}x${FINAL_HEIGHT}`,
@@ -191,7 +195,9 @@ export async function generateVisualImage(
       output_format: format,
       prompt_hash: hash,
       fallback: true,
-      error: shortError(error)
-    };
+      error: staleImagePath
+        ? `${shortError(error)}; stored image is missing on disk: ${staleImagePath}`
+        : shortError(error)
+    }, "failed");
   }
 }
