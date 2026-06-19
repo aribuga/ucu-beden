@@ -345,7 +345,7 @@ export function buildCompactPoemVisualPrompt(poem: DailyPoem): string {
     sourceEffectsForImage.length > 0 ? `Kaynaklardan kalan estetik, ritim ve dikkat etkisi: ${sourceEffectsForImage.join(" / ")}.` : "",
     "Oda, koltuk, yatak, masa, pencere, halı, sokak, park ve apartman gibi ev/yer/yürüyüş nesnelerini ana motif yapma.",
     "Bunun yerine hafıza basıncı, duygusal iklim, çağrışım alanı, ritim kırılması ve dikkat kaymasını görselleştir.",
-    "Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık siluetler ve dokulu yüzey hareketiyle doldur.",
-    "Atmosferik, soyut, yumuşak; okunur duygu, belirgin görsel hareket, az literal detay."
+    "Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık siluetler ve lo-fi yüzey gürültüsüyle doldur.",
+    "Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay."
   ].filter(Boolean).join(" ");
 }
