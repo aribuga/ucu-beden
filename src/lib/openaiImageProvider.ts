@@ -6,7 +6,14 @@ import sharp from "sharp";
 
 import { resolvePath } from "./fileStorage";
 import type { VisualMetadata } from "./types";
-import { publicVisualImagePath, type VisualMetadataWithImageStatus, visualImageExists } from "./visualFileStatus";
+import {
+  inspectVisualImageFile,
+  inspectVisualImagePath,
+  publicVisualImagePath,
+  type VisualImageInspection,
+  type VisualMetadataWithImageStatus,
+  visualImageIsUsable
+} from "./visualFileStatus";
 
 type ImageFormat = "png" | "webp" | "jpeg";
 type ImageQuality = "low" | "medium" | "high";
@@ -25,6 +32,7 @@ const API_URL = "https://api.openai.com/v1/images/generations";
 const FINAL_WIDTH = 1024;
 const FINAL_HEIGHT = 1280;
 const RETRY_DELAYS_MS = [1_000, 3_000];
+const DEFAULT_VALIDATION_ATTEMPTS = 3;
 
 const sharedStyle =
   "Airbrush, lo-fi low quality aesthetic, grainy texture, color bleeding, slight chromatic aberration, scan noise, compression artifact feeling, cheap old digital wallpaper, old postcard feeling, low-resolution image enlarged, soft glowing edges, nostalgic, slightly kitsch, poetic and surreal. Keep recognizable abstract forms and foreground shapes; do not let blur erase the composition.";
@@ -60,6 +68,7 @@ function promptFor(visual: VisualMetadata): string {
     kindExtensions[visual.type],
     sharedStyle,
     "Absolute image rule: no visible text of any kind. Do not render letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, UI text, or fake alphabets.",
+    "Technical visibility rule: the final image must be fully opaque and visibly filled. Do not create transparent pixels, alpha masks, empty gradients, or a nearly blank background.",
     "Mandatory composition rule: include at least four distinct non-text visual elements, such as a dark soft-edged silhouette, a wave-like or spiral form, torn color blocks, stained paper texture, scratch/noise patterns, shadow layers, or glowing non-letter marks. The image should be visibly composed, not just a smooth background.",
     `Avoid: ${visual.negative_prompt}; no premium concept art, no hyperrealistic render, no text, no typography, no UI mockup inside the image.`,
     "Compose for a 4:5 portrait crop. Keep important visual material away from the extreme top and bottom edges."
@@ -78,7 +87,60 @@ async function shouldSkip(visual: VisualMetadata, force: boolean): Promise<boole
   if (force || !visual.image_path) {
     return false;
   }
-  return visualImageExists(visual);
+  return visualImageIsUsable(visual);
+}
+
+function validationAttempts(): number {
+  const parsed = Number(process.env.OPENAI_IMAGE_VALIDATION_ATTEMPTS);
+  return Number.isFinite(parsed) ? Math.min(5, Math.max(1, Math.floor(parsed))) : DEFAULT_VALIDATION_ATTEMPTS;
+}
+
+function inspectionSummary(inspection: VisualImageInspection): string {
+  return [
+    inspection.reason ?? "unknown_image_validation_failure",
+    inspection.alpha_mean === undefined ? null : `alpha_mean=${inspection.alpha_mean}`,
+    inspection.transparent_ratio === undefined ? null : `transparent_ratio=${inspection.transparent_ratio}`,
+    inspection.luminance_stddev === undefined ? null : `luminance_stddev=${inspection.luminance_stddev}`,
+    inspection.edge_score === undefined ? null : `edge_score=${inspection.edge_score}`,
+    inspection.strong_edge_ratio === undefined ? null : `strong_edge_ratio=${inspection.strong_edge_ratio}`,
+    inspection.entropy === undefined ? null : `entropy=${inspection.entropy}`
+  ]
+    .filter(Boolean)
+    .join("; ");
+}
+
+async function opaqueImagePipeline(rawImage: Buffer): Promise<sharp.Sharp> {
+  const metadata = await sharp(rawImage).metadata();
+  if (!metadata.hasAlpha) {
+    return sharp(rawImage).removeAlpha();
+  }
+
+  const { data, info } = await sharp(rawImage).raw().toBuffer({ resolveWithObject: true });
+  const rgb = Buffer.alloc(info.width * info.height * 3);
+  for (let source = 0, target = 0; source < data.length; source += info.channels, target += 3) {
+    if (info.channels === 1) {
+      rgb[target] = data[source];
+      rgb[target + 1] = data[source];
+      rgb[target + 2] = data[source];
+    } else if (info.channels === 2) {
+      rgb[target] = data[source];
+      rgb[target + 1] = data[source];
+      rgb[target + 2] = data[source];
+    } else {
+      rgb[target] = data[source];
+      rgb[target + 1] = data[source + 1];
+      rgb[target + 2] = data[source + 2];
+    }
+  }
+  return sharp(rgb, { raw: { width: info.width, height: info.height, channels: 3 } });
+}
+
+async function writeOpaqueGeneratedImage(rawImage: Buffer): Promise<void> {
+  const pipeline = await opaqueImagePipeline(rawImage);
+  await pipeline
+    .resize(FINAL_WIDTH, FINAL_HEIGHT, { fit: "cover", position: "centre" })
+    .toFormat(format)
+    .toFile(diskPath);
 }
 
 async function requestImage(args: {
@@ -138,7 +200,8 @@ export async function generateVisualImage(
     return withImageStatus({ ...visual, fallback: false, error: null, prompt_hash: hash }, "ready");
   }
 
-  const staleImagePath = visual.image_path && !(await visualImageExists(visual)) ? visual.image_path : null;
+  const staleInspection = visual.image_path ? await inspectVisualImagePath(visual.image_path) : null;
+  const staleImageIssue = staleInspection && !staleInspection.usable ? inspectionSummary(staleInspection) : null;
 
   if (!apiKey) {
     return withImageStatus({
@@ -153,19 +216,54 @@ export async function generateVisualImage(
       output_format: format,
       prompt_hash: hash,
       fallback: true,
-      error: staleImagePath
-        ? `OPENAI_API_KEY is not configured and stored image is missing on disk: ${staleImagePath}`
+      error: staleImageIssue
+        ? `OPENAI_API_KEY is not configured and stored image is not usable: ${staleImageIssue}`
         : "OPENAI_API_KEY is not configured."
     }, "failed");
   }
 
   try {
-    const rawImage = await requestImage({ apiKey, model, prompt, size: apiSize, quality, format });
     const fileName = `${visual.date}-${visual.type}.${format}`;
     const publicPath = publicVisualImagePath(visual.date, visual.type, format);
     const diskPath = resolvePath(`public/generated/visuals/${fileName}`);
     await fs.mkdir(path.dirname(diskPath), { recursive: true });
-    await sharp(rawImage).resize(FINAL_WIDTH, FINAL_HEIGHT, { fit: "cover", position: "centre" }).toFormat(format).toFile(diskPath);
+
+    let lastInspection: VisualImageInspection | null = null;
+    const attempts = validationAttempts();
+    for (let attempt = 1; attempt <= attempts; attempt += 1) {
+      const rawImage = await requestImage({ apiKey, model, prompt, size: apiSize, quality, format });
+      const tempPath = `${diskPath}.tmp-${process.pid}-${Date.now()}-${attempt}.${format}`;
+      await writeOpaqueGeneratedImage(rawImage, tempPath, format);
+      const inspection = await inspectVisualImageFile(tempPath);
+      if (inspection.usable) {
+        await fs.rename(tempPath, diskPath);
+        lastInspection = inspection;
+        break;
+      }
+      lastInspection = inspection;
+      await fs.rm(tempPath, { force: true });
+      console.log(
+        JSON.stringify({
+          stage: "visual_image_validation",
+          status: "failed",
+          date: visual.date,
+          type: visual.type,
+          attempt,
+          attempts,
+          reason: inspection.reason,
+          alpha_mean: inspection.alpha_mean,
+          transparent_ratio: inspection.transparent_ratio,
+          luminance_stddev: inspection.luminance_stddev,
+          edge_score: inspection.edge_score,
+          strong_edge_ratio: inspection.strong_edge_ratio,
+          entropy: inspection.entropy
+        })
+      );
+    }
+
+    if (!lastInspection?.usable) {
+      throw new Error(`Generated image failed validation after ${attempts} attempt(s): ${lastInspection ? inspectionSummary(lastInspection) : "no inspection result"}`);
+    }
 
     return withImageStatus({
       ...visual,
@@ -195,8 +293,8 @@ export async function generateVisualImage(
       output_format: format,
       prompt_hash: hash,
       fallback: true,
-      error: staleImagePath
-        ? `${shortError(error)}; stored image is missing on disk: ${staleImagePath}`
+      error: staleImageIssue
+        ? `${shortError(error)}; stored image is not usable: ${staleImageIssue}`
         : shortError(error)
     }, "failed");
   }

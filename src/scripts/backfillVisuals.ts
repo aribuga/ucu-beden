@@ -11,7 +11,7 @@ import { generateVisualImage } from "../lib/openaiImageProvider";
 import { todayInIstanbul } from "../lib/scheduler";
 import type { DreamRecord, VisualKind, VisualMetadata } from "../lib/types";
 import { createDreamVisual, createPoemVisual } from "../lib/visualEngine";
-import { reconcileVisualImagePath, visualImageExists } from "../lib/visualFileStatus";
+import { reconcileVisualImagePath, visualImageIsUsable } from "../lib/visualFileStatus";
 
 type BackfillStats = {
   total: number;
@@ -126,15 +126,20 @@ async function main(): Promise<void> {
         console.log(
           JSON.stringify({
             stage: "visual_backfill_item",
-            status: reconciled.hadUsableImage ? "path_repaired" : "missing_path_cleared",
+            status: reconciled.hadUsableImage
+              ? "path_repaired"
+              : reconciled.reason === "missing_file" || reconciled.reason === "missing_image_path"
+                ? "missing_path_cleared"
+                : "invalid_image_cleared",
             type: kind,
             date,
-            image_path: reconciled.visual.image_path
+            image_path: reconciled.visual.image_path,
+            reason: reconciled.reason
           })
         );
       }
 
-      if (!force && (await visualImageExists(reconciled.visual))) {
+      if (!force && (await visualImageIsUsable(reconciled.visual))) {
         stats.skipped += 1;
         stats.skipped_dates.push(date);
         return;
