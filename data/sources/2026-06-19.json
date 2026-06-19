@@ -1,13 +1,13 @@
 {
   "date": "2026-06-19",
-  "collected_at": "2026-06-19T16:48:42.336Z",
+  "collected_at": "2026-06-19T17:07:42.264Z",
   "fallback_used": false,
   "weather": {
     "provider": "open-meteo",
-    "summary": "Kadıköy'de 22.1°C; nem 71%, rüzgar 21 km/s civarında.",
-    "temperature_c": 22.1,
-    "humidity_percent": 71,
-    "wind_kmh": 21,
+    "summary": "Kadıköy'de 21.8°C; nem 74%, rüzgar 20.2 km/s civarında.",
+    "temperature_c": 21.8,
+    "humidity_percent": 74,
+    "wind_kmh": 20.2,
     "body_effect": "nem gövdesine yapışıyor"
   },
   "turkey_news": {
@@ -21,8 +21,8 @@
       "ağırlaşan",
       "içeride",
       "kabaran",
-      "adet",
-      "aldığı"
+      "açıklama",
+      "adet"
     ]
   },
   "art_world": {
@@ -167,6 +167,37 @@
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
       {
+        "title": "Öğretmenlere bakanlık önünde polis müdahalesi: 'Gözaltılar var'",
+        "source": "BBC Türkçe",
+        "category": "news",
+        "url": "https://www.bbc.com/turkce/articles/clyekjg40gzo?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Fri, 19 Jun 2026 16:50:23 GMT",
+        "moodTags": [
+          "fatigue",
+          "anger",
+          "clarity"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 7,
+          "tenderness": 0,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 3,
+          "desire": 0,
+          "hope": 0
+        },
+        "keywords": [
+          "müdahalesi",
+          "önünde",
+          "polis",
+          "açıklama",
+          "bakanlık",
+          "duyurdu"
+        ],
+        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
+      },
+      {
         "title": "Türkiye Dünya Kupası'nda kritik virajda, rakip Paraguay",
         "source": "BBC Türkçe",
         "category": "news",
@@ -191,37 +222,6 @@
           "kritik",
           "maçında",
           "başlayacak"
-        ],
-        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
-      },
-      {
-        "title": "İlk buluşmada hesabı kim ödemeli?",
-        "source": "BBC Türkçe",
-        "category": "news",
-        "url": "https://www.bbc.com/turkce/articles/c0ry10k4x51o?at_medium=RSS&at_campaign=rss",
-        "publishedAt": "Fri, 19 Jun 2026 02:13:04 GMT",
-        "moodTags": [
-          "fatigue",
-          "anger",
-          "clarity"
-        ],
-        "moodScores": {
-          "melancholy": 2,
-          "anger": 7,
-          "tenderness": 0,
-          "fatigue": 10,
-          "absurdity": 0,
-          "clarity": 3,
-          "desire": 0,
-          "hope": 2
-        },
-        "keywords": [
-          "hesabı",
-          "bölmekte",
-          "buluşmada",
-          "diğerleri",
-          "eden",
-          "ediyor"
         ],
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
@@ -910,10 +910,10 @@
         "ağırlaşan",
         "içeride",
         "kabaran",
+        "açıklama",
         "adet",
         "aldığı",
-        "alevlendi",
-        "anlattı"
+        "alevlendi"
       ],
       "leakageWords": [
         "basınç",
@@ -922,12 +922,12 @@
         "ağırlaşan",
         "içeride",
         "kabaran",
+        "açıklama",
         "adet",
         "aldığı",
         "alevlendi",
         "anlattı",
         "anlık",
-        "ara",
         "basıncı",
         "duvarı"
       ],
@@ -953,20 +953,19 @@
           "ağırlaşan",
           "içeride",
           "kabaran",
+          "açıklama",
           "adet",
           "aldığı",
           "alevlendi",
           "anlattı",
-          "anlık",
-          "ara"
+          "anlık"
         ],
         "novelty_terms": [
           "adet",
           "aldığı",
           "alevlendi",
           "anlattı",
-          "anlık",
-          "ara"
+          "anlık"
         ],
         "repeated_terms": [
           "basınç",
@@ -974,7 +973,8 @@
           "politik",
           "ağırlaşan",
           "içeride",
-          "kabaran"
+          "kabaran",
+          "açıklama"
         ],
         "rejected_terms": [],
         "mood_bias": [
@@ -1189,7 +1189,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://arkeofili.com/feed/",
-        "lastCheckedAt": "2026-06-19T16:48:36.342Z",
+        "lastCheckedAt": "2026-06-19T17:07:33.117Z",
         "attemptedUrls": [
           "https://arkeofili.com/feed/"
         ],
@@ -1205,7 +1205,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://evrimagaci.org/rss.xml",
-        "lastCheckedAt": "2026-06-19T16:48:36.344Z",
+        "lastCheckedAt": "2026-06-19T17:07:33.118Z",
         "attemptedUrls": [
           "https://evrimagaci.org/rss.xml"
         ],
@@ -1221,7 +1221,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://altyazi.net/feed/",
-        "lastCheckedAt": "2026-06-19T16:48:36.345Z",
+        "lastCheckedAt": "2026-06-19T17:07:33.119Z",
         "attemptedUrls": [
           "https://altyazi.net/feed/"
         ],
@@ -1237,7 +1237,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.otekisinema.com/feed/",
-        "lastCheckedAt": "2026-06-19T16:48:36.933Z",
+        "lastCheckedAt": "2026-06-19T17:07:34.066Z",
         "attemptedUrls": [
           "https://www.otekisinema.com/feed/"
         ],
@@ -1253,7 +1253,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.bagimsizsinema.com/feed",
-        "lastCheckedAt": "2026-06-19T16:48:37.150Z",
+        "lastCheckedAt": "2026-06-19T17:07:34.334Z",
         "attemptedUrls": [
           "https://www.bagimsizsinema.com/feed"
         ],
@@ -1269,7 +1269,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://artdogistanbul.com/feed/",
-        "lastCheckedAt": "2026-06-19T16:48:37.479Z",
+        "lastCheckedAt": "2026-06-19T17:07:34.760Z",
         "attemptedUrls": [
           "https://artdogistanbul.com/feed/"
         ],
@@ -1285,7 +1285,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://argonotlar.com/feed/",
-        "lastCheckedAt": "2026-06-19T16:48:37.799Z",
+        "lastCheckedAt": "2026-06-19T17:07:34.910Z",
         "attemptedUrls": [
           "https://argonotlar.com/feed/"
         ],
@@ -1301,7 +1301,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.arkitera.com/feed/",
-        "lastCheckedAt": "2026-06-19T16:48:38.351Z",
+        "lastCheckedAt": "2026-06-19T17:07:35.399Z",
         "attemptedUrls": [
           "https://www.arkitera.com/feed/"
         ],
@@ -1317,7 +1317,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.artkolik.net/feed",
-        "lastCheckedAt": "2026-06-19T16:48:38.595Z",
+        "lastCheckedAt": "2026-06-19T17:07:36.044Z",
         "attemptedUrls": [
           "https://www.artkolik.net/feed"
         ],
@@ -1333,7 +1333,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://terrabayt.com/feed/",
-        "lastCheckedAt": "2026-06-19T16:48:38.774Z",
+        "lastCheckedAt": "2026-06-19T17:07:36.177Z",
         "attemptedUrls": [
           "https://terrabayt.com/feed/"
         ],
@@ -1349,7 +1349,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.nouvart.net/feed/",
-        "lastCheckedAt": "2026-06-19T16:48:39.400Z",
+        "lastCheckedAt": "2026-06-19T17:07:37.058Z",
         "attemptedUrls": [
           "https://www.nouvart.net/feed/"
         ],
@@ -1365,7 +1365,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds2.feedburner.com/itsnicethat/SlXC",
-        "lastCheckedAt": "2026-06-19T16:48:39.427Z",
+        "lastCheckedAt": "2026-06-19T17:07:37.164Z",
         "attemptedUrls": [
           "https://feeds2.feedburner.com/itsnicethat/SlXC"
         ],
@@ -1381,7 +1381,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://thecreativeindependent.com/feed.xml",
-        "lastCheckedAt": "2026-06-19T16:48:39.573Z",
+        "lastCheckedAt": "2026-06-19T17:07:37.174Z",
         "attemptedUrls": [
           "https://thecreativeindependent.com/feed.xml"
         ],
@@ -1397,7 +1397,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://bantmag.com/feed/",
-        "lastCheckedAt": "2026-06-19T16:48:39.730Z",
+        "lastCheckedAt": "2026-06-19T17:07:37.548Z",
         "attemptedUrls": [
           "https://bantmag.com/feed/"
         ],
@@ -1413,7 +1413,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://manifold.press/rss",
-        "lastCheckedAt": "2026-06-19T16:48:39.809Z",
+        "lastCheckedAt": "2026-06-19T17:07:37.576Z",
         "attemptedUrls": [
           "https://manifold.press/rss"
         ],
@@ -1429,7 +1429,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://playtusu.com/feed/",
-        "lastCheckedAt": "2026-06-19T16:48:40.158Z",
+        "lastCheckedAt": "2026-06-19T17:07:38.034Z",
         "attemptedUrls": [
           "https://playtusu.com/feed/"
         ],
@@ -1445,7 +1445,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://vesaire.press/feed/",
-        "lastCheckedAt": "2026-06-19T16:48:40.257Z",
+        "lastCheckedAt": "2026-06-19T17:07:38.223Z",
         "attemptedUrls": [
           "https://vesaire.press/feed/"
         ],
@@ -1461,7 +1461,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds.bbci.co.uk/turkce/rss.xml",
-        "lastCheckedAt": "2026-06-19T16:48:40.367Z",
+        "lastCheckedAt": "2026-06-19T17:07:38.440Z",
         "attemptedUrls": [
           "https://feeds.bbci.co.uk/turkce/rss.xml"
         ],
@@ -1477,7 +1477,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.birgun.net/rss/home",
-        "lastCheckedAt": "2026-06-19T16:48:40.506Z",
+        "lastCheckedAt": "2026-06-19T17:07:38.520Z",
         "attemptedUrls": [
           "https://www.birgun.net/rss/home"
         ],
@@ -1493,7 +1493,7 @@
         "status": "blocked_403",
         "item_count": 0,
         "usedUrl": "https://www.diken.com.tr/feed.xml",
-        "lastCheckedAt": "2026-06-19T16:48:40.761Z",
+        "lastCheckedAt": "2026-06-19T17:07:38.743Z",
         "attemptedUrls": [
           "https://www.diken.com.tr/feed/",
           "https://www.diken.com.tr/feed",
@@ -1513,7 +1513,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.radikal.com.tr/feed/",
-        "lastCheckedAt": "2026-06-19T16:48:40.803Z",
+        "lastCheckedAt": "2026-06-19T17:07:38.925Z",
         "attemptedUrls": [
           "https://www.radikal.com.tr/feed/"
         ],
@@ -1529,7 +1529,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.cumhuriyet.com.tr/rss",
-        "lastCheckedAt": "2026-06-19T16:48:40.877Z",
+        "lastCheckedAt": "2026-06-19T17:07:38.932Z",
         "attemptedUrls": [
           "https://www.cumhuriyet.com.tr/rss/son_dakika.xml"
         ],
@@ -1545,7 +1545,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://istanbullife.com.tr/feed/",
-        "lastCheckedAt": "2026-06-19T16:48:41.220Z",
+        "lastCheckedAt": "2026-06-19T17:07:39.470Z",
         "attemptedUrls": [
           "https://istanbullife.com.tr/feed/"
         ],
