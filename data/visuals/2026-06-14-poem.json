@@ -8,14 +8,14 @@
   "visual_prompt": "4:5 portrait aspect ratio. Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme. Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı. Duygusal iklim: melankoli, yorgunluk, absürtlük; Bugünkü hali: Göğsüme çöken ağır bir sessizlik ve geçmişin yumuşak ama ısrarcı dokunuşu.. Yüzeye çıkmayan hafıza etkileri: hali, omuzlar, günü, taşıyor, panik, kendini / sokakları, hava, yüzünde, ince, bırakıyor, poşeti / hali, dili, kuru, gövdesi, nemli, ağır. Kaynaklardan kalan estetik, ritim ve dikkat etkisi: ipuçları, aidiyet, bugüne, etrafında, geçmişin, sergi / ipuçları, yanıt, vermeyen, soru, dönüşü, ortasında / kaymaları, yumuşayan, şehir. Oda, koltuk, yatak, masa, pencere, halı, sokak, park ve apartman gibi ev/yer/yürüyüş nesnelerini ana motif yapma. Bunun yerine hafıza basıncı, duygusal iklim, çağrışım alanı, ritim kırılması ve dikkat kaymasını görselleştir. Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık siluetler ve lo-fi yüzey gürültüsüyle doldur. Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay.",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room, couch, bed, table, window, carpet, street, park, apartment interior, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "melankoli yorgunluk şiirinin dil, sergi izlerini taşıyan lo-fi iç ekranı.",
-  "image_path": "/generated/visuals/2026-06-14-poem.png",
-  "provider": "openai",
+  "image_path": null,
+  "provider": "metadata-fallback",
   "model": "gpt-image-1",
   "size": "1024x1280",
   "quality": "low",
   "output_format": "png",
-  "fallback": false,
-  "error": null,
+  "fallback": true,
+  "error": "format is not defined",
   "style_tags": [
     "airbrush",
     "soft blur",
@@ -34,6 +34,6 @@
   ],
   "fallback_seed": 1825067930,
   "api_size": "1024x1536",
-  "prompt_hash": "8fd4e2c91c8e96b32227100023c03227aa07a6011eadb19dff185568d2be53c1",
-  "image_status": "ready"
+  "prompt_hash": "61cb20871f133605fbe7d6cdb3d613459fdef5d5dde3021a598fae5c571dee1d",
+  "image_status": "failed"
 }
