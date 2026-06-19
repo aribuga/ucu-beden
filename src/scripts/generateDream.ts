@@ -17,6 +17,7 @@ import { analyzeRepetitionPressure } from "../lib/repetitionPressure";
 import { parseGenerationArgs, todayInIstanbul } from "../lib/scheduler";
 import type { DailyPoem, DreamRecord } from "../lib/types";
 import { createDreamVisual } from "../lib/visualEngine";
+import { reconcileVisualImagePath, visualImageStatus } from "../lib/visualFileStatus";
 
 async function main(): Promise<void> {
   await ensureDataDirs();
@@ -30,7 +31,7 @@ async function main(): Promise<void> {
     if (existingDream) {
       const refreshedVisual = createDreamVisual(existingDream);
       const storedVisual = await readJsonFile<typeof refreshedVisual | null>(visualPath, null);
-      const visual = await generateVisualImage(
+      const preparedVisual = await reconcileVisualImagePath(
         storedVisual
           ? {
               ...refreshedVisual,
@@ -41,13 +42,17 @@ async function main(): Promise<void> {
             }
           : refreshedVisual
       );
+      const visual = preparedVisual.hadUsableImage
+        ? preparedVisual.visual
+        : await generateVisualImage(preparedVisual.visual);
       await writeJsonFile(visualPath, visual);
       console.log(
         JSON.stringify({
           stage: "dream_visual",
-          status: visual.provider === "openai" ? "ready" : "fallback kept",
+          status: visualImageStatus(visual) === "ready" ? "ready" : "failed",
           date: sourceDate,
           provider: visual.provider,
+          image_status: visualImageStatus(visual),
           error: visual.error ?? null
         })
       );
@@ -91,7 +96,10 @@ async function main(): Promise<void> {
     memory_prompt_fragments: promptValidation.safe_fragments
   };
   const dream = await generateDream({ date: sourceDate, poem, dailyLife, state, repetition, memorySelection: safeMemorySelection, sourceDigest });
-  const visual = await generateVisualImage(createDreamVisual(dream), { force: args.force });
+  const preparedVisual = await reconcileVisualImagePath(createDreamVisual(dream));
+  const visual = preparedVisual.hadUsableImage && !args.force
+    ? preparedVisual.visual
+    : await generateVisualImage(preparedVisual.visual, { force: args.force });
   dream.visual_prompt = visual.visual_prompt;
   dream.image_path = visual.image_path;
   await writeJsonFile(dreamPath, dream);
@@ -113,9 +121,10 @@ async function main(): Promise<void> {
   console.log(
     JSON.stringify({
       stage: "dream_visual",
-      status: visual.provider === "openai" ? "generated" : "fallback kept",
+      status: visualImageStatus(visual) === "ready" ? "generated" : "failed",
       date: sourceDate,
       provider: visual.provider,
+      image_status: visualImageStatus(visual),
       error: visual.error ?? null
     })
   );

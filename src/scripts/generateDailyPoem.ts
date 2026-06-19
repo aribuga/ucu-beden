@@ -23,6 +23,7 @@ import { createWalkState } from "../lib/walkEngine";
 import { createDailyLife } from "../lib/worldEngine";
 import { analyzeRepetitionPressure } from "../lib/repetitionPressure";
 import { createPoemVisual } from "../lib/visualEngine";
+import { reconcileVisualImagePath, visualImageStatus } from "../lib/visualFileStatus";
 import { maybeCreateYearlyReport } from "../lib/yearlyReport";
 import type { DailyPoem, GenerationContext } from "../lib/types";
 
@@ -58,7 +59,7 @@ async function main(): Promise<void> {
       const visualPath = `${storagePaths.visuals}/${date}-poem.json`;
       const refreshedVisual = createPoemVisual(existingPoem);
       const storedVisual = await readJsonFile<typeof refreshedVisual | null>(visualPath, null);
-      const visual = await generateVisualImage(
+      const preparedVisual = await reconcileVisualImagePath(
         storedVisual
           ? {
               ...refreshedVisual,
@@ -69,13 +70,17 @@ async function main(): Promise<void> {
             }
           : refreshedVisual
       );
+      const visual = preparedVisual.hadUsableImage
+        ? preparedVisual.visual
+        : await generateVisualImage(preparedVisual.visual);
       await writeJsonFile(visualPath, visual);
       console.log(
         JSON.stringify({
           stage: "poem_visual",
-          status: visual.provider === "openai" ? "ready" : "fallback kept",
+          status: visualImageStatus(visual) === "ready" ? "ready" : "failed",
           date,
           provider: visual.provider,
+          image_status: visualImageStatus(visual),
           error: visual.error ?? null
         })
       );
@@ -149,9 +154,12 @@ async function main(): Promise<void> {
       language_retry_count: poem.generation.language_retry_count
     })
   );
-  const visual = await generateVisualImage(createPoemVisual(poem), { force: args.force });
+  const preparedVisual = await reconcileVisualImagePath(createPoemVisual(poem));
+  const visual = preparedVisual.hadUsableImage && !args.force
+    ? preparedVisual.visual
+    : await generateVisualImage(preparedVisual.visual, { force: args.force });
   await writeJsonFile(`${storagePaths.visuals}/${date}-poem.json`, visual);
-  console.log(JSON.stringify({ stage: "poem_visual", status: visual.provider === "openai" ? "generated" : "fallback kept", date, provider: visual.provider, error: visual.error ?? null }));
+  console.log(JSON.stringify({ stage: "poem_visual", status: visualImageStatus(visual) === "ready" ? "generated" : "failed", date, provider: visual.provider, image_status: visualImageStatus(visual), error: visual.error ?? null }));
   const updatedState = await updateMemoryAfterPoem({ previousState, inputAnalysis });
   const memoryArchive = await buildMemoryArchive();
   await writeMemoryArchive(memoryArchive);

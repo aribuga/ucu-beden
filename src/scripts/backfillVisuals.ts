@@ -8,12 +8,15 @@ import {
   writeJsonFile
 } from "../lib/fileStorage";
 import { generateVisualImage } from "../lib/openaiImageProvider";
+import { todayInIstanbul } from "../lib/scheduler";
 import type { DreamRecord, VisualKind, VisualMetadata } from "../lib/types";
 import { createDreamVisual, createPoemVisual } from "../lib/visualEngine";
+import { reconcileVisualImagePath, visualImageExists } from "../lib/visualFileStatus";
 
 type BackfillStats = {
   total: number;
   metadata_created: number;
+  path_repaired: number;
   images_generated: number;
   fallback_kept: number;
   skipped: number;
@@ -40,6 +43,7 @@ function newStats(total: number): BackfillStats {
   return {
     total,
     metadata_created: 0,
+    path_repaired: 0,
     images_generated: 0,
     fallback_kept: 0,
     skipped: 0,
@@ -50,18 +54,10 @@ function newStats(total: number): BackfillStats {
   };
 }
 
-async function imageExists(visual: VisualMetadata): Promise<boolean> {
-  return Boolean(
-    visual.provider === "openai" &&
-    visual.image_path &&
-    (await pathExists(`public/${visual.image_path.replace(/^\/+/, "")}`))
-  );
-}
-
-function recordFailure(stats: BackfillStats, date: string, error: unknown): void {
+function recordFailure(stats: BackfillStats, type: VisualKind, date: string, error: unknown): void {
   const message = error instanceof Error ? error.message : String(error);
   stats.errors += 1;
-  stats.failed.push({ date, error: message.replace(/\s+/g, " ").slice(0, 240) });
+  stats.failed.push({ date: `${type}:${date}`, error: message.replace(/\s+/g, " ").slice(0, 240) });
 }
 
 async function wait(ms: number): Promise<void> {
@@ -79,9 +75,10 @@ async function main(): Promise<void> {
   const limit = numberOption(args, "--limit", Number.POSITIVE_INFINITY);
   const delayMs = numberOption(args, "--delay-ms", Number(process.env.OPENAI_IMAGE_DELAY_MS) || 1_200);
   const shouldDelay = Boolean(process.env.OPENAI_API_KEY?.trim());
+  const localDate = todayInIstanbul();
   const [allPoems, allDreams] = await Promise.all([listGeneratedPoems(), listDreams()]);
-  const poems = allPoems.filter((poem) => inRange(poem.date, from, to));
-  const dreams = allDreams.filter((dream) => inRange(dream.date, from, to));
+  const poems = allPoems.filter((poem) => inRange(poem.date, from, to)).sort((a, b) => b.date.localeCompare(a.date));
+  const dreams = allDreams.filter((dream) => inRange(dream.date, from, to)).sort((a, b) => b.date.localeCompare(a.date));
   const poemStats = newStats(poems.length);
   const dreamStats = newStats(dreams.length);
   let attempted = 0;
@@ -120,13 +117,30 @@ async function main(): Promise<void> {
           }
         : refreshed;
       if (!stored) stats.metadata_created += 1;
-      const generated = await generateVisualImage(visual, { force });
-      if (generated === visual && !force && (await imageExists(visual))) {
+
+      const reconciled = await reconcileVisualImagePath(visual);
+      if (reconciled.repaired) {
+        await writeJsonFile(visualPath, reconciled.visual);
+        await updateDream?.(reconciled.visual);
+        stats.path_repaired += 1;
+        console.log(
+          JSON.stringify({
+            stage: "visual_backfill_item",
+            status: reconciled.hadUsableImage ? "path_repaired" : "missing_path_cleared",
+            type: kind,
+            date,
+            image_path: reconciled.visual.image_path
+          })
+        );
+      }
+
+      if (!force && (await visualImageExists(reconciled.visual))) {
         stats.skipped += 1;
         stats.skipped_dates.push(date);
         return;
       }
 
+      const generated = await generateVisualImage(reconciled.visual, { force });
       await writeJsonFile(visualPath, generated);
       await updateDream?.(generated);
       attempted += 1;
@@ -136,13 +150,13 @@ async function main(): Promise<void> {
         console.log(JSON.stringify({ stage: "visual_backfill_item", status: "generated", type: kind, date, image_path: generated.image_path }));
       } else {
         stats.fallback_kept += 1;
-        recordFailure(stats, date, generated.error ?? "Image generation failed; fallback kept.");
+        recordFailure(stats, kind, date, generated.error ?? "Image generation failed; fallback kept.");
         console.log(JSON.stringify({ stage: "visual_backfill_item", status: "failed", type: kind, date, error: generated.error }));
       }
       if (shouldDelay) await wait(delayMs);
     } catch (error) {
       attempted += 1;
-      recordFailure(stats, date, error);
+      recordFailure(stats, kind, date, error);
       console.log(JSON.stringify({ stage: "visual_backfill_item", status: "failed", type: kind, date, error: String(error) }));
     }
   };
@@ -181,14 +195,15 @@ async function main(): Promise<void> {
         images_only: imagesOnly,
         from: from ?? null,
         to: to ?? null,
+        local_date_europe_istanbul: localDate,
         limit: Number.isFinite(limit) ? limit : null,
         delay_ms: delayMs,
         attempted,
         poems: poemStats,
         dreams: dreamStats,
         failed_dates: [
-          ...poemStats.failed.map((item) => `poem:${item.date}`),
-          ...dreamStats.failed.map((item) => `dream:${item.date}`)
+          ...poemStats.failed.map((item) => item.date),
+          ...dreamStats.failed.map((item) => item.date)
         ]
       },
       null,
