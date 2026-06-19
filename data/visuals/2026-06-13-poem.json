@@ -4,18 +4,18 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-06-13",
   "title": "Gri Koltuk ve Mavi Halının Arasında",
-  "generated_at": "2026-06-19T10:05:22.862Z",
+  "generated_at": "2026-06-19T15:34:47.365Z",
   "visual_prompt": "4:5 portrait aspect ratio. Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme. Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı. Duygusal iklim: melankoli, yorgunluk, absürtlük; Bugünkü hali: omuzlar günü biraz geç taşıyor, küçük panik kendini önemli sanıyor.. Yüzeye çıkmayan hafıza etkileri: hali, dili, kuru, gövdesi, nemli, ağır / evden, hava, yüzünde, ince, bırakıyor, köpek / parkı, rüzgar, yüzünü, açıyor, ağaç, gölgesi. Oda, koltuk, yatak, masa, pencere, halı, sokak, park ve apartman gibi ev/yer/yürüyüş nesnelerini ana motif yapma. Bunun yerine hafıza basıncı, duygusal iklim, çağrışım alanı, ritim kırılması ve dikkat kaymasını görselleştir. Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık siluetler ve lo-fi yüzey gürültüsüyle doldur. Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay.",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room, couch, bed, table, window, carpet, street, park, apartment interior, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "Gri Koltuk ve Mavi Halının Arasında şiirinin halı, mavi, oda izlerini taşıyan lo-fi iç ekranı.",
-  "image_path": null,
-  "provider": "metadata-fallback",
+  "image_path": "/generated/visuals/2026-06-13-poem.png",
+  "provider": "openai",
   "model": "gpt-image-1",
   "size": "1024x1280",
   "quality": "low",
   "output_format": "png",
-  "fallback": true,
-  "error": "format is not defined",
+  "fallback": false,
+  "error": null,
   "style_tags": [
     "airbrush",
     "soft blur",
@@ -35,5 +35,5 @@
   "fallback_seed": 512182211,
   "api_size": "1024x1536",
   "prompt_hash": "17a2815b5d7ef62dd864483df59773697953c453f514c66c3bbe690440815d6f",
-  "image_status": "failed"
+  "image_status": "ready"
 }

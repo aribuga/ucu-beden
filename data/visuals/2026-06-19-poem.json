@@ -4,18 +4,18 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-06-19",
   "title": "dinliyor ile bekliyor arasında",
-  "generated_at": "2026-06-19T09:49:40.673Z",
+  "generated_at": "2026-06-19T15:33:57.631Z",
   "visual_prompt": "4:5 portrait aspect ratio. Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme. Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı. Duygusal iklim: melankoli, yorgunluk, absürtlük; Bugünkü hali: hafıza ve dikkat, biraz da yorgunlukla, çevrenin ağırlığını taşıyor.. Yüzeye çıkmayan hafıza etkileri: hali, dönük, melankoliyle, yorgunluğun, absürt, dansına / hali, melankolinin, yorgunluğun, içine, sızdığı, absürt / aşırı, açık, anının, rahatsız, edici, parıltısı. Kaynaklardan kalan estetik, ritim ve dikkat etkisi: ipuçları, ağırlaşan, atmosfer, kabaran, gerilim, parlayan / ipuçları, anlık, hızlı, değişim, süreklilik, tekrar / kaymaları, politik, olaylardan, kültürel, etkinliklere, geçiş. Oda, koltuk, yatak, masa, pencere, halı, sokak, park ve apartman gibi ev/yer/yürüyüş nesnelerini ana motif yapma. Bunun yerine hafıza basıncı, duygusal iklim, çağrışım alanı, ritim kırılması ve dikkat kaymasını görselleştir. Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık siluetler ve lo-fi yüzey gürültüsüyle doldur. Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay.",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room, couch, bed, table, window, carpet, street, park, apartment interior, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "dinliyor ile bekliyor arasında şiirinin duygusal iklimini ve hafıza basıncını taşıyan soyut lo-fi görsel.",
-  "image_path": null,
-  "provider": "metadata-fallback",
+  "image_path": "/generated/visuals/2026-06-19-poem.png",
+  "provider": "openai",
   "model": "gpt-image-1",
   "size": "1024x1280",
   "quality": "low",
   "output_format": "png",
-  "fallback": true,
-  "error": "format is not defined",
+  "fallback": false,
+  "error": null,
   "style_tags": [
     "airbrush",
     "soft blur",
@@ -35,5 +35,5 @@
   "fallback_seed": 2367954273,
   "api_size": "1024x1536",
   "prompt_hash": "8bcdbeebee709b5aab5afed7431a5a0c960e6acb9cb4ff73d53e55aec182dbbf",
-  "image_status": "failed"
+  "image_status": "ready"
 }
