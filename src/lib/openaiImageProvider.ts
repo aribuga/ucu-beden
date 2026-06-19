@@ -135,7 +135,7 @@ async function opaqueImagePipeline(rawImage: Buffer): Promise<sharp.Sharp> {
   return sharp(rgb, { raw: { width: info.width, height: info.height, channels: 3 } });
 }
 
-async function writeOpaqueGeneratedImage(rawImage: Buffer): Promise<void> {
+async function writeOpaqueGeneratedImage(rawImage: Buffer, diskPath: string, format: ImageFormat): Promise<void> {
   const pipeline = await opaqueImagePipeline(rawImage);
   await pipeline
     .resize(FINAL_WIDTH, FINAL_HEIGHT, { fit: "cover", position: "centre" })
