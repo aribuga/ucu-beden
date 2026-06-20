@@ -32,7 +32,7 @@ export default async function HomePage() {
             <MoodPanel mood={latest.mood} sentence={latest.mood_sentence} />
             <NowPanel dailyLife={latest.daily_life} walkState={latest.walk_state} />
             <InfluenceSummary poem={latest} />
-            <PoemTimeline poems={poems.slice(-12)} />
+            <PoemTimeline poems={poems.slice(-10)} showArchiveLink />
           </div>
           {dayView ? (
             <ConsciousnessPanel
