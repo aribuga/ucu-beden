@@ -429,7 +429,7 @@ export type PoemGenerationMeta = {
   language_retry_count?: number;
 };
 
-export type TitleGenerationSource = "llm" | "fallback_dominant_words";
+export type TitleGenerationSource = "llm" | "llm_after_poem" | "fallback_dominant_words";
 
 export type ImageMutation = {
   from: string;

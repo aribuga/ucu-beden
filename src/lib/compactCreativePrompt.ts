@@ -269,10 +269,10 @@ export function buildCompactPoemPrompt(context: GenerationContext, retryHint?: C
     ...(outside.length > 0 ? outside.map((value) => `- ${value}`) : ["- Dış etki yalnızca ritmi, dikkati ve çağrışımı hafifçe değiştirsin."]),
     "",
     ...(avoid.length > 0 ? [`Bugün doğrudan kullanma: ${avoid.join(", ")}.`, ""] : []),
-    "Üslup: Daha içerden, daha insan, daha kusurlu. Cilalı genel şiir tonundan kaçın; ev, yer ve yürüyüşü varsayılan imge yapma. Başlık nesne listesi gibi durmasın.",
+    "Üslup: Daha içerden, daha insan, daha kusurlu. Cilalı genel şiir tonundan kaçın; ev, yer ve yürüyüşü varsayılan imge yapma.",
     ...retryNote(retryHint),
     "",
-    'Tamamını Türkçe yaz. Yalnızca JSON döndür: {"title":"...","poem":"...","mood_sentence":"Bugünkü hali: ..."}'
+    'Tamamını Türkçe yaz. Yalnızca JSON döndür: {"poem":"...","mood_sentence":"Bugünkü hali: ..."}'
   ].join("\n");
 }
 
@@ -311,7 +311,14 @@ export function buildOrganicFallbackTitle(input: GenerationContextPacketInput, t
   const selected = seededMany(candidates.length >= 2 ? candidates : distinct([...candidates, ...moodWords]), seed, 2);
   const first = selected[0] ?? moodWords[0];
   const second = selected[1] ?? moodWords[1] ?? moodWords[0];
-  return `${first} ile ${second} arasında`;
+  const options = distinct([
+    first ? `${first} tortusu` : "",
+    first ? `${first} kayması` : "",
+    first ? `${first} artığı` : "",
+    first && second && first !== second ? `${first} sonrası ${second}` : "",
+    second && second !== first ? `${second} kırılması` : ""
+  ]);
+  return seededMany(options.length > 0 ? options : [first, second].filter(Boolean), seed, 1)[0] ?? "adsız tortu";
 }
 
 function visualCueValue(value: string): string {

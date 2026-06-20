@@ -8,6 +8,7 @@ import {
   generationFallbackTerms,
   type GenerationContextPacketInput
 } from "./generationContextPacket";
+import { listGeneratedPoems } from "./fileStorage";
 import { tokenize, topWords } from "./inputPoems";
 import { buildImageMutations, extractImages } from "./memoryEngine";
 import { formatMoodSentence } from "./moodSentence";
@@ -19,11 +20,23 @@ import {
   stripGeneratedSignature,
   surfaceMetadata
 } from "./surfaceValidator";
-import type { DailyPoem, GenerationContext, LanguageValidationReport, PersonalitySettings, PoemAnalysis, SurfaceValidationReport, TitleGenerationSource } from "./types";
+import type { DailyPoem, GenerationContext, LanguageValidationReport, MemorySelection, Mood, PersonalitySettings, PoemAnalysis, RepetitionPressure, SurfaceValidationReport, TitleGenerationSource } from "./types";
 import { buildUcuBedenVoicePrompt } from "./ucuBedenVoicePrompt";
 
-type OpenAIPoemResult = { poem: string | null; title: string | null; moodSentence: string | null; model: string | null; error: string | null };
-type StructuredPoemResponse = { title?: unknown; poem?: unknown; mood_sentence?: unknown };
+type OpenAIPoemResult = { poem: string | null; moodSentence: string | null; model: string | null; error: string | null };
+type OpenAITitleResult = { title: string | null; model: string | null; error: string | null };
+type StructuredPoemResponse = { poem?: unknown; mood_sentence?: unknown };
+type StructuredTitleResponse = { title?: unknown };
+
+export type GenerateTitleForPoemWithLLMInput = {
+  poemText: string;
+  moodSentence: string;
+  date: string;
+  mood: Mood;
+  recentTitles: string[];
+  repetition_pressure: RepetitionPressure;
+  memory_selection: MemorySelection;
+};
 
 const turkishMoodLabels: Record<string, string> = {
   melancholy: "melankoli",
@@ -91,7 +104,7 @@ export function buildPoemPromptSections(context: GenerationContext, retryReport?
       "İzin verilen hafıza izlerinden en az birini dolaylı çağır; hafıza verilerini listeleme.",
       'Ruh hali cümlesi "Bugünkü hali:" ile başlamalı.',
       "Yalnızca JSON döndür:",
-      '{"title":"...","poem":"...","mood_sentence":"..."}'
+      '{"poem":"...","mood_sentence":"..."}'
     ].join("\n")
   };
 }
@@ -112,6 +125,18 @@ function parseStructuredPoemResponse(text: string): StructuredPoemResponse | nul
   }
 }
 
+function parseStructuredTitleResponse(text: string): StructuredTitleResponse | null {
+  const withoutFence = text.trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
+  const start = withoutFence.indexOf("{");
+  const end = withoutFence.lastIndexOf("}");
+  try {
+    const parsed = JSON.parse(start >= 0 && end > start ? withoutFence.slice(start, end + 1) : withoutFence) as unknown;
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed as StructuredTitleResponse : null;
+  } catch {
+    return null;
+  }
+}
+
 function cleanSingleLine(value: string): string {
   return value.replace(/\s+/g, " ").trim().replace(/^["'“”]+|["'“”]+$/g, "");
 }
@@ -120,13 +145,25 @@ function normalizedForComparison(value: string): string {
   return cleanSingleLine(value).toLocaleLowerCase("tr").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
 }
 
+const forbiddenTitlePatterns = [/(ile|ve).+arasında/iu, /arasında/iu];
+
+function forbiddenTitlePattern(value: string): boolean {
+  return forbiddenTitlePatterns.some((pattern) => pattern.test(value));
+}
+
 function validLlmTitle(value: string | null, poemText: string, context: GenerationContext): string | null {
   if (!value) return null;
   const title = cleanSingleLine(value);
   const firstLine = poemText.split(/\r?\n/).find((line) => line.trim().length > 0) ?? "";
   const titleTerms = tokenize(title);
   const surfaceSafe = filterGenerationSurfaceTerms(titleTerms, packetInput(context)).length === titleTerms.length;
-  return title.length < 2 || title.length > 100 || normalizedForComparison(title) === normalizedForComparison(firstLine) || !surfaceSafe ? null : title;
+  return title.length < 2 ||
+    title.length > 100 ||
+    forbiddenTitlePattern(title) ||
+    normalizedForComparison(title) === normalizedForComparison(firstLine) ||
+    !surfaceSafe
+    ? null
+    : title;
 }
 
 function validMoodSentence(value: string | null): string | null {
@@ -150,10 +187,78 @@ function wait(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function dominantMoodWords(mood: Mood, limit = 3): string[] {
+  return (Object.entries(mood) as Array<[keyof Mood, number]>)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit)
+    .map(([key]) => turkishMoodLabels[key] ?? key);
+}
+
+function firstPoemLine(poemText: string): string {
+  return poemText.split(/\r?\n/).find((line) => line.trim().length > 0) ?? "";
+}
+
+function shortMemoryTitleTraces(selection: MemorySelection): string[] {
+  return selection.memory_prompt_fragments
+    .map(cleanSingleLine)
+    .filter((fragment) => fragment.length > 0)
+    .map((fragment) => fragment.split(/\s+/).slice(0, 9).join(" "))
+    .slice(0, 4);
+}
+
+function titleRejectedByPattern(title: string, poemText: string): string | null {
+  if (title.length < 2 || title.length > 100) return "başlık uzunluğu uygun değil";
+  if (forbiddenTitlePattern(title)) return "başlık yasaklı 'arasında' kalıbını kullanıyor";
+  if (normalizedForComparison(title) === normalizedForComparison(firstPoemLine(poemText))) {
+    return "başlık şiirin ilk dizesini tekrar ediyor";
+  }
+  return null;
+}
+
+function buildTitlePrompt(params: GenerateTitleForPoemWithLLMInput, rejectedTitles: string[]): string {
+  const recentTitles = params.recentTitles.slice(-20).map((title) => `- ${title}`);
+  const memoryTraces = shortMemoryTitleTraces(params.memory_selection).map((trace) => `- ${trace}`);
+  const repeatedShapes = params.repetition_pressure.repeated_title_shapes.slice(0, 6).map((shape) => `- ${shape}`);
+  return [
+    "Aşağıdaki şiire, şiiri açıklamayan kısa bir Türkçe başlık ver.",
+    "Başlık şiirin içinden sonradan bulunmuş gibi dursun.",
+    "İnsan gibi adlandır; özetleme, sloganlaştırma, fazla şiirselleştirme.",
+    "",
+    "Yasaklar",
+    '- "X ile Y arasında" kullanma.',
+    '- "arasında" kelimesini kullanma.',
+    "- Son 20 başlığın sözdizimini tekrar etme.",
+    "- Şiirin ilk dizesini başlık yapma.",
+    "- Başlık nesne listesi gibi durmasın.",
+    "- Aşırı düzgün edebi başlık kurma.",
+    "",
+    `Tarih: ${params.date}`,
+    `Ruh hali: ${dominantMoodWords(params.mood).join(", ")}`,
+    `Ruh hali cümlesi: ${params.moodSentence}`,
+    "",
+    "Son 20 başlık",
+    ...(recentTitles.length > 0 ? recentTitles : ["- yok"]),
+    "",
+    "Tekrar eden başlık biçimleri",
+    ...(repeatedShapes.length > 0 ? repeatedShapes : ["- belirgin tekrar yok"]),
+    "",
+    "Kısa güvenli hafıza izleri",
+    ...(memoryTraces.length > 0 ? memoryTraces : ["- belirgin iz yok"]),
+    "",
+    ...(rejectedTitles.length > 0
+      ? ["Önceki başlık adayları reddedildi; aynı biçimi tekrar etme.", ...rejectedTitles.map((title) => `- ${title}`), ""]
+      : []),
+    "Şiir",
+    params.poemText,
+    "",
+    'Yalnızca JSON döndür: {"title":"..."}'
+  ].join("\n");
+}
+
 async function tryOpenAIPoem(context: GenerationContext, retryReport?: SurfaceValidationReport, languageRetryReport?: LanguageValidationReport): Promise<OpenAIPoemResult> {
   const apiKey = process.env.OPENAI_API_KEY;
   const model = process.env.OPENAI_MODEL || "gpt-4.1-mini";
-  if (!apiKey) return { poem: null, title: null, moodSentence: null, model, error: "OPENAI_API_KEY is not set" };
+  if (!apiKey) return { poem: null, moodSentence: null, model, error: "OPENAI_API_KEY is not set" };
   let lastError = "OpenAI request failed";
   for (let attempt = 1; attempt <= 3; attempt += 1) {
     try {
@@ -172,8 +277,8 @@ async function tryOpenAIPoem(context: GenerationContext, retryReport?: SurfaceVa
               strict: true,
               schema: {
                 type: "object",
-                properties: { title: { type: "string" }, poem: { type: "string" }, mood_sentence: { type: "string" } },
-                required: ["title", "poem", "mood_sentence"],
+                properties: { poem: { type: "string" }, mood_sentence: { type: "string" } },
+                required: ["poem", "mood_sentence"],
                 additionalProperties: false
               }
             }
@@ -186,18 +291,17 @@ async function tryOpenAIPoem(context: GenerationContext, retryReport?: SurfaceVa
           await wait(1000 * attempt);
           continue;
         }
-        return { poem: null, title: null, moodSentence: null, model, error: lastError };
+        return { poem: null, moodSentence: null, model, error: lastError };
       }
       const data = await response.json() as { output_text?: string; output?: Array<{ content?: Array<{ text?: string }> }> };
       const text = data.output_text ?? data.output?.flatMap((item) => item.content ?? []).map((content) => content.text).filter(Boolean).join("\n") ?? null;
-      if (!text?.trim()) return { poem: null, title: null, moodSentence: null, model, error: "OpenAI response had no text output" };
+      if (!text?.trim()) return { poem: null, moodSentence: null, model, error: "OpenAI response had no text output" };
       const structured = parseStructuredPoemResponse(text);
       if (!structured || typeof structured.poem !== "string" || !structured.poem.trim()) {
-        return { poem: text.trim(), title: null, moodSentence: null, model, error: null };
+        return { poem: text.trim(), moodSentence: null, model, error: null };
       }
       return {
         poem: structured.poem.trim(),
-        title: typeof structured.title === "string" ? structured.title : null,
         moodSentence: typeof structured.mood_sentence === "string" ? structured.mood_sentence : null,
         model,
         error: null
@@ -207,7 +311,79 @@ async function tryOpenAIPoem(context: GenerationContext, retryReport?: SurfaceVa
       if (attempt < 3) await wait(1000 * attempt);
     }
   }
-  return { poem: null, title: null, moodSentence: null, model, error: lastError };
+  return { poem: null, moodSentence: null, model, error: lastError };
+}
+
+export async function generateTitleForPoemWithLLM(params: GenerateTitleForPoemWithLLMInput): Promise<OpenAITitleResult> {
+  const apiKey = process.env.OPENAI_API_KEY;
+  const model = process.env.OPENAI_TITLE_MODEL || process.env.OPENAI_MODEL || "gpt-4.1-mini";
+  if (!apiKey) return { title: null, model, error: "OPENAI_API_KEY is not set" };
+
+  let lastError = "OpenAI title request failed";
+  const rejectedTitles: string[] = [];
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      const response = await fetch("https://api.openai.com/v1/responses", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
+        body: JSON.stringify({
+          model,
+          input: buildTitlePrompt(params, rejectedTitles),
+          temperature: 0.9,
+          max_output_tokens: 80,
+          text: {
+            format: {
+              type: "json_schema",
+              name: "ucu_beden_poem_title",
+              strict: true,
+              schema: {
+                type: "object",
+                properties: { title: { type: "string" } },
+                required: ["title"],
+                additionalProperties: false
+              }
+            }
+          }
+        })
+      });
+      if (!response.ok) {
+        lastError = `OpenAI title returned ${response.status}`;
+        if ((response.status === 429 || response.status >= 500) && attempt < 3) {
+          await wait(1000 * attempt);
+          continue;
+        }
+        return { title: null, model, error: lastError };
+      }
+
+      const data = await response.json() as { output_text?: string; output?: Array<{ content?: Array<{ text?: string }> }> };
+      const text = data.output_text ?? data.output?.flatMap((item) => item.content ?? []).map((content) => content.text).filter(Boolean).join("\n") ?? null;
+      if (!text?.trim()) {
+        lastError = "OpenAI title response had no text output";
+        continue;
+      }
+
+      const structured = parseStructuredTitleResponse(text);
+      const title = typeof structured?.title === "string" ? cleanSingleLine(structured.title) : null;
+      if (!title) {
+        lastError = "OpenAI response had no valid title payload";
+        continue;
+      }
+
+      const rejectionReason = titleRejectedByPattern(title, params.poemText);
+      if (rejectionReason) {
+        rejectedTitles.push(`${title} (${rejectionReason})`);
+        lastError = rejectionReason;
+        continue;
+      }
+
+      return { title, model, error: null };
+    } catch (error) {
+      lastError = error instanceof Error ? error.message : "OpenAI title request failed";
+      if (attempt < 3) await wait(1000 * attempt);
+    }
+  }
+
+  return { title: null, model, error: lastError };
 }
 
 function mockPoem(context: GenerationContext): string {
@@ -254,14 +430,14 @@ export async function generatePoemWithLLM(context: GenerationContext): Promise<D
   let candidateReport: SurfaceValidationReport | null = null;
   let candidateLanguageReport: LanguageValidationReport | null = null;
   while (openAIText) {
-    const candidateTitle = llmResult.title ? cleanSingleLine(llmResult.title) : fallbackTitleFor(openAIText, context);
+    const candidatePoemText = stripGeneratedSignature(openAIText);
     candidateReport = await analyzeGeneratedPoemSurface(
-      { title: candidateTitle, poem_text: openAIText },
+      { title: "", poem_text: candidatePoemText },
       { mode: "poem", world: context.world, repetition: context.repetition_pressure }
     );
     candidateLanguageReport = analyzeGeneratedPoemLanguage({
-      title: candidateTitle,
-      poem_text: openAIText,
+      title: "",
+      poem_text: candidatePoemText,
       mood_sentence: llmResult.moodSentence ?? ""
     });
     if ((!candidateReport.severe && !candidateLanguageReport.severe) || retryCount >= 2) break;
@@ -279,11 +455,23 @@ export async function generatePoemWithLLM(context: GenerationContext): Promise<D
     openAIText = undefined;
   }
   const poemText = stripGeneratedSignature(openAIText || mockPoem(context));
-  const strictFallbackTitle = candidateReport?.title_violation ?? false;
-  const llmTitle = openAIText && !strictFallbackTitle ? validLlmTitle(llmResult.title, poemText, context) : null;
-  const titleGeneration: TitleGenerationSource = llmTitle ? "llm" : "fallback_dominant_words";
-  const title = llmTitle ?? fallbackTitleFor(poemText, context, strictFallbackTitle);
   const moodSentence = uniqueMoodSentence(context, openAIText ? validMoodSentence(llmResult.moodSentence) : null);
+  const recentTitles = (await listGeneratedPoems())
+    .filter((poem) => poem.date !== context.date)
+    .slice(-20)
+    .map((poem) => poem.title);
+  const titleResult = await generateTitleForPoemWithLLM({
+    poemText,
+    moodSentence,
+    date: context.date,
+    mood: context.mood,
+    recentTitles,
+    repetition_pressure: context.repetition_pressure,
+    memory_selection: context.memory_selection
+  });
+  const llmTitle = validLlmTitle(titleResult.title, poemText, context);
+  const titleGeneration: TitleGenerationSource = llmTitle ? "llm_after_poem" : "fallback_dominant_words";
+  const title = llmTitle ?? fallbackTitleFor(poemText, context);
   const packet = buildGenerationContextPacket(packetInput(context));
   const surfaceReport = await analyzeGeneratedPoemSurface(
     { title, poem_text: poemText },
