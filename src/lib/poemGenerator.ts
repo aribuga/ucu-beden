@@ -488,6 +488,7 @@ export async function generatePoemWithLLM(context: GenerationContext): Promise<D
     poem_text: poemText,
     mood: context.mood,
     mood_sentence: moodSentence,
+    mood_metadata: context.mood_metadata,
     daily_life: context.daily_life,
     walk_state: context.walk_state,
     sources: context.sources,

@@ -11,6 +11,44 @@ export type Mood = {
 
 export type MoodKey = keyof Mood;
 
+export type MoodEventType =
+  | "source_pressure"
+  | "weather_lift"
+  | "heavy_air"
+  | "aesthetic_spark"
+  | "memory_echo"
+  | "memory_reordering"
+  | "domestic_tenderness"
+  | "comic_misalignment";
+
+export type MoodEvent = {
+  type: MoodEventType;
+  primary_axis: MoodKey;
+  secondary_axis: MoodKey | null;
+  intensity: number;
+  description: string;
+};
+
+export type MoodGenerationMetadata = {
+  memory_density: number;
+  memory_pressure: number;
+  source_pressure: number;
+  weather: {
+    humidity_percent: number | null;
+    wind_kmh: number | null;
+  };
+  daily_event: MoodEvent;
+  daily_variation: Record<MoodKey, number>;
+  target_mood: Mood;
+  previous_mood: Mood | null;
+  delta_from_previous: Record<MoodKey, number>;
+  anti_flatness: {
+    applied: boolean;
+    reason: string | null;
+    adjusted_axes: MoodKey[];
+  };
+};
+
 export type SiteTheme = "minimal" | "sims2000" | "fresh90s";
 
 export type SiteSettings = {
@@ -448,6 +486,7 @@ export type DailyPoem = {
   poem_text: string;
   mood: Mood;
   mood_sentence: string;
+  mood_metadata?: MoodGenerationMetadata;
   daily_life: DailyLife;
   walk_state: WalkState;
   sources: SourceBundle;
@@ -806,6 +845,7 @@ export type GenerationContext = {
   input_analysis: InputPoemsAnalysis;
   mood: Mood;
   mood_sentence: string;
+  mood_metadata?: MoodGenerationMetadata;
   daily_life: DailyLifeRecord;
   walk_state: WalkState;
   personality_settings: PersonalitySettings;

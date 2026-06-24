@@ -105,7 +105,7 @@ async function main(): Promise<void> {
 
   const ageMonths = existingPoem?.age_months ?? nextAgeMonths(previousState.age_months);
   const ageDisplay = formatAge(ageMonths);
-  const { mood, sentence } = calculateMood({ date, state: previousState, sources, inputAnalysis });
+  const { mood, sentence, metadata: moodMetadata } = calculateMood({ date, state: previousState, sources, inputAnalysis });
   const baseDailyLife = createDailyLife({ date, world, mood, sources });
   const dailyLife = createDailyLifeRecord({ date, base: baseDailyLife, mood, sources, state: previousState, personality: personalitySettings });
   await writeJsonFile(`${storagePaths.dailyLife}/${date}.json`, dailyLife);
@@ -130,6 +130,7 @@ async function main(): Promise<void> {
     input_analysis: inputAnalysis,
     mood,
     mood_sentence: sentence,
+    mood_metadata: moodMetadata,
     daily_life: dailyLife,
     walk_state: walkState,
     personality_settings: personalitySettings,
