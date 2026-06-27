@@ -1,19 +1,19 @@
 {
   "date": "2026-06-27",
-  "collected_at": "2026-06-27T08:45:59.227Z",
+  "collected_at": "2026-06-27T09:34:09.930Z",
   "fallback_used": false,
   "weather": {
     "provider": "open-meteo",
-    "summary": "Kadıköy'de 28.9°C; nem 49%, rüzgar 16.8 km/s civarında.",
-    "temperature_c": 28.9,
-    "humidity_percent": 49,
-    "wind_kmh": 16.8,
+    "summary": "Kadıköy'de 29.7°C; nem 45%, rüzgar 18.3 km/s civarında.",
+    "temperature_c": 29.7,
+    "humidity_percent": 45,
+    "wind_kmh": 18.3,
     "body_effect": "hava yüzünde ince bir açıklık bırakıyor"
   },
   "turkey_news": {
     "provider": "rss-news",
     "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,melancholy; safe_terms=basınç,gündelik,politik,ağırlaşan,ardından,fark; weights=aesthetic:0.14,conceptual:0.33,rhythm:0.43,pressure:1",
-    "emotional_weight": 62,
+    "emotional_weight": 59,
     "fragments": [
       "basınç",
       "gündelik",
@@ -70,6 +70,37 @@
           "akılsızca",
           "ateşkesi",
           "düzenledi"
+        ],
+        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
+      },
+      {
+        "title": "İngiltere'de başbakanlar neden sürekli değişiyor?",
+        "source": "BBC Türkçe",
+        "category": "news",
+        "url": "https://www.bbc.com/turkce/articles/cvgdr1qjypgo?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Sat, 27 Jun 2026 09:28:33 GMT",
+        "moodTags": [
+          "fatigue",
+          "anger",
+          "clarity"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 7,
+          "tenderness": 2,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 3,
+          "desire": 0,
+          "hope": 0
+        },
+        "keywords": [
+          "altıncı",
+          "ardındaki",
+          "ayrılan",
+          "başbakanı",
+          "başbakanlar",
+          "değişiyor"
         ],
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
@@ -136,37 +167,6 @@
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
       {
-        "title": "30 yıllık insan kaynakları uzmanından işe girme tavsiyeleri",
-        "source": "BBC Türkçe",
-        "category": "news",
-        "url": "https://www.bbc.com/turkce/articles/clye9jl75vdo?at_medium=RSS&at_campaign=rss",
-        "publishedAt": "Sat, 27 Jun 2026 08:21:38 GMT",
-        "moodTags": [
-          "fatigue",
-          "anger",
-          "melancholy"
-        ],
-        "moodScores": {
-          "melancholy": 4,
-          "anger": 7,
-          "tenderness": 0,
-          "fatigue": 10,
-          "absurdity": 0,
-          "clarity": 3,
-          "desire": 0,
-          "hope": 0
-        },
-        "keywords": [
-          "alım",
-          "dair",
-          "edileceğinize",
-          "fark",
-          "girme",
-          "insan"
-        ],
-        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
-      },
-      {
         "title": "'Sperm kardeşleri': Aynı sperm bağışçısından doğduklarını 20'lerinde fark ettiler",
         "source": "BBC Türkçe",
         "category": "news",
@@ -198,11 +198,11 @@
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
       {
-        "title": "İtalya'dan kaçak gönderilen binlerce ton tekstil atığı Türkiye'de ele geçirildi",
+        "title": "30 yıllık insan kaynakları uzmanından işe girme tavsiyeleri",
         "source": "BBC Türkçe",
         "category": "news",
-        "url": "https://www.bbc.com/turkce/articles/c5yzpn3092yo?at_medium=RSS&at_campaign=rss",
-        "publishedAt": "Fri, 26 Jun 2026 14:36:56 GMT",
+        "url": "https://www.bbc.com/turkce/articles/clye9jl75vdo?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Sat, 27 Jun 2026 08:21:38 GMT",
         "moodTags": [
           "fatigue",
           "anger",
@@ -219,12 +219,12 @@
           "hope": 0
         },
         "keywords": [
-          "atığı",
-          "binlerce",
-          "ele",
-          "geçirildi",
-          "operasyonda",
-          "tekstil"
+          "alım",
+          "dair",
+          "edileceğinize",
+          "fark",
+          "girme",
+          "insan"
         ],
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
@@ -444,71 +444,11 @@
         "shortAtmosphere": "açılan sergi duvarı ve görüntü basıncı"
       },
       {
-        "title": "Antarktika, Deniz Seviyesindeki Yükselişe Dair 30 ila 50 Yıllık Bir Uyarı Süresi Sunuyor!",
-        "source": "Evrim Ağacı",
+        "title": "Maymunlar ve İnsanlar 15 Milyon Yıldır Gülme Eylemini Paylaşıyor",
+        "source": "Arkeofili",
         "category": "science_culture",
-        "url": "https://evrimagaci.org/antarktika-deniz-seviyesindeki-yukselise-dair-30-ila-50-yillik-bir-uyari-suresi-sunuyor-23263",
-        "publishedAt": "Fri, 26 Jun 2026 13:54:51 +0300",
-        "moodTags": [
-          "clarity",
-          "hope",
-          "fatigue"
-        ],
-        "moodScores": {
-          "melancholy": 2,
-          "anger": 0,
-          "tenderness": 2,
-          "fatigue": 4,
-          "absurdity": 2,
-          "clarity": 10,
-          "desire": 0,
-          "hope": 5
-        },
-        "keywords": [
-          "ila",
-          "bize",
-          "bunun",
-          "buz"
-        ],
-        "shortAtmosphere": "açılan derin zaman ve bilgi kırıntısı"
-      },
-      {
-        "title": "Bira Neden Köpürür?",
-        "source": "Evrim Ağacı",
-        "category": "science_culture",
-        "url": "https://evrimagaci.org/bira-neden-kopurur-23282",
-        "publishedAt": "Fri, 26 Jun 2026 13:52:29 +0300",
-        "moodTags": [
-          "clarity",
-          "hope",
-          "melancholy"
-        ],
-        "moodScores": {
-          "melancholy": 2,
-          "anger": 0,
-          "tenderness": 0,
-          "fatigue": 0,
-          "absurdity": 2,
-          "clarity": 10,
-          "desire": 0,
-          "hope": 5
-        },
-        "keywords": [
-          "aksine",
-          "bardak",
-          "biradaki",
-          "birayı",
-          "çoğu",
-          "film"
-        ],
-        "shortAtmosphere": "açılan derin zaman ve bilgi kırıntısı"
-      },
-      {
-        "title": "Bir Yıldız Kendini Yok Edip Ardında İz Bırakmayabilir mi ?",
-        "source": "Evrim Ağacı",
-        "category": "science_culture",
-        "url": "https://evrimagaci.org/bir-yildiz-kendini-yok-edip-ardinda-iz-birakmayabilir-mi--23202",
-        "publishedAt": "Tue, 23 Jun 2026 16:44:33 +0300",
+        "url": "https://arkeofili.com/maymunlar-ve-insanlar-15-milyon-yildir-gulme-eylemini-paylasiyor/",
+        "publishedAt": "Sat, 27 Jun 2026 08:43:39 +0000",
         "moodTags": [
           "clarity",
           "hope",
@@ -519,80 +459,135 @@
           "anger": 0,
           "tenderness": 2,
           "fatigue": 0,
-          "absurdity": 2,
+          "absurdity": 0,
           "clarity": 10,
           "desire": 0,
-          "hope": 5
+          "hope": 6
         },
         "keywords": [
-          "2023vbw",
-          "adı",
-          "ayında",
-          "dalgalanmalarını",
-          "değildi",
-          "derecede"
+          "benzer",
+          "burada",
+          "büyük",
+          "çalışma",
+          "gülüyor",
+          "insanlarınkine"
         ],
         "shortAtmosphere": "açılan derin zaman ve bilgi kırıntısı"
       },
       {
-        "title": "Ultra İşlenmiş Gıdalar Odaklanmanızı Etkiliyor Olabilir mi?",
-        "source": "Evrim Ağacı",
+        "title": "İnsan DNA’sı Mağara Duvarlarında Binlerce Yıl Kalabiliyormuş!",
+        "source": "Arkeofili",
         "category": "science_culture",
-        "url": "https://evrimagaci.org/ultra-islenmis-gidalar-odaklanmanizi-etkiliyor-olabilir-mi-23225",
-        "publishedAt": "Tue, 23 Jun 2026 16:23:31 +0300",
+        "url": "https://arkeofili.com/insan-dnasi-magara-duvarlarinda-binlerce-yil-kalabiliyormus/",
+        "publishedAt": "Sat, 27 Jun 2026 00:30:55 +0000",
         "moodTags": [
           "clarity",
-          "hope",
-          "melancholy"
+          "melancholy",
+          "hope"
         ],
         "moodScores": {
-          "melancholy": 2,
-          "anger": 0,
-          "tenderness": 0,
-          "fatigue": 2,
-          "absurdity": 2,
-          "clarity": 10,
-          "desire": 0,
-          "hope": 7
-        },
-        "keywords": [
-          "fazla",
-          "gıdaların",
-          "araştırmalar",
-          "aynı",
-          "beyinle",
-          "biçiminin"
-        ],
-        "shortAtmosphere": "açılan derin zaman ve bilgi kırıntısı"
-      },
-      {
-        "title": "Kediler Neden Dizüstü Bilgisayarların Üzerine Oturur?",
-        "source": "Evrim Ağacı",
-        "category": "science_culture",
-        "url": "https://evrimagaci.org/kediler-neden-dizustu-bilgisayarlarin-uzerine-oturur-23253",
-        "publishedAt": "Tue, 23 Jun 2026 16:09:35 +0300",
-        "moodTags": [
-          "clarity",
-          "hope",
-          "melancholy"
-        ],
-        "moodScores": {
-          "melancholy": 2,
+          "melancholy": 6,
           "anger": 0,
           "tenderness": 2,
           "fatigue": 0,
           "absurdity": 2,
           "clarity": 10,
           "desire": 0,
-          "hope": 5
+          "hope": 4
         },
         "keywords": [
-          "arkasındaki",
-          "bilgisayarınızdan",
-          "bilgisayarlarımıza",
-          "davranışın",
-          "engelleyerek",
-          "görmenizi"
+          "boyunca",
+          "burada",
+          "eski",
+          "gösterdi",
+          "hayatta"
+        ],
+        "shortAtmosphere": "açılan derin zaman ve bilgi kırıntısı"
+      },
+      {
+        "title": "Amazon’da Bulunan Süslü El İzleri Şamanik Bilgiyi Yansıtıyor",
+        "source": "Arkeofili",
+        "category": "science_culture",
+        "url": "https://arkeofili.com/amazonda-bulunan-suslu-el-izleri-samanik-bilgiyi-yansitiyor/",
+        "publishedAt": "Fri, 26 Jun 2026 12:23:33 +0000",
+        "moodTags": [
+          "clarity",
+          "hope",
+          "melancholy"
+        ],
+        "moodScores": {
+          "melancholy": 4,
+          "anger": 0,
+          "tenderness": 2,
+          "fatigue": 0,
+          "absurdity": 0,
+          "clarity": 10,
+          "desire": 0,
+          "hope": 6
+        },
+        "keywords": [
+          "bilginin",
+          "burada",
+          "çalışmaya",
+          "görsel"
+        ],
+        "shortAtmosphere": "açılan derin zaman ve bilgi kırıntısı"
+      },
+      {
+        "title": "İngiltere’deki Tarlada Gömülmüş Bir Demir Çağ Eserleri Bulundu",
+        "source": "Arkeofili",
+        "category": "science_culture",
+        "url": "https://arkeofili.com/ingilteredeki-tarlada-gomulmus-bir-demir-cag-eserleri-bulundu/",
+        "publishedAt": "Fri, 26 Jun 2026 08:28:47 +0000",
+        "moodTags": [
+          "clarity",
+          "melancholy",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 4,
+          "anger": 0,
+          "tenderness": 2,
+          "fatigue": 0,
+          "absurdity": 0,
+          "clarity": 10,
+          "desire": 0,
+          "hope": 4
+        },
+        "keywords": [
+          "araştırmacılara",
+          "boyutta",
+          "burada"
+        ],
+        "shortAtmosphere": "açılan derin zaman ve bilgi kırıntısı"
+      },
+      {
+        "title": "Knidos Açıklarında Amforalarla Dolu Üç Bizans Batığı Keşfedildi",
+        "source": "Arkeofili",
+        "category": "science_culture",
+        "url": "https://arkeofili.com/knidos-aciklarinda-amforalarla-dolu-uc-bizans-batigi-kesfedildi/",
+        "publishedAt": "Fri, 26 Jun 2026 08:03:03 +0000",
+        "moodTags": [
+          "clarity",
+          "melancholy",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 4,
+          "anger": 0,
+          "tenderness": 2,
+          "fatigue": 2,
+          "absurdity": 0,
+          "clarity": 10,
+          "desire": 0,
+          "hope": 4
+        },
+        "keywords": [
+          "ait",
+          "amfora",
+          "antik",
+          "burada",
+          "çıkarıldı"
         ],
         "shortAtmosphere": "açılan derin zaman ve bilgi kırıntısı"
       },
@@ -897,18 +892,18 @@
     ],
     "dailyMoodSummary": {
       "dominantMood": "clarity",
-      "secondaryMood": "fatigue",
+      "secondaryMood": "tenderness",
       "moodScores": {
         "melancholy": 2,
         "anger": 2,
-        "tenderness": 2,
-        "fatigue": 4,
+        "tenderness": 3,
+        "fatigue": 3,
         "absurdity": 2,
         "clarity": 5,
         "desire": 3,
         "hope": 3
       },
-      "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,melancholy; safe_terms=basınç,gündelik,politik,ağırlaşan,ardından,fark; weights=aesthetic:0.14,conceptual:0.33,rhythm:0.43,pressure:1 | category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=açılan,basıncı,duvarı,görüntü,sergi,ait; weights=aesthetic:1,conceptual:0.7,rhythm:0.48,pressure:0.19 | category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,hope,melancholy; safe_terms=açılan,bilgi,derin,kırıntısı,zaman,2023vbw; weights=aesthetic:0.36,conceptual:1,rhythm:0.33,pressure:0.22 | category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yapay,yüz,tuhaflaşan,alan; weights=aesthetic:0.61,conceptual:0.42,rhythm:1,pressure:0.26 | category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,hope,desire; safe_terms=gündelik,içi,şehir,temas,appeared,yumuşayan; weights=aesthetic:0.51,conceptual:0.33,rhythm:0.5,pressure:0.24",
+      "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,melancholy; safe_terms=basınç,gündelik,politik,ağırlaşan,ardından,fark; weights=aesthetic:0.14,conceptual:0.33,rhythm:0.43,pressure:1 | category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=açılan,basıncı,duvarı,görüntü,sergi,ait; weights=aesthetic:1,conceptual:0.7,rhythm:0.48,pressure:0.19 | category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,hope,melancholy; safe_terms=açılan,bilgi,burada,derin,kırıntısı,zaman; weights=aesthetic:0.34,conceptual:1,rhythm:0.29,pressure:0.21 | category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yapay,yüz,tuhaflaşan,alan; weights=aesthetic:0.61,conceptual:0.42,rhythm:1,pressure:0.26 | category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,hope,desire; safe_terms=gündelik,içi,şehir,temas,appeared,yumuşayan; weights=aesthetic:0.51,conceptual:0.33,rhythm:0.5,pressure:0.24",
       "fragments": [
         "basınç",
         "gündelik",
@@ -939,7 +934,7 @@
       ],
       "learningFragments": [
         "category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=açılan,basıncı,duvarı,görüntü,sergi,ait; weights=aesthetic:1,conceptual:0.7,rhythm:0.48,pressure:0.19",
-        "category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,hope,melancholy; safe_terms=açılan,bilgi,derin,kırıntısı,zaman,2023vbw; weights=aesthetic:0.36,conceptual:1,rhythm:0.33,pressure:0.22",
+        "category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,hope,melancholy; safe_terms=açılan,bilgi,burada,derin,kırıntısı,zaman; weights=aesthetic:0.34,conceptual:1,rhythm:0.29,pressure:0.21",
         "category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yapay,yüz,tuhaflaşan,alan; weights=aesthetic:0.61,conceptual:0.42,rhythm:1,pressure:0.26",
         "category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,hope,desire; safe_terms=gündelik,içi,şehir,temas,appeared,yumuşayan; weights=aesthetic:0.51,conceptual:0.33,rhythm:0.5,pressure:0.24"
       ]
@@ -1053,31 +1048,30 @@
         "safe_terms": [
           "açılan",
           "bilgi",
+          "burada",
           "derin",
           "kırıntısı",
           "zaman",
-          "2023vbw",
-          "adı",
-          "aksine",
-          "araştırmalar",
-          "arkasındaki",
-          "ayında",
-          "aynı"
+          "ait",
+          "amfora",
+          "antik",
+          "araştırmacılara",
+          "benzer",
+          "bilginin"
         ],
         "novelty_terms": [
-          "2023vbw",
-          "aksine",
-          "ayında"
+          "benzer",
+          "bilginin"
         ],
         "repeated_terms": [
           "açılan",
           "bilgi",
+          "burada",
           "derin",
           "kırıntısı",
           "zaman",
-          "adı",
-          "araştırmalar",
-          "arkasındaki"
+          "ait",
+          "amfora"
         ],
         "rejected_terms": [],
         "mood_bias": [
@@ -1085,11 +1079,11 @@
           "hope",
           "melancholy"
         ],
-        "aesthetic_weight": 0.36,
+        "aesthetic_weight": 0.34,
         "conceptual_weight": 1,
-        "rhythm_weight": 0.33,
-        "pressure_weight": 0.22,
-        "summary_for_prompt": "category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,hope,melancholy; safe_terms=açılan,bilgi,derin,kırıntısı,zaman,2023vbw; weights=aesthetic:0.36,conceptual:1,rhythm:0.33,pressure:0.22"
+        "rhythm_weight": 0.29,
+        "pressure_weight": 0.21,
+        "summary_for_prompt": "category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,hope,melancholy; safe_terms=açılan,bilgi,burada,derin,kırıntısı,zaman; weights=aesthetic:0.34,conceptual:1,rhythm:0.29,pressure:0.21"
       },
       {
         "category": "entertainment",
@@ -1193,16 +1187,16 @@
         "category": "science_culture",
         "url": "https://arkeofili.com/feed/",
         "enabled": true,
-        "fetched": false,
-        "status": "timeout",
-        "item_count": 0,
-        "lastCheckedAt": "2026-06-27T08:45:43.165Z",
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://arkeofili.com/feed/",
+        "lastCheckedAt": "2026-06-27T09:34:00.078Z",
         "attemptedUrls": [
           "https://arkeofili.com/feed/"
         ],
         "retriedWithBrowserHeaders": true,
-        "error": "Timeout after 8000ms",
-        "itemCount": 0
+        "itemCount": 6
       },
       {
         "name": "Evrim Ağacı",
@@ -1213,7 +1207,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://evrimagaci.org/rss.xml",
-        "lastCheckedAt": "2026-06-27T08:45:43.167Z",
+        "lastCheckedAt": "2026-06-27T09:34:00.080Z",
         "attemptedUrls": [
           "https://evrimagaci.org/rss.xml"
         ],
@@ -1229,7 +1223,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://altyazi.net/feed/",
-        "lastCheckedAt": "2026-06-27T08:45:43.169Z",
+        "lastCheckedAt": "2026-06-27T09:34:00.081Z",
         "attemptedUrls": [
           "https://altyazi.net/feed/"
         ],
@@ -1245,7 +1239,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.otekisinema.com/feed/",
-        "lastCheckedAt": "2026-06-27T08:45:43.810Z",
+        "lastCheckedAt": "2026-06-27T09:34:00.614Z",
         "attemptedUrls": [
           "https://www.otekisinema.com/feed/"
         ],
@@ -1261,7 +1255,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.bagimsizsinema.com/feed",
-        "lastCheckedAt": "2026-06-27T08:45:44.279Z",
+        "lastCheckedAt": "2026-06-27T09:34:00.931Z",
         "attemptedUrls": [
           "https://www.bagimsizsinema.com/feed"
         ],
@@ -1277,7 +1271,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://artdogistanbul.com/feed/",
-        "lastCheckedAt": "2026-06-27T08:45:44.582Z",
+        "lastCheckedAt": "2026-06-27T09:34:01.225Z",
         "attemptedUrls": [
           "https://artdogistanbul.com/feed/"
         ],
@@ -1293,7 +1287,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://argonotlar.com/feed/",
-        "lastCheckedAt": "2026-06-27T08:45:45.563Z",
+        "lastCheckedAt": "2026-06-27T09:34:02.096Z",
         "attemptedUrls": [
           "https://argonotlar.com/feed/"
         ],
@@ -1309,7 +1303,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.arkitera.com/feed/",
-        "lastCheckedAt": "2026-06-27T08:45:45.980Z",
+        "lastCheckedAt": "2026-06-27T09:34:02.538Z",
         "attemptedUrls": [
           "https://www.arkitera.com/feed/"
         ],
@@ -1321,17 +1315,16 @@
         "category": "art",
         "url": "https://www.artkolik.net/feed",
         "enabled": true,
-        "fetched": false,
-        "status": "failed",
-        "item_count": 0,
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
         "usedUrl": "https://www.artkolik.net/feed",
-        "lastCheckedAt": "2026-06-27T08:45:46.587Z",
+        "lastCheckedAt": "2026-06-27T09:34:03.011Z",
         "attemptedUrls": [
           "https://www.artkolik.net/feed"
         ],
-        "retriedWithBrowserHeaders": true,
-        "error": "RSS returned 415",
-        "itemCount": 0
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
       },
       {
         "name": "Terrabayt",
@@ -1342,7 +1335,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://terrabayt.com/feed/",
-        "lastCheckedAt": "2026-06-27T08:45:47.869Z",
+        "lastCheckedAt": "2026-06-27T09:34:03.909Z",
         "attemptedUrls": [
           "https://terrabayt.com/feed/"
         ],
@@ -1358,7 +1351,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.nouvart.net/feed/",
-        "lastCheckedAt": "2026-06-27T08:45:48.131Z",
+        "lastCheckedAt": "2026-06-27T09:34:04.112Z",
         "attemptedUrls": [
           "https://www.nouvart.net/feed/"
         ],
@@ -1374,7 +1367,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds2.feedburner.com/itsnicethat/SlXC",
-        "lastCheckedAt": "2026-06-27T08:45:48.717Z",
+        "lastCheckedAt": "2026-06-27T09:34:04.690Z",
         "attemptedUrls": [
           "https://feeds2.feedburner.com/itsnicethat/SlXC"
         ],
@@ -1390,7 +1383,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://thecreativeindependent.com/feed.xml",
-        "lastCheckedAt": "2026-06-27T08:45:48.823Z",
+        "lastCheckedAt": "2026-06-27T09:34:04.785Z",
         "attemptedUrls": [
           "https://thecreativeindependent.com/feed.xml"
         ],
@@ -1406,7 +1399,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://bantmag.com/feed/",
-        "lastCheckedAt": "2026-06-27T08:45:48.922Z",
+        "lastCheckedAt": "2026-06-27T09:34:04.942Z",
         "attemptedUrls": [
           "https://bantmag.com/feed/"
         ],
@@ -1422,7 +1415,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://manifold.press/rss",
-        "lastCheckedAt": "2026-06-27T08:45:49.029Z",
+        "lastCheckedAt": "2026-06-27T09:34:05.001Z",
         "attemptedUrls": [
           "https://manifold.press/rss"
         ],
@@ -1438,7 +1431,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://playtusu.com/feed/",
-        "lastCheckedAt": "2026-06-27T08:45:49.584Z",
+        "lastCheckedAt": "2026-06-27T09:34:05.458Z",
         "attemptedUrls": [
           "https://playtusu.com/feed/"
         ],
@@ -1454,7 +1447,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://vesaire.press/feed/",
-        "lastCheckedAt": "2026-06-27T08:45:50.130Z",
+        "lastCheckedAt": "2026-06-27T09:34:05.703Z",
         "attemptedUrls": [
           "https://vesaire.press/feed/"
         ],
@@ -1470,7 +1463,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds.bbci.co.uk/turkce/rss.xml",
-        "lastCheckedAt": "2026-06-27T08:45:50.220Z",
+        "lastCheckedAt": "2026-06-27T09:34:05.850Z",
         "attemptedUrls": [
           "https://feeds.bbci.co.uk/turkce/rss.xml"
         ],
@@ -1486,7 +1479,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.birgun.net/rss/home",
-        "lastCheckedAt": "2026-06-27T08:45:50.338Z",
+        "lastCheckedAt": "2026-06-27T09:34:06.076Z",
         "attemptedUrls": [
           "https://www.birgun.net/rss/home"
         ],
@@ -1502,7 +1495,7 @@
         "status": "blocked_403",
         "item_count": 0,
         "usedUrl": "https://www.diken.com.tr/feed.xml",
-        "lastCheckedAt": "2026-06-27T08:45:50.432Z",
+        "lastCheckedAt": "2026-06-27T09:34:06.139Z",
         "attemptedUrls": [
           "https://www.diken.com.tr/feed/",
           "https://www.diken.com.tr/feed",
@@ -1522,7 +1515,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.radikal.com.tr/feed/",
-        "lastCheckedAt": "2026-06-27T08:45:50.604Z",
+        "lastCheckedAt": "2026-06-27T09:34:06.225Z",
         "attemptedUrls": [
           "https://www.radikal.com.tr/feed/"
         ],
@@ -1538,7 +1531,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.cumhuriyet.com.tr/rss",
-        "lastCheckedAt": "2026-06-27T08:45:50.870Z",
+        "lastCheckedAt": "2026-06-27T09:34:06.369Z",
         "attemptedUrls": [
           "https://www.cumhuriyet.com.tr/rss/son_dakika.xml"
         ],
@@ -1554,7 +1547,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://istanbullife.com.tr/feed/",
-        "lastCheckedAt": "2026-06-27T08:45:51.167Z",
+        "lastCheckedAt": "2026-06-27T09:34:06.650Z",
         "attemptedUrls": [
           "https://istanbullife.com.tr/feed/"
         ],
@@ -1566,9 +1559,9 @@
   "rssHealth": [
     {
       "name": "Arkeofili",
-      "status": "timeout",
-      "itemCount": 0,
-      "error": "Timeout after 8000ms"
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://arkeofili.com/feed/"
     },
     {
       "name": "Evrim Ağacı",
@@ -1614,10 +1607,9 @@
     },
     {
       "name": "Artkolik",
-      "status": "failed",
-      "itemCount": 0,
-      "usedUrl": "https://www.artkolik.net/feed",
-      "error": "RSS returned 415"
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://www.artkolik.net/feed"
     },
     {
       "name": "Terrabayt",
@@ -1707,8 +1699,6 @@
   ],
   "notes": [
     "NEWS_API_KEY yok; RSS gündem kullanıldı.",
-    "RSS Arkeofili: Timeout after 8000ms",
-    "RSS Artkolik: RSS returned 415",
     "RSS Diken: 403 Forbidden"
   ]
 }
