@@ -7,9 +7,9 @@
       "source": "daily_life",
       "source_ref": "data/daily_life/2026-06-29.json#attention",
       "kind": "attention",
-      "text": "dar yatak üzerinde oyalanıyor",
-      "transformed_text": "dar yatak üzerinde oyalanıyor | dar yatak | mavi figürlü halının kenarı",
-      "emotional_weight": 0.525,
+      "text": "küçük mutfak tezgahı üzerinde oyalanıyor",
+      "transformed_text": "küçük mutfak tezgahı üzerinde oyalanıyor | küçük mutfak tezgahı | salondaki gri koltuk",
+      "emotional_weight": 0.635,
       "repression": 0.15,
       "mutation_rate": 0.25,
       "linked_traces": [],
@@ -19,18 +19,18 @@
       "times_recalled": 0,
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
-      "id": "mem_2026-06-29_daily_life_attention_488cd4dbe34f",
-      "recallability": 0.783,
+      "id": "mem_2026-06-29_daily_life_attention_0bbb6386e4bf",
+      "recallability": 0.827,
       "decay": 0,
-      "status": "active"
+      "status": "overexposed"
     },
     {
       "date": "2026-06-29",
       "source": "daily_life",
       "source_ref": "data/daily_life/2026-06-29.json#avoidance",
       "kind": "avoidance",
-      "text": "kendi romantikliğini fark etmek",
-      "transformed_text": "kendi romantikliğini fark etmek | eski sesler bugün çekmecelerin kapanmasına izin vermiyor.",
+      "text": "günün kendini açıklama isteği",
+      "transformed_text": "günün kendini açıklama isteği | eski sesler bugün çekmecelerin kapanmasına izin vermiyor.",
       "emotional_weight": 0.63,
       "repression": 0.82,
       "mutation_rate": 0.45,
@@ -41,7 +41,7 @@
       "times_recalled": 0,
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
-      "id": "mem_2026-06-29_daily_life_avoidance_269aa7d44f22",
+      "id": "mem_2026-06-29_daily_life_avoidance_0e79076d7597",
       "recallability": 0.704,
       "decay": 0,
       "status": "suppressed"
@@ -51,9 +51,9 @@
       "source": "daily_life",
       "source_ref": "data/daily_life/2026-06-29.json#body_state",
       "kind": "body",
-      "text": "bacakları uykudan yeni çıkmış gibi sıcak",
-      "transformed_text": "bacakları uykudan yeni çıkmış gibi sıcak | hava yüzünde ince bir açıklık bırakıyor | öne eğilmiş",
-      "emotional_weight": 0.467,
+      "text": "dili kuru, gövdesi nemli ve ağır",
+      "transformed_text": "dili kuru, gövdesi nemli ve ağır | nem gövdesine yapışıyor | uzanmış",
+      "emotional_weight": 0.433,
       "repression": 0.15,
       "mutation_rate": 0.2,
       "linked_traces": [],
@@ -63,35 +63,35 @@
       "times_recalled": 0,
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
-      "id": "mem_2026-06-29_daily_life_body_9e2ab4340d5a",
-      "recallability": 0.76,
+      "id": "mem_2026-06-29_daily_life_body_7864711476b2",
+      "recallability": 0.746,
       "decay": 0,
-      "status": "active"
+      "status": "overexposed"
     },
     {
       "date": "2026-06-29",
       "source": "poem",
       "source_ref": "data/generated_poems/2026-06-29.json",
       "kind": "episodic",
-      "text": "anlatmak kayması",
-      "transformed_text": "Bugünkü hali: Şefkatle örülü bir yorgunluk, absürt kıyılarında gezinen dikkatin parıltıları. | figür, deniz",
-      "emotional_weight": 0.57,
+      "text": "Gölgelerle Dalga Geçmek",
+      "transformed_text": "Bugünkü hali: İçinden geçenleri toparlayamayan ve çevresinde olup biteni biraz bulanık gören, yorgun ama hala şefkatle bağlı, absürt anlarla örülü bir ruh hali.",
+      "emotional_weight": 0.64,
       "repression": 0.15,
       "mutation_rate": 0.35,
       "linked_traces": [
-        "mem_2026-06-29_daily_life_attention_488cd4dbe34f",
-        "mem_2026-06-29_daily_life_avoidance_269aa7d44f22",
-        "mem_2026-06-29_daily_life_body_9e2ab4340d5a",
-        "mem_2026-06-29_source_external_pressure_11eaea31ba01",
+        "mem_2026-06-29_daily_life_attention_0bbb6386e4bf",
+        "mem_2026-06-29_daily_life_avoidance_0e79076d7597",
+        "mem_2026-06-29_daily_life_body_7864711476b2",
+        "mem_2026-06-29_source_external_pressure_1dcfba797301",
         "mem_2026-06-29_source_external_pressure_264efe84a049",
         "mem_2026-06-29_source_external_pressure_a8ef0ec63067",
         "mem_2026-06-29_source_external_pressure_b4abd6c1dadb",
         "mem_2026-06-29_source_external_pressure_bc6f86940f01",
-        "mem_2026-06-29_walk_route_5193e8052283"
+        "mem_2026-06-29_walk_route_02494834221a"
       ],
       "mood_tags": [
-        "tenderness",
         "fatigue",
+        "tenderness",
         "absurdity"
       ],
       "origin": "observed",
@@ -99,8 +99,8 @@
       "times_recalled": 0,
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
-      "id": "mem_2026-06-29_poem_episodic_0d5ac2ee127e",
-      "recallability": 0.801,
+      "id": "mem_2026-06-29_poem_episodic_2de1b3bbb771",
+      "recallability": 0.829,
       "decay": 0,
       "status": "active"
     },
@@ -109,28 +109,28 @@
       "source": "source",
       "source_ref": "data/source_digests/2026-06-29.json#source_influence_packet:news",
       "kind": "external_pressure",
-      "text": "news | pressure / mood_pressure | fatigue / anger / clarity",
-      "transformed_text": "basınç / gündelik / politik / ağırlaşan; doğrudan yanıt vermeyen soru dönüşü",
-      "emotional_weight": 0.475,
+      "text": "news | pressure / mood_pressure | fatigue / anger / melancholy",
+      "transformed_text": "gündelik yaşamın karmaşası hissediliyor; olayların etkisi anlatılıyor",
+      "emotional_weight": 0.473,
       "repression": 0.35,
-      "mutation_rate": 0.3,
+      "mutation_rate": 0.297,
       "linked_traces": [
-        "mem_2026-06-29_daily_life_attention_488cd4dbe34f",
-        "mem_2026-06-29_daily_life_avoidance_269aa7d44f22",
-        "mem_2026-06-29_daily_life_body_9e2ab4340d5a"
+        "mem_2026-06-29_daily_life_attention_0bbb6386e4bf",
+        "mem_2026-06-29_daily_life_avoidance_0e79076d7597",
+        "mem_2026-06-29_daily_life_body_7864711476b2"
       ],
       "mood_tags": [
         "fatigue",
         "anger",
-        "clarity"
+        "melancholy"
       ],
       "origin": "observed",
       "last_recalled_at": null,
       "times_recalled": 0,
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
-      "id": "mem_2026-06-29_source_external_pressure_11eaea31ba01",
-      "recallability": 0.727,
+      "id": "mem_2026-06-29_source_external_pressure_1dcfba797301",
+      "recallability": 0.726,
       "decay": 0,
       "status": "active"
     },
@@ -140,14 +140,14 @@
       "source_ref": "data/source_digests/2026-06-29.json#source_influence_packet:art",
       "kind": "external_pressure",
       "text": "art | aesthetic_learning / image_expansion | clarity / desire / hope",
-      "transformed_text": "basıncı / duvarı / görüntü / sergi; cümle ortasında yön değiştiren bağlantı",
+      "transformed_text": "insan ve doğa arasındaki ilişki derinleşiyor; duygu durumu aktarılıyor",
       "emotional_weight": 0.6,
       "repression": 0.19,
       "mutation_rate": 0.733,
       "linked_traces": [
-        "mem_2026-06-29_daily_life_attention_488cd4dbe34f",
-        "mem_2026-06-29_daily_life_avoidance_269aa7d44f22",
-        "mem_2026-06-29_daily_life_body_9e2ab4340d5a"
+        "mem_2026-06-29_daily_life_attention_0bbb6386e4bf",
+        "mem_2026-06-29_daily_life_avoidance_0e79076d7597",
+        "mem_2026-06-29_daily_life_body_7864711476b2"
       ],
       "mood_tags": [
         "clarity",
@@ -170,14 +170,14 @@
       "source_ref": "data/source_digests/2026-06-29.json#source_influence_packet:entertainment",
       "kind": "external_pressure",
       "text": "entertainment | rhythm_shift / attention_shift | absurdity / clarity / desire",
-      "transformed_text": "ışık / sahne / tuhaflaşan / yapay; doğrudan yanıt vermeyen soru dönüşü",
+      "transformed_text": "gündelik yaşamın karmaşası hissediliyor; etkinlik duyuruluyor",
       "emotional_weight": 0.57,
       "repression": 0.202,
       "mutation_rate": 0.673,
       "linked_traces": [
-        "mem_2026-06-29_daily_life_attention_488cd4dbe34f",
-        "mem_2026-06-29_daily_life_avoidance_269aa7d44f22",
-        "mem_2026-06-29_daily_life_body_9e2ab4340d5a"
+        "mem_2026-06-29_daily_life_attention_0bbb6386e4bf",
+        "mem_2026-06-29_daily_life_avoidance_0e79076d7597",
+        "mem_2026-06-29_daily_life_body_7864711476b2"
       ],
       "mood_tags": [
         "absurdity",
@@ -200,14 +200,14 @@
       "source_ref": "data/source_digests/2026-06-29.json#source_influence_packet:life",
       "kind": "external_pressure",
       "text": "life | memory_association / attention_shift | tenderness / hope / desire",
-      "transformed_text": "basınç / gündelik / politik / ağırlaşan; cümle ortasında yön değiştiren bağlantı",
+      "transformed_text": "insan ve doğa arasındaki ilişki derinleşiyor; bilimsel keşifler özetleniyor",
       "emotional_weight": 0.395,
       "repression": 0.198,
       "mutation_rate": 0.447,
       "linked_traces": [
-        "mem_2026-06-29_daily_life_attention_488cd4dbe34f",
-        "mem_2026-06-29_daily_life_avoidance_269aa7d44f22",
-        "mem_2026-06-29_daily_life_body_9e2ab4340d5a"
+        "mem_2026-06-29_daily_life_attention_0bbb6386e4bf",
+        "mem_2026-06-29_daily_life_avoidance_0e79076d7597",
+        "mem_2026-06-29_daily_life_body_7864711476b2"
       ],
       "mood_tags": [
         "tenderness",
@@ -230,14 +230,14 @@
       "source_ref": "data/source_digests/2026-06-29.json#source_influence_packet:science_culture",
       "kind": "external_pressure",
       "text": "science_culture | conceptual_drift / vocabulary_learning | clarity / hope / melancholy",
-      "transformed_text": "açılan / bilgi / burada / derin; kesintili cümle hareketi",
+      "transformed_text": "toplumsal sorunlara duyarlılık artıyor; bilgi veriliyor",
       "emotional_weight": 0.458,
       "repression": 0.192,
       "mutation_rate": 0.54,
       "linked_traces": [
-        "mem_2026-06-29_daily_life_attention_488cd4dbe34f",
-        "mem_2026-06-29_daily_life_avoidance_269aa7d44f22",
-        "mem_2026-06-29_daily_life_body_9e2ab4340d5a"
+        "mem_2026-06-29_daily_life_attention_0bbb6386e4bf",
+        "mem_2026-06-29_daily_life_avoidance_0e79076d7597",
+        "mem_2026-06-29_daily_life_body_7864711476b2"
       ],
       "mood_tags": [
         "clarity",
@@ -259,15 +259,15 @@
       "source": "walk",
       "source_ref": "data/generated_poems/2026-06-29.json#walk_state",
       "kind": "route",
-      "text": "park içi yürüyüş",
-      "transformed_text": "park içi yürüyüş | hava yüzünde ince bir açıklık bırakıyor | köpek tasması, parkta unutulmuş bardak, kırmızı ışıkta bekleyen biri, sabah vapuru sesi | apartmanlar sabahı küçük küçük çiğnedi",
-      "emotional_weight": 0.57,
+      "text": "Yoğurtçu Parkı",
+      "transformed_text": "Yoğurtçu Parkı | nem gövdesine yapışıyor | uzaktan deniz, parkta unutulmuş bardak, köpek tasması, sabah vapuru sesi | park ağzını içime doğru açtı",
+      "emotional_weight": 0.64,
       "repression": 0.15,
       "mutation_rate": 0.3,
       "linked_traces": [],
       "mood_tags": [
-        "tenderness",
         "fatigue",
+        "tenderness",
         "absurdity"
       ],
       "origin": "observed",
@@ -275,8 +275,8 @@
       "times_recalled": 0,
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
-      "id": "mem_2026-06-29_walk_route_5193e8052283",
-      "recallability": 0.801,
+      "id": "mem_2026-06-29_walk_route_02494834221a",
+      "recallability": 0.829,
       "decay": 0,
       "status": "active"
     }
