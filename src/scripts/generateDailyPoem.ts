@@ -25,7 +25,7 @@ import { analyzeRepetitionPressure } from "../lib/repetitionPressure";
 import { createPoemVisual } from "../lib/visualEngine";
 import { reconcileVisualImagePath, visualImageStatus } from "../lib/visualFileStatus";
 import { maybeCreateYearlyReport } from "../lib/yearlyReport";
-import type { DailyPoem, GenerationContext } from "../lib/types";
+import type { DailyPoem, GenerationContext, VisualMetadata } from "../lib/types";
 
 async function main(): Promise<void> {
   await ensureDataDirs();
@@ -57,22 +57,27 @@ async function main(): Promise<void> {
         console.log(JSON.stringify({ stage: "daily_life", status: "skipped", reason: "already exists", date }));
       }
       const visualPath = `${storagePaths.visuals}/${date}-poem.json`;
-      const refreshedVisual = createPoemVisual(existingPoem);
-      const storedVisual = await readJsonFile<typeof refreshedVisual | null>(visualPath, null);
-      const preparedVisual = await reconcileVisualImagePath(
-        storedVisual
-          ? {
-              ...refreshedVisual,
-              ...storedVisual,
-              visual_prompt: refreshedVisual.visual_prompt,
-              negative_prompt: refreshedVisual.negative_prompt,
-              style_tags: refreshedVisual.style_tags
-            }
-          : refreshedVisual
-      );
-      const visual = preparedVisual.hadUsableImage
-        ? preparedVisual.visual
-        : await generateVisualImage(preparedVisual.visual);
+      const storedVisual = await readJsonFile<VisualMetadata | null>(visualPath, null);
+      const storedPreparedVisual = storedVisual ? await reconcileVisualImagePath(storedVisual) : null;
+      const visual = storedPreparedVisual?.hadUsableImage
+        ? storedPreparedVisual.visual
+        : await (async () => {
+            const refreshedVisual = await createPoemVisual(existingPoem);
+            const preparedVisual = await reconcileVisualImagePath(
+              storedVisual
+                ? {
+                    ...refreshedVisual,
+                    ...storedVisual,
+                    visual_prompt: refreshedVisual.visual_prompt,
+                    negative_prompt: refreshedVisual.negative_prompt,
+                    visual_brief: refreshedVisual.visual_brief,
+                    visual_brief_generation: refreshedVisual.visual_brief_generation,
+                    style_tags: refreshedVisual.style_tags
+                  }
+                : refreshedVisual
+            );
+            return generateVisualImage(preparedVisual.visual);
+          })();
       await writeJsonFile(visualPath, visual);
       console.log(
         JSON.stringify({
@@ -155,7 +160,7 @@ async function main(): Promise<void> {
       language_retry_count: poem.generation.language_retry_count
     })
   );
-  const preparedVisual = await reconcileVisualImagePath(createPoemVisual(poem));
+  const preparedVisual = await reconcileVisualImagePath(await createPoemVisual(poem));
   const visual = preparedVisual.hadUsableImage && !args.force
     ? preparedVisual.visual
     : await generateVisualImage(preparedVisual.visual, { force: args.force });

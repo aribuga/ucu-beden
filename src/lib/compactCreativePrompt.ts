@@ -13,7 +13,8 @@ import type {
   RepetitionPressure,
   SourceDigestRecord,
   SurfaceValidationReport,
-  UcuBedenState
+  UcuBedenState,
+  VisualBrief
 } from "./types";
 
 export type CompactRetryHint = {
@@ -73,7 +74,7 @@ const sourceCueStopTerms = new Set(
 
 const visualSurfaceStopTerms = new Set(
   tokenize(
-    "ev oda salon mutfak koltuk yatak halı masa pencere kapı sokak park apartman kaldırım bank ekran sandalye ayakkabı rota yürüyüş mahalle deniz vapur tasma bardak gövde çekmece eşya market yoğurtçu kalamış osmanağa kadıköy salondaki gri"
+    "şiir rüya hafıza dikkat ritim basınç kavramsal estetik çağrışım genel soyut atmosfer görev subject content anchor visual"
   )
 );
 
@@ -336,22 +337,36 @@ function visualCueList(values: string[], limit: number): string[] {
   return distinct(values.map(visualCueValue).filter(Boolean)).slice(0, limit);
 }
 
-export function buildCompactPoemVisualPrompt(poem: DailyPoem): string {
+export function buildCompactPoemVisualPrompt(poem: DailyPoem, visualBrief?: VisualBrief | null): string {
   const moods = dominantMood(poem.mood, 3).join(", ");
   const memoryEffects = visualCueList(poem.memory_selection?.memory_prompt_fragments ?? poem.memory_fragments, 3);
   const sourceEffectsForImage = visualCueList(
     poem.influences.filter((value) => /estetik|ritim|dikkat|cümle|imge|ton/iu.test(value)),
     3
   );
+  const briefLines = visualBrief
+    ? [
+        "Günlük görsel brief: asıl içerik omurgası budur; aşağıdaki açıklamaları, başlıkları ve kelimeleri görselde yazı olarak üretme.",
+        `Görsel subject: ${visualBrief.visual_subject}.`,
+        `İçerik dayanağı: ${visualBrief.content_anchor}.`,
+        `Kompozisyon mantığı: ${visualBrief.composition_logic}.`,
+        `Malzeme mantığı: ${visualBrief.material_logic}.`,
+        `Hareket veya gerilim: ${visualBrief.movement_or_tension}.`,
+        `Bugüne bağ: ${visualBrief.why_today}.`,
+        visualBrief.avoid_repeating.length > 0 ? `Son günlerden tekrar etme: ${visualBrief.avoid_repeating.join(" / ")}.` : ""
+      ]
+    : [
+        "Bugünün şiirinden, mood cümlesinden, hafıza ve kaynak izlerinden tek bir içerik dayanağı çıkar; genel soyut atmosferle yetinme."
+      ];
   return [
     "4:5 portrait aspect ratio.",
     "Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme.",
     "Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı.",
+    ...briefLines,
     `Duygusal iklim: ${moods}; ${truncateWords(poem.mood_sentence, 18)}.`,
     memoryEffects.length > 0 ? `Yüzeye çıkmayan hafıza etkileri: ${memoryEffects.join(" / ")}.` : "",
     sourceEffectsForImage.length > 0 ? `Kaynaklardan kalan estetik, ritim ve dikkat etkisi: ${sourceEffectsForImage.join(" / ")}.` : "",
-    "Oda, koltuk, yatak, masa, pencere, halı, sokak, park ve apartman gibi ev/yer/yürüyüş nesnelerini ana motif yapma.",
-    "Bunun yerine hafıza basıncı, duygusal iklim, çağrışım alanı, ritim kırılması ve dikkat kaymasını görselleştir.",
+    "Oda, koltuk, yatak, masa, pencere, halı, sokak, park, ekran ve apartman gibi ev/yer/yürüyüş izleri bugünkü veriden geliyorsa doğrudan sahne veya tanınır nesne olarak değil; iz, kalıntı, deformasyon, gölge, yüzey, leke, kırık form veya iç doku olarak dönüştür.",
     "Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık siluetler ve lo-fi yüzey gürültüsüyle doldur.",
     "Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay."
   ].filter(Boolean).join(" ");

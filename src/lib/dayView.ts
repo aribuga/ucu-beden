@@ -2,7 +2,7 @@ import { createDailyLifeRecord } from "./dayStateEngine";
 import { listDreams, readDailyLife, readVisual } from "./fileStorage";
 import { todayInIstanbul } from "./scheduler";
 import type { DailyPoem, PersonalitySettings, UcuBedenState } from "./types";
-import { createDreamVisual, createPoemVisual } from "./visualEngine";
+import { createDreamVisual, createPoemVisualFallback } from "./visualEngine";
 
 export async function resolvePoemDayView(
   poem: DailyPoem,
@@ -33,7 +33,7 @@ export async function resolvePoemDayView(
   return {
     dailyLife,
     dream,
-    poemVisual: storedPoemVisual ?? createPoemVisual(poem),
+    poemVisual: storedPoemVisual ?? createPoemVisualFallback(poem),
     dreamVisual: dream ? storedDreamVisual ?? createDreamVisual(dream) : null,
     isHistorical: poem.date !== todayInIstanbul()
   };

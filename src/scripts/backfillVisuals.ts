@@ -94,7 +94,7 @@ async function main(): Promise<void> {
     date: string;
     kind: VisualKind;
     visualPath: string;
-    createVisual: () => VisualMetadata;
+    createVisual: () => VisualMetadata | Promise<VisualMetadata>;
     stats: BackfillStats;
     updateDream?: (visual: VisualMetadata) => Promise<void>;
   }) => {
@@ -106,46 +106,48 @@ async function main(): Promise<void> {
         return;
       }
       const stored = exists ? await readJsonFile<VisualMetadata | null>(visualPath, null) : null;
-      const refreshed = createVisual();
-      const visual = stored
-        ? {
-            ...refreshed,
-            ...stored,
-            visual_prompt: refreshed.visual_prompt,
-            negative_prompt: refreshed.negative_prompt,
-            style_tags: refreshed.style_tags
-          }
-        : refreshed;
-      if (!stored) stats.metadata_created += 1;
-
-      const reconciled = await reconcileVisualImagePath(visual);
-      if (reconciled.repaired) {
-        await writeJsonFile(visualPath, reconciled.visual);
-        await updateDream?.(reconciled.visual);
+      const storedReconciled = stored ? await reconcileVisualImagePath(stored) : null;
+      if (storedReconciled?.repaired) {
+        await writeJsonFile(visualPath, storedReconciled.visual);
+        await updateDream?.(storedReconciled.visual);
         stats.path_repaired += 1;
         console.log(
           JSON.stringify({
             stage: "visual_backfill_item",
-            status: reconciled.hadUsableImage
+            status: storedReconciled.hadUsableImage
               ? "path_repaired"
-              : reconciled.reason === "missing_file" || reconciled.reason === "missing_image_path"
+              : storedReconciled.reason === "missing_file" || storedReconciled.reason === "missing_image_path"
                 ? "missing_path_cleared"
                 : "invalid_image_cleared",
             type: kind,
             date,
-            image_path: reconciled.visual.image_path,
-            reason: reconciled.reason
+            image_path: storedReconciled.visual.image_path,
+            reason: storedReconciled.reason
           })
         );
       }
 
-      if (!force && (await visualImageIsUsable(reconciled.visual))) {
+      if (storedReconciled && !force && (await visualImageIsUsable(storedReconciled.visual))) {
         stats.skipped += 1;
         stats.skipped_dates.push(date);
         return;
       }
 
-      const generated = await generateVisualImage(reconciled.visual, { force });
+      const refreshed = await createVisual();
+      const visual = storedReconciled
+        ? {
+            ...refreshed,
+            ...storedReconciled.visual,
+            visual_prompt: refreshed.visual_prompt,
+            negative_prompt: refreshed.negative_prompt,
+            visual_brief: refreshed.visual_brief,
+            visual_brief_generation: refreshed.visual_brief_generation,
+            style_tags: refreshed.style_tags
+          }
+        : refreshed;
+      if (!stored) stats.metadata_created += 1;
+
+      const generated = await generateVisualImage(visual, { force });
       await writeJsonFile(visualPath, generated);
       await updateDream?.(generated);
       attempted += 1;

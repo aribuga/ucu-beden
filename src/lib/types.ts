@@ -500,6 +500,25 @@ export type DailyPoem = {
 
 export type VisualKind = "poem" | "dream";
 
+export type VisualBrief = {
+  visual_subject: string;
+  content_anchor: string;
+  composition_logic: string;
+  material_logic: string;
+  movement_or_tension: string;
+  why_today: string;
+  avoid_repeating: string[];
+};
+
+export type VisualBriefGenerationMeta = {
+  provider: "openai" | "fallback";
+  model: string | null;
+  fallback_reason: string | null;
+  retry_count: number;
+  similar_to_recent: boolean;
+  generated_at: string;
+};
+
 export type VisualMetadata = {
   date: string;
   type: VisualKind;
@@ -520,6 +539,8 @@ export type VisualMetadata = {
   prompt_hash?: string;
   fallback?: boolean;
   error?: string | null;
+  visual_brief?: VisualBrief | null;
+  visual_brief_generation?: VisualBriefGenerationMeta | null;
   style_tags: string[];
   fallback_palette: [string, string, string];
   fallback_seed: number;
