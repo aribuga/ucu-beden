@@ -69,7 +69,7 @@ function promptFor(visual: VisualMetadata): string {
     sharedStyle,
     "Absolute image rule: no visible text of any kind. Do not render letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, UI text, or fake alphabets.",
     "Technical visibility rule: the final image must be fully opaque and visibly filled. Do not create transparent pixels, alpha masks, empty gradients, or a nearly blank background.",
-    "Mandatory composition rule: include at least four distinct non-text visual elements, such as a dark soft-edged silhouette, a wave-like or spiral form, torn color blocks, stained paper texture, scratch/noise patterns, shadow layers, or glowing non-letter marks. The image should be visibly composed, not just a smooth background.",
+    "Mandatory composition rule: include at least four distinct non-text visual elements, such as a dense stained surface, warped object fragment, folded textile-like shape, liquid mark, broken color mass, cloudy pressure field, deformed domestic surface, soft geometric residue, torn color blocks, stained paper texture, scratch/noise patterns, shadow layers, or glowing non-letter marks. The image should be visibly composed, not just a smooth background.",
     `Avoid: ${visual.negative_prompt}; no premium concept art, no hyperrealistic render, no text, no typography, no UI mockup inside the image.`,
     "Compose for a 4:5 portrait crop. Keep important visual material away from the extreme top and bottom edges."
   ].join("\n\n");

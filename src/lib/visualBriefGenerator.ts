@@ -347,7 +347,7 @@ function visualBriefTooSimilar(candidate: VisualBrief, recent: RecentVisualBrief
   const candidateTerms = similarityTerms(textForSimilarity(candidate));
   const candidateSubjectTerms = similarityTerms(candidate.visual_subject);
   const repeatedWeakRoots = candidateSubjectTerms.filter((term) =>
-    matchesRoot(term, [...abstractSubjectRoots, "gölge", "leke", "yüzey", "siluet", "doku", "kalınt", "iz"])
+    matchesRoot(term, [...abstractSubjectRoots, "gölge", "leke", "yüzey", "doku", "kalınt", "iz"])
   );
   return recent.some((brief) => {
     const previousSubject = brief.visual_subject.toLocaleLowerCase("tr");
@@ -515,12 +515,14 @@ function buildVisualBriefPrompt(input: GenerateVisualBriefWithLLMInput, rejected
     "Stil seçme, estetik preset verme, kalite/model/aspect ratio önerme; stil katmanı başka yerde sabit.",
     "Sabit kategori listesinden seçim yapma. Bugünün visual_subject'i şiirden, ruh halinden, günlük hayattan, hafızadan ve kaynak etkilerinden organik türesin.",
     "visual_subject şiir başlığı, kategori adı, genel soyut atmosfer veya tekrar eden görev cümlesi olmasın.",
-    "visual_subject 8-16 kelimelik fiziksel bir görsel omurga olsun: günlük hayattan gelen bir nesne/beden/yer izi + dönüşmüş yüzey/kalıntı/deformasyon + küçük bir hareket.",
+    "visual_subject 8-16 kelimelik fiziksel bir görsel omurga olsun: günlük hayattan gelen bir nesne/yüzey/yer izi + dönüşmüş yüzey/kalıntı/deformasyon + küçük bir hareket.",
     "visual_subject şefkat, tereddüt, hafıza, dikkat, yorgunluk, gölge gibi soyut kelimelere yaslanmasın. Bu kelimeler gerekiyorsa content_anchor veya why_today içinde kalsın; subject fiziksel kalmalı.",
     "Geçersiz subject örnekleri: Şefkatin Tereddütlü Gölgesi; Hafızanın İnce Kırılması; Dikkatin Yorgun Lekesi.",
-    "Geçerli subject örnekleri: mavi figürlü halının kenarında çoğalan yarı saydam ayak izleri; dar yatağın kenarından sızan sıcak bacak lekesi; çekmece aralığında biriken eski ses tortusu; ekran ışığında yamulan küçük beden haritası.",
+    "Geçerli subject örnekleri: mavi figürlü halının kenarında çoğalan yarı saydam ayak izleri; dar yatağın kenarından sızan sıcak kumaş lekesi; çekmece aralığında biriken eski ses tortusu; ekran ışığında yamulan küçük yüzey haritası.",
     "Subject şiirin doğrudan illüstrasyonu olmasın; şiirin içinden sonra bulunmuş görsel bir gerekçe gibi dursun.",
     "Oda, koltuk, yatak, sokak, ekran, park, masa, pencere gibi şeyleri tamamen yasaklama. Bugünkü veriden geliyorlarsa bunları doğrudan sahne/nesne olarak değil; iz, kalıntı, deformasyon, gölge, yüzey, leke, kırık form veya iç doku olarak dönüştür.",
+    "Do not use human figure, person, face, body silhouette, standing figure, portrait-like shadow unless the poem explicitly requires it.",
+    "Günlük veride 'gövde' geçiyorsa bunu insan bedeni gibi değil; yüzey ağırlığı, kütle baskısı, nesne hacmi veya deforme olmuş ev içi yüzey olarak yorumla.",
     "Görselde kelime, harf, başlık, etiket, logo, tabela veya okunur işaret önermemelisin.",
     "Önceki günlerin subject'lerini, kompozisyon mantığını, malzeme metaforlarını ve görsel bahanesini tekrar etme.",
     "",
