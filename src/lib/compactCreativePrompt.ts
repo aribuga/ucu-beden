@@ -358,14 +358,23 @@ export function buildCompactPoemVisualPrompt(poem: DailyPoem, visualBrief?: Visu
     : [
         "Bugünün şiirinden, mood cümlesinden, hafıza ve kaynak izlerinden tek bir içerik dayanağı çıkar; genel soyut atmosferle yetinme."
       ];
+  const contextLines = visualBrief
+    ? [
+        `Mood yalnızca renk basıncı ve hareket gerilimini ayarlasın: ${moods}.`,
+        memoryEffects.length > 0 ? `Brief'i gölgelemeyen küçük yüzey notları: ${memoryEffects.join(" / ")}.` : "",
+        sourceEffectsForImage.length > 0 ? `Kaynak etkileri yalnızca doku ve ritim ayrıntısı olarak kalsın: ${sourceEffectsForImage.join(" / ")}.` : ""
+      ]
+    : [
+        `Duygusal iklim: ${moods}; ${truncateWords(poem.mood_sentence, 18)}.`,
+        memoryEffects.length > 0 ? `Yüzeye çıkmayan hafıza etkileri: ${memoryEffects.join(" / ")}.` : "",
+        sourceEffectsForImage.length > 0 ? `Kaynaklardan kalan estetik, ritim ve dikkat etkisi: ${sourceEffectsForImage.join(" / ")}.` : ""
+      ];
   return [
     "4:5 portrait aspect ratio.",
     "Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme.",
     "Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı.",
     ...briefLines,
-    `Duygusal iklim: ${moods}; ${truncateWords(poem.mood_sentence, 18)}.`,
-    memoryEffects.length > 0 ? `Yüzeye çıkmayan hafıza etkileri: ${memoryEffects.join(" / ")}.` : "",
-    sourceEffectsForImage.length > 0 ? `Kaynaklardan kalan estetik, ritim ve dikkat etkisi: ${sourceEffectsForImage.join(" / ")}.` : "",
+    ...contextLines,
     "Oda, koltuk, yatak, masa, pencere, halı, sokak, park, ekran ve apartman gibi ev/yer/yürüyüş izleri bugünkü veriden geliyorsa doğrudan sahne veya tanınır nesne olarak değil; iz, kalıntı, deformasyon, gölge, yüzey, leke, kırık form veya iç doku olarak dönüştür.",
     "Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık siluetler ve lo-fi yüzey gürültüsüyle doldur.",
     "Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay."
