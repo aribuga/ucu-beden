@@ -1,7 +1,7 @@
 {
   "version": 1,
   "built_through": "2026-07-05",
-  "trace_count": 358,
+  "trace_count": 359,
   "trace_ids": [
     "mem_2026-06-04_daily_life_attention_379f81945234",
     "mem_2026-06-04_daily_life_avoidance_051abe89a021",
@@ -354,6 +354,7 @@
     "mem_2026-07-05_daily_life_attention_9db31d3e6201",
     "mem_2026-07-05_daily_life_avoidance_b8f01c9d8e07",
     "mem_2026-07-05_daily_life_body_cd8b7495c98f",
+    "mem_2026-07-05_dream_dream_return_a297a55856b5",
     "mem_2026-07-05_poem_episodic_7ddcc002a7eb",
     "mem_2026-07-05_source_external_pressure_1199d3c2c794",
     "mem_2026-07-05_source_external_pressure_493f311e8015",
@@ -777,6 +778,7 @@
       "mem_2026-07-05_daily_life_attention_9db31d3e6201",
       "mem_2026-07-05_daily_life_avoidance_b8f01c9d8e07",
       "mem_2026-07-05_daily_life_body_cd8b7495c98f",
+      "mem_2026-07-05_dream_dream_return_a297a55856b5",
       "mem_2026-07-05_poem_episodic_7ddcc002a7eb",
       "mem_2026-07-05_source_external_pressure_1199d3c2c794",
       "mem_2026-07-05_source_external_pressure_493f311e8015",
@@ -852,7 +854,8 @@
       "mem_2026-07-01_dream_dream_return_0e2e9ad8ec48",
       "mem_2026-07-02_dream_dream_return_b0b0db3b99a3",
       "mem_2026-07-03_dream_dream_return_94167f437d69",
-      "mem_2026-07-04_dream_dream_return_28a8e53bbcac"
+      "mem_2026-07-04_dream_dream_return_28a8e53bbcac",
+      "mem_2026-07-05_dream_dream_return_a297a55856b5"
     ],
     "daily_life": [
       "mem_2026-06-04_daily_life_attention_379f81945234",
@@ -1270,7 +1273,6 @@
       "mem_2026-06-28_source_external_pressure_3ddc70be7c74",
       "mem_2026-06-28_source_external_pressure_a62fe5d58d24",
       "mem_2026-06-29_poem_episodic_b4c6af79480c",
-      "mem_2026-06-29_source_external_pressure_11eaea31ba01",
       "mem_2026-06-29_source_external_pressure_a8ef0ec63067",
       "mem_2026-06-29_source_external_pressure_b4abd6c1dadb",
       "mem_2026-06-29_source_external_pressure_bc6f86940f01",
@@ -1323,8 +1325,6 @@
       "mem_2026-06-04_daily_life_avoidance_051abe89a021",
       "mem_2026-06-05_daily_life_avoidance_32cc4d464dd3",
       "mem_2026-06-06_daily_life_avoidance_00eb5118bf2f",
-      "mem_2026-06-07_daily_life_avoidance_7339d4b54db1",
-      "mem_2026-07-02_daily_life_avoidance_5cae4b0db5ef",
       "mem_2026-07-03_daily_life_avoidance_a9d56f2bacc5",
       "mem_2026-07-04_daily_life_avoidance_f189d8a4477a",
       "mem_2026-07-05_daily_life_avoidance_b8f01c9d8e07"
@@ -1339,6 +1339,7 @@
       "mem_2026-06-06_daily_life_body_86b581178549",
       "mem_2026-06-06_source_external_pressure_15f46c7532d1",
       "mem_2026-06-07_daily_life_attention_642cdbc140dc",
+      "mem_2026-06-07_daily_life_avoidance_7339d4b54db1",
       "mem_2026-06-07_daily_life_body_81a961b24be4",
       "mem_2026-06-07_source_external_pressure_b12cecdbe093",
       "mem_2026-06-08_daily_life_attention_992a6a6059a8",
@@ -1479,12 +1480,15 @@
       "mem_2026-06-29_daily_life_avoidance_0e79076d7597",
       "mem_2026-06-29_daily_life_body_9e2ab4340d5a",
       "mem_2026-06-29_dream_dream_return_5739fd969e8b",
+      "mem_2026-06-29_source_external_pressure_11eaea31ba01",
       "mem_2026-06-30_daily_life_avoidance_354cdb87d192",
       "mem_2026-06-30_dream_dream_return_5114294ace2a",
       "mem_2026-07-01_daily_life_avoidance_c0ec8446faaf",
       "mem_2026-07-01_daily_life_body_78eb3a2ea6a3",
       "mem_2026-07-01_dream_dream_return_0e2e9ad8ec48",
+      "mem_2026-07-02_daily_life_avoidance_5cae4b0db5ef",
       "mem_2026-07-03_daily_life_body_2546670ae938",
+      "mem_2026-07-03_dream_dream_return_94167f437d69",
       "mem_2026-07-04_source_external_pressure_16f7d2467e0b",
       "mem_2026-07-04_source_external_pressure_8ecba20b6c36",
       "mem_2026-07-04_source_external_pressure_cb3506c692ae"
@@ -1522,10 +1526,10 @@
       "mem_2026-07-01_source_external_pressure_a5d9834c2b32",
       "mem_2026-07-02_dream_dream_return_b0b0db3b99a3",
       "mem_2026-07-02_source_external_pressure_f7470d6466f0",
-      "mem_2026-07-03_dream_dream_return_94167f437d69",
       "mem_2026-07-03_source_external_pressure_5b8a63e4a0a3",
       "mem_2026-07-04_dream_dream_return_28a8e53bbcac",
       "mem_2026-07-04_source_external_pressure_dc960f11fd60",
+      "mem_2026-07-05_dream_dream_return_a297a55856b5",
       "mem_2026-07-05_source_external_pressure_493f311e8015"
     ]
   }
