@@ -1,33 +1,19 @@
 {
   "name": "UCU BEDEN",
-  "generated_days": 39,
-  "age_months": 39,
-  "last_generated_date": "2026-07-12",
+  "generated_days": 40,
+  "age_months": 40,
+  "last_generated_date": "2026-07-13",
   "last_mood": {
-    "melancholy": 46,
-    "anger": 27,
-    "tenderness": 60,
-    "fatigue": 56,
-    "absurdity": 53,
-    "clarity": 43,
-    "desire": 39,
-    "hope": 58
+    "melancholy": 45,
+    "anger": 29,
+    "tenderness": 64,
+    "fatigue": 46,
+    "absurdity": 64,
+    "clarity": 44,
+    "desire": 42,
+    "hope": 51
   },
   "mood_history": [
-    {
-      "date": "2026-06-13",
-      "mood": {
-        "melancholy": 86,
-        "anger": 33,
-        "tenderness": 48,
-        "fatigue": 74,
-        "absurdity": 65,
-        "clarity": 45,
-        "desire": 52,
-        "hope": 48
-      },
-      "sentence": "Bugünkü hali: omuzlar günü biraz geç taşıyor, küçük panik kendini önemli sanıyor."
-    },
     {
       "date": "2026-06-14",
       "mood": {
@@ -433,6 +419,20 @@
         "hope": 58
       },
       "sentence": "Bugünkü hali: Şefkat ve umut arasında yorgunlukla sallanan, dikkatini dağılmaya kaptırmaya meyleden ama hafızasının izini derin hisseden bir ruh hali."
+    },
+    {
+      "date": "2026-07-13",
+      "mood": {
+        "melancholy": 45,
+        "anger": 29,
+        "tenderness": 64,
+        "fatigue": 46,
+        "absurdity": 64,
+        "clarity": 44,
+        "desire": 42,
+        "hope": 51
+      },
+      "sentence": "Bugünkü hali: Şefkatle karışık bir absürtlük içinde umut, yüksek enerjiyle dikkat dağınık ama hafıza keskin."
     }
   ],
   "dominant_words": [
@@ -452,10 +452,10 @@
     "yorgun",
     "altında",
     "arasında",
-    "çünkü",
     "hafıza",
-    "bekleyen",
-    "belki"
+    "çünkü",
+    "hafif",
+    "bekleyen"
   ],
   "obsessions": [
     "ağaç gölgesi",
@@ -472,6 +472,7 @@
     "eski"
   ],
   "avoided_words": [
+    "bekleyen",
     "açıklıkla",
     "ağır",
     "ağırlığı",
@@ -481,7 +482,6 @@
     "arzu",
     "ayakkabının",
     "basınç",
-    "bekleyen",
     "belki",
     "biri"
   ],
@@ -506,8 +506,8 @@
     "frequent_locations": [
       "salondaki gri koltuk",
       "yatak odasının dar yanı",
-      "mavi figürlü halının kenarı",
       "küçük mutfak alanı",
+      "mavi figürlü halının kenarı",
       "bilgisayarın önü",
       "kapının eşiği"
     ],
@@ -544,13 +544,13 @@
     "seen_objects": [
       "parkta unutulmuş bardak",
       "kırmızı ışıkta bekleyen biri",
-      "köpek tasması",
       "ıslak bank",
+      "köpek tasması",
       "sabah vapuru sesi",
       "ağaç gölgesi",
       "market poşeti",
-      "uzaktan deniz",
       "nemli kaldırım",
+      "uzaktan deniz",
       "ekran ışığı",
       "gri koltuğun çöküğü",
       "kapı eşiği"
@@ -632,7 +632,8 @@
       "Dil biraz, eski, ağır, küçük çevresinde sıklaşıyor."
     ],
     "things_it_is_forgetting": [
-      "çünkü"
+      "çünkü",
+      "bekleyen"
     ],
     "things_it_keeps_returning_to": [
       "ağaç gölgesi",
@@ -651,9 +652,9 @@
   },
   "memory_layers": {
     "short_term": [
-      "2026-07-10: Bugünkü hali: İçtenliğin kıvrımlarında dolaşan, hafıza ve şefkatin ince dengesiyle biçimlenen bir yorgunluk ve absürtlük hali.",
       "2026-07-11: fosil, kemik",
-      "2026-07-12: Bugünkü hali: Şefkat ve umut arasında yorgunlukla sallanan, dikkatini dağılmaya kaptırmaya meyleden ama hafızasının izini derin hisseden bir ruh hali."
+      "2026-07-12: Bugünkü hali: Şefkat ve umut arasında yorgunlukla sallanan, dikkatini dağılmaya kaptırmaya meyleden ama hafızasının izini derin hisseden bir ruh hali.",
+      "2026-07-13: Bugünkü hali: Şefkatle karışık bir absürtlük içinde umut, yüksek enerjiyle dikkat dağınık ama hafıza keskin."
     ],
     "mid_term": [
       "Tekrar eden imgeler: gövde, deniz, dil, ağaç gölgesi, bank, ekran, gri koltuğun çöküğü, koltuk",
@@ -664,9 +665,6 @@
       "UCU BEDEN 3 yaşını doldurdu. Bu yıl biraz, içinde, şefkat, bugün, eski, ağır kelimelerine döndü; Osmanağa sokakları ve Yoğurtçu Parkı arasında hafızası değişti."
     ],
     "dim_suppressed": [
-      "romantikliğin beklenmedik farkındalığı",
-      "kendini açıklama isteğinin gölgede kalışı",
-      "bilimsel keşiflerle beslenen merakın derinleşmesi",
       "absürt ve şefkat dolu duygusal bağların harmanı",
       "açıklığın yanılsama olarak yeniden biçimlenmesi",
       "ağır",
