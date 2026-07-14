@@ -1,13 +1,13 @@
 {
   "date": "2026-07-14",
-  "collected_at": "2026-07-14T08:20:19.470Z",
+  "collected_at": "2026-07-14T09:15:02.133Z",
   "fallback_used": false,
   "weather": {
     "provider": "open-meteo",
-    "summary": "Kadıköy'de 23.7°C; nem 67%, rüzgar 15.7 km/s civarında.",
-    "temperature_c": 23.7,
-    "humidity_percent": 67,
-    "wind_kmh": 15.7,
+    "summary": "Kadıköy'de 24.4°C; nem 65%, rüzgar 16.7 km/s civarında.",
+    "temperature_c": 24.4,
+    "humidity_percent": 65,
+    "wind_kmh": 16.7,
     "body_effect": "hava yüzünde ince bir açıklık bırakıyor"
   },
   "turkey_news": {
@@ -21,8 +21,8 @@
       "ağırlaşan",
       "içeride",
       "kabaran",
-      "ablukayı",
-      "açıkladı"
+      "yönelik",
+      "ablukayı"
     ]
   },
   "art_world": {
@@ -42,6 +42,37 @@
   },
   "rss": {
     "items": [
+      {
+        "title": "Suça sürüklenen çocuklara yönelik düzenleme Meclis'e sunuldu",
+        "source": "BBC Türkçe",
+        "category": "news",
+        "url": "https://www.bbc.com/turkce/articles/cp8l8vrd5gyo?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Tue, 14 Jul 2026 08:56:17 GMT",
+        "moodTags": [
+          "fatigue",
+          "anger",
+          "melancholy"
+        ],
+        "moodScores": {
+          "melancholy": 4,
+          "anger": 9,
+          "tenderness": 2,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 3,
+          "desire": 2,
+          "hope": 0
+        },
+        "keywords": [
+          "sürüklenen",
+          "çocuklara",
+          "sunuldu",
+          "yönelik",
+          "ceza",
+          "çocuk"
+        ],
+        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
+      },
       {
         "title": "Özel'in 'yeni parti' planı: Dilekçe hazır, zamanlama 22 Temmuz'da netleşecek",
         "source": "BBC Türkçe",
@@ -101,37 +132,6 @@
           "bekleniyor",
           "bekliyor",
           "görüşecek"
-        ],
-        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
-      },
-      {
-        "title": "Ahbap operasyonunda yeni gözaltılar",
-        "source": "BBC Türkçe",
-        "category": "news",
-        "url": "https://www.bbc.com/turkce/articles/c24ye7d207no?at_medium=RSS&at_campaign=rss",
-        "publishedAt": "Tue, 14 Jul 2026 07:18:38 GMT",
-        "moodTags": [
-          "fatigue",
-          "anger",
-          "clarity"
-        ],
-        "moodScores": {
-          "melancholy": 2,
-          "anger": 9,
-          "tenderness": 2,
-          "fatigue": 10,
-          "absurdity": 0,
-          "clarity": 3,
-          "desire": 2,
-          "hope": 2
-        },
-        "keywords": [
-          "alındı",
-          "gözaltına",
-          "kapsamında",
-          "soruşturma",
-          "aklama",
-          "başkanı"
         ],
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
@@ -198,11 +198,11 @@
         "shortAtmosphere": "içeride kabaran gündelik politik basınç"
       },
       {
-        "title": "Komedyen Tuba UIu'nun Sultan Süleyman şakasından yargılandığı dava bugün",
+        "title": "Ahbap operasyonunda yeni gözaltılar",
         "source": "BBC Türkçe",
         "category": "news",
-        "url": "https://www.bbc.com/turkce/articles/c9q22p9pq3vo?at_medium=RSS&at_campaign=rss",
-        "publishedAt": "Tue, 14 Jul 2026 06:34:26 GMT",
+        "url": "https://www.bbc.com/turkce/articles/c24ye7d207no?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Tue, 14 Jul 2026 07:18:38 GMT",
         "moodTags": [
           "fatigue",
           "anger",
@@ -210,21 +210,21 @@
         ],
         "moodScores": {
           "melancholy": 2,
-          "anger": 7,
+          "anger": 9,
           "tenderness": 2,
           "fatigue": 10,
-          "absurdity": 2,
+          "absurdity": 0,
           "clarity": 3,
-          "desire": 0,
-          "hope": 0
+          "desire": 2,
+          "hope": 2
         },
         "keywords": [
-          "dava",
-          "davaya",
-          "devam",
-          "edilecek",
-          "gösterisinde",
-          "hakkında"
+          "alındı",
+          "gözaltına",
+          "kapsamında",
+          "soruşturma",
+          "aklama",
+          "başkanı"
         ],
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
@@ -912,10 +912,10 @@
         "ağırlaşan",
         "içeride",
         "kabaran",
+        "yönelik",
         "ablukayı",
         "açıkladı",
-        "açıklamada",
-        "açıklanmış"
+        "açıklamada"
       ],
       "leakageWords": [
         "basınç",
@@ -924,12 +924,12 @@
         "ağırlaşan",
         "içeride",
         "kabaran",
+        "yönelik",
         "ablukayı",
         "açıkladı",
         "açıklamada",
         "açıklanmış",
         "açıklayacak",
-        "aklama",
         "açılan",
         "basıncı"
       ],
@@ -955,14 +955,15 @@
           "ağırlaşan",
           "içeride",
           "kabaran",
+          "yönelik",
           "ablukayı",
           "açıkladı",
           "açıklamada",
           "açıklanmış",
-          "açıklayacak",
-          "aklama"
+          "açıklayacak"
         ],
         "novelty_terms": [
+          "yönelik",
           "ablukayı",
           "açıklanmış",
           "açıklayacak"
@@ -974,8 +975,8 @@
           "ağırlaşan",
           "içeride",
           "kabaran",
-          "açıkladı",
-          "açıklamada"
+          "yönelik",
+          "açıkladı"
         ],
         "rejected_terms": [],
         "mood_bias": [
@@ -1182,7 +1183,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://arkeofili.com/feed/",
-        "lastCheckedAt": "2026-07-14T08:20:10.984Z",
+        "lastCheckedAt": "2026-07-14T09:14:53.986Z",
         "attemptedUrls": [
           "https://arkeofili.com/feed/"
         ],
@@ -1198,7 +1199,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://evrimagaci.org/rss.xml",
-        "lastCheckedAt": "2026-07-14T08:20:10.986Z",
+        "lastCheckedAt": "2026-07-14T09:14:53.988Z",
         "attemptedUrls": [
           "https://evrimagaci.org/rss.xml"
         ],
@@ -1214,7 +1215,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://altyazi.net/feed/",
-        "lastCheckedAt": "2026-07-14T08:20:10.987Z",
+        "lastCheckedAt": "2026-07-14T09:14:53.990Z",
         "attemptedUrls": [
           "https://altyazi.net/feed/"
         ],
@@ -1230,7 +1231,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.otekisinema.com/feed/",
-        "lastCheckedAt": "2026-07-14T08:20:11.679Z",
+        "lastCheckedAt": "2026-07-14T09:14:54.650Z",
         "attemptedUrls": [
           "https://www.otekisinema.com/feed/"
         ],
@@ -1246,7 +1247,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.bagimsizsinema.com/feed",
-        "lastCheckedAt": "2026-07-14T08:20:11.960Z",
+        "lastCheckedAt": "2026-07-14T09:14:55.032Z",
         "attemptedUrls": [
           "https://www.bagimsizsinema.com/feed"
         ],
@@ -1262,7 +1263,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://artdogistanbul.com/feed/",
-        "lastCheckedAt": "2026-07-14T08:20:12.428Z",
+        "lastCheckedAt": "2026-07-14T09:14:55.354Z",
         "attemptedUrls": [
           "https://artdogistanbul.com/feed/"
         ],
@@ -1278,7 +1279,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://argonotlar.com/feed/",
-        "lastCheckedAt": "2026-07-14T08:20:12.503Z",
+        "lastCheckedAt": "2026-07-14T09:14:55.396Z",
         "attemptedUrls": [
           "https://argonotlar.com/feed/"
         ],
@@ -1294,7 +1295,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.arkitera.com/feed/",
-        "lastCheckedAt": "2026-07-14T08:20:13.298Z",
+        "lastCheckedAt": "2026-07-14T09:14:56.286Z",
         "attemptedUrls": [
           "https://www.arkitera.com/feed/"
         ],
@@ -1310,7 +1311,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.artkolik.net/feed",
-        "lastCheckedAt": "2026-07-14T08:20:13.458Z",
+        "lastCheckedAt": "2026-07-14T09:14:56.413Z",
         "attemptedUrls": [
           "https://www.artkolik.net/feed"
         ],
@@ -1326,7 +1327,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://terrabayt.com/feed/",
-        "lastCheckedAt": "2026-07-14T08:20:13.609Z",
+        "lastCheckedAt": "2026-07-14T09:14:56.616Z",
         "attemptedUrls": [
           "https://terrabayt.com/feed/"
         ],
@@ -1342,7 +1343,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.nouvart.net/feed/",
-        "lastCheckedAt": "2026-07-14T08:20:14.372Z",
+        "lastCheckedAt": "2026-07-14T09:14:57.340Z",
         "attemptedUrls": [
           "https://www.nouvart.net/feed/"
         ],
@@ -1358,7 +1359,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds2.feedburner.com/itsnicethat/SlXC",
-        "lastCheckedAt": "2026-07-14T08:20:14.614Z",
+        "lastCheckedAt": "2026-07-14T09:14:57.619Z",
         "attemptedUrls": [
           "https://feeds2.feedburner.com/itsnicethat/SlXC"
         ],
@@ -1374,7 +1375,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://thecreativeindependent.com/feed.xml",
-        "lastCheckedAt": "2026-07-14T08:20:14.876Z",
+        "lastCheckedAt": "2026-07-14T09:14:57.908Z",
         "attemptedUrls": [
           "https://thecreativeindependent.com/feed.xml"
         ],
@@ -1390,7 +1391,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://bantmag.com/feed/",
-        "lastCheckedAt": "2026-07-14T08:20:14.939Z",
+        "lastCheckedAt": "2026-07-14T09:14:57.984Z",
         "attemptedUrls": [
           "https://bantmag.com/feed/"
         ],
@@ -1406,7 +1407,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://manifold.press/rss",
-        "lastCheckedAt": "2026-07-14T08:20:15.229Z",
+        "lastCheckedAt": "2026-07-14T09:14:58.273Z",
         "attemptedUrls": [
           "https://manifold.press/rss"
         ],
@@ -1422,7 +1423,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://playtusu.com/feed/",
-        "lastCheckedAt": "2026-07-14T08:20:15.282Z",
+        "lastCheckedAt": "2026-07-14T09:14:58.578Z",
         "attemptedUrls": [
           "https://playtusu.com/feed/"
         ],
@@ -1438,7 +1439,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://vesaire.press/feed/",
-        "lastCheckedAt": "2026-07-14T08:20:15.589Z",
+        "lastCheckedAt": "2026-07-14T09:14:59.298Z",
         "attemptedUrls": [
           "https://vesaire.press/feed/"
         ],
@@ -1454,7 +1455,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds.bbci.co.uk/turkce/rss.xml",
-        "lastCheckedAt": "2026-07-14T08:20:15.719Z",
+        "lastCheckedAt": "2026-07-14T09:14:59.324Z",
         "attemptedUrls": [
           "https://feeds.bbci.co.uk/turkce/rss.xml"
         ],
@@ -1470,7 +1471,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.birgun.net/rss/home",
-        "lastCheckedAt": "2026-07-14T08:20:16.104Z",
+        "lastCheckedAt": "2026-07-14T09:14:59.417Z",
         "attemptedUrls": [
           "https://www.birgun.net/rss/home"
         ],
@@ -1486,7 +1487,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.diken.com.tr/feed/",
-        "lastCheckedAt": "2026-07-14T08:20:16.153Z",
+        "lastCheckedAt": "2026-07-14T09:14:59.499Z",
         "attemptedUrls": [
           "https://www.diken.com.tr/feed/"
         ],
@@ -1502,7 +1503,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.radikal.com.tr/feed/",
-        "lastCheckedAt": "2026-07-14T08:20:16.388Z",
+        "lastCheckedAt": "2026-07-14T09:14:59.512Z",
         "attemptedUrls": [
           "https://www.radikal.com.tr/feed/"
         ],
@@ -1518,7 +1519,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.cumhuriyet.com.tr/rss",
-        "lastCheckedAt": "2026-07-14T08:20:16.411Z",
+        "lastCheckedAt": "2026-07-14T09:14:59.635Z",
         "attemptedUrls": [
           "https://www.cumhuriyet.com.tr/rss/son_dakika.xml"
         ],
@@ -1534,7 +1535,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://istanbullife.com.tr/feed/",
-        "lastCheckedAt": "2026-07-14T08:20:16.471Z",
+        "lastCheckedAt": "2026-07-14T09:14:59.937Z",
         "attemptedUrls": [
           "https://istanbullife.com.tr/feed/"
         ],
