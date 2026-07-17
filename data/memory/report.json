@@ -1,7 +1,7 @@
 {
   "version": 1,
   "built_through": "2026-07-17",
-  "trace_count": 489,
+  "trace_count": 490,
   "climate": {
     "pressure": {
       "value": 0.565,
@@ -37,10 +37,10 @@
         "mem_2026-07-06_walk_route_1329e9d340f5",
         "mem_2026-07-07_source_external_pressure_ec48f9e006da"
       ],
-      "summary": "clarity: 83 iz, ortalama 47."
+      "summary": "clarity: 81 iz, ortalama 47."
     },
     "leakage": {
-      "value": 0.449,
+      "value": 0.448,
       "trace_ids": [
         "mem_2026-06-04_source_external_pressure_0c8745a5f315",
         "mem_2026-06-04_source_external_pressure_82ef95426c48",
@@ -74,7 +74,7 @@
       "summary": "repression: 5 iz, ortalama 28."
     },
     "recallability": {
-      "value": 0.566,
+      "value": 0.567,
       "trace_ids": [
         "mem_2026-07-01_daily_life_attention_faec5f6610e6",
         "mem_2026-07-02_daily_life_attention_e8da37f6c0ac",
@@ -89,7 +89,7 @@
         "mem_2026-07-06_walk_route_1329e9d340f5",
         "mem_2026-07-07_source_external_pressure_ec48f9e006da"
       ],
-      "summary": "recallability: 83 iz, ortalama 57."
+      "summary": "recallability: 81 iz, ortalama 57."
     }
   },
   "easily_recalled": [
@@ -128,8 +128,6 @@
     "mem_2026-07-17_source_external_pressure_b5b06fd744d9"
   ],
   "dream_returns": [
-    "mem_2026-07-10_dream_dream_return_0d9b74d64bd0",
-    "mem_2026-07-11_daily_life_avoidance_f360762a789d",
     "mem_2026-07-11_dream_dream_return_db5f8f9db766",
     "mem_2026-07-12_daily_life_avoidance_6ebb057a42e4",
     "mem_2026-07-12_dream_dream_return_21ee4b611a60",
@@ -139,7 +137,9 @@
     "mem_2026-07-14_dream_dream_return_c76a051ec7c4",
     "mem_2026-07-15_daily_life_avoidance_ee18dc962d53",
     "mem_2026-07-15_dream_dream_return_8df3eede4be1",
-    "mem_2026-07-16_dream_dream_return_6a3702ad24f7"
+    "mem_2026-07-16_daily_life_avoidance_5ee60b3ec3f0",
+    "mem_2026-07-16_dream_dream_return_6a3702ad24f7",
+    "mem_2026-07-17_dream_dream_return_b2e330ca2435"
   ],
   "indirect_only": [
     "mem_2026-06-04_daily_life_attention_379f81945234",
