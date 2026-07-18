@@ -1,7 +1,7 @@
 {
   "version": 1,
   "built_through": "2026-07-18",
-  "trace_count": 500,
+  "trace_count": 501,
   "climate": {
     "pressure": {
       "value": 0.564,
@@ -22,7 +22,7 @@
       "summary": "pressure: 98 iz, ortalama 56."
     },
     "clarity": {
-      "value": 0.469,
+      "value": 0.47,
       "trace_ids": [
         "mem_2026-07-01_daily_life_attention_faec5f6610e6",
         "mem_2026-07-02_daily_life_attention_e8da37f6c0ac",
@@ -37,10 +37,10 @@
         "mem_2026-07-08_source_external_pressure_bf12e634d049",
         "mem_2026-07-08_walk_route_2c112e66b987"
       ],
-      "summary": "clarity: 81 iz, ortalama 47."
+      "summary": "clarity: 77 iz, ortalama 47."
     },
     "leakage": {
-      "value": 0.449,
+      "value": 0.448,
       "trace_ids": [
         "mem_2026-06-04_source_external_pressure_0c8745a5f315",
         "mem_2026-06-04_source_external_pressure_82ef95426c48",
@@ -89,7 +89,7 @@
         "mem_2026-07-08_source_external_pressure_bf12e634d049",
         "mem_2026-07-08_walk_route_2c112e66b987"
       ],
-      "summary": "recallability: 81 iz, ortalama 56."
+      "summary": "recallability: 77 iz, ortalama 56."
     }
   },
   "easily_recalled": [
@@ -128,8 +128,6 @@
     "mem_2026-07-18_source_external_pressure_d363284857ef"
   ],
   "dream_returns": [
-    "mem_2026-07-11_dream_dream_return_db5f8f9db766",
-    "mem_2026-07-12_daily_life_avoidance_6ebb057a42e4",
     "mem_2026-07-12_dream_dream_return_21ee4b611a60",
     "mem_2026-07-13_daily_life_avoidance_bcc9433f8b2f",
     "mem_2026-07-13_dream_dream_return_47aa44c38f79",
@@ -139,7 +137,9 @@
     "mem_2026-07-15_dream_dream_return_8df3eede4be1",
     "mem_2026-07-16_daily_life_avoidance_5ee60b3ec3f0",
     "mem_2026-07-16_dream_dream_return_6a3702ad24f7",
-    "mem_2026-07-17_dream_dream_return_b2e330ca2435"
+    "mem_2026-07-17_daily_life_avoidance_3ff6f956064f",
+    "mem_2026-07-17_dream_dream_return_b2e330ca2435",
+    "mem_2026-07-18_dream_dream_return_33a4a40ff291"
   ],
   "indirect_only": [
     "mem_2026-06-04_daily_life_attention_379f81945234",
