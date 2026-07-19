@@ -1,0 +1,89 @@
+# Codex External Intake Run — 2026-07-19
+
+- run_started_utc: 2026-07-19T11:01:53Z
+- run_started_europe_istanbul: 2026-07-19T14:01:53+03:00
+- timezone: Europe/Istanbul
+- read_window: first run, last 72 hours
+- read_window_start_utc: 2026-07-16T11:02:17Z
+- read_window_end_utc: 2026-07-19T11:02:17Z
+
+## Repo Check
+
+Repo root verified with `package.json`, `AGENTS.md`, `.git`, `.github`, `src`, and `data`.
+
+## Gmail
+
+- mode: read-only
+- query_window: last 72 hours
+- messages_scanned_initial_run: 25
+- messages_scanned_inventory_backfill: 30
+- messages_read_in_detail: 5
+- selected_public_main_items: 5
+- minor_residues_created: 17
+- repeated_signals_created: 5
+- discarded_as_noise_or_private_operation: 5
+- note: newsletter welcomes, digest repetition, and broad news summaries were not copied as content; they were converted into public-safe minor residues or repeated signals when useful.
+
+## Gmail Full Body Read Decisions
+
+Full body is preferred for Gmail decisions. Public outputs still receive only short, public-safe summaries.
+
+### Main Items
+
+- **2026-07-19 / David Whyte / poetry:** full_body_read: yes; snippet_only: no; bucket: main. Reason: full body carried a strong poetic field around sun, gratitude, growth, and inward attention; it was safe to transform without quoting.
+- **2026-07-19 / Tendresse Radicale / social body:** full_body_read: yes; snippet_only: no; bucket: main. Reason: full body carried a strong social/body pressure around administrative precarity, waiting, exclusion, and mental health; it was relevant to memory/body perception.
+- **2026-07-19 / Grand Text Auto / digital culture:** full_body_read: yes; snippet_only: no; bucket: main. Reason: full body showed a digital narrative/game/art archive bundle; even with older internal items, it gave a strong digital culture residue for the run date.
+- **2026-07-18 / apéro / culture-food:** full_body_read: yes; snippet_only: no; bucket: main. Reason: full body connected kitchen/service rhythm, family weight, closure, and fragile working relations; it was strong enough to become a main item.
+- **2026-07-17 / Duende / culture archive:** full_body_read: yes; snippet_only: no; bucket: main. Reason: full body carried cinema, books, archive, and existence-without-purpose themes; it shaped the public digest for that date.
+
+### Snippet-Only Supporting Decisions
+
+- **2026-07-19 / shared document notification:** Bu mail için yalnızca snippet okunabildi. Bucket: noise. Reason: personal/document access risk; excluded from public synthesis except as discarded operation noise.
+- **2026-07-19 / Aposto Gündem / culture-news:** Bu mail için yalnızca snippet okunabildi. Bucket: minor. Reason: public news/culture topics were visible enough for a weak, non-specific external pressure; not used as a main item.
+- **2026-07-19 / Zapier / automation tool:** Bu mail için yalnızca snippet okunabildi. Bucket: minor. Reason: tool/productivity framing was visible enough to create a small work-rhythm residue; not used as a main item.
+- **2026-07-19 / Grand Text Auto duplicate:** Bu mail için yalnızca snippet okunabildi. Bucket: repeated. Reason: near-duplicate of a full-body-read main item; used only as repetition signal.
+- **2026-07-19 / welcome/subscription cluster:** Bu mail grubu için yalnızca snippet okunabildi. Bucket: minor/repeated. Reason: individual full bodies were not used for this grouped decision; grouped as new external doors and channel-opening pressure.
+- **2026-07-19 / account verification and signup actions:** Bu mail grubu için yalnızca snippet okunabildi. Bucket: noise. Reason: private/security/action content; excluded from public synthesis.
+- **2026-07-18 / security alert:** Bu mail için yalnızca snippet okunabildi. Bucket: noise. Reason: private account/security content; excluded.
+- **2026-07-18 / Pirijan software blog welcome:** Bu mail için yalnızca snippet okunabildi. Bucket: minor. Reason: software/personal blog channel was visible as a weak technical-learning residue.
+- **2026-07-18 / Aposto Gündem / politics-infrastructure:** Bu mail için yalnızca snippet okunabildi. Bucket: minor. Reason: public news pressure was visible, but not specific enough or safe enough for a main item.
+- **2026-07-17 / Aposto Gündem / negotiation-protest:** Bu mail için yalnızca snippet okunabildi. Bucket: minor. Reason: public news pressure was visible, but kept as broad external hardness rather than itemized news.
+
+## Two-Stage Intake
+
+- private_inventory_created: data/external_intake/codex_raw/inventory/2026-07-19.json
+- private_inventory_committed: false
+- public_digest_synthesis_source: private inventory, not raw mail/RSS text
+- public_reading_summary_added: true
+- inventory_gmail_records: 30
+- inventory_curated_rss_recent_items: 0
+- inventory_rss_feed_health_records: 2
+
+## Curated RSS
+
+- config_read: data/external_intake/codex/rss_sources.json
+- feeds_checked: 2
+- feeds_available: 2
+- recent_items_selected: 0
+- source_health: both configured feeds responded; no recent item in the read window
+
+## Written Files
+
+- data/external_intake/codex/json/2026-07-17.json
+- data/external_intake/codex/json/2026-07-18.json
+- data/external_intake/codex/json/2026-07-19.json
+- data/external_intake/codex/markdown/2026-07-17.md
+- data/external_intake/codex/markdown/2026-07-18.md
+- data/external_intake/codex/markdown/2026-07-19.md
+- data/external_intake/codex/runs/2026-07-19.log.md
+- data/external_intake/codex/_state/last_success.json
+
+## Noise / Safety
+
+- verification codes, account/security notices, subscription welcome messages, duplicated feed emails, raw URLs, email addresses, and long source text were not written into public outputs.
+- subscription welcomes, repeated digest notices, and broad news pressure may appear only as digested public-safe external climate, never as raw mail content.
+- protected source, memory, generated poem, dream, workflow, public, and package files were not modified.
+
+## Errors
+
+No blocking errors.
