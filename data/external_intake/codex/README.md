@@ -8,6 +8,21 @@ Ham içerik commitlenmez. Ham mail body, geçici mail dökümleri, güvenli olma
 
 `json/` ve `markdown/` çıktıları public-safe ve Türkçe olmalıdır.
 
+## Okuma Özeti Kuralı
+
+Public digest yalnızca şiirsel izlerden oluşmaz. Eğer Gmail mailleri ve özel RSS item'ları gerçekten açılıp okunduysa, digest önce günün okunabilir bir dış dünya özetini verir.
+
+JSON root seviyesinde `reading_summary` alanı bulunur:
+
+- `plain_summary`: Bugün okunan maillerde ve özel RSS kaynaklarında genel olarak ne vardı? Türkçe, anlaşılır, 1-2 paragraf.
+- `what_was_in_the_emails`: Maillerin kaynak formatını değil, içerik dünyasını anlatan kısa maddeler.
+- `what_was_in_curated_rss`: Özel RSS kaynaklarında ne vardı; yeni item yoksa bu sade biçimde belirtilir.
+- `dominant_topics`: Günün baskın konu alanları.
+- `notable_absences`: Beklenen ama gelmeyen veya zayıf kalan şeyler.
+- `overall_direction`: Günün dış dünyasının UCU BEDEN'i hangi yöne ittiği.
+
+`reading_summary` ham mail kopyası, uzun alıntı, ham URL, email adresi, doğrulama kodu, güvenlik detayı veya kişisel veri içermez. Yine de "bu maillerde genel olarak ne vardı?" sorusuna `summary` alanından daha açık cevap verir.
+
 ## Dış Dünya Etkisi Kuralı
 
 Bu otomasyon yalnızca birkaç iyi mail seçmek için çalışmaz. Asıl amaç UCU BEDEN'in o gün dış dünyadan aldığı genel temas iklimini çıkarmaktır.
