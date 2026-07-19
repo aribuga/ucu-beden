@@ -92,7 +92,7 @@ Public digest içinde şu katmanlar bulunur:
 
 ## Çok Parçalı Digest / Aggregator Mail Kuralı
 
-Aposto, Reddit, Substack digest, forum digest, toplu haber bülteni veya benzer çok parçalı mailler otomatik olarak noise'a atılmaz. Bu tür mailler tek bir konu taşımaz; içinde birden fazla küçük dış temas olabilir.
+Aposto, Reddit, Substack digest, forum digest, toplu haber bülteni veya benzer çok parçalı mailler otomatik olarak noise'a atılmaz. Bu tür mailler tek bir konu taşımaz; içinde birden fazla küçük dış temas olabilir. Dağınıklık problem değildir; dış dünyanın formu bazen zaten dağınıktır.
 
 Böyle bir mail okunduğunda önce mailin genel yapısı anlaşılır:
 
@@ -104,17 +104,24 @@ Sonra içinden public-safe biçimde 3-10 arası alt tema çıkarılır. Alt tema
 
 Bu alt temalar uygun yere yazılır:
 
-- `digest_items`: mailin içinde ayrıştırılan alt temaslar.
-- `minor_residues`: ana item kadar güçlü olmayan ama günün dış dünya havasını değiştiren alt izler.
-- `items` / `main_items`: digest içinden UCU BEDEN için gerçekten güçlü ve doğrudan sindirilebilir görünen parçalar.
+- `items`, `main_items` veya `channels.gmail.items`: digest içinden UCU BEDEN için gerçekten güçlü ve doğrudan sindirilebilir görünen parçalar.
+- `digest_items` veya `minor_residues`: ana item kadar güçlü olmayan ama günün dış dünya havasını değiştiren alt izler.
+- `repeated_signals`: digest içinde veya günün diğer kaynaklarıyla birlikte birkaç kez dönen anlamlar.
+- `noise`: yalnızca güvenlik, doğrulama, fatura, kişisel işlem, tracking, unsubscribe veya ham kişisel veri taşıyan parçalar.
 
 Geri kalan parçalar yalnızca "haber gürültüsü" diye tamamen silinmez. Tek tek haberleştirilmeden, günün dış dünya iklimine nasıl katkı verdikleri yazılır. Amaç her parçayı özetlemek değil; çok parçalı kaynakların çeşitliliğini UCU BEDEN'in dış temas alanına güvenli ve sindirilmiş şekilde taşımaktır.
+
+Aposto gibi çok parçalı gündem mailleri için "genel haber basıncı" demek yeterli değildir. Mail şehir, siyaset, kültür, teknoloji, iklim, sanat, kurum dili veya gündelik yaşam gibi farklı hatlara dağılıyorsa bunlar 3-10 arası alt temaya ayrılır. Her alt tema ham başlık kopyalamadan, içerik dünyasını anlaşılır kılacak kadar somut yazılır.
+
+Reddit veya forum digest'lerinde "Reddit bildirimi" ya da "topluluk gürültüsü" demek yeterli değildir. İçindeki post/topluluk konuları public-safe alt temalara ayrılır: kullanıcı şikayeti, teknik çözüm arayışı, araç geliştirme, topluluk sezgisi, gündelik merak, üretim problemi, pratik öneri veya tekrar eden sosyal sürtünme gibi. Kaynak formatı değil, içerik dünyası anlatılır.
 
 Kötü yaklaşım: "Genel haber bülteni dış dünyanın sertliğini taşıdı."
 
 İyi yaklaşım: "Bu digest şehir, siyaset, kültür ve teknoloji hattına yayılan kısa parçalar taşıyordu. Tek tek haber olarak alınmadılar ama kamusal sıkışma, kültürel etkinlik duyuruları, teknoloji/ekran gündemi, şehir hayatında yorgunluk ve politik belirsizlik gibi alt temaslara ayrıldılar."
 
-Reddit veya forum digest'lerinde kaynak formatı değil, içerik çeşitliliği okunur. Örneğin topluluk zekası, pratik çözüm arayışı, kullanıcı şikayeti, araç geliştirme, gündelik teknik merak veya tekrar eden sosyal sürtünme gibi alt temalar çıkarılır.
+Kötü yaklaşım: "Reddit digest'i topluluk gürültüsü olarak atıldı."
+
+İyi yaklaşım: "Reddit digest'i farklı topluluklardan gelen küçük sorun, öneri ve tartışma parçaları taşıyordu. Bunlar kullanıcı şikayeti, pratik çözüm arayışı, araç geliştirme ve gündelik teknik merak gibi alt temalara ayrıldı."
 
 Inventory'deki her şey çöpe atılmaz. 20'den fazla mail tarandıysa ve yalnızca 2-3 ana item üretildiyse `minor_residues`, `repeated_signals` ve `discarded_summary` özellikle zenginleştirilir. Bu ham bilgi vermek değil, daha fazla sindirilmiş iz üretmek demektir.
 
