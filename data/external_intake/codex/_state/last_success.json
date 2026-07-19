@@ -1,7 +1,27 @@
 {
-  "last_success_at": "2026-07-19T12:16:35.791Z",
-  "last_gmail_success_at": "2026-07-19T12:16:35.791Z",
-  "last_rss_success_at": "2026-07-19T12:16:35.791Z",
+  "date": "2026-07-19",
   "timezone": "Europe/Istanbul",
-  "updated_at": "2026-07-19T12:16:35.791Z"
+  "completed_at": "2026-07-19T12:30:12.965Z",
+  "mode": "audit_and_deepen_existing_output",
+  "public_json": "data/external_intake/codex/json/2026-07-19.json",
+  "public_markdown": "data/external_intake/codex/markdown/2026-07-19.md",
+  "run_log": "data/external_intake/codex/runs/2026-07-19.log.md",
+  "gmail": {
+    "scanned": 30,
+    "full_body_read_count": 30,
+    "snippet_only_count": 0,
+    "subject_only_count": 0
+  },
+  "curated_rss": {
+    "feeds_checked": 2,
+    "recent_items_72h": 0
+  },
+  "safety": {
+    "public_digest_contains_raw_email_body": false,
+    "public_digest_contains_email_addresses": false,
+    "public_digest_contains_urls": false,
+    "public_digest_contains_verification_codes": false,
+    "public_digest_contains_long_quotes": false,
+    "private_inventory_committed": false
+  }
 }
