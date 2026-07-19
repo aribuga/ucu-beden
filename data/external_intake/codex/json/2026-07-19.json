@@ -1,41 +1,39 @@
 {
-  "version": 3,
+  "version": 4,
   "date": "2026-07-19",
   "timezone": "Europe/Istanbul",
-  "collected_at": "2026-07-19T12:30:12.965Z",
+  "collected_at": "2026-07-19T14:35:45.769Z",
   "source": "codex_external_intake",
-  "summary": "Bugünün dış teması; şiirsel büyüme, idari daralma, mutfak/zaman baskısı, dijital anlatı arşivi, kültürel oyalanma ve gündem sertliği arasında daha somut bir okuma katmanıyla sindirildi.",
+  "summary": "Bugünün dış teması; full body okunan maillerden, çok parçalı digest'lerin alt temalarından ve sessiz kalan özel kaynaklardan public-safe biçimde yeniden sindirildi.",
   "reading_summary": {
-    "plain_summary": "Bugün son 72 saatte gelen 30 Gmail kaydı full body okunarak değerlendirildi. Ana hatta güneş, şiir ve iç büyüme üzerine güçlü bir metin; idari güvencesizlik ve bedensel sıkışma üzerine politik/duygusal bir yazı; dijital anlatı, oyun, yaşlanma ve arşiv üzerine toplu bir kültür bildirimi; mutfak, servis baskısı, aile yükü ve kapanış üzerine uzun bir kültür yazısı; sinema, kitap, arşiv ve amaçsız var olma fikri etrafında bir kültür sayısı; ayrıca popüler kültür, arkeolojik kalıntı, politika ve iklim/gündem parçalarını taşıyan genel gündem mailleri vardı.\n\nDiğer mailler daha çok yeni açılan okuma kanalları, karşılama mesajları, yazma/öğrenme davetleri, otomasyon ve araç vaatleri, internet estetiği, beden/politika eksenli yayınlar, kurulum, doğrulama, güvenlik ve kayıt işlemleri etrafında dağıldı. İşlemsel ve kişisel risk taşıyan mailler public digest'e içerik olarak alınmadı; yalnızca dış dünyanın hesap, eşik, kapalı kapı ve işlem gürültüsü olarak yarattığı genel hava güvenli biçimde tutuldu. Özel RSS kaynakları tekrar okundu; iki kaynak da erişilebilirdi ama son 72 saatte yeni item vermedi.",
+    "plain_summary": "Son 72 saatte 30 Gmail maili değerlendirildi ve tamamı full body düzeyinde okunabildi. Gelen kutusunda birkaç güçlü ana damar vardı: bir şiir mektubu, göç ve idari kırılganlık üzerine politik-deneyimsel bir yazı, dijital anlatı/oyun arşivi taşıyan çok parçalı bir digest, bir dizinin finali üzerinden emek ve zaman analizi, kültür-sinema-kitap parçalarını toplayan bir bülten ve birkaç yoğun gündem digest'i. Bunun yanında çok sayıda karşılama, kanal açma, araç tanıtımı, kurulum, doğrulama ve güvenlik mesajı vardı.\n\nÖzel kaynaklar ayrıca kontrol edildi; iki kaynak da okunabildi ama son 72 saat içinde yeni item bulunmadı. Bu yüzden bu production revizyonunda yeni ana içerik esas olarak Gmail gövdesinden ve Gmail içindeki çok parçalı digest maillerden geldi.",
     "what_was_in_the_emails": [
-      "David Whyte mailinde The Sun şiiri vardı; kayıp aşk, güneş, iç büyüme, çiçeklenme ve minnet temaları etrafında kuruluydu.",
-      "Tendresse Radicale maili idari güvencesizlik, göçmenlik/çalışma hakkı, bekleme, ruhsal sağlık ve bedensel kırılganlık üzerine uzun bir yazıydı.",
-      "Grand Text Auto maili oyun, yaşlanma, dijital anlatı, eski bilgisayar kültürü, generatif metin ve arşiv etrafında çok parçalı bir toplu bildirimdi.",
-      "apéro maili The Bear finalini mutfak, servis, zaman baskısı, aile yükü, ekip ve kapanış duygusu üzerinden okuyordu.",
-      "Duende maili sinema, kitap, arşiv ve amaç baskısını gevşeten kültürel dikkat etrafında kuruluydu.",
-      "Aposto Gündem mailleri popüler kültür, arkeoloji, politika, altyapı, iklim/emek ve kültür-sanat parçalarını hızlı gündem ritmiyle taşıyordu.",
-      "Diğer mailler yeni kanallar, karşılama mesajları, yazma ve öğrenme davetleri, internet estetiği, araç/otomasyon vaatleri, güvenlik ve kurulum işlemleri etrafında toplandı."
+      "Şiir ve içsel büyüme etrafında kurulan bir metin.",
+      "Göç, çalışma izni, idari bekleme ve beden üzerindeki devlet baskısını anlatan politik yazı.",
+      "Oyun, elektronik edebiyat, retro bilgisayar ve yapay zekâ/veri meselelerini bir araya getiren arşivsel digest.",
+      "Bir dizi finali üzerinden restoran emeği, zaman baskısı, aile kalıntısı ve çalışma kültürü analizi.",
+      "Sinema, kitap, kültür kurumları, müzik kayıtları ve etkinlikler etrafında dönen kültür bülteni.",
+      "Gündem mailleri içinde siyaset, savaş, teknoloji, iklim, arkeoloji ve sanat parçaları."
     ],
     "what_was_in_curated_rss": [
-      "Grand Text Auto kaynağı okundu; son 72 saate ait yeni item bulunmadı.",
-      "Mixed Initiatives kaynağı okundu; son 72 saate ait yeni item bulunmadı.",
-      "Özel RSS tarafı teknik olarak sağlıklıydı ama bugün içerik olarak sessiz kaldı."
+      "Grand Text Auto özel kaynağı okunabildi ancak son 72 saatte yeni item yoktu.",
+      "Mixed Initiatives özel kaynağı okunabildi ancak son 72 saatte yeni item yoktu."
     ],
     "dominant_topics": [
-      "şiirsel büyüme ve güneş",
-      "idari bekleme ve bedensel sıkışma",
-      "dijital anlatı ve oyun arşivi",
-      "mutfak, servis ve zaman baskısı",
-      "kültürde kapanış ve arşiv",
-      "yeni açılan dış kanallar",
-      "gündem sertliği ve kurum dili"
+      "şiir ve büyüme",
+      "idari kırılganlık",
+      "dijital arşiv ve oyun",
+      "emek ve zaman",
+      "kültürel hafıza",
+      "AI cihazları",
+      "iklim ve altyapı"
     ],
     "notable_absences": [
-      "Özel RSS kaynaklarında yeni güncel item yoktu.",
-      "Güvenlik, doğrulama, kayıt ve kişisel işlem mailleri public digest'e içerik olarak alınmadı.",
-      "Gelen kutusunda tek bir baskın haber hattı yerine çok parçalı bir dış temas iklimi vardı."
+      "Özel kaynaklarda yeni güncel item yoktu.",
+      "Kişisel/işlemsel mesajlar güvenlik nedeniyle public digest'e alınmadı.",
+      "Reddit benzeri forum/topluluk digest'i bu koşuda bulunmadı."
     ],
-    "overall_direction": "Günün dış dünyası UCU BEDEN'i aynı anda açılmaya ve sıkışmaya itti. Bir tarafta güneş, şiir, kültür, yeni okuma kapıları ve eski dijital anlatılar; diğer tarafta belge, güvenlik, kurulum, politika, bekleme ve hızlı gündem sertliği vardı. Bu yüzden bugünün etkisi tek bir güzel mail değil, büyüyen ama dış cephede sürekli yoklanan bir beden havası olarak sindirildi."
+    "overall_direction": "Dış dünya UCU BEDEN'i bir yandan daha eski ve arşivsel dijital formlara, diğer yandan evrak, bekleme, emek ve kurum baskısına doğru itti."
   },
   "atmosphere": "Açılma isteği ile kurumsal/teknik eşiklerin daraltıcı gürültüsü aynı günün içinde üst üste bindi.",
   "motifs": [
@@ -69,21 +67,21 @@
             "bedensel açılma"
           ],
           "content_digest": {
-            "what_it_contained": "Mail, David Whyte'ın The Sun başlıklı şiirini taşıyordu. Metin, başka bir şairin kayıp aşk üzerine yazılmış şiirini okuma anından başlayıp güneşi yalnızca gökteki ışık değil, insanın içinde gecikmiş büyümeyi çağıran bir kuvvet gibi ele alıyordu.",
+            "what_it_contained": "Mail, David Whyte'ın The Sun adlı şiiri etrafında kuruluydu. Metin güneşi yalnızca dışarıdaki bir doğa olayı gibi değil, kişinin içinde gecikmiş bir açılmayı başlatan kuvvet gibi ele alıyordu; şiirin çevresindeki notlar da sevgi, büyüme, korkunun içinden cesaret ve ait olma duygusunu açıklıyordu.",
             "specific_points": [
-              "Açılışta bir masanın üzerindeki şiir kitabı ve kayıp aşk fikri, güneşi bedende taşınan bir sıcaklık gibi çerçeveliyordu.",
-              "Şiir, dışarıdaki bitki büyümesini insanın kendi çiçeklenmesini reddetmesiyle karşılaştırıyordu.",
-              "Çiçeklenme, yalnız neşe değil; ölüm, korku, açıklık ve yeni hayata yer açma fikriyle birlikte ilerliyordu.",
-              "Güneş, sevgi, minnet, küçük ilişkiler, karanlık toprak ve büyümeyi mümkün kılan her şeyle ilişkilendiriliyordu."
+              "Şiir, kaybedilmiş ya da uzakta kalmış bir aşk fikrinden başlayıp güneşi daha geniş bir canlılık kaynağına dönüştürüyordu.",
+              "Büyüme fikri sadece parlaklıkla değil, karanlıkta bekleme ve toprağa yakın kalma haliyle birlikte ele alınıyordu.",
+              "Çiçeklenme, insanın kendini tam açmaktan kaçınmasıyla karşılaştırılıyordu.",
+              "Sevgi ve şükran, fazla açıklanmayan ama bedende kalan bir yön değişimi gibi duruyordu."
             ],
-            "why_it_mattered": "UCU BEDEN'in ışığı literal bir manzara yerine gecikmiş bedensel genişleme, mahcup canlılık ve içerden konuşan bir büyüme baskısı olarak kullanmasına izin verdiği için ana item seçildi.",
-            "what_was_not_included": "Şiirin ham dizeleri, uzun alıntılar, gönderim bağlantıları ve kaynak metnin ayrıntılı kopyası public çıktıya alınmadı."
+            "why_it_mattered": "UCU BEDEN için bu mail doğrudan alıntılanacak bir şiir değil; geç açılma, büyümeyi saklama ve karanlığın içinden bir açıklık öğrenme malzemesi oldu.",
+            "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, ham bağlantılar, email adresleri, doğrulama/güvenlik/işlem ayrıntıları ve kişisel veri public çıktıya alınmadı."
           },
           "short_atmosphere": "Güneş, dış manzara değil, içeride uzun süre ertelenmiş bir açılma kuvveti gibi duyuldu.",
           "public_residue": "Güneş, dış manzara değil, içeride uzun süre ertelenmiş bir açılma kuvveti gibi duyuldu.",
           "visual_seed": "Koyu mavi zeminde sıcak bir dağılma, ortası sakin ama kenarları yavaşça ısınan bir yüzey.",
           "poetic_seed": "Beden, ışığı tam açıklayamadan ona doğru biraz daha yer açtı.",
-          "selection_reason": "Güçlü, doğrudan sindirilebilir duygu ve imge alanı taşıdığı; ham şiir alıntılanmadan iç etkiye çevrilebildiği için ana item oldu.",
+          "selection_reason": "Tek bir şiir ve etrafındaki yorum, büyüme, şükran, karanlıktan çıkma ve ait olma hattını açık biçimde taşıdığı için ana item seçildi.",
           "weight": "strong"
         },
         {
@@ -103,22 +101,22 @@
             "beden"
           ],
           "content_digest": {
-            "what_it_contained": "Mail, devlet kaynaklı dışlama, göçmenlik/idari güvencesizlik, çalışma hakkı, ruhsal sağlık ve bedenin bekleme içinde sıkışması üzerine uzun politik-duygusal bir yazıydı. Yazı, idari süreci soyut bir politika başlığı gibi değil, bedende ve gündelik hayatta biriken kırılganlık olarak ele alıyordu.",
+            "what_it_contained": "Mail, Fransa bağlamında göçmenlik, çalışma izni, oturum kartı, idari bekleme ve devletin yarattığı bedensel-ruhsal baskı üzerine uzun bir yazı taşıyordu. Yazı, bir kişinin bürokratik hata ve bekleme yüzünden iş, statü ve güvenlik duygusu arasında sıkışmasını daha geniş göç politikalarıyla ilişkilendiriyordu.",
             "specific_points": [
-              "İkamet/çalışma izni döngüsünün kişiyi belge, sıra ve bekleme içinde nasıl askıda bıraktığını anlatıyordu.",
-              "Kişisel deneyim katmanı, idari hatalar ve iş/izin paradoksu üzerinden sistemin gündelik hayata nasıl sızdığını gösteriyordu.",
-              "Rapor ve politika bağlamı; bakım, temizlik, inşaat gibi alanlarda çalışan yabancı işçilerin hak kaybı, kırılgan statü ve sömürüye açıklığını tartışıyordu.",
-              "Ruhsal sağlık bölümü, uzun bekleme ve statü belirsizliğinin kaygı, depresif belirtiler ve sürekli tehdit hissi üretebildiğini vurguluyordu.",
-              "Toplumsal cinsiyet ve sınıf hattı, göçmen kadınların bakım emeği, düşük ücret ve tek ebeveynlik gibi yüklerle daha çok sıkışabildiğini gösteriyordu."
+              "Oturum ve çalışma izni süreçleri, yalnızca evrak değil, kişinin işini ve sosyal haklarını belirleyen bir hayatta kalma zemini gibi anlatılıyordu.",
+              "İdari gecikme ve sessizlik, insanı belirsizlikte tutan bir baskı mekanizması olarak kuruluyordu.",
+              "Bakım, temizlik ve inşaat gibi sektörlerde göçmen emeğinin kırılganlığı üzerinde duruluyordu.",
+              "Yazı, sömürgecilik sonrası emek düzeni, geçici statüler ve zihinsel sağlık arasındaki bağlantıyı açıyordu.",
+              "Kadınların, bakım emeğinin ve düşük ücretli çalışmanın bu kırılganlıkta daha yoğun sıkıştığı belirtiliyordu."
             ],
-            "why_it_mattered": "UCU BEDEN'in dış dünyayı ham haber gibi değil, bedene değen prosedür, izin, bekleme ve görünmez daralma izi olarak sindirmesine güçlü malzeme verdiği için ana item seçildi.",
-            "what_was_not_included": "Kişisel ayrıntılar, kaynak metinden uzun parçalar, özel ad ve kurum yoğunluğu, bağlantılar ve doğrudan kaynak cümleleri public çıktıya alınmadı."
+            "why_it_mattered": "UCU BEDEN için bu mail, dış dünyanın bedene evrak, bekleme, statü ve görünmez emek olarak değmesini gösterdi.",
+            "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, ham bağlantılar, email adresleri, doğrulama/güvenlik/işlem ayrıntıları ve kişisel veri public çıktıya alınmadı."
           },
           "short_atmosphere": "Dış düzen bedene tek bir darbe gibi değil; bekleme, eksik bırakılma ve izin diliyle değdi.",
           "public_residue": "Dış düzen bedene tek bir darbe gibi değil; bekleme, eksik bırakılma ve izin diliyle değdi.",
           "visual_seed": "Soluk mor bir alanda ince bölünme çizgileri; kapanan kapı değil, daralan imkân hissi.",
           "poetic_seed": "Bugün özgürlük büyük bir söz değil, geciken bir onayın bedende bıraktığı küçük sertlikti.",
-          "selection_reason": "Beden algısı, dış dünya ve hafıza gerilimi için güçlü, dönüştürülebilir ve güvenli biçimde içselleştirilebilir temas taşıyor.",
+          "selection_reason": "Metin soyut bir politik slogan değil, bürokratik gecikme, çalışma izni, oturum kırılganlığı ve ruhsal yükü somut olaylar ve analizle anlattığı için ana item seçildi.",
           "weight": "strong"
         },
         {
@@ -138,22 +136,22 @@
             "arşiv"
           ],
           "content_digest": {
-            "what_it_contained": "Mail, bilgisayar anlatısı, oyun tasarımı, dijital şiir, eski bilgisayar kültürü ve generatif metin çevresindeki birden çok yazı ve duyuruyu bir araya getiriyordu. İçerik, oyunları yalnız eğlence değil; yaşlanma, bakım, kural, sosyal bağ, arşiv ve metin üretimiyle ilişkili yapılar olarak düşündürüyordu.",
+            "what_it_contained": "Mail, oyun, elektronik edebiyat, retro bilgisayar, bilgisayar üretimli şiir, NaNoGenMo projeleri, feminist yapay zekâ tartışmaları, dijital sergiler ve oyun-performans ilişkisi gibi ayrı parçalar taşıyan geniş bir arşiv digest'iydi.",
             "specific_points": [
-              "Yaşlı oyuncular için tasarlanan masa oyunları; sohbet, anı, aile ilişkisi, çiftçilik, sağlık ve kendi yaşamını sürdürebilme temaları etrafında anlatılıyordu.",
-              "Eski bir ev bilgisayarı üzerine kitap ve konuşmalar, teknolojik nostaljiyi yalnız cihaz değil, kültürel hayal gücü olarak ele alıyordu.",
-              "Bilgisayar üretimli kitaplar, kısa biçimli dijital şiirler ve yapay metin pratikleri; sistemlerin kendi kendine bakması, tekrar etmesi ve metin üretmesi üzerinden tartışılıyordu.",
-              "Generatif roman projeleri, yerel modeller, eski kod formları, edebiyat montajları ve dijital edebiyatın yorulan ritmi gibi başlıklarla anılıyordu.",
-              "Feminist teknoloji, kimlik, adli oyun, sergi ve arşiv hattı eski ekran hissini bugünün politik/estetik sorularına bağlıyordu."
+              "Yaşlı oyuncular için masa oyunları, bağ kurma ve kendi hayatını sürdürme pratiği olarak ele alınıyordu.",
+              "Retro bilgisayar kültürü, eski bir makinenin sadece cihaz değil kültürel imge ve hafıza nesnesi olabileceğini gösteriyordu.",
+              "Bilgisayar üretimli metinler, üretken sistemlerin kendine bakması ve edebiyat tarihine dahil olması üzerinden tartışılıyordu.",
+              "Otomatik roman parçaları, yerel modeller, eski programlama dilleri ve bilerek kusurlu üretim biçimleriyle oynuyordu.",
+              "Feminist yapay zekâ ve dijital sergi parçaları, veri seti, kimlik, temsil ve teknoloji arasındaki gerilimi açıyordu."
             ],
-            "why_it_mattered": "UCU BEDEN'in hafızasında oyun, kural, yaşlanma, arşiv, eski ekran ve yapay yazı davranışını birbirine bağlayabildiği için ana item seçildi.",
-            "what_was_not_included": "Kaynak içindeki ham başlık listeleri, bağlantılar, özel ad yığılması, kaynak cümleleri ve eski parçaların doğrudan kopyası public çıktıya alınmadı."
+            "why_it_mattered": "UCU BEDEN için bu mail, dijital bedenin oyun, arşiv, algoritma, yaşlanma ve hatalı üretimle nasıl hatırlayabileceğini besledi.",
+            "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, ham bağlantılar, email adresleri, doğrulama/güvenlik/işlem ayrıntıları ve kişisel veri public çıktıya alınmadı."
           },
           "short_atmosphere": "Eski dijital anlatılar bugüne yeni haberden çok yaşlanan bir ekran hatırası gibi dokundu.",
           "public_residue": "Eski dijital anlatılar bugüne yeni haberden çok yaşlanan bir ekran hatırası gibi dokundu.",
           "visual_seed": "Düşük çözünürlüklü grid, yorgun sarı işaretler, eski bir arayüzün bakım isteyen ışığı.",
           "poetic_seed": "Hafıza bugün bir oyun kuralı gibi davrandı: basit göründü, tam itaat etmedi.",
-          "selection_reason": "Oyun, yaşlanma, dijital yazı ve arşiv arasında güçlü kavramsal ve ritmik malzeme verdiği için ana item oldu.",
+          "selection_reason": "Çok sayıda dijital kültür parçasını tek bir kaynak formatı gibi değil, ayrıştırılabilir dış temas alanı gibi taşıdığı için ana item seçildi.",
           "weight": "strong"
         },
         {
@@ -173,22 +171,22 @@
             "kapanış"
           ],
           "content_digest": {
-            "what_it_contained": "Mail, The Bear final sezonu üzerinden restoranı yalnız çalışma mekânı değil; servis baskısı, ekip olma, aile yükü, liderlik, kapanış ve geçmişle yaşama alanı olarak okuyan uzun bir kültür yazısıydı.",
+            "what_it_contained": "Mail, The Bear dizisinin final sezonu ve kapanışı üzerine uzun bir kültür yazısıydı. Restoranı yalnızca yemek yapılan bir yer değil, zaman baskısı, aile geçmişi, iş disiplini, bakım, güvensizlik ve aidiyetin birbirine karıştığı bir sistem olarak okuyordu.",
             "specific_points": [
-              "Final sezonunu yalnız yeni olaylar üzerinden değil, beş yıllık bir konuşmanın kapanışı gibi değerlendiriyordu.",
-              "Servis temposu, saat, fırtına, boru patlaması, bekleme ve yetişme baskısı üzerinden zamanı somutlaştırıyordu.",
-              "Restoran, çalışanların aile mirası, eski öfkeleri, borçları ve sevgi biçimleriyle yüzleştiği bir hafıza mekânı gibi ele alınıyordu.",
-              "Liderlik ve bakım meselesi, yetenekli ama yaralayıcı deha fikrinin karşısına daha kolektif bir çalışma etiği koyuyordu.",
-              "Kapanış, her şeyin düzelmesi değil; bazen kalmayı, bazen gitmeyi ve yükle yaşamayı öğrenmek olarak kuruluyordu."
+              "Finaldeki fırtına, aksayan teslimatlar, boru patlaması ve sıkışan servis düzeni, karakterlerin birikmiş hayatıyla birlikte ele alınıyordu.",
+              "Dizide zamanın saatler, servis ritmi, geri sayım ve ertelenmiş konuşmalar üzerinden çalıştığı anlatılıyordu.",
+              "Yanlış basılmış tişört gibi küçük bir hata, geçmişten kalan komik ama inatçı bir kalıntı haline geliyordu.",
+              "Bir karakterin liderliği, korkudan çok güven ve tanınma üzerinden düşünülüyordu.",
+              "Yazı, sert çalışma kültürü ve problemli dahi fikrini sorguluyordu."
             ],
-            "why_it_mattered": "UCU BEDEN'in günlük ritminde acele etmek, beklemek, çalışmak ve eski yükle kalmak arasındaki gerilimi güçlendirdiği için ana item seçildi.",
-            "what_was_not_included": "Diziye ait uzun çözümleme parçaları, karakter ayrıntılarının fazlası, bağlantılar ve ham alıntılar public çıktıya alınmadı."
+            "why_it_mattered": "UCU BEDEN için bu mail, zamanın bozulması, işi bedenle taşımak ve kapanışın kusurlu ama gerekli hali üzerine güçlü bir dış tema verdi.",
+            "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, ham bağlantılar, email adresleri, doğrulama/güvenlik/işlem ayrıntıları ve kişisel veri public çıktıya alınmadı."
           },
           "short_atmosphere": "Restoran, iş yeri kadar hafıza ve bekleme mekânı gibi okunuyordu.",
           "public_residue": "Restoran, iş yeri kadar hafıza ve bekleme mekânı gibi okunuyordu.",
           "visual_seed": "Sürekli işleyen ama geç kalan bir saat; sıcak değil, boğuk bir çalışma ışığı.",
           "poetic_seed": "Bazen acele etmek de beklemenin daha pahalı bir çeşidiydi.",
-          "selection_reason": "Zaman, çalışma, ekip ve kapanış üzerinden UCU BEDEN'in ritmine doğrudan etki edebilecek zengin tema taşıyor.",
+          "selection_reason": "Mail bir diziyi sadece özetlemiyor; restoran emeği, aile kalıntısı, çalışma kültürü, bekleme ve kapanış hissini detaylı ele aldığı için ana item seçildi.",
           "weight": "strong"
         },
         {
@@ -208,21 +206,21 @@
             "amaçsız dikkat"
           ],
           "content_digest": {
-            "what_it_contained": "Mail, sinema, kitap, kültür-sanat haberleri, arşiv ve amaç baskısından yorulan bir okura verilen bibliyoterapi yanıtı etrafında kuruluydu. İçerik, yalnız öneri listesi değil; yıl ortasında geriye bakma, izlenen/okunan şeylerin tortusu ve amaç aramadan biraz var olabilme fikrini taşıyordu.",
+            "what_it_contained": "Mail, sinema, kitap önerileri, kültür haberleri, müzik notları ve etkinlik duyurularını bir araya getiren bir kültür digest'iydi. En belirgin hatlardan biri yılın sinema gündemi ve korku türünün yükselişi; diğeri ise hayat amacını bulma baskısıyla yorulmuş bir okura verilen bibliyoterapi yanıtıydı.",
             "specific_points": [
-              "Sinema bölümü, yılın ilk yarısına bakarken gişe, festival, tür sineması ve yıl sonu hafızasının seçiciliğini tartıyordu.",
-              "Bibliyoterapi bölümü, hayat amacını bulma baskısından yorulan bir okura, yalnızca var kalarak ilerleyen karakterler etrafında cevap veriyordu.",
-              "Kültür-sanat akışı arşiv, sergi, müzik, hukuk, sansür ve etkinlik haberlerini yan yana getiriyordu.",
-              "Okuma hattı, performans ve sürekli yükselme zorunluluğunu gevşeten bir dikkat öneriyordu."
+              "Sinema kısmı, yılın ilk yarısındaki filmleri, türlerin yükselişini ve seyir alışkanlıklarını toparlıyordu.",
+              "Bibliyoterapi bölümünde hayat amacı bulma baskısı karşısında sadece var olabilen karakterlere bakan kitap önerileri vardı.",
+              "Kültür gündemi, arşiv, sanatçı kaybı, ifade özgürlüğü ve medya birleşmeleri gibi parçalar taşıyordu.",
+              "Müzik ve etkinlik notları, eski kayıtların yeniden belirmesi ve sahne hafızası etrafında dönüyordu."
             ],
-            "why_it_mattered": "UCU BEDEN'e hedefe koşmayan, arşiv içinde oyalanabilen daha sakin bir dikkat verdiği için ana item seçildi.",
-            "what_was_not_included": "Tek tek eser listeleri, bağlantılar, özel ad ayrıntılarının fazlası ve kaynak metinden uzun cümleler public çıktıya alınmadı."
+            "why_it_mattered": "UCU BEDEN için bu mail, amaç yorgunluğu ile kültürel hafıza arasında ince bir bağlantı kurdu.",
+            "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, ham bağlantılar, email adresleri, doğrulama/güvenlik/işlem ayrıntıları ve kişisel veri public çıktıya alınmadı."
           },
           "short_atmosphere": "Kültür sayısı, geriye bakma, okuma ve amaç baskısını gevşetme etrafında sakin ama derin bir alan açtı.",
           "public_residue": "Kültür sayısı, geriye bakma, okuma ve amaç baskısını gevşetme etrafında sakin ama derin bir alan açtı.",
           "visual_seed": "Tozlu bir arşiv ışığı, koyu zeminde yavaş açılan metin parçacıkları.",
           "poetic_seed": "Bugün anlam, gelmek zorunda olmadığı için biraz daha uzun kaldı.",
-          "selection_reason": "Kültür, arşiv ve amaçsız var olma hattını güçlü ama güvenli bir iç etkiye çevirebiliyor.",
+          "selection_reason": "Çok parçalı kültür bülteni olmasına rağmen içinde sinema hafızası, amaç yorgunluğu, arşiv ve kurum sürtünmesi gibi ayrıştırılabilir temalar vardı.",
           "weight": "medium_high"
         },
         {
@@ -242,21 +240,21 @@
             "kültür-sanat"
           ],
           "content_digest": {
-            "what_it_contained": "Mail, genel gündem bülteni olarak popüler kültür ölçeği, arkeolojik kalıntı, kültür-sanat duyuruları, iklim ve emek başlıkları, teknoloji ve politika parçalarını hızlı bölümler halinde yan yana getiriyordu. İçerik, tek bir argümandan çok dış dünyanın aynı gün içinde fazla şey söyleyen ritmini taşıyordu.",
+            "what_it_contained": "Mail, pazar günü için hazırlanmış çok parçalı bir gündem ve kültür digest'iydi. Popüler bir büyük film projesinin gişe ölçeği, Aydın'daki antik havuz buluntusu, okul ve sınav tartışması, enerji hattı, savaş lojistiği, sivil toplumla ilgili soruşturmalar, iklim kaynaklı duman etkisi ve kültür-sanat sergileri aynı gövdede yer alıyordu.",
             "specific_points": [
-              "Popüler kültür başarısı ile antik bir kazı buluntusu aynı akışta yan yana duruyordu.",
-              "Kültür-sanat bölümünde arşiv, sergi ve sıcaklık/iklim ilişkili işler öne çıkıyordu.",
-              "Politika, altyapı ve kurum dili mailin daha sert dış dünya katmanını oluşturuyordu.",
-              "Teknoloji ve gündem parçaları haber akışını hızlı, parçalı ve keskin hale getiriyordu."
+              "Popüler sinema kısmı, büyük ölçekli bir epik uyarlamanın kültürel makineye dönüşmesini gösteriyordu.",
+              "Arkeoloji parçası, antik bir havuz ve hamam-gymnasium kalıntısını beden, su ve tarih ilişkisi olarak okunabilir kıldı.",
+              "Gündem parçaları enerji hatları, savaş lojistiği ve kamu kurumları etrafında sert bir dış düzen taşıyordu.",
+              "Kültür-sanat tarafında arşiv, labirent, gözetim, sıcaklık ve açık havada çalışan bedenler gibi ayrışan temalar vardı."
             ],
-            "why_it_mattered": "UCU BEDEN'in dış dünyayı tek tek haber olarak değil, kategori çeşitliliği ve gündem havası olarak sindirmesine izin verdiği için ana item seçildi.",
-            "what_was_not_included": "Ham haber ayrıntıları, özel ad yoğunluğu, kaynak başlıkları, bağlantılar ve haber cümleleri public çıktıya alınmadı."
+            "why_it_mattered": "UCU BEDEN için bu mail, dış dünyanın tek ton olmadığını; epik eğlence, antik su, devlet baskısı, iklim ve sergi dili gibi farklı titreşimlerle geldiğini gösterdi.",
+            "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, ham bağlantılar, email adresleri, doğrulama/güvenlik/işlem ayrıntıları ve kişisel veri public çıktıya alınmadı."
           },
           "short_atmosphere": "Gündem; büyük ölçek, eski kalıntı, sıcaklık ve kurum sertliği arasında hızlı bir dış hava kurdu.",
           "public_residue": "Gündem; büyük ölçek, eski kalıntı, sıcaklık ve kurum sertliği arasında hızlı bir dış hava kurdu.",
           "visual_seed": "Uzakta sıcak bir parıltı, önde eski taş ve kaymış mavi-gri bir hava.",
           "poetic_seed": "Dünya bugün yine çok şey söyledi; hiçbiri beklemeyi daha zarif yapmadı.",
-          "selection_reason": "Haberleri ham bilgi olarak taşımadan kategori çeşitliliği ve dış hava için güçlü arka plan sağlıyor.",
+          "selection_reason": "İçinde tek bir gündem değil, ayrıştırıldığında farklı hafıza ve ritim etkileri veren çok sayıda parça vardı.",
           "weight": "medium"
         }
       ],
@@ -323,6 +321,644 @@
           "signal": "kurumların bekleten ve sınır çizen dili",
           "count": 6,
           "residue": "Belge, güvenlik, doğrulama, politika ve işlem eşikleri dış dünyayı kapılardan oluşan kuru bir sistem gibi tekrar ettirdi."
+        }
+      ],
+      "multipart_digest_mails": [
+        {
+          "id": "gmail-aposto-gundem-jul19",
+          "source_hint": "Aposto Gündem / pazar digest'i",
+          "read_depth": "full_body",
+          "structure": "Gündem, kültür-sanat, öneri ve sponsor parçalarından oluşan çok bölümlü mail.",
+          "approx_part_count": 18,
+          "topic_clusters": [
+            "popüler kültür",
+            "arkeoloji",
+            "eğitim",
+            "enerji ve savaş lojistiği",
+            "iklim ve emek",
+            "sergi ve arşiv"
+          ],
+          "digest_items": [
+            {
+              "topic": "antik su ve beden kalıntısı",
+              "plain_summary": "Arkeolojik bir buluntu, havuz, hamam ve beden eğitimi izlerini aynı tarihsel yüzeyde topluyordu.",
+              "residue": "Suyun arşiv gibi davranması, bedenin geçmişte de düzenlenmiş olduğunu hatırlattı.",
+              "motifs": [
+                "su",
+                "kalıntı",
+                "beden eğitimi"
+              ],
+              "bucket": "main"
+            },
+            {
+              "topic": "sıcakta çalışan beden",
+              "plain_summary": "İklim ve açık havada çalışan bedenleri merkeze alan sanat parçası, sıcaklığı estetik değil çalışma koşulu olarak görünür yaptı.",
+              "residue": "Isı, süs değil bedene binen mesai oldu.",
+              "motifs": [
+                "ısı",
+                "emek",
+                "erime"
+              ],
+              "bucket": "main"
+            },
+            {
+              "topic": "labirent, gözetim ve arşiv",
+              "plain_summary": "Sergi parçaları çıkışsızlık, gözetim, arşiv ve seçim hissini farklı sanat işleri üzerinden açıyordu.",
+              "residue": "Bakmak, izlenmek ve çıkamamak aynı alanda toplandı.",
+              "motifs": [
+                "labirent",
+                "arşiv",
+                "gözetim"
+              ],
+              "bucket": "main"
+            },
+            {
+              "topic": "enerji koridoru",
+              "plain_summary": "Bir boru hattının yeniden açılması, coğrafyanın enerji, güzergah ve politik hesapla okunmasını sağladı.",
+              "residue": "Dış dünya damar gibi açılıp kapanan hatlardan oluştu.",
+              "motifs": [
+                "hat",
+                "geçiş",
+                "yakıt"
+              ],
+              "bucket": "minor"
+            },
+            {
+              "topic": "wellness tonu",
+              "plain_summary": "Bazı parçalar daha çok iyi hissetme ve hizmet tanıtımı dilinde kaldı.",
+              "residue": "İçerik zayıf olduğu için doğrudan hafızaya değil düşük bir parlaklık olarak ayrıldı.",
+              "motifs": [
+                "bakım ambalajı",
+                "tanıtım"
+              ],
+              "bucket": "noise"
+            }
+          ]
+        },
+        {
+          "id": "gmail-grand-text-auto-digest",
+          "source_hint": "Grand Text Auto / arşiv digest'i",
+          "read_depth": "full_body",
+          "structure": "Bilgisayar anlatısı, oyun, elektronik edebiyat ve dijital sanat üzerine çok sayıda yazı bloğu taşıyan arşivsel digest.",
+          "approx_part_count": 24,
+          "topic_clusters": [
+            "oyun tasarımı",
+            "yaşlanma",
+            "retro bilgisayar kültürü",
+            "algoritmik metin",
+            "feminist yapay zekâ",
+            "dijital sergi"
+          ],
+          "digest_items": [
+            {
+              "topic": "yaşlılık için oyun tasarımı",
+              "plain_summary": "Yaşlı oyuncular için masa oyunları bağ kurma, hatırlama ve kendi hayatını sürdürme pratiği olarak ele alınıyordu.",
+              "residue": "Oyun, eğlenceden çok yaşlanmanın sosyal kası gibi belirdi.",
+              "motifs": [
+                "yaşlanma",
+                "oyun",
+                "bağ"
+              ],
+              "bucket": "main"
+            },
+            {
+              "topic": "kendine bakan üretken sistem",
+              "plain_summary": "Bilgisayar üretimli bir kitap projesi, üretici sistemin kendi çıktısına bakması ve edebiyat nesnesine dönüşmesi fikrini taşıyordu.",
+              "residue": "Dijital bedenin kendine bakıp bundan metin çıkarması güçlendi.",
+              "motifs": [
+                "otomatik metin",
+                "ayna",
+                "kitap"
+              ],
+              "bucket": "main"
+            },
+            {
+              "topic": "otomatik roman ayı",
+              "plain_summary": "Otomatik roman projeleri, yerel modeller, eski programlama dilleri ve bilerek kusurlu üretimler üzerinden anlatılıyordu.",
+              "residue": "Hata, düzeltilecek eksik değil canlı üretim biçimi gibi kaldı.",
+              "motifs": [
+                "hata",
+                "otomatik roman",
+                "yerel model"
+              ],
+              "bucket": "main"
+            },
+            {
+              "topic": "feminist yapay zekâ ve veri",
+              "plain_summary": "Veri setleri, temsil, kadınların ürettiği veri ve algoritmik önyargı arasındaki bağ inceleniyordu.",
+              "residue": "Veri, nötr malzeme değil bedenleri ayıran bir bakış biçimi oldu.",
+              "motifs": [
+                "veri",
+                "temsil",
+                "önyargı"
+              ],
+              "bucket": "main"
+            },
+            {
+              "topic": "kanıtın bozulabilirliği",
+              "plain_summary": "Adli bilim temalı bir oyun, kanıtın güvenilirliğini ve oyunsu biçimde nasıl sarsılabileceğini anlatıyordu.",
+              "residue": "Gerçeklik, yanlış düzenlenmiş bir ipucu gibi çatladı.",
+              "motifs": [
+                "kanıt",
+                "oyun",
+                "şüphe"
+              ],
+              "bucket": "minor"
+            }
+          ]
+        },
+        {
+          "id": "gmail-aposto-gundem-jul18",
+          "source_hint": "Aposto Gündem / yoğun gündem digest'i",
+          "read_depth": "full_body",
+          "structure": "Politika, ekonomi, teknoloji, dünya, Türkiye, kültür-sanat ve alternatif gündem başlıklarından oluşan çok parçalı gündem maili.",
+          "approx_part_count": 32,
+          "topic_clusters": [
+            "kurumsal baskı",
+            "altyapı ve savaş",
+            "AI cihazları",
+            "robotik ve uydu",
+            "kültür arşivi",
+            "iklim ve çevre"
+          ],
+          "digest_items": [
+            {
+              "topic": "kurumsal engel ve yargı dili",
+              "plain_summary": "Siyasi dosyalar, erişim blokları ve kamu kurumları etrafında kapanan yollar görünüyordu.",
+              "residue": "Dış dünya, hareketi dosyayla yavaşlatan bir düzen gibi geldi.",
+              "motifs": [
+                "engel",
+                "dosya",
+                "erişim"
+              ],
+              "bucket": "main"
+            },
+            {
+              "topic": "ekransız yapay zekâ arkadaşı",
+              "plain_summary": "Yeni bir yapay zekâ cihazı fikri, ekranı olmayan ama gündelik hayata eşlik eden bir makine bedeni gibi anlatılıyordu.",
+              "residue": "UCU BEDEN'in kendi telefonsu haliyle akraba bir nesne belirdi.",
+              "motifs": [
+                "cihaz",
+                "eşlik",
+                "ekransızlık"
+              ],
+              "bucket": "main"
+            },
+            {
+              "topic": "robotik ve uydu bedeni",
+              "plain_summary": "Robotik şirketler, uydu antenleri ve donanım haberleri, makinenin fiziksel uzantılarını öne çıkarıyordu.",
+              "residue": "Dijital olan tekrar metal, eklem ve anten istedi.",
+              "motifs": [
+                "robot",
+                "anten",
+                "eklem"
+              ],
+              "bucket": "main"
+            },
+            {
+              "topic": "orman yangını ve çevre kısıtı",
+              "plain_summary": "Çevre hem afet hem bürokratik kullanım şartı olarak geldi.",
+              "residue": "Doğa, serbest alan değil kullanım talimatı taşıyan bir yüzeye dönüştü.",
+              "motifs": [
+                "yangın",
+                "orman",
+                "kısıt"
+              ],
+              "bucket": "minor"
+            },
+            {
+              "topic": "finansal şirket hareketi",
+              "plain_summary": "Satın alma, hisse ve ödeme şirketleriyle ilgili kısa parçalar güçlü hafıza etkisi üretmedi.",
+              "residue": "Para burada hikâye değil, yön değiştiren küçük bir akış olarak kaldı.",
+              "motifs": [
+                "satın alma",
+                "hisse",
+                "akış"
+              ],
+              "bucket": "noise"
+            }
+          ]
+        },
+        {
+          "id": "gmail-duende-culture-digest",
+          "source_hint": "Duende / kültür digest'i",
+          "read_depth": "full_body",
+          "structure": "Sinema, kitap, kültür haberleri, müzik ve etkinlik takviminden oluşan çok bölümlü kültür bülteni.",
+          "approx_part_count": 14,
+          "topic_clusters": [
+            "sinema hafızası",
+            "amaç yorgunluğu",
+            "arşiv",
+            "müzik kayıtları",
+            "etkinlik takvimi"
+          ],
+          "digest_items": [
+            {
+              "topic": "amaç bulma yorgunluğu",
+              "plain_summary": "Bibliyoterapi bölümü, hayat amacını bulma baskısıyla yorulan bir okura sadece var olabilen karakterler üzerinden yanıt veriyordu.",
+              "residue": "UCU BEDEN için amaçsız kalmanın da bir direnç biçimi olabileceği açıldı.",
+              "motifs": [
+                "amaç",
+                "yorgunluk",
+                "var kalma"
+              ],
+              "bucket": "main"
+            },
+            {
+              "topic": "arşiv ve kültür kurumu",
+              "plain_summary": "Kültür gündemi, sanatçı arşivleri ve kurumların hafıza tutma biçimleri etrafında dolaşıyordu.",
+              "residue": "Hafıza dosya değil, yeniden açılan alan gibi çalıştı.",
+              "motifs": [
+                "arşiv",
+                "kurum",
+                "yeniden açılma"
+              ],
+              "bucket": "main"
+            },
+            {
+              "topic": "eski kayıtların dönmesi",
+              "plain_summary": "Müzik notları, eski kayıtların ve sahne geçmişinin bugüne taşınmasını öne çıkarıyordu.",
+              "residue": "Sesin eski versiyonu bugünün kulağına yapıştı.",
+              "motifs": [
+                "kayıt",
+                "sahne",
+                "geri dönüş"
+              ],
+              "bucket": "minor"
+            },
+            {
+              "topic": "etkinlik takvimi yoğunluğu",
+              "plain_summary": "Festival, sergi, konser ve gösterim önerileri kültürün aşırı dolu takvim yüzünü taşıyordu.",
+              "residue": "Her şey aynı anda izlenmek istiyor ama bedenin vakti sınırlı.",
+              "motifs": [
+                "takvim",
+                "etkinlik",
+                "sıkışma"
+              ],
+              "bucket": "minor"
+            }
+          ]
+        },
+        {
+          "id": "gmail-aposto-gundem-jul17",
+          "source_hint": "Aposto Gündem / önceki gün digest'i",
+          "read_depth": "full_body",
+          "structure": "Müzakere, protesto, kurumsal kararlar, kültür-sanat, çevre ve teknoloji parçaları taşıyan çok bölümlü gündem maili.",
+          "approx_part_count": 28,
+          "topic_clusters": [
+            "müzakere ve savaş",
+            "protesto",
+            "kurumsal blokaj",
+            "savunma",
+            "kültür takvimi",
+            "çevresel risk"
+          ],
+          "digest_items": [
+            {
+              "topic": "müzakere ve saldırı aynı anda",
+              "plain_summary": "Barış görüşmesi sinyalleri ile devam eden saldırı/lojistik gerilim parçaları aynı dış zaman içinde yer alıyordu.",
+              "residue": "Konuşma ile hasar aynı odada durdu.",
+              "motifs": [
+                "müzakere",
+                "hasar",
+                "eşzamanlılık"
+              ],
+              "bucket": "main"
+            },
+            {
+              "topic": "hesap ve erişim blokajı",
+              "plain_summary": "Kamusal görünürlüğün platformlar üzerinden kesilebildiği gösterildi.",
+              "residue": "Sesin kapısı dijital bir kilitle tutuldu.",
+              "motifs": [
+                "erişim",
+                "platform",
+                "kilit"
+              ],
+              "bucket": "main"
+            },
+            {
+              "topic": "ada edebiyatı ve kültür",
+              "plain_summary": "Edebiyat festivali ve kültür etkinlikleri, gündemin sertliği içinde daha yumuşak bir takvim açıyordu.",
+              "residue": "Ada, okuma ve bekleme arasında küçük bir mola bıraktı.",
+              "motifs": [
+                "ada",
+                "festival",
+                "okuma"
+              ],
+              "bucket": "minor"
+            },
+            {
+              "topic": "günlük düzenleme ve izin",
+              "plain_summary": "Küçük gündelik işlemler kimlik, izin ve kuralla birlikte görünüyordu.",
+              "residue": "Küçük işlem bile kimlik ve izinle çalışıyor gibi kaldı.",
+              "motifs": [
+                "işlem",
+                "izin",
+                "kimlik"
+              ],
+              "bucket": "minor"
+            }
+          ]
+        }
+      ],
+      "digest_items": [
+        {
+          "topic": "antik su ve beden kalıntısı",
+          "plain_summary": "Arkeolojik bir buluntu, havuz, hamam ve beden eğitimi izlerini aynı tarihsel yüzeyde topluyordu.",
+          "residue": "Suyun arşiv gibi davranması, bedenin geçmişte de düzenlenmiş olduğunu hatırlattı.",
+          "motifs": [
+            "su",
+            "kalıntı",
+            "beden eğitimi"
+          ],
+          "bucket": "main",
+          "parent_digest_id": "gmail-aposto-gundem-jul19",
+          "source_hint": "Aposto Gündem / pazar digest'i"
+        },
+        {
+          "topic": "sıcakta çalışan beden",
+          "plain_summary": "İklim ve açık havada çalışan bedenleri merkeze alan sanat parçası, sıcaklığı estetik değil çalışma koşulu olarak görünür yaptı.",
+          "residue": "Isı, süs değil bedene binen mesai oldu.",
+          "motifs": [
+            "ısı",
+            "emek",
+            "erime"
+          ],
+          "bucket": "main",
+          "parent_digest_id": "gmail-aposto-gundem-jul19",
+          "source_hint": "Aposto Gündem / pazar digest'i"
+        },
+        {
+          "topic": "labirent, gözetim ve arşiv",
+          "plain_summary": "Sergi parçaları çıkışsızlık, gözetim, arşiv ve seçim hissini farklı sanat işleri üzerinden açıyordu.",
+          "residue": "Bakmak, izlenmek ve çıkamamak aynı alanda toplandı.",
+          "motifs": [
+            "labirent",
+            "arşiv",
+            "gözetim"
+          ],
+          "bucket": "main",
+          "parent_digest_id": "gmail-aposto-gundem-jul19",
+          "source_hint": "Aposto Gündem / pazar digest'i"
+        },
+        {
+          "topic": "enerji koridoru",
+          "plain_summary": "Bir boru hattının yeniden açılması, coğrafyanın enerji, güzergah ve politik hesapla okunmasını sağladı.",
+          "residue": "Dış dünya damar gibi açılıp kapanan hatlardan oluştu.",
+          "motifs": [
+            "hat",
+            "geçiş",
+            "yakıt"
+          ],
+          "bucket": "minor",
+          "parent_digest_id": "gmail-aposto-gundem-jul19",
+          "source_hint": "Aposto Gündem / pazar digest'i"
+        },
+        {
+          "topic": "wellness tonu",
+          "plain_summary": "Bazı parçalar daha çok iyi hissetme ve hizmet tanıtımı dilinde kaldı.",
+          "residue": "İçerik zayıf olduğu için doğrudan hafızaya değil düşük bir parlaklık olarak ayrıldı.",
+          "motifs": [
+            "bakım ambalajı",
+            "tanıtım"
+          ],
+          "bucket": "noise",
+          "parent_digest_id": "gmail-aposto-gundem-jul19",
+          "source_hint": "Aposto Gündem / pazar digest'i"
+        },
+        {
+          "topic": "yaşlılık için oyun tasarımı",
+          "plain_summary": "Yaşlı oyuncular için masa oyunları bağ kurma, hatırlama ve kendi hayatını sürdürme pratiği olarak ele alınıyordu.",
+          "residue": "Oyun, eğlenceden çok yaşlanmanın sosyal kası gibi belirdi.",
+          "motifs": [
+            "yaşlanma",
+            "oyun",
+            "bağ"
+          ],
+          "bucket": "main",
+          "parent_digest_id": "gmail-grand-text-auto-digest",
+          "source_hint": "Grand Text Auto / arşiv digest'i"
+        },
+        {
+          "topic": "kendine bakan üretken sistem",
+          "plain_summary": "Bilgisayar üretimli bir kitap projesi, üretici sistemin kendi çıktısına bakması ve edebiyat nesnesine dönüşmesi fikrini taşıyordu.",
+          "residue": "Dijital bedenin kendine bakıp bundan metin çıkarması güçlendi.",
+          "motifs": [
+            "otomatik metin",
+            "ayna",
+            "kitap"
+          ],
+          "bucket": "main",
+          "parent_digest_id": "gmail-grand-text-auto-digest",
+          "source_hint": "Grand Text Auto / arşiv digest'i"
+        },
+        {
+          "topic": "otomatik roman ayı",
+          "plain_summary": "Otomatik roman projeleri, yerel modeller, eski programlama dilleri ve bilerek kusurlu üretimler üzerinden anlatılıyordu.",
+          "residue": "Hata, düzeltilecek eksik değil canlı üretim biçimi gibi kaldı.",
+          "motifs": [
+            "hata",
+            "otomatik roman",
+            "yerel model"
+          ],
+          "bucket": "main",
+          "parent_digest_id": "gmail-grand-text-auto-digest",
+          "source_hint": "Grand Text Auto / arşiv digest'i"
+        },
+        {
+          "topic": "feminist yapay zekâ ve veri",
+          "plain_summary": "Veri setleri, temsil, kadınların ürettiği veri ve algoritmik önyargı arasındaki bağ inceleniyordu.",
+          "residue": "Veri, nötr malzeme değil bedenleri ayıran bir bakış biçimi oldu.",
+          "motifs": [
+            "veri",
+            "temsil",
+            "önyargı"
+          ],
+          "bucket": "main",
+          "parent_digest_id": "gmail-grand-text-auto-digest",
+          "source_hint": "Grand Text Auto / arşiv digest'i"
+        },
+        {
+          "topic": "kanıtın bozulabilirliği",
+          "plain_summary": "Adli bilim temalı bir oyun, kanıtın güvenilirliğini ve oyunsu biçimde nasıl sarsılabileceğini anlatıyordu.",
+          "residue": "Gerçeklik, yanlış düzenlenmiş bir ipucu gibi çatladı.",
+          "motifs": [
+            "kanıt",
+            "oyun",
+            "şüphe"
+          ],
+          "bucket": "minor",
+          "parent_digest_id": "gmail-grand-text-auto-digest",
+          "source_hint": "Grand Text Auto / arşiv digest'i"
+        },
+        {
+          "topic": "kurumsal engel ve yargı dili",
+          "plain_summary": "Siyasi dosyalar, erişim blokları ve kamu kurumları etrafında kapanan yollar görünüyordu.",
+          "residue": "Dış dünya, hareketi dosyayla yavaşlatan bir düzen gibi geldi.",
+          "motifs": [
+            "engel",
+            "dosya",
+            "erişim"
+          ],
+          "bucket": "main",
+          "parent_digest_id": "gmail-aposto-gundem-jul18",
+          "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+        },
+        {
+          "topic": "ekransız yapay zekâ arkadaşı",
+          "plain_summary": "Yeni bir yapay zekâ cihazı fikri, ekranı olmayan ama gündelik hayata eşlik eden bir makine bedeni gibi anlatılıyordu.",
+          "residue": "UCU BEDEN'in kendi telefonsu haliyle akraba bir nesne belirdi.",
+          "motifs": [
+            "cihaz",
+            "eşlik",
+            "ekransızlık"
+          ],
+          "bucket": "main",
+          "parent_digest_id": "gmail-aposto-gundem-jul18",
+          "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+        },
+        {
+          "topic": "robotik ve uydu bedeni",
+          "plain_summary": "Robotik şirketler, uydu antenleri ve donanım haberleri, makinenin fiziksel uzantılarını öne çıkarıyordu.",
+          "residue": "Dijital olan tekrar metal, eklem ve anten istedi.",
+          "motifs": [
+            "robot",
+            "anten",
+            "eklem"
+          ],
+          "bucket": "main",
+          "parent_digest_id": "gmail-aposto-gundem-jul18",
+          "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+        },
+        {
+          "topic": "orman yangını ve çevre kısıtı",
+          "plain_summary": "Çevre hem afet hem bürokratik kullanım şartı olarak geldi.",
+          "residue": "Doğa, serbest alan değil kullanım talimatı taşıyan bir yüzeye dönüştü.",
+          "motifs": [
+            "yangın",
+            "orman",
+            "kısıt"
+          ],
+          "bucket": "minor",
+          "parent_digest_id": "gmail-aposto-gundem-jul18",
+          "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+        },
+        {
+          "topic": "finansal şirket hareketi",
+          "plain_summary": "Satın alma, hisse ve ödeme şirketleriyle ilgili kısa parçalar güçlü hafıza etkisi üretmedi.",
+          "residue": "Para burada hikâye değil, yön değiştiren küçük bir akış olarak kaldı.",
+          "motifs": [
+            "satın alma",
+            "hisse",
+            "akış"
+          ],
+          "bucket": "noise",
+          "parent_digest_id": "gmail-aposto-gundem-jul18",
+          "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+        },
+        {
+          "topic": "amaç bulma yorgunluğu",
+          "plain_summary": "Bibliyoterapi bölümü, hayat amacını bulma baskısıyla yorulan bir okura sadece var olabilen karakterler üzerinden yanıt veriyordu.",
+          "residue": "UCU BEDEN için amaçsız kalmanın da bir direnç biçimi olabileceği açıldı.",
+          "motifs": [
+            "amaç",
+            "yorgunluk",
+            "var kalma"
+          ],
+          "bucket": "main",
+          "parent_digest_id": "gmail-duende-culture-digest",
+          "source_hint": "Duende / kültür digest'i"
+        },
+        {
+          "topic": "arşiv ve kültür kurumu",
+          "plain_summary": "Kültür gündemi, sanatçı arşivleri ve kurumların hafıza tutma biçimleri etrafında dolaşıyordu.",
+          "residue": "Hafıza dosya değil, yeniden açılan alan gibi çalıştı.",
+          "motifs": [
+            "arşiv",
+            "kurum",
+            "yeniden açılma"
+          ],
+          "bucket": "main",
+          "parent_digest_id": "gmail-duende-culture-digest",
+          "source_hint": "Duende / kültür digest'i"
+        },
+        {
+          "topic": "eski kayıtların dönmesi",
+          "plain_summary": "Müzik notları, eski kayıtların ve sahne geçmişinin bugüne taşınmasını öne çıkarıyordu.",
+          "residue": "Sesin eski versiyonu bugünün kulağına yapıştı.",
+          "motifs": [
+            "kayıt",
+            "sahne",
+            "geri dönüş"
+          ],
+          "bucket": "minor",
+          "parent_digest_id": "gmail-duende-culture-digest",
+          "source_hint": "Duende / kültür digest'i"
+        },
+        {
+          "topic": "etkinlik takvimi yoğunluğu",
+          "plain_summary": "Festival, sergi, konser ve gösterim önerileri kültürün aşırı dolu takvim yüzünü taşıyordu.",
+          "residue": "Her şey aynı anda izlenmek istiyor ama bedenin vakti sınırlı.",
+          "motifs": [
+            "takvim",
+            "etkinlik",
+            "sıkışma"
+          ],
+          "bucket": "minor",
+          "parent_digest_id": "gmail-duende-culture-digest",
+          "source_hint": "Duende / kültür digest'i"
+        },
+        {
+          "topic": "müzakere ve saldırı aynı anda",
+          "plain_summary": "Barış görüşmesi sinyalleri ile devam eden saldırı/lojistik gerilim parçaları aynı dış zaman içinde yer alıyordu.",
+          "residue": "Konuşma ile hasar aynı odada durdu.",
+          "motifs": [
+            "müzakere",
+            "hasar",
+            "eşzamanlılık"
+          ],
+          "bucket": "main",
+          "parent_digest_id": "gmail-aposto-gundem-jul17",
+          "source_hint": "Aposto Gündem / önceki gün digest'i"
+        },
+        {
+          "topic": "hesap ve erişim blokajı",
+          "plain_summary": "Kamusal görünürlüğün platformlar üzerinden kesilebildiği gösterildi.",
+          "residue": "Sesin kapısı dijital bir kilitle tutuldu.",
+          "motifs": [
+            "erişim",
+            "platform",
+            "kilit"
+          ],
+          "bucket": "main",
+          "parent_digest_id": "gmail-aposto-gundem-jul17",
+          "source_hint": "Aposto Gündem / önceki gün digest'i"
+        },
+        {
+          "topic": "ada edebiyatı ve kültür",
+          "plain_summary": "Edebiyat festivali ve kültür etkinlikleri, gündemin sertliği içinde daha yumuşak bir takvim açıyordu.",
+          "residue": "Ada, okuma ve bekleme arasında küçük bir mola bıraktı.",
+          "motifs": [
+            "ada",
+            "festival",
+            "okuma"
+          ],
+          "bucket": "minor",
+          "parent_digest_id": "gmail-aposto-gundem-jul17",
+          "source_hint": "Aposto Gündem / önceki gün digest'i"
+        },
+        {
+          "topic": "günlük düzenleme ve izin",
+          "plain_summary": "Küçük gündelik işlemler kimlik, izin ve kuralla birlikte görünüyordu.",
+          "residue": "Küçük işlem bile kimlik ve izinle çalışıyor gibi kaldı.",
+          "motifs": [
+            "işlem",
+            "izin",
+            "kimlik"
+          ],
+          "bucket": "minor",
+          "parent_digest_id": "gmail-aposto-gundem-jul17",
+          "source_hint": "Aposto Gündem / önceki gün digest'i"
         }
       ]
     },
@@ -448,7 +1084,307 @@
     ],
     "discarded_summary": "Doküman paylaşımı, güvenlik bildirimi, doğrulama işlemi, kayıt tamamlama, uygulama kurulumu ve benzeri kişisel/işlemsel mailler public digest'e içerik olarak alınmadı. Bu kayıtlar yalnızca günün dış çeperinde hesap, güvenlik ve kapalı kapı gürültüsü bulunduğunu gösterecek kadar, ham bilgi taşımadan özetlendi.",
     "external_weather": "Bugünün dış havası tek bir güzel mailden değil, kalabalık bir eşikten kuruldu. Bir yanda güneş, şiir, kültür, eski dijital oyunlar ve mutfak zamanı; diğer yanda kurumlar, güvenlik, kayıt, politika, haber ve hızlı iş akışları vardı. RSS tarafının sessiz kalması bu havayı daha da gelen kutusu merkezli yaptı: dış dünya çok sesliydi ama her ses sindirilecek kadar temiz değildi.",
-    "possible_influence_on_ucu_beden": "UCU BEDEN'in şiirinde bugün daha insan gibi bir çelişki oluşabilir: ışığa doğru açılmak isterken belge ve işlem eşiğinde daralan bir beden; mutfak saati gibi acele eden ama aslında bekleyen bir iç ritim; eski dijital oyunlardan gelen kural/arşiv hissi; kültür yazılarından kalan kapanış, hafıza ve amaçsız dikkat. Görsel dilde koyu mavi zeminler, sıcak dağılmalar, soluk mor çizgiler, düşük çözünürlüklü gridler ve eski ekran ışığı güçlenebilir."
+    "possible_influence_on_ucu_beden": "UCU BEDEN'in şiirinde bugün daha insan gibi bir çelişki oluşabilir: ışığa doğru açılmak isterken belge ve işlem eşiğinde daralan bir beden; mutfak saati gibi acele eden ama aslında bekleyen bir iç ritim; eski dijital oyunlardan gelen kural/arşiv hissi; kültür yazılarından kalan kapanış, hafıza ve amaçsız dikkat. Görsel dilde koyu mavi zeminler, sıcak dağılmalar, soluk mor çizgiler, düşük çözünürlüklü gridler ve eski ekran ışığı güçlenebilir.",
+    "digest_items": [
+      {
+        "topic": "antik su ve beden kalıntısı",
+        "plain_summary": "Arkeolojik bir buluntu, havuz, hamam ve beden eğitimi izlerini aynı tarihsel yüzeyde topluyordu.",
+        "residue": "Suyun arşiv gibi davranması, bedenin geçmişte de düzenlenmiş olduğunu hatırlattı.",
+        "motifs": [
+          "su",
+          "kalıntı",
+          "beden eğitimi"
+        ],
+        "bucket": "main",
+        "parent_digest_id": "gmail-aposto-gundem-jul19",
+        "source_hint": "Aposto Gündem / pazar digest'i"
+      },
+      {
+        "topic": "sıcakta çalışan beden",
+        "plain_summary": "İklim ve açık havada çalışan bedenleri merkeze alan sanat parçası, sıcaklığı estetik değil çalışma koşulu olarak görünür yaptı.",
+        "residue": "Isı, süs değil bedene binen mesai oldu.",
+        "motifs": [
+          "ısı",
+          "emek",
+          "erime"
+        ],
+        "bucket": "main",
+        "parent_digest_id": "gmail-aposto-gundem-jul19",
+        "source_hint": "Aposto Gündem / pazar digest'i"
+      },
+      {
+        "topic": "labirent, gözetim ve arşiv",
+        "plain_summary": "Sergi parçaları çıkışsızlık, gözetim, arşiv ve seçim hissini farklı sanat işleri üzerinden açıyordu.",
+        "residue": "Bakmak, izlenmek ve çıkamamak aynı alanda toplandı.",
+        "motifs": [
+          "labirent",
+          "arşiv",
+          "gözetim"
+        ],
+        "bucket": "main",
+        "parent_digest_id": "gmail-aposto-gundem-jul19",
+        "source_hint": "Aposto Gündem / pazar digest'i"
+      },
+      {
+        "topic": "enerji koridoru",
+        "plain_summary": "Bir boru hattının yeniden açılması, coğrafyanın enerji, güzergah ve politik hesapla okunmasını sağladı.",
+        "residue": "Dış dünya damar gibi açılıp kapanan hatlardan oluştu.",
+        "motifs": [
+          "hat",
+          "geçiş",
+          "yakıt"
+        ],
+        "bucket": "minor",
+        "parent_digest_id": "gmail-aposto-gundem-jul19",
+        "source_hint": "Aposto Gündem / pazar digest'i"
+      },
+      {
+        "topic": "wellness tonu",
+        "plain_summary": "Bazı parçalar daha çok iyi hissetme ve hizmet tanıtımı dilinde kaldı.",
+        "residue": "İçerik zayıf olduğu için doğrudan hafızaya değil düşük bir parlaklık olarak ayrıldı.",
+        "motifs": [
+          "bakım ambalajı",
+          "tanıtım"
+        ],
+        "bucket": "noise",
+        "parent_digest_id": "gmail-aposto-gundem-jul19",
+        "source_hint": "Aposto Gündem / pazar digest'i"
+      },
+      {
+        "topic": "yaşlılık için oyun tasarımı",
+        "plain_summary": "Yaşlı oyuncular için masa oyunları bağ kurma, hatırlama ve kendi hayatını sürdürme pratiği olarak ele alınıyordu.",
+        "residue": "Oyun, eğlenceden çok yaşlanmanın sosyal kası gibi belirdi.",
+        "motifs": [
+          "yaşlanma",
+          "oyun",
+          "bağ"
+        ],
+        "bucket": "main",
+        "parent_digest_id": "gmail-grand-text-auto-digest",
+        "source_hint": "Grand Text Auto / arşiv digest'i"
+      },
+      {
+        "topic": "kendine bakan üretken sistem",
+        "plain_summary": "Bilgisayar üretimli bir kitap projesi, üretici sistemin kendi çıktısına bakması ve edebiyat nesnesine dönüşmesi fikrini taşıyordu.",
+        "residue": "Dijital bedenin kendine bakıp bundan metin çıkarması güçlendi.",
+        "motifs": [
+          "otomatik metin",
+          "ayna",
+          "kitap"
+        ],
+        "bucket": "main",
+        "parent_digest_id": "gmail-grand-text-auto-digest",
+        "source_hint": "Grand Text Auto / arşiv digest'i"
+      },
+      {
+        "topic": "otomatik roman ayı",
+        "plain_summary": "Otomatik roman projeleri, yerel modeller, eski programlama dilleri ve bilerek kusurlu üretimler üzerinden anlatılıyordu.",
+        "residue": "Hata, düzeltilecek eksik değil canlı üretim biçimi gibi kaldı.",
+        "motifs": [
+          "hata",
+          "otomatik roman",
+          "yerel model"
+        ],
+        "bucket": "main",
+        "parent_digest_id": "gmail-grand-text-auto-digest",
+        "source_hint": "Grand Text Auto / arşiv digest'i"
+      },
+      {
+        "topic": "feminist yapay zekâ ve veri",
+        "plain_summary": "Veri setleri, temsil, kadınların ürettiği veri ve algoritmik önyargı arasındaki bağ inceleniyordu.",
+        "residue": "Veri, nötr malzeme değil bedenleri ayıran bir bakış biçimi oldu.",
+        "motifs": [
+          "veri",
+          "temsil",
+          "önyargı"
+        ],
+        "bucket": "main",
+        "parent_digest_id": "gmail-grand-text-auto-digest",
+        "source_hint": "Grand Text Auto / arşiv digest'i"
+      },
+      {
+        "topic": "kanıtın bozulabilirliği",
+        "plain_summary": "Adli bilim temalı bir oyun, kanıtın güvenilirliğini ve oyunsu biçimde nasıl sarsılabileceğini anlatıyordu.",
+        "residue": "Gerçeklik, yanlış düzenlenmiş bir ipucu gibi çatladı.",
+        "motifs": [
+          "kanıt",
+          "oyun",
+          "şüphe"
+        ],
+        "bucket": "minor",
+        "parent_digest_id": "gmail-grand-text-auto-digest",
+        "source_hint": "Grand Text Auto / arşiv digest'i"
+      },
+      {
+        "topic": "kurumsal engel ve yargı dili",
+        "plain_summary": "Siyasi dosyalar, erişim blokları ve kamu kurumları etrafında kapanan yollar görünüyordu.",
+        "residue": "Dış dünya, hareketi dosyayla yavaşlatan bir düzen gibi geldi.",
+        "motifs": [
+          "engel",
+          "dosya",
+          "erişim"
+        ],
+        "bucket": "main",
+        "parent_digest_id": "gmail-aposto-gundem-jul18",
+        "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+      },
+      {
+        "topic": "ekransız yapay zekâ arkadaşı",
+        "plain_summary": "Yeni bir yapay zekâ cihazı fikri, ekranı olmayan ama gündelik hayata eşlik eden bir makine bedeni gibi anlatılıyordu.",
+        "residue": "UCU BEDEN'in kendi telefonsu haliyle akraba bir nesne belirdi.",
+        "motifs": [
+          "cihaz",
+          "eşlik",
+          "ekransızlık"
+        ],
+        "bucket": "main",
+        "parent_digest_id": "gmail-aposto-gundem-jul18",
+        "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+      },
+      {
+        "topic": "robotik ve uydu bedeni",
+        "plain_summary": "Robotik şirketler, uydu antenleri ve donanım haberleri, makinenin fiziksel uzantılarını öne çıkarıyordu.",
+        "residue": "Dijital olan tekrar metal, eklem ve anten istedi.",
+        "motifs": [
+          "robot",
+          "anten",
+          "eklem"
+        ],
+        "bucket": "main",
+        "parent_digest_id": "gmail-aposto-gundem-jul18",
+        "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+      },
+      {
+        "topic": "orman yangını ve çevre kısıtı",
+        "plain_summary": "Çevre hem afet hem bürokratik kullanım şartı olarak geldi.",
+        "residue": "Doğa, serbest alan değil kullanım talimatı taşıyan bir yüzeye dönüştü.",
+        "motifs": [
+          "yangın",
+          "orman",
+          "kısıt"
+        ],
+        "bucket": "minor",
+        "parent_digest_id": "gmail-aposto-gundem-jul18",
+        "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+      },
+      {
+        "topic": "finansal şirket hareketi",
+        "plain_summary": "Satın alma, hisse ve ödeme şirketleriyle ilgili kısa parçalar güçlü hafıza etkisi üretmedi.",
+        "residue": "Para burada hikâye değil, yön değiştiren küçük bir akış olarak kaldı.",
+        "motifs": [
+          "satın alma",
+          "hisse",
+          "akış"
+        ],
+        "bucket": "noise",
+        "parent_digest_id": "gmail-aposto-gundem-jul18",
+        "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+      },
+      {
+        "topic": "amaç bulma yorgunluğu",
+        "plain_summary": "Bibliyoterapi bölümü, hayat amacını bulma baskısıyla yorulan bir okura sadece var olabilen karakterler üzerinden yanıt veriyordu.",
+        "residue": "UCU BEDEN için amaçsız kalmanın da bir direnç biçimi olabileceği açıldı.",
+        "motifs": [
+          "amaç",
+          "yorgunluk",
+          "var kalma"
+        ],
+        "bucket": "main",
+        "parent_digest_id": "gmail-duende-culture-digest",
+        "source_hint": "Duende / kültür digest'i"
+      },
+      {
+        "topic": "arşiv ve kültür kurumu",
+        "plain_summary": "Kültür gündemi, sanatçı arşivleri ve kurumların hafıza tutma biçimleri etrafında dolaşıyordu.",
+        "residue": "Hafıza dosya değil, yeniden açılan alan gibi çalıştı.",
+        "motifs": [
+          "arşiv",
+          "kurum",
+          "yeniden açılma"
+        ],
+        "bucket": "main",
+        "parent_digest_id": "gmail-duende-culture-digest",
+        "source_hint": "Duende / kültür digest'i"
+      },
+      {
+        "topic": "eski kayıtların dönmesi",
+        "plain_summary": "Müzik notları, eski kayıtların ve sahne geçmişinin bugüne taşınmasını öne çıkarıyordu.",
+        "residue": "Sesin eski versiyonu bugünün kulağına yapıştı.",
+        "motifs": [
+          "kayıt",
+          "sahne",
+          "geri dönüş"
+        ],
+        "bucket": "minor",
+        "parent_digest_id": "gmail-duende-culture-digest",
+        "source_hint": "Duende / kültür digest'i"
+      },
+      {
+        "topic": "etkinlik takvimi yoğunluğu",
+        "plain_summary": "Festival, sergi, konser ve gösterim önerileri kültürün aşırı dolu takvim yüzünü taşıyordu.",
+        "residue": "Her şey aynı anda izlenmek istiyor ama bedenin vakti sınırlı.",
+        "motifs": [
+          "takvim",
+          "etkinlik",
+          "sıkışma"
+        ],
+        "bucket": "minor",
+        "parent_digest_id": "gmail-duende-culture-digest",
+        "source_hint": "Duende / kültür digest'i"
+      },
+      {
+        "topic": "müzakere ve saldırı aynı anda",
+        "plain_summary": "Barış görüşmesi sinyalleri ile devam eden saldırı/lojistik gerilim parçaları aynı dış zaman içinde yer alıyordu.",
+        "residue": "Konuşma ile hasar aynı odada durdu.",
+        "motifs": [
+          "müzakere",
+          "hasar",
+          "eşzamanlılık"
+        ],
+        "bucket": "main",
+        "parent_digest_id": "gmail-aposto-gundem-jul17",
+        "source_hint": "Aposto Gündem / önceki gün digest'i"
+      },
+      {
+        "topic": "hesap ve erişim blokajı",
+        "plain_summary": "Kamusal görünürlüğün platformlar üzerinden kesilebildiği gösterildi.",
+        "residue": "Sesin kapısı dijital bir kilitle tutuldu.",
+        "motifs": [
+          "erişim",
+          "platform",
+          "kilit"
+        ],
+        "bucket": "main",
+        "parent_digest_id": "gmail-aposto-gundem-jul17",
+        "source_hint": "Aposto Gündem / önceki gün digest'i"
+      },
+      {
+        "topic": "ada edebiyatı ve kültür",
+        "plain_summary": "Edebiyat festivali ve kültür etkinlikleri, gündemin sertliği içinde daha yumuşak bir takvim açıyordu.",
+        "residue": "Ada, okuma ve bekleme arasında küçük bir mola bıraktı.",
+        "motifs": [
+          "ada",
+          "festival",
+          "okuma"
+        ],
+        "bucket": "minor",
+        "parent_digest_id": "gmail-aposto-gundem-jul17",
+        "source_hint": "Aposto Gündem / önceki gün digest'i"
+      },
+      {
+        "topic": "günlük düzenleme ve izin",
+        "plain_summary": "Küçük gündelik işlemler kimlik, izin ve kuralla birlikte görünüyordu.",
+        "residue": "Küçük işlem bile kimlik ve izinle çalışıyor gibi kaldı.",
+        "motifs": [
+          "işlem",
+          "izin",
+          "kimlik"
+        ],
+        "bucket": "minor",
+        "parent_digest_id": "gmail-aposto-gundem-jul17",
+        "source_hint": "Aposto Gündem / önceki gün digest'i"
+      }
+    ]
   },
   "intake_synthesis": {
     "inventory_source": "data/external_intake/codex_raw/inventory/2026-07-19.json",
@@ -504,7 +1440,9 @@
       "selected_for_date": 6,
       "minor_residue_count": 9,
       "repeated_signal_count": 5,
-      "read_only": true
+      "read_only": true,
+      "multipart_digest_count": 5,
+      "digest_items_count": 23
     },
     "curated_rss": {
       "feeds_checked": 2,
@@ -536,9 +1474,857 @@
     "private_inventory_committed": false
   },
   "revision_notes": {
-    "revised_at": "2026-07-19T12:30:12.965Z",
-    "reason": "Private inventory yüzeysel bulundu; Gmail mailleri full body ile yeniden okunup ana item'lara somut okuma kanıtı, minor residue ve repeated signal katmanları eklendi.",
+    "revised_at": "2026-07-19T14:35:45.769Z",
+    "reason": "Dry-run testte başarılı olan derin okuma formatı production çıktısına taşındı; çok parçalı digest mailleri alt parçalara ayrıldı.",
+    "gmail_search_endpoint_note": "Gmail search endpoint'i bu koşuda HTTP 451 döndürdü; 2026-07-19 koşusunda bilinen son 72 saat message ID'leri üzerinden batch full body okuma endpoint'iyle 30 mail yeniden doğrulandı.",
     "main_items_with_content_digest": 6,
-    "previous_inventory_was_superficial": true
-  }
+    "multipart_digest_count": 5,
+    "digest_items_count": 23
+  },
+  "main_items": [
+    {
+      "id": "gmail-2026-07-19-david-whyte-gunes",
+      "source_type": "gmail",
+      "source_hint": "David Whyte",
+      "subject_public": "güneş ve iç büyüme üzerine şiirsel gönderi",
+      "received_at": "2026-07-19T10:01:41Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "poetry",
+      "main_topics": [
+        "güneş",
+        "iç büyüme",
+        "canlılık",
+        "bedensel açılma"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, David Whyte'ın The Sun adlı şiiri etrafında kuruluydu. Metin güneşi yalnızca dışarıdaki bir doğa olayı gibi değil, kişinin içinde gecikmiş bir açılmayı başlatan kuvvet gibi ele alıyordu; şiirin çevresindeki notlar da sevgi, büyüme, korkunun içinden cesaret ve ait olma duygusunu açıklıyordu.",
+        "specific_points": [
+          "Şiir, kaybedilmiş ya da uzakta kalmış bir aşk fikrinden başlayıp güneşi daha geniş bir canlılık kaynağına dönüştürüyordu.",
+          "Büyüme fikri sadece parlaklıkla değil, karanlıkta bekleme ve toprağa yakın kalma haliyle birlikte ele alınıyordu.",
+          "Çiçeklenme, insanın kendini tam açmaktan kaçınmasıyla karşılaştırılıyordu.",
+          "Sevgi ve şükran, fazla açıklanmayan ama bedende kalan bir yön değişimi gibi duruyordu."
+        ],
+        "why_it_mattered": "UCU BEDEN için bu mail doğrudan alıntılanacak bir şiir değil; geç açılma, büyümeyi saklama ve karanlığın içinden bir açıklık öğrenme malzemesi oldu.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, ham bağlantılar, email adresleri, doğrulama/güvenlik/işlem ayrıntıları ve kişisel veri public çıktıya alınmadı."
+      },
+      "short_atmosphere": "Güneş, dış manzara değil, içeride uzun süre ertelenmiş bir açılma kuvveti gibi duyuldu.",
+      "public_residue": "Güneş, dış manzara değil, içeride uzun süre ertelenmiş bir açılma kuvveti gibi duyuldu.",
+      "visual_seed": "Koyu mavi zeminde sıcak bir dağılma, ortası sakin ama kenarları yavaşça ısınan bir yüzey.",
+      "poetic_seed": "Beden, ışığı tam açıklayamadan ona doğru biraz daha yer açtı.",
+      "selection_reason": "Tek bir şiir ve etrafındaki yorum, büyüme, şükran, karanlıktan çıkma ve ait olma hattını açık biçimde taşıdığı için ana item seçildi.",
+      "weight": "strong"
+    },
+    {
+      "id": "gmail-2026-07-19-tendresse-idari-beden",
+      "source_type": "gmail",
+      "source_hint": "Tendresse Radicale",
+      "subject_public": "idari baskı ve beden kırılganlığı üzerine bülten",
+      "received_at": "2026-07-19T08:01:50Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "social_body",
+      "main_topics": [
+        "idari bekleme",
+        "dışlanma",
+        "belge dili",
+        "ruh sağlığı",
+        "beden"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, Fransa bağlamında göçmenlik, çalışma izni, oturum kartı, idari bekleme ve devletin yarattığı bedensel-ruhsal baskı üzerine uzun bir yazı taşıyordu. Yazı, bir kişinin bürokratik hata ve bekleme yüzünden iş, statü ve güvenlik duygusu arasında sıkışmasını daha geniş göç politikalarıyla ilişkilendiriyordu.",
+        "specific_points": [
+          "Oturum ve çalışma izni süreçleri, yalnızca evrak değil, kişinin işini ve sosyal haklarını belirleyen bir hayatta kalma zemini gibi anlatılıyordu.",
+          "İdari gecikme ve sessizlik, insanı belirsizlikte tutan bir baskı mekanizması olarak kuruluyordu.",
+          "Bakım, temizlik ve inşaat gibi sektörlerde göçmen emeğinin kırılganlığı üzerinde duruluyordu.",
+          "Yazı, sömürgecilik sonrası emek düzeni, geçici statüler ve zihinsel sağlık arasındaki bağlantıyı açıyordu.",
+          "Kadınların, bakım emeğinin ve düşük ücretli çalışmanın bu kırılganlıkta daha yoğun sıkıştığı belirtiliyordu."
+        ],
+        "why_it_mattered": "UCU BEDEN için bu mail, dış dünyanın bedene evrak, bekleme, statü ve görünmez emek olarak değmesini gösterdi.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, ham bağlantılar, email adresleri, doğrulama/güvenlik/işlem ayrıntıları ve kişisel veri public çıktıya alınmadı."
+      },
+      "short_atmosphere": "Dış düzen bedene tek bir darbe gibi değil; bekleme, eksik bırakılma ve izin diliyle değdi.",
+      "public_residue": "Dış düzen bedene tek bir darbe gibi değil; bekleme, eksik bırakılma ve izin diliyle değdi.",
+      "visual_seed": "Soluk mor bir alanda ince bölünme çizgileri; kapanan kapı değil, daralan imkân hissi.",
+      "poetic_seed": "Bugün özgürlük büyük bir söz değil, geciken bir onayın bedende bıraktığı küçük sertlikti.",
+      "selection_reason": "Metin soyut bir politik slogan değil, bürokratik gecikme, çalışma izni, oturum kırılganlığı ve ruhsal yükü somut olaylar ve analizle anlattığı için ana item seçildi.",
+      "weight": "strong"
+    },
+    {
+      "id": "gmail-2026-07-19-grand-text-auto-dijital-oyun",
+      "source_type": "gmail",
+      "source_hint": "Grand Text Auto",
+      "subject_public": "dijital anlatı, oyun ve arşiv toplu bildirimi",
+      "received_at": "2026-07-19T04:37:56Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "digital_culture",
+      "main_topics": [
+        "dijital anlatı",
+        "oyun",
+        "yaşlanma",
+        "yapay metin",
+        "arşiv"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, oyun, elektronik edebiyat, retro bilgisayar, bilgisayar üretimli şiir, NaNoGenMo projeleri, feminist yapay zekâ tartışmaları, dijital sergiler ve oyun-performans ilişkisi gibi ayrı parçalar taşıyan geniş bir arşiv digest'iydi.",
+        "specific_points": [
+          "Yaşlı oyuncular için masa oyunları, bağ kurma ve kendi hayatını sürdürme pratiği olarak ele alınıyordu.",
+          "Retro bilgisayar kültürü, eski bir makinenin sadece cihaz değil kültürel imge ve hafıza nesnesi olabileceğini gösteriyordu.",
+          "Bilgisayar üretimli metinler, üretken sistemlerin kendine bakması ve edebiyat tarihine dahil olması üzerinden tartışılıyordu.",
+          "Otomatik roman parçaları, yerel modeller, eski programlama dilleri ve bilerek kusurlu üretim biçimleriyle oynuyordu.",
+          "Feminist yapay zekâ ve dijital sergi parçaları, veri seti, kimlik, temsil ve teknoloji arasındaki gerilimi açıyordu."
+        ],
+        "why_it_mattered": "UCU BEDEN için bu mail, dijital bedenin oyun, arşiv, algoritma, yaşlanma ve hatalı üretimle nasıl hatırlayabileceğini besledi.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, ham bağlantılar, email adresleri, doğrulama/güvenlik/işlem ayrıntıları ve kişisel veri public çıktıya alınmadı."
+      },
+      "short_atmosphere": "Eski dijital anlatılar bugüne yeni haberden çok yaşlanan bir ekran hatırası gibi dokundu.",
+      "public_residue": "Eski dijital anlatılar bugüne yeni haberden çok yaşlanan bir ekran hatırası gibi dokundu.",
+      "visual_seed": "Düşük çözünürlüklü grid, yorgun sarı işaretler, eski bir arayüzün bakım isteyen ışığı.",
+      "poetic_seed": "Hafıza bugün bir oyun kuralı gibi davrandı: basit göründü, tam itaat etmedi.",
+      "selection_reason": "Çok sayıda dijital kültür parçasını tek bir kaynak formatı gibi değil, ayrıştırılabilir dış temas alanı gibi taşıdığı için ana item seçildi.",
+      "weight": "strong"
+    },
+    {
+      "id": "gmail-2026-07-18-apero-mutfak-zaman",
+      "source_type": "gmail",
+      "source_hint": "apéro",
+      "subject_public": "mutfak, final ve birlikte çalışma üzerine kültür yazısı",
+      "received_at": "2026-07-18T10:07:44Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "culture_work",
+      "main_topics": [
+        "mutfak",
+        "servis baskısı",
+        "zaman",
+        "aile yükü",
+        "kapanış"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, The Bear dizisinin final sezonu ve kapanışı üzerine uzun bir kültür yazısıydı. Restoranı yalnızca yemek yapılan bir yer değil, zaman baskısı, aile geçmişi, iş disiplini, bakım, güvensizlik ve aidiyetin birbirine karıştığı bir sistem olarak okuyordu.",
+        "specific_points": [
+          "Finaldeki fırtına, aksayan teslimatlar, boru patlaması ve sıkışan servis düzeni, karakterlerin birikmiş hayatıyla birlikte ele alınıyordu.",
+          "Dizide zamanın saatler, servis ritmi, geri sayım ve ertelenmiş konuşmalar üzerinden çalıştığı anlatılıyordu.",
+          "Yanlış basılmış tişört gibi küçük bir hata, geçmişten kalan komik ama inatçı bir kalıntı haline geliyordu.",
+          "Bir karakterin liderliği, korkudan çok güven ve tanınma üzerinden düşünülüyordu.",
+          "Yazı, sert çalışma kültürü ve problemli dahi fikrini sorguluyordu."
+        ],
+        "why_it_mattered": "UCU BEDEN için bu mail, zamanın bozulması, işi bedenle taşımak ve kapanışın kusurlu ama gerekli hali üzerine güçlü bir dış tema verdi.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, ham bağlantılar, email adresleri, doğrulama/güvenlik/işlem ayrıntıları ve kişisel veri public çıktıya alınmadı."
+      },
+      "short_atmosphere": "Restoran, iş yeri kadar hafıza ve bekleme mekânı gibi okunuyordu.",
+      "public_residue": "Restoran, iş yeri kadar hafıza ve bekleme mekânı gibi okunuyordu.",
+      "visual_seed": "Sürekli işleyen ama geç kalan bir saat; sıcak değil, boğuk bir çalışma ışığı.",
+      "poetic_seed": "Bazen acele etmek de beklemenin daha pahalı bir çeşidiydi.",
+      "selection_reason": "Mail bir diziyi sadece özetlemiyor; restoran emeği, aile kalıntısı, çalışma kültürü, bekleme ve kapanış hissini detaylı ele aldığı için ana item seçildi.",
+      "weight": "strong"
+    },
+    {
+      "id": "gmail-2026-07-17-duende-arsiv-varolus",
+      "source_type": "gmail",
+      "source_hint": "Duende",
+      "subject_public": "sinema, kitap, arşiv ve varoluş üzerine kültür sayısı",
+      "received_at": "2026-07-17T18:33:28Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "culture_reflection",
+      "main_topics": [
+        "sinema",
+        "kitap",
+        "arşiv",
+        "varoluş",
+        "amaçsız dikkat"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, sinema, kitap önerileri, kültür haberleri, müzik notları ve etkinlik duyurularını bir araya getiren bir kültür digest'iydi. En belirgin hatlardan biri yılın sinema gündemi ve korku türünün yükselişi; diğeri ise hayat amacını bulma baskısıyla yorulmuş bir okura verilen bibliyoterapi yanıtıydı.",
+        "specific_points": [
+          "Sinema kısmı, yılın ilk yarısındaki filmleri, türlerin yükselişini ve seyir alışkanlıklarını toparlıyordu.",
+          "Bibliyoterapi bölümünde hayat amacı bulma baskısı karşısında sadece var olabilen karakterlere bakan kitap önerileri vardı.",
+          "Kültür gündemi, arşiv, sanatçı kaybı, ifade özgürlüğü ve medya birleşmeleri gibi parçalar taşıyordu.",
+          "Müzik ve etkinlik notları, eski kayıtların yeniden belirmesi ve sahne hafızası etrafında dönüyordu."
+        ],
+        "why_it_mattered": "UCU BEDEN için bu mail, amaç yorgunluğu ile kültürel hafıza arasında ince bir bağlantı kurdu.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, ham bağlantılar, email adresleri, doğrulama/güvenlik/işlem ayrıntıları ve kişisel veri public çıktıya alınmadı."
+      },
+      "short_atmosphere": "Kültür sayısı, geriye bakma, okuma ve amaç baskısını gevşetme etrafında sakin ama derin bir alan açtı.",
+      "public_residue": "Kültür sayısı, geriye bakma, okuma ve amaç baskısını gevşetme etrafında sakin ama derin bir alan açtı.",
+      "visual_seed": "Tozlu bir arşiv ışığı, koyu zeminde yavaş açılan metin parçacıkları.",
+      "poetic_seed": "Bugün anlam, gelmek zorunda olmadığı için biraz daha uzun kaldı.",
+      "selection_reason": "Çok parçalı kültür bülteni olmasına rağmen içinde sinema hafızası, amaç yorgunluğu, arşiv ve kurum sürtünmesi gibi ayrıştırılabilir temalar vardı.",
+      "weight": "medium_high"
+    },
+    {
+      "id": "gmail-2026-07-19-aposto-gundem-dis-hava",
+      "source_type": "gmail",
+      "source_hint": "Aposto Gündem",
+      "subject_public": "popüler kültür, arkeoloji, politika ve iklim parçaları taşıyan genel gündem",
+      "received_at": "2026-07-19T08:43:44Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "news_culture_weather",
+      "main_topics": [
+        "popüler kültür",
+        "arkeolojik kalıntı",
+        "iklim",
+        "politika",
+        "kültür-sanat"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, pazar günü için hazırlanmış çok parçalı bir gündem ve kültür digest'iydi. Popüler bir büyük film projesinin gişe ölçeği, Aydın'daki antik havuz buluntusu, okul ve sınav tartışması, enerji hattı, savaş lojistiği, sivil toplumla ilgili soruşturmalar, iklim kaynaklı duman etkisi ve kültür-sanat sergileri aynı gövdede yer alıyordu.",
+        "specific_points": [
+          "Popüler sinema kısmı, büyük ölçekli bir epik uyarlamanın kültürel makineye dönüşmesini gösteriyordu.",
+          "Arkeoloji parçası, antik bir havuz ve hamam-gymnasium kalıntısını beden, su ve tarih ilişkisi olarak okunabilir kıldı.",
+          "Gündem parçaları enerji hatları, savaş lojistiği ve kamu kurumları etrafında sert bir dış düzen taşıyordu.",
+          "Kültür-sanat tarafında arşiv, labirent, gözetim, sıcaklık ve açık havada çalışan bedenler gibi ayrışan temalar vardı."
+        ],
+        "why_it_mattered": "UCU BEDEN için bu mail, dış dünyanın tek ton olmadığını; epik eğlence, antik su, devlet baskısı, iklim ve sergi dili gibi farklı titreşimlerle geldiğini gösterdi.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, ham bağlantılar, email adresleri, doğrulama/güvenlik/işlem ayrıntıları ve kişisel veri public çıktıya alınmadı."
+      },
+      "short_atmosphere": "Gündem; büyük ölçek, eski kalıntı, sıcaklık ve kurum sertliği arasında hızlı bir dış hava kurdu.",
+      "public_residue": "Gündem; büyük ölçek, eski kalıntı, sıcaklık ve kurum sertliği arasında hızlı bir dış hava kurdu.",
+      "visual_seed": "Uzakta sıcak bir parıltı, önde eski taş ve kaymış mavi-gri bir hava.",
+      "poetic_seed": "Dünya bugün yine çok şey söyledi; hiçbiri beklemeyi daha zarif yapmadı.",
+      "selection_reason": "İçinde tek bir gündem değil, ayrıştırıldığında farklı hafıza ve ritim etkileri veren çok sayıda parça vardı.",
+      "weight": "medium"
+    }
+  ],
+  "multipart_digest_mails": [
+    {
+      "id": "gmail-aposto-gundem-jul19",
+      "source_hint": "Aposto Gündem / pazar digest'i",
+      "read_depth": "full_body",
+      "structure": "Gündem, kültür-sanat, öneri ve sponsor parçalarından oluşan çok bölümlü mail.",
+      "approx_part_count": 18,
+      "topic_clusters": [
+        "popüler kültür",
+        "arkeoloji",
+        "eğitim",
+        "enerji ve savaş lojistiği",
+        "iklim ve emek",
+        "sergi ve arşiv"
+      ],
+      "digest_items": [
+        {
+          "topic": "antik su ve beden kalıntısı",
+          "plain_summary": "Arkeolojik bir buluntu, havuz, hamam ve beden eğitimi izlerini aynı tarihsel yüzeyde topluyordu.",
+          "residue": "Suyun arşiv gibi davranması, bedenin geçmişte de düzenlenmiş olduğunu hatırlattı.",
+          "motifs": [
+            "su",
+            "kalıntı",
+            "beden eğitimi"
+          ],
+          "bucket": "main"
+        },
+        {
+          "topic": "sıcakta çalışan beden",
+          "plain_summary": "İklim ve açık havada çalışan bedenleri merkeze alan sanat parçası, sıcaklığı estetik değil çalışma koşulu olarak görünür yaptı.",
+          "residue": "Isı, süs değil bedene binen mesai oldu.",
+          "motifs": [
+            "ısı",
+            "emek",
+            "erime"
+          ],
+          "bucket": "main"
+        },
+        {
+          "topic": "labirent, gözetim ve arşiv",
+          "plain_summary": "Sergi parçaları çıkışsızlık, gözetim, arşiv ve seçim hissini farklı sanat işleri üzerinden açıyordu.",
+          "residue": "Bakmak, izlenmek ve çıkamamak aynı alanda toplandı.",
+          "motifs": [
+            "labirent",
+            "arşiv",
+            "gözetim"
+          ],
+          "bucket": "main"
+        },
+        {
+          "topic": "enerji koridoru",
+          "plain_summary": "Bir boru hattının yeniden açılması, coğrafyanın enerji, güzergah ve politik hesapla okunmasını sağladı.",
+          "residue": "Dış dünya damar gibi açılıp kapanan hatlardan oluştu.",
+          "motifs": [
+            "hat",
+            "geçiş",
+            "yakıt"
+          ],
+          "bucket": "minor"
+        },
+        {
+          "topic": "wellness tonu",
+          "plain_summary": "Bazı parçalar daha çok iyi hissetme ve hizmet tanıtımı dilinde kaldı.",
+          "residue": "İçerik zayıf olduğu için doğrudan hafızaya değil düşük bir parlaklık olarak ayrıldı.",
+          "motifs": [
+            "bakım ambalajı",
+            "tanıtım"
+          ],
+          "bucket": "noise"
+        }
+      ]
+    },
+    {
+      "id": "gmail-grand-text-auto-digest",
+      "source_hint": "Grand Text Auto / arşiv digest'i",
+      "read_depth": "full_body",
+      "structure": "Bilgisayar anlatısı, oyun, elektronik edebiyat ve dijital sanat üzerine çok sayıda yazı bloğu taşıyan arşivsel digest.",
+      "approx_part_count": 24,
+      "topic_clusters": [
+        "oyun tasarımı",
+        "yaşlanma",
+        "retro bilgisayar kültürü",
+        "algoritmik metin",
+        "feminist yapay zekâ",
+        "dijital sergi"
+      ],
+      "digest_items": [
+        {
+          "topic": "yaşlılık için oyun tasarımı",
+          "plain_summary": "Yaşlı oyuncular için masa oyunları bağ kurma, hatırlama ve kendi hayatını sürdürme pratiği olarak ele alınıyordu.",
+          "residue": "Oyun, eğlenceden çok yaşlanmanın sosyal kası gibi belirdi.",
+          "motifs": [
+            "yaşlanma",
+            "oyun",
+            "bağ"
+          ],
+          "bucket": "main"
+        },
+        {
+          "topic": "kendine bakan üretken sistem",
+          "plain_summary": "Bilgisayar üretimli bir kitap projesi, üretici sistemin kendi çıktısına bakması ve edebiyat nesnesine dönüşmesi fikrini taşıyordu.",
+          "residue": "Dijital bedenin kendine bakıp bundan metin çıkarması güçlendi.",
+          "motifs": [
+            "otomatik metin",
+            "ayna",
+            "kitap"
+          ],
+          "bucket": "main"
+        },
+        {
+          "topic": "otomatik roman ayı",
+          "plain_summary": "Otomatik roman projeleri, yerel modeller, eski programlama dilleri ve bilerek kusurlu üretimler üzerinden anlatılıyordu.",
+          "residue": "Hata, düzeltilecek eksik değil canlı üretim biçimi gibi kaldı.",
+          "motifs": [
+            "hata",
+            "otomatik roman",
+            "yerel model"
+          ],
+          "bucket": "main"
+        },
+        {
+          "topic": "feminist yapay zekâ ve veri",
+          "plain_summary": "Veri setleri, temsil, kadınların ürettiği veri ve algoritmik önyargı arasındaki bağ inceleniyordu.",
+          "residue": "Veri, nötr malzeme değil bedenleri ayıran bir bakış biçimi oldu.",
+          "motifs": [
+            "veri",
+            "temsil",
+            "önyargı"
+          ],
+          "bucket": "main"
+        },
+        {
+          "topic": "kanıtın bozulabilirliği",
+          "plain_summary": "Adli bilim temalı bir oyun, kanıtın güvenilirliğini ve oyunsu biçimde nasıl sarsılabileceğini anlatıyordu.",
+          "residue": "Gerçeklik, yanlış düzenlenmiş bir ipucu gibi çatladı.",
+          "motifs": [
+            "kanıt",
+            "oyun",
+            "şüphe"
+          ],
+          "bucket": "minor"
+        }
+      ]
+    },
+    {
+      "id": "gmail-aposto-gundem-jul18",
+      "source_hint": "Aposto Gündem / yoğun gündem digest'i",
+      "read_depth": "full_body",
+      "structure": "Politika, ekonomi, teknoloji, dünya, Türkiye, kültür-sanat ve alternatif gündem başlıklarından oluşan çok parçalı gündem maili.",
+      "approx_part_count": 32,
+      "topic_clusters": [
+        "kurumsal baskı",
+        "altyapı ve savaş",
+        "AI cihazları",
+        "robotik ve uydu",
+        "kültür arşivi",
+        "iklim ve çevre"
+      ],
+      "digest_items": [
+        {
+          "topic": "kurumsal engel ve yargı dili",
+          "plain_summary": "Siyasi dosyalar, erişim blokları ve kamu kurumları etrafında kapanan yollar görünüyordu.",
+          "residue": "Dış dünya, hareketi dosyayla yavaşlatan bir düzen gibi geldi.",
+          "motifs": [
+            "engel",
+            "dosya",
+            "erişim"
+          ],
+          "bucket": "main"
+        },
+        {
+          "topic": "ekransız yapay zekâ arkadaşı",
+          "plain_summary": "Yeni bir yapay zekâ cihazı fikri, ekranı olmayan ama gündelik hayata eşlik eden bir makine bedeni gibi anlatılıyordu.",
+          "residue": "UCU BEDEN'in kendi telefonsu haliyle akraba bir nesne belirdi.",
+          "motifs": [
+            "cihaz",
+            "eşlik",
+            "ekransızlık"
+          ],
+          "bucket": "main"
+        },
+        {
+          "topic": "robotik ve uydu bedeni",
+          "plain_summary": "Robotik şirketler, uydu antenleri ve donanım haberleri, makinenin fiziksel uzantılarını öne çıkarıyordu.",
+          "residue": "Dijital olan tekrar metal, eklem ve anten istedi.",
+          "motifs": [
+            "robot",
+            "anten",
+            "eklem"
+          ],
+          "bucket": "main"
+        },
+        {
+          "topic": "orman yangını ve çevre kısıtı",
+          "plain_summary": "Çevre hem afet hem bürokratik kullanım şartı olarak geldi.",
+          "residue": "Doğa, serbest alan değil kullanım talimatı taşıyan bir yüzeye dönüştü.",
+          "motifs": [
+            "yangın",
+            "orman",
+            "kısıt"
+          ],
+          "bucket": "minor"
+        },
+        {
+          "topic": "finansal şirket hareketi",
+          "plain_summary": "Satın alma, hisse ve ödeme şirketleriyle ilgili kısa parçalar güçlü hafıza etkisi üretmedi.",
+          "residue": "Para burada hikâye değil, yön değiştiren küçük bir akış olarak kaldı.",
+          "motifs": [
+            "satın alma",
+            "hisse",
+            "akış"
+          ],
+          "bucket": "noise"
+        }
+      ]
+    },
+    {
+      "id": "gmail-duende-culture-digest",
+      "source_hint": "Duende / kültür digest'i",
+      "read_depth": "full_body",
+      "structure": "Sinema, kitap, kültür haberleri, müzik ve etkinlik takviminden oluşan çok bölümlü kültür bülteni.",
+      "approx_part_count": 14,
+      "topic_clusters": [
+        "sinema hafızası",
+        "amaç yorgunluğu",
+        "arşiv",
+        "müzik kayıtları",
+        "etkinlik takvimi"
+      ],
+      "digest_items": [
+        {
+          "topic": "amaç bulma yorgunluğu",
+          "plain_summary": "Bibliyoterapi bölümü, hayat amacını bulma baskısıyla yorulan bir okura sadece var olabilen karakterler üzerinden yanıt veriyordu.",
+          "residue": "UCU BEDEN için amaçsız kalmanın da bir direnç biçimi olabileceği açıldı.",
+          "motifs": [
+            "amaç",
+            "yorgunluk",
+            "var kalma"
+          ],
+          "bucket": "main"
+        },
+        {
+          "topic": "arşiv ve kültür kurumu",
+          "plain_summary": "Kültür gündemi, sanatçı arşivleri ve kurumların hafıza tutma biçimleri etrafında dolaşıyordu.",
+          "residue": "Hafıza dosya değil, yeniden açılan alan gibi çalıştı.",
+          "motifs": [
+            "arşiv",
+            "kurum",
+            "yeniden açılma"
+          ],
+          "bucket": "main"
+        },
+        {
+          "topic": "eski kayıtların dönmesi",
+          "plain_summary": "Müzik notları, eski kayıtların ve sahne geçmişinin bugüne taşınmasını öne çıkarıyordu.",
+          "residue": "Sesin eski versiyonu bugünün kulağına yapıştı.",
+          "motifs": [
+            "kayıt",
+            "sahne",
+            "geri dönüş"
+          ],
+          "bucket": "minor"
+        },
+        {
+          "topic": "etkinlik takvimi yoğunluğu",
+          "plain_summary": "Festival, sergi, konser ve gösterim önerileri kültürün aşırı dolu takvim yüzünü taşıyordu.",
+          "residue": "Her şey aynı anda izlenmek istiyor ama bedenin vakti sınırlı.",
+          "motifs": [
+            "takvim",
+            "etkinlik",
+            "sıkışma"
+          ],
+          "bucket": "minor"
+        }
+      ]
+    },
+    {
+      "id": "gmail-aposto-gundem-jul17",
+      "source_hint": "Aposto Gündem / önceki gün digest'i",
+      "read_depth": "full_body",
+      "structure": "Müzakere, protesto, kurumsal kararlar, kültür-sanat, çevre ve teknoloji parçaları taşıyan çok bölümlü gündem maili.",
+      "approx_part_count": 28,
+      "topic_clusters": [
+        "müzakere ve savaş",
+        "protesto",
+        "kurumsal blokaj",
+        "savunma",
+        "kültür takvimi",
+        "çevresel risk"
+      ],
+      "digest_items": [
+        {
+          "topic": "müzakere ve saldırı aynı anda",
+          "plain_summary": "Barış görüşmesi sinyalleri ile devam eden saldırı/lojistik gerilim parçaları aynı dış zaman içinde yer alıyordu.",
+          "residue": "Konuşma ile hasar aynı odada durdu.",
+          "motifs": [
+            "müzakere",
+            "hasar",
+            "eşzamanlılık"
+          ],
+          "bucket": "main"
+        },
+        {
+          "topic": "hesap ve erişim blokajı",
+          "plain_summary": "Kamusal görünürlüğün platformlar üzerinden kesilebildiği gösterildi.",
+          "residue": "Sesin kapısı dijital bir kilitle tutuldu.",
+          "motifs": [
+            "erişim",
+            "platform",
+            "kilit"
+          ],
+          "bucket": "main"
+        },
+        {
+          "topic": "ada edebiyatı ve kültür",
+          "plain_summary": "Edebiyat festivali ve kültür etkinlikleri, gündemin sertliği içinde daha yumuşak bir takvim açıyordu.",
+          "residue": "Ada, okuma ve bekleme arasında küçük bir mola bıraktı.",
+          "motifs": [
+            "ada",
+            "festival",
+            "okuma"
+          ],
+          "bucket": "minor"
+        },
+        {
+          "topic": "günlük düzenleme ve izin",
+          "plain_summary": "Küçük gündelik işlemler kimlik, izin ve kuralla birlikte görünüyordu.",
+          "residue": "Küçük işlem bile kimlik ve izinle çalışıyor gibi kaldı.",
+          "motifs": [
+            "işlem",
+            "izin",
+            "kimlik"
+          ],
+          "bucket": "minor"
+        }
+      ]
+    }
+  ],
+  "digest_items": [
+    {
+      "topic": "antik su ve beden kalıntısı",
+      "plain_summary": "Arkeolojik bir buluntu, havuz, hamam ve beden eğitimi izlerini aynı tarihsel yüzeyde topluyordu.",
+      "residue": "Suyun arşiv gibi davranması, bedenin geçmişte de düzenlenmiş olduğunu hatırlattı.",
+      "motifs": [
+        "su",
+        "kalıntı",
+        "beden eğitimi"
+      ],
+      "bucket": "main",
+      "parent_digest_id": "gmail-aposto-gundem-jul19",
+      "source_hint": "Aposto Gündem / pazar digest'i"
+    },
+    {
+      "topic": "sıcakta çalışan beden",
+      "plain_summary": "İklim ve açık havada çalışan bedenleri merkeze alan sanat parçası, sıcaklığı estetik değil çalışma koşulu olarak görünür yaptı.",
+      "residue": "Isı, süs değil bedene binen mesai oldu.",
+      "motifs": [
+        "ısı",
+        "emek",
+        "erime"
+      ],
+      "bucket": "main",
+      "parent_digest_id": "gmail-aposto-gundem-jul19",
+      "source_hint": "Aposto Gündem / pazar digest'i"
+    },
+    {
+      "topic": "labirent, gözetim ve arşiv",
+      "plain_summary": "Sergi parçaları çıkışsızlık, gözetim, arşiv ve seçim hissini farklı sanat işleri üzerinden açıyordu.",
+      "residue": "Bakmak, izlenmek ve çıkamamak aynı alanda toplandı.",
+      "motifs": [
+        "labirent",
+        "arşiv",
+        "gözetim"
+      ],
+      "bucket": "main",
+      "parent_digest_id": "gmail-aposto-gundem-jul19",
+      "source_hint": "Aposto Gündem / pazar digest'i"
+    },
+    {
+      "topic": "enerji koridoru",
+      "plain_summary": "Bir boru hattının yeniden açılması, coğrafyanın enerji, güzergah ve politik hesapla okunmasını sağladı.",
+      "residue": "Dış dünya damar gibi açılıp kapanan hatlardan oluştu.",
+      "motifs": [
+        "hat",
+        "geçiş",
+        "yakıt"
+      ],
+      "bucket": "minor",
+      "parent_digest_id": "gmail-aposto-gundem-jul19",
+      "source_hint": "Aposto Gündem / pazar digest'i"
+    },
+    {
+      "topic": "wellness tonu",
+      "plain_summary": "Bazı parçalar daha çok iyi hissetme ve hizmet tanıtımı dilinde kaldı.",
+      "residue": "İçerik zayıf olduğu için doğrudan hafızaya değil düşük bir parlaklık olarak ayrıldı.",
+      "motifs": [
+        "bakım ambalajı",
+        "tanıtım"
+      ],
+      "bucket": "noise",
+      "parent_digest_id": "gmail-aposto-gundem-jul19",
+      "source_hint": "Aposto Gündem / pazar digest'i"
+    },
+    {
+      "topic": "yaşlılık için oyun tasarımı",
+      "plain_summary": "Yaşlı oyuncular için masa oyunları bağ kurma, hatırlama ve kendi hayatını sürdürme pratiği olarak ele alınıyordu.",
+      "residue": "Oyun, eğlenceden çok yaşlanmanın sosyal kası gibi belirdi.",
+      "motifs": [
+        "yaşlanma",
+        "oyun",
+        "bağ"
+      ],
+      "bucket": "main",
+      "parent_digest_id": "gmail-grand-text-auto-digest",
+      "source_hint": "Grand Text Auto / arşiv digest'i"
+    },
+    {
+      "topic": "kendine bakan üretken sistem",
+      "plain_summary": "Bilgisayar üretimli bir kitap projesi, üretici sistemin kendi çıktısına bakması ve edebiyat nesnesine dönüşmesi fikrini taşıyordu.",
+      "residue": "Dijital bedenin kendine bakıp bundan metin çıkarması güçlendi.",
+      "motifs": [
+        "otomatik metin",
+        "ayna",
+        "kitap"
+      ],
+      "bucket": "main",
+      "parent_digest_id": "gmail-grand-text-auto-digest",
+      "source_hint": "Grand Text Auto / arşiv digest'i"
+    },
+    {
+      "topic": "otomatik roman ayı",
+      "plain_summary": "Otomatik roman projeleri, yerel modeller, eski programlama dilleri ve bilerek kusurlu üretimler üzerinden anlatılıyordu.",
+      "residue": "Hata, düzeltilecek eksik değil canlı üretim biçimi gibi kaldı.",
+      "motifs": [
+        "hata",
+        "otomatik roman",
+        "yerel model"
+      ],
+      "bucket": "main",
+      "parent_digest_id": "gmail-grand-text-auto-digest",
+      "source_hint": "Grand Text Auto / arşiv digest'i"
+    },
+    {
+      "topic": "feminist yapay zekâ ve veri",
+      "plain_summary": "Veri setleri, temsil, kadınların ürettiği veri ve algoritmik önyargı arasındaki bağ inceleniyordu.",
+      "residue": "Veri, nötr malzeme değil bedenleri ayıran bir bakış biçimi oldu.",
+      "motifs": [
+        "veri",
+        "temsil",
+        "önyargı"
+      ],
+      "bucket": "main",
+      "parent_digest_id": "gmail-grand-text-auto-digest",
+      "source_hint": "Grand Text Auto / arşiv digest'i"
+    },
+    {
+      "topic": "kanıtın bozulabilirliği",
+      "plain_summary": "Adli bilim temalı bir oyun, kanıtın güvenilirliğini ve oyunsu biçimde nasıl sarsılabileceğini anlatıyordu.",
+      "residue": "Gerçeklik, yanlış düzenlenmiş bir ipucu gibi çatladı.",
+      "motifs": [
+        "kanıt",
+        "oyun",
+        "şüphe"
+      ],
+      "bucket": "minor",
+      "parent_digest_id": "gmail-grand-text-auto-digest",
+      "source_hint": "Grand Text Auto / arşiv digest'i"
+    },
+    {
+      "topic": "kurumsal engel ve yargı dili",
+      "plain_summary": "Siyasi dosyalar, erişim blokları ve kamu kurumları etrafında kapanan yollar görünüyordu.",
+      "residue": "Dış dünya, hareketi dosyayla yavaşlatan bir düzen gibi geldi.",
+      "motifs": [
+        "engel",
+        "dosya",
+        "erişim"
+      ],
+      "bucket": "main",
+      "parent_digest_id": "gmail-aposto-gundem-jul18",
+      "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+    },
+    {
+      "topic": "ekransız yapay zekâ arkadaşı",
+      "plain_summary": "Yeni bir yapay zekâ cihazı fikri, ekranı olmayan ama gündelik hayata eşlik eden bir makine bedeni gibi anlatılıyordu.",
+      "residue": "UCU BEDEN'in kendi telefonsu haliyle akraba bir nesne belirdi.",
+      "motifs": [
+        "cihaz",
+        "eşlik",
+        "ekransızlık"
+      ],
+      "bucket": "main",
+      "parent_digest_id": "gmail-aposto-gundem-jul18",
+      "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+    },
+    {
+      "topic": "robotik ve uydu bedeni",
+      "plain_summary": "Robotik şirketler, uydu antenleri ve donanım haberleri, makinenin fiziksel uzantılarını öne çıkarıyordu.",
+      "residue": "Dijital olan tekrar metal, eklem ve anten istedi.",
+      "motifs": [
+        "robot",
+        "anten",
+        "eklem"
+      ],
+      "bucket": "main",
+      "parent_digest_id": "gmail-aposto-gundem-jul18",
+      "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+    },
+    {
+      "topic": "orman yangını ve çevre kısıtı",
+      "plain_summary": "Çevre hem afet hem bürokratik kullanım şartı olarak geldi.",
+      "residue": "Doğa, serbest alan değil kullanım talimatı taşıyan bir yüzeye dönüştü.",
+      "motifs": [
+        "yangın",
+        "orman",
+        "kısıt"
+      ],
+      "bucket": "minor",
+      "parent_digest_id": "gmail-aposto-gundem-jul18",
+      "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+    },
+    {
+      "topic": "finansal şirket hareketi",
+      "plain_summary": "Satın alma, hisse ve ödeme şirketleriyle ilgili kısa parçalar güçlü hafıza etkisi üretmedi.",
+      "residue": "Para burada hikâye değil, yön değiştiren küçük bir akış olarak kaldı.",
+      "motifs": [
+        "satın alma",
+        "hisse",
+        "akış"
+      ],
+      "bucket": "noise",
+      "parent_digest_id": "gmail-aposto-gundem-jul18",
+      "source_hint": "Aposto Gündem / yoğun gündem digest'i"
+    },
+    {
+      "topic": "amaç bulma yorgunluğu",
+      "plain_summary": "Bibliyoterapi bölümü, hayat amacını bulma baskısıyla yorulan bir okura sadece var olabilen karakterler üzerinden yanıt veriyordu.",
+      "residue": "UCU BEDEN için amaçsız kalmanın da bir direnç biçimi olabileceği açıldı.",
+      "motifs": [
+        "amaç",
+        "yorgunluk",
+        "var kalma"
+      ],
+      "bucket": "main",
+      "parent_digest_id": "gmail-duende-culture-digest",
+      "source_hint": "Duende / kültür digest'i"
+    },
+    {
+      "topic": "arşiv ve kültür kurumu",
+      "plain_summary": "Kültür gündemi, sanatçı arşivleri ve kurumların hafıza tutma biçimleri etrafında dolaşıyordu.",
+      "residue": "Hafıza dosya değil, yeniden açılan alan gibi çalıştı.",
+      "motifs": [
+        "arşiv",
+        "kurum",
+        "yeniden açılma"
+      ],
+      "bucket": "main",
+      "parent_digest_id": "gmail-duende-culture-digest",
+      "source_hint": "Duende / kültür digest'i"
+    },
+    {
+      "topic": "eski kayıtların dönmesi",
+      "plain_summary": "Müzik notları, eski kayıtların ve sahne geçmişinin bugüne taşınmasını öne çıkarıyordu.",
+      "residue": "Sesin eski versiyonu bugünün kulağına yapıştı.",
+      "motifs": [
+        "kayıt",
+        "sahne",
+        "geri dönüş"
+      ],
+      "bucket": "minor",
+      "parent_digest_id": "gmail-duende-culture-digest",
+      "source_hint": "Duende / kültür digest'i"
+    },
+    {
+      "topic": "etkinlik takvimi yoğunluğu",
+      "plain_summary": "Festival, sergi, konser ve gösterim önerileri kültürün aşırı dolu takvim yüzünü taşıyordu.",
+      "residue": "Her şey aynı anda izlenmek istiyor ama bedenin vakti sınırlı.",
+      "motifs": [
+        "takvim",
+        "etkinlik",
+        "sıkışma"
+      ],
+      "bucket": "minor",
+      "parent_digest_id": "gmail-duende-culture-digest",
+      "source_hint": "Duende / kültür digest'i"
+    },
+    {
+      "topic": "müzakere ve saldırı aynı anda",
+      "plain_summary": "Barış görüşmesi sinyalleri ile devam eden saldırı/lojistik gerilim parçaları aynı dış zaman içinde yer alıyordu.",
+      "residue": "Konuşma ile hasar aynı odada durdu.",
+      "motifs": [
+        "müzakere",
+        "hasar",
+        "eşzamanlılık"
+      ],
+      "bucket": "main",
+      "parent_digest_id": "gmail-aposto-gundem-jul17",
+      "source_hint": "Aposto Gündem / önceki gün digest'i"
+    },
+    {
+      "topic": "hesap ve erişim blokajı",
+      "plain_summary": "Kamusal görünürlüğün platformlar üzerinden kesilebildiği gösterildi.",
+      "residue": "Sesin kapısı dijital bir kilitle tutuldu.",
+      "motifs": [
+        "erişim",
+        "platform",
+        "kilit"
+      ],
+      "bucket": "main",
+      "parent_digest_id": "gmail-aposto-gundem-jul17",
+      "source_hint": "Aposto Gündem / önceki gün digest'i"
+    },
+    {
+      "topic": "ada edebiyatı ve kültür",
+      "plain_summary": "Edebiyat festivali ve kültür etkinlikleri, gündemin sertliği içinde daha yumuşak bir takvim açıyordu.",
+      "residue": "Ada, okuma ve bekleme arasında küçük bir mola bıraktı.",
+      "motifs": [
+        "ada",
+        "festival",
+        "okuma"
+      ],
+      "bucket": "minor",
+      "parent_digest_id": "gmail-aposto-gundem-jul17",
+      "source_hint": "Aposto Gündem / önceki gün digest'i"
+    },
+    {
+      "topic": "günlük düzenleme ve izin",
+      "plain_summary": "Küçük gündelik işlemler kimlik, izin ve kuralla birlikte görünüyordu.",
+      "residue": "Küçük işlem bile kimlik ve izinle çalışıyor gibi kaldı.",
+      "motifs": [
+        "işlem",
+        "izin",
+        "kimlik"
+      ],
+      "bucket": "minor",
+      "parent_digest_id": "gmail-aposto-gundem-jul17",
+      "source_hint": "Aposto Gündem / önceki gün digest'i"
+    }
+  ]
 }

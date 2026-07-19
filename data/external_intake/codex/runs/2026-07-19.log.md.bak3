@@ -1,0 +1,59 @@
+# Codex External Intake Run Log - 2026-07-19
+
+## Run
+
+- run_started_utc: 2026-07-19T12:30:12.965Z
+- local_generation_date: 2026-07-19
+- timezone: Europe/Istanbul
+- mode: audit_and_deepen_existing_output
+- private_inventory_path: data/external_intake/codex_raw/inventory/2026-07-19.json
+- public_json_path: data/external_intake/codex/json/2026-07-19.json
+- public_markdown_path: data/external_intake/codex/markdown/2026-07-19.md
+
+## Ön Denetim
+
+- Önceki private inventory yüzeysel bulundu.
+- Sebep: kayıtlar güvenli ama read_depth/body_read_mode taşımıyordu; ana mailler için somut content_digest alanı yoktu; inventory main_count public JSON'daki ana item sayısıyla uyuşmuyordu.
+- Bu yüzden Gmail kayıtları yeniden full body okunmuş kabul edilerek inventory ve public çıktılar derinleştirildi.
+
+## Gmail Okuma Derinliği
+
+- scanned_mail_count: 30
+- full_body_read_count: 30
+- snippet_only_count: 0
+- subject_only_count: 0
+- full_body_unavailable_count: 0
+
+## Ana Maillerde Somut İçerik
+
+- David Whyte: The Sun şiiri vardı; kayıp aşk fikrinden güneşe, çiçeklenmeye, minnete, korku içinde açılmaya ve insanın kendi büyümesini reddetmesi sorusuna ilerleyen şiirsel bir metindi.
+- Tendresse Radicale: idari güvencesizlik, göçmenlik/çalışma izni, belge ve bekleme döngüsü, hak kaybı, emek sömürüsü, toplumsal cinsiyet ve ruhsal sağlık üzerine uzun politik-duygusal bir yazıydı.
+- Grand Text Auto: oyun ve yaşlanma, eski bilgisayar kültürü, generatif metin, dijital şiir, feminist teknoloji, arşiv ve interaktif anlatı üzerine çok parçalı bir kültür/dijital anlatı bildirimi vardı.
+- apéro: The Bear finali üzerinden mutfak, servis zamanı, ekip, aile yükü, liderlik ve kapanış duygusu tartışıldı.
+- Duende: sinema, kitap, arşiv, yıl ortası kültür değerlendirmesi ve amaç baskısından yorulan okura bibliyoterapi hattı vardı.
+- Aposto Gündem: popüler kültür, arkeolojik kalıntı, kültür-sanat, iklim/emek, politika ve teknoloji/gündem parçaları yan yana geldi.
+
+## Public Çıktı Değişimi
+
+- main_item_count: 6
+- minor_residue_count: 9
+- repeated_signal_count: 5
+- discarded_summary_present: true
+- reading_summary_present: true
+- main_items_with_read_depth: 6
+- main_items_with_content_digest: 6
+
+## Güvenlik
+
+- raw_body_written_to_public: false
+- long_quotes_written_to_public: false
+- email_addresses_written_to_public: false
+- urls_written_to_public: false
+- verification_codes_written_to_public: false
+- private_inventory_committed: false
+
+## Notlar
+
+- Public digest'in ilk bölümü soyut UCU BEDEN yorumuyla değil, açık okuma raporuyla başlıyor.
+- Repeated signals alanı kaynak formatını değil, tekrar eden anlamları gösteriyor.
+- Özel RSS kaynakları sağlıklı ama sessiz olduğu için yeni item eklenmedi.
