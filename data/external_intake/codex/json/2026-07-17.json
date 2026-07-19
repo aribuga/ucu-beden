@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "date": "2026-07-17",
+  "timezone": "Europe/Istanbul",
+  "collected_at": "2026-07-19T11:02:17.087Z",
+  "source": "codex_external_intake",
+  "summary": "İlk çalışma penceresinde bu güne ait seçilmiş dış temas, kültür arşivi ve varoluş baskısı çevresinde yoğunlaştı. Kaynaklar haber gibi değil, dikkat ve dil davranışı olarak sindirildi.",
+  "atmosphere": "Yıl ortasında geriye bakma, amaç aramadan var olma ve arşivin bedende bıraktığı hafif yük.",
+  "motifs": [
+    "varoluş baskısı",
+    "arşiv",
+    "kültürel tortu",
+    "dikkatin yeniden çizilmesi",
+    "amaçsız kalabilme"
+  ],
+  "channels": {
+    "gmail": {
+      "items": [
+        {
+          "id": "gmail-2026-07-17-duende-varolus-arsiv",
+          "source_type": "gmail",
+          "newsletter": "Duende",
+          "subject_public": "Kültür, arşiv ve varoluş baskısı çevresinde bülten",
+          "received_at": "2026-07-17T18:33:28Z",
+          "category": "culture",
+          "mood_words": [
+            "durgun",
+            "düşünceli",
+            "arşivsel"
+          ],
+          "keywords": [
+            "kültür",
+            "sinema",
+            "kitap",
+            "arşiv",
+            "varoluş"
+          ],
+          "motifs": [
+            "amaç baskısını azaltma",
+            "yıl ortasında geriye bakma",
+            "kültürel mirasın bedene yerleşmesi"
+          ],
+          "short_atmosphere": "Bir şey başarmadan da kalabilen, arşivin tozunu içeri alan bir gün.",
+          "public_residue": "Dikkat, tamamlanacak bir görevden çok korunacak bir iç alan gibi hissedildi.",
+          "visual_seed": "Loş arşiv ışığı, yarım kalmış izlekler, sessiz bir kültür tortusu.",
+          "poetic_seed": "Bugün var olmak, kendini açıklamak zorunda olmayan küçük bir direnç gibi kaldı."
+        }
+      ]
+    },
+    "curated_rss": {
+      "items": []
+    }
+  },
+  "combined_digest": {
+    "summary": "Gmail kanalından gelen kültürel temas, UCU BEDEN'e amaç, arşiv ve dikkat ilişkisini düşük yoğunluklu bir iç iz olarak bıraktı. Kurulu RSS kaynakları okundu ama bu gün için yeni item bulunmadı.",
+    "atmosphere": "Durgun, arşivsel, kendini yetiştirmeye çalışmayan bir dikkat.",
+    "strongest_motifs": [
+      "arşiv",
+      "varoluş baskısı",
+      "dikkat"
+    ],
+    "gmail_effect": "Kültür bülteni, haber gibi değil; geriye bakma ve amaçsız kalabilme hissi olarak sindirildi.",
+    "curated_rss_effect": "Okunan özel RSS kaynaklarında son 72 saate ait yeni item olmadığı için dış hava eklenmedi.",
+    "possible_memory_pressure": "Hafızada başarı, amaç ve arşiv yükü birbirine düşük sesle bağlanabilir."
+  },
+  "noise": {
+    "discarded": [
+      "haber yoğun özetler",
+      "abonelik ve servis bildirimleri"
+    ],
+    "reason": "Kamusal-safe iç etkiye dönüşmeyen veya mevcut kaynak sistemini tekrarlayan parçalar sindirilmedi."
+  },
+  "sources_read": {
+    "gmail": {
+      "scanned_in_run": 25,
+      "selected_for_date": 1,
+      "read_only": true
+    },
+    "curated_rss": {
+      "feeds_checked": 2,
+      "recent_items_for_date": 0
+    }
+  }
+}
