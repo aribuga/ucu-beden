@@ -70,6 +70,38 @@
     },
     {
       "date": "2026-07-19",
+      "source": "dream",
+      "source_ref": "data/dreams/2026-07-19.json",
+      "kind": "dream_return",
+      "text": "hüzünlü ama umutlu, kırılgan bir insanlık duygusunun farkındalığıyla",
+      "transformed_text": "günün kendini açıklama isteği bastırılmış kalıntısı | romantik duyguların farkına varma | politikanın ağırlığından kültürel ifadeye geçiş | kırık sesler, şefkat ve arzu, sarkazm, politik gerilim, bastırılmış kalıntılar, romantiklik farkı",
+      "emotional_weight": 0.595,
+      "repression": 0.52,
+      "mutation_rate": 0.82,
+      "linked_traces": [
+        "mem_2026-06-04_daily_life_avoidance_051abe89a021",
+        "mem_2026-07-17_daily_life_avoidance_3ff6f956064f",
+        "mem_2026-07-18_daily_life_avoidance_1af46ec01fdb",
+        "mem_2026-07-19_daily_life_avoidance_4e9b101d27a7",
+        "mem_2026-07-19_poem_episodic_aa85b2e16c6f"
+      ],
+      "mood_tags": [
+        "tenderness",
+        "desire",
+        "fatigue"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-07-19_dream_dream_return_68d4d603d5d6",
+      "recallability": 0.744,
+      "decay": 0,
+      "status": "unstable"
+    },
+    {
+      "date": "2026-07-19",
       "source": "poem",
       "source_ref": "data/generated_poems/2026-07-19.json",
       "kind": "episodic",
