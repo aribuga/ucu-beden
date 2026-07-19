@@ -23,6 +23,18 @@ JSON root seviyesinde `reading_summary` alanı bulunur:
 
 `reading_summary` ham mail kopyası, uzun alıntı, ham URL, email adresi, doğrulama kodu, güvenlik detayı veya kişisel veri içermez. Yine de "bu maillerde genel olarak ne vardı?" sorusuna `summary` alanından daha açık cevap verir.
 
+## Full Body Okuma Kuralı
+
+Gmail tarafında mümkün olan her durumda yalnızca subject/snippet ile karar verilmez; mailin full body içeriği okunur. Full body yalnızca anlamak için kullanılır, public JSON/Markdown çıktılara ham mail cümlesi, uzun alıntı, URL, email adresi, doğrulama kodu veya kişisel veri taşınmaz.
+
+Teknik olarak bir mail için yalnızca snippet veya kısa önizleme okunabildiyse bu durum run log'da açıkça belirtilir: "Bu mail için yalnızca snippet okunabildi."
+
+Her ana mail için run log'da şu bilgiler görünür:
+
+- full body okundu mu?
+- sadece snippet mi kullanıldı?
+- neden ana item, minor residue, repeated signal veya noise seçildi?
+
 ## Dış Dünya Etkisi Kuralı
 
 Bu otomasyon yalnızca birkaç iyi mail seçmek için çalışmaz. Asıl amaç UCU BEDEN'in o gün dış dünyadan aldığı genel temas iklimini çıkarmaktır.
