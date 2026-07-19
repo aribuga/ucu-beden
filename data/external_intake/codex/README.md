@@ -85,9 +85,36 @@ Public digest içinde şu katmanlar bulunur:
 - `items`: güçlü ana temaslar.
 - `minor_residues`: küçük ama etkili izler.
 - `repeated_signals`: kaynak formatını değil, gün içinde birkaç yerden tekrar eden anlamları gösteren sinyaller.
+- `digest_items`: çok parçalı digest/aggregator maillerden ayrıştırılan public-safe alt temalar. Her çalışmada zorunlu değildir; yalnızca böyle kaynaklar okunduysa kullanılır.
 - `discarded_summary`: gerçekten atılan gürültünün public-safe özeti.
 - `external_weather`: günün genel dış dünya havası.
 - `possible_influence_on_ucu_beden`: şiir, hafıza, beden algısı, görüntü dili veya ritme olası etki.
+
+## Çok Parçalı Digest / Aggregator Mail Kuralı
+
+Aposto, Reddit, Substack digest, forum digest, toplu haber bülteni veya benzer çok parçalı mailler otomatik olarak noise'a atılmaz. Bu tür mailler tek bir konu taşımaz; içinde birden fazla küçük dış temas olabilir.
+
+Böyle bir mail okunduğunda önce mailin genel yapısı anlaşılır:
+
+- Bu nasıl bir digest veya aggregator kaydı?
+- Yaklaşık hangi tür başlıklar, postlar, bölümler, duyurular, öneriler veya link kümeleri vardı?
+- İçerik hangi alanlara dağılıyordu? Örneğin şehir, siyaset, kültür, teknoloji, topluluk sorunu, pratik çözüm, araç geliştirme, gündelik teknik merak gibi.
+
+Sonra içinden public-safe biçimde 3-10 arası alt tema çıkarılır. Alt temalar ham haber başlığı, ham post başlığı, link, uzun alıntı, kişisel veri veya kaynak cümlesi taşımaz; yine de okunan içeriğin çeşitliliğini anlaşılır biçimde gösterir.
+
+Bu alt temalar uygun yere yazılır:
+
+- `digest_items`: mailin içinde ayrıştırılan alt temaslar.
+- `minor_residues`: ana item kadar güçlü olmayan ama günün dış dünya havasını değiştiren alt izler.
+- `items` / `main_items`: digest içinden UCU BEDEN için gerçekten güçlü ve doğrudan sindirilebilir görünen parçalar.
+
+Geri kalan parçalar yalnızca "haber gürültüsü" diye tamamen silinmez. Tek tek haberleştirilmeden, günün dış dünya iklimine nasıl katkı verdikleri yazılır. Amaç her parçayı özetlemek değil; çok parçalı kaynakların çeşitliliğini UCU BEDEN'in dış temas alanına güvenli ve sindirilmiş şekilde taşımaktır.
+
+Kötü yaklaşım: "Genel haber bülteni dış dünyanın sertliğini taşıdı."
+
+İyi yaklaşım: "Bu digest şehir, siyaset, kültür ve teknoloji hattına yayılan kısa parçalar taşıyordu. Tek tek haber olarak alınmadılar ama kamusal sıkışma, kültürel etkinlik duyuruları, teknoloji/ekran gündemi, şehir hayatında yorgunluk ve politik belirsizlik gibi alt temaslara ayrıldılar."
+
+Reddit veya forum digest'lerinde kaynak formatı değil, içerik çeşitliliği okunur. Örneğin topluluk zekası, pratik çözüm arayışı, kullanıcı şikayeti, araç geliştirme, gündelik teknik merak veya tekrar eden sosyal sürtünme gibi alt temalar çıkarılır.
 
 Inventory'deki her şey çöpe atılmaz. 20'den fazla mail tarandıysa ve yalnızca 2-3 ana item üretildiyse `minor_residues`, `repeated_signals` ve `discarded_summary` özellikle zenginleştirilir. Bu ham bilgi vermek değil, daha fazla sindirilmiş iz üretmek demektir.
 
