@@ -12,6 +12,58 @@ Ham içerik commitlenmez. Ham mail body, geçici mail dökümleri, güvenli olma
 
 Bu otomasyon yalnızca birkaç iyi mail seçmek için çalışmaz. Asıl amaç UCU BEDEN'in o gün dış dünyadan aldığı genel temas iklimini çıkarmaktır.
 
+## İki Aşamalı Okuma ve Sindirim
+
+Otomasyon tek aşamada çalışmaz. Önce okunan Gmail mailleri ve özel RSS item'ları için private bir intake inventory çıkarılır, sonra public-safe Codex External Intake digest bu inventory üzerinden üretilir.
+
+### Aşama 1: Private Intake Inventory
+
+Inventory dosyası yalnızca gitignore'daki `data/external_intake/codex_raw/inventory/YYYY-MM-DD.json` yoluna yazılabilir. Bu dosya git'e eklenmez, commitlenmez ve pushlanmaz.
+
+Inventory public digest değildir. Yine de ham mail body, uzun alıntı, ham URL, email adresi, doğrulama kodu, unsubscribe/tracking linki, fatura detayı veya kişisel veri taşımaz.
+
+Her Gmail kaydı şu alanlarla kısa ve nötr anlaşılır:
+
+- `source_type`: `gmail`
+- `received_at`
+- `source_hint`: public-safe kaynak adı veya kaynak tipi
+- `subject_hint`: public-safe sadeleştirilmiş konu
+- `content_summary`: Türkçe, kısa, nötr içerik özeti
+- `main_topics`
+- `possible_residues`
+- `risk_flags`
+- `suggested_bucket`: `main`, `minor`, `repeated` veya `noise`
+- `reason`
+
+Her özel RSS item kaydı şu alanlarla anlaşılır:
+
+- `source_type`: `curated_rss`
+- `published_at`
+- `source_hint`
+- `content_summary`
+- `main_topics`
+- `possible_residues`
+- `risk_flags`
+- `suggested_bucket`: `main`, `minor`, `repeated` veya `noise`
+- `reason`
+
+Inventory aşamasında amaç şiirselleştirmek değildir. İlk soru şudur: "Bu maillerde ve özel RSS item'larında güvenli olarak ne vardı?"
+
+### Aşama 2: Public Digest Synthesis
+
+Public JSON ve Markdown digest doğrudan ham maillerden veya ham RSS metninden değil, intake inventory üzerinden üretilir. Bu aşamada soru değişir: "UCU BEDEN bugün dış dünyadan ne emdi ve bu onu nasıl değiştirebilir?"
+
+Public digest içinde şu katmanlar bulunur:
+
+- `items`: güçlü ana temaslar.
+- `minor_residues`: küçük ama etkili izler.
+- `repeated_signals`: tekrar eden sinyaller.
+- `discarded_summary`: gerçekten atılan gürültünün public-safe özeti.
+- `external_weather`: günün genel dış dünya havası.
+- `possible_influence_on_ucu_beden`: şiir, hafıza, beden algısı, görüntü dili veya ritme olası etki.
+
+Inventory'deki her şey çöpe atılmaz. 20'den fazla mail tarandıysa ve yalnızca 2-3 ana item üretildiyse `minor_residues`, `repeated_signals` ve `discarded_summary` özellikle zenginleştirilir. Bu ham bilgi vermek değil, daha fazla sindirilmiş iz üretmek demektir.
+
 Her başarılı çalışmanın çıktısında dış temas şu katmanlarda görünmelidir:
 
 - `main_items`: güçlü ve doğrudan sindirilebilir ana temaslar.
