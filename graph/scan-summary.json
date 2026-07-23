@@ -1,0 +1,64 @@
+{
+  "generated_at": null,
+  "scan_version": 1,
+  "repo_root": "/Users/aribuga/Documents/Codex/2026-06-17/ucubeden-github-daki-projemde-al-cam/ucu-beden",
+  "mode": "static_read_only_scan",
+  "outputs": [
+    "graph/nodes.json",
+    "graph/edges.json",
+    "graph/evidence.json",
+    "graph/alerts.json",
+    "graph/scan-summary.json",
+    "graph/graph-preview.md"
+  ],
+  "counts": {
+    "nodes": 144,
+    "edges": 493,
+    "evidence": 443,
+    "alerts": 4,
+    "observed_edges": 475,
+    "inferred_edges": 18,
+    "planned_edges": 0,
+    "broken_edges": 0,
+    "orphan_sources": 1,
+    "orphan_outputs": 1
+  },
+  "nodes_by_type": {
+    "data_store": 20,
+    "output": 1,
+    "database": 1,
+    "external_source": 7,
+    "process": 96,
+    "scheduler": 3,
+    "script": 16
+  },
+  "edges_by_relation": {
+    "read_by": 144,
+    "reads": 144,
+    "uses_database": 35,
+    "calls_external_api": 5,
+    "writes": 38,
+    "uses_mock_source": 1,
+    "collects_from": 1,
+    "produces_in_memory": 1,
+    "fetches_news": 1,
+    "fetches_weather": 1,
+    "runs_script": 9,
+    "calls_process": 113
+  },
+  "alerts_by_severity": {
+    "info": 2,
+    "warning": 2
+  },
+  "gmail": {
+    "observed_implementation": false,
+    "match_count": 0,
+    "memory_connection_observed": false,
+    "status": "not_observed_in_repo"
+  },
+  "notes": [
+    "The scanner does not execute generation, network, cron, memory rebuild, or deploy tasks.",
+    "Data files are summarized by path/count/date metadata; generated poem, dream, mail body, or secret content is not copied into graph JSON.",
+    "File-name similarity alone is not promoted to observed edges; it is either ignored or represented through health alerts."
+  ]
+}

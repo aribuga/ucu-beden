@@ -1,0 +1,3546 @@
+[
+  {
+    "id": "ev-0001",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 7,
+    "symbol": "storagePaths",
+    "snippet": "export const storagePaths = { poemsInput:\"poems_input\", world:\"data/world/ucu_beden_world.json\", state:\"data/state/ucu_beden_state.json\", generatedPoems:\"data/generated_poems\", dailyLife:\"data/daily_life ...",
+    "description": "Canonical repo storage path declarations."
+  },
+  {
+    "id": "ev-0002",
+    "source_file": "package.json",
+    "line": 7,
+    "symbol": "npm:dev",
+    "snippet": "\"dev\": \"node --preserve-symlinks --preserve-symlinks-main node_modules/next/dist/bin/next dev\",",
+    "description": "Package script \"dev\" is declared."
+  },
+  {
+    "id": "ev-0003",
+    "source_file": "package.json",
+    "line": 8,
+    "symbol": "npm:build",
+    "snippet": "\"build\": \"node --preserve-symlinks --preserve-symlinks-main node_modules/next/dist/bin/next build\",",
+    "description": "Package script \"build\" is declared."
+  },
+  {
+    "id": "ev-0004",
+    "source_file": "package.json",
+    "line": 9,
+    "symbol": "npm:generate:today",
+    "snippet": "\"generate:today\": \"node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/generateDailyPoem.ts\",",
+    "description": "Package script \"generate:today\" is declared."
+  },
+  {
+    "id": "ev-0005",
+    "source_file": "package.json",
+    "line": 10,
+    "symbol": "npm:generate:dream",
+    "snippet": "\"generate:dream\": \"node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/generateDream.ts\",",
+    "description": "Package script \"generate:dream\" is declared."
+  },
+  {
+    "id": "ev-0006",
+    "source_file": "package.json",
+    "line": 11,
+    "symbol": "npm:backfill:visuals",
+    "snippet": "\"backfill:visuals\": \"node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/backfillVisuals.ts\",",
+    "description": "Package script \"backfill:visuals\" is declared."
+  },
+  {
+    "id": "ev-0007",
+    "source_file": "package.json",
+    "line": 12,
+    "symbol": "npm:analyze:input",
+    "snippet": "\"analyze:input\": \"node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/analyzeInputPoems.ts\",",
+    "description": "Package script \"analyze:input\" is declared."
+  },
+  {
+    "id": "ev-0008",
+    "source_file": "package.json",
+    "line": 13,
+    "symbol": "npm:digest:sources",
+    "snippet": "\"digest:sources\": \"node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/digestSources.ts\",",
+    "description": "Package script \"digest:sources\" is declared."
+  },
+  {
+    "id": "ev-0009",
+    "source_file": "package.json",
+    "line": 14,
+    "symbol": "npm:scan:graph",
+    "snippet": "\"scan:graph\": \"node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/scanRepoGraph.ts\",",
+    "description": "Package script \"scan:graph\" is declared."
+  },
+  {
+    "id": "ev-0010",
+    "source_file": "package.json",
+    "line": 15,
+    "symbol": "npm:validate:graph",
+    "snippet": "\"validate:graph\": \"node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/validateRepoGraph.ts --determinism\",",
+    "description": "Package script \"validate:graph\" is declared."
+  },
+  {
+    "id": "ev-0011",
+    "source_file": "package.json",
+    "line": 16,
+    "symbol": "npm:test:anatomy",
+    "snippet": "\"test:anatomy\": \"node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/testAnatomyUi.ts\",",
+    "description": "Package script \"test:anatomy\" is declared."
+  },
+  {
+    "id": "ev-0012",
+    "source_file": "package.json",
+    "line": 17,
+    "symbol": "npm:rebuild:memory",
+    "snippet": "\"rebuild:memory\": \"node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/rebuildMemory.ts\",",
+    "description": "Package script \"rebuild:memory\" is declared."
+  },
+  {
+    "id": "ev-0013",
+    "source_file": "package.json",
+    "line": 18,
+    "symbol": "npm:validate:memory",
+    "snippet": "\"validate:memory\": \"npm run rebuild:memory -- --dry-run --validate\",",
+    "description": "Package script \"validate:memory\" is declared."
+  },
+  {
+    "id": "ev-0014",
+    "source_file": "package.json",
+    "line": 19,
+    "symbol": "npm:debug:memory-cycle",
+    "snippet": "\"debug:memory-cycle\": \"node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/debugMemoryCycle.ts\",",
+    "description": "Package script \"debug:memory-cycle\" is declared."
+  },
+  {
+    "id": "ev-0015",
+    "source_file": "package.json",
+    "line": 20,
+    "symbol": "npm:debug:latest-memory",
+    "snippet": "\"debug:latest-memory\": \"node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/debugLatestMemory.ts\",",
+    "description": "Package script \"debug:latest-memory\" is declared."
+  },
+  {
+    "id": "ev-0016",
+    "source_file": "package.json",
+    "line": 21,
+    "symbol": "npm:debug:mood-sentences",
+    "snippet": "\"debug:mood-sentences\": \"node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/debugMoodSentences.ts\",",
+    "description": "Package script \"debug:mood-sentences\" is declared."
+  },
+  {
+    "id": "ev-0017",
+    "source_file": "package.json",
+    "line": 22,
+    "symbol": "npm:typecheck",
+    "snippet": "\"typecheck\": \"node --preserve-symlinks --preserve-symlinks-main node_modules/typescript/bin/tsc --noEmit\"",
+    "description": "Package script \"typecheck\" is declared."
+  },
+  {
+    "id": "ev-0018",
+    "source_file": ".github/workflows/daily-poem-and-deploy.yml",
+    "line": 3,
+    "symbol": "on",
+    "snippet": "on:",
+    "description": "GitHub Actions workflow trigger declaration."
+  },
+  {
+    "id": "ev-0019",
+    "source_file": ".github/workflows/daily-poem-and-deploy.yml",
+    "line": 106,
+    "symbol": "npm:generate:today",
+    "snippet": "if [ \"$FORCE_REGENERATE\" = \"true\" ]; then npm run generate:today -- $DATE_ARG --force; else npm run generate:today -- $DATE_ARG; fi",
+    "description": "Workflow runs package script \"generate:today\"."
+  },
+  {
+    "id": "ev-0020",
+    "source_file": ".github/workflows/daily-poem-and-deploy.yml",
+    "line": 106,
+    "symbol": "npm:generate:today",
+    "snippet": "if [ \"$FORCE_REGENERATE\" = \"true\" ]; then npm run generate:today -- $DATE_ARG --force; else npm run generate:today -- $DATE_ARG; fi",
+    "description": "Workflow runs package script \"generate:today\"."
+  },
+  {
+    "id": "ev-0021",
+    "source_file": ".github/workflows/daily-poem-and-deploy.yml",
+    "line": 114,
+    "symbol": "npm:backfill:visuals",
+    "snippet": "run: npm run backfill:visuals -- --limit=4",
+    "description": "Workflow runs package script \"backfill:visuals\"."
+  },
+  {
+    "id": "ev-0022",
+    "source_file": ".github/workflows/daily-poem-and-deploy.yml",
+    "line": 144,
+    "symbol": "npm:build",
+    "snippet": "run: npm run build",
+    "description": "Workflow runs package script \"build\"."
+  },
+  {
+    "id": "ev-0023",
+    "source_file": ".github/workflows/night-dream-and-deploy.yml",
+    "line": 3,
+    "symbol": "on",
+    "snippet": "on:",
+    "description": "GitHub Actions workflow trigger declaration."
+  },
+  {
+    "id": "ev-0024",
+    "source_file": ".github/workflows/night-dream-and-deploy.yml",
+    "line": 95,
+    "symbol": "npm:generate:dream",
+    "snippet": "if [ \"$FORCE_REGENERATE\" = \"true\" ]; then npm run generate:dream -- $DATE_ARG --force; else npm run generate:dream -- $DATE_ARG; fi",
+    "description": "Workflow runs package script \"generate:dream\"."
+  },
+  {
+    "id": "ev-0025",
+    "source_file": ".github/workflows/night-dream-and-deploy.yml",
+    "line": 95,
+    "symbol": "npm:generate:dream",
+    "snippet": "if [ \"$FORCE_REGENERATE\" = \"true\" ]; then npm run generate:dream -- $DATE_ARG --force; else npm run generate:dream -- $DATE_ARG; fi",
+    "description": "Workflow runs package script \"generate:dream\"."
+  },
+  {
+    "id": "ev-0026",
+    "source_file": ".github/workflows/night-dream-and-deploy.yml",
+    "line": 103,
+    "symbol": "npm:backfill:visuals",
+    "snippet": "run: npm run backfill:visuals -- --limit=4",
+    "description": "Workflow runs package script \"backfill:visuals\"."
+  },
+  {
+    "id": "ev-0027",
+    "source_file": ".github/workflows/night-dream-and-deploy.yml",
+    "line": 132,
+    "symbol": "npm:build",
+    "snippet": "run: npm run build",
+    "description": "Workflow runs package script \"build\"."
+  },
+  {
+    "id": "ev-0028",
+    "source_file": ".github/workflows/pr-check.yml",
+    "line": 3,
+    "symbol": "on",
+    "snippet": "on:",
+    "description": "GitHub Actions workflow trigger declaration."
+  },
+  {
+    "id": "ev-0029",
+    "source_file": ".github/workflows/pr-check.yml",
+    "line": 28,
+    "symbol": "npm:typecheck",
+    "snippet": "run: npm run typecheck",
+    "description": "Workflow runs package script \"typecheck\"."
+  },
+  {
+    "id": "ev-0030",
+    "source_file": ".github/workflows/pr-check.yml",
+    "line": 33,
+    "symbol": "npm:build",
+    "snippet": "run: npm run build",
+    "description": "Workflow runs package script \"build\"."
+  },
+  {
+    "id": "ev-0031",
+    "source_file": "src/app/archive/page.tsx",
+    "line": 6,
+    "symbol": "fileStorage",
+    "snippet": "const [latest, poems, state] = await Promise.all([getLatestPoem(), listGeneratedPoems(), readState()]);",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0032",
+    "source_file": "src/app/archive/page.tsx",
+    "line": 6,
+    "symbol": "getLatestPoem",
+    "snippet": "const [latest, poems, state] = await Promise.all([getLatestPoem(), listGeneratedPoems(), readState()]);",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0033",
+    "source_file": "src/app/archive/page.tsx",
+    "line": 6,
+    "symbol": "listGeneratedPoems",
+    "snippet": "const [latest, poems, state] = await Promise.all([getLatestPoem(), listGeneratedPoems(), readState()]);",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0034",
+    "source_file": "src/app/archive/page.tsx",
+    "line": 6,
+    "symbol": "readState",
+    "snippet": "const [latest, poems, state] = await Promise.all([getLatestPoem(), listGeneratedPoems(), readState()]);",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0035",
+    "source_file": "src/app/dreams/[date]/page.tsx",
+    "line": 12,
+    "symbol": "fileStorage",
+    "snippet": "const dreams = await listDreams();",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0036",
+    "source_file": "src/app/dreams/[date]/page.tsx",
+    "line": 12,
+    "symbol": "listDreams",
+    "snippet": "const dreams = await listDreams();",
+    "description": "Read helper \"listDreams\" is called."
+  },
+  {
+    "id": "ev-0037",
+    "source_file": "src/app/dreams/[date]/page.tsx",
+    "line": 18,
+    "symbol": "getLatestPoem",
+    "snippet": "const [latest, dreams, poems, state] = await Promise.all([getLatestPoem(), listDreams(), listGeneratedPoems(), readState()]);",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0038",
+    "source_file": "src/app/dreams/[date]/page.tsx",
+    "line": 18,
+    "symbol": "listDreams",
+    "snippet": "const [latest, dreams, poems, state] = await Promise.all([getLatestPoem(), listDreams(), listGeneratedPoems(), readState()]);",
+    "description": "Read helper \"listDreams\" is called."
+  },
+  {
+    "id": "ev-0039",
+    "source_file": "src/app/dreams/[date]/page.tsx",
+    "line": 18,
+    "symbol": "listGeneratedPoems",
+    "snippet": "const [latest, dreams, poems, state] = await Promise.all([getLatestPoem(), listDreams(), listGeneratedPoems(), readState()]);",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0040",
+    "source_file": "src/app/dreams/[date]/page.tsx",
+    "line": 18,
+    "symbol": "readState",
+    "snippet": "const [latest, dreams, poems, state] = await Promise.all([getLatestPoem(), listDreams(), listGeneratedPoems(), readState()]);",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0041",
+    "source_file": "src/app/dreams/[date]/page.tsx",
+    "line": 21,
+    "symbol": "readVisual",
+    "snippet": "const visual = (await readVisual(dream.date, \"dream\")) ?? createDreamVisual(dream);",
+    "description": "Read helper \"readVisual\" is called."
+  },
+  {
+    "id": "ev-0042",
+    "source_file": "src/app/dreams/page.tsx",
+    "line": 7,
+    "symbol": "fileStorage",
+    "snippet": "const [latest, dreams, state] = await Promise.all([getLatestPoem(), listDreams(), readState()]);",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0043",
+    "source_file": "src/app/dreams/page.tsx",
+    "line": 7,
+    "symbol": "getLatestPoem",
+    "snippet": "const [latest, dreams, state] = await Promise.all([getLatestPoem(), listDreams(), readState()]);",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0044",
+    "source_file": "src/app/dreams/page.tsx",
+    "line": 7,
+    "symbol": "listDreams",
+    "snippet": "const [latest, dreams, state] = await Promise.all([getLatestPoem(), listDreams(), readState()]);",
+    "description": "Read helper \"listDreams\" is called."
+  },
+  {
+    "id": "ev-0045",
+    "source_file": "src/app/dreams/page.tsx",
+    "line": 7,
+    "symbol": "readState",
+    "snippet": "const [latest, dreams, state] = await Promise.all([getLatestPoem(), listDreams(), readState()]);",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0046",
+    "source_file": "src/app/dreams/page.tsx",
+    "line": 11,
+    "symbol": "readVisual",
+    "snippet": "visual: (await readVisual(dream.date, \"dream\")) ?? createDreamVisual(dream)",
+    "description": "Read helper \"readVisual\" is called."
+  },
+  {
+    "id": "ev-0047",
+    "source_file": "src/app/layout.tsx",
+    "line": 17,
+    "symbol": "fileStorage",
+    "snippet": "const [settings, customCode] = await Promise.all([readSiteSettings(), readOptionalTextFile(storagePaths.customCode)]);",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0048",
+    "source_file": "src/app/layout.tsx",
+    "line": 17,
+    "symbol": "storagePaths.customCode",
+    "snippet": "const [settings, customCode] = await Promise.all([readSiteSettings(), readOptionalTextFile(storagePaths.customCode)]);",
+    "description": "Direct storagePaths.customCode reference."
+  },
+  {
+    "id": "ev-0049",
+    "source_file": "src/app/layout.tsx",
+    "line": 17,
+    "symbol": "readSiteSettings",
+    "snippet": "const [settings, customCode] = await Promise.all([readSiteSettings(), readOptionalTextFile(storagePaths.customCode)]);",
+    "description": "Read helper \"readSiteSettings\" is called."
+  },
+  {
+    "id": "ev-0050",
+    "source_file": "src/app/memory-map/page.tsx",
+    "line": 20,
+    "symbol": "fileStorage",
+    "snippet": "getLatestPoem(),",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0051",
+    "source_file": "src/app/memory-map/page.tsx",
+    "line": 20,
+    "symbol": "getLatestPoem",
+    "snippet": "getLatestPoem(),",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0052",
+    "source_file": "src/app/memory-map/page.tsx",
+    "line": 21,
+    "symbol": "readState",
+    "snippet": "readState(),",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0053",
+    "source_file": "src/app/memory-map/page.tsx",
+    "line": 22,
+    "symbol": "readMemoryReport",
+    "snippet": "readMemoryReport(),",
+    "description": "Read helper \"readMemoryReport\" is called."
+  },
+  {
+    "id": "ev-0054",
+    "source_file": "src/app/memory-map/page.tsx",
+    "line": 23,
+    "symbol": "readMemoryIndex",
+    "snippet": "readMemoryIndex(),",
+    "description": "Read helper \"readMemoryIndex\" is called."
+  },
+  {
+    "id": "ev-0055",
+    "source_file": "src/app/memory-map/page.tsx",
+    "line": 24,
+    "symbol": "listMemoryTraces",
+    "snippet": "listMemoryTraces(),",
+    "description": "Read helper \"listMemoryTraces\" is called."
+  },
+  {
+    "id": "ev-0056",
+    "source_file": "src/app/memory-map/page.tsx",
+    "line": 25,
+    "symbol": "listGeneratedPoems",
+    "snippet": "listGeneratedPoems(),",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0057",
+    "source_file": "src/app/memory-map/page.tsx",
+    "line": 26,
+    "symbol": "listDreams",
+    "snippet": "listDreams(),",
+    "description": "Read helper \"listDreams\" is called."
+  },
+  {
+    "id": "ev-0058",
+    "source_file": "src/app/memory-map/page.tsx",
+    "line": 27,
+    "symbol": "listSources",
+    "snippet": "listSources()",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0059",
+    "source_file": "src/app/memory/mutations/page.tsx",
+    "line": 19,
+    "symbol": "fileStorage",
+    "snippet": "getLatestPoem(),",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0060",
+    "source_file": "src/app/memory/mutations/page.tsx",
+    "line": 19,
+    "symbol": "getLatestPoem",
+    "snippet": "getLatestPoem(),",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0061",
+    "source_file": "src/app/memory/mutations/page.tsx",
+    "line": 20,
+    "symbol": "readState",
+    "snippet": "readState(),",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0062",
+    "source_file": "src/app/memory/mutations/page.tsx",
+    "line": 21,
+    "symbol": "readMemoryReport",
+    "snippet": "readMemoryReport(),",
+    "description": "Read helper \"readMemoryReport\" is called."
+  },
+  {
+    "id": "ev-0063",
+    "source_file": "src/app/memory/mutations/page.tsx",
+    "line": 22,
+    "symbol": "readMemoryIndex",
+    "snippet": "readMemoryIndex(),",
+    "description": "Read helper \"readMemoryIndex\" is called."
+  },
+  {
+    "id": "ev-0064",
+    "source_file": "src/app/memory/mutations/page.tsx",
+    "line": 23,
+    "symbol": "listMemoryTraces",
+    "snippet": "listMemoryTraces(),",
+    "description": "Read helper \"listMemoryTraces\" is called."
+  },
+  {
+    "id": "ev-0065",
+    "source_file": "src/app/memory/mutations/page.tsx",
+    "line": 24,
+    "symbol": "listGeneratedPoems",
+    "snippet": "listGeneratedPoems(),",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0066",
+    "source_file": "src/app/memory/mutations/page.tsx",
+    "line": 25,
+    "symbol": "listDreams",
+    "snippet": "listDreams(),",
+    "description": "Read helper \"listDreams\" is called."
+  },
+  {
+    "id": "ev-0067",
+    "source_file": "src/app/memory/mutations/page.tsx",
+    "line": 26,
+    "symbol": "listSources",
+    "snippet": "listSources()",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0068",
+    "source_file": "src/app/memory/page.tsx",
+    "line": 12,
+    "symbol": "fileStorage",
+    "snippet": "getLatestPoem(),",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0069",
+    "source_file": "src/app/memory/page.tsx",
+    "line": 12,
+    "symbol": "getLatestPoem",
+    "snippet": "getLatestPoem(),",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0070",
+    "source_file": "src/app/memory/page.tsx",
+    "line": 13,
+    "symbol": "readState",
+    "snippet": "readState(),",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0071",
+    "source_file": "src/app/memory/page.tsx",
+    "line": 14,
+    "symbol": "listYearlyReports",
+    "snippet": "listYearlyReports(),",
+    "description": "Read helper \"listYearlyReports\" is called."
+  },
+  {
+    "id": "ev-0072",
+    "source_file": "src/app/memory/page.tsx",
+    "line": 15,
+    "symbol": "storagePaths.imageMutations",
+    "snippet": "readJsonFile<{ mutations: ImageMutation[] }>(storagePaths.imageMutations, { mutations: [] }),",
+    "description": "Direct storagePaths.imageMutations reference."
+  },
+  {
+    "id": "ev-0073",
+    "source_file": "src/app/memory/page.tsx",
+    "line": 16,
+    "symbol": "readMemoryReport",
+    "snippet": "readMemoryReport(),",
+    "description": "Read helper \"readMemoryReport\" is called."
+  },
+  {
+    "id": "ev-0074",
+    "source_file": "src/app/memory/page.tsx",
+    "line": 17,
+    "symbol": "listMemoryTraces",
+    "snippet": "listMemoryTraces()",
+    "description": "Read helper \"listMemoryTraces\" is called."
+  },
+  {
+    "id": "ev-0075",
+    "source_file": "src/app/mood-map/page.tsx",
+    "line": 8,
+    "symbol": "fileStorage",
+    "snippet": "const [latest, state, sources, rssSources, settings] = await Promise.all([getLatestPoem(), readState(), listSources(), readRssSources(), readSiteSettings()]);",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0076",
+    "source_file": "src/app/mood-map/page.tsx",
+    "line": 8,
+    "symbol": "getLatestPoem",
+    "snippet": "const [latest, state, sources, rssSources, settings] = await Promise.all([getLatestPoem(), readState(), listSources(), readRssSources(), readSiteSettings()]);",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0077",
+    "source_file": "src/app/mood-map/page.tsx",
+    "line": 8,
+    "symbol": "listSources",
+    "snippet": "const [latest, state, sources, rssSources, settings] = await Promise.all([getLatestPoem(), readState(), listSources(), readRssSources(), readSiteSettings()]);",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0078",
+    "source_file": "src/app/mood-map/page.tsx",
+    "line": 8,
+    "symbol": "readRssSources",
+    "snippet": "const [latest, state, sources, rssSources, settings] = await Promise.all([getLatestPoem(), readState(), listSources(), readRssSources(), readSiteSettings()]);",
+    "description": "Read helper \"readRssSources\" is called."
+  },
+  {
+    "id": "ev-0079",
+    "source_file": "src/app/mood-map/page.tsx",
+    "line": 8,
+    "symbol": "readSiteSettings",
+    "snippet": "const [latest, state, sources, rssSources, settings] = await Promise.all([getLatestPoem(), readState(), listSources(), readRssSources(), readSiteSettings()]);",
+    "description": "Read helper \"readSiteSettings\" is called."
+  },
+  {
+    "id": "ev-0080",
+    "source_file": "src/app/mood-map/page.tsx",
+    "line": 8,
+    "symbol": "readState",
+    "snippet": "const [latest, state, sources, rssSources, settings] = await Promise.all([getLatestPoem(), readState(), listSources(), readRssSources(), readSiteSettings()]);",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0081",
+    "source_file": "src/app/page.tsx",
+    "line": 13,
+    "symbol": "fileStorage",
+    "snippet": "getLatestPoem(),",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0082",
+    "source_file": "src/app/page.tsx",
+    "line": 13,
+    "symbol": "getLatestPoem",
+    "snippet": "getLatestPoem(),",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0083",
+    "source_file": "src/app/page.tsx",
+    "line": 14,
+    "symbol": "listGeneratedPoems",
+    "snippet": "listGeneratedPoems(),",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0084",
+    "source_file": "src/app/page.tsx",
+    "line": 15,
+    "symbol": "readState",
+    "snippet": "readState(),",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0085",
+    "source_file": "src/app/page.tsx",
+    "line": 16,
+    "symbol": "readPersonalitySettings",
+    "snippet": "readPersonalitySettings()",
+    "description": "Read helper \"readPersonalitySettings\" is called."
+  },
+  {
+    "id": "ev-0086",
+    "source_file": "src/app/phone/page.tsx",
+    "line": 15,
+    "symbol": "fileStorage",
+    "snippet": "getLatestPoem(),",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0087",
+    "source_file": "src/app/phone/page.tsx",
+    "line": 15,
+    "symbol": "getLatestPoem",
+    "snippet": "getLatestPoem(),",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0088",
+    "source_file": "src/app/phone/page.tsx",
+    "line": 16,
+    "symbol": "listGeneratedPoems",
+    "snippet": "listGeneratedPoems(),",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0089",
+    "source_file": "src/app/phone/page.tsx",
+    "line": 17,
+    "symbol": "listDreams",
+    "snippet": "listDreams(),",
+    "description": "Read helper \"listDreams\" is called."
+  },
+  {
+    "id": "ev-0090",
+    "source_file": "src/app/phone/page.tsx",
+    "line": 18,
+    "symbol": "readState",
+    "snippet": "readState(),",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0091",
+    "source_file": "src/app/phone/page.tsx",
+    "line": 19,
+    "symbol": "readMemoryReport",
+    "snippet": "readMemoryReport()",
+    "description": "Read helper \"readMemoryReport\" is called."
+  },
+  {
+    "id": "ev-0092",
+    "source_file": "src/app/phone/page.tsx",
+    "line": 23,
+    "symbol": "readVisual",
+    "snippet": "...poems.map((poem) => readVisual(poem.date, \"poem\")),",
+    "description": "Read helper \"readVisual\" is called."
+  },
+  {
+    "id": "ev-0093",
+    "source_file": "src/app/phone/page.tsx",
+    "line": 24,
+    "symbol": "readVisual",
+    "snippet": "...dreams.map((dream) => readVisual(dream.date, \"dream\"))",
+    "description": "Read helper \"readVisual\" is called."
+  },
+  {
+    "id": "ev-0094",
+    "source_file": "src/app/poem/[date]/page.tsx",
+    "line": 19,
+    "symbol": "fileStorage",
+    "snippet": "const poems = await listGeneratedPoems();",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0095",
+    "source_file": "src/app/poem/[date]/page.tsx",
+    "line": 19,
+    "symbol": "listGeneratedPoems",
+    "snippet": "const poems = await listGeneratedPoems();",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0096",
+    "source_file": "src/app/poem/[date]/page.tsx",
+    "line": 26,
+    "symbol": "getLatestPoem",
+    "snippet": "getLatestPoem(),",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0097",
+    "source_file": "src/app/poem/[date]/page.tsx",
+    "line": 27,
+    "symbol": "listGeneratedPoems",
+    "snippet": "listGeneratedPoems(),",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0098",
+    "source_file": "src/app/poem/[date]/page.tsx",
+    "line": 28,
+    "symbol": "readState",
+    "snippet": "readState(),",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0099",
+    "source_file": "src/app/poem/[date]/page.tsx",
+    "line": 29,
+    "symbol": "readPersonalitySettings",
+    "snippet": "readPersonalitySettings()",
+    "description": "Read helper \"readPersonalitySettings\" is called."
+  },
+  {
+    "id": "ev-0100",
+    "source_file": "src/app/settings/page.tsx",
+    "line": 6,
+    "symbol": "fileStorage",
+    "snippet": "const [latest, state, world, settings, rssSources] = await Promise.all([getLatestPoem(), readState(), readWorld(), readSiteSettings(), readRssSources()]);",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0101",
+    "source_file": "src/app/settings/page.tsx",
+    "line": 6,
+    "symbol": "getLatestPoem",
+    "snippet": "const [latest, state, world, settings, rssSources] = await Promise.all([getLatestPoem(), readState(), readWorld(), readSiteSettings(), readRssSources()]);",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0102",
+    "source_file": "src/app/settings/page.tsx",
+    "line": 6,
+    "symbol": "readRssSources",
+    "snippet": "const [latest, state, world, settings, rssSources] = await Promise.all([getLatestPoem(), readState(), readWorld(), readSiteSettings(), readRssSources()]);",
+    "description": "Read helper \"readRssSources\" is called."
+  },
+  {
+    "id": "ev-0103",
+    "source_file": "src/app/settings/page.tsx",
+    "line": 6,
+    "symbol": "readSiteSettings",
+    "snippet": "const [latest, state, world, settings, rssSources] = await Promise.all([getLatestPoem(), readState(), readWorld(), readSiteSettings(), readRssSources()]);",
+    "description": "Read helper \"readSiteSettings\" is called."
+  },
+  {
+    "id": "ev-0104",
+    "source_file": "src/app/settings/page.tsx",
+    "line": 6,
+    "symbol": "readState",
+    "snippet": "const [latest, state, world, settings, rssSources] = await Promise.all([getLatestPoem(), readState(), readWorld(), readSiteSettings(), readRssSources()]);",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0105",
+    "source_file": "src/app/settings/page.tsx",
+    "line": 6,
+    "symbol": "readWorld",
+    "snippet": "const [latest, state, world, settings, rssSources] = await Promise.all([getLatestPoem(), readState(), readWorld(), readSiteSettings(), readRssSources()]);",
+    "description": "Read helper \"readWorld\" is called."
+  },
+  {
+    "id": "ev-0106",
+    "source_file": "src/app/sources/health/page.tsx",
+    "line": 88,
+    "symbol": "fileStorage",
+    "snippet": "const [latest, state, sourceHistory, configuredSources] = await Promise.all([getLatestPoem(), readState(), listSources(), readRssSources()]);",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0107",
+    "source_file": "src/app/sources/health/page.tsx",
+    "line": 88,
+    "symbol": "getLatestPoem",
+    "snippet": "const [latest, state, sourceHistory, configuredSources] = await Promise.all([getLatestPoem(), readState(), listSources(), readRssSources()]);",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0108",
+    "source_file": "src/app/sources/health/page.tsx",
+    "line": 88,
+    "symbol": "listSources",
+    "snippet": "const [latest, state, sourceHistory, configuredSources] = await Promise.all([getLatestPoem(), readState(), listSources(), readRssSources()]);",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0109",
+    "source_file": "src/app/sources/health/page.tsx",
+    "line": 88,
+    "symbol": "readRssSources",
+    "snippet": "const [latest, state, sourceHistory, configuredSources] = await Promise.all([getLatestPoem(), readState(), listSources(), readRssSources()]);",
+    "description": "Read helper \"readRssSources\" is called."
+  },
+  {
+    "id": "ev-0110",
+    "source_file": "src/app/sources/health/page.tsx",
+    "line": 88,
+    "symbol": "readState",
+    "snippet": "const [latest, state, sourceHistory, configuredSources] = await Promise.all([getLatestPoem(), readState(), listSources(), readRssSources()]);",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0111",
+    "source_file": "src/app/sources/page.tsx",
+    "line": 8,
+    "symbol": "fileStorage",
+    "snippet": "const [latest, state, sources] = await Promise.all([getLatestPoem(), readState(), listSources()]);",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0112",
+    "source_file": "src/app/sources/page.tsx",
+    "line": 8,
+    "symbol": "getLatestPoem",
+    "snippet": "const [latest, state, sources] = await Promise.all([getLatestPoem(), readState(), listSources()]);",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0113",
+    "source_file": "src/app/sources/page.tsx",
+    "line": 8,
+    "symbol": "listSources",
+    "snippet": "const [latest, state, sources] = await Promise.all([getLatestPoem(), readState(), listSources()]);",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0114",
+    "source_file": "src/app/sources/page.tsx",
+    "line": 8,
+    "symbol": "readState",
+    "snippet": "const [latest, state, sources] = await Promise.all([getLatestPoem(), readState(), listSources()]);",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0115",
+    "source_file": "src/components/ArchiveList.tsx",
+    "line": 32,
+    "symbol": "useEffect",
+    "snippet": "useEffect(() => {",
+    "description": "Source file calls imported process \"useEffect\"."
+  },
+  {
+    "id": "ev-0116",
+    "source_file": "src/components/ArchiveList.tsx",
+    "line": 27,
+    "symbol": "useMemo",
+    "snippet": "const newestFirst = useMemo(() => poems.slice().reverse(), [poems]);",
+    "description": "Source file calls imported process \"useMemo\"."
+  },
+  {
+    "id": "ev-0117",
+    "source_file": "src/components/CurrentStatePanel.tsx",
+    "line": 33,
+    "symbol": "useEffect",
+    "snippet": "useEffect(() => {",
+    "description": "Source file calls imported process \"useEffect\"."
+  },
+  {
+    "id": "ev-0118",
+    "source_file": "src/components/CurrentStatePanel.tsx",
+    "line": 40,
+    "symbol": "useMemo",
+    "snippet": "const current = useMemo(() => {",
+    "description": "Source file calls imported process \"useMemo\"."
+  },
+  {
+    "id": "ev-0119",
+    "source_file": "src/components/DailyPoemCard.tsx",
+    "line": 15,
+    "symbol": "formatMoodSentence",
+    "snippet": "{poem.mood_sentence ? <div className=\"tiny\">{formatMoodSentence(poem.mood_sentence)}</div> : null}",
+    "description": "Source file calls imported process \"formatMoodSentence\"."
+  },
+  {
+    "id": "ev-0120",
+    "source_file": "src/components/MemoryMutationGraph.tsx",
+    "line": 241,
+    "symbol": "useEffect",
+    "snippet": "useEffect(() => {",
+    "description": "Source file calls imported process \"useEffect\"."
+  },
+  {
+    "id": "ev-0121",
+    "source_file": "src/components/MemoryMutationGraph.tsx",
+    "line": 209,
+    "symbol": "useMemo",
+    "snippet": "const graphNodes = useMemo(() => positions(data), [data]);",
+    "description": "Source file calls imported process \"useMemo\"."
+  },
+  {
+    "id": "ev-0122",
+    "source_file": "src/components/MemoryPanel.tsx",
+    "line": 59,
+    "symbol": "memoryClimateDetail",
+    "snippet": "<p>{memoryClimateDetail(report)}.</p>",
+    "description": "Source file calls imported process \"memoryClimateDetail\"."
+  },
+  {
+    "id": "ev-0123",
+    "source_file": "src/components/MemoryPanel.tsx",
+    "line": 58,
+    "symbol": "memoryClimateHeadline",
+    "snippet": "<h3>{memoryClimateHeadline(report)}</h3>",
+    "description": "Source file calls imported process \"memoryClimateHeadline\"."
+  },
+  {
+    "id": "ev-0124",
+    "source_file": "src/components/MoodPanel.tsx",
+    "line": 19,
+    "symbol": "formatMoodSentence",
+    "snippet": "<p>{formatMoodSentence(sentence)}</p>",
+    "description": "Source file calls imported process \"formatMoodSentence\"."
+  },
+  {
+    "id": "ev-0125",
+    "source_file": "src/components/TimelineItem.tsx",
+    "line": 15,
+    "symbol": "formatMoodSentence",
+    "snippet": "{poem.mood_sentence ? <div className=\"tiny\">{formatMoodSentence(poem.mood_sentence)}</div> : null}",
+    "description": "Source file calls imported process \"formatMoodSentence\"."
+  },
+  {
+    "id": "ev-0126",
+    "source_file": "src/components/UcuBedenHeader.tsx",
+    "line": 9,
+    "symbol": "fileStorage",
+    "snippet": "const memory = memoryClimateHeadline(await readMemoryReport());",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0127",
+    "source_file": "src/components/UcuBedenHeader.tsx",
+    "line": 9,
+    "symbol": "readMemoryReport",
+    "snippet": "const memory = memoryClimateHeadline(await readMemoryReport());",
+    "description": "Read helper \"readMemoryReport\" is called."
+  },
+  {
+    "id": "ev-0128",
+    "source_file": "src/components/UcuBedenHeader.tsx",
+    "line": 9,
+    "symbol": "memoryClimateHeadline",
+    "snippet": "const memory = memoryClimateHeadline(await readMemoryReport());",
+    "description": "Source file calls imported process \"memoryClimateHeadline\"."
+  },
+  {
+    "id": "ev-0129",
+    "source_file": "src/components/VisualField.tsx",
+    "line": 32,
+    "symbol": "useEffect",
+    "snippet": "useEffect(() => setImageFailed(false), [visual.image_path]);",
+    "description": "Source file calls imported process \"useEffect\"."
+  },
+  {
+    "id": "ev-0130",
+    "source_file": "src/components/VisualField.tsx",
+    "line": 29,
+    "symbol": "useState",
+    "snippet": "const [imageFailed, setImageFailed] = useState(false);",
+    "description": "Source file calls imported process \"useState\"."
+  },
+  {
+    "id": "ev-0131",
+    "source_file": "src/components/VisualMemoryMap.tsx",
+    "line": 413,
+    "symbol": "useCallback",
+    "snippet": "const clientToGraphPoint = useCallback((clientX: number, clientY: number): GraphPoint => {",
+    "description": "Source file calls imported process \"useCallback\"."
+  },
+  {
+    "id": "ev-0132",
+    "source_file": "src/components/VisualMemoryMap.tsx",
+    "line": 404,
+    "symbol": "useEffect",
+    "snippet": "useEffect(() => {",
+    "description": "Source file calls imported process \"useEffect\"."
+  },
+  {
+    "id": "ev-0133",
+    "source_file": "src/components/VisualMemoryMap.tsx",
+    "line": 364,
+    "symbol": "useMemo",
+    "snippet": "const filteredDataNodes = useMemo(",
+    "description": "Source file calls imported process \"useMemo\"."
+  },
+  {
+    "id": "ev-0134",
+    "source_file": "src/components/VisualMemoryMap.tsx",
+    "line": 359,
+    "symbol": "useRef",
+    "snippet": "const pointersRef = useRef(new Map<number, GraphPoint>());",
+    "description": "Source file calls imported process \"useRef\"."
+  },
+  {
+    "id": "ev-0135",
+    "source_file": "src/components/VisualMemoryMap.tsx",
+    "line": 357,
+    "symbol": "useState",
+    "snippet": "const [isPanning, setIsPanning] = useState(false);",
+    "description": "Source file calls imported process \"useState\"."
+  },
+  {
+    "id": "ev-0136",
+    "source_file": "src/lib/dayView.ts",
+    "line": 14,
+    "symbol": "fileStorage",
+    "snippet": "readDailyLife(poem.date),",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0137",
+    "source_file": "src/lib/dayView.ts",
+    "line": 14,
+    "symbol": "readDailyLife",
+    "snippet": "readDailyLife(poem.date),",
+    "description": "Read helper \"readDailyLife\" is called."
+  },
+  {
+    "id": "ev-0138",
+    "source_file": "src/lib/dayView.ts",
+    "line": 15,
+    "symbol": "listDreams",
+    "snippet": "listDreams(),",
+    "description": "Read helper \"listDreams\" is called."
+  },
+  {
+    "id": "ev-0139",
+    "source_file": "src/lib/dayView.ts",
+    "line": 16,
+    "symbol": "readVisual",
+    "snippet": "readVisual(poem.date, \"poem\")",
+    "description": "Read helper \"readVisual\" is called."
+  },
+  {
+    "id": "ev-0140",
+    "source_file": "src/lib/dayView.ts",
+    "line": 21,
+    "symbol": "readVisual",
+    "snippet": "const storedDreamVisual = dream ? await readVisual(dream.date, \"dream\") : null;",
+    "description": "Read helper \"readVisual\" is called."
+  },
+  {
+    "id": "ev-0141",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 11,
+    "symbol": "fileStorage",
+    "snippet": "export async function pathExists(relativePath:string):Promise<boolean>{try{await fs.access(resolvePath(relativePath));return true}catch{return false}}",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0142",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 18,
+    "symbol": "storagePaths.generatedPoems",
+    "snippet": "... port async function listGeneratedPoems():Promise<DailyPoem[]>{const files=await listFiles(storagePaths.generatedPoems,\".json\");const poems=await Promise.all(files.map((file)=>readJsonFile<DailyPoem|null>(file,null)));return poems.filter((poem):poem is Dail",
+    "description": "Direct storagePaths.generatedPoems reference."
+  },
+  {
+    "id": "ev-0143",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 18,
+    "symbol": "listGeneratedPoems",
+    "snippet": "export async function listGeneratedPoems():Promise<DailyPoem[]>{const files=await listFiles(storagePaths.generatedPoems,\".json\");const poems=await Promise.all(files.map((file)=>readJsonFile<DailyPoem|null>(file,n ...",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0144",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 19,
+    "symbol": "getLatestPoem",
+    "snippet": "export async function getLatestPoem():Promise<DailyPoem|null>{return (await listGeneratedPoems()).at(-1)??null}",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0145",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 19,
+    "symbol": "listGeneratedPoems",
+    "snippet": "export async function getLatestPoem():Promise<DailyPoem|null>{return (await listGeneratedPoems()).at(-1)??null}",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0146",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 20,
+    "symbol": "storagePaths.dailyLife",
+    "snippet": "export async function readDailyLife(date:string):Promise<DailyLifeRecord|null>{return readJsonFile<DailyLifeRecord|null>(`${storagePaths.dailyLife}/${date}.json`,null)}",
+    "description": "Direct storagePaths.dailyLife reference."
+  },
+  {
+    "id": "ev-0147",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 20,
+    "symbol": "readDailyLife",
+    "snippet": "export async function readDailyLife(date:string):Promise<DailyLifeRecord|null>{return readJsonFile<DailyLifeRecord|null>(`${storagePaths.dailyLife}/${date}.json`,null)}",
+    "description": "Read helper \"readDailyLife\" is called."
+  },
+  {
+    "id": "ev-0148",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 21,
+    "symbol": "storagePaths.dreams",
+    "snippet": "export async function listDreams():Promise<DreamRecord[]>{const files=await listFiles(storagePaths.dreams,\".json\");const dreams=await Promise.all(files.map((file)=>readJsonFile<DreamRecord|null>(file,null)));return dreams.filter((dream):dream is DreamRecord=>d",
+    "description": "Direct storagePaths.dreams reference."
+  },
+  {
+    "id": "ev-0149",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 21,
+    "symbol": "listDreams",
+    "snippet": "export async function listDreams():Promise<DreamRecord[]>{const files=await listFiles(storagePaths.dreams,\".json\");const dreams=await Promise.all(files.map((file)=>readJsonFile<DreamRecord|null>(file,null)));retu ...",
+    "description": "Read helper \"listDreams\" is called."
+  },
+  {
+    "id": "ev-0150",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 22,
+    "symbol": "getLatestDream",
+    "snippet": "export async function getLatestDream():Promise<DreamRecord|null>{return (await listDreams()).at(-1)??null}",
+    "description": "Read helper \"getLatestDream\" is called."
+  },
+  {
+    "id": "ev-0151",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 22,
+    "symbol": "listDreams",
+    "snippet": "export async function getLatestDream():Promise<DreamRecord|null>{return (await listDreams()).at(-1)??null}",
+    "description": "Read helper \"listDreams\" is called."
+  },
+  {
+    "id": "ev-0152",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 23,
+    "symbol": "storagePaths.visuals",
+    "snippet": "export async function readVisual(date:string,type:\"poem\"|\"dream\"):Promise<VisualMetadata|null>{return readJsonFile<VisualMetadata|null>(`${storagePaths.visuals}/${date}-${type}.json`,null)}",
+    "description": "Direct storagePaths.visuals reference."
+  },
+  {
+    "id": "ev-0153",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 23,
+    "symbol": "readVisual",
+    "snippet": "export async function readVisual(date:string,type:\"poem\"|\"dream\"):Promise<VisualMetadata|null>{return readJsonFile<VisualMetadata|null>(`${storagePaths.visuals}/${date}-${type}.json`,null)}",
+    "description": "Read helper \"readVisual\" is called."
+  },
+  {
+    "id": "ev-0154",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 24,
+    "symbol": "storagePaths.world",
+    "snippet": "export async function readWorld():Promise<World>{return readJsonFile<World>(storagePaths.world,{home:{city:\"İstanbul\",district:\"Kadıköy / Osmanağa\",building:\"apartman detayı gizli\",apartment_type:\"1+1\",size_m2:35,building_feel:\"mütevazı, yeni bir bina\",rooms:{",
+    "description": "Direct storagePaths.world reference."
+  },
+  {
+    "id": "ev-0155",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 24,
+    "symbol": "readWorld",
+    "snippet": "export async function readWorld():Promise<World>{return readJsonFile<World>(storagePaths.world,{home:{city:\"İstanbul\",district:\"Kadıköy / Osmanağa\",building:\"apartman detayı gizli\",apartment_type:\"1+1\",size_m2:35 ...",
+    "description": "Read helper \"readWorld\" is called."
+  },
+  {
+    "id": "ev-0156",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 25,
+    "symbol": "storagePaths.state",
+    "snippet": "... ,things_it_keeps_returning_to:[]}};const state=await readJsonFile<Partial<UcuBedenState>>(storagePaths.state,{});return{...fallback,...state,external_memory:state.external_memory??fallback.external_memory}}",
+    "description": "Direct storagePaths.state reference."
+  },
+  {
+    "id": "ev-0157",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 25,
+    "symbol": "readState",
+    "snippet": "export async function readState():Promise<UcuBedenState>{const fallback:UcuBedenState={name:\"UCU BEDEN\",generated_days:0,age_months:0,last_generated_date:null,last_mood:null,mood_history:[],dominant_words:[],obse ...",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0158",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 26,
+    "symbol": "storagePaths.inputAnalysis",
+    "snippet": "... n readInputAnalysis():Promise<InputPoemsAnalysis>{return readJsonFile<InputPoemsAnalysis>(storagePaths.inputAnalysis,{files:[],global:{poem_count:0,word_count:0,dominant_words:[],image_fields:[],food_images:[],body_images:[],animal_images:[],city_images:[]",
+    "description": "Direct storagePaths.inputAnalysis reference."
+  },
+  {
+    "id": "ev-0159",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 26,
+    "symbol": "readInputAnalysis",
+    "snippet": "export async function readInputAnalysis():Promise<InputPoemsAnalysis>{return readJsonFile<InputPoemsAnalysis>(storagePaths.inputAnalysis,{files:[],global:{poem_count:0,word_count:0,dominant_words:[],image_fields: ...",
+    "description": "Read helper \"readInputAnalysis\" is called."
+  },
+  {
+    "id": "ev-0160",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 27,
+    "symbol": "storagePaths.siteSettings",
+    "snippet": "... Settings():Promise<SiteSettings>{const settings=await readJsonFile<Partial<SiteSettings>>(storagePaths.siteSettings,{});return{theme:settings.theme===\"sims2000\"||settings.theme===\"minimal\"||settings.theme===\"fresh90s\"?settings.theme:\"fresh90s\",showMoodDots",
+    "description": "Direct storagePaths.siteSettings reference."
+  },
+  {
+    "id": "ev-0161",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 27,
+    "symbol": "readSiteSettings",
+    "snippet": "export async function readSiteSettings():Promise<SiteSettings>{const settings=await readJsonFile<Partial<SiteSettings>>(storagePaths.siteSettings,{});return{theme:settings.theme===\"sims2000\"||settings.theme===\"mi ...",
+    "description": "Read helper \"readSiteSettings\" is called."
+  },
+  {
+    "id": "ev-0162",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 28,
+    "symbol": "storagePaths.personalitySettings",
+    "snippet": "... rsonalitySettings():Promise<PersonalitySettings>{return readJsonFile<PersonalitySettings>(storagePaths.personalitySettings,{hidden_voice_traits:{dry_sarcasm:.68,absurd_domestic_humor:.82,gentle_passive_aggression:.44,panic_comedy:.71,sentimental_leak:.37},",
+    "description": "Direct storagePaths.personalitySettings reference."
+  },
+  {
+    "id": "ev-0163",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 28,
+    "symbol": "readPersonalitySettings",
+    "snippet": "export async function readPersonalitySettings():Promise<PersonalitySettings>{return readJsonFile<PersonalitySettings>(storagePaths.personalitySettings,{hidden_voice_traits:{dry_sarcasm:.68,absurd_domestic_humor:. ...",
+    "description": "Read helper \"readPersonalitySettings\" is called."
+  },
+  {
+    "id": "ev-0164",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 29,
+    "symbol": "storagePaths.rssSources",
+    "snippet": "export async function readRssSources():Promise<RssSource[]>{return readJsonFile<RssSource[]>(storagePaths.rssSources,[])}",
+    "description": "Direct storagePaths.rssSources reference."
+  },
+  {
+    "id": "ev-0165",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 29,
+    "symbol": "readRssSources",
+    "snippet": "export async function readRssSources():Promise<RssSource[]>{return readJsonFile<RssSource[]>(storagePaths.rssSources,[])}",
+    "description": "Read helper \"readRssSources\" is called."
+  },
+  {
+    "id": "ev-0166",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 30,
+    "symbol": "storagePaths.yearlyReports",
+    "snippet": "... rt async function listYearlyReports():Promise<YearlyReport[]>{const files=await listFiles(storagePaths.yearlyReports,\".json\");const reports=await Promise.all(files.map((file)=>readJsonFile<YearlyReport|null>(file,null)));return reports.filter((report):repo",
+    "description": "Direct storagePaths.yearlyReports reference."
+  },
+  {
+    "id": "ev-0167",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 30,
+    "symbol": "listYearlyReports",
+    "snippet": "export async function listYearlyReports():Promise<YearlyReport[]>{const files=await listFiles(storagePaths.yearlyReports,\".json\");const reports=await Promise.all(files.map((file)=>readJsonFile<YearlyReport|null>( ...",
+    "description": "Read helper \"listYearlyReports\" is called."
+  },
+  {
+    "id": "ev-0168",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 31,
+    "symbol": "storagePaths.sources",
+    "snippet": "export async function listSources():Promise<SourceBundle[]>{const files=await listFiles(storagePaths.sources,\".json\");const sources=await Promise.all(files.map((file)=>readJsonFile<SourceBundle|null>(file,null)));return sources.filter((source):source is Source",
+    "description": "Direct storagePaths.sources reference."
+  },
+  {
+    "id": "ev-0169",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 31,
+    "symbol": "listSources",
+    "snippet": "export async function listSources():Promise<SourceBundle[]>{const files=await listFiles(storagePaths.sources,\".json\");const sources=await Promise.all(files.map((file)=>readJsonFile<SourceBundle|null>(file,null))) ...",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0170",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 32,
+    "symbol": "storagePaths.sourceDigests",
+    "snippet": "export async function readSourceDigest(date:string):Promise<SourceDigestRecord|null>{return readJsonFile<SourceDigestRecord|null>(`${storagePaths.sourceDigests}/${date}.json`,null)}",
+    "description": "Direct storagePaths.sourceDigests reference."
+  },
+  {
+    "id": "ev-0171",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 32,
+    "symbol": "readSourceDigest",
+    "snippet": "export async function readSourceDigest(date:string):Promise<SourceDigestRecord|null>{return readJsonFile<SourceDigestRecord|null>(`${storagePaths.sourceDigests}/${date}.json`,null)}",
+    "description": "Read helper \"readSourceDigest\" is called."
+  },
+  {
+    "id": "ev-0172",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 33,
+    "symbol": "storagePaths.sourceDigests",
+    "snippet": "... nc function listSourceDigests():Promise<SourceDigestRecord[]>{const files=await listFiles(storagePaths.sourceDigests,\".json\");const digests=await Promise.all(files.map((file)=>readJsonFile<SourceDigestRecord|null>(file,null)));return digests.filter((digest",
+    "description": "Direct storagePaths.sourceDigests reference."
+  },
+  {
+    "id": "ev-0173",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 33,
+    "symbol": "listSourceDigests",
+    "snippet": "export async function listSourceDigests():Promise<SourceDigestRecord[]>{const files=await listFiles(storagePaths.sourceDigests,\".json\");const digests=await Promise.all(files.map((file)=>readJsonFile<SourceDigestR ...",
+    "description": "Read helper \"listSourceDigests\" is called."
+  },
+  {
+    "id": "ev-0174",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 34,
+    "symbol": "storagePaths.memoryTraces",
+    "snippet": "... nc function listMemoryTraceFiles():Promise<MemoryTraceFile[]>{const files=await listFiles(storagePaths.memoryTraces,\".json\");const traceFiles=await Promise.all(files.map((file)=>readJsonFile<MemoryTraceFile|null>(file,null)));return traceFiles.filter((trac",
+    "description": "Direct storagePaths.memoryTraces reference."
+  },
+  {
+    "id": "ev-0175",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 34,
+    "symbol": "listMemoryTraceFiles",
+    "snippet": "export async function listMemoryTraceFiles():Promise<MemoryTraceFile[]>{const files=await listFiles(storagePaths.memoryTraces,\".json\");const traceFiles=await Promise.all(files.map((file)=>readJsonFile<MemoryTrace ...",
+    "description": "Read helper \"listMemoryTraceFiles\" is called."
+  },
+  {
+    "id": "ev-0176",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 35,
+    "symbol": "listMemoryTraceFiles",
+    "snippet": "export async function listMemoryTraces():Promise<MemoryTrace[]>{return (await listMemoryTraceFiles()).flatMap((traceFile)=>traceFile.traces).sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id))}",
+    "description": "Read helper \"listMemoryTraceFiles\" is called."
+  },
+  {
+    "id": "ev-0177",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 35,
+    "symbol": "listMemoryTraces",
+    "snippet": "export async function listMemoryTraces():Promise<MemoryTrace[]>{return (await listMemoryTraceFiles()).flatMap((traceFile)=>traceFile.traces).sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id))}",
+    "description": "Read helper \"listMemoryTraces\" is called."
+  },
+  {
+    "id": "ev-0178",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 36,
+    "symbol": "storagePaths.memoryIndex",
+    "snippet": "export async function readMemoryIndex():Promise<MemoryIndex|null>{return readJsonFile<MemoryIndex|null>(storagePaths.memoryIndex,null)}",
+    "description": "Direct storagePaths.memoryIndex reference."
+  },
+  {
+    "id": "ev-0179",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 36,
+    "symbol": "readMemoryIndex",
+    "snippet": "export async function readMemoryIndex():Promise<MemoryIndex|null>{return readJsonFile<MemoryIndex|null>(storagePaths.memoryIndex,null)}",
+    "description": "Read helper \"readMemoryIndex\" is called."
+  },
+  {
+    "id": "ev-0180",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 37,
+    "symbol": "storagePaths.memoryReport",
+    "snippet": "export async function readMemoryReport():Promise<MemoryReport|null>{return readJsonFile<MemoryReport|null>(storagePaths.memoryReport,null)}",
+    "description": "Direct storagePaths.memoryReport reference."
+  },
+  {
+    "id": "ev-0181",
+    "source_file": "src/lib/fileStorage.ts",
+    "line": 37,
+    "symbol": "readMemoryReport",
+    "snippet": "export async function readMemoryReport():Promise<MemoryReport|null>{return readJsonFile<MemoryReport|null>(storagePaths.memoryReport,null)}",
+    "description": "Read helper \"readMemoryReport\" is called."
+  },
+  {
+    "id": "ev-0182",
+    "source_file": "src/lib/inputPoems.ts",
+    "line": 196,
+    "symbol": "fileStorage",
+    "snippet": "const files = await listFiles(storagePaths.poemsInput, \".txt\");",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0183",
+    "source_file": "src/lib/inputPoems.ts",
+    "line": 196,
+    "symbol": "storagePaths.poemsInput",
+    "snippet": "const files = await listFiles(storagePaths.poemsInput, \".txt\");",
+    "description": "Direct storagePaths.poemsInput reference."
+  },
+  {
+    "id": "ev-0184",
+    "source_file": "src/lib/inputPoems.ts",
+    "line": 211,
+    "symbol": "storagePaths.poemsInput",
+    "snippet": "const files = await listFiles(storagePaths.poemsInput, \".txt\");",
+    "description": "Direct storagePaths.poemsInput reference."
+  },
+  {
+    "id": "ev-0185",
+    "source_file": "src/lib/inputPoems.ts",
+    "line": 258,
+    "symbol": "storagePaths.inputAnalysis",
+    "snippet": "await writeJsonFile(storagePaths.inputAnalysis, analysis);",
+    "description": "Direct storagePaths.inputAnalysis reference."
+  },
+  {
+    "id": "ev-0186",
+    "source_file": "src/lib/memoryEngine.ts",
+    "line": 9,
+    "symbol": "fileStorage",
+    "snippet": "export async function selectMemoryFragments(params:{date:string;state:UcuBedenState;inputAnalysis:InputPoemsAnalysis}):Promise<string[]>{const poems=await listGeneratedPoems();const reports=await listYearlyReports();const fragments:string[]=[];for(const poem o",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0187",
+    "source_file": "src/lib/memoryEngine.ts",
+    "line": 9,
+    "symbol": "listGeneratedPoems",
+    "snippet": "... tate:UcuBedenState;inputAnalysis:InputPoemsAnalysis}):Promise<string[]>{const poems=await listGeneratedPoems();const reports=await listYearlyReports();const fragments:string[]=[];for(const poem of poems.slice(-3)){const images=poem.analysis.new_images.leng",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0188",
+    "source_file": "src/lib/memoryEngine.ts",
+    "line": 9,
+    "symbol": "listYearlyReports",
+    "snippet": "... msAnalysis}):Promise<string[]>{const poems=await listGeneratedPoems();const reports=await listYearlyReports();const fragments:string[]=[];for(const poem of poems.slice(-3)){const images=poem.analysis.new_images.length?poem.analysis.new_images:extractImages",
+    "description": "Read helper \"listYearlyReports\" is called."
+  },
+  {
+    "id": "ev-0189",
+    "source_file": "src/lib/memoryEngine.ts",
+    "line": 10,
+    "symbol": "storagePaths.state",
+    "snippet": "... ngs([...dominantWords.slice(0,8),...recurringImages.slice(0,8)],12)}};await writeJsonFile(storagePaths.state,state);await writeJsonFile(storagePaths.vocabularyMemory,{updated_at:new Date().toISOString(),dominant_words:dominantWords,avoided_words:state.avoi",
+    "description": "Direct storagePaths.state reference."
+  },
+  {
+    "id": "ev-0190",
+    "source_file": "src/lib/memoryEngine.ts",
+    "line": 10,
+    "symbol": "storagePaths.vocabularyMemory",
+    "snippet": "... mages.slice(0,8)],12)}};await writeJsonFile(storagePaths.state,state);await writeJsonFile(storagePaths.vocabularyMemory,{updated_at:new Date().toISOString(),dominant_words:dominantWords,avoided_words:state.avoided_words,forgotten_words:forgotten});await wr",
+    "description": "Direct storagePaths.vocabularyMemory reference."
+  },
+  {
+    "id": "ev-0191",
+    "source_file": "src/lib/memoryEngine.ts",
+    "line": 10,
+    "symbol": "storagePaths.imageMutations",
+    "snippet": "... ntWords,avoided_words:state.avoided_words,forgotten_words:forgotten});await writeJsonFile(storagePaths.imageMutations,{updated_at:new Date().toISOString(),mutations:recurringImages.slice(0,12).map((image)=>mutateImage(image,lastPoem?.date??new Date().toISO",
+    "description": "Direct storagePaths.imageMutations reference."
+  },
+  {
+    "id": "ev-0192",
+    "source_file": "src/lib/memoryEngine.ts",
+    "line": 10,
+    "symbol": "listGeneratedPoems",
+    "snippet": "... lysis:InputPoemsAnalysis}):Promise<UcuBedenState>{const[poems,reports]=await Promise.all([listGeneratedPoems(),listYearlyReports()]);const allWords=tokenize(poems.map((p)=>p.poem_text).join(\"\\n\"));const dominantWords=topWords(allWords,20);const recurringIm",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0193",
+    "source_file": "src/lib/memoryEngine.ts",
+    "line": 10,
+    "symbol": "listYearlyReports",
+    "snippet": "... sis}):Promise<UcuBedenState>{const[poems,reports]=await Promise.all([listGeneratedPoems(),listYearlyReports()]);const allWords=tokenize(poems.map((p)=>p.poem_text).join(\"\\n\"));const dominantWords=topWords(allWords,20);const recurringImages=topFromStrings(p",
+    "description": "Read helper \"listYearlyReports\" is called."
+  },
+  {
+    "id": "ev-0194",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 175,
+    "symbol": "fileStorage",
+    "snippet": "const sources = rawSources ?? (await listSources());",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0195",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 175,
+    "symbol": "listSources",
+    "snippet": "const sources = rawSources ?? (await listSources());",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0196",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 189,
+    "symbol": "listSources",
+    "snippet": "const sources = rawSources ?? (await listSources());",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0197",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 281,
+    "symbol": "storagePaths.generatedPoems",
+    "snippet": "source_ref: `${storagePaths.generatedPoems}/${poem.date}.json`,",
+    "description": "Direct storagePaths.generatedPoems reference."
+  },
+  {
+    "id": "ev-0198",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 292,
+    "symbol": "storagePaths.dailyLife",
+    "snippet": "const sourceRef = `${storagePaths.dailyLife}/${record.date}.json`;",
+    "description": "Direct storagePaths.dailyLife reference."
+  },
+  {
+    "id": "ev-0199",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 292,
+    "symbol": "sourceRef",
+    "snippet": "const sourceRef = `${storagePaths.dailyLife}/${record.date}.json`;",
+    "description": "Storage path variable \"sourceRef\" points to storagePaths.dailyLife."
+  },
+  {
+    "id": "ev-0200",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 297,
+    "symbol": "sourceRef",
+    "snippet": "source_ref: `${sourceRef}#body_state`,",
+    "description": "Storage path variable \"sourceRef\" points to storagePaths.dailyLife."
+  },
+  {
+    "id": "ev-0201",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 307,
+    "symbol": "sourceRef",
+    "snippet": "source_ref: `${sourceRef}#attention`,",
+    "description": "Storage path variable \"sourceRef\" points to storagePaths.dailyLife."
+  },
+  {
+    "id": "ev-0202",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 317,
+    "symbol": "sourceRef",
+    "snippet": "source_ref: `${sourceRef}#avoidance`,",
+    "description": "Storage path variable \"sourceRef\" points to storagePaths.dailyLife."
+  },
+  {
+    "id": "ev-0203",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 332,
+    "symbol": "storagePaths.generatedPoems",
+    "snippet": "source_ref: `${storagePaths.generatedPoems}/${date}.json#walk_state`,",
+    "description": "Direct storagePaths.generatedPoems reference."
+  },
+  {
+    "id": "ev-0204",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 350,
+    "symbol": "storagePaths.sourceDigests",
+    "snippet": "? `${storagePaths.sourceDigests}/${bundle.date}.json#source_influence_packet:${packet.category}`",
+    "description": "Direct storagePaths.sourceDigests reference."
+  },
+  {
+    "id": "ev-0205",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 351,
+    "symbol": "storagePaths.sources",
+    "snippet": ": `${storagePaths.sources}/${bundle.date}.json#source_influence_packet:${packet.category}`,",
+    "description": "Direct storagePaths.sources reference."
+  },
+  {
+    "id": "ev-0206",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 378,
+    "symbol": "storagePaths.sources",
+    "snippet": "source_ref: `${storagePaths.sources}/${bundle.date}.json`,",
+    "description": "Direct storagePaths.sources reference."
+  },
+  {
+    "id": "ev-0207",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 394,
+    "symbol": "storagePaths.dreams",
+    "snippet": "source_ref: `${storagePaths.dreams}/${dream.date}.json`,",
+    "description": "Direct storagePaths.dreams reference."
+  },
+  {
+    "id": "ev-0208",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 416,
+    "symbol": "storagePaths.generatedPoems",
+    "snippet": "source_ref: `${storagePaths.generatedPoems}/${poem.date}.json#memory_fragments`,",
+    "description": "Direct storagePaths.generatedPoems reference."
+  },
+  {
+    "id": "ev-0209",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 587,
+    "symbol": "storagePaths.dailyLife",
+    "snippet": "const files = await listFiles(storagePaths.dailyLife, \".json\");",
+    "description": "Direct storagePaths.dailyLife reference."
+  },
+  {
+    "id": "ev-0210",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 593,
+    "symbol": "listDreams",
+    "snippet": "const [poems, dreams, dailyLife, sources, sourceDigests] = await Promise.all([listGeneratedPoems(), listDreams(), readDailyLifeRecords(), listSources(), listSourceDigests()]);",
+    "description": "Read helper \"listDreams\" is called."
+  },
+  {
+    "id": "ev-0211",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 593,
+    "symbol": "listGeneratedPoems",
+    "snippet": "const [poems, dreams, dailyLife, sources, sourceDigests] = await Promise.all([listGeneratedPoems(), listDreams(), readDailyLifeRecords(), listSources(), listSourceDigests()]);",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0212",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 593,
+    "symbol": "listSourceDigests",
+    "snippet": "const [poems, dreams, dailyLife, sources, sourceDigests] = await Promise.all([listGeneratedPoems(), listDreams(), readDailyLifeRecords(), listSources(), listSourceDigests()]);",
+    "description": "Read helper \"listSourceDigests\" is called."
+  },
+  {
+    "id": "ev-0213",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 593,
+    "symbol": "listSources",
+    "snippet": "const [poems, dreams, dailyLife, sources, sourceDigests] = await Promise.all([listGeneratedPoems(), listDreams(), readDailyLifeRecords(), listSources(), listSourceDigests()]);",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0214",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 682,
+    "symbol": "writeMemoryArchive",
+    "snippet": "export async function writeMemoryArchive(archive: MemoryArchive): Promise<void> {",
+    "description": "Write helper \"writeMemoryArchive\" is called."
+  },
+  {
+    "id": "ev-0215",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 684,
+    "symbol": "storagePaths.memoryTraces",
+    "snippet": "...archive.trace_files.map((traceFile) => writeJsonFile(`${storagePaths.memoryTraces}/${traceFile.date}.json`, traceFile)),",
+    "description": "Direct storagePaths.memoryTraces reference."
+  },
+  {
+    "id": "ev-0216",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 685,
+    "symbol": "storagePaths.memoryIndex",
+    "snippet": "writeJsonFile(storagePaths.memoryIndex, archive.index),",
+    "description": "Direct storagePaths.memoryIndex reference."
+  },
+  {
+    "id": "ev-0217",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 686,
+    "symbol": "storagePaths.memoryReport",
+    "snippet": "writeJsonFile(storagePaths.memoryReport, archive.report)",
+    "description": "Direct storagePaths.memoryReport reference."
+  },
+  {
+    "id": "ev-0218",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 709,
+    "symbol": "sourceRef",
+    "snippet": "function sourcePath(sourceRef: string): string {",
+    "description": "Storage path variable \"sourceRef\" points to storagePaths.dailyLife."
+  },
+  {
+    "id": "ev-0219",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 710,
+    "symbol": "sourceRef",
+    "snippet": "return sourceRef.split(\"#\")[0];",
+    "description": "Storage path variable \"sourceRef\" points to storagePaths.dailyLife."
+  },
+  {
+    "id": "ev-0220",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 720,
+    "symbol": "listSources",
+    "snippet": "const sourceBundles = rawSources ?? (await listSources());",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0221",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 787,
+    "symbol": "listMemoryTraces",
+    "snippet": "const [traces, sources] = await Promise.all([params.traces ? Promise.resolve(params.traces) : listMemoryTraces(), params.sources ? Promise.resolve(params.sources) : listSources()]);",
+    "description": "Read helper \"listMemoryTraces\" is called."
+  },
+  {
+    "id": "ev-0222",
+    "source_file": "src/lib/memoryTraceEngine.ts",
+    "line": 787,
+    "symbol": "listSources",
+    "snippet": "const [traces, sources] = await Promise.all([params.traces ? Promise.resolve(params.traces) : listMemoryTraces(), params.sources ? Promise.resolve(params.sources) : listSources()]);",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0223",
+    "source_file": "src/lib/poemGenerator.ts",
+    "line": 459,
+    "symbol": "fileStorage",
+    "snippet": "const recentTitles = (await listGeneratedPoems())",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0224",
+    "source_file": "src/lib/poemGenerator.ts",
+    "line": 459,
+    "symbol": "listGeneratedPoems",
+    "snippet": "const recentTitles = (await listGeneratedPoems())",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0225",
+    "source_file": "src/lib/repetitionPressure.ts",
+    "line": 1,
+    "symbol": "fileStorage",
+    "snippet": "import{listGeneratedPoems}from\"./fileStorage\";import{tokenize}from\"./inputPoems\";import type{DailyPoem,RepetitionPressure}from\"./types\";function top(items:string[],limit:number,min=2){const c=new Map<string,number>();for(co ...",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0226",
+    "source_file": "src/lib/repetitionPressure.ts",
+    "line": 1,
+    "symbol": "listGeneratedPoems",
+    "snippet": "... tion analyzeRepetitionPressure(windowDays=30):Promise<RepetitionPressure>{const ps=(await listGeneratedPoems()).slice(-windowDays);const locations=top(ps.flatMap(p=>[p.daily_life.location,p.walk_state.current_segment,p.walk_state.route_name??\"\"]),8),images",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0227",
+    "source_file": "src/lib/sourceCollectors.ts",
+    "line": 91,
+    "symbol": "fileStorage",
+    "snippet": "async function collectRss(date: string): Promise<{ rss: RssSourceBundle; fallback: boolean; notes: string[] }> { const [sources, history] = await Promise.all([readRssSources(), listSources()]); const priorHistory = history.filter((source) => source.date < date",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0228",
+    "source_file": "src/lib/sourceCollectors.ts",
+    "line": 91,
+    "symbol": "listSources",
+    "snippet": "... ean; notes: string[] }> { const [sources, history] = await Promise.all([readRssSources(), listSources()]); const priorHistory = history.filter((source) => source.date < date); const results = await mapWithConcurrency(sources, RSS_CONCURRENCY, fetchRssSourc",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0229",
+    "source_file": "src/lib/sourceCollectors.ts",
+    "line": 91,
+    "symbol": "readRssSources",
+    "snippet": "... le; fallback: boolean; notes: string[] }> { const [sources, history] = await Promise.all([readRssSources(), listSources()]); const priorHistory = history.filter((source) => source.date < date); const results = await mapWithConcurrency(sources, RSS_CONCURRE",
+    "description": "Read helper \"readRssSources\" is called."
+  },
+  {
+    "id": "ev-0230",
+    "source_file": "src/lib/sourceDigestService.ts",
+    "line": 16,
+    "symbol": "fileStorage",
+    "snippet": "const path = `${storagePaths.sourceDigests}/${params.source.date}.json`;",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0231",
+    "source_file": "src/lib/sourceDigestService.ts",
+    "line": 16,
+    "symbol": "storagePaths.sourceDigests",
+    "snippet": "const path = `${storagePaths.sourceDigests}/${params.source.date}.json`;",
+    "description": "Direct storagePaths.sourceDigests reference."
+  },
+  {
+    "id": "ev-0232",
+    "source_file": "src/lib/sourceDigestService.ts",
+    "line": 16,
+    "symbol": "path",
+    "snippet": "const path = `${storagePaths.sourceDigests}/${params.source.date}.json`;",
+    "description": "Storage path variable \"path\" points to storagePaths.sourceDigests."
+  },
+  {
+    "id": "ev-0233",
+    "source_file": "src/lib/sourceDigestService.ts",
+    "line": 17,
+    "symbol": "path",
+    "snippet": "if (!params.force && (await pathExists(path))) {",
+    "description": "Storage path variable \"path\" points to storagePaths.sourceDigests."
+  },
+  {
+    "id": "ev-0234",
+    "source_file": "src/lib/sourceDigestService.ts",
+    "line": 18,
+    "symbol": "readSourceDigest",
+    "snippet": "const existing = await readSourceDigest(params.source.date);",
+    "description": "Read helper \"readSourceDigest\" is called."
+  },
+  {
+    "id": "ev-0235",
+    "source_file": "src/lib/sourceDigestService.ts",
+    "line": 21,
+    "symbol": "listGeneratedPoems",
+    "snippet": "const [history, poems] = await Promise.all([listSourceDigests(), listGeneratedPoems()]);",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0236",
+    "source_file": "src/lib/sourceDigestService.ts",
+    "line": 21,
+    "symbol": "listSourceDigests",
+    "snippet": "const [history, poems] = await Promise.all([listSourceDigests(), listGeneratedPoems()]);",
+    "description": "Read helper \"listSourceDigests\" is called."
+  },
+  {
+    "id": "ev-0237",
+    "source_file": "src/lib/sourceDigestService.ts",
+    "line": 27,
+    "symbol": "path",
+    "snippet": "await writeJsonFile(path, digest);",
+    "description": "Storage path variable \"path\" points to storagePaths.sourceDigests."
+  },
+  {
+    "id": "ev-0238",
+    "source_file": "src/lib/surfaceValidator.ts",
+    "line": 234,
+    "symbol": "fileStorage",
+    "snippet": "context.world ? Promise.resolve(context.world) : readWorld(),",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0239",
+    "source_file": "src/lib/surfaceValidator.ts",
+    "line": 234,
+    "symbol": "readWorld",
+    "snippet": "context.world ? Promise.resolve(context.world) : readWorld(),",
+    "description": "Read helper \"readWorld\" is called."
+  },
+  {
+    "id": "ev-0240",
+    "source_file": "src/lib/surfaceValidator.ts",
+    "line": 235,
+    "symbol": "listGeneratedPoems",
+    "snippet": "context.recentPoems ? Promise.resolve(context.recentPoems) : listGeneratedPoems(),",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0241",
+    "source_file": "src/lib/surfaceValidator.ts",
+    "line": 236,
+    "symbol": "listMemoryTraces",
+    "snippet": "context.traces ? Promise.resolve(context.traces) : listMemoryTraces(),",
+    "description": "Read helper \"listMemoryTraces\" is called."
+  },
+  {
+    "id": "ev-0242",
+    "source_file": "src/lib/surfaceValidator.ts",
+    "line": 237,
+    "symbol": "listSources",
+    "snippet": "context.sources ? Promise.resolve(context.sources) : listSources()",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0243",
+    "source_file": "src/lib/surfaceValidator.ts",
+    "line": 370,
+    "symbol": "readWorld",
+    "snippet": "const world = params.world ?? (await readWorld());",
+    "description": "Read helper \"readWorld\" is called."
+  },
+  {
+    "id": "ev-0244",
+    "source_file": "src/lib/visualBriefGenerator.ts",
+    "line": 394,
+    "symbol": "fileStorage",
+    "snippet": "const files = await listFiles(storagePaths.visuals, \".json\");",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0245",
+    "source_file": "src/lib/visualBriefGenerator.ts",
+    "line": 394,
+    "symbol": "storagePaths.visuals",
+    "snippet": "const files = await listFiles(storagePaths.visuals, \".json\");",
+    "description": "Direct storagePaths.visuals reference."
+  },
+  {
+    "id": "ev-0246",
+    "source_file": "src/lib/yearlyReport.ts",
+    "line": 19,
+    "symbol": "fileStorage",
+    "snippet": "const fileName = `${storagePaths.yearlyReports}/year_${String(year).padStart(2, \"0\")}.json`;",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0247",
+    "source_file": "src/lib/yearlyReport.ts",
+    "line": 19,
+    "symbol": "storagePaths.yearlyReports",
+    "snippet": "const fileName = `${storagePaths.yearlyReports}/year_${String(year).padStart(2, \"0\")}.json`;",
+    "description": "Direct storagePaths.yearlyReports reference."
+  },
+  {
+    "id": "ev-0248",
+    "source_file": "src/lib/yearlyReport.ts",
+    "line": 19,
+    "symbol": "fileName",
+    "snippet": "const fileName = `${storagePaths.yearlyReports}/year_${String(year).padStart(2, \"0\")}.json`;",
+    "description": "Storage path variable \"fileName\" points to storagePaths.yearlyReports."
+  },
+  {
+    "id": "ev-0249",
+    "source_file": "src/lib/yearlyReport.ts",
+    "line": 20,
+    "symbol": "fileName",
+    "snippet": "const existing = await readJsonFile<YearlyReport | null>(fileName, null);",
+    "description": "Storage path variable \"fileName\" points to storagePaths.yearlyReports."
+  },
+  {
+    "id": "ev-0250",
+    "source_file": "src/lib/yearlyReport.ts",
+    "line": 25,
+    "symbol": "listGeneratedPoems",
+    "snippet": "const poems = await listGeneratedPoems();",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0251",
+    "source_file": "src/lib/yearlyReport.ts",
+    "line": 69,
+    "symbol": "fileName",
+    "snippet": "await writeJsonFile(fileName, report);",
+    "description": "Storage path variable \"fileName\" points to storagePaths.yearlyReports."
+  },
+  {
+    "id": "ev-0252",
+    "source_file": "src/scripts/analyzeInputPoems.ts",
+    "line": 6,
+    "symbol": "analyzeAndSaveInputPoems",
+    "snippet": "const analysis = await analyzeAndSaveInputPoems();",
+    "description": "Source file calls imported process \"analyzeAndSaveInputPoems\"."
+  },
+  {
+    "id": "ev-0253",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 79,
+    "symbol": "fileStorage",
+    "snippet": "const [allPoems, allDreams] = await Promise.all([listGeneratedPoems(), listDreams()]);",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0254",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 79,
+    "symbol": "listDreams",
+    "snippet": "const [allPoems, allDreams] = await Promise.all([listGeneratedPoems(), listDreams()]);",
+    "description": "Read helper \"listDreams\" is called."
+  },
+  {
+    "id": "ev-0255",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 79,
+    "symbol": "listGeneratedPoems",
+    "snippet": "const [allPoems, allDreams] = await Promise.all([listGeneratedPoems(), listDreams()]);",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0256",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 89,
+    "symbol": "visualPath",
+    "snippet": "visualPath,",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0257",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 96,
+    "symbol": "visualPath",
+    "snippet": "visualPath: string;",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0258",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 102,
+    "symbol": "visualPath",
+    "snippet": "const exists = await pathExists(visualPath);",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0259",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 108,
+    "symbol": "visualPath",
+    "snippet": "const stored = exists ? await readJsonFile<VisualMetadata | null>(visualPath, null) : null;",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0260",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 111,
+    "symbol": "visualPath",
+    "snippet": "await writeJsonFile(visualPath, storedReconciled.visual);",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0261",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 151,
+    "symbol": "visualPath",
+    "snippet": "await writeJsonFile(visualPath, generated);",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0262",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 176,
+    "symbol": "storagePaths.visuals",
+    "snippet": "visualPath: `${storagePaths.visuals}/${poem.date}-poem.json`,",
+    "description": "Direct storagePaths.visuals reference."
+  },
+  {
+    "id": "ev-0263",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 176,
+    "symbol": "visualPath",
+    "snippet": "visualPath: `${storagePaths.visuals}/${poem.date}-poem.json`,",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0264",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 187,
+    "symbol": "storagePaths.visuals",
+    "snippet": "visualPath: `${storagePaths.visuals}/${dream.date}-dream.json`,",
+    "description": "Direct storagePaths.visuals reference."
+  },
+  {
+    "id": "ev-0265",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 187,
+    "symbol": "visualPath",
+    "snippet": "visualPath: `${storagePaths.visuals}/${dream.date}-dream.json`,",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0266",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 192,
+    "symbol": "storagePaths.dreams",
+    "snippet": "await writeJsonFile(`${storagePaths.dreams}/${dream.date}.json`, updatedDream);",
+    "description": "Direct storagePaths.dreams reference."
+  },
+  {
+    "id": "ev-0267",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 150,
+    "symbol": "generateVisualImage",
+    "snippet": "const generated = await generateVisualImage(visual, { force });",
+    "description": "Source file calls imported process \"generateVisualImage\"."
+  },
+  {
+    "id": "ev-0268",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 78,
+    "symbol": "todayInIstanbul",
+    "snippet": "const localDate = todayInIstanbul();",
+    "description": "Source file calls imported process \"todayInIstanbul\"."
+  },
+  {
+    "id": "ev-0269",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 188,
+    "symbol": "createDreamVisual",
+    "snippet": "createVisual: () => createDreamVisual(dream),",
+    "description": "Source file calls imported process \"createDreamVisual\"."
+  },
+  {
+    "id": "ev-0270",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 177,
+    "symbol": "createPoemVisual",
+    "snippet": "createVisual: () => createPoemVisual(poem),",
+    "description": "Source file calls imported process \"createPoemVisual\"."
+  },
+  {
+    "id": "ev-0271",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 109,
+    "symbol": "reconcileVisualImagePath",
+    "snippet": "const storedReconciled = stored ? await reconcileVisualImagePath(stored) : null;",
+    "description": "Source file calls imported process \"reconcileVisualImagePath\"."
+  },
+  {
+    "id": "ev-0272",
+    "source_file": "src/scripts/backfillVisuals.ts",
+    "line": 130,
+    "symbol": "visualImageIsUsable",
+    "snippet": "if (storedReconciled && !force && (await visualImageIsUsable(storedReconciled.visual))) {",
+    "description": "Source file calls imported process \"visualImageIsUsable\"."
+  },
+  {
+    "id": "ev-0273",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 125,
+    "symbol": "fileStorage",
+    "snippet": "getLatestPoem(),",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0274",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 125,
+    "symbol": "getLatestPoem",
+    "snippet": "getLatestPoem(),",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0275",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 126,
+    "symbol": "getLatestDream",
+    "snippet": "getLatestDream(),",
+    "description": "Read helper \"getLatestDream\" is called."
+  },
+  {
+    "id": "ev-0276",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 127,
+    "symbol": "listGeneratedPoems",
+    "snippet": "listGeneratedPoems(),",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0277",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 128,
+    "symbol": "listDreams",
+    "snippet": "listDreams(),",
+    "description": "Read helper \"listDreams\" is called."
+  },
+  {
+    "id": "ev-0278",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 129,
+    "symbol": "listSources",
+    "snippet": "listSources(),",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0279",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 131,
+    "symbol": "readWorld",
+    "snippet": "readWorld(),",
+    "description": "Read helper \"readWorld\" is called."
+  },
+  {
+    "id": "ev-0280",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 134,
+    "symbol": "buildMemoryGraphData",
+    "snippet": "const graph = await buildMemoryGraphData({",
+    "description": "Source file calls imported process \"buildMemoryGraphData\"."
+  },
+  {
+    "id": "ev-0281",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 212,
+    "symbol": "memoryClimateDetail",
+    "snippet": "detail: memoryClimateDetail(archive.report),",
+    "description": "Source file calls imported process \"memoryClimateDetail\"."
+  },
+  {
+    "id": "ev-0282",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 211,
+    "symbol": "memoryClimateHeadline",
+    "snippet": "headline: memoryClimateHeadline(archive.report),",
+    "description": "Source file calls imported process \"memoryClimateHeadline\"."
+  },
+  {
+    "id": "ev-0283",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 123,
+    "symbol": "buildMemoryArchive",
+    "snippet": "const archive = await buildMemoryArchive();",
+    "description": "Source file calls imported process \"buildMemoryArchive\"."
+  },
+  {
+    "id": "ev-0284",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 130,
+    "symbol": "validateMemoryArchive",
+    "snippet": "validateMemoryArchive(archive),",
+    "description": "Source file calls imported process \"validateMemoryArchive\"."
+  },
+  {
+    "id": "ev-0285",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 38,
+    "symbol": "validateMemoryPromptFragments",
+    "snippet": "const guard = await validateMemoryPromptFragments(params.selection.memory_prompt_fragments, params.sources);",
+    "description": "Source file calls imported process \"validateMemoryPromptFragments\"."
+  },
+  {
+    "id": "ev-0286",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 132,
+    "symbol": "analyzeRepetitionPressure",
+    "snippet": "analyzeRepetitionPressure()",
+    "description": "Source file calls imported process \"analyzeRepetitionPressure\"."
+  },
+  {
+    "id": "ev-0287",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 173,
+    "symbol": "analyzeGeneratedDreamSurface",
+    "snippet": "? await analyzeGeneratedDreamSurface(",
+    "description": "Source file calls imported process \"analyzeGeneratedDreamSurface\"."
+  },
+  {
+    "id": "ev-0288",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 160,
+    "symbol": "analyzeGeneratedPoemSurface",
+    "snippet": "? await analyzeGeneratedPoemSurface(",
+    "description": "Source file calls imported process \"analyzeGeneratedPoemSurface\"."
+  },
+  {
+    "id": "ev-0289",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 197,
+    "symbol": "analyzeGeneratedDreamLanguage",
+    "snippet": "latest_dream: languageDebug(latestDream, latestDream ? analyzeGeneratedDreamLanguage(latestDream) : null)",
+    "description": "Source file calls imported process \"analyzeGeneratedDreamLanguage\"."
+  },
+  {
+    "id": "ev-0290",
+    "source_file": "src/scripts/debugLatestMemory.ts",
+    "line": 196,
+    "symbol": "analyzeGeneratedPoemLanguage",
+    "snippet": "latest_poem: languageDebug(latestPoem, latestPoem ? analyzeGeneratedPoemLanguage(latestPoem) : null),",
+    "description": "Source file calls imported process \"analyzeGeneratedPoemLanguage\"."
+  },
+  {
+    "id": "ev-0291",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 67,
+    "symbol": "fileStorage",
+    "snippet": "getLatestPoem(),",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0292",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 67,
+    "symbol": "getLatestPoem",
+    "snippet": "getLatestPoem(),",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0293",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 68,
+    "symbol": "listGeneratedPoems",
+    "snippet": "listGeneratedPoems(),",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0294",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 69,
+    "symbol": "listDreams",
+    "snippet": "listDreams(),",
+    "description": "Read helper \"listDreams\" is called."
+  },
+  {
+    "id": "ev-0295",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 70,
+    "symbol": "listSources",
+    "snippet": "listSources(),",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0296",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 71,
+    "symbol": "listSourceDigests",
+    "snippet": "listSourceDigests(),",
+    "description": "Read helper \"listSourceDigests\" is called."
+  },
+  {
+    "id": "ev-0297",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 73,
+    "symbol": "readState",
+    "snippet": "readState(),",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0298",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 74,
+    "symbol": "readWorld",
+    "snippet": "readWorld(),",
+    "description": "Read helper \"readWorld\" is called."
+  },
+  {
+    "id": "ev-0299",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 75,
+    "symbol": "readInputAnalysis",
+    "snippet": "readInputAnalysis(),",
+    "description": "Read helper \"readInputAnalysis\" is called."
+  },
+  {
+    "id": "ev-0300",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 76,
+    "symbol": "readPersonalitySettings",
+    "snippet": "readPersonalitySettings()",
+    "description": "Read helper \"readPersonalitySettings\" is called."
+  },
+  {
+    "id": "ev-0301",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 78,
+    "symbol": "readDailyLife",
+    "snippet": "const latestDailyLife = latestPoem ? await readDailyLife(latestPoem.date) : null;",
+    "description": "Read helper \"readDailyLife\" is called."
+  },
+  {
+    "id": "ev-0302",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 159,
+    "symbol": "generationContextDebug",
+    "snippet": "poem: { ...generationContextDebug(poemInput), prompt_sections: buildPoemPromptSections(poemContext) },",
+    "description": "Source file calls imported process \"generationContextDebug\"."
+  },
+  {
+    "id": "ev-0303",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 108,
+    "symbol": "validateMemoryCycleIntegrity",
+    "snippet": "const cycleValidation = await validateMemoryCycleIntegrity({",
+    "description": "Source file calls imported process \"validateMemoryCycleIntegrity\"."
+  },
+  {
+    "id": "ev-0304",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 90,
+    "symbol": "buildMemoryGraphData",
+    "snippet": "buildMemoryGraphData({ traces: archive.traces, report: archive.report, index: archive.index, poems, dreams, sources })",
+    "description": "Source file calls imported process \"buildMemoryGraphData\"."
+  },
+  {
+    "id": "ev-0305",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 64,
+    "symbol": "buildMemoryArchive",
+    "snippet": "const archive = await buildMemoryArchive();",
+    "description": "Source file calls imported process \"buildMemoryArchive\"."
+  },
+  {
+    "id": "ev-0306",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 186,
+    "symbol": "memoryArchiveStateSignature",
+    "snippet": "valid: memoryArchiveStateSignature(archive) === memoryArchiveStateSignature(repeatedArchive),",
+    "description": "Source file calls imported process \"memoryArchiveStateSignature\"."
+  },
+  {
+    "id": "ev-0307",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 92,
+    "symbol": "previewMemoryCycleEffects",
+    "snippet": "const projection = previewMemoryCycleEffects({",
+    "description": "Source file calls imported process \"previewMemoryCycleEffects\"."
+  },
+  {
+    "id": "ev-0308",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 83,
+    "symbol": "selectMemoryForGeneration",
+    "snippet": "selectMemoryForGeneration({ date, mood, mode: \"poem\", repetition, traces: archive.traces, sources }),",
+    "description": "Source file calls imported process \"selectMemoryForGeneration\"."
+  },
+  {
+    "id": "ev-0309",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 89,
+    "symbol": "validateMemoryArchive",
+    "snippet": "validateMemoryArchive(archive, sources),",
+    "description": "Source file calls imported process \"validateMemoryArchive\"."
+  },
+  {
+    "id": "ev-0310",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 87,
+    "symbol": "validateMemoryPromptFragments",
+    "snippet": "validateMemoryPromptFragments(poemSelection.memory_prompt_fragments, sources),",
+    "description": "Source file calls imported process \"validateMemoryPromptFragments\"."
+  },
+  {
+    "id": "ev-0311",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 72,
+    "symbol": "analyzeRepetitionPressure",
+    "snippet": "analyzeRepetitionPressure(),",
+    "description": "Source file calls imported process \"analyzeRepetitionPressure\"."
+  },
+  {
+    "id": "ev-0312",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 118,
+    "symbol": "analyzeSourceDigest",
+    "snippet": "const sourceDigest = analyzeSourceDigest(sources);",
+    "description": "Source file calls imported process \"analyzeSourceDigest\"."
+  },
+  {
+    "id": "ev-0313",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 119,
+    "symbol": "validateSourceInfluence",
+    "snippet": "const sourceInfluenceValidation = validateSourceInfluence(sources);",
+    "description": "Source file calls imported process \"validateSourceInfluence\"."
+  },
+  {
+    "id": "ev-0314",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 121,
+    "symbol": "validateSourceDigests",
+    "snippet": "const sourceDigestionValidation = validateSourceDigests(sourceDigests, sources);",
+    "description": "Source file calls imported process \"validateSourceDigests\"."
+  },
+  {
+    "id": "ev-0315",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 160,
+    "symbol": "buildDreamPromptSections",
+    "snippet": "dream: { ...generationContextDebug(dreamInput), prompt_sections: buildDreamPromptSections(dreamParams) }",
+    "description": "Source file calls imported process \"buildDreamPromptSections\"."
+  },
+  {
+    "id": "ev-0316",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 159,
+    "symbol": "buildPoemPromptSections",
+    "snippet": "poem: { ...generationContextDebug(poemInput), prompt_sections: buildPoemPromptSections(poemContext) },",
+    "description": "Source file calls imported process \"buildPoemPromptSections\"."
+  },
+  {
+    "id": "ev-0317",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 241,
+    "symbol": "analyzeGeneratedDreamLanguage",
+    "snippet": "latest_dream: latestDream ? analyzeGeneratedDreamLanguage(latestDream) : null,",
+    "description": "Source file calls imported process \"analyzeGeneratedDreamLanguage\"."
+  },
+  {
+    "id": "ev-0318",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 240,
+    "symbol": "analyzeGeneratedPoemLanguage",
+    "snippet": "latest_poem: latestPoem ? analyzeGeneratedPoemLanguage(latestPoem) : null,",
+    "description": "Source file calls imported process \"analyzeGeneratedPoemLanguage\"."
+  },
+  {
+    "id": "ev-0319",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 116,
+    "symbol": "buildUcuBedenVoicePrompt",
+    "snippet": "const poemVoice = buildUcuBedenVoicePrompt({ mode: \"poem\" });",
+    "description": "Source file calls imported process \"buildUcuBedenVoicePrompt\"."
+  },
+  {
+    "id": "ev-0320",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 24,
+    "symbol": "addCalendarDays",
+    "snippet": "return addCalendarDays(date ?? todayInIstanbul(), 1);",
+    "description": "Source file calls imported process \"addCalendarDays\"."
+  },
+  {
+    "id": "ev-0321",
+    "source_file": "src/scripts/debugMemoryCycle.ts",
+    "line": 24,
+    "symbol": "todayInIstanbul",
+    "snippet": "return addCalendarDays(date ?? todayInIstanbul(), 1);",
+    "description": "Source file calls imported process \"todayInIstanbul\"."
+  },
+  {
+    "id": "ev-0322",
+    "source_file": "src/scripts/debugMoodSentences.ts",
+    "line": 5,
+    "symbol": "fileStorage",
+    "snippet": "const poems = await listGeneratedPoems();",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0323",
+    "source_file": "src/scripts/debugMoodSentences.ts",
+    "line": 5,
+    "symbol": "listGeneratedPoems",
+    "snippet": "const poems = await listGeneratedPoems();",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0324",
+    "source_file": "src/scripts/debugMoodSentences.ts",
+    "line": 14,
+    "symbol": "formatMoodSentence",
+    "snippet": "const sentence = formatMoodSentence(poem.mood_sentence);",
+    "description": "Source file calls imported process \"formatMoodSentence\"."
+  },
+  {
+    "id": "ev-0325",
+    "source_file": "src/scripts/digestSources.ts",
+    "line": 17,
+    "symbol": "fileStorage",
+    "snippet": "const source = await readJsonFile<SourceBundle | null>(`${storagePaths.sources}/${args.date}.json`, null);",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0326",
+    "source_file": "src/scripts/digestSources.ts",
+    "line": 17,
+    "symbol": "storagePaths.sources",
+    "snippet": "const source = await readJsonFile<SourceBundle | null>(`${storagePaths.sources}/${args.date}.json`, null);",
+    "description": "Direct storagePaths.sources reference."
+  },
+  {
+    "id": "ev-0327",
+    "source_file": "src/scripts/digestSources.ts",
+    "line": 9,
+    "symbol": "todayInIstanbul",
+    "snippet": "const date = inline ?? (position >= 0 ? args[position + 1] : undefined) ?? todayInIstanbul();",
+    "description": "Source file calls imported process \"todayInIstanbul\"."
+  },
+  {
+    "id": "ev-0328",
+    "source_file": "src/scripts/digestSources.ts",
+    "line": 19,
+    "symbol": "ensureSourceDigest",
+    "snippet": "const result = await ensureSourceDigest({ source, force: args.force });",
+    "description": "Source file calls imported process \"ensureSourceDigest\"."
+  },
+  {
+    "id": "ev-0329",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 35,
+    "symbol": "fileStorage",
+    "snippet": "const poemPath = `${storagePaths.generatedPoems}/${date}.json`;",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0330",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 35,
+    "symbol": "storagePaths.generatedPoems",
+    "snippet": "const poemPath = `${storagePaths.generatedPoems}/${date}.json`;",
+    "description": "Direct storagePaths.generatedPoems reference."
+  },
+  {
+    "id": "ev-0331",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 35,
+    "symbol": "poemPath",
+    "snippet": "const poemPath = `${storagePaths.generatedPoems}/${date}.json`;",
+    "description": "Storage path variable \"poemPath\" points to storagePaths.generatedPoems."
+  },
+  {
+    "id": "ev-0332",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 37,
+    "symbol": "poemPath",
+    "snippet": "if (!args.force && (await pathExists(poemPath))) {",
+    "description": "Storage path variable \"poemPath\" points to storagePaths.generatedPoems."
+  },
+  {
+    "id": "ev-0333",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 39,
+    "symbol": "storagePaths.sources",
+    "snippet": "await writeJsonFile(`${storagePaths.sources}/${date}.json`, sources);",
+    "description": "Direct storagePaths.sources reference."
+  },
+  {
+    "id": "ev-0334",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 42,
+    "symbol": "poemPath",
+    "snippet": "const existingPoem = await readJsonFile<DailyPoem | null>(poemPath, null);",
+    "description": "Storage path variable \"poemPath\" points to storagePaths.generatedPoems."
+  },
+  {
+    "id": "ev-0335",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 44,
+    "symbol": "storagePaths.dailyLife",
+    "snippet": "if (!(await pathExists(`${storagePaths.dailyLife}/${date}.json`))) {",
+    "description": "Direct storagePaths.dailyLife reference."
+  },
+  {
+    "id": "ev-0336",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 45,
+    "symbol": "readPersonalitySettings",
+    "snippet": "const [state, personality] = await Promise.all([readState(), readPersonalitySettings()]);",
+    "description": "Read helper \"readPersonalitySettings\" is called."
+  },
+  {
+    "id": "ev-0337",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 45,
+    "symbol": "readState",
+    "snippet": "const [state, personality] = await Promise.all([readState(), readPersonalitySettings()]);",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0338",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 54,
+    "symbol": "storagePaths.dailyLife",
+    "snippet": "await writeJsonFile(`${storagePaths.dailyLife}/${date}.json`, dailyLife);",
+    "description": "Direct storagePaths.dailyLife reference."
+  },
+  {
+    "id": "ev-0339",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 59,
+    "symbol": "storagePaths.visuals",
+    "snippet": "const visualPath = `${storagePaths.visuals}/${date}-poem.json`;",
+    "description": "Direct storagePaths.visuals reference."
+  },
+  {
+    "id": "ev-0340",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 59,
+    "symbol": "visualPath",
+    "snippet": "const visualPath = `${storagePaths.visuals}/${date}-poem.json`;",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0341",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 60,
+    "symbol": "visualPath",
+    "snippet": "const storedVisual = await readJsonFile<VisualMetadata | null>(visualPath, null);",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0342",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 81,
+    "symbol": "visualPath",
+    "snippet": "await writeJsonFile(visualPath, visual);",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0343",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 97,
+    "symbol": "poemPath",
+    "snippet": "const existingPoem = args.force ? await readJsonFile<DailyPoem | null>(poemPath, null) : null;",
+    "description": "Storage path variable \"poemPath\" points to storagePaths.generatedPoems."
+  },
+  {
+    "id": "ev-0344",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 100,
+    "symbol": "readWorld",
+    "snippet": "readWorld(),",
+    "description": "Read helper \"readWorld\" is called."
+  },
+  {
+    "id": "ev-0345",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 101,
+    "symbol": "readState",
+    "snippet": "readState(),",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0346",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 104,
+    "symbol": "readPersonalitySettings",
+    "snippet": "readPersonalitySettings()",
+    "description": "Read helper \"readPersonalitySettings\" is called."
+  },
+  {
+    "id": "ev-0347",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 106,
+    "symbol": "storagePaths.sources",
+    "snippet": "await writeJsonFile(`${storagePaths.sources}/${date}.json`, sources);",
+    "description": "Direct storagePaths.sources reference."
+  },
+  {
+    "id": "ev-0348",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 116,
+    "symbol": "storagePaths.dailyLife",
+    "snippet": "await writeJsonFile(`${storagePaths.dailyLife}/${date}.json`, dailyLife);",
+    "description": "Direct storagePaths.dailyLife reference."
+  },
+  {
+    "id": "ev-0349",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 148,
+    "symbol": "poemPath",
+    "snippet": "await writeJsonFile(poemPath, poem);",
+    "description": "Storage path variable \"poemPath\" points to storagePaths.generatedPoems."
+  },
+  {
+    "id": "ev-0350",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 167,
+    "symbol": "storagePaths.visuals",
+    "snippet": "await writeJsonFile(`${storagePaths.visuals}/${date}-poem.json`, visual);",
+    "description": "Direct storagePaths.visuals reference."
+  },
+  {
+    "id": "ev-0351",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 171,
+    "symbol": "writeMemoryArchive",
+    "snippet": "await writeMemoryArchive(memoryArchive);",
+    "description": "Write helper \"writeMemoryArchive\" is called."
+  },
+  {
+    "id": "ev-0352",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 174,
+    "symbol": "poemPath",
+    "snippet": "console.log(JSON.stringify({ status: \"generated\", date, age: poem.age_display, poem_file: poemPath, poem_provider: poem.generation.provider, openai_fallback_reason: poem.generation.fallback_reason, title_generation: poem.title_generation, mood_sentence: poem.m",
+    "description": "Storage path variable \"poemPath\" points to storagePaths.generatedPoems."
+  },
+  {
+    "id": "ev-0353",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 112,
+    "symbol": "formatAge",
+    "snippet": "const ageDisplay = formatAge(ageMonths);",
+    "description": "Source file calls imported process \"formatAge\"."
+  },
+  {
+    "id": "ev-0354",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 111,
+    "symbol": "nextAgeMonths",
+    "snippet": "const ageMonths = existingPoem?.age_months ?? nextAgeMonths(previousState.age_months);",
+    "description": "Source file calls imported process \"nextAgeMonths\"."
+  },
+  {
+    "id": "ev-0355",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 102,
+    "symbol": "analyzeAndSaveInputPoems",
+    "snippet": "analyzeAndSaveInputPoems(),",
+    "description": "Source file calls imported process \"analyzeAndSaveInputPoems\"."
+  },
+  {
+    "id": "ev-0356",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 46,
+    "symbol": "createDailyLifeRecord",
+    "snippet": "const dailyLife = createDailyLifeRecord({",
+    "description": "Source file calls imported process \"createDailyLifeRecord\"."
+  },
+  {
+    "id": "ev-0357",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 169,
+    "symbol": "updateMemoryAfterPoem",
+    "snippet": "const updatedState = await updateMemoryAfterPoem({ previousState, inputAnalysis });",
+    "description": "Source file calls imported process \"updateMemoryAfterPoem\"."
+  },
+  {
+    "id": "ev-0358",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 122,
+    "symbol": "selectMemoryFragments",
+    "snippet": "memorySelection.prompt_fragments.length === 0 ? await selectMemoryFragments({ date, state: previousState, inputAnalysis }) : [];",
+    "description": "Source file calls imported process \"selectMemoryFragments\"."
+  },
+  {
+    "id": "ev-0359",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 170,
+    "symbol": "buildMemoryArchive",
+    "snippet": "const memoryArchive = await buildMemoryArchive();",
+    "description": "Source file calls imported process \"buildMemoryArchive\"."
+  },
+  {
+    "id": "ev-0360",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 120,
+    "symbol": "selectMemoryForGeneration",
+    "snippet": "const memorySelection = await selectMemoryForGeneration({ date, mood, mode: \"poem\", repetition: repetitionPressure });",
+    "description": "Source file calls imported process \"selectMemoryForGeneration\"."
+  },
+  {
+    "id": "ev-0361",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 123,
+    "symbol": "validateMemoryPromptFragments",
+    "snippet": "const promptValidation = await validateMemoryPromptFragments(memorySelection.prompt_fragments.length > 0 ? memorySelection.prompt_fragments : legacyMemoryFragments);",
+    "description": "Source file calls imported process \"validateMemoryPromptFragments\"."
+  },
+  {
+    "id": "ev-0362",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 171,
+    "symbol": "writeMemoryArchive",
+    "snippet": "await writeMemoryArchive(memoryArchive);",
+    "description": "Source file calls imported process \"writeMemoryArchive\"."
+  },
+  {
+    "id": "ev-0363",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 113,
+    "symbol": "calculateMood",
+    "snippet": "const { mood, sentence, metadata: moodMetadata } = calculateMood({ date, state: previousState, sources, inputAnalysis });",
+    "description": "Source file calls imported process \"calculateMood\"."
+  },
+  {
+    "id": "ev-0364",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 79,
+    "symbol": "generateVisualImage",
+    "snippet": "return generateVisualImage(preparedVisual.visual);",
+    "description": "Source file calls imported process \"generateVisualImage\"."
+  },
+  {
+    "id": "ev-0365",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 147,
+    "symbol": "generatePoemWithLLM",
+    "snippet": "const poem = await generatePoemWithLLM(context);",
+    "description": "Source file calls imported process \"generatePoemWithLLM\"."
+  },
+  {
+    "id": "ev-0366",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 33,
+    "symbol": "parseGenerationArgs",
+    "snippet": "const args = parseGenerationArgs(process.argv.slice(2));",
+    "description": "Source file calls imported process \"parseGenerationArgs\"."
+  },
+  {
+    "id": "ev-0367",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 34,
+    "symbol": "todayInIstanbul",
+    "snippet": "const date = args.date ?? todayInIstanbul();",
+    "description": "Source file calls imported process \"todayInIstanbul\"."
+  },
+  {
+    "id": "ev-0368",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 38,
+    "symbol": "collectSources",
+    "snippet": "const sources = await collectSources(date);",
+    "description": "Source file calls imported process \"collectSources\"."
+  },
+  {
+    "id": "ev-0369",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 40,
+    "symbol": "ensureSourceDigest",
+    "snippet": "const digestResult = await ensureSourceDigest({ source: sources, force: args.force });",
+    "description": "Source file calls imported process \"ensureSourceDigest\"."
+  },
+  {
+    "id": "ev-0370",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 118,
+    "symbol": "createWalkState",
+    "snippet": "const walkState = createWalkState({ date, world, mood, sources, dailyLife });",
+    "description": "Source file calls imported process \"createWalkState\"."
+  },
+  {
+    "id": "ev-0371",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 114,
+    "symbol": "createDailyLife",
+    "snippet": "const baseDailyLife = createDailyLife({ date, world, mood, sources });",
+    "description": "Source file calls imported process \"createDailyLife\"."
+  },
+  {
+    "id": "ev-0372",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 119,
+    "symbol": "analyzeRepetitionPressure",
+    "snippet": "const repetitionPressure = await analyzeRepetitionPressure();",
+    "description": "Source file calls imported process \"analyzeRepetitionPressure\"."
+  },
+  {
+    "id": "ev-0373",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 65,
+    "symbol": "createPoemVisual",
+    "snippet": "const refreshedVisual = await createPoemVisual(existingPoem);",
+    "description": "Source file calls imported process \"createPoemVisual\"."
+  },
+  {
+    "id": "ev-0374",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 61,
+    "symbol": "reconcileVisualImagePath",
+    "snippet": "const storedPreparedVisual = storedVisual ? await reconcileVisualImagePath(storedVisual) : null;",
+    "description": "Source file calls imported process \"reconcileVisualImagePath\"."
+  },
+  {
+    "id": "ev-0375",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 85,
+    "symbol": "visualImageStatus",
+    "snippet": "status: visualImageStatus(visual) === \"ready\" ? \"ready\" : \"failed\",",
+    "description": "Source file calls imported process \"visualImageStatus\"."
+  },
+  {
+    "id": "ev-0376",
+    "source_file": "src/scripts/generateDailyPoem.ts",
+    "line": 172,
+    "symbol": "maybeCreateYearlyReport",
+    "snippet": "const yearlyReport = await maybeCreateYearlyReport(poem);",
+    "description": "Source file calls imported process \"maybeCreateYearlyReport\"."
+  },
+  {
+    "id": "ev-0377",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 26,
+    "symbol": "fileStorage",
+    "snippet": "const dreamPath = `${storagePaths.dreams}/${sourceDate}.json`;",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0378",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 26,
+    "symbol": "storagePaths.dreams",
+    "snippet": "const dreamPath = `${storagePaths.dreams}/${sourceDate}.json`;",
+    "description": "Direct storagePaths.dreams reference."
+  },
+  {
+    "id": "ev-0379",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 26,
+    "symbol": "dreamPath",
+    "snippet": "const dreamPath = `${storagePaths.dreams}/${sourceDate}.json`;",
+    "description": "Storage path variable \"dreamPath\" points to storagePaths.dreams."
+  },
+  {
+    "id": "ev-0380",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 27,
+    "symbol": "storagePaths.visuals",
+    "snippet": "const visualPath = `${storagePaths.visuals}/${sourceDate}-dream.json`;",
+    "description": "Direct storagePaths.visuals reference."
+  },
+  {
+    "id": "ev-0381",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 27,
+    "symbol": "visualPath",
+    "snippet": "const visualPath = `${storagePaths.visuals}/${sourceDate}-dream.json`;",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0382",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 29,
+    "symbol": "dreamPath",
+    "snippet": "if (!args.force && (await pathExists(dreamPath))) {",
+    "description": "Storage path variable \"dreamPath\" points to storagePaths.dreams."
+  },
+  {
+    "id": "ev-0383",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 30,
+    "symbol": "dreamPath",
+    "snippet": "const existingDream = await readJsonFile<DreamRecord | null>(dreamPath, null);",
+    "description": "Storage path variable \"dreamPath\" points to storagePaths.dreams."
+  },
+  {
+    "id": "ev-0384",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 33,
+    "symbol": "visualPath",
+    "snippet": "const storedVisual = await readJsonFile<typeof refreshedVisual | null>(visualPath, null);",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0385",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 48,
+    "symbol": "visualPath",
+    "snippet": "await writeJsonFile(visualPath, visual);",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0386",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 64,
+    "symbol": "storagePaths.generatedPoems",
+    "snippet": "const poem = await readJsonFile<DailyPoem | null>(`${storagePaths.generatedPoems}/${sourceDate}.json`, null);",
+    "description": "Direct storagePaths.generatedPoems reference."
+  },
+  {
+    "id": "ev-0387",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 70,
+    "symbol": "readState",
+    "snippet": "readState(),",
+    "description": "Read helper \"readState\" is called."
+  },
+  {
+    "id": "ev-0388",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 71,
+    "symbol": "readPersonalitySettings",
+    "snippet": "readPersonalitySettings(),",
+    "description": "Read helper \"readPersonalitySettings\" is called."
+  },
+  {
+    "id": "ev-0389",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 73,
+    "symbol": "readSourceDigest",
+    "snippet": "readSourceDigest(sourceDate)",
+    "description": "Read helper \"readSourceDigest\" is called."
+  },
+  {
+    "id": "ev-0390",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 75,
+    "symbol": "readDailyLife",
+    "snippet": "const existingDailyLife = await readDailyLife(sourceDate);",
+    "description": "Read helper \"readDailyLife\" is called."
+  },
+  {
+    "id": "ev-0391",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 87,
+    "symbol": "storagePaths.dailyLife",
+    "snippet": "await writeJsonFile(`${storagePaths.dailyLife}/${sourceDate}.json`, dailyLife);",
+    "description": "Direct storagePaths.dailyLife reference."
+  },
+  {
+    "id": "ev-0392",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 105,
+    "symbol": "dreamPath",
+    "snippet": "await writeJsonFile(dreamPath, dream);",
+    "description": "Storage path variable \"dreamPath\" points to storagePaths.dreams."
+  },
+  {
+    "id": "ev-0393",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 120,
+    "symbol": "visualPath",
+    "snippet": "await writeJsonFile(visualPath, visual);",
+    "description": "Storage path variable \"visualPath\" points to storagePaths.visuals."
+  },
+  {
+    "id": "ev-0394",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 132,
+    "symbol": "writeMemoryArchive",
+    "snippet": "await writeMemoryArchive(memoryArchive);",
+    "description": "Write helper \"writeMemoryArchive\" is called."
+  },
+  {
+    "id": "ev-0395",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 136,
+    "symbol": "storagePaths.state",
+    "snippet": "await writeJsonFile(storagePaths.state, {",
+    "description": "Direct storagePaths.state reference."
+  },
+  {
+    "id": "ev-0396",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 78,
+    "symbol": "createDailyLifeRecord",
+    "snippet": "createDailyLifeRecord({",
+    "description": "Source file calls imported process \"createDailyLifeRecord\"."
+  },
+  {
+    "id": "ev-0397",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 98,
+    "symbol": "generateDream",
+    "snippet": "const dream = await generateDream({ date: sourceDate, poem, dailyLife, state, repetition, memorySelection: safeMemorySelection, sourceDigest });",
+    "description": "Source file calls imported process \"generateDream\"."
+  },
+  {
+    "id": "ev-0398",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 47,
+    "symbol": "generateVisualImage",
+    "snippet": ": await generateVisualImage(preparedVisual.visual);",
+    "description": "Source file calls imported process \"generateVisualImage\"."
+  },
+  {
+    "id": "ev-0399",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 131,
+    "symbol": "buildMemoryArchive",
+    "snippet": "const memoryArchive = await buildMemoryArchive();",
+    "description": "Source file calls imported process \"buildMemoryArchive\"."
+  },
+  {
+    "id": "ev-0400",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 91,
+    "symbol": "selectMemoryForGeneration",
+    "snippet": "const memorySelection = await selectMemoryForGeneration({ date: sourceDate, mood: poem.mood, mode: \"dream\", repetition });",
+    "description": "Source file calls imported process \"selectMemoryForGeneration\"."
+  },
+  {
+    "id": "ev-0401",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 92,
+    "symbol": "validateMemoryPromptFragments",
+    "snippet": "const promptValidation = await validateMemoryPromptFragments(memorySelection.memory_prompt_fragments);",
+    "description": "Source file calls imported process \"validateMemoryPromptFragments\"."
+  },
+  {
+    "id": "ev-0402",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 132,
+    "symbol": "writeMemoryArchive",
+    "snippet": "await writeMemoryArchive(memoryArchive);",
+    "description": "Source file calls imported process \"writeMemoryArchive\"."
+  },
+  {
+    "id": "ev-0403",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 72,
+    "symbol": "analyzeRepetitionPressure",
+    "snippet": "analyzeRepetitionPressure(),",
+    "description": "Source file calls imported process \"analyzeRepetitionPressure\"."
+  },
+  {
+    "id": "ev-0404",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 24,
+    "symbol": "parseGenerationArgs",
+    "snippet": "const args = parseGenerationArgs(process.argv.slice(2));",
+    "description": "Source file calls imported process \"parseGenerationArgs\"."
+  },
+  {
+    "id": "ev-0405",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 25,
+    "symbol": "todayInIstanbul",
+    "snippet": "const sourceDate = args.date ?? todayInIstanbul();",
+    "description": "Source file calls imported process \"todayInIstanbul\"."
+  },
+  {
+    "id": "ev-0406",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 32,
+    "symbol": "createDreamVisual",
+    "snippet": "const refreshedVisual = createDreamVisual(existingDream);",
+    "description": "Source file calls imported process \"createDreamVisual\"."
+  },
+  {
+    "id": "ev-0407",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 34,
+    "symbol": "reconcileVisualImagePath",
+    "snippet": "const preparedVisual = await reconcileVisualImagePath(",
+    "description": "Source file calls imported process \"reconcileVisualImagePath\"."
+  },
+  {
+    "id": "ev-0408",
+    "source_file": "src/scripts/generateDream.ts",
+    "line": 52,
+    "symbol": "visualImageStatus",
+    "snippet": "status: visualImageStatus(visual) === \"ready\" ? \"ready\" : \"failed\",",
+    "description": "Source file calls imported process \"visualImageStatus\"."
+  },
+  {
+    "id": "ev-0409",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 39,
+    "symbol": "fileStorage",
+    "snippet": "if (!dryRun) await writeMemoryArchive(archive);",
+    "description": "Source file uses repo filesystem storage helpers at runtime."
+  },
+  {
+    "id": "ev-0410",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 39,
+    "symbol": "writeMemoryArchive",
+    "snippet": "if (!dryRun) await writeMemoryArchive(archive);",
+    "description": "Write helper \"writeMemoryArchive\" is called."
+  },
+  {
+    "id": "ev-0411",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 42,
+    "symbol": "getLatestPoem",
+    "snippet": "getLatestPoem(),",
+    "description": "Read helper \"getLatestPoem\" is called."
+  },
+  {
+    "id": "ev-0412",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 43,
+    "symbol": "listSources",
+    "snippet": "listSources(),",
+    "description": "Read helper \"listSources\" is called."
+  },
+  {
+    "id": "ev-0413",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 44,
+    "symbol": "listSourceDigests",
+    "snippet": "listSourceDigests(),",
+    "description": "Read helper \"listSourceDigests\" is called."
+  },
+  {
+    "id": "ev-0414",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 45,
+    "symbol": "listGeneratedPoems",
+    "snippet": "listGeneratedPoems(),",
+    "description": "Read helper \"listGeneratedPoems\" is called."
+  },
+  {
+    "id": "ev-0415",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 46,
+    "symbol": "listDreams",
+    "snippet": "listDreams(),",
+    "description": "Read helper \"listDreams\" is called."
+  },
+  {
+    "id": "ev-0416",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 48,
+    "symbol": "readWorld",
+    "snippet": "readWorld()",
+    "description": "Read helper \"readWorld\" is called."
+  },
+  {
+    "id": "ev-0417",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 59,
+    "symbol": "validateMemoryCycleIntegrity",
+    "snippet": "? await validateMemoryCycleIntegrity({",
+    "description": "Source file calls imported process \"validateMemoryCycleIntegrity\"."
+  },
+  {
+    "id": "ev-0418",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 57,
+    "symbol": "buildMemoryGraphData",
+    "snippet": "const graph = await buildMemoryGraphData({ traces: archive.traces, report: archive.report, index: archive.index, poems, dreams, sources });",
+    "description": "Source file calls imported process \"buildMemoryGraphData\"."
+  },
+  {
+    "id": "ev-0419",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 37,
+    "symbol": "buildMemoryArchive",
+    "snippet": "const archive = await buildMemoryArchive();",
+    "description": "Source file calls imported process \"buildMemoryArchive\"."
+  },
+  {
+    "id": "ev-0420",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 68,
+    "symbol": "memoryArchiveStateSignature",
+    "snippet": "const deterministicRebuild = !repeatedArchive || memoryArchiveStateSignature(archive) === memoryArchiveStateSignature(repeatedArchive);",
+    "description": "Source file calls imported process \"memoryArchiveStateSignature\"."
+  },
+  {
+    "id": "ev-0421",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 53,
+    "symbol": "selectMemoryForGeneration",
+    "snippet": "selectMemoryForGeneration({ date: previewDate, mood: previewMood, mode: \"poem\", repetition, traces: archive.traces, sources }),",
+    "description": "Source file calls imported process \"selectMemoryForGeneration\"."
+  },
+  {
+    "id": "ev-0422",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 40,
+    "symbol": "validateMemoryArchive",
+    "snippet": "const validation = shouldValidate ? await validateMemoryArchive(archive) : null;",
+    "description": "Source file calls imported process \"validateMemoryArchive\"."
+  },
+  {
+    "id": "ev-0423",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 56,
+    "symbol": "validateMemoryPromptFragments",
+    "snippet": "const promptValidation = await validateMemoryPromptFragments([...poemSelection.memory_prompt_fragments, ...dreamSelection.memory_prompt_fragments], sources);",
+    "description": "Source file calls imported process \"validateMemoryPromptFragments\"."
+  },
+  {
+    "id": "ev-0424",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 39,
+    "symbol": "writeMemoryArchive",
+    "snippet": "if (!dryRun) await writeMemoryArchive(archive);",
+    "description": "Source file calls imported process \"writeMemoryArchive\"."
+  },
+  {
+    "id": "ev-0425",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 47,
+    "symbol": "analyzeRepetitionPressure",
+    "snippet": "analyzeRepetitionPressure(),",
+    "description": "Source file calls imported process \"analyzeRepetitionPressure\"."
+  },
+  {
+    "id": "ev-0426",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 69,
+    "symbol": "analyzeSourceDigest",
+    "snippet": "const sourceDigest = analyzeSourceDigest(sources);",
+    "description": "Source file calls imported process \"analyzeSourceDigest\"."
+  },
+  {
+    "id": "ev-0427",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 70,
+    "symbol": "validateSourceInfluence",
+    "snippet": "const sourceInfluenceValidation = validateSourceInfluence(sources);",
+    "description": "Source file calls imported process \"validateSourceInfluence\"."
+  },
+  {
+    "id": "ev-0428",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 71,
+    "symbol": "validateSourceDigests",
+    "snippet": "const sourceDigestionValidation = validateSourceDigests(sourceDigests, sources);",
+    "description": "Source file calls imported process \"validateSourceDigests\"."
+  },
+  {
+    "id": "ev-0429",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 73,
+    "symbol": "validateStoredSurfaceRecords",
+    "snippet": "? await validateStoredSurfaceRecords({ poems, dreams, traces: archive.traces, sources, world, repetition })",
+    "description": "Source file calls imported process \"validateStoredSurfaceRecords\"."
+  },
+  {
+    "id": "ev-0430",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 75,
+    "symbol": "validateStoredLanguageRecords",
+    "snippet": "const languageValidation = shouldValidate ? validateStoredLanguageRecords(poems, dreams) : null;",
+    "description": "Source file calls imported process \"validateStoredLanguageRecords\"."
+  },
+  {
+    "id": "ev-0431",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 21,
+    "symbol": "addCalendarDays",
+    "snippet": "return addCalendarDays(date ?? todayInIstanbul(), 1);",
+    "description": "Source file calls imported process \"addCalendarDays\"."
+  },
+  {
+    "id": "ev-0432",
+    "source_file": "src/scripts/rebuildMemory.ts",
+    "line": 21,
+    "symbol": "todayInIstanbul",
+    "snippet": "return addCalendarDays(date ?? todayInIstanbul(), 1);",
+    "description": "Source file calls imported process \"todayInIstanbul\"."
+  },
+  {
+    "id": "ev-0433",
+    "source_file": "src/lib/sourceCollectors.ts",
+    "line": 91,
+    "symbol": "readRssSources",
+    "snippet": "... le; fallback: boolean; notes: string[] }> { const [sources, history] = await Promise.all([readRssSources(), listSources()]); const priorHistory = history.filter((source) => source.date < date); const results = await mapWithConcurrency(sources, RSS_CONCURRE",
+    "description": "RSS feeds source is referenced by source collection code."
+  },
+  {
+    "id": "ev-0434",
+    "source_file": "src/lib/sourceCollectors.ts",
+    "line": 93,
+    "symbol": "open-meteo.com",
+    "snippet": "... er: WeatherSource; fallback: boolean; note?: string }> { const url = new URL(\"https://api.open-meteo.com/v1/forecast\"); url.searchParams.set(\"latitude\", String(KADIKOY_LAT)); url.searchParams.set(\"longitude\", String(KADIKOY_LON)); url.searchParams.set(\"cur",
+    "description": "Open-Meteo weather source is referenced by source collection code."
+  },
+  {
+    "id": "ev-0435",
+    "source_file": "src/lib/sourceCollectors.ts",
+    "line": 95,
+    "symbol": "NEWS_API_KEY",
+    "snippet": "... Promise<{ news: NewsSource; fallback: boolean; note?: string }> { const key = process.env.NEWS_API_KEY; if (!key) return { news: fallbackNews(date), fallback: true, note: \"NEWS_API_KEY yok; mock gündem kullanıldı.\" }; const url = new URL(\"https://newsapi.o",
+    "description": "NewsAPI source is referenced by source collection code."
+  },
+  {
+    "id": "ev-0436",
+    "source_file": "src/lib/sourceCollectors.ts",
+    "line": 97,
+    "symbol": "collectArtWorld",
+    "snippet": "async function collectArtWorld(date: string): Promise<{ art: ArtSource; fallback: boolean; note?: string }> { return { art: fallbackArt(date), fallback: true, note: \"Sanat adapter'ı MVP'de mock veriyle çalışıyor; RSS/API bağlanmaya hazır.\" }; }",
+    "description": "Mock art source source is referenced by source collection code."
+  },
+  {
+    "id": "ev-0437",
+    "source_file": "src/lib/openaiImageProvider.ts",
+    "line": 31,
+    "symbol": "OpenAI Images",
+    "snippet": "const API_URL = \"https://api.openai.com/v1/images/generations\";",
+    "description": "Image provider references OpenAI image generation."
+  },
+  {
+    "id": "ev-0438",
+    "source_file": "src/lib/openaiImageProvider.ts",
+    "line": 228,
+    "symbol": "public/generated/visuals",
+    "snippet": "const diskPath = resolvePath(`public/generated/visuals/${fileName}`);",
+    "description": "Image provider writes generated image files under public/generated/visuals."
+  },
+  {
+    "id": "ev-0439",
+    "source_file": "src/lib/poemGenerator.ts",
+    "line": 259,
+    "symbol": "OpenAI text",
+    "snippet": "const apiKey = process.env.OPENAI_API_KEY;",
+    "description": "Text generation module references OpenAI."
+  },
+  {
+    "id": "ev-0440",
+    "source_file": "src/lib/dreamEngine.ts",
+    "line": 110,
+    "symbol": "OpenAI text",
+    "snippet": "const apiKey = process.env.OPENAI_API_KEY;",
+    "description": "Text generation module references OpenAI."
+  },
+  {
+    "id": "ev-0441",
+    "source_file": "src/lib/sourceDigestion.ts",
+    "line": 255,
+    "symbol": "OpenAI text",
+    "snippet": "const apiKey = process.env.OPENAI_API_KEY;",
+    "description": "Text generation module references OpenAI."
+  },
+  {
+    "id": "ev-0442",
+    "source_file": "src/lib/visualBriefGenerator.ts",
+    "line": 570,
+    "symbol": "OpenAI text",
+    "snippet": "const apiKey = process.env.OPENAI_API_KEY;",
+    "description": "Text generation module references OpenAI."
+  },
+  {
+    "id": "ev-0443",
+    "source_file": "src/components/VisualField.tsx",
+    "line": 31,
+    "symbol": "image_path",
+    "snippet": "const imageSource = visual.image_path?.startsWith(\"/\") ? `${basePath}${visual.image_path}` : visual.image_path;",
+    "description": "VisualField resolves visual.image_path into an image source for rendering."
+  }
+]
