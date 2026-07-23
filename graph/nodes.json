@@ -1,0 +1,1991 @@
+[
+  {
+    "id": "data:data/analysis/image_mutations.json",
+    "label": "data/analysis/image_mutations.json",
+    "type": "data_store",
+    "file_path": "data/analysis/image_mutations.json",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "imageMutations",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 2666,
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/analysis/input_poems_analysis.json",
+    "label": "data/analysis/input_poems_analysis.json",
+    "type": "data_store",
+    "file_path": "data/analysis/input_poems_analysis.json",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "inputAnalysis",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 2884,
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/analysis/vocabulary_memory.json",
+    "label": "data/analysis/vocabulary_memory.json",
+    "type": "data_store",
+    "file_path": "data/analysis/vocabulary_memory.json",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "vocabularyMemory",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 610,
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/daily_life",
+    "label": "data/daily_life",
+    "type": "data_store",
+    "file_path": "data/daily_life",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "dailyLife",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 51,
+      "json_count": 50,
+      "date_range": {
+        "first": "2026-06-04",
+        "last": "2026-07-23"
+      },
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/dreams",
+    "label": "data/dreams",
+    "type": "data_store",
+    "file_path": "data/dreams",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "dreams",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 50,
+      "json_count": 49,
+      "date_range": {
+        "first": "2026-06-04",
+        "last": "2026-07-23"
+      },
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/generated_poems",
+    "label": "data/generated_poems",
+    "type": "data_store",
+    "file_path": "data/generated_poems",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "generatedPoems",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 50,
+      "json_count": 50,
+      "date_range": {
+        "first": "2026-06-04",
+        "last": "2026-07-23"
+      },
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/memory/index.json",
+    "label": "data/memory/index.json",
+    "type": "data_store",
+    "file_path": "data/memory/index.json",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "memoryIndex",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 129174,
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/memory/report.json",
+    "label": "data/memory/report.json",
+    "type": "data_store",
+    "file_path": "data/memory/report.json",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "memoryReport",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 7051,
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/memory/traces",
+    "label": "data/memory/traces",
+    "type": "data_store",
+    "file_path": "data/memory/traces",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "memoryTraces",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 50,
+      "json_count": 50,
+      "date_range": {
+        "first": "2026-06-04",
+        "last": "2026-07-23"
+      },
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/settings/custom_code.html",
+    "label": "data/settings/custom_code.html",
+    "type": "data_store",
+    "file_path": "data/settings/custom_code.html",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "customCode",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 213,
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/settings/personality_settings.json",
+    "label": "data/settings/personality_settings.json",
+    "type": "data_store",
+    "file_path": "data/settings/personality_settings.json",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "personalitySettings",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 1323,
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/settings/rss_sources.json",
+    "label": "data/settings/rss_sources.json",
+    "type": "data_store",
+    "file_path": "data/settings/rss_sources.json",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "rssSources",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 6386,
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/settings/site_settings.json",
+    "label": "data/settings/site_settings.json",
+    "type": "data_store",
+    "file_path": "data/settings/site_settings.json",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "siteSettings",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 82,
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/source_digests",
+    "label": "data/source_digests",
+    "type": "data_store",
+    "file_path": "data/source_digests",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "sourceDigests",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 40,
+      "json_count": 40,
+      "date_range": {
+        "first": "2026-06-14",
+        "last": "2026-07-23"
+      },
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/sources",
+    "label": "data/sources",
+    "type": "data_store",
+    "file_path": "data/sources",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "sources",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 50,
+      "json_count": 50,
+      "date_range": {
+        "first": "2026-06-04",
+        "last": "2026-07-23"
+      },
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/state/ucu_beden_state.json",
+    "label": "data/state/ucu_beden_state.json",
+    "type": "data_store",
+    "file_path": "data/state/ucu_beden_state.json",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "state",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 22000,
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/visuals",
+    "label": "data/visuals",
+    "type": "data_store",
+    "file_path": "data/visuals",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "visuals",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 100,
+      "json_count": 99,
+      "date_range": {
+        "first": "2026-06-04",
+        "last": "2026-07-23"
+      },
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/world/ucu_beden_world.json",
+    "label": "data/world/ucu_beden_world.json",
+    "type": "data_store",
+    "file_path": "data/world/ucu_beden_world.json",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "world",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 2241,
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:data/yearly_reports",
+    "label": "data/yearly_reports",
+    "type": "data_store",
+    "file_path": "data/yearly_reports",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "yearlyReports",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 4,
+      "json_count": 4,
+      "date_range": null,
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:poems_input",
+    "label": "poems_input",
+    "type": "data_store",
+    "file_path": "poems_input",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_key": "poemsInput",
+      "exists": true,
+      "kind": "directory",
+      "file_count": 2,
+      "json_count": 0,
+      "date_range": null,
+      "evidence_ref": "ev-0001"
+    }
+  },
+  {
+    "id": "data:public/generated/visuals",
+    "label": "public/generated/visuals",
+    "type": "output",
+    "file_path": "public/generated/visuals",
+    "active": true,
+    "detection_method": "known image output path from image provider/workflows",
+    "confidence": 0.82,
+    "metadata": {
+      "exists": true,
+      "kind": "directory",
+      "file_count": 100,
+      "json_count": 0,
+      "date_range": null
+    }
+  },
+  {
+    "id": "db:json-filesystem",
+    "label": "JSON filesystem storage",
+    "type": "database",
+    "file_path": "data",
+    "active": true,
+    "detection_method": "fileStorage storagePaths",
+    "confidence": 0.94,
+    "metadata": {
+      "storage_path_count": 20
+    }
+  },
+  {
+    "id": "external:gmail",
+    "label": "Gmail intake",
+    "type": "external_source",
+    "file_path": null,
+    "active": false,
+    "detection_method": "negative code search",
+    "confidence": 0.08,
+    "metadata": {
+      "observed_implementation": false,
+      "match_count": 0,
+      "memory_connection_observed": false,
+      "status": "not_observed_in_repo"
+    }
+  },
+  {
+    "id": "external:mock-art",
+    "label": "Mock art source",
+    "type": "external_source",
+    "file_path": "src/lib/sourceCollectors.ts",
+    "active": true,
+    "detection_method": "source collector code reference",
+    "confidence": 0.82,
+    "metadata": {
+      "evidence_ref": "ev-0436"
+    }
+  },
+  {
+    "id": "external:newsapi",
+    "label": "NewsAPI",
+    "type": "external_source",
+    "file_path": "src/lib/sourceCollectors.ts",
+    "active": true,
+    "detection_method": "source collector code reference",
+    "confidence": 0.82,
+    "metadata": {
+      "evidence_ref": "ev-0435"
+    }
+  },
+  {
+    "id": "external:open-meteo",
+    "label": "Open-Meteo weather",
+    "type": "external_source",
+    "file_path": "src/lib/sourceCollectors.ts",
+    "active": true,
+    "detection_method": "source collector code reference",
+    "confidence": 0.82,
+    "metadata": {
+      "evidence_ref": "ev-0434"
+    }
+  },
+  {
+    "id": "external:openai-images",
+    "label": "OpenAI Images API",
+    "type": "external_source",
+    "file_path": "src/lib/openaiImageProvider.ts",
+    "active": true,
+    "detection_method": "OpenAI image provider code reference",
+    "confidence": 0.86,
+    "metadata": {
+      "evidence_ref": "ev-0437"
+    }
+  },
+  {
+    "id": "external:openai-text",
+    "label": "OpenAI text API",
+    "type": "external_source",
+    "file_path": "src/lib/visualBriefGenerator.ts",
+    "active": true,
+    "detection_method": "OpenAI text provider code reference",
+    "confidence": 0.84,
+    "metadata": {
+      "evidence_ref": "ev-0442"
+    }
+  },
+  {
+    "id": "external:rss",
+    "label": "RSS feeds",
+    "type": "external_source",
+    "file_path": "src/lib/sourceCollectors.ts",
+    "active": true,
+    "detection_method": "source collector code reference",
+    "confidence": 0.82,
+    "metadata": {
+      "evidence_ref": "ev-0433"
+    }
+  },
+  {
+    "id": "process-module:src/lib/dayView.ts",
+    "label": "src/lib/dayView.ts",
+    "type": "process",
+    "file_path": "src/lib/dayView.ts",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/lib/dayView.ts"
+    }
+  },
+  {
+    "id": "process-module:src/lib/dreamEngine.ts",
+    "label": "src/lib/dreamEngine.ts",
+    "type": "process",
+    "file_path": "src/lib/dreamEngine.ts",
+    "active": true,
+    "detection_method": "OpenAI text provider code reference",
+    "confidence": 0.74,
+    "metadata": {
+      "evidence_ref": "ev-0440"
+    }
+  },
+  {
+    "id": "process-module:src/lib/fileStorage.ts",
+    "label": "src/lib/fileStorage.ts",
+    "type": "process",
+    "file_path": "src/lib/fileStorage.ts",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/lib/fileStorage.ts"
+    }
+  },
+  {
+    "id": "process-module:src/lib/inputPoems.ts",
+    "label": "src/lib/inputPoems.ts",
+    "type": "process",
+    "file_path": "src/lib/inputPoems.ts",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/lib/inputPoems.ts"
+    }
+  },
+  {
+    "id": "process-module:src/lib/memoryEngine.ts",
+    "label": "src/lib/memoryEngine.ts",
+    "type": "process",
+    "file_path": "src/lib/memoryEngine.ts",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/lib/memoryEngine.ts"
+    }
+  },
+  {
+    "id": "process-module:src/lib/memoryTraceEngine.ts",
+    "label": "src/lib/memoryTraceEngine.ts",
+    "type": "process",
+    "file_path": "src/lib/memoryTraceEngine.ts",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/lib/memoryTraceEngine.ts"
+    }
+  },
+  {
+    "id": "process-module:src/lib/poemGenerator.ts",
+    "label": "src/lib/poemGenerator.ts",
+    "type": "process",
+    "file_path": "src/lib/poemGenerator.ts",
+    "active": true,
+    "detection_method": "OpenAI text provider code reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/lib/poemGenerator.ts",
+      "evidence_ref": "ev-0439"
+    }
+  },
+  {
+    "id": "process-module:src/lib/repetitionPressure.ts",
+    "label": "src/lib/repetitionPressure.ts",
+    "type": "process",
+    "file_path": "src/lib/repetitionPressure.ts",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/lib/repetitionPressure.ts"
+    }
+  },
+  {
+    "id": "process-module:src/lib/sourceCollectors.ts",
+    "label": "src/lib/sourceCollectors.ts",
+    "type": "process",
+    "file_path": "src/lib/sourceCollectors.ts",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/lib/sourceCollectors.ts"
+    }
+  },
+  {
+    "id": "process-module:src/lib/sourceDigestion.ts",
+    "label": "src/lib/sourceDigestion.ts",
+    "type": "process",
+    "file_path": "src/lib/sourceDigestion.ts",
+    "active": true,
+    "detection_method": "OpenAI text provider code reference",
+    "confidence": 0.74,
+    "metadata": {
+      "evidence_ref": "ev-0441"
+    }
+  },
+  {
+    "id": "process-module:src/lib/sourceDigestService.ts",
+    "label": "src/lib/sourceDigestService.ts",
+    "type": "process",
+    "file_path": "src/lib/sourceDigestService.ts",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/lib/sourceDigestService.ts"
+    }
+  },
+  {
+    "id": "process-module:src/lib/surfaceValidator.ts",
+    "label": "src/lib/surfaceValidator.ts",
+    "type": "process",
+    "file_path": "src/lib/surfaceValidator.ts",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/lib/surfaceValidator.ts"
+    }
+  },
+  {
+    "id": "process-module:src/lib/visualBriefGenerator.ts",
+    "label": "src/lib/visualBriefGenerator.ts",
+    "type": "process",
+    "file_path": "src/lib/visualBriefGenerator.ts",
+    "active": true,
+    "detection_method": "OpenAI text provider code reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/lib/visualBriefGenerator.ts",
+      "evidence_ref": "ev-0442"
+    }
+  },
+  {
+    "id": "process-module:src/lib/yearlyReport.ts",
+    "label": "src/lib/yearlyReport.ts",
+    "type": "process",
+    "file_path": "src/lib/yearlyReport.ts",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/lib/yearlyReport.ts"
+    }
+  },
+  {
+    "id": "process:addCalendarDays",
+    "label": "addCalendarDays",
+    "type": "process",
+    "file_path": "src/lib/scheduler.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/scheduler.ts",
+      "import_line": 18
+    }
+  },
+  {
+    "id": "process:analyzeAndSaveInputPoems",
+    "label": "analyzeAndSaveInputPoems",
+    "type": "process",
+    "file_path": "src/lib/inputPoems.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/inputPoems.ts",
+      "import_line": 12
+    }
+  },
+  {
+    "id": "process:analyzeGeneratedDreamLanguage",
+    "label": "analyzeGeneratedDreamLanguage",
+    "type": "process",
+    "file_path": "src/lib/languageValidator.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/languageValidator.ts",
+      "import_line": 18
+    }
+  },
+  {
+    "id": "process:analyzeGeneratedDreamSurface",
+    "label": "analyzeGeneratedDreamSurface",
+    "type": "process",
+    "file_path": "src/lib/surfaceValidator.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/surfaceValidator.ts",
+      "import_line": 6
+    }
+  },
+  {
+    "id": "process:analyzeGeneratedPoemLanguage",
+    "label": "analyzeGeneratedPoemLanguage",
+    "type": "process",
+    "file_path": "src/lib/languageValidator.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/languageValidator.ts",
+      "import_line": 18
+    }
+  },
+  {
+    "id": "process:analyzeGeneratedPoemSurface",
+    "label": "analyzeGeneratedPoemSurface",
+    "type": "process",
+    "file_path": "src/lib/surfaceValidator.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/surfaceValidator.ts",
+      "import_line": 6
+    }
+  },
+  {
+    "id": "process:analyzeRepetitionPressure",
+    "label": "analyzeRepetitionPressure",
+    "type": "process",
+    "file_path": "src/lib/repetitionPressure.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/repetitionPressure.ts",
+      "import_line": 12
+    }
+  },
+  {
+    "id": "process:analyzeSourceDigest",
+    "label": "analyzeSourceDigest",
+    "type": "process",
+    "file_path": "src/lib/sourceInfluence.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/sourceInfluence.ts",
+      "import_line": 13
+    }
+  },
+  {
+    "id": "process:buildDreamPromptSections",
+    "label": "buildDreamPromptSections",
+    "type": "process",
+    "file_path": "src/lib/dreamEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/dreamEngine.ts",
+      "import_line": 16
+    }
+  },
+  {
+    "id": "process:buildMemoryArchive",
+    "label": "buildMemoryArchive",
+    "type": "process",
+    "file_path": "src/lib/memoryTraceEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryTraceEngine.ts",
+      "import_line": 11
+    }
+  },
+  {
+    "id": "process:buildMemoryGraphData",
+    "label": "buildMemoryGraphData",
+    "type": "process",
+    "file_path": "src/lib/memoryGraph.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryGraph.ts",
+      "import_line": 3
+    }
+  },
+  {
+    "id": "process:buildPoemPromptSections",
+    "label": "buildPoemPromptSections",
+    "type": "process",
+    "file_path": "src/lib/poemGenerator.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/poemGenerator.ts",
+      "import_line": 17
+    }
+  },
+  {
+    "id": "process:buildUcuBedenVoicePrompt",
+    "label": "buildUcuBedenVoicePrompt",
+    "type": "process",
+    "file_path": "src/lib/ucuBedenVoicePrompt.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/ucuBedenVoicePrompt.ts",
+      "import_line": 20
+    }
+  },
+  {
+    "id": "process:calculateMood",
+    "label": "calculateMood",
+    "type": "process",
+    "file_path": "src/lib/moodEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/moodEngine.ts",
+      "import_line": 16
+    }
+  },
+  {
+    "id": "process:collectArtWorld",
+    "label": "collectArtWorld",
+    "type": "process",
+    "file_path": "src/lib/sourceCollectors.ts",
+    "active": true,
+    "detection_method": "source collector function",
+    "confidence": 0.78,
+    "metadata": {
+      "evidence_ref": "ev-0436"
+    }
+  },
+  {
+    "id": "process:collectRss",
+    "label": "collectRss",
+    "type": "process",
+    "file_path": "src/lib/sourceCollectors.ts",
+    "active": true,
+    "detection_method": "source collector function",
+    "confidence": 0.78,
+    "metadata": {
+      "evidence_ref": "ev-0433"
+    }
+  },
+  {
+    "id": "process:collectSources",
+    "label": "collectSources",
+    "type": "process",
+    "file_path": "src/lib/sourceCollectors.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/sourceCollectors.ts",
+      "import_line": 20
+    }
+  },
+  {
+    "id": "process:collectTurkeyNews",
+    "label": "collectTurkeyNews",
+    "type": "process",
+    "file_path": "src/lib/sourceCollectors.ts",
+    "active": true,
+    "detection_method": "source collector function",
+    "confidence": 0.78,
+    "metadata": {
+      "evidence_ref": "ev-0435"
+    }
+  },
+  {
+    "id": "process:collectWeather",
+    "label": "collectWeather",
+    "type": "process",
+    "file_path": "src/lib/sourceCollectors.ts",
+    "active": true,
+    "detection_method": "source collector function",
+    "confidence": 0.78,
+    "metadata": {
+      "evidence_ref": "ev-0434"
+    }
+  },
+  {
+    "id": "process:createDailyLife",
+    "label": "createDailyLife",
+    "type": "process",
+    "file_path": "src/lib/worldEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/worldEngine.ts",
+      "import_line": 23
+    }
+  },
+  {
+    "id": "process:createDailyLifeRecord",
+    "label": "createDailyLifeRecord",
+    "type": "process",
+    "file_path": "src/lib/dayStateEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/dayStateEngine.ts",
+      "import_line": 1
+    }
+  },
+  {
+    "id": "process:createDreamVisual",
+    "label": "createDreamVisual",
+    "type": "process",
+    "file_path": "src/lib/visualEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/visualEngine.ts",
+      "import_line": 19
+    }
+  },
+  {
+    "id": "process:createPoemVisual",
+    "label": "createPoemVisual",
+    "type": "process",
+    "file_path": "src/lib/visualEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/visualEngine.ts",
+      "import_line": 25
+    }
+  },
+  {
+    "id": "process:createWalkState",
+    "label": "createWalkState",
+    "type": "process",
+    "file_path": "src/lib/walkEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/walkEngine.ts",
+      "import_line": 22
+    }
+  },
+  {
+    "id": "process:ensureSourceDigest",
+    "label": "ensureSourceDigest",
+    "type": "process",
+    "file_path": "src/lib/sourceDigestService.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/sourceDigestService.ts",
+      "import_line": 21
+    }
+  },
+  {
+    "id": "process:formatAge",
+    "label": "formatAge",
+    "type": "process",
+    "file_path": "src/lib/age.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/age.ts",
+      "import_line": 1
+    }
+  },
+  {
+    "id": "process:formatMoodSentence",
+    "label": "formatMoodSentence",
+    "type": "process",
+    "file_path": "src/lib/moodSentence.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/moodSentence.ts",
+      "import_line": 2
+    }
+  },
+  {
+    "id": "process:generateDream",
+    "label": "generateDream",
+    "type": "process",
+    "file_path": "src/lib/dreamEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/dreamEngine.ts",
+      "import_line": 2
+    }
+  },
+  {
+    "id": "process:generatePoemWithLLM",
+    "label": "generatePoemWithLLM",
+    "type": "process",
+    "file_path": "src/lib/poemGenerator.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/poemGenerator.ts",
+      "import_line": 18
+    }
+  },
+  {
+    "id": "process:generateVisualImage",
+    "label": "generateVisualImage",
+    "type": "process",
+    "file_path": "src/lib/openaiImageProvider.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/openaiImageProvider.ts",
+      "import_line": 14
+    }
+  },
+  {
+    "id": "process:generationContextDebug",
+    "label": "generationContextDebug",
+    "type": "process",
+    "file_path": "src/lib/generationContextPacket.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/generationContextPacket.ts",
+      "import_line": 2
+    }
+  },
+  {
+    "id": "process:maybeCreateYearlyReport",
+    "label": "maybeCreateYearlyReport",
+    "type": "process",
+    "file_path": "src/lib/yearlyReport.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/yearlyReport.ts",
+      "import_line": 27
+    }
+  },
+  {
+    "id": "process:memoryArchiveStateSignature",
+    "label": "memoryArchiveStateSignature",
+    "type": "process",
+    "file_path": "src/lib/memoryTraceEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryTraceEngine.ts",
+      "import_line": 11
+    }
+  },
+  {
+    "id": "process:memoryClimateDetail",
+    "label": "memoryClimateDetail",
+    "type": "process",
+    "file_path": "src/lib/memoryPresentation.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryPresentation.ts",
+      "import_line": 3
+    }
+  },
+  {
+    "id": "process:memoryClimateHeadline",
+    "label": "memoryClimateHeadline",
+    "type": "process",
+    "file_path": "src/lib/memoryPresentation.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryPresentation.ts",
+      "import_line": 3
+    }
+  },
+  {
+    "id": "process:nextAgeMonths",
+    "label": "nextAgeMonths",
+    "type": "process",
+    "file_path": "src/lib/age.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/age.ts",
+      "import_line": 1
+    }
+  },
+  {
+    "id": "process:parseGenerationArgs",
+    "label": "parseGenerationArgs",
+    "type": "process",
+    "file_path": "src/lib/scheduler.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/scheduler.ts",
+      "import_line": 17
+    }
+  },
+  {
+    "id": "process:previewMemoryCycleEffects",
+    "label": "previewMemoryCycleEffects",
+    "type": "process",
+    "file_path": "src/lib/memoryTraceEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryTraceEngine.ts",
+      "import_line": 12
+    }
+  },
+  {
+    "id": "process:reconcileVisualImagePath",
+    "label": "reconcileVisualImagePath",
+    "type": "process",
+    "file_path": "src/lib/visualFileStatus.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/visualFileStatus.ts",
+      "import_line": 20
+    }
+  },
+  {
+    "id": "process:selectMemoryForGeneration",
+    "label": "selectMemoryForGeneration",
+    "type": "process",
+    "file_path": "src/lib/memoryTraceEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryTraceEngine.ts",
+      "import_line": 11
+    }
+  },
+  {
+    "id": "process:selectMemoryFragments",
+    "label": "selectMemoryFragments",
+    "type": "process",
+    "file_path": "src/lib/memoryEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryEngine.ts",
+      "import_line": 14
+    }
+  },
+  {
+    "id": "process:todayInIstanbul",
+    "label": "todayInIstanbul",
+    "type": "process",
+    "file_path": "src/lib/scheduler.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/scheduler.ts",
+      "import_line": 18
+    }
+  },
+  {
+    "id": "process:updateMemoryAfterPoem",
+    "label": "updateMemoryAfterPoem",
+    "type": "process",
+    "file_path": "src/lib/memoryEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryEngine.ts",
+      "import_line": 14
+    }
+  },
+  {
+    "id": "process:useCallback",
+    "label": "useCallback",
+    "type": "process",
+    "file_path": "src/lib/memoryFieldLayout.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryFieldLayout.ts",
+      "import_line": 6
+    }
+  },
+  {
+    "id": "process:useEffect",
+    "label": "useEffect",
+    "type": "process",
+    "file_path": "src/lib/memoryFieldLayout.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryFieldLayout.ts",
+      "import_line": 6
+    }
+  },
+  {
+    "id": "process:useMemo",
+    "label": "useMemo",
+    "type": "process",
+    "file_path": "src/lib/memoryFieldLayout.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryFieldLayout.ts",
+      "import_line": 6
+    }
+  },
+  {
+    "id": "process:useRef",
+    "label": "useRef",
+    "type": "process",
+    "file_path": "src/lib/memoryFieldLayout.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryFieldLayout.ts",
+      "import_line": 6
+    }
+  },
+  {
+    "id": "process:useState",
+    "label": "useState",
+    "type": "process",
+    "file_path": "src/lib/memoryFieldLayout.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryFieldLayout.ts",
+      "import_line": 6
+    }
+  },
+  {
+    "id": "process:validateMemoryArchive",
+    "label": "validateMemoryArchive",
+    "type": "process",
+    "file_path": "src/lib/memoryTraceEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryTraceEngine.ts",
+      "import_line": 11
+    }
+  },
+  {
+    "id": "process:validateMemoryCycleIntegrity",
+    "label": "validateMemoryCycleIntegrity",
+    "type": "process",
+    "file_path": "src/lib/memoryCycle.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryCycle.ts",
+      "import_line": 2
+    }
+  },
+  {
+    "id": "process:validateMemoryPromptFragments",
+    "label": "validateMemoryPromptFragments",
+    "type": "process",
+    "file_path": "src/lib/memoryTraceEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryTraceEngine.ts",
+      "import_line": 11
+    }
+  },
+  {
+    "id": "process:validateSourceDigests",
+    "label": "validateSourceDigests",
+    "type": "process",
+    "file_path": "src/lib/sourceDigestion.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/sourceDigestion.ts",
+      "import_line": 14
+    }
+  },
+  {
+    "id": "process:validateSourceInfluence",
+    "label": "validateSourceInfluence",
+    "type": "process",
+    "file_path": "src/lib/sourceInfluence.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/sourceInfluence.ts",
+      "import_line": 13
+    }
+  },
+  {
+    "id": "process:validateStoredLanguageRecords",
+    "label": "validateStoredLanguageRecords",
+    "type": "process",
+    "file_path": "src/lib/languageValidator.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/languageValidator.ts",
+      "import_line": 16
+    }
+  },
+  {
+    "id": "process:validateStoredSurfaceRecords",
+    "label": "validateStoredSurfaceRecords",
+    "type": "process",
+    "file_path": "src/lib/surfaceValidator.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/surfaceValidator.ts",
+      "import_line": 15
+    }
+  },
+  {
+    "id": "process:visualImageIsUsable",
+    "label": "visualImageIsUsable",
+    "type": "process",
+    "file_path": "src/lib/visualFileStatus.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/visualFileStatus.ts",
+      "import_line": 14
+    }
+  },
+  {
+    "id": "process:visualImageStatus",
+    "label": "visualImageStatus",
+    "type": "process",
+    "file_path": "src/lib/visualFileStatus.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/visualFileStatus.ts",
+      "import_line": 20
+    }
+  },
+  {
+    "id": "process:writeMemoryArchive",
+    "label": "writeMemoryArchive",
+    "type": "process",
+    "file_path": "src/lib/memoryTraceEngine.ts",
+    "active": true,
+    "detection_method": "imported lib function call",
+    "confidence": 0.82,
+    "metadata": {
+      "imported_from": "src/lib/memoryTraceEngine.ts",
+      "import_line": 11
+    }
+  },
+  {
+    "id": "scheduler:.github/workflows/daily-poem-and-deploy.yml",
+    "label": "daily-poem-and-deploy.yml",
+    "type": "scheduler",
+    "file_path": ".github/workflows/daily-poem-and-deploy.yml",
+    "active": true,
+    "detection_method": "GitHub Actions workflow",
+    "confidence": 0.96,
+    "metadata": {
+      "triggers": [
+        "schedule",
+        "workflow_dispatch",
+        "push"
+      ],
+      "schedule_crons": [
+        "7 5 * * *",
+        "7 6 * * *",
+        "7 7 * * *"
+      ],
+      "evidence_ref": "ev-0018"
+    }
+  },
+  {
+    "id": "scheduler:.github/workflows/night-dream-and-deploy.yml",
+    "label": "night-dream-and-deploy.yml",
+    "type": "scheduler",
+    "file_path": ".github/workflows/night-dream-and-deploy.yml",
+    "active": true,
+    "detection_method": "GitHub Actions workflow",
+    "confidence": 0.96,
+    "metadata": {
+      "triggers": [
+        "schedule",
+        "workflow_dispatch"
+      ],
+      "schedule_crons": [
+        "37 5 * * *"
+      ],
+      "evidence_ref": "ev-0023"
+    }
+  },
+  {
+    "id": "scheduler:.github/workflows/pr-check.yml",
+    "label": "pr-check.yml",
+    "type": "scheduler",
+    "file_path": ".github/workflows/pr-check.yml",
+    "active": true,
+    "detection_method": "GitHub Actions workflow",
+    "confidence": 0.96,
+    "metadata": {
+      "triggers": [
+        "pull_request"
+      ],
+      "schedule_crons": [],
+      "evidence_ref": "ev-0028"
+    }
+  },
+  {
+    "id": "script:analyze:input",
+    "label": "npm script for analyzeInputPoems.ts",
+    "type": "script",
+    "file_path": "src/scripts/analyzeInputPoems.ts",
+    "active": true,
+    "detection_method": "source script file",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "analyze:input",
+      "command": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/analyzeInputPoems.ts",
+      "entrypoint": "src/scripts/analyzeInputPoems.ts",
+      "evidence_ref": "ev-0007",
+      "source_file": "src/scripts/analyzeInputPoems.ts"
+    }
+  },
+  {
+    "id": "script:backfill:visuals",
+    "label": "npm script for backfillVisuals.ts",
+    "type": "script",
+    "file_path": "src/scripts/backfillVisuals.ts",
+    "active": true,
+    "detection_method": "source script file",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "backfill:visuals",
+      "command": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/backfillVisuals.ts",
+      "entrypoint": "src/scripts/backfillVisuals.ts",
+      "evidence_ref": "ev-0006",
+      "source_file": "src/scripts/backfillVisuals.ts"
+    }
+  },
+  {
+    "id": "script:build",
+    "label": "npm run build",
+    "type": "script",
+    "file_path": "package.json",
+    "active": true,
+    "detection_method": "package.json scripts",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "build",
+      "command": "node --preserve-symlinks --preserve-symlinks-main node_modules/next/dist/bin/next build",
+      "entrypoint": null,
+      "evidence_ref": "ev-0003"
+    }
+  },
+  {
+    "id": "script:debug:latest-memory",
+    "label": "npm script for debugLatestMemory.ts",
+    "type": "script",
+    "file_path": "src/scripts/debugLatestMemory.ts",
+    "active": true,
+    "detection_method": "source script file",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "debug:latest-memory",
+      "command": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/debugLatestMemory.ts",
+      "entrypoint": "src/scripts/debugLatestMemory.ts",
+      "evidence_ref": "ev-0015",
+      "source_file": "src/scripts/debugLatestMemory.ts"
+    }
+  },
+  {
+    "id": "script:debug:memory-cycle",
+    "label": "npm script for debugMemoryCycle.ts",
+    "type": "script",
+    "file_path": "src/scripts/debugMemoryCycle.ts",
+    "active": true,
+    "detection_method": "source script file",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "debug:memory-cycle",
+      "command": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/debugMemoryCycle.ts",
+      "entrypoint": "src/scripts/debugMemoryCycle.ts",
+      "evidence_ref": "ev-0014",
+      "source_file": "src/scripts/debugMemoryCycle.ts"
+    }
+  },
+  {
+    "id": "script:debug:mood-sentences",
+    "label": "npm script for debugMoodSentences.ts",
+    "type": "script",
+    "file_path": "src/scripts/debugMoodSentences.ts",
+    "active": true,
+    "detection_method": "source script file",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "debug:mood-sentences",
+      "command": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/debugMoodSentences.ts",
+      "entrypoint": "src/scripts/debugMoodSentences.ts",
+      "evidence_ref": "ev-0016",
+      "source_file": "src/scripts/debugMoodSentences.ts"
+    }
+  },
+  {
+    "id": "script:dev",
+    "label": "npm run dev",
+    "type": "script",
+    "file_path": "package.json",
+    "active": true,
+    "detection_method": "package.json scripts",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "dev",
+      "command": "node --preserve-symlinks --preserve-symlinks-main node_modules/next/dist/bin/next dev",
+      "entrypoint": null,
+      "evidence_ref": "ev-0002"
+    }
+  },
+  {
+    "id": "script:digest:sources",
+    "label": "npm script for digestSources.ts",
+    "type": "script",
+    "file_path": "src/scripts/digestSources.ts",
+    "active": true,
+    "detection_method": "source script file",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "digest:sources",
+      "command": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/digestSources.ts",
+      "entrypoint": "src/scripts/digestSources.ts",
+      "evidence_ref": "ev-0008",
+      "source_file": "src/scripts/digestSources.ts"
+    }
+  },
+  {
+    "id": "script:generate:dream",
+    "label": "npm script for generateDream.ts",
+    "type": "script",
+    "file_path": "src/scripts/generateDream.ts",
+    "active": true,
+    "detection_method": "source script file",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "generate:dream",
+      "command": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/generateDream.ts",
+      "entrypoint": "src/scripts/generateDream.ts",
+      "evidence_ref": "ev-0005",
+      "source_file": "src/scripts/generateDream.ts"
+    }
+  },
+  {
+    "id": "script:generate:today",
+    "label": "npm script for generateDailyPoem.ts",
+    "type": "script",
+    "file_path": "src/scripts/generateDailyPoem.ts",
+    "active": true,
+    "detection_method": "source script file",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "generate:today",
+      "command": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/generateDailyPoem.ts",
+      "entrypoint": "src/scripts/generateDailyPoem.ts",
+      "evidence_ref": "ev-0004",
+      "source_file": "src/scripts/generateDailyPoem.ts"
+    }
+  },
+  {
+    "id": "script:rebuild:memory",
+    "label": "npm script for rebuildMemory.ts",
+    "type": "script",
+    "file_path": "src/scripts/rebuildMemory.ts",
+    "active": true,
+    "detection_method": "source script file",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "rebuild:memory",
+      "command": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/rebuildMemory.ts",
+      "entrypoint": "src/scripts/rebuildMemory.ts",
+      "evidence_ref": "ev-0012",
+      "source_file": "src/scripts/rebuildMemory.ts"
+    }
+  },
+  {
+    "id": "script:scan:graph",
+    "label": "npm run scan:graph",
+    "type": "script",
+    "file_path": "src/scripts/scanRepoGraph.ts",
+    "active": true,
+    "detection_method": "package.json scripts",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "scan:graph",
+      "command": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/scanRepoGraph.ts",
+      "entrypoint": "src/scripts/scanRepoGraph.ts",
+      "evidence_ref": "ev-0009"
+    }
+  },
+  {
+    "id": "script:test:anatomy",
+    "label": "npm run test:anatomy",
+    "type": "script",
+    "file_path": "src/scripts/testAnatomyUi.ts",
+    "active": true,
+    "detection_method": "package.json scripts",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "test:anatomy",
+      "command": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/testAnatomyUi.ts",
+      "entrypoint": "src/scripts/testAnatomyUi.ts",
+      "evidence_ref": "ev-0011"
+    }
+  },
+  {
+    "id": "script:typecheck",
+    "label": "npm run typecheck",
+    "type": "script",
+    "file_path": "package.json",
+    "active": true,
+    "detection_method": "package.json scripts",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "typecheck",
+      "command": "node --preserve-symlinks --preserve-symlinks-main node_modules/typescript/bin/tsc --noEmit",
+      "entrypoint": null,
+      "evidence_ref": "ev-0017"
+    }
+  },
+  {
+    "id": "script:validate:graph",
+    "label": "npm run validate:graph",
+    "type": "script",
+    "file_path": "src/scripts/validateRepoGraph.ts",
+    "active": true,
+    "detection_method": "package.json scripts",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "validate:graph",
+      "command": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/validateRepoGraph.ts --determinism",
+      "entrypoint": "src/scripts/validateRepoGraph.ts",
+      "evidence_ref": "ev-0010"
+    }
+  },
+  {
+    "id": "script:validate:memory",
+    "label": "npm run validate:memory",
+    "type": "script",
+    "file_path": "package.json",
+    "active": true,
+    "detection_method": "package.json scripts",
+    "confidence": 0.95,
+    "metadata": {
+      "npm_script": "validate:memory",
+      "command": "npm run rebuild:memory -- --dry-run --validate",
+      "entrypoint": null,
+      "evidence_ref": "ev-0013"
+    }
+  },
+  {
+    "id": "ui-component:src/components/ArchiveList.tsx",
+    "label": "src/components/ArchiveList.tsx",
+    "type": "process",
+    "file_path": "src/components/ArchiveList.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/components/ArchiveList.tsx"
+    }
+  },
+  {
+    "id": "ui-component:src/components/CurrentStatePanel.tsx",
+    "label": "src/components/CurrentStatePanel.tsx",
+    "type": "process",
+    "file_path": "src/components/CurrentStatePanel.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/components/CurrentStatePanel.tsx"
+    }
+  },
+  {
+    "id": "ui-component:src/components/DailyPoemCard.tsx",
+    "label": "src/components/DailyPoemCard.tsx",
+    "type": "process",
+    "file_path": "src/components/DailyPoemCard.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/components/DailyPoemCard.tsx"
+    }
+  },
+  {
+    "id": "ui-component:src/components/MemoryMutationGraph.tsx",
+    "label": "src/components/MemoryMutationGraph.tsx",
+    "type": "process",
+    "file_path": "src/components/MemoryMutationGraph.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/components/MemoryMutationGraph.tsx"
+    }
+  },
+  {
+    "id": "ui-component:src/components/MemoryPanel.tsx",
+    "label": "src/components/MemoryPanel.tsx",
+    "type": "process",
+    "file_path": "src/components/MemoryPanel.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/components/MemoryPanel.tsx"
+    }
+  },
+  {
+    "id": "ui-component:src/components/MoodPanel.tsx",
+    "label": "src/components/MoodPanel.tsx",
+    "type": "process",
+    "file_path": "src/components/MoodPanel.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/components/MoodPanel.tsx"
+    }
+  },
+  {
+    "id": "ui-component:src/components/TimelineItem.tsx",
+    "label": "src/components/TimelineItem.tsx",
+    "type": "process",
+    "file_path": "src/components/TimelineItem.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/components/TimelineItem.tsx"
+    }
+  },
+  {
+    "id": "ui-component:src/components/UcuBedenHeader.tsx",
+    "label": "src/components/UcuBedenHeader.tsx",
+    "type": "process",
+    "file_path": "src/components/UcuBedenHeader.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/components/UcuBedenHeader.tsx"
+    }
+  },
+  {
+    "id": "ui-component:src/components/VisualField.tsx",
+    "label": "src/components/VisualField.tsx",
+    "type": "process",
+    "file_path": "src/components/VisualField.tsx",
+    "active": true,
+    "detection_method": "visual image_path render",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/components/VisualField.tsx",
+      "evidence_ref": "ev-0443"
+    }
+  },
+  {
+    "id": "ui-component:src/components/VisualMemoryMap.tsx",
+    "label": "src/components/VisualMemoryMap.tsx",
+    "type": "process",
+    "file_path": "src/components/VisualMemoryMap.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/components/VisualMemoryMap.tsx"
+    }
+  },
+  {
+    "id": "ui-route:src/app/archive/page.tsx",
+    "label": "src/app/archive/page.tsx",
+    "type": "process",
+    "file_path": "src/app/archive/page.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/app/archive/page.tsx"
+    }
+  },
+  {
+    "id": "ui-route:src/app/dreams/[date]/page.tsx",
+    "label": "src/app/dreams/[date]/page.tsx",
+    "type": "process",
+    "file_path": "src/app/dreams/[date]/page.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/app/dreams/[date]/page.tsx"
+    }
+  },
+  {
+    "id": "ui-route:src/app/dreams/page.tsx",
+    "label": "src/app/dreams/page.tsx",
+    "type": "process",
+    "file_path": "src/app/dreams/page.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/app/dreams/page.tsx"
+    }
+  },
+  {
+    "id": "ui-route:src/app/layout.tsx",
+    "label": "src/app/layout.tsx",
+    "type": "process",
+    "file_path": "src/app/layout.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/app/layout.tsx"
+    }
+  },
+  {
+    "id": "ui-route:src/app/memory-map/page.tsx",
+    "label": "src/app/memory-map/page.tsx",
+    "type": "process",
+    "file_path": "src/app/memory-map/page.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/app/memory-map/page.tsx"
+    }
+  },
+  {
+    "id": "ui-route:src/app/memory/mutations/page.tsx",
+    "label": "src/app/memory/mutations/page.tsx",
+    "type": "process",
+    "file_path": "src/app/memory/mutations/page.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/app/memory/mutations/page.tsx"
+    }
+  },
+  {
+    "id": "ui-route:src/app/memory/page.tsx",
+    "label": "src/app/memory/page.tsx",
+    "type": "process",
+    "file_path": "src/app/memory/page.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/app/memory/page.tsx"
+    }
+  },
+  {
+    "id": "ui-route:src/app/mood-map/page.tsx",
+    "label": "src/app/mood-map/page.tsx",
+    "type": "process",
+    "file_path": "src/app/mood-map/page.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/app/mood-map/page.tsx"
+    }
+  },
+  {
+    "id": "ui-route:src/app/page.tsx",
+    "label": "src/app/page.tsx",
+    "type": "process",
+    "file_path": "src/app/page.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/app/page.tsx"
+    }
+  },
+  {
+    "id": "ui-route:src/app/phone/page.tsx",
+    "label": "src/app/phone/page.tsx",
+    "type": "process",
+    "file_path": "src/app/phone/page.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/app/phone/page.tsx"
+    }
+  },
+  {
+    "id": "ui-route:src/app/poem/[date]/page.tsx",
+    "label": "src/app/poem/[date]/page.tsx",
+    "type": "process",
+    "file_path": "src/app/poem/[date]/page.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/app/poem/[date]/page.tsx"
+    }
+  },
+  {
+    "id": "ui-route:src/app/settings/page.tsx",
+    "label": "src/app/settings/page.tsx",
+    "type": "process",
+    "file_path": "src/app/settings/page.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/app/settings/page.tsx"
+    }
+  },
+  {
+    "id": "ui-route:src/app/sources/health/page.tsx",
+    "label": "src/app/sources/health/page.tsx",
+    "type": "process",
+    "file_path": "src/app/sources/health/page.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/app/sources/health/page.tsx"
+    }
+  },
+  {
+    "id": "ui-route:src/app/sources/page.tsx",
+    "label": "src/app/sources/page.tsx",
+    "type": "process",
+    "file_path": "src/app/sources/page.tsx",
+    "active": true,
+    "detection_method": "source file storage/process reference",
+    "confidence": 0.8,
+    "metadata": {
+      "source_file": "src/app/sources/page.tsx"
+    }
+  }
+]

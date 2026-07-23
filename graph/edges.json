@@ -1,0 +1,5628 @@
+[
+  {
+    "source": "data:data/analysis/image_mutations.json",
+    "target": "ui-route:src/app/memory/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0072"
+    ],
+    "id": "data:data/analysis/image_mutations.json -> ui-route:src/app/memory/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/analysis/input_poems_analysis.json",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0158",
+      "ev-0159"
+    ],
+    "id": "data:data/analysis/input_poems_analysis.json -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/analysis/input_poems_analysis.json",
+    "target": "script:debug:memory-cycle",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0299"
+    ],
+    "id": "data:data/analysis/input_poems_analysis.json -> script:debug:memory-cycle :: read_by"
+  },
+  {
+    "source": "data:data/daily_life",
+    "target": "process-module:src/lib/dayView.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0137"
+    ],
+    "id": "data:data/daily_life -> process-module:src/lib/dayView.ts :: read_by"
+  },
+  {
+    "source": "data:data/daily_life",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0146",
+      "ev-0147"
+    ],
+    "id": "data:data/daily_life -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/daily_life",
+    "target": "process-module:src/lib/memoryTraceEngine.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0198",
+      "ev-0209"
+    ],
+    "id": "data:data/daily_life -> process-module:src/lib/memoryTraceEngine.ts :: read_by"
+  },
+  {
+    "source": "data:data/daily_life",
+    "target": "process:buildMemoryArchive",
+    "relation": "read_by",
+    "status": "inferred",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0283",
+      "ev-0305",
+      "ev-0359",
+      "ev-0399",
+      "ev-0419"
+    ],
+    "id": "data:data/daily_life -> process:buildMemoryArchive :: read_by"
+  },
+  {
+    "source": "data:data/daily_life",
+    "target": "script:debug:memory-cycle",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0301"
+    ],
+    "id": "data:data/daily_life -> script:debug:memory-cycle :: read_by"
+  },
+  {
+    "source": "data:data/daily_life",
+    "target": "script:generate:dream",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0390"
+    ],
+    "id": "data:data/daily_life -> script:generate:dream :: read_by"
+  },
+  {
+    "source": "data:data/daily_life",
+    "target": "script:generate:today",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0335"
+    ],
+    "id": "data:data/daily_life -> script:generate:today :: read_by"
+  },
+  {
+    "source": "data:data/dreams",
+    "target": "process-module:src/lib/dayView.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0138"
+    ],
+    "id": "data:data/dreams -> process-module:src/lib/dayView.ts :: read_by"
+  },
+  {
+    "source": "data:data/dreams",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0148",
+      "ev-0149",
+      "ev-0150",
+      "ev-0151"
+    ],
+    "id": "data:data/dreams -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/dreams",
+    "target": "process-module:src/lib/memoryTraceEngine.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0207",
+      "ev-0210"
+    ],
+    "id": "data:data/dreams -> process-module:src/lib/memoryTraceEngine.ts :: read_by"
+  },
+  {
+    "source": "data:data/dreams",
+    "target": "process:buildMemoryArchive",
+    "relation": "read_by",
+    "status": "inferred",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0283",
+      "ev-0305",
+      "ev-0359",
+      "ev-0399",
+      "ev-0419"
+    ],
+    "id": "data:data/dreams -> process:buildMemoryArchive :: read_by"
+  },
+  {
+    "source": "data:data/dreams",
+    "target": "script:backfill:visuals",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0254"
+    ],
+    "id": "data:data/dreams -> script:backfill:visuals :: read_by"
+  },
+  {
+    "source": "data:data/dreams",
+    "target": "script:debug:latest-memory",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0275",
+      "ev-0277"
+    ],
+    "id": "data:data/dreams -> script:debug:latest-memory :: read_by"
+  },
+  {
+    "source": "data:data/dreams",
+    "target": "script:debug:memory-cycle",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0294"
+    ],
+    "id": "data:data/dreams -> script:debug:memory-cycle :: read_by"
+  },
+  {
+    "source": "data:data/dreams",
+    "target": "script:generate:dream",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0378",
+      "ev-0382",
+      "ev-0383"
+    ],
+    "id": "data:data/dreams -> script:generate:dream :: read_by"
+  },
+  {
+    "source": "data:data/dreams",
+    "target": "script:rebuild:memory",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0415"
+    ],
+    "id": "data:data/dreams -> script:rebuild:memory :: read_by"
+  },
+  {
+    "source": "data:data/dreams",
+    "target": "ui-route:src/app/dreams/[date]/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0036",
+      "ev-0038"
+    ],
+    "id": "data:data/dreams -> ui-route:src/app/dreams/[date]/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/dreams",
+    "target": "ui-route:src/app/dreams/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0044"
+    ],
+    "id": "data:data/dreams -> ui-route:src/app/dreams/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/dreams",
+    "target": "ui-route:src/app/memory-map/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0057"
+    ],
+    "id": "data:data/dreams -> ui-route:src/app/memory-map/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/dreams",
+    "target": "ui-route:src/app/memory/mutations/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0066"
+    ],
+    "id": "data:data/dreams -> ui-route:src/app/memory/mutations/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/dreams",
+    "target": "ui-route:src/app/phone/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0089"
+    ],
+    "id": "data:data/dreams -> ui-route:src/app/phone/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0142",
+      "ev-0143",
+      "ev-0144",
+      "ev-0145"
+    ],
+    "id": "data:data/generated_poems -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "process-module:src/lib/memoryEngine.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0187",
+      "ev-0192"
+    ],
+    "id": "data:data/generated_poems -> process-module:src/lib/memoryEngine.ts :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "process-module:src/lib/memoryTraceEngine.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0197",
+      "ev-0203",
+      "ev-0208",
+      "ev-0211"
+    ],
+    "id": "data:data/generated_poems -> process-module:src/lib/memoryTraceEngine.ts :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "process-module:src/lib/poemGenerator.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0224"
+    ],
+    "id": "data:data/generated_poems -> process-module:src/lib/poemGenerator.ts :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "process-module:src/lib/repetitionPressure.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0226"
+    ],
+    "id": "data:data/generated_poems -> process-module:src/lib/repetitionPressure.ts :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "process-module:src/lib/sourceDigestService.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0235"
+    ],
+    "id": "data:data/generated_poems -> process-module:src/lib/sourceDigestService.ts :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "process-module:src/lib/surfaceValidator.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0240"
+    ],
+    "id": "data:data/generated_poems -> process-module:src/lib/surfaceValidator.ts :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "process-module:src/lib/yearlyReport.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0250"
+    ],
+    "id": "data:data/generated_poems -> process-module:src/lib/yearlyReport.ts :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "process:buildMemoryArchive",
+    "relation": "read_by",
+    "status": "inferred",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0283",
+      "ev-0305",
+      "ev-0359",
+      "ev-0399",
+      "ev-0419"
+    ],
+    "id": "data:data/generated_poems -> process:buildMemoryArchive :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "script:backfill:visuals",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0255"
+    ],
+    "id": "data:data/generated_poems -> script:backfill:visuals :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "script:debug:latest-memory",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0274",
+      "ev-0276"
+    ],
+    "id": "data:data/generated_poems -> script:debug:latest-memory :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "script:debug:memory-cycle",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0292",
+      "ev-0293"
+    ],
+    "id": "data:data/generated_poems -> script:debug:memory-cycle :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "script:debug:mood-sentences",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0323"
+    ],
+    "id": "data:data/generated_poems -> script:debug:mood-sentences :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "script:generate:dream",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0386"
+    ],
+    "id": "data:data/generated_poems -> script:generate:dream :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "script:generate:today",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0330",
+      "ev-0332",
+      "ev-0334",
+      "ev-0343"
+    ],
+    "id": "data:data/generated_poems -> script:generate:today :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "script:rebuild:memory",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0411",
+      "ev-0414"
+    ],
+    "id": "data:data/generated_poems -> script:rebuild:memory :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "ui-route:src/app/archive/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0032",
+      "ev-0033"
+    ],
+    "id": "data:data/generated_poems -> ui-route:src/app/archive/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "ui-route:src/app/dreams/[date]/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0037",
+      "ev-0039"
+    ],
+    "id": "data:data/generated_poems -> ui-route:src/app/dreams/[date]/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "ui-route:src/app/dreams/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0043"
+    ],
+    "id": "data:data/generated_poems -> ui-route:src/app/dreams/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "ui-route:src/app/memory-map/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0051",
+      "ev-0056"
+    ],
+    "id": "data:data/generated_poems -> ui-route:src/app/memory-map/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "ui-route:src/app/memory/mutations/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0060",
+      "ev-0065"
+    ],
+    "id": "data:data/generated_poems -> ui-route:src/app/memory/mutations/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "ui-route:src/app/memory/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0069"
+    ],
+    "id": "data:data/generated_poems -> ui-route:src/app/memory/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "ui-route:src/app/mood-map/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0076"
+    ],
+    "id": "data:data/generated_poems -> ui-route:src/app/mood-map/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "ui-route:src/app/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0082",
+      "ev-0083"
+    ],
+    "id": "data:data/generated_poems -> ui-route:src/app/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "ui-route:src/app/phone/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0087",
+      "ev-0088"
+    ],
+    "id": "data:data/generated_poems -> ui-route:src/app/phone/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "ui-route:src/app/poem/[date]/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0095",
+      "ev-0096",
+      "ev-0097"
+    ],
+    "id": "data:data/generated_poems -> ui-route:src/app/poem/[date]/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "ui-route:src/app/settings/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0101"
+    ],
+    "id": "data:data/generated_poems -> ui-route:src/app/settings/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "ui-route:src/app/sources/health/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0107"
+    ],
+    "id": "data:data/generated_poems -> ui-route:src/app/sources/health/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/generated_poems",
+    "target": "ui-route:src/app/sources/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0112"
+    ],
+    "id": "data:data/generated_poems -> ui-route:src/app/sources/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/memory/index.json",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0178",
+      "ev-0179"
+    ],
+    "id": "data:data/memory/index.json -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/memory/index.json",
+    "target": "ui-route:src/app/memory-map/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0054"
+    ],
+    "id": "data:data/memory/index.json -> ui-route:src/app/memory-map/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/memory/index.json",
+    "target": "ui-route:src/app/memory/mutations/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0063"
+    ],
+    "id": "data:data/memory/index.json -> ui-route:src/app/memory/mutations/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/memory/report.json",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0180",
+      "ev-0181"
+    ],
+    "id": "data:data/memory/report.json -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/memory/report.json",
+    "target": "ui-component:src/components/UcuBedenHeader.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0127"
+    ],
+    "id": "data:data/memory/report.json -> ui-component:src/components/UcuBedenHeader.tsx :: read_by"
+  },
+  {
+    "source": "data:data/memory/report.json",
+    "target": "ui-route:src/app/memory-map/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0053"
+    ],
+    "id": "data:data/memory/report.json -> ui-route:src/app/memory-map/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/memory/report.json",
+    "target": "ui-route:src/app/memory/mutations/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0062"
+    ],
+    "id": "data:data/memory/report.json -> ui-route:src/app/memory/mutations/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/memory/report.json",
+    "target": "ui-route:src/app/memory/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0073"
+    ],
+    "id": "data:data/memory/report.json -> ui-route:src/app/memory/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/memory/report.json",
+    "target": "ui-route:src/app/phone/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0091"
+    ],
+    "id": "data:data/memory/report.json -> ui-route:src/app/phone/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/memory/traces",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0174",
+      "ev-0175",
+      "ev-0176",
+      "ev-0177"
+    ],
+    "id": "data:data/memory/traces -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/memory/traces",
+    "target": "process-module:src/lib/memoryTraceEngine.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0221"
+    ],
+    "id": "data:data/memory/traces -> process-module:src/lib/memoryTraceEngine.ts :: read_by"
+  },
+  {
+    "source": "data:data/memory/traces",
+    "target": "process-module:src/lib/surfaceValidator.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0241"
+    ],
+    "id": "data:data/memory/traces -> process-module:src/lib/surfaceValidator.ts :: read_by"
+  },
+  {
+    "source": "data:data/memory/traces",
+    "target": "ui-route:src/app/memory-map/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0055"
+    ],
+    "id": "data:data/memory/traces -> ui-route:src/app/memory-map/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/memory/traces",
+    "target": "ui-route:src/app/memory/mutations/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0064"
+    ],
+    "id": "data:data/memory/traces -> ui-route:src/app/memory/mutations/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/memory/traces",
+    "target": "ui-route:src/app/memory/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0074"
+    ],
+    "id": "data:data/memory/traces -> ui-route:src/app/memory/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/settings/custom_code.html",
+    "target": "ui-route:src/app/layout.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0048"
+    ],
+    "id": "data:data/settings/custom_code.html -> ui-route:src/app/layout.tsx :: read_by"
+  },
+  {
+    "source": "data:data/settings/personality_settings.json",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0162",
+      "ev-0163"
+    ],
+    "id": "data:data/settings/personality_settings.json -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/settings/personality_settings.json",
+    "target": "script:debug:memory-cycle",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0300"
+    ],
+    "id": "data:data/settings/personality_settings.json -> script:debug:memory-cycle :: read_by"
+  },
+  {
+    "source": "data:data/settings/personality_settings.json",
+    "target": "script:generate:dream",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0388"
+    ],
+    "id": "data:data/settings/personality_settings.json -> script:generate:dream :: read_by"
+  },
+  {
+    "source": "data:data/settings/personality_settings.json",
+    "target": "script:generate:today",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0336",
+      "ev-0346"
+    ],
+    "id": "data:data/settings/personality_settings.json -> script:generate:today :: read_by"
+  },
+  {
+    "source": "data:data/settings/personality_settings.json",
+    "target": "ui-route:src/app/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0085"
+    ],
+    "id": "data:data/settings/personality_settings.json -> ui-route:src/app/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/settings/personality_settings.json",
+    "target": "ui-route:src/app/poem/[date]/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0099"
+    ],
+    "id": "data:data/settings/personality_settings.json -> ui-route:src/app/poem/[date]/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/settings/rss_sources.json",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0164",
+      "ev-0165"
+    ],
+    "id": "data:data/settings/rss_sources.json -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/settings/rss_sources.json",
+    "target": "process-module:src/lib/sourceCollectors.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0229"
+    ],
+    "id": "data:data/settings/rss_sources.json -> process-module:src/lib/sourceCollectors.ts :: read_by"
+  },
+  {
+    "source": "data:data/settings/rss_sources.json",
+    "target": "ui-route:src/app/mood-map/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0078"
+    ],
+    "id": "data:data/settings/rss_sources.json -> ui-route:src/app/mood-map/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/settings/rss_sources.json",
+    "target": "ui-route:src/app/settings/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0102"
+    ],
+    "id": "data:data/settings/rss_sources.json -> ui-route:src/app/settings/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/settings/rss_sources.json",
+    "target": "ui-route:src/app/sources/health/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0109"
+    ],
+    "id": "data:data/settings/rss_sources.json -> ui-route:src/app/sources/health/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/settings/site_settings.json",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0160",
+      "ev-0161"
+    ],
+    "id": "data:data/settings/site_settings.json -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/settings/site_settings.json",
+    "target": "ui-route:src/app/layout.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0049"
+    ],
+    "id": "data:data/settings/site_settings.json -> ui-route:src/app/layout.tsx :: read_by"
+  },
+  {
+    "source": "data:data/settings/site_settings.json",
+    "target": "ui-route:src/app/mood-map/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0079"
+    ],
+    "id": "data:data/settings/site_settings.json -> ui-route:src/app/mood-map/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/settings/site_settings.json",
+    "target": "ui-route:src/app/settings/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0103"
+    ],
+    "id": "data:data/settings/site_settings.json -> ui-route:src/app/settings/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/source_digests",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0170",
+      "ev-0171",
+      "ev-0172",
+      "ev-0173"
+    ],
+    "id": "data:data/source_digests -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/source_digests",
+    "target": "process-module:src/lib/memoryTraceEngine.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0204",
+      "ev-0212"
+    ],
+    "id": "data:data/source_digests -> process-module:src/lib/memoryTraceEngine.ts :: read_by"
+  },
+  {
+    "source": "data:data/source_digests",
+    "target": "process-module:src/lib/sourceDigestService.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0231",
+      "ev-0233",
+      "ev-0234",
+      "ev-0236"
+    ],
+    "id": "data:data/source_digests -> process-module:src/lib/sourceDigestService.ts :: read_by"
+  },
+  {
+    "source": "data:data/source_digests",
+    "target": "process:buildMemoryArchive",
+    "relation": "read_by",
+    "status": "inferred",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0283",
+      "ev-0305",
+      "ev-0359",
+      "ev-0399",
+      "ev-0419"
+    ],
+    "id": "data:data/source_digests -> process:buildMemoryArchive :: read_by"
+  },
+  {
+    "source": "data:data/source_digests",
+    "target": "script:debug:memory-cycle",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0296"
+    ],
+    "id": "data:data/source_digests -> script:debug:memory-cycle :: read_by"
+  },
+  {
+    "source": "data:data/source_digests",
+    "target": "script:generate:dream",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0389"
+    ],
+    "id": "data:data/source_digests -> script:generate:dream :: read_by"
+  },
+  {
+    "source": "data:data/source_digests",
+    "target": "script:rebuild:memory",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0413"
+    ],
+    "id": "data:data/source_digests -> script:rebuild:memory :: read_by"
+  },
+  {
+    "source": "data:data/sources",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0168",
+      "ev-0169"
+    ],
+    "id": "data:data/sources -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/sources",
+    "target": "process-module:src/lib/memoryTraceEngine.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0195",
+      "ev-0196",
+      "ev-0205",
+      "ev-0206",
+      "ev-0213",
+      "ev-0220",
+      "ev-0222"
+    ],
+    "id": "data:data/sources -> process-module:src/lib/memoryTraceEngine.ts :: read_by"
+  },
+  {
+    "source": "data:data/sources",
+    "target": "process-module:src/lib/sourceCollectors.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0228"
+    ],
+    "id": "data:data/sources -> process-module:src/lib/sourceCollectors.ts :: read_by"
+  },
+  {
+    "source": "data:data/sources",
+    "target": "process-module:src/lib/surfaceValidator.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0242"
+    ],
+    "id": "data:data/sources -> process-module:src/lib/surfaceValidator.ts :: read_by"
+  },
+  {
+    "source": "data:data/sources",
+    "target": "process:buildMemoryArchive",
+    "relation": "read_by",
+    "status": "inferred",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0283",
+      "ev-0305",
+      "ev-0359",
+      "ev-0399",
+      "ev-0419"
+    ],
+    "id": "data:data/sources -> process:buildMemoryArchive :: read_by"
+  },
+  {
+    "source": "data:data/sources",
+    "target": "script:debug:latest-memory",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0278"
+    ],
+    "id": "data:data/sources -> script:debug:latest-memory :: read_by"
+  },
+  {
+    "source": "data:data/sources",
+    "target": "script:debug:memory-cycle",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0295"
+    ],
+    "id": "data:data/sources -> script:debug:memory-cycle :: read_by"
+  },
+  {
+    "source": "data:data/sources",
+    "target": "script:digest:sources",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0326"
+    ],
+    "id": "data:data/sources -> script:digest:sources :: read_by"
+  },
+  {
+    "source": "data:data/sources",
+    "target": "script:rebuild:memory",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0412"
+    ],
+    "id": "data:data/sources -> script:rebuild:memory :: read_by"
+  },
+  {
+    "source": "data:data/sources",
+    "target": "ui-route:src/app/memory-map/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0058"
+    ],
+    "id": "data:data/sources -> ui-route:src/app/memory-map/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/sources",
+    "target": "ui-route:src/app/memory/mutations/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0067"
+    ],
+    "id": "data:data/sources -> ui-route:src/app/memory/mutations/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/sources",
+    "target": "ui-route:src/app/mood-map/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0077"
+    ],
+    "id": "data:data/sources -> ui-route:src/app/mood-map/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/sources",
+    "target": "ui-route:src/app/sources/health/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0108"
+    ],
+    "id": "data:data/sources -> ui-route:src/app/sources/health/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/sources",
+    "target": "ui-route:src/app/sources/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0113"
+    ],
+    "id": "data:data/sources -> ui-route:src/app/sources/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0156",
+      "ev-0157"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "script:debug:memory-cycle",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0297"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> script:debug:memory-cycle :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "script:generate:dream",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0387"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> script:generate:dream :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "script:generate:today",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0337",
+      "ev-0345"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> script:generate:today :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "ui-route:src/app/archive/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0034"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> ui-route:src/app/archive/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "ui-route:src/app/dreams/[date]/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0040"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> ui-route:src/app/dreams/[date]/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "ui-route:src/app/dreams/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0045"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> ui-route:src/app/dreams/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "ui-route:src/app/memory-map/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0052"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> ui-route:src/app/memory-map/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "ui-route:src/app/memory/mutations/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0061"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> ui-route:src/app/memory/mutations/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "ui-route:src/app/memory/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0070"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> ui-route:src/app/memory/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "ui-route:src/app/mood-map/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0080"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> ui-route:src/app/mood-map/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "ui-route:src/app/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0084"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> ui-route:src/app/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "ui-route:src/app/phone/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0090"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> ui-route:src/app/phone/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "ui-route:src/app/poem/[date]/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0098"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> ui-route:src/app/poem/[date]/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "ui-route:src/app/settings/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0104"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> ui-route:src/app/settings/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "ui-route:src/app/sources/health/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0110"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> ui-route:src/app/sources/health/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/state/ucu_beden_state.json",
+    "target": "ui-route:src/app/sources/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0114"
+    ],
+    "id": "data:data/state/ucu_beden_state.json -> ui-route:src/app/sources/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/visuals",
+    "target": "process-module:src/lib/dayView.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0139",
+      "ev-0140"
+    ],
+    "id": "data:data/visuals -> process-module:src/lib/dayView.ts :: read_by"
+  },
+  {
+    "source": "data:data/visuals",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0152",
+      "ev-0153"
+    ],
+    "id": "data:data/visuals -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/visuals",
+    "target": "process-module:src/lib/visualBriefGenerator.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0245"
+    ],
+    "id": "data:data/visuals -> process-module:src/lib/visualBriefGenerator.ts :: read_by"
+  },
+  {
+    "source": "data:data/visuals",
+    "target": "script:backfill:visuals",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0258",
+      "ev-0259",
+      "ev-0262",
+      "ev-0264"
+    ],
+    "id": "data:data/visuals -> script:backfill:visuals :: read_by"
+  },
+  {
+    "source": "data:data/visuals",
+    "target": "script:generate:dream",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0380",
+      "ev-0384"
+    ],
+    "id": "data:data/visuals -> script:generate:dream :: read_by"
+  },
+  {
+    "source": "data:data/visuals",
+    "target": "script:generate:today",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0339",
+      "ev-0341"
+    ],
+    "id": "data:data/visuals -> script:generate:today :: read_by"
+  },
+  {
+    "source": "data:data/visuals",
+    "target": "ui-route:src/app/dreams/[date]/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0041"
+    ],
+    "id": "data:data/visuals -> ui-route:src/app/dreams/[date]/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/visuals",
+    "target": "ui-route:src/app/dreams/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0046"
+    ],
+    "id": "data:data/visuals -> ui-route:src/app/dreams/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/visuals",
+    "target": "ui-route:src/app/phone/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0092",
+      "ev-0093"
+    ],
+    "id": "data:data/visuals -> ui-route:src/app/phone/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/world/ucu_beden_world.json",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0154",
+      "ev-0155"
+    ],
+    "id": "data:data/world/ucu_beden_world.json -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/world/ucu_beden_world.json",
+    "target": "process-module:src/lib/surfaceValidator.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0239",
+      "ev-0243"
+    ],
+    "id": "data:data/world/ucu_beden_world.json -> process-module:src/lib/surfaceValidator.ts :: read_by"
+  },
+  {
+    "source": "data:data/world/ucu_beden_world.json",
+    "target": "script:debug:latest-memory",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0279"
+    ],
+    "id": "data:data/world/ucu_beden_world.json -> script:debug:latest-memory :: read_by"
+  },
+  {
+    "source": "data:data/world/ucu_beden_world.json",
+    "target": "script:debug:memory-cycle",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0298"
+    ],
+    "id": "data:data/world/ucu_beden_world.json -> script:debug:memory-cycle :: read_by"
+  },
+  {
+    "source": "data:data/world/ucu_beden_world.json",
+    "target": "script:generate:today",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0344"
+    ],
+    "id": "data:data/world/ucu_beden_world.json -> script:generate:today :: read_by"
+  },
+  {
+    "source": "data:data/world/ucu_beden_world.json",
+    "target": "script:rebuild:memory",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0416"
+    ],
+    "id": "data:data/world/ucu_beden_world.json -> script:rebuild:memory :: read_by"
+  },
+  {
+    "source": "data:data/world/ucu_beden_world.json",
+    "target": "ui-route:src/app/settings/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0105"
+    ],
+    "id": "data:data/world/ucu_beden_world.json -> ui-route:src/app/settings/page.tsx :: read_by"
+  },
+  {
+    "source": "data:data/yearly_reports",
+    "target": "process-module:src/lib/fileStorage.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0166",
+      "ev-0167"
+    ],
+    "id": "data:data/yearly_reports -> process-module:src/lib/fileStorage.ts :: read_by"
+  },
+  {
+    "source": "data:data/yearly_reports",
+    "target": "process-module:src/lib/memoryEngine.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0188",
+      "ev-0193"
+    ],
+    "id": "data:data/yearly_reports -> process-module:src/lib/memoryEngine.ts :: read_by"
+  },
+  {
+    "source": "data:data/yearly_reports",
+    "target": "process-module:src/lib/yearlyReport.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0247",
+      "ev-0249"
+    ],
+    "id": "data:data/yearly_reports -> process-module:src/lib/yearlyReport.ts :: read_by"
+  },
+  {
+    "source": "data:data/yearly_reports",
+    "target": "ui-route:src/app/memory/page.tsx",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0071"
+    ],
+    "id": "data:data/yearly_reports -> ui-route:src/app/memory/page.tsx :: read_by"
+  },
+  {
+    "source": "data:poems_input",
+    "target": "process-module:src/lib/inputPoems.ts",
+    "relation": "read_by",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0183",
+      "ev-0184"
+    ],
+    "id": "data:poems_input -> process-module:src/lib/inputPoems.ts :: read_by"
+  },
+  {
+    "source": "data:public/generated/visuals",
+    "target": "ui-component:src/components/VisualField.tsx",
+    "relation": "read_by",
+    "status": "inferred",
+    "confidence": 0.72,
+    "evidence_refs": [
+      "ev-0443"
+    ],
+    "id": "data:public/generated/visuals -> ui-component:src/components/VisualField.tsx :: read_by"
+  },
+  {
+    "source": "process-module:src/lib/dayView.ts",
+    "target": "data:data/daily_life",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0137"
+    ],
+    "id": "process-module:src/lib/dayView.ts -> data:data/daily_life :: reads"
+  },
+  {
+    "source": "process-module:src/lib/dayView.ts",
+    "target": "data:data/dreams",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0138"
+    ],
+    "id": "process-module:src/lib/dayView.ts -> data:data/dreams :: reads"
+  },
+  {
+    "source": "process-module:src/lib/dayView.ts",
+    "target": "data:data/visuals",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0139",
+      "ev-0140"
+    ],
+    "id": "process-module:src/lib/dayView.ts -> data:data/visuals :: reads"
+  },
+  {
+    "source": "process-module:src/lib/dayView.ts",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0136"
+    ],
+    "id": "process-module:src/lib/dayView.ts -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "process-module:src/lib/dreamEngine.ts",
+    "target": "external:openai-text",
+    "relation": "calls_external_api",
+    "status": "observed",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0440"
+    ],
+    "id": "process-module:src/lib/dreamEngine.ts -> external:openai-text :: calls_external_api"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/analysis/input_poems_analysis.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0158",
+      "ev-0159"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/analysis/input_poems_analysis.json :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/daily_life",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0146",
+      "ev-0147"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/daily_life :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/dreams",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0148",
+      "ev-0149",
+      "ev-0150",
+      "ev-0151"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/dreams :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0142",
+      "ev-0143",
+      "ev-0144",
+      "ev-0145"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/memory/index.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0178",
+      "ev-0179"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/memory/index.json :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/memory/report.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0180",
+      "ev-0181"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/memory/report.json :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/memory/traces",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0174",
+      "ev-0175",
+      "ev-0176",
+      "ev-0177"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/memory/traces :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/settings/personality_settings.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0162",
+      "ev-0163"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/settings/personality_settings.json :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/settings/rss_sources.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0164",
+      "ev-0165"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/settings/rss_sources.json :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/settings/site_settings.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0160",
+      "ev-0161"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/settings/site_settings.json :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/source_digests",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0170",
+      "ev-0171",
+      "ev-0172",
+      "ev-0173"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/source_digests :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/sources",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0168",
+      "ev-0169"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/sources :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0156",
+      "ev-0157"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/visuals",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0152",
+      "ev-0153"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/visuals :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/world/ucu_beden_world.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0154",
+      "ev-0155"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/world/ucu_beden_world.json :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "data:data/yearly_reports",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0166",
+      "ev-0167"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> data:data/yearly_reports :: reads"
+  },
+  {
+    "source": "process-module:src/lib/fileStorage.ts",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0141"
+    ],
+    "id": "process-module:src/lib/fileStorage.ts -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "process-module:src/lib/inputPoems.ts",
+    "target": "data:data/analysis/input_poems_analysis.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0185"
+    ],
+    "id": "process-module:src/lib/inputPoems.ts -> data:data/analysis/input_poems_analysis.json :: writes"
+  },
+  {
+    "source": "process-module:src/lib/inputPoems.ts",
+    "target": "data:poems_input",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0183",
+      "ev-0184"
+    ],
+    "id": "process-module:src/lib/inputPoems.ts -> data:poems_input :: reads"
+  },
+  {
+    "source": "process-module:src/lib/inputPoems.ts",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0182"
+    ],
+    "id": "process-module:src/lib/inputPoems.ts -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "process-module:src/lib/memoryEngine.ts",
+    "target": "data:data/analysis/image_mutations.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0191"
+    ],
+    "id": "process-module:src/lib/memoryEngine.ts -> data:data/analysis/image_mutations.json :: writes"
+  },
+  {
+    "source": "process-module:src/lib/memoryEngine.ts",
+    "target": "data:data/analysis/vocabulary_memory.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0190"
+    ],
+    "id": "process-module:src/lib/memoryEngine.ts -> data:data/analysis/vocabulary_memory.json :: writes"
+  },
+  {
+    "source": "process-module:src/lib/memoryEngine.ts",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0187",
+      "ev-0192"
+    ],
+    "id": "process-module:src/lib/memoryEngine.ts -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "process-module:src/lib/memoryEngine.ts",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0189"
+    ],
+    "id": "process-module:src/lib/memoryEngine.ts -> data:data/state/ucu_beden_state.json :: writes"
+  },
+  {
+    "source": "process-module:src/lib/memoryEngine.ts",
+    "target": "data:data/yearly_reports",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0188",
+      "ev-0193"
+    ],
+    "id": "process-module:src/lib/memoryEngine.ts -> data:data/yearly_reports :: reads"
+  },
+  {
+    "source": "process-module:src/lib/memoryEngine.ts",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0186"
+    ],
+    "id": "process-module:src/lib/memoryEngine.ts -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "process-module:src/lib/memoryTraceEngine.ts",
+    "target": "data:data/daily_life",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0198",
+      "ev-0209"
+    ],
+    "id": "process-module:src/lib/memoryTraceEngine.ts -> data:data/daily_life :: reads"
+  },
+  {
+    "source": "process-module:src/lib/memoryTraceEngine.ts",
+    "target": "data:data/dreams",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0207",
+      "ev-0210"
+    ],
+    "id": "process-module:src/lib/memoryTraceEngine.ts -> data:data/dreams :: reads"
+  },
+  {
+    "source": "process-module:src/lib/memoryTraceEngine.ts",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0197",
+      "ev-0203",
+      "ev-0208",
+      "ev-0211"
+    ],
+    "id": "process-module:src/lib/memoryTraceEngine.ts -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "process-module:src/lib/memoryTraceEngine.ts",
+    "target": "data:data/memory/index.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0214",
+      "ev-0216"
+    ],
+    "id": "process-module:src/lib/memoryTraceEngine.ts -> data:data/memory/index.json :: writes"
+  },
+  {
+    "source": "process-module:src/lib/memoryTraceEngine.ts",
+    "target": "data:data/memory/report.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0214",
+      "ev-0217"
+    ],
+    "id": "process-module:src/lib/memoryTraceEngine.ts -> data:data/memory/report.json :: writes"
+  },
+  {
+    "source": "process-module:src/lib/memoryTraceEngine.ts",
+    "target": "data:data/memory/traces",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0221"
+    ],
+    "id": "process-module:src/lib/memoryTraceEngine.ts -> data:data/memory/traces :: reads"
+  },
+  {
+    "source": "process-module:src/lib/memoryTraceEngine.ts",
+    "target": "data:data/memory/traces",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0214",
+      "ev-0215"
+    ],
+    "id": "process-module:src/lib/memoryTraceEngine.ts -> data:data/memory/traces :: writes"
+  },
+  {
+    "source": "process-module:src/lib/memoryTraceEngine.ts",
+    "target": "data:data/source_digests",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0204",
+      "ev-0212"
+    ],
+    "id": "process-module:src/lib/memoryTraceEngine.ts -> data:data/source_digests :: reads"
+  },
+  {
+    "source": "process-module:src/lib/memoryTraceEngine.ts",
+    "target": "data:data/sources",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0195",
+      "ev-0196",
+      "ev-0205",
+      "ev-0206",
+      "ev-0213",
+      "ev-0220",
+      "ev-0222"
+    ],
+    "id": "process-module:src/lib/memoryTraceEngine.ts -> data:data/sources :: reads"
+  },
+  {
+    "source": "process-module:src/lib/memoryTraceEngine.ts",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0194"
+    ],
+    "id": "process-module:src/lib/memoryTraceEngine.ts -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "process-module:src/lib/poemGenerator.ts",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0224"
+    ],
+    "id": "process-module:src/lib/poemGenerator.ts -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "process-module:src/lib/poemGenerator.ts",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0223"
+    ],
+    "id": "process-module:src/lib/poemGenerator.ts -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "process-module:src/lib/poemGenerator.ts",
+    "target": "external:openai-text",
+    "relation": "calls_external_api",
+    "status": "observed",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0439"
+    ],
+    "id": "process-module:src/lib/poemGenerator.ts -> external:openai-text :: calls_external_api"
+  },
+  {
+    "source": "process-module:src/lib/repetitionPressure.ts",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0226"
+    ],
+    "id": "process-module:src/lib/repetitionPressure.ts -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "process-module:src/lib/repetitionPressure.ts",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0225"
+    ],
+    "id": "process-module:src/lib/repetitionPressure.ts -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "process-module:src/lib/sourceCollectors.ts",
+    "target": "data:data/settings/rss_sources.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0229"
+    ],
+    "id": "process-module:src/lib/sourceCollectors.ts -> data:data/settings/rss_sources.json :: reads"
+  },
+  {
+    "source": "process-module:src/lib/sourceCollectors.ts",
+    "target": "data:data/sources",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0228"
+    ],
+    "id": "process-module:src/lib/sourceCollectors.ts -> data:data/sources :: reads"
+  },
+  {
+    "source": "process-module:src/lib/sourceCollectors.ts",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0227"
+    ],
+    "id": "process-module:src/lib/sourceCollectors.ts -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "process-module:src/lib/sourceDigestion.ts",
+    "target": "external:openai-text",
+    "relation": "calls_external_api",
+    "status": "observed",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0441"
+    ],
+    "id": "process-module:src/lib/sourceDigestion.ts -> external:openai-text :: calls_external_api"
+  },
+  {
+    "source": "process-module:src/lib/sourceDigestService.ts",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0235"
+    ],
+    "id": "process-module:src/lib/sourceDigestService.ts -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "process-module:src/lib/sourceDigestService.ts",
+    "target": "data:data/source_digests",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0231",
+      "ev-0233",
+      "ev-0234",
+      "ev-0236"
+    ],
+    "id": "process-module:src/lib/sourceDigestService.ts -> data:data/source_digests :: reads"
+  },
+  {
+    "source": "process-module:src/lib/sourceDigestService.ts",
+    "target": "data:data/source_digests",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0237"
+    ],
+    "id": "process-module:src/lib/sourceDigestService.ts -> data:data/source_digests :: writes"
+  },
+  {
+    "source": "process-module:src/lib/sourceDigestService.ts",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0230"
+    ],
+    "id": "process-module:src/lib/sourceDigestService.ts -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "process-module:src/lib/surfaceValidator.ts",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0240"
+    ],
+    "id": "process-module:src/lib/surfaceValidator.ts -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "process-module:src/lib/surfaceValidator.ts",
+    "target": "data:data/memory/traces",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0241"
+    ],
+    "id": "process-module:src/lib/surfaceValidator.ts -> data:data/memory/traces :: reads"
+  },
+  {
+    "source": "process-module:src/lib/surfaceValidator.ts",
+    "target": "data:data/sources",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0242"
+    ],
+    "id": "process-module:src/lib/surfaceValidator.ts -> data:data/sources :: reads"
+  },
+  {
+    "source": "process-module:src/lib/surfaceValidator.ts",
+    "target": "data:data/world/ucu_beden_world.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0239",
+      "ev-0243"
+    ],
+    "id": "process-module:src/lib/surfaceValidator.ts -> data:data/world/ucu_beden_world.json :: reads"
+  },
+  {
+    "source": "process-module:src/lib/surfaceValidator.ts",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0238"
+    ],
+    "id": "process-module:src/lib/surfaceValidator.ts -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "process-module:src/lib/visualBriefGenerator.ts",
+    "target": "data:data/visuals",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0245"
+    ],
+    "id": "process-module:src/lib/visualBriefGenerator.ts -> data:data/visuals :: reads"
+  },
+  {
+    "source": "process-module:src/lib/visualBriefGenerator.ts",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0244"
+    ],
+    "id": "process-module:src/lib/visualBriefGenerator.ts -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "process-module:src/lib/visualBriefGenerator.ts",
+    "target": "external:openai-text",
+    "relation": "calls_external_api",
+    "status": "observed",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0442"
+    ],
+    "id": "process-module:src/lib/visualBriefGenerator.ts -> external:openai-text :: calls_external_api"
+  },
+  {
+    "source": "process-module:src/lib/yearlyReport.ts",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0250"
+    ],
+    "id": "process-module:src/lib/yearlyReport.ts -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "process-module:src/lib/yearlyReport.ts",
+    "target": "data:data/yearly_reports",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0247",
+      "ev-0249"
+    ],
+    "id": "process-module:src/lib/yearlyReport.ts -> data:data/yearly_reports :: reads"
+  },
+  {
+    "source": "process-module:src/lib/yearlyReport.ts",
+    "target": "data:data/yearly_reports",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0251"
+    ],
+    "id": "process-module:src/lib/yearlyReport.ts -> data:data/yearly_reports :: writes"
+  },
+  {
+    "source": "process-module:src/lib/yearlyReport.ts",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0246"
+    ],
+    "id": "process-module:src/lib/yearlyReport.ts -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "process:analyzeAndSaveInputPoems",
+    "target": "data:data/analysis/input_poems_analysis.json",
+    "relation": "writes",
+    "status": "inferred",
+    "confidence": 0.72,
+    "evidence_refs": [
+      "ev-0252",
+      "ev-0355"
+    ],
+    "id": "process:analyzeAndSaveInputPoems -> data:data/analysis/input_poems_analysis.json :: writes"
+  },
+  {
+    "source": "process:buildMemoryArchive",
+    "target": "data:data/daily_life",
+    "relation": "reads",
+    "status": "inferred",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0283",
+      "ev-0305",
+      "ev-0359",
+      "ev-0399",
+      "ev-0419"
+    ],
+    "id": "process:buildMemoryArchive -> data:data/daily_life :: reads"
+  },
+  {
+    "source": "process:buildMemoryArchive",
+    "target": "data:data/dreams",
+    "relation": "reads",
+    "status": "inferred",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0283",
+      "ev-0305",
+      "ev-0359",
+      "ev-0399",
+      "ev-0419"
+    ],
+    "id": "process:buildMemoryArchive -> data:data/dreams :: reads"
+  },
+  {
+    "source": "process:buildMemoryArchive",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "inferred",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0283",
+      "ev-0305",
+      "ev-0359",
+      "ev-0399",
+      "ev-0419"
+    ],
+    "id": "process:buildMemoryArchive -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "process:buildMemoryArchive",
+    "target": "data:data/source_digests",
+    "relation": "reads",
+    "status": "inferred",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0283",
+      "ev-0305",
+      "ev-0359",
+      "ev-0399",
+      "ev-0419"
+    ],
+    "id": "process:buildMemoryArchive -> data:data/source_digests :: reads"
+  },
+  {
+    "source": "process:buildMemoryArchive",
+    "target": "data:data/sources",
+    "relation": "reads",
+    "status": "inferred",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0283",
+      "ev-0305",
+      "ev-0359",
+      "ev-0399",
+      "ev-0419"
+    ],
+    "id": "process:buildMemoryArchive -> data:data/sources :: reads"
+  },
+  {
+    "source": "process:collectArtWorld",
+    "target": "external:mock-art",
+    "relation": "uses_mock_source",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0436"
+    ],
+    "id": "process:collectArtWorld -> external:mock-art :: uses_mock_source"
+  },
+  {
+    "source": "process:collectRss",
+    "target": "external:rss",
+    "relation": "collects_from",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0433"
+    ],
+    "id": "process:collectRss -> external:rss :: collects_from"
+  },
+  {
+    "source": "process:collectSources",
+    "target": "data:data/sources",
+    "relation": "produces_in_memory",
+    "status": "observed",
+    "confidence": 0.78,
+    "evidence_refs": [
+      "ev-0368"
+    ],
+    "id": "process:collectSources -> data:data/sources :: produces_in_memory"
+  },
+  {
+    "source": "process:collectTurkeyNews",
+    "target": "external:newsapi",
+    "relation": "fetches_news",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0435"
+    ],
+    "id": "process:collectTurkeyNews -> external:newsapi :: fetches_news"
+  },
+  {
+    "source": "process:collectWeather",
+    "target": "external:open-meteo",
+    "relation": "fetches_weather",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0434"
+    ],
+    "id": "process:collectWeather -> external:open-meteo :: fetches_weather"
+  },
+  {
+    "source": "process:ensureSourceDigest",
+    "target": "data:data/source_digests",
+    "relation": "writes",
+    "status": "inferred",
+    "confidence": 0.72,
+    "evidence_refs": [
+      "ev-0328",
+      "ev-0369"
+    ],
+    "id": "process:ensureSourceDigest -> data:data/source_digests :: writes"
+  },
+  {
+    "source": "process:generateVisualImage",
+    "target": "data:public/generated/visuals",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0267",
+      "ev-0364",
+      "ev-0398",
+      "ev-0438"
+    ],
+    "id": "process:generateVisualImage -> data:public/generated/visuals :: writes"
+  },
+  {
+    "source": "process:generateVisualImage",
+    "target": "external:openai-images",
+    "relation": "calls_external_api",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0437"
+    ],
+    "id": "process:generateVisualImage -> external:openai-images :: calls_external_api"
+  },
+  {
+    "source": "process:maybeCreateYearlyReport",
+    "target": "data:data/yearly_reports",
+    "relation": "writes",
+    "status": "inferred",
+    "confidence": 0.76,
+    "evidence_refs": [
+      "ev-0376"
+    ],
+    "id": "process:maybeCreateYearlyReport -> data:data/yearly_reports :: writes"
+  },
+  {
+    "source": "process:updateMemoryAfterPoem",
+    "target": "data:data/analysis/image_mutations.json",
+    "relation": "writes",
+    "status": "inferred",
+    "confidence": 0.72,
+    "evidence_refs": [
+      "ev-0357"
+    ],
+    "id": "process:updateMemoryAfterPoem -> data:data/analysis/image_mutations.json :: writes"
+  },
+  {
+    "source": "process:updateMemoryAfterPoem",
+    "target": "data:data/analysis/vocabulary_memory.json",
+    "relation": "writes",
+    "status": "inferred",
+    "confidence": 0.72,
+    "evidence_refs": [
+      "ev-0357"
+    ],
+    "id": "process:updateMemoryAfterPoem -> data:data/analysis/vocabulary_memory.json :: writes"
+  },
+  {
+    "source": "process:updateMemoryAfterPoem",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "writes",
+    "status": "inferred",
+    "confidence": 0.72,
+    "evidence_refs": [
+      "ev-0357"
+    ],
+    "id": "process:updateMemoryAfterPoem -> data:data/state/ucu_beden_state.json :: writes"
+  },
+  {
+    "source": "process:writeMemoryArchive",
+    "target": "data:data/memory/index.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.85,
+    "evidence_refs": [
+      "ev-0362",
+      "ev-0402",
+      "ev-0424"
+    ],
+    "id": "process:writeMemoryArchive -> data:data/memory/index.json :: writes"
+  },
+  {
+    "source": "process:writeMemoryArchive",
+    "target": "data:data/memory/report.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.85,
+    "evidence_refs": [
+      "ev-0362",
+      "ev-0402",
+      "ev-0424"
+    ],
+    "id": "process:writeMemoryArchive -> data:data/memory/report.json :: writes"
+  },
+  {
+    "source": "process:writeMemoryArchive",
+    "target": "data:data/memory/traces",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.85,
+    "evidence_refs": [
+      "ev-0362",
+      "ev-0402",
+      "ev-0424"
+    ],
+    "id": "process:writeMemoryArchive -> data:data/memory/traces :: writes"
+  },
+  {
+    "source": "scheduler:.github/workflows/daily-poem-and-deploy.yml",
+    "target": "script:backfill:visuals",
+    "relation": "runs_script",
+    "status": "observed",
+    "confidence": 0.96,
+    "evidence_refs": [
+      "ev-0021"
+    ],
+    "id": "scheduler:.github/workflows/daily-poem-and-deploy.yml -> script:backfill:visuals :: runs_script"
+  },
+  {
+    "source": "scheduler:.github/workflows/daily-poem-and-deploy.yml",
+    "target": "script:build",
+    "relation": "runs_script",
+    "status": "observed",
+    "confidence": 0.96,
+    "evidence_refs": [
+      "ev-0022"
+    ],
+    "id": "scheduler:.github/workflows/daily-poem-and-deploy.yml -> script:build :: runs_script"
+  },
+  {
+    "source": "scheduler:.github/workflows/daily-poem-and-deploy.yml",
+    "target": "script:generate:today",
+    "relation": "runs_script",
+    "status": "observed",
+    "confidence": 0.96,
+    "evidence_refs": [
+      "ev-0019",
+      "ev-0020"
+    ],
+    "id": "scheduler:.github/workflows/daily-poem-and-deploy.yml -> script:generate:today :: runs_script"
+  },
+  {
+    "source": "scheduler:.github/workflows/night-dream-and-deploy.yml",
+    "target": "script:backfill:visuals",
+    "relation": "runs_script",
+    "status": "observed",
+    "confidence": 0.96,
+    "evidence_refs": [
+      "ev-0026"
+    ],
+    "id": "scheduler:.github/workflows/night-dream-and-deploy.yml -> script:backfill:visuals :: runs_script"
+  },
+  {
+    "source": "scheduler:.github/workflows/night-dream-and-deploy.yml",
+    "target": "script:build",
+    "relation": "runs_script",
+    "status": "observed",
+    "confidence": 0.96,
+    "evidence_refs": [
+      "ev-0027"
+    ],
+    "id": "scheduler:.github/workflows/night-dream-and-deploy.yml -> script:build :: runs_script"
+  },
+  {
+    "source": "scheduler:.github/workflows/night-dream-and-deploy.yml",
+    "target": "script:generate:dream",
+    "relation": "runs_script",
+    "status": "observed",
+    "confidence": 0.96,
+    "evidence_refs": [
+      "ev-0024",
+      "ev-0025"
+    ],
+    "id": "scheduler:.github/workflows/night-dream-and-deploy.yml -> script:generate:dream :: runs_script"
+  },
+  {
+    "source": "scheduler:.github/workflows/pr-check.yml",
+    "target": "script:build",
+    "relation": "runs_script",
+    "status": "observed",
+    "confidence": 0.96,
+    "evidence_refs": [
+      "ev-0030"
+    ],
+    "id": "scheduler:.github/workflows/pr-check.yml -> script:build :: runs_script"
+  },
+  {
+    "source": "scheduler:.github/workflows/pr-check.yml",
+    "target": "script:typecheck",
+    "relation": "runs_script",
+    "status": "observed",
+    "confidence": 0.96,
+    "evidence_refs": [
+      "ev-0029"
+    ],
+    "id": "scheduler:.github/workflows/pr-check.yml -> script:typecheck :: runs_script"
+  },
+  {
+    "source": "script:analyze:input",
+    "target": "process:analyzeAndSaveInputPoems",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0252"
+    ],
+    "id": "script:analyze:input -> process:analyzeAndSaveInputPoems :: calls_process"
+  },
+  {
+    "source": "script:backfill:visuals",
+    "target": "data:data/dreams",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0254"
+    ],
+    "id": "script:backfill:visuals -> data:data/dreams :: reads"
+  },
+  {
+    "source": "script:backfill:visuals",
+    "target": "data:data/dreams",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0266"
+    ],
+    "id": "script:backfill:visuals -> data:data/dreams :: writes"
+  },
+  {
+    "source": "script:backfill:visuals",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0255"
+    ],
+    "id": "script:backfill:visuals -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "script:backfill:visuals",
+    "target": "data:data/visuals",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0258",
+      "ev-0259",
+      "ev-0262",
+      "ev-0264"
+    ],
+    "id": "script:backfill:visuals -> data:data/visuals :: reads"
+  },
+  {
+    "source": "script:backfill:visuals",
+    "target": "data:data/visuals",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0260",
+      "ev-0261"
+    ],
+    "id": "script:backfill:visuals -> data:data/visuals :: writes"
+  },
+  {
+    "source": "script:backfill:visuals",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0253"
+    ],
+    "id": "script:backfill:visuals -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "script:backfill:visuals",
+    "target": "process:createDreamVisual",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0269"
+    ],
+    "id": "script:backfill:visuals -> process:createDreamVisual :: calls_process"
+  },
+  {
+    "source": "script:backfill:visuals",
+    "target": "process:createPoemVisual",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0270"
+    ],
+    "id": "script:backfill:visuals -> process:createPoemVisual :: calls_process"
+  },
+  {
+    "source": "script:backfill:visuals",
+    "target": "process:generateVisualImage",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0267"
+    ],
+    "id": "script:backfill:visuals -> process:generateVisualImage :: calls_process"
+  },
+  {
+    "source": "script:backfill:visuals",
+    "target": "process:reconcileVisualImagePath",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0271"
+    ],
+    "id": "script:backfill:visuals -> process:reconcileVisualImagePath :: calls_process"
+  },
+  {
+    "source": "script:backfill:visuals",
+    "target": "process:todayInIstanbul",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0268"
+    ],
+    "id": "script:backfill:visuals -> process:todayInIstanbul :: calls_process"
+  },
+  {
+    "source": "script:backfill:visuals",
+    "target": "process:visualImageIsUsable",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0272"
+    ],
+    "id": "script:backfill:visuals -> process:visualImageIsUsable :: calls_process"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "data:data/dreams",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0275",
+      "ev-0277"
+    ],
+    "id": "script:debug:latest-memory -> data:data/dreams :: reads"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0274",
+      "ev-0276"
+    ],
+    "id": "script:debug:latest-memory -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "data:data/sources",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0278"
+    ],
+    "id": "script:debug:latest-memory -> data:data/sources :: reads"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "data:data/world/ucu_beden_world.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0279"
+    ],
+    "id": "script:debug:latest-memory -> data:data/world/ucu_beden_world.json :: reads"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0273"
+    ],
+    "id": "script:debug:latest-memory -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "process:analyzeGeneratedDreamLanguage",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0289"
+    ],
+    "id": "script:debug:latest-memory -> process:analyzeGeneratedDreamLanguage :: calls_process"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "process:analyzeGeneratedDreamSurface",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0287"
+    ],
+    "id": "script:debug:latest-memory -> process:analyzeGeneratedDreamSurface :: calls_process"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "process:analyzeGeneratedPoemLanguage",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0290"
+    ],
+    "id": "script:debug:latest-memory -> process:analyzeGeneratedPoemLanguage :: calls_process"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "process:analyzeGeneratedPoemSurface",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0288"
+    ],
+    "id": "script:debug:latest-memory -> process:analyzeGeneratedPoemSurface :: calls_process"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "process:analyzeRepetitionPressure",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0286"
+    ],
+    "id": "script:debug:latest-memory -> process:analyzeRepetitionPressure :: calls_process"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "process:buildMemoryArchive",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0283"
+    ],
+    "id": "script:debug:latest-memory -> process:buildMemoryArchive :: calls_process"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "process:buildMemoryGraphData",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0280"
+    ],
+    "id": "script:debug:latest-memory -> process:buildMemoryGraphData :: calls_process"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "process:memoryClimateDetail",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0281"
+    ],
+    "id": "script:debug:latest-memory -> process:memoryClimateDetail :: calls_process"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "process:memoryClimateHeadline",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0282"
+    ],
+    "id": "script:debug:latest-memory -> process:memoryClimateHeadline :: calls_process"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "process:validateMemoryArchive",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0284"
+    ],
+    "id": "script:debug:latest-memory -> process:validateMemoryArchive :: calls_process"
+  },
+  {
+    "source": "script:debug:latest-memory",
+    "target": "process:validateMemoryPromptFragments",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0285"
+    ],
+    "id": "script:debug:latest-memory -> process:validateMemoryPromptFragments :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "data:data/analysis/input_poems_analysis.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0299"
+    ],
+    "id": "script:debug:memory-cycle -> data:data/analysis/input_poems_analysis.json :: reads"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "data:data/daily_life",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0301"
+    ],
+    "id": "script:debug:memory-cycle -> data:data/daily_life :: reads"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "data:data/dreams",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0294"
+    ],
+    "id": "script:debug:memory-cycle -> data:data/dreams :: reads"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0292",
+      "ev-0293"
+    ],
+    "id": "script:debug:memory-cycle -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "data:data/settings/personality_settings.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0300"
+    ],
+    "id": "script:debug:memory-cycle -> data:data/settings/personality_settings.json :: reads"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "data:data/source_digests",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0296"
+    ],
+    "id": "script:debug:memory-cycle -> data:data/source_digests :: reads"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "data:data/sources",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0295"
+    ],
+    "id": "script:debug:memory-cycle -> data:data/sources :: reads"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0297"
+    ],
+    "id": "script:debug:memory-cycle -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "data:data/world/ucu_beden_world.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0298"
+    ],
+    "id": "script:debug:memory-cycle -> data:data/world/ucu_beden_world.json :: reads"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0291"
+    ],
+    "id": "script:debug:memory-cycle -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:addCalendarDays",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0320"
+    ],
+    "id": "script:debug:memory-cycle -> process:addCalendarDays :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:analyzeGeneratedDreamLanguage",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0317"
+    ],
+    "id": "script:debug:memory-cycle -> process:analyzeGeneratedDreamLanguage :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:analyzeGeneratedPoemLanguage",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0318"
+    ],
+    "id": "script:debug:memory-cycle -> process:analyzeGeneratedPoemLanguage :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:analyzeRepetitionPressure",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0311"
+    ],
+    "id": "script:debug:memory-cycle -> process:analyzeRepetitionPressure :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:analyzeSourceDigest",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0312"
+    ],
+    "id": "script:debug:memory-cycle -> process:analyzeSourceDigest :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:buildDreamPromptSections",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0315"
+    ],
+    "id": "script:debug:memory-cycle -> process:buildDreamPromptSections :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:buildMemoryArchive",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0305"
+    ],
+    "id": "script:debug:memory-cycle -> process:buildMemoryArchive :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:buildMemoryGraphData",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0304"
+    ],
+    "id": "script:debug:memory-cycle -> process:buildMemoryGraphData :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:buildPoemPromptSections",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0316"
+    ],
+    "id": "script:debug:memory-cycle -> process:buildPoemPromptSections :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:buildUcuBedenVoicePrompt",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0319"
+    ],
+    "id": "script:debug:memory-cycle -> process:buildUcuBedenVoicePrompt :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:generationContextDebug",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0302"
+    ],
+    "id": "script:debug:memory-cycle -> process:generationContextDebug :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:memoryArchiveStateSignature",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0306"
+    ],
+    "id": "script:debug:memory-cycle -> process:memoryArchiveStateSignature :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:previewMemoryCycleEffects",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0307"
+    ],
+    "id": "script:debug:memory-cycle -> process:previewMemoryCycleEffects :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:selectMemoryForGeneration",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0308"
+    ],
+    "id": "script:debug:memory-cycle -> process:selectMemoryForGeneration :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:todayInIstanbul",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0321"
+    ],
+    "id": "script:debug:memory-cycle -> process:todayInIstanbul :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:validateMemoryArchive",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0309"
+    ],
+    "id": "script:debug:memory-cycle -> process:validateMemoryArchive :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:validateMemoryCycleIntegrity",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0303"
+    ],
+    "id": "script:debug:memory-cycle -> process:validateMemoryCycleIntegrity :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:validateMemoryPromptFragments",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0310"
+    ],
+    "id": "script:debug:memory-cycle -> process:validateMemoryPromptFragments :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:validateSourceDigests",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0314"
+    ],
+    "id": "script:debug:memory-cycle -> process:validateSourceDigests :: calls_process"
+  },
+  {
+    "source": "script:debug:memory-cycle",
+    "target": "process:validateSourceInfluence",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0313"
+    ],
+    "id": "script:debug:memory-cycle -> process:validateSourceInfluence :: calls_process"
+  },
+  {
+    "source": "script:debug:mood-sentences",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0323"
+    ],
+    "id": "script:debug:mood-sentences -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "script:debug:mood-sentences",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0322"
+    ],
+    "id": "script:debug:mood-sentences -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "script:debug:mood-sentences",
+    "target": "process:formatMoodSentence",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0324"
+    ],
+    "id": "script:debug:mood-sentences -> process:formatMoodSentence :: calls_process"
+  },
+  {
+    "source": "script:digest:sources",
+    "target": "data:data/sources",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0326"
+    ],
+    "id": "script:digest:sources -> data:data/sources :: reads"
+  },
+  {
+    "source": "script:digest:sources",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0325"
+    ],
+    "id": "script:digest:sources -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "script:digest:sources",
+    "target": "process:ensureSourceDigest",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0328"
+    ],
+    "id": "script:digest:sources -> process:ensureSourceDigest :: calls_process"
+  },
+  {
+    "source": "script:digest:sources",
+    "target": "process:todayInIstanbul",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0327"
+    ],
+    "id": "script:digest:sources -> process:todayInIstanbul :: calls_process"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "data:data/daily_life",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0390"
+    ],
+    "id": "script:generate:dream -> data:data/daily_life :: reads"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "data:data/daily_life",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0391"
+    ],
+    "id": "script:generate:dream -> data:data/daily_life :: writes"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "data:data/dreams",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0378",
+      "ev-0382",
+      "ev-0383"
+    ],
+    "id": "script:generate:dream -> data:data/dreams :: reads"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "data:data/dreams",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0392"
+    ],
+    "id": "script:generate:dream -> data:data/dreams :: writes"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0386"
+    ],
+    "id": "script:generate:dream -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "data:data/memory/index.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0394"
+    ],
+    "id": "script:generate:dream -> data:data/memory/index.json :: writes"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "data:data/memory/report.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0394"
+    ],
+    "id": "script:generate:dream -> data:data/memory/report.json :: writes"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "data:data/memory/traces",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0394"
+    ],
+    "id": "script:generate:dream -> data:data/memory/traces :: writes"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "data:data/settings/personality_settings.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0388"
+    ],
+    "id": "script:generate:dream -> data:data/settings/personality_settings.json :: reads"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "data:data/source_digests",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0389"
+    ],
+    "id": "script:generate:dream -> data:data/source_digests :: reads"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0387"
+    ],
+    "id": "script:generate:dream -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0395"
+    ],
+    "id": "script:generate:dream -> data:data/state/ucu_beden_state.json :: writes"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "data:data/visuals",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0380",
+      "ev-0384"
+    ],
+    "id": "script:generate:dream -> data:data/visuals :: reads"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "data:data/visuals",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0385",
+      "ev-0393"
+    ],
+    "id": "script:generate:dream -> data:data/visuals :: writes"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0377"
+    ],
+    "id": "script:generate:dream -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "process:analyzeRepetitionPressure",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0403"
+    ],
+    "id": "script:generate:dream -> process:analyzeRepetitionPressure :: calls_process"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "process:buildMemoryArchive",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0399"
+    ],
+    "id": "script:generate:dream -> process:buildMemoryArchive :: calls_process"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "process:createDailyLifeRecord",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0396"
+    ],
+    "id": "script:generate:dream -> process:createDailyLifeRecord :: calls_process"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "process:createDreamVisual",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0406"
+    ],
+    "id": "script:generate:dream -> process:createDreamVisual :: calls_process"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "process:generateDream",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0397"
+    ],
+    "id": "script:generate:dream -> process:generateDream :: calls_process"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "process:generateVisualImage",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0398"
+    ],
+    "id": "script:generate:dream -> process:generateVisualImage :: calls_process"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "process:parseGenerationArgs",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0404"
+    ],
+    "id": "script:generate:dream -> process:parseGenerationArgs :: calls_process"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "process:reconcileVisualImagePath",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0407"
+    ],
+    "id": "script:generate:dream -> process:reconcileVisualImagePath :: calls_process"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "process:selectMemoryForGeneration",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0400"
+    ],
+    "id": "script:generate:dream -> process:selectMemoryForGeneration :: calls_process"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "process:todayInIstanbul",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0405"
+    ],
+    "id": "script:generate:dream -> process:todayInIstanbul :: calls_process"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "process:validateMemoryPromptFragments",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0401"
+    ],
+    "id": "script:generate:dream -> process:validateMemoryPromptFragments :: calls_process"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "process:visualImageStatus",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0408"
+    ],
+    "id": "script:generate:dream -> process:visualImageStatus :: calls_process"
+  },
+  {
+    "source": "script:generate:dream",
+    "target": "process:writeMemoryArchive",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0402"
+    ],
+    "id": "script:generate:dream -> process:writeMemoryArchive :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "data:data/daily_life",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0335"
+    ],
+    "id": "script:generate:today -> data:data/daily_life :: reads"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "data:data/daily_life",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0338",
+      "ev-0348"
+    ],
+    "id": "script:generate:today -> data:data/daily_life :: writes"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0330",
+      "ev-0332",
+      "ev-0334",
+      "ev-0343"
+    ],
+    "id": "script:generate:today -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "data:data/generated_poems",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0349"
+    ],
+    "id": "script:generate:today -> data:data/generated_poems :: writes"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "data:data/memory/index.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0351"
+    ],
+    "id": "script:generate:today -> data:data/memory/index.json :: writes"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "data:data/memory/report.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0351"
+    ],
+    "id": "script:generate:today -> data:data/memory/report.json :: writes"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "data:data/memory/traces",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0351"
+    ],
+    "id": "script:generate:today -> data:data/memory/traces :: writes"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "data:data/settings/personality_settings.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0336",
+      "ev-0346"
+    ],
+    "id": "script:generate:today -> data:data/settings/personality_settings.json :: reads"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "data:data/sources",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0333",
+      "ev-0347"
+    ],
+    "id": "script:generate:today -> data:data/sources :: writes"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0337",
+      "ev-0345"
+    ],
+    "id": "script:generate:today -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "data:data/visuals",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0339",
+      "ev-0341"
+    ],
+    "id": "script:generate:today -> data:data/visuals :: reads"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "data:data/visuals",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0342",
+      "ev-0350"
+    ],
+    "id": "script:generate:today -> data:data/visuals :: writes"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "data:data/world/ucu_beden_world.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0344"
+    ],
+    "id": "script:generate:today -> data:data/world/ucu_beden_world.json :: reads"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0329"
+    ],
+    "id": "script:generate:today -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:analyzeAndSaveInputPoems",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0355"
+    ],
+    "id": "script:generate:today -> process:analyzeAndSaveInputPoems :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:analyzeRepetitionPressure",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0372"
+    ],
+    "id": "script:generate:today -> process:analyzeRepetitionPressure :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:buildMemoryArchive",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0359"
+    ],
+    "id": "script:generate:today -> process:buildMemoryArchive :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:calculateMood",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0363"
+    ],
+    "id": "script:generate:today -> process:calculateMood :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:collectSources",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0368"
+    ],
+    "id": "script:generate:today -> process:collectSources :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:createDailyLife",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0371"
+    ],
+    "id": "script:generate:today -> process:createDailyLife :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:createDailyLifeRecord",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0356"
+    ],
+    "id": "script:generate:today -> process:createDailyLifeRecord :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:createPoemVisual",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0373"
+    ],
+    "id": "script:generate:today -> process:createPoemVisual :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:createWalkState",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0370"
+    ],
+    "id": "script:generate:today -> process:createWalkState :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:ensureSourceDigest",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0369"
+    ],
+    "id": "script:generate:today -> process:ensureSourceDigest :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:formatAge",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0353"
+    ],
+    "id": "script:generate:today -> process:formatAge :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:generatePoemWithLLM",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0365"
+    ],
+    "id": "script:generate:today -> process:generatePoemWithLLM :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:generateVisualImage",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0364"
+    ],
+    "id": "script:generate:today -> process:generateVisualImage :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:maybeCreateYearlyReport",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0376"
+    ],
+    "id": "script:generate:today -> process:maybeCreateYearlyReport :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:nextAgeMonths",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0354"
+    ],
+    "id": "script:generate:today -> process:nextAgeMonths :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:parseGenerationArgs",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0366"
+    ],
+    "id": "script:generate:today -> process:parseGenerationArgs :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:reconcileVisualImagePath",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0374"
+    ],
+    "id": "script:generate:today -> process:reconcileVisualImagePath :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:selectMemoryForGeneration",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0360"
+    ],
+    "id": "script:generate:today -> process:selectMemoryForGeneration :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:selectMemoryFragments",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0358"
+    ],
+    "id": "script:generate:today -> process:selectMemoryFragments :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:todayInIstanbul",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0367"
+    ],
+    "id": "script:generate:today -> process:todayInIstanbul :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:updateMemoryAfterPoem",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0357"
+    ],
+    "id": "script:generate:today -> process:updateMemoryAfterPoem :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:validateMemoryPromptFragments",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0361"
+    ],
+    "id": "script:generate:today -> process:validateMemoryPromptFragments :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:visualImageStatus",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0375"
+    ],
+    "id": "script:generate:today -> process:visualImageStatus :: calls_process"
+  },
+  {
+    "source": "script:generate:today",
+    "target": "process:writeMemoryArchive",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0362"
+    ],
+    "id": "script:generate:today -> process:writeMemoryArchive :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "data:data/dreams",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0415"
+    ],
+    "id": "script:rebuild:memory -> data:data/dreams :: reads"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0411",
+      "ev-0414"
+    ],
+    "id": "script:rebuild:memory -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "data:data/memory/index.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0410"
+    ],
+    "id": "script:rebuild:memory -> data:data/memory/index.json :: writes"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "data:data/memory/report.json",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0410"
+    ],
+    "id": "script:rebuild:memory -> data:data/memory/report.json :: writes"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "data:data/memory/traces",
+    "relation": "writes",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0410"
+    ],
+    "id": "script:rebuild:memory -> data:data/memory/traces :: writes"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "data:data/source_digests",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0413"
+    ],
+    "id": "script:rebuild:memory -> data:data/source_digests :: reads"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "data:data/sources",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0412"
+    ],
+    "id": "script:rebuild:memory -> data:data/sources :: reads"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "data:data/world/ucu_beden_world.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0416"
+    ],
+    "id": "script:rebuild:memory -> data:data/world/ucu_beden_world.json :: reads"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0409"
+    ],
+    "id": "script:rebuild:memory -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:addCalendarDays",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0431"
+    ],
+    "id": "script:rebuild:memory -> process:addCalendarDays :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:analyzeRepetitionPressure",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0425"
+    ],
+    "id": "script:rebuild:memory -> process:analyzeRepetitionPressure :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:analyzeSourceDigest",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0426"
+    ],
+    "id": "script:rebuild:memory -> process:analyzeSourceDigest :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:buildMemoryArchive",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0419"
+    ],
+    "id": "script:rebuild:memory -> process:buildMemoryArchive :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:buildMemoryGraphData",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0418"
+    ],
+    "id": "script:rebuild:memory -> process:buildMemoryGraphData :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:memoryArchiveStateSignature",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0420"
+    ],
+    "id": "script:rebuild:memory -> process:memoryArchiveStateSignature :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:selectMemoryForGeneration",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0421"
+    ],
+    "id": "script:rebuild:memory -> process:selectMemoryForGeneration :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:todayInIstanbul",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0432"
+    ],
+    "id": "script:rebuild:memory -> process:todayInIstanbul :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:validateMemoryArchive",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0422"
+    ],
+    "id": "script:rebuild:memory -> process:validateMemoryArchive :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:validateMemoryCycleIntegrity",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0417"
+    ],
+    "id": "script:rebuild:memory -> process:validateMemoryCycleIntegrity :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:validateMemoryPromptFragments",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0423"
+    ],
+    "id": "script:rebuild:memory -> process:validateMemoryPromptFragments :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:validateSourceDigests",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0428"
+    ],
+    "id": "script:rebuild:memory -> process:validateSourceDigests :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:validateSourceInfluence",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0427"
+    ],
+    "id": "script:rebuild:memory -> process:validateSourceInfluence :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:validateStoredLanguageRecords",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0430"
+    ],
+    "id": "script:rebuild:memory -> process:validateStoredLanguageRecords :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:validateStoredSurfaceRecords",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0429"
+    ],
+    "id": "script:rebuild:memory -> process:validateStoredSurfaceRecords :: calls_process"
+  },
+  {
+    "source": "script:rebuild:memory",
+    "target": "process:writeMemoryArchive",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0424"
+    ],
+    "id": "script:rebuild:memory -> process:writeMemoryArchive :: calls_process"
+  },
+  {
+    "source": "script:validate:memory",
+    "target": "script:rebuild:memory",
+    "relation": "runs_script",
+    "status": "observed",
+    "confidence": 0.94,
+    "evidence_refs": [
+      "ev-0013"
+    ],
+    "id": "script:validate:memory -> script:rebuild:memory :: runs_script"
+  },
+  {
+    "source": "ui-component:src/components/ArchiveList.tsx",
+    "target": "process:useEffect",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0115"
+    ],
+    "id": "ui-component:src/components/ArchiveList.tsx -> process:useEffect :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/ArchiveList.tsx",
+    "target": "process:useMemo",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0116"
+    ],
+    "id": "ui-component:src/components/ArchiveList.tsx -> process:useMemo :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/CurrentStatePanel.tsx",
+    "target": "process:useEffect",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0117"
+    ],
+    "id": "ui-component:src/components/CurrentStatePanel.tsx -> process:useEffect :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/CurrentStatePanel.tsx",
+    "target": "process:useMemo",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0118"
+    ],
+    "id": "ui-component:src/components/CurrentStatePanel.tsx -> process:useMemo :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/DailyPoemCard.tsx",
+    "target": "process:formatMoodSentence",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0119"
+    ],
+    "id": "ui-component:src/components/DailyPoemCard.tsx -> process:formatMoodSentence :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/MemoryMutationGraph.tsx",
+    "target": "process:useEffect",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0120"
+    ],
+    "id": "ui-component:src/components/MemoryMutationGraph.tsx -> process:useEffect :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/MemoryMutationGraph.tsx",
+    "target": "process:useMemo",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0121"
+    ],
+    "id": "ui-component:src/components/MemoryMutationGraph.tsx -> process:useMemo :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/MemoryPanel.tsx",
+    "target": "process:memoryClimateDetail",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0122"
+    ],
+    "id": "ui-component:src/components/MemoryPanel.tsx -> process:memoryClimateDetail :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/MemoryPanel.tsx",
+    "target": "process:memoryClimateHeadline",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0123"
+    ],
+    "id": "ui-component:src/components/MemoryPanel.tsx -> process:memoryClimateHeadline :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/MoodPanel.tsx",
+    "target": "process:formatMoodSentence",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0124"
+    ],
+    "id": "ui-component:src/components/MoodPanel.tsx -> process:formatMoodSentence :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/TimelineItem.tsx",
+    "target": "process:formatMoodSentence",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0125"
+    ],
+    "id": "ui-component:src/components/TimelineItem.tsx -> process:formatMoodSentence :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/UcuBedenHeader.tsx",
+    "target": "data:data/memory/report.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0127"
+    ],
+    "id": "ui-component:src/components/UcuBedenHeader.tsx -> data:data/memory/report.json :: reads"
+  },
+  {
+    "source": "ui-component:src/components/UcuBedenHeader.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0126"
+    ],
+    "id": "ui-component:src/components/UcuBedenHeader.tsx -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "ui-component:src/components/UcuBedenHeader.tsx",
+    "target": "process:memoryClimateHeadline",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0128"
+    ],
+    "id": "ui-component:src/components/UcuBedenHeader.tsx -> process:memoryClimateHeadline :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/VisualField.tsx",
+    "target": "data:public/generated/visuals",
+    "relation": "reads",
+    "status": "inferred",
+    "confidence": 0.72,
+    "evidence_refs": [
+      "ev-0443"
+    ],
+    "id": "ui-component:src/components/VisualField.tsx -> data:public/generated/visuals :: reads"
+  },
+  {
+    "source": "ui-component:src/components/VisualField.tsx",
+    "target": "process:useEffect",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0129"
+    ],
+    "id": "ui-component:src/components/VisualField.tsx -> process:useEffect :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/VisualField.tsx",
+    "target": "process:useState",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0130"
+    ],
+    "id": "ui-component:src/components/VisualField.tsx -> process:useState :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/VisualMemoryMap.tsx",
+    "target": "process:useCallback",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0131"
+    ],
+    "id": "ui-component:src/components/VisualMemoryMap.tsx -> process:useCallback :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/VisualMemoryMap.tsx",
+    "target": "process:useEffect",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0132"
+    ],
+    "id": "ui-component:src/components/VisualMemoryMap.tsx -> process:useEffect :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/VisualMemoryMap.tsx",
+    "target": "process:useMemo",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0133"
+    ],
+    "id": "ui-component:src/components/VisualMemoryMap.tsx -> process:useMemo :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/VisualMemoryMap.tsx",
+    "target": "process:useRef",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0134"
+    ],
+    "id": "ui-component:src/components/VisualMemoryMap.tsx -> process:useRef :: calls_process"
+  },
+  {
+    "source": "ui-component:src/components/VisualMemoryMap.tsx",
+    "target": "process:useState",
+    "relation": "calls_process",
+    "status": "observed",
+    "confidence": 0.86,
+    "evidence_refs": [
+      "ev-0135"
+    ],
+    "id": "ui-component:src/components/VisualMemoryMap.tsx -> process:useState :: calls_process"
+  },
+  {
+    "source": "ui-route:src/app/archive/page.tsx",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0032",
+      "ev-0033"
+    ],
+    "id": "ui-route:src/app/archive/page.tsx -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "ui-route:src/app/archive/page.tsx",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0034"
+    ],
+    "id": "ui-route:src/app/archive/page.tsx -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/archive/page.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0031"
+    ],
+    "id": "ui-route:src/app/archive/page.tsx -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "ui-route:src/app/dreams/[date]/page.tsx",
+    "target": "data:data/dreams",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0036",
+      "ev-0038"
+    ],
+    "id": "ui-route:src/app/dreams/[date]/page.tsx -> data:data/dreams :: reads"
+  },
+  {
+    "source": "ui-route:src/app/dreams/[date]/page.tsx",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0037",
+      "ev-0039"
+    ],
+    "id": "ui-route:src/app/dreams/[date]/page.tsx -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "ui-route:src/app/dreams/[date]/page.tsx",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0040"
+    ],
+    "id": "ui-route:src/app/dreams/[date]/page.tsx -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/dreams/[date]/page.tsx",
+    "target": "data:data/visuals",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0041"
+    ],
+    "id": "ui-route:src/app/dreams/[date]/page.tsx -> data:data/visuals :: reads"
+  },
+  {
+    "source": "ui-route:src/app/dreams/[date]/page.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0035"
+    ],
+    "id": "ui-route:src/app/dreams/[date]/page.tsx -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "ui-route:src/app/dreams/page.tsx",
+    "target": "data:data/dreams",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0044"
+    ],
+    "id": "ui-route:src/app/dreams/page.tsx -> data:data/dreams :: reads"
+  },
+  {
+    "source": "ui-route:src/app/dreams/page.tsx",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0043"
+    ],
+    "id": "ui-route:src/app/dreams/page.tsx -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "ui-route:src/app/dreams/page.tsx",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0045"
+    ],
+    "id": "ui-route:src/app/dreams/page.tsx -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/dreams/page.tsx",
+    "target": "data:data/visuals",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0046"
+    ],
+    "id": "ui-route:src/app/dreams/page.tsx -> data:data/visuals :: reads"
+  },
+  {
+    "source": "ui-route:src/app/dreams/page.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0042"
+    ],
+    "id": "ui-route:src/app/dreams/page.tsx -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "ui-route:src/app/layout.tsx",
+    "target": "data:data/settings/custom_code.html",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0048"
+    ],
+    "id": "ui-route:src/app/layout.tsx -> data:data/settings/custom_code.html :: reads"
+  },
+  {
+    "source": "ui-route:src/app/layout.tsx",
+    "target": "data:data/settings/site_settings.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0049"
+    ],
+    "id": "ui-route:src/app/layout.tsx -> data:data/settings/site_settings.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/layout.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0047"
+    ],
+    "id": "ui-route:src/app/layout.tsx -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "ui-route:src/app/memory-map/page.tsx",
+    "target": "data:data/dreams",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0057"
+    ],
+    "id": "ui-route:src/app/memory-map/page.tsx -> data:data/dreams :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory-map/page.tsx",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0051",
+      "ev-0056"
+    ],
+    "id": "ui-route:src/app/memory-map/page.tsx -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory-map/page.tsx",
+    "target": "data:data/memory/index.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0054"
+    ],
+    "id": "ui-route:src/app/memory-map/page.tsx -> data:data/memory/index.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory-map/page.tsx",
+    "target": "data:data/memory/report.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0053"
+    ],
+    "id": "ui-route:src/app/memory-map/page.tsx -> data:data/memory/report.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory-map/page.tsx",
+    "target": "data:data/memory/traces",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0055"
+    ],
+    "id": "ui-route:src/app/memory-map/page.tsx -> data:data/memory/traces :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory-map/page.tsx",
+    "target": "data:data/sources",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0058"
+    ],
+    "id": "ui-route:src/app/memory-map/page.tsx -> data:data/sources :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory-map/page.tsx",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0052"
+    ],
+    "id": "ui-route:src/app/memory-map/page.tsx -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory-map/page.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0050"
+    ],
+    "id": "ui-route:src/app/memory-map/page.tsx -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "ui-route:src/app/memory/mutations/page.tsx",
+    "target": "data:data/dreams",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0066"
+    ],
+    "id": "ui-route:src/app/memory/mutations/page.tsx -> data:data/dreams :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory/mutations/page.tsx",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0060",
+      "ev-0065"
+    ],
+    "id": "ui-route:src/app/memory/mutations/page.tsx -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory/mutations/page.tsx",
+    "target": "data:data/memory/index.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0063"
+    ],
+    "id": "ui-route:src/app/memory/mutations/page.tsx -> data:data/memory/index.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory/mutations/page.tsx",
+    "target": "data:data/memory/report.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0062"
+    ],
+    "id": "ui-route:src/app/memory/mutations/page.tsx -> data:data/memory/report.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory/mutations/page.tsx",
+    "target": "data:data/memory/traces",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0064"
+    ],
+    "id": "ui-route:src/app/memory/mutations/page.tsx -> data:data/memory/traces :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory/mutations/page.tsx",
+    "target": "data:data/sources",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0067"
+    ],
+    "id": "ui-route:src/app/memory/mutations/page.tsx -> data:data/sources :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory/mutations/page.tsx",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0061"
+    ],
+    "id": "ui-route:src/app/memory/mutations/page.tsx -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory/mutations/page.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0059"
+    ],
+    "id": "ui-route:src/app/memory/mutations/page.tsx -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "ui-route:src/app/memory/page.tsx",
+    "target": "data:data/analysis/image_mutations.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.88,
+    "evidence_refs": [
+      "ev-0072"
+    ],
+    "id": "ui-route:src/app/memory/page.tsx -> data:data/analysis/image_mutations.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory/page.tsx",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0069"
+    ],
+    "id": "ui-route:src/app/memory/page.tsx -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory/page.tsx",
+    "target": "data:data/memory/report.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0073"
+    ],
+    "id": "ui-route:src/app/memory/page.tsx -> data:data/memory/report.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory/page.tsx",
+    "target": "data:data/memory/traces",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0074"
+    ],
+    "id": "ui-route:src/app/memory/page.tsx -> data:data/memory/traces :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory/page.tsx",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0070"
+    ],
+    "id": "ui-route:src/app/memory/page.tsx -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory/page.tsx",
+    "target": "data:data/yearly_reports",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0071"
+    ],
+    "id": "ui-route:src/app/memory/page.tsx -> data:data/yearly_reports :: reads"
+  },
+  {
+    "source": "ui-route:src/app/memory/page.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0068"
+    ],
+    "id": "ui-route:src/app/memory/page.tsx -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "ui-route:src/app/mood-map/page.tsx",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0076"
+    ],
+    "id": "ui-route:src/app/mood-map/page.tsx -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "ui-route:src/app/mood-map/page.tsx",
+    "target": "data:data/settings/rss_sources.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0078"
+    ],
+    "id": "ui-route:src/app/mood-map/page.tsx -> data:data/settings/rss_sources.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/mood-map/page.tsx",
+    "target": "data:data/settings/site_settings.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0079"
+    ],
+    "id": "ui-route:src/app/mood-map/page.tsx -> data:data/settings/site_settings.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/mood-map/page.tsx",
+    "target": "data:data/sources",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0077"
+    ],
+    "id": "ui-route:src/app/mood-map/page.tsx -> data:data/sources :: reads"
+  },
+  {
+    "source": "ui-route:src/app/mood-map/page.tsx",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0080"
+    ],
+    "id": "ui-route:src/app/mood-map/page.tsx -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/mood-map/page.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0075"
+    ],
+    "id": "ui-route:src/app/mood-map/page.tsx -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "ui-route:src/app/page.tsx",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0082",
+      "ev-0083"
+    ],
+    "id": "ui-route:src/app/page.tsx -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "ui-route:src/app/page.tsx",
+    "target": "data:data/settings/personality_settings.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0085"
+    ],
+    "id": "ui-route:src/app/page.tsx -> data:data/settings/personality_settings.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/page.tsx",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0084"
+    ],
+    "id": "ui-route:src/app/page.tsx -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/page.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0081"
+    ],
+    "id": "ui-route:src/app/page.tsx -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "ui-route:src/app/phone/page.tsx",
+    "target": "data:data/dreams",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0089"
+    ],
+    "id": "ui-route:src/app/phone/page.tsx -> data:data/dreams :: reads"
+  },
+  {
+    "source": "ui-route:src/app/phone/page.tsx",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0087",
+      "ev-0088"
+    ],
+    "id": "ui-route:src/app/phone/page.tsx -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "ui-route:src/app/phone/page.tsx",
+    "target": "data:data/memory/report.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0091"
+    ],
+    "id": "ui-route:src/app/phone/page.tsx -> data:data/memory/report.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/phone/page.tsx",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0090"
+    ],
+    "id": "ui-route:src/app/phone/page.tsx -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/phone/page.tsx",
+    "target": "data:data/visuals",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0092",
+      "ev-0093"
+    ],
+    "id": "ui-route:src/app/phone/page.tsx -> data:data/visuals :: reads"
+  },
+  {
+    "source": "ui-route:src/app/phone/page.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0086"
+    ],
+    "id": "ui-route:src/app/phone/page.tsx -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "ui-route:src/app/poem/[date]/page.tsx",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0095",
+      "ev-0096",
+      "ev-0097"
+    ],
+    "id": "ui-route:src/app/poem/[date]/page.tsx -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "ui-route:src/app/poem/[date]/page.tsx",
+    "target": "data:data/settings/personality_settings.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0099"
+    ],
+    "id": "ui-route:src/app/poem/[date]/page.tsx -> data:data/settings/personality_settings.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/poem/[date]/page.tsx",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0098"
+    ],
+    "id": "ui-route:src/app/poem/[date]/page.tsx -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/poem/[date]/page.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0094"
+    ],
+    "id": "ui-route:src/app/poem/[date]/page.tsx -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "ui-route:src/app/settings/page.tsx",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0101"
+    ],
+    "id": "ui-route:src/app/settings/page.tsx -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "ui-route:src/app/settings/page.tsx",
+    "target": "data:data/settings/rss_sources.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0102"
+    ],
+    "id": "ui-route:src/app/settings/page.tsx -> data:data/settings/rss_sources.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/settings/page.tsx",
+    "target": "data:data/settings/site_settings.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0103"
+    ],
+    "id": "ui-route:src/app/settings/page.tsx -> data:data/settings/site_settings.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/settings/page.tsx",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0104"
+    ],
+    "id": "ui-route:src/app/settings/page.tsx -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/settings/page.tsx",
+    "target": "data:data/world/ucu_beden_world.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0105"
+    ],
+    "id": "ui-route:src/app/settings/page.tsx -> data:data/world/ucu_beden_world.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/settings/page.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0100"
+    ],
+    "id": "ui-route:src/app/settings/page.tsx -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "ui-route:src/app/sources/health/page.tsx",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0107"
+    ],
+    "id": "ui-route:src/app/sources/health/page.tsx -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "ui-route:src/app/sources/health/page.tsx",
+    "target": "data:data/settings/rss_sources.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0109"
+    ],
+    "id": "ui-route:src/app/sources/health/page.tsx -> data:data/settings/rss_sources.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/sources/health/page.tsx",
+    "target": "data:data/sources",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0108"
+    ],
+    "id": "ui-route:src/app/sources/health/page.tsx -> data:data/sources :: reads"
+  },
+  {
+    "source": "ui-route:src/app/sources/health/page.tsx",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0110"
+    ],
+    "id": "ui-route:src/app/sources/health/page.tsx -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/sources/health/page.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0106"
+    ],
+    "id": "ui-route:src/app/sources/health/page.tsx -> db:json-filesystem :: uses_database"
+  },
+  {
+    "source": "ui-route:src/app/sources/page.tsx",
+    "target": "data:data/generated_poems",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0112"
+    ],
+    "id": "ui-route:src/app/sources/page.tsx -> data:data/generated_poems :: reads"
+  },
+  {
+    "source": "ui-route:src/app/sources/page.tsx",
+    "target": "data:data/sources",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0113"
+    ],
+    "id": "ui-route:src/app/sources/page.tsx -> data:data/sources :: reads"
+  },
+  {
+    "source": "ui-route:src/app/sources/page.tsx",
+    "target": "data:data/state/ucu_beden_state.json",
+    "relation": "reads",
+    "status": "observed",
+    "confidence": 0.9,
+    "evidence_refs": [
+      "ev-0114"
+    ],
+    "id": "ui-route:src/app/sources/page.tsx -> data:data/state/ucu_beden_state.json :: reads"
+  },
+  {
+    "source": "ui-route:src/app/sources/page.tsx",
+    "target": "db:json-filesystem",
+    "relation": "uses_database",
+    "status": "observed",
+    "confidence": 0.82,
+    "evidence_refs": [
+      "ev-0111"
+    ],
+    "id": "ui-route:src/app/sources/page.tsx -> db:json-filesystem :: uses_database"
+  }
+]

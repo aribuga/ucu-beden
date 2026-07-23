@@ -1,0 +1,67 @@
+[
+  {
+    "severity": "info",
+    "type": "gmail_not_observed",
+    "title": "Gmail node has no observed repo implementation",
+    "description": "No Gmail, IMAP, inbox, mailbox, or external_intake implementation was found in source, workflow, package, or settings files.",
+    "evidence_refs": [],
+    "metadata": {
+      "gmail_active": false,
+      "memory_connection_observed": false
+    },
+    "id": "alert-001"
+  },
+  {
+    "severity": "warning",
+    "type": "missing_source_digests",
+    "title": "Some source bundles do not have public source digests",
+    "description": "Source digest files are missing for source dates. This is likely a legacy gap rather than a scanner error.",
+    "evidence_refs": [],
+    "metadata": {
+      "missing_dates": [
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-06",
+        "2026-06-07",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-13"
+      ]
+    },
+    "id": "alert-002"
+  },
+  {
+    "severity": "warning",
+    "type": "visual_output_not_linked_to_memory_traces",
+    "title": "Visual outputs are present but visual memory traces are empty",
+    "description": "data/visuals exists, but current memory trace files contain no traces with source=visual.",
+    "evidence_refs": [],
+    "metadata": {
+      "visual_metadata_files": 99,
+      "memory_trace_source_counts": {
+        "daily_life": 150,
+        "dream": 49,
+        "poem": 50,
+        "source": 249,
+        "walk": 50,
+        "contact_residue": 8
+      }
+    },
+    "id": "alert-003"
+  },
+  {
+    "severity": "info",
+    "type": "possibly_unused_output",
+    "title": "Produced output has no observed reader: data/analysis/vocabulary_memory.json",
+    "description": "The scanner found a producer edge, but no observed read_by edge for this output.",
+    "evidence_refs": [],
+    "metadata": {
+      "node_id": "data:data/analysis/vocabulary_memory.json",
+      "file_path": "data/analysis/vocabulary_memory.json"
+    },
+    "id": "alert-004"
+  }
+]

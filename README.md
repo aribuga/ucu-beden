@@ -127,6 +127,7 @@ The home page preserves the poem archive on the left and adds a visual conscious
 - `/sources/health`
 - `/mood-map`
 - `/settings`
+- `/anatomy`
 - `/poem/YYYY-MM-DD`
 
 `/memory` reads `data/memory/report.json` when available and falls back to legacy state only when the trace report is missing. `/memory/mutations` shows the trace mutation graph. `/memory-map` is a separate visual memory map with a focused near-field view and a full memory view. `/phone` is a standalone UCU BEDEN device interface with live HTML/CSS apps for gallery, notes, weather, memory, contacts, and messages.
@@ -187,6 +188,79 @@ npm run validate:memory
 npm run debug:memory-cycle
 npm run debug:latest-memory
 ```
+
+## Anatomy Graph
+
+`/anatomy` is a local, read-only system map for the scanner output. It visualizes the current repository anatomy from these files only:
+
+```txt
+graph/nodes.json
+graph/edges.json
+graph/evidence.json
+graph/alerts.json
+graph/scan-summary.json
+```
+
+Start the local UI:
+
+```bash
+npm run dev
+```
+
+Then open `/anatomy`. The page does not run the scanner, trigger schedulers, call OpenAI, change Gmail, or edit graph data. The `Reload JSON` button only reloads the page so the latest already-written graph JSON can be read again. Run the scanner separately when the graph needs to be refreshed:
+
+```bash
+npm run scan:graph
+npm run validate:graph
+```
+
+This first UI uses the existing Next/React/TypeScript app instead of adding a separate Vite/React Flow app. The current local bundled runtime does not include `npm`, so adding new packages was avoided. The canvas is a read-only SVG node map with zoom, pan, draggable local-only layout, search, filters, alerts, and an inspector. Dragged positions are stored only in browser `localStorage`; scanner JSON is never modified.
+
+The UI has four read-only views:
+
+- `Overview`: default minimal projection. It groups real scanner nodes into broad system regions such as External Sources, Ingestion, Memory, Context Assembly, Generation, Outputs, and Observability. Overview group nodes keep `memberNodeIds`, and grouped edges keep `memberEdgeIds`; no separate graph source is created.
+- `Anatomy`: the practical system graph. It hides presentation/UI-only nodes, test/demo helpers, and secondary helper edges by default so the main data flow is easier to follow.
+- `Technical`: the detailed graph surface. Presentation/UI-only nodes can be revealed with `Show presentation/UI-only nodes`.
+- `Alerts`: scanner alerts with links back to the graph.
+
+View state is remembered locally and can also be shared with `/anatomy?view=overview`, `/anatomy?view=anatomy`, or `/anatomy?view=technical`.
+
+Presentation classification is a UI projection only. The raw scanner output is not rewritten. UI components and routes with observed reads, writes, storage access, API calls, or memory access are treated as `interface / data-flow`. Static presentation, styling, layout, hook, formatter, and decorative UI nodes are treated as `presentation / ui-only` and are hidden by default.
+
+`Focus` mode can be enabled from a selected node or edge. It shows the selected item plus one upstream and one downstream connection level, dimming the rest of the graph. Double-clicking an Overview group opens Anatomy focused on the real nodes inside that group.
+
+Node status meanings:
+
+- `defined`: scanner found code/config/file evidence, but no runtime event time is measured.
+- `active`: reserved for future runtime evidence such as a measured last run.
+- `inactive`: scanner found the node but marked it inactive.
+- `broken`: a required source/target or relation is missing.
+- `unknown`: runtime state is not measured.
+
+Edge status meanings:
+
+- `observed`: direct scanner evidence exists, such as a workflow command, function call, or file read/write call.
+- `inferred`: probable relation, but not promoted to direct fact.
+- `planned`: not implemented as a real connection.
+- `broken`: endpoint or required relation is missing.
+
+Confidence is the scanner's confidence in the relation or node detection, not a runtime success rate. Missing runtime metrics are shown as `Not measured` or `No runtime data` instead of `0`.
+
+Gmail reading: the UI follows scanner evidence. If `external:gmail` has no observed script, storage output, or memory edge, Overview surfaces it as an External Sources issue and the detailed views show it as an orphan source with `Memory connection: none observed` and `Output influence: 0% by graph evidence`. The UI must not draw a planned Gmail-to-memory edge unless the scanner outputs one.
+
+Known limitations:
+
+- The UI does not execute scanner refreshes itself.
+- Static builds include the graph state available at build time; local dev reloads can reflect newly written graph JSON.
+- Layout is heuristic and local-only.
+- The canvas is ComfyUI-like, but not powered by React Flow in this first version.
+
+Next phase ideas:
+
+- Add a small local-only API for live graph reloads in non-export mode.
+- Add React Flow once package installation is available.
+- Add runtime event timestamps to scanner output.
+- Add a true Gmail intake node only after a real repo script/storage path exists.
 
 
 
