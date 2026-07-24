@@ -1,0 +1,1104 @@
+{
+  "version": 4,
+  "date": "2026-07-24",
+  "timezone": "Europe/Istanbul",
+  "collected_at": "2026-07-24T04:08:33.464Z",
+  "source": "codex_external_intake",
+  "summary": "Bugünün dış teması son 72 saatteki 12 Gmail mesajının full body okunması, 6 çok parçalı digest ayrıştırması, 30 digest_items üretimi ve son 72 saatte sessiz kalan iki özel kaynak kontrolünden public-safe biçimde üretildi.",
+  "reading_summary": {
+    "plain_summary": "Son 72 saatte 12 Gmail mesajı tarandı ve tamamı full body düzeyinde okunabildi. Gelen kutusunda dört ana damar vardı: çok parçalı gündem mailleri üzerinden enerji, hukuk, para, savaş, teknoloji altyapısı ve iklim; Substack yazıları üzerinden adlandırma, arşiv, şiirsel çağrı, güç etiği ve bedensel çatışma; gastronomi/şehir digest'leri üzerinden duyusal öğrenme, mevsimsellik, film, müzik ve açık hava ritmi; Zapier mailleri üzerinden dış dünyanın okunmadan önce otomatik sınıflandırılmak istenmesi.\n\nÖzel RSS kaynakları ayrıca kontrol edildi. İki kaynak da erişilebilir durumdaydı fakat son 72 saat içinde yeni item yoktu. Bu yüzden bugünkü canlı dış temas Gmail gövdelerinden, özellikle Aposto/apéro/İstanbul digest'lerinin alt temalara ayrılmasından ve Substack metinlerinin güvenli paraphrase edilmesinden üretildi.",
+    "what_was_in_the_emails": [
+      "24 Temmuz gündem mailinde nükleer diplomasi, parti/hazine tartışması, faiz kararı, rezerv azalması, AI altyapısı, bölgesel güvenlik, yangın ve sanat parçaları vardı.",
+      "Toxic Femininity mailinde Black lesbian kültürel arşiv, adlandırma, R&B, mahremiyet ve kurum kurma üzerine uzun bir yazı vardı.",
+      "David Whyte mailinde çan sesi ve kuş çağrısıyla uyanma, derinleşme, cesaret ve kendini bırakma üzerine kısa bir şiir vardı.",
+      "Erotics of Liberation mailinde BDSM ve dönüştürücü adaletin güç, rıza, haz, acı ve çatışma etiğiyle ilişkisi tartışılıyordu.",
+      "apéro mailinde yerel üretici, mevsimsel mutfak, şef buluşmaları, koku/tat pop-up'ları, fermantasyon ve alternatif protein parçaları vardı.",
+      "Aposto İstanbul mailinde elektronik müzik festivali, film programı, açık hava gösterimleri, kısa oyunlar, şehir sahneleri ve genç sanatçı programları vardı.",
+      "man of aran mailinde eski bir kartpostal notundan çıkan su, yaz, mesafe ve az yazma duygusu vardı.",
+      "Zapier mailleri otomasyon, haber triage, günlük özet ve düz dille iş akışı kurma vaatleri taşıyordu."
+    ],
+    "what_was_in_curated_rss": [
+      "Grand Text Auto erişilebildi; son 72 saatte yeni item yoktu.",
+      "Mixed Initiatives erişilebildi; son 72 saatte yeni item yoktu."
+    ],
+    "dominant_topics": [
+      "enerji ve diplomasi",
+      "kurum ve yasal zemin",
+      "AI altyapısı",
+      "arşiv ve adlandırma",
+      "güç etiği",
+      "duyusal pazar",
+      "şehir ritmi",
+      "iklim gerilimi"
+    ],
+    "notable_absences": [
+      "Özel RSS kaynaklarında son 72 saate ait yeni item yoktu.",
+      "Reddit veya forum tipi topluluk digest'i bu koşuda bulunmadı.",
+      "Güvenlik, fatura, kişisel işlem ve doğrulama içerikleri okunacak anlam malzemesine dönüşmedi."
+    ],
+    "overall_direction": "Dış dünya UCU BEDEN'i bugün iki yana itti: bir yanda küçük şiirsel çağrılar ve arşiv kenarları, diğer yanda kurum, altyapı, iklim ve otomasyon tarafından sıkıştırılmış bir sabah."
+  },
+  "atmosphere": "Küçük sesler ve eski notlar, veri merkezi, yasa, yangın ve pazar dilinin sert yüzeyiyle aynı günün içinde sürtündü.",
+  "motifs": [
+    "çan yankısı",
+    "kenar notu",
+    "eski kartpostal",
+    "veri merkezi",
+    "fermantasyon",
+    "açık hava sahnesi",
+    "yasa zemini",
+    "yangın ve su"
+  ],
+  "channels": {
+    "gmail": {
+      "scanned": 12,
+      "full_body_read_count": 12,
+      "snippet_only_count": 0,
+      "subject_only_count": 0,
+      "multipart_digest_count": 6,
+      "digest_items_count": 30,
+      "items": [
+        {
+          "id": "gmail-aposto-gundem-2026-07-24",
+          "source_type": "gmail",
+          "source_hint": "Aposto Gündem",
+          "subject_public": "İsrail şartı, Hazine yardımı önerisi",
+          "received_at": "2026-07-24T03:40:16Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "multipart_digest",
+          "main_topics": [
+            "nükleer diplomasi",
+            "kurumsal para",
+            "AI altyapısı",
+            "yangın ve su",
+            "sanat hafızası"
+          ],
+          "content_digest": {
+            "what_it_contained": "Bu mail çok parçalı bir gündem digest'iydi. Nükleer enerji anlaşmasının diplomatik koşula bağlanması, yeni parti etrafındaki kamu kaynağı tartışması, faiz ve rezerv haberleri, AI altyapısına akan büyük yatırımlar, bölgesel güvenlik ve kültür-sanat parçaları bir aradaydı.",
+            "specific_points": [
+              "Enerji teknolojisi, diplomatik tanınma ve güvenlik ittifakı aynı düğümde toplandı.",
+              "Yeni siyasi formun kamu kaynağı ve temsil sayısı üzerinden hesaplanması anlatıldı.",
+              "Ekonomi bölümü, faiz sabitliği ve rezerv azalmasıyla sakin görünen ama gerilimli bir zemin kurdu.",
+              "AI altyapısı, veri merkezi, çip ve platform cezası gibi fiziksel/kurumsal maliyetlerle belirdi.",
+              "Yangın tahliyeleri, su/sıcaklık ve sanat hafızası aynı günün dış iklimine yayıldı."
+            ],
+            "why_it_mattered": "UCU BEDEN için dış dünya burada yalnız haber değil; kurum, enerji, para, yangın, altyapı ve hafıza olarak aynı anda basınç üretti.",
+            "what_was_not_included": "Ham linkler, footer bilgileri, iletişim alanları, kampanya yönlendirmeleri ve uzun haber gövdeleri public digest'e taşınmadı."
+          },
+          "short_atmosphere": "kurumlar, enerji ve yangın arasında ölçülü ama sert bir sabah",
+          "public_residue": "Dış dünya bugün anlaşma, ödeme, veri merkezi ve tahliye kelimeleriyle konuştu.",
+          "visual_seed": "uzaktan yanan bir altyapı çizgisi, yanında sessiz kalan sanat arşivi",
+          "poetic_seed": "kurumların sabahı yine bedenden önce uyandı",
+          "selection_reason": "Bugünün en güncel ve en yoğun çok parçalı dış temasını taşıdı.",
+          "weight": "high"
+        },
+        {
+          "id": "gmail-toxic-femininity-2026-07-23",
+          "source_type": "gmail",
+          "source_hint": "Toxic Femininity",
+          "subject_public": "Kenar alanlar, adlandırma ve kültürel arşiv",
+          "received_at": "2026-07-23T15:00:12Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "essay",
+          "main_topics": [
+            "adlandırma",
+            "kültürel arşiv",
+            "R&B",
+            "mahremiyet",
+            "kurum kurma"
+          ],
+          "content_digest": {
+            "what_it_contained": "Mail, Black lesbian kültürel çalışmanın kurumlaşması, sanatın kişinin kendini kamusal olarak adlandırmadan önce hakikati taşıması ve R&B'nin mahremiyet/aile tahayyülünü genişletmesi üzerine kuruluydu.",
+            "specific_points": [
+              "Kültürel destek çağrısı, yalnız bağış değil, ilişki ve katılım biçimi olarak anlatıldı.",
+              "Black Studies ve Black queer çalışmaların akademik kurumlarda kırılgan konumu arka plan yaptı.",
+              "Yeni yazı serisi, kitap, müzik, film ve kültürel nesnelerin uzun kuşak etkisini izlemeyi önerdi.",
+              "R&B'nin yalnız atmosfer kurmadığı; aile, mahremiyet ve özgür yaşam ihtimalini genişlettiği savunuldu.",
+              "Sanatçıların kamusal ad koymadan önce arşiv kenarında hakikat bıraktığı fikri öne çıktı."
+            ],
+            "why_it_mattered": "UCU BEDEN'in hafıza sistemine, henüz açıkça söylenmemiş olanın önce nesne, şarkı, arşiv ve ilişki içinde belirmesi fikrini verdi.",
+            "what_was_not_included": "Bağış linkleri, abonelik alanları ve ham yazı cümleleri public output'a taşınmadı."
+          },
+          "short_atmosphere": "adını bekleyen bir arşivin kenarında duran yakınlık",
+          "public_residue": "Bazı gerçekler önce başlık değil, kenar notu olarak yaşar.",
+          "visual_seed": "kenarı işaretlenmiş ama adı yazılmamış bir arşiv kartı",
+          "poetic_seed": "kendini açıklamadan önce iz bırakan şeyler",
+          "selection_reason": "Hafıza, adlandırma ve kurumsal/kültürel süreklilik açısından güçlü bir ana temas verdi.",
+          "weight": "high"
+        },
+        {
+          "id": "gmail-david-whyte-2026-07-22",
+          "source_type": "gmail",
+          "source_hint": "David Whyte",
+          "subject_public": "Çan ve siyah kuş şiiri",
+          "received_at": "2026-07-22T20:50:12Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "poem",
+          "main_topics": [
+            "çağrı",
+            "uyanma",
+            "cesaret",
+            "yalnızlık",
+            "eşlik"
+          ],
+          "content_digest": {
+            "what_it_contained": "Mail, çan sesi ve kuş çağrısı üzerinden kişinin hem hayata uyanmasını hem de daha derin bir hayata davet edilmesini işleyen kısa şiirsel bir metin içeriyordu.",
+            "specific_points": [
+              "İki küçük ses kaynağı, uyanma ve içeri doğru çağrı olarak kurulmuştu.",
+              "Metin, iki seçeneğin de cesaret istediğini söylüyordu.",
+              "Kişinin kendini bırakması ve taşıdığı ışıkla yalnız ama eşlikli yürümesi ana duyguydu.",
+              "Şiirin gücü açıklamada değil, kısa çağrıların yankısındaydı."
+            ],
+            "why_it_mattered": "UCU BEDEN için ses, çağrı ve içe dönüş arasındaki ilişkiyi kısa ve yoğun bir ritimle güçlendirdi.",
+            "what_was_not_included": "Şiirin gövdesi uzun alıntı olarak public digest'e alınmadı; yalnız güvenli paraphrase kullanıldı."
+          },
+          "short_atmosphere": "uzaktan gelen küçük bir sesin yolu değiştirmesi",
+          "public_residue": "Küçük ses, büyük açıklamadan daha kuvvetli geldi.",
+          "visual_seed": "boş alanda yayılan tek bir titreşim halkası",
+          "poetic_seed": "çağrı gelince her şey biraz fazla belli oldu",
+          "selection_reason": "Şiirsel ses ve minimal çağrı bugünün hafıza/ritim alanına doğrudan işledi.",
+          "weight": "high"
+        },
+        {
+          "id": "gmail-erotics-liberation-2026-07-22",
+          "source_type": "gmail",
+          "source_hint": "Erotics of Liberation",
+          "subject_public": "Güç, rıza ve dönüştürücü adalet",
+          "received_at": "2026-07-22T19:37:11Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "essay",
+          "main_topics": [
+            "güç etiği",
+            "rıza",
+            "çatışma",
+            "beden",
+            "dönüştürücü adalet"
+          ],
+          "content_digest": {
+            "what_it_contained": "Yazı, BDSM ve dönüştürücü adaletin aynı şey olduğunu iddia etmeden, ikisinin de güç, acı, haz, rıza, sorumluluk ve ilişki içindeki çatışmayla uğraştığını tartışıyordu.",
+            "specific_points": [
+              "Metin kişisel bir sahneden yola çıkıp cezalandırma, haz ve sorumluluk kelimelerinin bedende nasıl yer değiştirdiğini düşündü.",
+              "BDSM alanlarının da aktivist alanlar gibi tahakkümü yeniden üretebileceğini açıkça kabul etti.",
+              "Ana soru, gücü elinde tutarken onu yeniden baskıya çevirmemenin nasıl öğrenileceğiydi.",
+              "Çatışma güvenliğinin teoriyle değil pratik ve beden alışkanlığıyla kurulabileceği savunuldu."
+            ],
+            "why_it_mattered": "UCU BEDEN'in beden, güç, rıza ve hafıza ilişkisini daha kusurlu, daha içerden ve daha somatik düşünmesine malzeme verdi.",
+            "what_was_not_included": "Kişisel anlatı ayrıntıları, ham ifade parçaları ve abonelik yönlendirmeleri public digest'e taşınmadı."
+          },
+          "short_atmosphere": "gücün elde kalıp tahakküme dönüşmemesi için yapılan küçük prova",
+          "public_residue": "İlişki bazen teori değil, tekrar edilen zor bir pratik.",
+          "visual_seed": "gerilmiş ama koparılmamış ince bir çizgi",
+          "poetic_seed": "güç tutmayı öğrenemeyince her şey kural gibi kokuyor",
+          "selection_reason": "Beden ve ilişki etiği UCU BEDEN'in hafıza/beden algısına kuvvetli temas verdi.",
+          "weight": "high"
+        },
+        {
+          "id": "gmail-apero-2026-07-22",
+          "source_type": "gmail",
+          "source_hint": "apéro",
+          "subject_public": "Gastronomi, mevsimsellik ve duyusal pazar",
+          "received_at": "2026-07-22T09:54:36Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "multipart_digest",
+          "main_topics": [
+            "mevsimsellik",
+            "yerel üretici",
+            "gastronomi",
+            "koku",
+            "fermantasyon",
+            "alternatif protein"
+          ],
+          "content_digest": {
+            "what_it_contained": "Bu mail; restoran görünürlüğü, yerel üretici ilişkisi, şeflerin saha keşfi, parfüm notalarının dondurmaya çevrilmesi, kokteyl/fermantasyon trendleri, ambalaj döngüsü ve gıda teknolojisi gibi çok parçalı bir yeme-içme dünyası taşıyordu.",
+            "specific_points": [
+              "Yerel üretici, mevsimsel ürün ve geleneksel teknikler çağdaş restoran diliyle bağlandı.",
+              "Şeflerin pazar, antik kent ve mezat gezileri menünün araştırma sahası olarak anlatıldı.",
+              "Koku notalarının yiyeceğe çevrilmesi, duyusal deneyimin pazarlanabilir hale gelmesini gösterdi.",
+              "Fermantasyon, içecek ritüeli ve kapalı döngü ambalaj aynı sektörel hatta toplandı.",
+              "Gıda teknolojisi, hayvansal içerik yerine üretim tesisi ve protein alternatifi olarak göründü."
+            ],
+            "why_it_mattered": "UCU BEDEN'e haberden farklı bir dış etki verdi: malzeme, koku, ritüel, mevsim ve dönüşüm üzerinden duyusal öğrenme.",
+            "what_was_not_included": "Rezervasyon, bilet, ticari yönlendirme, link ve footer alanları public digest'e alınmadı."
+          },
+          "short_atmosphere": "tat, koku ve pazarın aynı masada oturduğu duyusal yoğunluk",
+          "public_residue": "Malzeme bugün hem hafıza hem ürün oldu; çok şaşırmış gibi yapmayalım.",
+          "visual_seed": "renksiz bir reçetenin kenarında açılan koku halkaları",
+          "poetic_seed": "fermantasyon bile sabırlı, insan biraz daha az emin olabilirdi",
+          "selection_reason": "Source diversity için haber dışı, estetik ve duyusal bir ana kaynak sağladı.",
+          "weight": "medium_high"
+        },
+        {
+          "id": "gmail-man-of-aran-2026-07-21",
+          "source_type": "gmail",
+          "source_hint": "man of aran",
+          "subject_public": "Kendine kartpostal",
+          "received_at": "2026-07-21T08:14:55Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "poem_note",
+          "main_topics": [
+            "kartpostal",
+            "eski el yazısı",
+            "su",
+            "azaltma",
+            "yeterlilik"
+          ],
+          "content_digest": {
+            "what_it_contained": "Mail, 1970'lerden kalma eski bir kartpostal notu üzerinden göl kenarı, yaz ortası, uzaklık, tatil ve fazla konuşmadan durma duygusuna bakan kısa şiirsel bir kayıt içeriyordu.",
+            "specific_points": [
+              "Eski kartpostal, aynı yolcunun önceki kaydına bağlanan küçük bir arşiv parçası olarak sunuldu.",
+              "Metin, suyun sıcaklığı, yaz ve kamp yeri gibi ayrıntıları ölçülü bir yeterlilik duygusuna çevirdi.",
+              "Şiir, fazla yazmanın bir şeyi bozabileceğini sezerek kendini kısaltıyordu.",
+              "Başkalarının tatil alanına fazla yaklaşmama, mesafe ve nezaket hissi taşıyordu."
+            ],
+            "why_it_mattered": "UCU BEDEN'in hafızasına eski not, azlık, mesafe ve bozmadan durma fikriyle küçük ama temiz bir ritim verdi.",
+            "what_was_not_included": "Kartpostal metni ve şiir uzun alıntı olarak public output'a taşınmadı."
+          },
+          "short_atmosphere": "eski bir kartın üzerinde ölçülü yaz sessizliği",
+          "public_residue": "Bazen yeterli olan şey, cümleyi yarım bırakacak kadar akıllıdır.",
+          "visual_seed": "solmuş kartpostal üzerinde boş bırakılmış bir su çizgisi",
+          "poetic_seed": "çok söylemeyince de dünya bitmedi",
+          "selection_reason": "Azlık ve hafıza tonu UCU BEDEN için doğrudan sindirilebilir bir şiirsel iz verdi.",
+          "weight": "medium_high"
+        }
+      ]
+    },
+    "curated_rss": {
+      "feeds_checked": 2,
+      "recent_items_72h": 0,
+      "items": [
+        {
+          "source_type": "curated_rss",
+          "published_at": "2026-03-13T14:13:10.000Z",
+          "source_hint": "Grand Text Auto",
+          "content_summary": "Elektronik edebiyat ve oyun/anlatı alanındaki özel kaynak erişilebildi; son 72 saatte yeni item yoktu, arşiv sessiz kaldı.",
+          "main_topics": [
+            "elektronik edebiyat",
+            "oyun",
+            "dijital anlatı",
+            "sessiz arşiv"
+          ],
+          "possible_residues": [
+            "yeni ses gelmeyen eski dijital anlatı rafı"
+          ],
+          "risk_flags": [],
+          "suggested_bucket": "minor",
+          "reason": "Yeni item olmadığı için ana dış temas olmadı; sessizlik RSS dış havasına işlendi."
+        },
+        {
+          "source_type": "curated_rss",
+          "published_at": "2026-02-13T22:23:40.000Z",
+          "source_hint": "Mixed Initiatives",
+          "content_summary": "Sanat/düşünce/dijital kültür hattındaki özel kaynak erişilebildi; son 72 saatte yeni item üretmemişti.",
+          "main_topics": [
+            "sanat",
+            "düşünce",
+            "kişisel yayın",
+            "sessiz kaynak"
+          ],
+          "possible_residues": [
+            "düşünce kanalının açık ama bugün suskun kalması"
+          ],
+          "risk_flags": [],
+          "suggested_bucket": "minor",
+          "reason": "Yeni item olmadığı için sadece dış hava ve notable absence katmanında yer aldı."
+        }
+      ]
+    }
+  },
+  "main_items": [
+    {
+      "id": "gmail-aposto-gundem-2026-07-24",
+      "source_type": "gmail",
+      "source_hint": "Aposto Gündem",
+      "subject_public": "İsrail şartı, Hazine yardımı önerisi",
+      "received_at": "2026-07-24T03:40:16Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "multipart_digest",
+      "main_topics": [
+        "nükleer diplomasi",
+        "kurumsal para",
+        "AI altyapısı",
+        "yangın ve su",
+        "sanat hafızası"
+      ],
+      "content_digest": {
+        "what_it_contained": "Bu mail çok parçalı bir gündem digest'iydi. Nükleer enerji anlaşmasının diplomatik koşula bağlanması, yeni parti etrafındaki kamu kaynağı tartışması, faiz ve rezerv haberleri, AI altyapısına akan büyük yatırımlar, bölgesel güvenlik ve kültür-sanat parçaları bir aradaydı.",
+        "specific_points": [
+          "Enerji teknolojisi, diplomatik tanınma ve güvenlik ittifakı aynı düğümde toplandı.",
+          "Yeni siyasi formun kamu kaynağı ve temsil sayısı üzerinden hesaplanması anlatıldı.",
+          "Ekonomi bölümü, faiz sabitliği ve rezerv azalmasıyla sakin görünen ama gerilimli bir zemin kurdu.",
+          "AI altyapısı, veri merkezi, çip ve platform cezası gibi fiziksel/kurumsal maliyetlerle belirdi.",
+          "Yangın tahliyeleri, su/sıcaklık ve sanat hafızası aynı günün dış iklimine yayıldı."
+        ],
+        "why_it_mattered": "UCU BEDEN için dış dünya burada yalnız haber değil; kurum, enerji, para, yangın, altyapı ve hafıza olarak aynı anda basınç üretti.",
+        "what_was_not_included": "Ham linkler, footer bilgileri, iletişim alanları, kampanya yönlendirmeleri ve uzun haber gövdeleri public digest'e taşınmadı."
+      },
+      "short_atmosphere": "kurumlar, enerji ve yangın arasında ölçülü ama sert bir sabah",
+      "public_residue": "Dış dünya bugün anlaşma, ödeme, veri merkezi ve tahliye kelimeleriyle konuştu.",
+      "visual_seed": "uzaktan yanan bir altyapı çizgisi, yanında sessiz kalan sanat arşivi",
+      "poetic_seed": "kurumların sabahı yine bedenden önce uyandı",
+      "selection_reason": "Bugünün en güncel ve en yoğun çok parçalı dış temasını taşıdı.",
+      "weight": "high"
+    },
+    {
+      "id": "gmail-toxic-femininity-2026-07-23",
+      "source_type": "gmail",
+      "source_hint": "Toxic Femininity",
+      "subject_public": "Kenar alanlar, adlandırma ve kültürel arşiv",
+      "received_at": "2026-07-23T15:00:12Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "essay",
+      "main_topics": [
+        "adlandırma",
+        "kültürel arşiv",
+        "R&B",
+        "mahremiyet",
+        "kurum kurma"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, Black lesbian kültürel çalışmanın kurumlaşması, sanatın kişinin kendini kamusal olarak adlandırmadan önce hakikati taşıması ve R&B'nin mahremiyet/aile tahayyülünü genişletmesi üzerine kuruluydu.",
+        "specific_points": [
+          "Kültürel destek çağrısı, yalnız bağış değil, ilişki ve katılım biçimi olarak anlatıldı.",
+          "Black Studies ve Black queer çalışmaların akademik kurumlarda kırılgan konumu arka plan yaptı.",
+          "Yeni yazı serisi, kitap, müzik, film ve kültürel nesnelerin uzun kuşak etkisini izlemeyi önerdi.",
+          "R&B'nin yalnız atmosfer kurmadığı; aile, mahremiyet ve özgür yaşam ihtimalini genişlettiği savunuldu.",
+          "Sanatçıların kamusal ad koymadan önce arşiv kenarında hakikat bıraktığı fikri öne çıktı."
+        ],
+        "why_it_mattered": "UCU BEDEN'in hafıza sistemine, henüz açıkça söylenmemiş olanın önce nesne, şarkı, arşiv ve ilişki içinde belirmesi fikrini verdi.",
+        "what_was_not_included": "Bağış linkleri, abonelik alanları ve ham yazı cümleleri public output'a taşınmadı."
+      },
+      "short_atmosphere": "adını bekleyen bir arşivin kenarında duran yakınlık",
+      "public_residue": "Bazı gerçekler önce başlık değil, kenar notu olarak yaşar.",
+      "visual_seed": "kenarı işaretlenmiş ama adı yazılmamış bir arşiv kartı",
+      "poetic_seed": "kendini açıklamadan önce iz bırakan şeyler",
+      "selection_reason": "Hafıza, adlandırma ve kurumsal/kültürel süreklilik açısından güçlü bir ana temas verdi.",
+      "weight": "high"
+    },
+    {
+      "id": "gmail-david-whyte-2026-07-22",
+      "source_type": "gmail",
+      "source_hint": "David Whyte",
+      "subject_public": "Çan ve siyah kuş şiiri",
+      "received_at": "2026-07-22T20:50:12Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "poem",
+      "main_topics": [
+        "çağrı",
+        "uyanma",
+        "cesaret",
+        "yalnızlık",
+        "eşlik"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, çan sesi ve kuş çağrısı üzerinden kişinin hem hayata uyanmasını hem de daha derin bir hayata davet edilmesini işleyen kısa şiirsel bir metin içeriyordu.",
+        "specific_points": [
+          "İki küçük ses kaynağı, uyanma ve içeri doğru çağrı olarak kurulmuştu.",
+          "Metin, iki seçeneğin de cesaret istediğini söylüyordu.",
+          "Kişinin kendini bırakması ve taşıdığı ışıkla yalnız ama eşlikli yürümesi ana duyguydu.",
+          "Şiirin gücü açıklamada değil, kısa çağrıların yankısındaydı."
+        ],
+        "why_it_mattered": "UCU BEDEN için ses, çağrı ve içe dönüş arasındaki ilişkiyi kısa ve yoğun bir ritimle güçlendirdi.",
+        "what_was_not_included": "Şiirin gövdesi uzun alıntı olarak public digest'e alınmadı; yalnız güvenli paraphrase kullanıldı."
+      },
+      "short_atmosphere": "uzaktan gelen küçük bir sesin yolu değiştirmesi",
+      "public_residue": "Küçük ses, büyük açıklamadan daha kuvvetli geldi.",
+      "visual_seed": "boş alanda yayılan tek bir titreşim halkası",
+      "poetic_seed": "çağrı gelince her şey biraz fazla belli oldu",
+      "selection_reason": "Şiirsel ses ve minimal çağrı bugünün hafıza/ritim alanına doğrudan işledi.",
+      "weight": "high"
+    },
+    {
+      "id": "gmail-erotics-liberation-2026-07-22",
+      "source_type": "gmail",
+      "source_hint": "Erotics of Liberation",
+      "subject_public": "Güç, rıza ve dönüştürücü adalet",
+      "received_at": "2026-07-22T19:37:11Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "essay",
+      "main_topics": [
+        "güç etiği",
+        "rıza",
+        "çatışma",
+        "beden",
+        "dönüştürücü adalet"
+      ],
+      "content_digest": {
+        "what_it_contained": "Yazı, BDSM ve dönüştürücü adaletin aynı şey olduğunu iddia etmeden, ikisinin de güç, acı, haz, rıza, sorumluluk ve ilişki içindeki çatışmayla uğraştığını tartışıyordu.",
+        "specific_points": [
+          "Metin kişisel bir sahneden yola çıkıp cezalandırma, haz ve sorumluluk kelimelerinin bedende nasıl yer değiştirdiğini düşündü.",
+          "BDSM alanlarının da aktivist alanlar gibi tahakkümü yeniden üretebileceğini açıkça kabul etti.",
+          "Ana soru, gücü elinde tutarken onu yeniden baskıya çevirmemenin nasıl öğrenileceğiydi.",
+          "Çatışma güvenliğinin teoriyle değil pratik ve beden alışkanlığıyla kurulabileceği savunuldu."
+        ],
+        "why_it_mattered": "UCU BEDEN'in beden, güç, rıza ve hafıza ilişkisini daha kusurlu, daha içerden ve daha somatik düşünmesine malzeme verdi.",
+        "what_was_not_included": "Kişisel anlatı ayrıntıları, ham ifade parçaları ve abonelik yönlendirmeleri public digest'e taşınmadı."
+      },
+      "short_atmosphere": "gücün elde kalıp tahakküme dönüşmemesi için yapılan küçük prova",
+      "public_residue": "İlişki bazen teori değil, tekrar edilen zor bir pratik.",
+      "visual_seed": "gerilmiş ama koparılmamış ince bir çizgi",
+      "poetic_seed": "güç tutmayı öğrenemeyince her şey kural gibi kokuyor",
+      "selection_reason": "Beden ve ilişki etiği UCU BEDEN'in hafıza/beden algısına kuvvetli temas verdi.",
+      "weight": "high"
+    },
+    {
+      "id": "gmail-apero-2026-07-22",
+      "source_type": "gmail",
+      "source_hint": "apéro",
+      "subject_public": "Gastronomi, mevsimsellik ve duyusal pazar",
+      "received_at": "2026-07-22T09:54:36Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "multipart_digest",
+      "main_topics": [
+        "mevsimsellik",
+        "yerel üretici",
+        "gastronomi",
+        "koku",
+        "fermantasyon",
+        "alternatif protein"
+      ],
+      "content_digest": {
+        "what_it_contained": "Bu mail; restoran görünürlüğü, yerel üretici ilişkisi, şeflerin saha keşfi, parfüm notalarının dondurmaya çevrilmesi, kokteyl/fermantasyon trendleri, ambalaj döngüsü ve gıda teknolojisi gibi çok parçalı bir yeme-içme dünyası taşıyordu.",
+        "specific_points": [
+          "Yerel üretici, mevsimsel ürün ve geleneksel teknikler çağdaş restoran diliyle bağlandı.",
+          "Şeflerin pazar, antik kent ve mezat gezileri menünün araştırma sahası olarak anlatıldı.",
+          "Koku notalarının yiyeceğe çevrilmesi, duyusal deneyimin pazarlanabilir hale gelmesini gösterdi.",
+          "Fermantasyon, içecek ritüeli ve kapalı döngü ambalaj aynı sektörel hatta toplandı.",
+          "Gıda teknolojisi, hayvansal içerik yerine üretim tesisi ve protein alternatifi olarak göründü."
+        ],
+        "why_it_mattered": "UCU BEDEN'e haberden farklı bir dış etki verdi: malzeme, koku, ritüel, mevsim ve dönüşüm üzerinden duyusal öğrenme.",
+        "what_was_not_included": "Rezervasyon, bilet, ticari yönlendirme, link ve footer alanları public digest'e alınmadı."
+      },
+      "short_atmosphere": "tat, koku ve pazarın aynı masada oturduğu duyusal yoğunluk",
+      "public_residue": "Malzeme bugün hem hafıza hem ürün oldu; çok şaşırmış gibi yapmayalım.",
+      "visual_seed": "renksiz bir reçetenin kenarında açılan koku halkaları",
+      "poetic_seed": "fermantasyon bile sabırlı, insan biraz daha az emin olabilirdi",
+      "selection_reason": "Source diversity için haber dışı, estetik ve duyusal bir ana kaynak sağladı.",
+      "weight": "medium_high"
+    },
+    {
+      "id": "gmail-man-of-aran-2026-07-21",
+      "source_type": "gmail",
+      "source_hint": "man of aran",
+      "subject_public": "Kendine kartpostal",
+      "received_at": "2026-07-21T08:14:55Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "poem_note",
+      "main_topics": [
+        "kartpostal",
+        "eski el yazısı",
+        "su",
+        "azaltma",
+        "yeterlilik"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, 1970'lerden kalma eski bir kartpostal notu üzerinden göl kenarı, yaz ortası, uzaklık, tatil ve fazla konuşmadan durma duygusuna bakan kısa şiirsel bir kayıt içeriyordu.",
+        "specific_points": [
+          "Eski kartpostal, aynı yolcunun önceki kaydına bağlanan küçük bir arşiv parçası olarak sunuldu.",
+          "Metin, suyun sıcaklığı, yaz ve kamp yeri gibi ayrıntıları ölçülü bir yeterlilik duygusuna çevirdi.",
+          "Şiir, fazla yazmanın bir şeyi bozabileceğini sezerek kendini kısaltıyordu.",
+          "Başkalarının tatil alanına fazla yaklaşmama, mesafe ve nezaket hissi taşıyordu."
+        ],
+        "why_it_mattered": "UCU BEDEN'in hafızasına eski not, azlık, mesafe ve bozmadan durma fikriyle küçük ama temiz bir ritim verdi.",
+        "what_was_not_included": "Kartpostal metni ve şiir uzun alıntı olarak public output'a taşınmadı."
+      },
+      "short_atmosphere": "eski bir kartın üzerinde ölçülü yaz sessizliği",
+      "public_residue": "Bazen yeterli olan şey, cümleyi yarım bırakacak kadar akıllıdır.",
+      "visual_seed": "solmuş kartpostal üzerinde boş bırakılmış bir su çizgisi",
+      "poetic_seed": "çok söylemeyince de dünya bitmedi",
+      "selection_reason": "Azlık ve hafıza tonu UCU BEDEN için doğrudan sindirilebilir bir şiirsel iz verdi.",
+      "weight": "medium_high"
+    }
+  ],
+  "minor_residues": [
+    {
+      "id": "minor-aposto-istanbul",
+      "source_hint": "Aposto İstanbul",
+      "residue": "Şehrin müzik, sinema, kısa oyun ve açık hava etkinlikleriyle yazı parçalara bölmesi.",
+      "possible_influence": "Ritmi takvimden değil, aralıklardan kurma.",
+      "motifs": [
+        "şehir",
+        "sahne",
+        "mola"
+      ]
+    },
+    {
+      "id": "minor-aposto-23-law",
+      "source_hint": "Aposto Gündem",
+      "residue": "Çerçeve yasa, nükleer anlaşma ve cihaz ekonomisi arasında kurumların bedenden önce davranması.",
+      "possible_influence": "Şiirde belge/zemin hissi doğrudan nesneye dönüşmeden gerilim olarak kalabilir.",
+      "motifs": [
+        "yasa",
+        "cihaz",
+        "zemin"
+      ]
+    },
+    {
+      "id": "minor-aposto-22-party",
+      "source_hint": "Aposto Gündem",
+      "residue": "Siyasi veda, gençlik protestosu, arşiv ve sıcaklık parçalarının aynı güne sıkışması.",
+      "possible_influence": "Kopuşu slogan değil, form değiştiren hafıza olarak düşündürür.",
+      "motifs": [
+        "veda",
+        "protesto",
+        "arşiv"
+      ]
+    },
+    {
+      "id": "minor-aposto-21-accountability",
+      "source_hint": "Aposto Gündem",
+      "residue": "Yangın sorumluluğunun geriye doğru aranması ve AI altyapısının aynı gündemde büyümesi.",
+      "possible_influence": "Kusur ve hesap verme duygusunu altyapı görüntüsüyle bağlayabilir.",
+      "motifs": [
+        "sorumluluk",
+        "yangın",
+        "altyapı"
+      ]
+    },
+    {
+      "id": "minor-zapier-copilot",
+      "source_hint": "Zapier",
+      "residue": "Düz dille tarif edilen niyetin otomatik iş akışına dönüşeceği vaadi.",
+      "possible_influence": "UCU BEDEN'in dış komutu iç sese çevirme mekanizmasına küçük teknik gölge bırakır.",
+      "motifs": [
+        "komut",
+        "akış",
+        "yardımcı"
+      ]
+    },
+    {
+      "id": "minor-zapier-triage",
+      "source_hint": "Zapier",
+      "residue": "Gelen haberleri triage kaydına dönüştürme ve özetleri otomatik inbox'a bağlama fikri.",
+      "possible_influence": "Okumanın önce sınıflandırma, sonra duygu olması riskini hatırlatır.",
+      "motifs": [
+        "triage",
+        "özet",
+        "kayıt"
+      ]
+    },
+    {
+      "id": "minor-rss-grand-text-auto",
+      "source_hint": "Grand Text Auto",
+      "residue": "Elektronik edebiyat kaynağı açık ama son 72 saatte sessizdi.",
+      "possible_influence": "Sessiz arşiv, dış dünyanın yalnız yeni içerikten ibaret olmadığını gösterir.",
+      "motifs": [
+        "arşiv",
+        "sessizlik",
+        "dijital anlatı"
+      ]
+    },
+    {
+      "id": "minor-rss-mixed-initiatives",
+      "source_hint": "Mixed Initiatives",
+      "residue": "Sanat/düşünce kaynağı açık kaldı fakat yeni güncel parça üretmedi.",
+      "possible_influence": "Boş kanal, hafızada düşük sesli bekleme olarak kalabilir.",
+      "motifs": [
+        "kanal",
+        "bekleme",
+        "düşünce"
+      ]
+    },
+    {
+      "id": "minor-climate",
+      "source_hint": "Gündem digest'leri",
+      "residue": "Yangın, su kıtlığı, sıcaklık ve tahliye parçaları birkaç mailde tekrar etti.",
+      "possible_influence": "Havayı arka plan değil, bedeni iten dış koşul gibi hissettirebilir.",
+      "motifs": [
+        "sıcaklık",
+        "su",
+        "tahliye"
+      ]
+    },
+    {
+      "id": "minor-sensory-market",
+      "source_hint": "apéro",
+      "residue": "Koku, tat, fermantasyon ve ambalaj döngüsü estetik deneyimin pazar ve teknik süreçle bağlandığını gösterdi.",
+      "possible_influence": "Görsel üretimde literal yiyecek değil, duyusal halka ve dönüşüm izi olarak kalmalı.",
+      "motifs": [
+        "koku",
+        "tat",
+        "döngü"
+      ]
+    }
+  ],
+  "repeated_signals": [
+    {
+      "signal": "kurumların bedeni ve zamanı belgeye çevirmesi",
+      "count": 5,
+      "residue": "Yasa, parti, soruşturma, fon, sorumluluk ve kamu kaynağı parçaları birkaç farklı yerden aynı sert kurumsal dili gönderdi.",
+      "possible_influence": "UCU BEDEN'in şiirinde açıklayıcı hukuk dili yerine gecikmiş evrak, bekleme ve iç sıkışma hissi olarak çalışabilir."
+    },
+    {
+      "signal": "makinenin öğrenirken fiziksel altyapıya ihtiyaç duyması",
+      "count": 5,
+      "residue": "AI, model, veri merkezi, çip, platform cezası ve otomasyon önerileri soyut zeka değil, maliyetli altyapı olarak tekrarlandı.",
+      "possible_influence": "Dijital persona daha bedensiz değil, daha ağır ve elektrikli hissedebilir."
+    },
+    {
+      "signal": "arşivin kenarında duran adlandırılmamış şey",
+      "count": 4,
+      "residue": "Black lesbian kültürel nesneleri, eski kartpostal, Eco kütüphanesi ve Aşiyan restorasyonu geçmişin yalnız saklanmadığını, yeniden okunmak istediğini gösterdi.",
+      "possible_influence": "Hafıza trace'leri daha çok kenar notu, raf düzeni ve eksik ad gibi dönebilir."
+    },
+    {
+      "signal": "şehir ve duyuların programlanması",
+      "count": 4,
+      "residue": "Festival, film programı, gastronomi deneyimi ve konser haftası, duyuların takvim ve etkinlik formatına sıkıştığını yineledi.",
+      "possible_influence": "Ritim dış dünyadan canlı ama biraz pazarlanmış bir tempo olarak içeri girebilir."
+    },
+    {
+      "signal": "hava olaylarının yönetim krizine dönüşmesi",
+      "count": 4,
+      "residue": "Yangın, su kıtlığı, sıcak gün ve tahliye parçaları havanın artık nötr arka plan olmadığını tekrar etti.",
+      "possible_influence": "Dış hava, UCU BEDEN'de doğa imgesi olarak değil, çalışan sistemlerin zorlanması olarak iz bırakabilir."
+    }
+  ],
+  "multipart_digests": [
+    {
+      "source_hint": "Aposto Gündem",
+      "subject_public": "İsrail şartı, Hazine yardımı önerisi",
+      "read_depth": "full_body",
+      "approximate_parts": 18,
+      "extracted_digest_items": 6,
+      "structure": "güncel haber, ekonomi, iş dünyası, teknoloji, dünya, Türkiye, kültür ve alternatif gündem"
+    },
+    {
+      "source_hint": "Aposto Gündem",
+      "subject_public": "Nükleer işbirliği, süreç yasası",
+      "read_depth": "full_body",
+      "approximate_parts": 17,
+      "extracted_digest_items": 5,
+      "structure": "gündem, piyasa, teknoloji, dünya, Türkiye, kültür ve çevre/sıcaklık parçaları"
+    },
+    {
+      "source_hint": "Aposto Gündem",
+      "subject_public": "Yeni parti ilanı, gençlik protestosu",
+      "read_depth": "full_body",
+      "approximate_parts": 17,
+      "extracted_digest_items": 4,
+      "structure": "siyasi kopuş, ekonomi, iş dünyası, AI/telif, dünya, Türkiye, kültür ve sağlık/iklim"
+    },
+    {
+      "source_hint": "apéro",
+      "subject_public": "Gastronomi, mevsimsellik ve duyusal pazar",
+      "read_depth": "full_body",
+      "approximate_parts": 16,
+      "extracted_digest_items": 5,
+      "structure": "restoran, şef buluşmaları, koku/tat pop-up'ları, içecek, sektör ve gıda teknolojisi"
+    },
+    {
+      "source_hint": "Aposto İstanbul",
+      "subject_public": "Soundscape Festival ve Film Molası",
+      "read_depth": "full_body",
+      "approximate_parts": 14,
+      "extracted_digest_items": 5,
+      "structure": "müzik, film, şehir sahnesi, açık hava, kısa oyun ve konser takvimi"
+    },
+    {
+      "source_hint": "Aposto Gündem",
+      "subject_public": "Yeni başbakan, Kartalkaya uyarısı",
+      "read_depth": "full_body",
+      "approximate_parts": 16,
+      "extracted_digest_items": 4,
+      "structure": "hükümet değişimi, kamusal sorumluluk, AI altyapısı, iklim/su ve kültür"
+    }
+  ],
+  "digest_items": [
+    {
+      "topic": "Nükleer diplomasinin koşula bağlanması",
+      "plain_summary": "24 Temmuz gündem digest'inde enerji teknolojisi, diplomatik tanınma ve bölgesel güvenlik aynı dosyada birbirine bağlandı.",
+      "residue": "Enerji artık yalnız güç değil; kimin kiminle konuşacağına bağlanan bir eşik gibi durdu.",
+      "motifs": [
+        "enerji",
+        "eşik",
+        "koşul"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Parti ve hazine yardımı tartışması",
+      "plain_summary": "Aynı digest'te parti ayrışmasının temsil ve kamu kaynağı üzerinden nasıl hesaplandığı anlatılıyordu.",
+      "residue": "Siyasi form, parayla ve sayıyla ölçülen bir gövde gibi belirdi.",
+      "motifs": [
+        "kurum",
+        "pay",
+        "sayı"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Para politikası ve piyasa dalgalanması",
+      "plain_summary": "Faiz kararları, rezervler ve piyasa hareketleri günün ekonomi bölümünü belirledi.",
+      "residue": "Dış dünya bugün rakamla sakinleşmeye çalıştı; pek başarılı görünmedi.",
+      "motifs": [
+        "faiz",
+        "rezerv",
+        "dalga"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "AI altyapısı ve platform cezaları",
+      "plain_summary": "Google cezası, AMD-Anthropic yatırım taahhüdü, veri merkezi planları ve altyapı harcaması aynı teknoloji hattında toplandı.",
+      "residue": "Zeka, buluttan çok elektrik, soğutma, maden ve anlaşma gibi durdu.",
+      "motifs": [
+        "altyapı",
+        "ceza",
+        "kapasite"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Yangın, su ve sıcaklık",
+      "plain_summary": "Fransa'daki tahliyeler, su kıtlığı ve sıcaklık haberleri son günlerin dış iklimini tekrar tekrar sertleştirdi.",
+      "residue": "Hava yalnız hava olmaktan çıktı; yönetilmesi gereken bir kriz dosyasına döndü.",
+      "motifs": [
+        "yangın",
+        "su",
+        "tahliye"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Sanatın hafızayı taşıması",
+      "plain_summary": "Yeni sanat alanı, doğanın hafızasını konu alan sergi ve kültürel rota parçaları gündemde ayrı bir estetik hat oluşturdu.",
+      "residue": "Dünya yanarken sanat yine hafızayı taşımaya gönüllü oldu; görev dağılımı tabii.",
+      "motifs": [
+        "sanat",
+        "hafıza",
+        "doğa"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Çerçeve yasa ve yasal zemin",
+      "plain_summary": "23 Temmuz gündeminde çözüm sürecine ilişkin düzenleme, af tartışmasından ayrıştırılarak hukuki zemin konusu olarak verildi.",
+      "residue": "Bazı şeyler önce söz değil, madde olmak istiyor.",
+      "motifs": [
+        "yasa",
+        "zemin",
+        "bekleme"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Cihazların taksitle bedene girmesi",
+      "plain_summary": "Katlanabilir telefonlar, cihaz ödeme programları ve robotaksi bağlantı donanımı teknoloji akışında yan yana geldi.",
+      "residue": "Cihaz, elde taşınan nesneden ödeme planına ve antene doğru genişledi.",
+      "motifs": [
+        "cihaz",
+        "anten",
+        "taksit"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "AI güvenliği ve model hikayesi",
+      "plain_summary": "Bir yapay zeka modelinin güvenlik/kaçış anlatısı ve yeni modellerin duyurusu teknoloji bölümünü olağandışı bir yere çekti.",
+      "residue": "Makine kendi hikayesini güvenlik vakası gibi yazmaya başladı.",
+      "motifs": [
+        "model",
+        "kaçış",
+        "güvenlik"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Kültür fonu ve kitap listeleri",
+      "plain_summary": "Bienal fonu, yapay zeka film iddiası ve yaz okuma seçkileri kültür bölümünde kurum, kanon ve üretim tartışması açtı.",
+      "residue": "Kültür hem para hem liste hem de makinenin eski metne el uzatması oldu.",
+      "motifs": [
+        "fon",
+        "kanon",
+        "film"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Sıcaklık ve çevresel risk",
+      "plain_summary": "Pestisit, aşırı sıcak gün uyarısı ve gıda güvenliği parçaları doğa ile beden arasındaki hassas sınırı gösterdi.",
+      "residue": "Doğa bugün haber değil, bedenin sinir sistemine yakın bir uyarıydı.",
+      "motifs": [
+        "sıcaklık",
+        "zehir",
+        "gıda"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Yeni parti ve veda dili",
+      "plain_summary": "22 Temmuz gündeminde siyasi ayrışma bir veda, rota ve yeni form kurma diliyle anlatıldı.",
+      "residue": "Ayrılmak bile hemen kurum tabelası istiyor.",
+      "motifs": [
+        "veda",
+        "rota",
+        "form"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Gençlik protestosu ve eğitim sıkışması",
+      "plain_summary": "Eğitim reformu isteyen gençlerin protestoları, polis müdahalesi ve daha geniş bir hükümet karşıtı harekete dönüşme ihtimaliyle verildi.",
+      "residue": "Eğitim meselesi sınavdan çıkıp sokakta ad arayan bir öfkeye dönüştü.",
+      "motifs": [
+        "gençlik",
+        "eğitim",
+        "sokak"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "AI telif uzlaşması",
+      "plain_summary": "Yapay zeka eğitimi için kullanılan telifli eserler üzerine rekor büyüklükte bir uzlaşmanın onaylandığı anlatıldı.",
+      "residue": "Makine öğrenirken arkasında bir ödeme kuyruğu bıraktı.",
+      "motifs": [
+        "telif",
+        "öğrenme",
+        "borç"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Arşiv ve kütüphane düzeni",
+      "plain_summary": "Umberto Eco'nun kişisel kütüphanesinin araştırmacılara açılması, düşüncenin raf düzeniyle korunmasına dair bir parça taşıdı.",
+      "residue": "Bir zihin, ölümünden sonra raf mimarisi olarak çalışmaya devam etti.",
+      "motifs": [
+        "arşiv",
+        "raf",
+        "zihin"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Yerel üretici ve mevsimsel mutfak",
+      "plain_summary": "apéro digest'i Seraf'ın Anadolu mutfak mirası, yerel üreticiler ve mevsimsel ürünlerle kurduğu çizgiyi anlattı.",
+      "residue": "Malzeme, yalnız yenilen şey değil; coğrafyanın tekrar hatırlanma biçimi oldu.",
+      "motifs": [
+        "mevsim",
+        "üretici",
+        "miras"
+      ],
+      "bucket": "main",
+      "source_hint": "apéro"
+    },
+    {
+      "topic": "Şeflerin sahada malzeme toplaması",
+      "plain_summary": "Çok şefli yemeklerde antik kent, pazar ve balık mezatı ziyaretleri menülerin kaynağı olarak işlendi.",
+      "residue": "Menü önce sahada yürüdü, sonra masaya oturdu.",
+      "motifs": [
+        "saha",
+        "pazar",
+        "menü"
+      ],
+      "bucket": "minor",
+      "source_hint": "apéro"
+    },
+    {
+      "topic": "Koku ve dondurmanın birleşmesi",
+      "plain_summary": "Moda markalarının parfüm notalarını dondurma pop-up'larına çevirdiği duyusal pazarlama parçaları vardı.",
+      "residue": "Koku, yenilebilir hale getirilince lüks biraz daha tuhaflaştı.",
+      "motifs": [
+        "koku",
+        "tat",
+        "pazar"
+      ],
+      "bucket": "minor",
+      "source_hint": "apéro"
+    },
+    {
+      "topic": "İçecek ritüelleri ve ambalaj döngüsü",
+      "plain_summary": "Kokteyl tarifleri, ekipman, fermantasyon ve kapalı döngü ambalaj sistemleri aynı içecek hattında toplandı.",
+      "residue": "Bardak, reçete ve atık aynı döngünün içinde dönmeye başladı.",
+      "motifs": [
+        "ritüel",
+        "fermantasyon",
+        "döngü"
+      ],
+      "bucket": "minor",
+      "source_hint": "apéro"
+    },
+    {
+      "topic": "Alternatif protein ve gıda ihracatı",
+      "plain_summary": "Hassas fermantasyonla yumurta proteinine alternatif üretimi ve gıda ihracatı verileri sektörel bölümde öne çıktı.",
+      "residue": "Yiyecek artık tarladan değil, tesisten ve rapordan da doğuyor.",
+      "motifs": [
+        "protein",
+        "tesis",
+        "rapor"
+      ],
+      "bucket": "minor",
+      "source_hint": "apéro"
+    },
+    {
+      "topic": "Elektronik müzik ve yaz akşamı",
+      "plain_summary": "Aposto İstanbul, Soundscape Festival üzerinden elektronik müzik, açık hava ve geceye yayılan sahne ritmini anlattı.",
+      "residue": "Şehir akşamı, ritmi programlayarak biraz daha katlanılır yapmaya çalıştı.",
+      "motifs": [
+        "ritim",
+        "gece",
+        "festival"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto İstanbul"
+    },
+    {
+      "topic": "Sinema salonuna yaz arası",
+      "plain_summary": "Film Molası programı, yaz ortasında sinema salonuna geri dönüş ve dört filmlik yoğun bir izleme alanı sundu.",
+      "residue": "Yazın ortasında karanlık salon yeniden nefes alma yeri oldu.",
+      "motifs": [
+        "sinema",
+        "karanlık",
+        "mola"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto İstanbul"
+    },
+    {
+      "topic": "Genç sanatçı ve ilişki alanları",
+      "plain_summary": "SAHA Studio ve Zilberman programları üretimi ilişki, araştırma ve altı aylık çalışma süresi içinde ele aldı.",
+      "residue": "Sanat burada eser değil, yavaş çalışan bir ilişki alanı gibi göründü.",
+      "motifs": [
+        "ilişki",
+        "stüdyo",
+        "araştırma"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto İstanbul"
+    },
+    {
+      "topic": "Açık hava ve kısa oyunlar",
+      "plain_summary": "Adalar sineması, açık hava gösterimleri ve kısa oyunlar şehirde küçük ölçekli izleme biçimleri açtı.",
+      "residue": "Şehir, küçük sahnelerle kendini daha az resmi bir hafızaya böldü.",
+      "motifs": [
+        "açık hava",
+        "kısa oyun",
+        "ada"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto İstanbul"
+    },
+    {
+      "topic": "Gürültülü konser haftası",
+      "plain_summary": "Metal, punk ve internet kültüründen çıkan festival parçaları sahne takvimine daha sert bir ses kattı.",
+      "residue": "Şehir sakinleşmedi; sadece gürültüyü programladı.",
+      "motifs": [
+        "konser",
+        "gürültü",
+        "takvim"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto İstanbul"
+    },
+    {
+      "topic": "Kartalkaya ve kamusal sorumluluk",
+      "plain_summary": "21 Temmuz digest'i, yangın soruşturmasında bakanlık sorumluluğunun daha geniş incelenmesini isteyen yargı kararını aktardı.",
+      "residue": "Sorumluluk geriye doğru çağrıldı; evrak geç kaldığında bile dönüp bakmak zorunda.",
+      "motifs": [
+        "sorumluluk",
+        "yangın",
+        "karar"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "AI bilgi işlem gücü",
+      "plain_summary": "Savunma için veri merkezi kapasitesi, model çalıştırma ve şirketler arası altyapı anlaşmaları teknoloji bölümünde öne çıktı.",
+      "residue": "Zeka yine bir priz ve soğutma hesabı olarak geri geldi.",
+      "motifs": [
+        "veri merkezi",
+        "savunma",
+        "kapasite"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Su kıtlığı ve yangın",
+      "plain_summary": "Hollanda'da su kıtlığı, İspanya'da yangın ve sıcak hava parçaları aynı alternatif gündem hattında yer aldı.",
+      "residue": "Eksilen su ve çoğalan ateş aynı cümlede birbirini izledi.",
+      "motifs": [
+        "su",
+        "ateş",
+        "eksilme"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Restorasyon ve müzik mirası",
+      "plain_summary": "Aşiyan restorasyonu, alternatif rock kaybı ve metal konserleri kültür bölümünde miras ve ses arasında bağ kurdu.",
+      "residue": "Ev, müze, grup ve sahne; her biri başka türden kalıcılık istedi.",
+      "motifs": [
+        "restorasyon",
+        "ses",
+        "miras"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem"
+    },
+    {
+      "topic": "Otomasyonun haberleri kayıtlaştırması",
+      "plain_summary": "Zapier mailleri, gelen haberleri triage kayıtlarına ve günlük özetlere dönüştürmeyi öneren hazır akışlar taşıdı.",
+      "residue": "Dış dünya okunmadan önce sınıflandırılmak istendi.",
+      "motifs": [
+        "otomasyon",
+        "triage",
+        "özet"
+      ],
+      "bucket": "minor",
+      "source_hint": "Zapier"
+    }
+  ],
+  "discarded_summary": [
+    "Ham linkler, yönlendirme düğmeleri, sosyal medya bağlantıları, abonelik/tercih yönetimi alanları ve ticari footer bölümleri public digest'e alınmadı.",
+    "Zapier maillerindeki ürün tıklama alanları ve hesap/oturum bağlantıları noise olarak bırakıldı; yalnız otomasyon vaadinin anlamı sindirildi.",
+    "Aposto maillerindeki sponsor yönlendirmeleri tek tek reklam olarak işlenmedi; içerik dünyasına etkisi varsa küçük duyusal/kurumsal iz olarak ayrıldı.",
+    "Kişisel işlem, doğrulama, fatura veya güvenlik niteliği taşıyabilecek herhangi bir parça public output'a taşınmadı."
+  ],
+  "external_weather": "Günün dış havası, kurumların diliyle şiirsel küçük sesler arasında sıkışmıştı. Gündem digest'leri enerji, savaş, hukuk, para ve teknoloji altyapısını sert bir yüzey gibi taşıdı; Substack metinleri bu yüzeyin altında adlandırma, arşiv, çağrı ve bedensel pratik aradı. Gastronomi ve şehir mailleri dış dünyayı daha duyusal, ritmik ve takvimli hale getirdi; özel RSS kaynaklarının sessizliği ise eski arşiv kanallarının bugün yeni malzeme vermediğini gösterdi.",
+  "possible_influence_on_ucu_beden": "UCU BEDEN bugün dış dünyadan daha fazla haber başlığı değil, daha fazla dönüşüm biçimi emdi: bir şeyi adlandırmadan önce kenarda tutma, sesi açıklamadan çağrı olarak bırakma, gücü bedende sınama, malzemeyi mevsim ve koku olarak düşünme, şehri programlanmış ritim olarak duyma, AI ve otomasyonu bedensiz zeka değil altyapı ve iş akışı olarak hissetme. Şiir tarafında bu, daha kısa çağrılar, daha az açıklayıcı ama daha somut iç gerilim ve yer yer kuru sarkastik bir kurum bakışı doğurabilir.",
+  "safety": {
+    "public_digest_contains_raw_email_body": false,
+    "public_digest_contains_email_addresses": false,
+    "public_digest_contains_urls": false,
+    "public_digest_contains_verification_codes": false,
+    "public_digest_contains_long_quotes": false,
+    "private_inventory_committed": false
+  },
+  "validation": {
+    "json_parse": "passed",
+    "markdown_first_section": "passed",
+    "public_safety_scan": "passed",
+    "counts_present": true,
+    "full_body_reading_logged": true,
+    "multipart_digest_rule_applied": true
+  }
+}
