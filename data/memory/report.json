@@ -1,7 +1,7 @@
 {
   "version": 1,
   "built_through": "2026-07-25",
-  "trace_count": 577,
+  "trace_count": 578,
   "climate": {
     "pressure": {
       "value": 0.561,
@@ -22,7 +22,7 @@
       "summary": "pressure: 101 iz, ortalama 56."
     },
     "clarity": {
-      "value": 0.441,
+      "value": 0.442,
       "trace_ids": [
         "mem_2026-07-10_daily_life_attention_eaef052ae7e3",
         "mem_2026-07-11_daily_life_attention_6d37fa9e15c7",
@@ -37,10 +37,10 @@
         "mem_2026-07-15_daily_life_attention_63339d1299ac",
         "mem_2026-07-15_source_external_pressure_295d2d82f137"
       ],
-      "summary": "clarity: 83 iz, ortalama 44."
+      "summary": "clarity: 81 iz, ortalama 44."
     },
     "leakage": {
-      "value": 0.451,
+      "value": 0.45,
       "trace_ids": [
         "mem_2026-06-04_source_external_pressure_0c8745a5f315",
         "mem_2026-06-04_source_external_pressure_82ef95426c48",
@@ -88,13 +88,12 @@
         "mem_2026-07-15_daily_life_attention_63339d1299ac",
         "mem_2026-07-15_source_external_pressure_295d2d82f137"
       ],
-      "summary": "recallability: 83 iz, ortalama 55."
+      "summary": "recallability: 81 iz, ortalama 55."
     }
   },
   "easily_recalled": [
     "mem_2026-07-25_daily_life_attention_1caee4ce3a50",
     "mem_2026-07-25_source_external_pressure_494999e26bd7",
-    "mem_2026-07-22_daily_life_attention_f974b587cc49",
     "mem_2026-07-25_poem_episodic_99cf6863ed1d",
     "mem_2026-07-25_walk_route_31a8da91f0ce",
     "mem_2026-07-22_poem_episodic_f6c45b08a424",
@@ -103,7 +102,8 @@
     "mem_2026-07-25_source_external_pressure_3fad07fbe38f",
     "mem_2026-07-24_poem_episodic_8cce1f43063e",
     "mem_2026-07-24_walk_route_95afd2d82301",
-    "mem_2026-07-23_source_external_pressure_f199e9ce292b"
+    "mem_2026-07-23_source_external_pressure_f199e9ce292b",
+    "mem_2026-07-24_source_external_pressure_3bb82f0471d2"
   ],
   "suppressed": [
     "mem_2026-06-04_daily_life_avoidance_051abe89a021",
@@ -126,8 +126,6 @@
     "mem_2026-07-25_source_external_pressure_ad212c819238"
   ],
   "dream_returns": [
-    "mem_2026-07-17_dream_dream_return_b2e330ca2435",
-    "mem_2026-07-18_daily_life_avoidance_1af46ec01fdb",
     "mem_2026-07-18_dream_dream_return_33a4a40ff291",
     "mem_2026-07-19_daily_life_avoidance_4e9b101d27a7",
     "mem_2026-07-19_dream_dream_return_68d4d603d5d6",
@@ -137,7 +135,9 @@
     "mem_2026-07-22_daily_life_avoidance_a639625b8e79",
     "mem_2026-07-22_dream_dream_return_ade8bc801483",
     "mem_2026-07-23_daily_life_avoidance_ce801af21f59",
-    "mem_2026-07-23_dream_dream_return_f52d272df598"
+    "mem_2026-07-23_dream_dream_return_f52d272df598",
+    "mem_2026-07-24_daily_life_avoidance_997fd8e24f38",
+    "mem_2026-07-25_dream_dream_return_a0c30181e077"
   ],
   "indirect_only": [
     "mem_2026-06-04_daily_life_attention_379f81945234",
