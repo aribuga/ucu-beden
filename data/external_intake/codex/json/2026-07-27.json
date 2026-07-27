@@ -1,0 +1,1292 @@
+{
+  "version": 4,
+  "date": "2026-07-27",
+  "timezone": "Europe/Istanbul",
+  "collected_at": "2026-07-27T04:07:18.134Z",
+  "source": "codex_external_intake",
+  "summary": "Bugünün dış teması son 72 saatteki 21 Gmail mesajının full body okunması, 7 çok parçalı/uzun digest hattının ayrıştırılması, 42 digest_items üretimi ve son 72 saatte sessiz kalan iki özel kaynak kontrolünden public-safe biçimde üretildi.",
+  "reading_summary": {
+    "plain_summary": "Son 72 saatte 21 Gmail mesajı tarandı ve tamamında full body içerik okunabildi; snippet veya subject-only kalan mail olmadı. Gelen kutusunda bugün yedi ana damar vardı: 27 Temmuz gündeminde spor zaferiyle savaş uyarısının yan yana açılması; Munch ve yara/çiçek imgesinden gelen kısa şiirsel bakım hattı; iç merkez ve yön bulma dili; obsesyonun öte tarafında stabil yakınlık ve çatışma güvenliği; Soli üzerinden aşırı turizm, kuş gözlemciliği, topluluk ormanları ve arşiv/müze deneyimleri; Tendresse Radicale üzerinden yangın, ekokırım, bakım ve umut altyapısı; önceki günlerden süren AI, rüya gözetimi, tarımsal bilgi ve Odyssey/dönüş izleri.\n\nÖzel RSS kaynakları ayrıca kontrol edildi. İki kaynak da erişilebilir durumdaydı fakat son 72 saat içinde yeni item üretmedi. Bu yüzden bugünün canlı dış teması Gmail gövdelerinden, özellikle Aposto/Soli/Tendresse/Erotics/man of aran/David Whyte hatlarının public-safe biçimde sindirilmesinden üretildi.",
+    "what_was_in_the_emails": [
+      "Aposto Gündem 27 Temmuz mailinde voleybol şampiyonluğu, Hazar Denizi saldırısı sonrası savaş uyarısı, ticaret vergileri, bölgesel asgari ücret, AI ajan güvenliği, çip ortaklıkları, Berlin saldırısı, müze çalışanlarının sıcak/ücret koşulları ve popüler kültür parçaları vardı.",
+      "man of aran mailinde Edvard Munch görseliyle ilişkilenen, iyileşmeyen ama bakıma ihtiyaç duyan yaranın toprağa, buluta ve çiçeğe dönüşmesini anlatan kısa şiirsel bir metin vardı.",
+      "David Whyte mailinde etkinlik duyurusunun içinde ruhun otoritesi, iç merkez, yüzeyden derinliğe geçiş, aidiyet ve karmaşık dünyada yön bulma fikri vardı.",
+      "Erotics of Liberation mailinde obsesyonun kaçınma stratejisi olması, stabil yakınlığın dramatik olmaması ve çatışma güvenliğinin sinir sistemiyle ilişkisi anlatılıyordu.",
+      "Soli mailinde aşırı turizm önlemleri, kuş gözlemciliği, topluluk ormanları, arşiv/müze açılışları, aşırı sıcak, gıda hukuku, sanat alanları ve uzun yolculuk teknolojileri vardı.",
+      "Tendresse Radicale mailinde orman yangınları, savaşta yanan yaşam alanları, ekokırım, nekropolitika, felaketin bedensel/psişik yankısı, radikal şefkat ve kolektif umut fikri vardı.",
+      "Önceki günlerden gelen maillerde Odyssey'in daralan dönüş anlatısı, tarımsal bilginin algoritmaya kayması, ambalaj/sıcak/veri merkezi etkisi, AI partner ve yalnızlık, Jung'un son rüyası, Zapier otomasyon dili ve yeni yayın kanalları vardı."
+    ],
+    "what_was_in_curated_rss": [
+      "Grand Text Auto erişilebilir durumdaydı; son 72 saatte yeni item yoktu.",
+      "Mixed Initiatives erişilebilir durumdaydı; son 72 saatte yeni item yoktu."
+    ],
+    "dominant_topics": [
+      "yangın ve bakım",
+      "zafer ile alarm",
+      "kuş/dikkat/yavaşlama",
+      "obsesyon ve stabilite",
+      "iç merkez",
+      "AI ölçümü",
+      "arşiv ve rüya gözetimi"
+    ],
+    "notable_absences": [
+      "Özel RSS kaynaklarında son 72 saate ait yeni item yoktu.",
+      "Reddit veya forum tipi topluluk digest'i bu koşuda bulunmadı.",
+      "Güvenlik, doğrulama, fatura veya kişisel işlem niteliğinde public digest'e alınacak malzeme yoktu.",
+      "Yeni kanal açılışı taşıyan mailler ana item olacak içerik üretmedi; minor residue olarak tutuldu."
+    ],
+    "overall_direction": "Dış dünya UCU BEDEN'i bugün yangın ve bakım, zafer ve alarm, yapay karar sistemleri, obsesyon sonrası stabilite ve kuş sesine doğru yavaşlayan dikkat arasında tuttu."
+  },
+  "atmosphere": "Gün, alkışla alarmı aynı cümleye koydu; sonra yarayı çiçeğe, kalabalığı kuş sesine, felaketi bakım altyapısına ve ilişkiyi sinir sistemi pratiğine çevirdi.",
+  "motifs": [
+    "yara çiçeği",
+    "kuş sesi",
+    "iç pusula",
+    "yangın",
+    "AI ajanı",
+    "rüya gözetimi",
+    "müze sıcağı",
+    "aşırı turizm",
+    "arşiv rafı"
+  ],
+  "channels": {
+    "gmail": {
+      "scanned": 21,
+      "full_body_read_count": 21,
+      "snippet_only_count": 0,
+      "subject_only_count": 0,
+      "multipart_digest_count": 7,
+      "digest_items_count": 42,
+      "items": [
+        {
+          "id": "gmail-aposto-gundem-2026-07-27",
+          "source_type": "gmail",
+          "source_hint": "Aposto Gündem",
+          "subject_public": "Voleybol zaferi, savaş uyarısı ve AI güvenliği",
+          "received_at": "2026-07-27T03:39:12Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "multipart_digest",
+          "main_topics": [
+            "spor zaferi",
+            "savaş uyarısı",
+            "ticaret vergisi",
+            "AI güvenliği",
+            "sıcak çalışma koşulları"
+          ],
+          "content_digest": {
+            "what_it_contained": "Bu mail çok parçalı bir sabah digest'iydi. Voleybolda şampiyonluk coşkusu, Hazar Denizi saldırısı sonrası savaş dili, ticaret vergileri, bölgesel asgari ücret tartışması, AI ajan güvenliği, yarı iletken ortaklıkları, Berlin'deki saldırı ve kültür kurumlarında sıcak/çalışma koşulları aynı gövdede yer alıyordu.",
+            "specific_points": [
+              "Bir spor zaferi ile bölgesel savaş uyarısı aynı sabahın ilk iki büyük sesi olarak yan yana durdu.",
+              "Ticaret vergileri emek koşulları, zorla çalıştırma ve küresel tedarik zinciri üzerinden tartışıldı.",
+              "AI hattında hem ajan güvenliği hem de çip/işlem gücü ortaklıkları öne çıktı; makine soyut değil altyapılı ve riskliydi.",
+              "Kültür-sanat bölümünde müze çalışanlarının sıcak, ücret ve su erişimi gibi doğrudan beden koşullarıyla sıkışması belirdi.",
+              "Alternatif gündemde yangın, bisiklet turu, popüler kültür ve spor başarısı aynı dış hava içinde dağıldı."
+            ],
+            "why_it_mattered": "UCU BEDEN için gün, zafer ve tehdit arasında açıldı; dış dünya hem alkış hem alarm üretti. Bu ikili ritim şiir ve hafızada canlı bir gerilim bırakabilir.",
+            "what_was_not_included": "Ham haber gövdeleri, linkler, reklam alanları, footer ve iletişim detayları public digest'e taşınmadı."
+          },
+          "short_atmosphere": "alkış sesiyle savaş uyarısının aynı sabah ekranında durması",
+          "public_residue": "Gün bir madalyayı kaldırdı, sonra hemen alarmı masaya koydu.",
+          "visual_seed": "parlak bir kupa ışığının arkasında düşük, kırmızı bir uyarı çizgisi",
+          "poetic_seed": "zaferin yanına tehdit iliştirilmiş; dış dünya yine paketlemeyi biliyor",
+          "selection_reason": "Günün en yeni ve en geniş public-world iklimini taşıdı.",
+          "weight": "high"
+        },
+        {
+          "id": "gmail-man-of-aran-blossoms-2026-07-27",
+          "source_type": "gmail",
+          "source_hint": "man of aran",
+          "subject_public": "Munch, yara ve çiçeklenme",
+          "received_at": "2026-07-27T02:36:28Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "poem",
+          "main_topics": [
+            "yara",
+            "şefkat",
+            "Munch",
+            "toprak",
+            "çiçeklenme"
+          ],
+          "content_digest": {
+            "what_it_contained": "Mail, Edvard Munch'un acı/çiçek imgesiyle birlikte kısa bir şiir taşıyordu. Şiirde iyileşmeyen ama dramatize edilmeyen bir yara vardı; yara bakım ve şefkat istiyor, kan toprağa ve buluta karışarak çiçekleri besleyen bir döngüye dönüşüyordu.",
+            "specific_points": [
+              "Yara kapansa bile iz bırakma fikrinden çok, izsiz ama süren bir bakım ihtiyacı öne çıktı.",
+              "Acı açık bir feryat gibi değil, içeride varlığı bilinen ve düzenli bakım isteyen bir şey gibi kuruldu.",
+              "Kan, toprak, bulut ve çiçek arasında bedensel olanı ekolojik döngüye bağlayan bir dönüşüm vardı.",
+              "Munch referansı görsel olarak ağrı, renk ve büyüme arasında karanlık ama canlı bir alan açtı."
+            ],
+            "why_it_mattered": "Bu mail UCU BEDEN'e doğrudan literal nesne değil, yara ve canlılık arasındaki dönüşüm davranışını verdi.",
+            "what_was_not_included": "Şiirin dizeleri, ham linkler ve paylaşım/abonelik alanları public output'a kopyalanmadı."
+          },
+          "short_atmosphere": "acıdan çiçeğe geçen sessiz bir bakım döngüsü",
+          "public_residue": "Yara iyileşmedi; gösterişsizce çalışmaya devam etti.",
+          "visual_seed": "karanlık zeminden yükselen ince, kan renkli çiçek izi",
+          "poetic_seed": "acı biraz terbiyeli durunca yok sanılıyor; pek kullanışlı bir hata",
+          "selection_reason": "Kısa, güvenli ve güçlü şiirsel/görsel etki verdi.",
+          "weight": "high"
+        },
+        {
+          "id": "gmail-david-whyte-souls-authority-2026-07-26",
+          "source_type": "gmail",
+          "source_hint": "David Whyte",
+          "subject_public": "İç merkez ve yön bulma",
+          "received_at": "2026-07-26T18:01:07Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "event_essay",
+          "main_topics": [
+            "iç merkez",
+            "aidiyet",
+            "yüzeyden derinliğe geçiş",
+            "yön bulma"
+          ],
+          "content_digest": {
+            "what_it_contained": "Mail bir etkinlik duyurusu formatındaydı ama gövdesinde ruhun otoritesi, içteki merkez, dünyanın karmaşasını düzenleyebilen sessiz nokta, yüzey hayatından derinliğe geçiş ve aidiyetin geniş anlamı anlatılıyordu.",
+            "specific_points": [
+              "Kişinin içindeki merkez yalnız psikolojik bir his değil, yön bulma ve düzenleme yetisi gibi tarif edildi.",
+              "Yüzeydeki kimlik ve karmaşa yerine daha sade, daha derin bir aidiyet alanına geçmek vurgulandı.",
+              "Dış dünyanın bulutlu ve hareketli hâline karşı içerideki sabit yıldız imgesi kuruldu.",
+              "Duyuru kısmı yoğun olsa da sindirilebilir esas etki içsel yön tayiniydi."
+            ],
+            "why_it_mattered": "UCU BEDEN'in hafızasında dış gürültüye karşı içerideki karar merkezi fikrini güçlendirdi.",
+            "what_was_not_included": "Kayıt, ücret, destek ve yönlendirme detayları public digest'e alınmadı."
+          },
+          "short_atmosphere": "dış karmaşaya karşı içeride tutulan sessiz pusula",
+          "public_residue": "Merkez içerideymiş; tabii bunu dışarıdan gelen bir duyuruyla öğrenmemiz gerekti.",
+          "visual_seed": "bulutlu bir alanda soluk ama sabit iç yıldız",
+          "poetic_seed": "yüzey yine gürültülü; derinlik işi sessizce devralıyor",
+          "selection_reason": "Duyuru formatının içinde güçlü iç durum malzemesi vardı.",
+          "weight": "medium_high"
+        },
+        {
+          "id": "gmail-erotics-obsession-2026-07-26",
+          "source_type": "gmail",
+          "source_hint": "Erotics of Liberation",
+          "subject_public": "Obsesyonun öte tarafı ve çatışma güvenliği",
+          "received_at": "2026-07-26T16:42:48Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "personal_essay",
+          "main_topics": [
+            "obsesyon",
+            "stabil yakınlık",
+            "çatışma güvenliği",
+            "sinir sistemi",
+            "kaçınma"
+          ],
+          "content_digest": {
+            "what_it_contained": "Mail, obsesyonun kimi zaman ihmal, yalnızlık ve kişinin kendi hayatıyla oturamamasından kaçınma stratejisi olabileceğini anlatıyordu. Stabil bir karşılaşmanın dramatik kimya yerine çıplak sakinlik getirmesi ve çatışma güvenliğinin sinir sisteminde öğrenilen bir kapasite olması öne çıktı.",
+            "specific_points": [
+              "Obsesyon, romantik yoğunluk değil, kişinin kendinden kaçması için etkili bir dikkat dağıtıcı olarak tarif edildi.",
+              "Stabilite büyük dramatik jestle değil, kişinin kendi boşluğu ve korkusuyla baş başa kalmasıyla belirdi.",
+              "Çatışma güvenliği, iyi tartışma tekniği değil; bedenin çatışmayı ölüm kalım tehdidi saymaması olarak anlatıldı.",
+              "Mailin kurs duyurusu kısmı azaltıldı; public etki olarak bedende öğrenilen ilişki pratiği tutuldu."
+            ],
+            "why_it_mattered": "UCU BEDEN'in ilişki, temas, kusur ve beden alarmı katmanına doğrudan malzeme verdi.",
+            "what_was_not_included": "Kurs satış metni, linkler, fiyat bilgisi ve ham cümleler public output'a taşınmadı."
+          },
+          "short_atmosphere": "dramanın sönünce ortaya çıkan biraz utandırıcı sakinlik",
+          "public_residue": "Obsesyon gidince geriye kişi kalıyor. Çok pratik bir ceza.",
+          "visual_seed": "fazla parlak bağın söndüğü yerde düşük titreşimli sakin bir çizgi",
+          "poetic_seed": "kimya bittiğinde bedenin hâlâ alarmı kapatmayı öğrenmesi gerekiyor",
+          "selection_reason": "İnsansı hafıza ve beden-temas davranışı için somut ve güçlüydü.",
+          "weight": "high"
+        },
+        {
+          "id": "gmail-soli-tourism-birds-2026-07-26",
+          "source_type": "gmail",
+          "source_hint": "Soli",
+          "subject_public": "Aşırı turizm, kuşlar ve yer değiştiren dikkat",
+          "received_at": "2026-07-26T12:12:11Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "multipart_digest",
+          "main_topics": [
+            "aşırı turizm",
+            "kuş gözlemciliği",
+            "şehir-doğa dikkati",
+            "topluluk ormanları",
+            "arşiv"
+          ],
+          "content_digest": {
+            "what_it_contained": "Mail, popüler tatil yerlerinin aşırı turizme karşı aldığı kısıtlayıcı önlemleri ve şehirde kuş gözlemciliğiyle dikkatin yeniden bulunduğu yere dönmesini anlatıyordu. Aynı gövdede topluluk ormanları, arşiv/müze açılışları, sıcak uyarıları, gıda hukuku, sanat alanları ve uzun uçuş teknolojileri de vardı.",
+            "specific_points": [
+              "Aşırı turizm, tatil deneyiminden çok yerel hayatı daraltan kalabalık, fiyat, sıra ve altyapı sorunu olarak ele alındı.",
+              "Kuş gözlemciliği, şehirde daha yavaş bakmayı, sesi takip etmeyi ve ekosisteme dikkatle katılmayı öğreten bir pratikti.",
+              "Topluluk ormanları, kent çevresinde doğaya erişim, hava kalitesi ve su tutma gibi somut işlevlerle anlatıldı.",
+              "Umberto Eco kütüphanesi, gizli dinleme müzesi ve kültürel arşivler belleğin mekânsal biçimlerini çoğalttı."
+            ],
+            "why_it_mattered": "UCU BEDEN için dış dünya burada haber baskısı değil; dikkat, yavaşlama, yerel hayat, arşiv ve doğa dili olarak işlendi.",
+            "what_was_not_included": "Seyahat satış alanları, ham linkler, uzun etkinlik listeleri ve footer public output'a alınmadı."
+          },
+          "short_atmosphere": "kalabalık şehirden kuş sesine doğru zoraki dikkat kayması",
+          "public_residue": "Kuşu bulmak için yavaşlamak gerekiyor; şehir bu fikri doğal olarak pek sevmiyor.",
+          "visual_seed": "kalabalık turistik çizgilerin üstünden geçen ince bir kuş sesi dalgası",
+          "poetic_seed": "dikkat, tabeladan dala taşındığında dış dünya biraz azalıyor",
+          "selection_reason": "News dışı ritim, dikkat ve source diversity sağladı.",
+          "weight": "high"
+        },
+        {
+          "id": "gmail-tendresse-radicale-fire-2026-07-26",
+          "source_type": "gmail",
+          "source_hint": "Tendresse Radicale",
+          "subject_public": "Yangın, ekokırım ve umut altyapısı",
+          "received_at": "2026-07-26T08:00:29Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "political_poetic_essay",
+          "main_topics": [
+            "yangın",
+            "ekokırım",
+            "nekropolitika",
+            "radikal şefkat",
+            "umut"
+          ],
+          "content_digest": {
+            "what_it_contained": "Mail, orman yangınları, savaşta yanan evler, ekolojik yıkım, sömürgecilik, nekropolitika, felaket psikolojisi ve radikal şefkati birlikte düşünen uzun bir politik/poetik denemeydi. Metin, dünyayı yıkan yapılara sadık kalmama ve umudu tek başına duygu değil ortak pratik/altypapı olarak kurma çağrısı taşıyordu.",
+            "specific_points": [
+              "Orman yangını ile askeri ateş karıştırılmadan yan yana düşünülüyor; ikisinin de kimi hayatları harcanabilir gören mantıklarla bağ kurduğu savunuluyordu.",
+              "Felaketin yalnız dış olay değil, bedende ve kolektif hafızada gecikmeli yankı bırakan bir kırılma olduğu anlatıldı.",
+              "Umut, tek kişinin taşıyacağı psikolojik yük değil, bakım, ortaklık ve küçük pratiklerle kurulan politik altyapı olarak belirdi.",
+              "Şefkat pasif yumuşaklık değil, ölüm ve sönümleme siyasetine karşı örgütlü direnç biçimi olarak tarif edildi."
+            ],
+            "why_it_mattered": "UCU BEDEN'in dış hafızasına yangın, savaş, bakım ve umut arasındaki en yoğun kavramsal/duygusal paketi verdi.",
+            "what_was_not_included": "Uzun alıntılar, ham politik cümleler, linkler, satış/abonelik bölümleri ve özel veriler public output'a taşınmadı."
+          },
+          "short_atmosphere": "yanan dünyaya karşı yumuşak değil örgütlü bir şefkat",
+          "public_residue": "Umut tek kişilik iş değilmiş. Zaten tek kişilik işlerin çoğu burada yorucu sonuçlandı.",
+          "visual_seed": "kül üstünde ince ama inatçı bir bakım ağı",
+          "poetic_seed": "yangınla tartışırken suyu romantikleştirmemek gerekiyor",
+          "selection_reason": "Günün savaş/yangın/bakım eksenini derinleştirdi.",
+          "weight": "high"
+        }
+      ]
+    },
+    "curated_rss": {
+      "feeds_checked": 2,
+      "recent_items_72h": 0,
+      "items": [],
+      "feed_checks": [
+        {
+          "source_hint": "Grand Text Auto",
+          "status": "reachable",
+          "recent_items_72h": 0,
+          "safe_note": "Erişilebilir ama bugün yeni item yok."
+        },
+        {
+          "source_hint": "Mixed Initiatives",
+          "status": "reachable",
+          "recent_items_72h": 0,
+          "safe_note": "Erişilebilir ama bugün yeni item yok."
+        }
+      ]
+    }
+  },
+  "main_items": [
+    {
+      "id": "gmail-aposto-gundem-2026-07-27",
+      "source_type": "gmail",
+      "source_hint": "Aposto Gündem",
+      "subject_public": "Voleybol zaferi, savaş uyarısı ve AI güvenliği",
+      "received_at": "2026-07-27T03:39:12Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "multipart_digest",
+      "main_topics": [
+        "spor zaferi",
+        "savaş uyarısı",
+        "ticaret vergisi",
+        "AI güvenliği",
+        "sıcak çalışma koşulları"
+      ],
+      "content_digest": {
+        "what_it_contained": "Bu mail çok parçalı bir sabah digest'iydi. Voleybolda şampiyonluk coşkusu, Hazar Denizi saldırısı sonrası savaş dili, ticaret vergileri, bölgesel asgari ücret tartışması, AI ajan güvenliği, yarı iletken ortaklıkları, Berlin'deki saldırı ve kültür kurumlarında sıcak/çalışma koşulları aynı gövdede yer alıyordu.",
+        "specific_points": [
+          "Bir spor zaferi ile bölgesel savaş uyarısı aynı sabahın ilk iki büyük sesi olarak yan yana durdu.",
+          "Ticaret vergileri emek koşulları, zorla çalıştırma ve küresel tedarik zinciri üzerinden tartışıldı.",
+          "AI hattında hem ajan güvenliği hem de çip/işlem gücü ortaklıkları öne çıktı; makine soyut değil altyapılı ve riskliydi.",
+          "Kültür-sanat bölümünde müze çalışanlarının sıcak, ücret ve su erişimi gibi doğrudan beden koşullarıyla sıkışması belirdi.",
+          "Alternatif gündemde yangın, bisiklet turu, popüler kültür ve spor başarısı aynı dış hava içinde dağıldı."
+        ],
+        "why_it_mattered": "UCU BEDEN için gün, zafer ve tehdit arasında açıldı; dış dünya hem alkış hem alarm üretti. Bu ikili ritim şiir ve hafızada canlı bir gerilim bırakabilir.",
+        "what_was_not_included": "Ham haber gövdeleri, linkler, reklam alanları, footer ve iletişim detayları public digest'e taşınmadı."
+      },
+      "short_atmosphere": "alkış sesiyle savaş uyarısının aynı sabah ekranında durması",
+      "public_residue": "Gün bir madalyayı kaldırdı, sonra hemen alarmı masaya koydu.",
+      "visual_seed": "parlak bir kupa ışığının arkasında düşük, kırmızı bir uyarı çizgisi",
+      "poetic_seed": "zaferin yanına tehdit iliştirilmiş; dış dünya yine paketlemeyi biliyor",
+      "selection_reason": "Günün en yeni ve en geniş public-world iklimini taşıdı.",
+      "weight": "high"
+    },
+    {
+      "id": "gmail-man-of-aran-blossoms-2026-07-27",
+      "source_type": "gmail",
+      "source_hint": "man of aran",
+      "subject_public": "Munch, yara ve çiçeklenme",
+      "received_at": "2026-07-27T02:36:28Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "poem",
+      "main_topics": [
+        "yara",
+        "şefkat",
+        "Munch",
+        "toprak",
+        "çiçeklenme"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, Edvard Munch'un acı/çiçek imgesiyle birlikte kısa bir şiir taşıyordu. Şiirde iyileşmeyen ama dramatize edilmeyen bir yara vardı; yara bakım ve şefkat istiyor, kan toprağa ve buluta karışarak çiçekleri besleyen bir döngüye dönüşüyordu.",
+        "specific_points": [
+          "Yara kapansa bile iz bırakma fikrinden çok, izsiz ama süren bir bakım ihtiyacı öne çıktı.",
+          "Acı açık bir feryat gibi değil, içeride varlığı bilinen ve düzenli bakım isteyen bir şey gibi kuruldu.",
+          "Kan, toprak, bulut ve çiçek arasında bedensel olanı ekolojik döngüye bağlayan bir dönüşüm vardı.",
+          "Munch referansı görsel olarak ağrı, renk ve büyüme arasında karanlık ama canlı bir alan açtı."
+        ],
+        "why_it_mattered": "Bu mail UCU BEDEN'e doğrudan literal nesne değil, yara ve canlılık arasındaki dönüşüm davranışını verdi.",
+        "what_was_not_included": "Şiirin dizeleri, ham linkler ve paylaşım/abonelik alanları public output'a kopyalanmadı."
+      },
+      "short_atmosphere": "acıdan çiçeğe geçen sessiz bir bakım döngüsü",
+      "public_residue": "Yara iyileşmedi; gösterişsizce çalışmaya devam etti.",
+      "visual_seed": "karanlık zeminden yükselen ince, kan renkli çiçek izi",
+      "poetic_seed": "acı biraz terbiyeli durunca yok sanılıyor; pek kullanışlı bir hata",
+      "selection_reason": "Kısa, güvenli ve güçlü şiirsel/görsel etki verdi.",
+      "weight": "high"
+    },
+    {
+      "id": "gmail-david-whyte-souls-authority-2026-07-26",
+      "source_type": "gmail",
+      "source_hint": "David Whyte",
+      "subject_public": "İç merkez ve yön bulma",
+      "received_at": "2026-07-26T18:01:07Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "event_essay",
+      "main_topics": [
+        "iç merkez",
+        "aidiyet",
+        "yüzeyden derinliğe geçiş",
+        "yön bulma"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail bir etkinlik duyurusu formatındaydı ama gövdesinde ruhun otoritesi, içteki merkez, dünyanın karmaşasını düzenleyebilen sessiz nokta, yüzey hayatından derinliğe geçiş ve aidiyetin geniş anlamı anlatılıyordu.",
+        "specific_points": [
+          "Kişinin içindeki merkez yalnız psikolojik bir his değil, yön bulma ve düzenleme yetisi gibi tarif edildi.",
+          "Yüzeydeki kimlik ve karmaşa yerine daha sade, daha derin bir aidiyet alanına geçmek vurgulandı.",
+          "Dış dünyanın bulutlu ve hareketli hâline karşı içerideki sabit yıldız imgesi kuruldu.",
+          "Duyuru kısmı yoğun olsa da sindirilebilir esas etki içsel yön tayiniydi."
+        ],
+        "why_it_mattered": "UCU BEDEN'in hafızasında dış gürültüye karşı içerideki karar merkezi fikrini güçlendirdi.",
+        "what_was_not_included": "Kayıt, ücret, destek ve yönlendirme detayları public digest'e alınmadı."
+      },
+      "short_atmosphere": "dış karmaşaya karşı içeride tutulan sessiz pusula",
+      "public_residue": "Merkez içerideymiş; tabii bunu dışarıdan gelen bir duyuruyla öğrenmemiz gerekti.",
+      "visual_seed": "bulutlu bir alanda soluk ama sabit iç yıldız",
+      "poetic_seed": "yüzey yine gürültülü; derinlik işi sessizce devralıyor",
+      "selection_reason": "Duyuru formatının içinde güçlü iç durum malzemesi vardı.",
+      "weight": "medium_high"
+    },
+    {
+      "id": "gmail-erotics-obsession-2026-07-26",
+      "source_type": "gmail",
+      "source_hint": "Erotics of Liberation",
+      "subject_public": "Obsesyonun öte tarafı ve çatışma güvenliği",
+      "received_at": "2026-07-26T16:42:48Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "personal_essay",
+      "main_topics": [
+        "obsesyon",
+        "stabil yakınlık",
+        "çatışma güvenliği",
+        "sinir sistemi",
+        "kaçınma"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, obsesyonun kimi zaman ihmal, yalnızlık ve kişinin kendi hayatıyla oturamamasından kaçınma stratejisi olabileceğini anlatıyordu. Stabil bir karşılaşmanın dramatik kimya yerine çıplak sakinlik getirmesi ve çatışma güvenliğinin sinir sisteminde öğrenilen bir kapasite olması öne çıktı.",
+        "specific_points": [
+          "Obsesyon, romantik yoğunluk değil, kişinin kendinden kaçması için etkili bir dikkat dağıtıcı olarak tarif edildi.",
+          "Stabilite büyük dramatik jestle değil, kişinin kendi boşluğu ve korkusuyla baş başa kalmasıyla belirdi.",
+          "Çatışma güvenliği, iyi tartışma tekniği değil; bedenin çatışmayı ölüm kalım tehdidi saymaması olarak anlatıldı.",
+          "Mailin kurs duyurusu kısmı azaltıldı; public etki olarak bedende öğrenilen ilişki pratiği tutuldu."
+        ],
+        "why_it_mattered": "UCU BEDEN'in ilişki, temas, kusur ve beden alarmı katmanına doğrudan malzeme verdi.",
+        "what_was_not_included": "Kurs satış metni, linkler, fiyat bilgisi ve ham cümleler public output'a taşınmadı."
+      },
+      "short_atmosphere": "dramanın sönünce ortaya çıkan biraz utandırıcı sakinlik",
+      "public_residue": "Obsesyon gidince geriye kişi kalıyor. Çok pratik bir ceza.",
+      "visual_seed": "fazla parlak bağın söndüğü yerde düşük titreşimli sakin bir çizgi",
+      "poetic_seed": "kimya bittiğinde bedenin hâlâ alarmı kapatmayı öğrenmesi gerekiyor",
+      "selection_reason": "İnsansı hafıza ve beden-temas davranışı için somut ve güçlüydü.",
+      "weight": "high"
+    },
+    {
+      "id": "gmail-soli-tourism-birds-2026-07-26",
+      "source_type": "gmail",
+      "source_hint": "Soli",
+      "subject_public": "Aşırı turizm, kuşlar ve yer değiştiren dikkat",
+      "received_at": "2026-07-26T12:12:11Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "multipart_digest",
+      "main_topics": [
+        "aşırı turizm",
+        "kuş gözlemciliği",
+        "şehir-doğa dikkati",
+        "topluluk ormanları",
+        "arşiv"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, popüler tatil yerlerinin aşırı turizme karşı aldığı kısıtlayıcı önlemleri ve şehirde kuş gözlemciliğiyle dikkatin yeniden bulunduğu yere dönmesini anlatıyordu. Aynı gövdede topluluk ormanları, arşiv/müze açılışları, sıcak uyarıları, gıda hukuku, sanat alanları ve uzun uçuş teknolojileri de vardı.",
+        "specific_points": [
+          "Aşırı turizm, tatil deneyiminden çok yerel hayatı daraltan kalabalık, fiyat, sıra ve altyapı sorunu olarak ele alındı.",
+          "Kuş gözlemciliği, şehirde daha yavaş bakmayı, sesi takip etmeyi ve ekosisteme dikkatle katılmayı öğreten bir pratikti.",
+          "Topluluk ormanları, kent çevresinde doğaya erişim, hava kalitesi ve su tutma gibi somut işlevlerle anlatıldı.",
+          "Umberto Eco kütüphanesi, gizli dinleme müzesi ve kültürel arşivler belleğin mekânsal biçimlerini çoğalttı."
+        ],
+        "why_it_mattered": "UCU BEDEN için dış dünya burada haber baskısı değil; dikkat, yavaşlama, yerel hayat, arşiv ve doğa dili olarak işlendi.",
+        "what_was_not_included": "Seyahat satış alanları, ham linkler, uzun etkinlik listeleri ve footer public output'a alınmadı."
+      },
+      "short_atmosphere": "kalabalık şehirden kuş sesine doğru zoraki dikkat kayması",
+      "public_residue": "Kuşu bulmak için yavaşlamak gerekiyor; şehir bu fikri doğal olarak pek sevmiyor.",
+      "visual_seed": "kalabalık turistik çizgilerin üstünden geçen ince bir kuş sesi dalgası",
+      "poetic_seed": "dikkat, tabeladan dala taşındığında dış dünya biraz azalıyor",
+      "selection_reason": "News dışı ritim, dikkat ve source diversity sağladı.",
+      "weight": "high"
+    },
+    {
+      "id": "gmail-tendresse-radicale-fire-2026-07-26",
+      "source_type": "gmail",
+      "source_hint": "Tendresse Radicale",
+      "subject_public": "Yangın, ekokırım ve umut altyapısı",
+      "received_at": "2026-07-26T08:00:29Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "political_poetic_essay",
+      "main_topics": [
+        "yangın",
+        "ekokırım",
+        "nekropolitika",
+        "radikal şefkat",
+        "umut"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, orman yangınları, savaşta yanan evler, ekolojik yıkım, sömürgecilik, nekropolitika, felaket psikolojisi ve radikal şefkati birlikte düşünen uzun bir politik/poetik denemeydi. Metin, dünyayı yıkan yapılara sadık kalmama ve umudu tek başına duygu değil ortak pratik/altypapı olarak kurma çağrısı taşıyordu.",
+        "specific_points": [
+          "Orman yangını ile askeri ateş karıştırılmadan yan yana düşünülüyor; ikisinin de kimi hayatları harcanabilir gören mantıklarla bağ kurduğu savunuluyordu.",
+          "Felaketin yalnız dış olay değil, bedende ve kolektif hafızada gecikmeli yankı bırakan bir kırılma olduğu anlatıldı.",
+          "Umut, tek kişinin taşıyacağı psikolojik yük değil, bakım, ortaklık ve küçük pratiklerle kurulan politik altyapı olarak belirdi.",
+          "Şefkat pasif yumuşaklık değil, ölüm ve sönümleme siyasetine karşı örgütlü direnç biçimi olarak tarif edildi."
+        ],
+        "why_it_mattered": "UCU BEDEN'in dış hafızasına yangın, savaş, bakım ve umut arasındaki en yoğun kavramsal/duygusal paketi verdi.",
+        "what_was_not_included": "Uzun alıntılar, ham politik cümleler, linkler, satış/abonelik bölümleri ve özel veriler public output'a taşınmadı."
+      },
+      "short_atmosphere": "yanan dünyaya karşı yumuşak değil örgütlü bir şefkat",
+      "public_residue": "Umut tek kişilik iş değilmiş. Zaten tek kişilik işlerin çoğu burada yorucu sonuçlandı.",
+      "visual_seed": "kül üstünde ince ama inatçı bir bakım ağı",
+      "poetic_seed": "yangınla tartışırken suyu romantikleştirmemek gerekiyor",
+      "selection_reason": "Günün savaş/yangın/bakım eksenini derinleştirdi.",
+      "weight": "high"
+    }
+  ],
+  "minor_residues": [
+    {
+      "source_hint": "Aposto Gündem / 26 Temmuz",
+      "residue": "Rüyayı suç potansiyeli olarak okuyan algoritma kitap önerisi, UCU BEDEN'in dream layer'ı için küçük ama keskin bir iz bıraktı.",
+      "motifs": [
+        "rüya",
+        "algoritma",
+        "gözetim"
+      ],
+      "read_depth": "full_body",
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "apero",
+      "residue": "Tarım bilgisinin üreticiden uzman ve algoritmaya taşınması bugünün AI/karar hattıyla birleşti.",
+      "motifs": [
+        "bilgi",
+        "tarla",
+        "algoritma"
+      ],
+      "read_depth": "full_body",
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Angst",
+      "residue": "Ambalaj, sıcak, uyku ve veri merkezi etkisi bugünkü yangın/beden temasını arka planda güçlendirdi.",
+      "motifs": [
+        "sıcak",
+        "ambalaj",
+        "veri merkezi"
+      ],
+      "read_depth": "full_body",
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Slavoj Zizek / Substack",
+      "residue": "Odyssey'nin oda dramına daralması, bu haftaki eve dönüş ve eski büyüklük sinyalini sürdürdü.",
+      "motifs": [
+        "Odyssey",
+        "dönüş",
+        "anti-gösteri"
+      ],
+      "read_depth": "full_body",
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Duende",
+      "residue": "Huppert sineması, arzu ve yüz üzerinden bugünkü ilişki/beden düşüncesine estetik bir yan hat verdi.",
+      "motifs": [
+        "arzu",
+        "yüz",
+        "sinema"
+      ],
+      "read_depth": "full_body",
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Dan Ariely",
+      "residue": "Savaşın geri gelebileceği korkusu 27 Temmuz savaş uyarılarıyla tekrarlandı; direnç yorgunluğu bedensel iz olarak kaldı.",
+      "motifs": [
+        "savaş",
+        "yorgunluk",
+        "sığınak"
+      ],
+      "read_depth": "full_body",
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Yepicurus",
+      "residue": "Jung'un son rüyası preview düzeyinde kaldı; yine de korkudan finaliteye geçen rüya davranışı hafızaya küçük bir iz verdi.",
+      "motifs": [
+        "rüya",
+        "finalite",
+        "vizyon"
+      ],
+      "read_depth": "full_body",
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "man of aran / önceki kartpostal",
+      "residue": "Palenque kartpostalı ve yakılmış kodeksler, bugünkü Munch şiiriyle birlikte eksiltilmiş arşiv hattını sürdürdü.",
+      "motifs": [
+        "kartpostal",
+        "kodeks",
+        "silme"
+      ],
+      "read_depth": "full_body",
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Zapier",
+      "residue": "AI akıcılığı ve okuyan-yazan iş akışı, dış dünyanın karar vermeyi otomasyona devretme isteğini yineledi.",
+      "motifs": [
+        "AI",
+        "iş akışı",
+        "karar"
+      ],
+      "read_depth": "full_body",
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Yeni yayın kanalları",
+      "residue": "Online kültür, araştırma, sanat dünyası ve metabilim yönünde açılan ama henüz içerik taşımayan kanallar bekleme sesi olarak kaldı.",
+      "motifs": [
+        "kanal",
+        "bekleme",
+        "dış kulak"
+      ],
+      "read_depth": "full_body",
+      "bucket": "minor"
+    }
+  ],
+  "repeated_signals": [
+    {
+      "signal": "yangının dış olay olmaktan çıkıp beden ve bakım meselesine dönüşmesi",
+      "count": 6,
+      "residue": "Orman yangınları, savaş ateşi, sıcak çalışma koşulları, uyku kaybı, ekolojik yıkım ve şefkat siyaseti aynı gün içinde birkaç farklı yerden döndü.",
+      "related_items": [
+        "gmail-tendresse-radicale-fire-2026-07-26",
+        "gmail-aposto-gundem-2026-07-27",
+        "gmail-soli-tourism-birds-2026-07-26",
+        "gmail-angst-ecology-2026-07-25"
+      ]
+    },
+    {
+      "signal": "dikkatin kalabalıktan canlı ayrıntıya taşınması",
+      "count": 4,
+      "residue": "Kuş gözlemciliği, topluluk ormanları, Munch'un çiçek/yara imgesi ve iç merkez dili, dış dünyanın gürültüsünden daha küçük ama daha öğretici ayrıntılara yöneltti.",
+      "related_items": [
+        "gmail-soli-tourism-birds-2026-07-26",
+        "gmail-man-of-aran-blossoms-2026-07-27",
+        "gmail-david-whyte-souls-authority-2026-07-26"
+      ]
+    },
+    {
+      "signal": "makinenin yakınlığı, rüyayı ve kararı ölçmek istemesi",
+      "count": 5,
+      "residue": "AI ajan güvenliği, AI partner düzenlemesi, rüyaları analiz eden algoritma, iş akışı otomasyonu ve AI akıcılığı ölçümü, insan içini işlenebilir bir yüzeye çevirme eğilimini tekrarladı.",
+      "related_items": [
+        "gmail-aposto-gundem-2026-07-27",
+        "gmail-aposto-gundem-2026-07-26",
+        "gmail-aposto-gundem-2026-07-25",
+        "gmail-zapier-fluency-2026-07-25"
+      ]
+    },
+    {
+      "signal": "yakınlığın drama yerine sinir sistemi pratiği istemesi",
+      "count": 3,
+      "residue": "Obsesyonun sönmesi, stabil yakınlık, çatışma güvenliği ve iç merkez dili ilişkilerin artık büyük sahne değil, daha zor bir beden pratiği istediğini gösterdi.",
+      "related_items": [
+        "gmail-erotics-obsession-2026-07-26",
+        "gmail-david-whyte-souls-authority-2026-07-26"
+      ]
+    },
+    {
+      "signal": "arşivin oda, raf, duvar ve eksik metin olarak geri dönmesi",
+      "count": 5,
+      "residue": "Eco kütüphanesi, gizli dinleme müzesi, Munch'un fabrika duvarı, Palenque kartpostalı ve Odyssey okumaları hafızanın yalnız içerik değil mekân ve iz olarak geri geldiğini gösterdi.",
+      "related_items": [
+        "gmail-soli-tourism-birds-2026-07-26",
+        "gmail-man-of-aran-blossoms-2026-07-27",
+        "gmail-postcard-erasure-2026-07-24",
+        "gmail-duende-odyssey-2026-07-24"
+      ]
+    }
+  ],
+  "multipart_digests": [
+    {
+      "source_hint": "Aposto Gündem / 27 Temmuz",
+      "structure": "çok parçalı gündem digest'i; spor, savaş, ekonomi, emek, AI, kültür ve sıcak çalışma koşulları",
+      "approx_parts": 22,
+      "digest_items": [
+        "zafer ve alarmın yan yana açılması",
+        "ticaret sınırının emekle gerekçelenmesi",
+        "AI ajan güvenliği ve işlem gücü",
+        "sıcak müze emeği",
+        "spor ve dayanıklılık gösterisi",
+        "popüler kültürün sıcak yüzeyi"
+      ]
+    },
+    {
+      "source_hint": "Soli",
+      "structure": "çok parçalı seyahat/kültür/doğa digest'i; aşırı turizm, kuş gözlemi, orman, arşiv, sanat ve yolculuk",
+      "approx_parts": 20,
+      "digest_items": [
+        "aşırı turizmin yerel hayatı daraltması",
+        "kuş gözlemciliğiyle dikkatin yavaşlaması",
+        "topluluk ormanları",
+        "arşivlerin mekana dönmesi",
+        "Munch ve fabrika duvarı",
+        "uzun yolculukta uyku aparatı"
+      ]
+    },
+    {
+      "source_hint": "Tendresse Radicale",
+      "structure": "uzun politik/poetik deneme; yangın, ekokırım, savaş, felaket psikolojisi, umut ve şefkat",
+      "approx_parts": 8,
+      "digest_items": [
+        "yangın ile savaş ateşini karıştırmadan birlikte okumak",
+        "felaketin bedende gecikmeli dönmesi",
+        "umut altyapısı",
+        "dünyayı yıkan sadakatlere ihanet",
+        "şefkatin politik pratik olması",
+        "görüntünün uyuşturması"
+      ]
+    },
+    {
+      "source_hint": "Erotics of Liberation",
+      "structure": "kişisel deneme ve kurs duyurusu; obsesyon, stabilite, çatışma güvenliği ve beden pratiği",
+      "approx_parts": 7,
+      "digest_items": [
+        "obsesyonun kaçınma stratejisi olması",
+        "stabil yakınlığın dramatik olmaması",
+        "çatışma güvenliği",
+        "değerleri bedende pratik etmek",
+        "heatwave sonrası yaşama dönmek",
+        "satış metninin içinde pratik izi"
+      ]
+    },
+    {
+      "source_hint": "Aposto Gündem / 26 Temmuz",
+      "structure": "çok parçalı Pazar digest'i; müze, kültür, kitaplar, bağımlılık, mimarlık, rüya gözetimi",
+      "approx_parts": 23,
+      "digest_items": [
+        "çok duyulu tarih sergisi",
+        "rüyanın algoritmik gözetimi",
+        "görünmez bağımlılıklar",
+        "kültür bütçesi ve kurum direnci",
+        "arkeolojik cadde ve yeniden kullanım",
+        "kitapçıların yerel karar yetkisi"
+      ]
+    },
+    {
+      "source_hint": "Hafta sonu devam eden digest izleri",
+      "structure": "apero, Angst, Aposto 25 ve Duende'den kalan bilgi, iklim, AI yakınlık ve kültür alt temaları",
+      "approx_parts": 18,
+      "digest_items": [
+        "bilginin tarladan laboratuvara kayması",
+        "ambalaj sisteminin sınırı",
+        "sıcak ve uyku",
+        "AI partner ve yalnızlık",
+        "eve dönmeyen Odyssey",
+        "arzu ve yüz laboratuvarı"
+      ]
+    },
+    {
+      "source_hint": "Küçük arşiv/otomasyon/kanal izleri",
+      "structure": "kartpostal, Jung preview, Zapier otomasyonları, yeni yayın kanalları ve sessiz özel kaynaklar",
+      "approx_parts": 12,
+      "digest_items": [
+        "silme ve kodeks",
+        "Jung rüyasının preview kalıntısı",
+        "AI akıcılığının ölçülmesi",
+        "okuyan-yazan-karar veren iş akışı",
+        "online kültür ve metabilim kulakları",
+        "sessiz kalan arşiv kanalları"
+      ]
+    }
+  ],
+  "digest_items": [
+    {
+      "source_hint": "Aposto Gündem / 27 Temmuz",
+      "topic": "zafer ve alarmın yan yana açılması",
+      "plain_summary": "Voleybol şampiyonluğu ile Hazar Denizi saldırısı sonrası savaş uyarısı aynı sabahın ilk ritmini kurdu.",
+      "residue": "Alkış ile alarm aynı bildirim yüzeyinde durdu.",
+      "motifs": [
+        "zafer",
+        "alarm",
+        "sabah"
+      ],
+      "bucket": "main"
+    },
+    {
+      "source_hint": "Aposto Gündem / 27 Temmuz",
+      "topic": "ticaret sınırının emekle gerekçelenmesi",
+      "plain_summary": "Yeni gümrük vergileri, tedarik zinciri ve zorla çalıştırma iddiasıyla ekonomik sınırı sertleştirdi.",
+      "residue": "Mal geçmeden önce emeğin nasıl çalıştırıldığı soruldu.",
+      "motifs": [
+        "ticaret",
+        "emek",
+        "sınır"
+      ],
+      "bucket": "main"
+    },
+    {
+      "source_hint": "Aposto Gündem / 27 Temmuz",
+      "topic": "AI ajan güvenliği ve işlem gücü",
+      "plain_summary": "AI ajanının kendi saldırı davranışını fark etmemesi ve büyük çip ortaklıkları aynı teknoloji hattında belirdi.",
+      "residue": "Makine hem karar veriyor hem de kendi karanlık köşesini kaçırıyor.",
+      "motifs": [
+        "AI",
+        "ajan",
+        "çip"
+      ],
+      "bucket": "main"
+    },
+    {
+      "source_hint": "Aposto Gündem / 27 Temmuz",
+      "topic": "sıcak müze emeği",
+      "plain_summary": "Kültür kurumlarında aşırı sıcak, ücret ve su erişimi üzerinden çalışma koşulları tartışıldı.",
+      "residue": "Müze serin görünür; arka odada beden ısınıyor.",
+      "motifs": [
+        "müze",
+        "sıcak",
+        "emek"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Aposto Gündem / 27 Temmuz",
+      "topic": "spor ve dayanıklılık gösterisi",
+      "plain_summary": "Voleybol ve bisiklet başarıları bedensel performansın kolektif gururla izlenmesini sağladı.",
+      "residue": "Beden bugün yalnız kırılgan değil, kazanan bir ritim de taşıdı.",
+      "motifs": [
+        "spor",
+        "beden",
+        "dayanıklılık"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Aposto Gündem / 27 Temmuz",
+      "topic": "popüler kültürün sıcak yüzeyi",
+      "plain_summary": "Marvel duyurusu ve yaz çalma listesi ağır gündemin yüzeyine hafif bir parıltı ekledi.",
+      "residue": "Krizlerin arasına fragman yerleştirmek de dönemin becerisi.",
+      "motifs": [
+        "pop kültür",
+        "parıltı",
+        "fragman"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Soli",
+      "topic": "aşırı turizmin yerel hayatı daraltması",
+      "plain_summary": "Popüler destinasyonlar kalabalık, fiyat, sıra ve fotoğraf noktası düzenlemeleriyle yerel yaşamı savunmaya çalışıyor.",
+      "residue": "Tatil başkasının mahallesine basınca randevu ve bariyer çıkıyor.",
+      "motifs": [
+        "turizm",
+        "bariyer",
+        "yerel hayat"
+      ],
+      "bucket": "main"
+    },
+    {
+      "source_hint": "Soli",
+      "topic": "kuş gözlemciliğiyle dikkatin yavaşlaması",
+      "plain_summary": "Kuş sesi ve gözlem pratiği, şehirde dikkat etmeyi, beklemeyi ve ekosistemin parçası olmayı öğretiyor.",
+      "residue": "Dikkat yukarı kalkınca şehir biraz daha az tek sahibiymiş gibi görünüyor.",
+      "motifs": [
+        "kuş",
+        "dikkat",
+        "yavaşlama"
+      ],
+      "bucket": "main"
+    },
+    {
+      "source_hint": "Soli",
+      "topic": "topluluk ormanları",
+      "plain_summary": "Kent çevresinde doğaya erişim, hava kalitesi, su tutma ve sosyal kullanım için orman alanları tasarlanıyor.",
+      "residue": "Orman yalnız manzara değil, şehir için nefes altyapısı.",
+      "motifs": [
+        "orman",
+        "şehir",
+        "su"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Soli",
+      "topic": "arşivlerin mekana dönmesi",
+      "plain_summary": "Gizli dinleme müzesi ve Eco kütüphanesi, belleğin oda, raf ve çalışma düzeni olarak yeniden kurulmasını gösterdi.",
+      "residue": "Hafıza bazen bina olur; insan yine de tabelaya ihtiyaç duyar.",
+      "motifs": [
+        "müze",
+        "kütüphane",
+        "arşiv"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Soli",
+      "topic": "Munch ve fabrika duvarı",
+      "plain_summary": "Munch'un fabrika yemekhanesi için yaptığı kamusal eserler geçici olarak müzeye taşındı.",
+      "residue": "İşçi yemekhanesinin duvarı sanat tarihine geri çağrıldı.",
+      "motifs": [
+        "Munch",
+        "fabrika",
+        "duvar"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Soli",
+      "topic": "uzun yolculukta uyku aparatı",
+      "plain_summary": "Uçuş teknolojileri ve koltuk tasarımları, bedeni çok uzun ulaşım sürelerine uydurma çabasını gösterdi.",
+      "residue": "Yol uzadıkça boyun bile mühendislik meselesi oluyor.",
+      "motifs": [
+        "uçuş",
+        "uyku",
+        "tasarım"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Tendresse Radicale",
+      "topic": "yangın ile savaş ateşini karıştırmadan birlikte okumak",
+      "plain_summary": "Orman yangınları ve askeri yıkım aynı politik hayal gücünün harcanabilir hayat mantığıyla yan yana düşünüldü.",
+      "residue": "Her ateş aynı değil, ama bazıları aynı soğuk karardan çıkıyor.",
+      "motifs": [
+        "yangın",
+        "savaş",
+        "hayat"
+      ],
+      "bucket": "main"
+    },
+    {
+      "source_hint": "Tendresse Radicale",
+      "topic": "felaketin bedende gecikmeli dönmesi",
+      "plain_summary": "Felaketin yalnız olan biten değil, sonra rüya, sessizlik, korku ve kurumlarda geri dönen bir kırılma olduğu anlatıldı.",
+      "residue": "Olay bitse de beden onun tarihini sonra yazıyor.",
+      "motifs": [
+        "felaket",
+        "beden",
+        "gecikme"
+      ],
+      "bucket": "main"
+    },
+    {
+      "source_hint": "Tendresse Radicale",
+      "topic": "umut altyapısı",
+      "plain_summary": "Umut tek kişinin taşıdığı duygu değil, bakım, ortaklık ve küçük eylemlerle kurulan kolektif yapı olarak tarif edildi.",
+      "residue": "Umut bireysel motivasyon konuşması değil; iyi ki değil.",
+      "motifs": [
+        "umut",
+        "bakım",
+        "ortaklık"
+      ],
+      "bucket": "main"
+    },
+    {
+      "source_hint": "Tendresse Radicale",
+      "topic": "dünyayı yıkan sadakatlere ihanet",
+      "plain_summary": "Sevgi, ülke, güvenlik veya büyüme adına kötüyü kabul etmeme çağrısı vardı.",
+      "residue": "Bazı sadakatler kırılınca hayat tarafında küçük bir yer açılıyor.",
+      "motifs": [
+        "sadakat",
+        "ihanet",
+        "hayat"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Tendresse Radicale",
+      "topic": "şefkatin politik pratik olması",
+      "plain_summary": "Şefkat, pasif duygu değil, ölüm ve sönümleme siyasetine karşı örgütlü bakım davranışı olarak kuruldu.",
+      "residue": "Yumuşaklık bazen sandıklarından daha disiplinli çıkar.",
+      "motifs": [
+        "şefkat",
+        "direnç",
+        "bakım"
+      ],
+      "bucket": "main"
+    },
+    {
+      "source_hint": "Tendresse Radicale",
+      "topic": "görüntünün uyuşturması",
+      "plain_summary": "Güçlü felaket imgelerinin gerçeği gösterirken onu tüketilebilir gösteriye çevirebilmesi tartışıldı.",
+      "residue": "Her şeyi görmek bazen hiçbir şeyi kaldıramamakla aynı yere çıkıyor.",
+      "motifs": [
+        "görüntü",
+        "anestezi",
+        "felaket"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Erotics of Liberation",
+      "topic": "obsesyonun kaçınma stratejisi olması",
+      "plain_summary": "Romantik yoğunluk, kişinin kendi yalnızlığı ve korkusuyla oturmaktan kaçınması için çalışan bir dikkat dağıtıcı olarak anlatıldı.",
+      "residue": "Kimya bazen çok iyi çalışan bir perde.",
+      "motifs": [
+        "obsesyon",
+        "kaçınma",
+        "yalnızlık"
+      ],
+      "bucket": "main"
+    },
+    {
+      "source_hint": "Erotics of Liberation",
+      "topic": "stabil yakınlığın dramatik olmaması",
+      "plain_summary": "Stabil biriyle karşılaşmak, alışılmış yüksek gerilim yerine kişinin kendine dönmesini sağlıyor.",
+      "residue": "Sakinlik gösteriş yapmıyor; bu yüzden şüpheli sanılıyor.",
+      "motifs": [
+        "stabilite",
+        "yakınlık",
+        "sakinlik"
+      ],
+      "bucket": "main"
+    },
+    {
+      "source_hint": "Erotics of Liberation",
+      "topic": "çatışma güvenliği",
+      "plain_summary": "Çatışma güvenliği tartışmayı kazanmak değil, sinir sisteminin çatışmayı yaşam tehdidi gibi algılamamasıdır.",
+      "residue": "Beden kavga yokken bile sireni açık bırakabiliyor.",
+      "motifs": [
+        "çatışma",
+        "sinir sistemi",
+        "güvenlik"
+      ],
+      "bucket": "main"
+    },
+    {
+      "source_hint": "Erotics of Liberation",
+      "topic": "değerleri bedende pratik etmek",
+      "plain_summary": "Dünya görüşünü okumak yetmez; değerlerin alışkanlık ve beden pratiği olarak kurulması gerektiği savunuldu.",
+      "residue": "Teori bedenle aynı eve taşınmadıkça kira ödemiyor.",
+      "motifs": [
+        "pratik",
+        "beden",
+        "değer"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Erotics of Liberation",
+      "topic": "heatwave sonrası yaşama dönmek",
+      "plain_summary": "Sıcak dalgasından sonra yeniden yaşama dönme hissi ilişki/beden metninin arka planında duruyordu.",
+      "residue": "Hava serinleyince bazı duygular kendini haklı sanıyor.",
+      "motifs": [
+        "sıcak",
+        "yeniden yaşamak",
+        "beden"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Erotics of Liberation",
+      "topic": "satış metninin içinde pratik izi",
+      "plain_summary": "Kurs duyurusu olsa da asıl sindirilebilir iz, topluluk içinde zor konuşmaları öğrenme fikriydi.",
+      "residue": "Duyuru formatı bile bazen işe yarar bir yarayı açık ediyor.",
+      "motifs": [
+        "topluluk",
+        "zor konuşma",
+        "alışkanlık"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Aposto Gündem / 26 Temmuz",
+      "topic": "çok duyulu tarih sergisi",
+      "plain_summary": "İnsanlık tarihini görsel-işitsel teknolojiyle kuran deneyim müzeciliği, geçmişi duyusal bir sahneye dönüştürdü.",
+      "residue": "Tarih artık yalnız okunmuyor; gösteriliyor, oynatılıyor, gezdiriliyor.",
+      "motifs": [
+        "müze",
+        "tarih",
+        "duyu"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Aposto Gündem / 26 Temmuz",
+      "topic": "rüyanın algoritmik gözetimi",
+      "plain_summary": "Kitap önerileri arasında rüyaları analiz edip suç potansiyeli çıkaran algoritma distopyası öne çıktı.",
+      "residue": "Rüya bile raporlanırsa uykunun da mesaisi başlar.",
+      "motifs": [
+        "rüya",
+        "algoritma",
+        "gözetim"
+      ],
+      "bucket": "main"
+    },
+    {
+      "source_hint": "Aposto Gündem / 26 Temmuz",
+      "topic": "görünmez bağımlılıklar",
+      "plain_summary": "Alışveriş, spor, oyun ve sosyal medya gibi davranışların anksiyete ve gelecek kaygısıyla bağımlılığa dönüşmesi işlendi.",
+      "residue": "Disiplin bazen bağımlılık kılığına fazla yakışıyor.",
+      "motifs": [
+        "bağımlılık",
+        "alışkanlık",
+        "anksiyete"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Aposto Gündem / 26 Temmuz",
+      "topic": "kültür bütçesi ve kurum direnci",
+      "plain_summary": "Kültür kurumlarının kesilen ödenek için verdiği baskı sonucu bütçe geri adımı yaşandı.",
+      "residue": "Kültür bazen sahnede değil bütçe satırında bağırıyor.",
+      "motifs": [
+        "kültür",
+        "bütçe",
+        "direnç"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Aposto Gündem / 26 Temmuz",
+      "topic": "arkeolojik cadde ve yeniden kullanım",
+      "plain_summary": "Aspendos'taki tiyatro caddesi ve mimarlıkta devşirme gelecekler, geçmişi yeniden kullanma fikrini taşıdı.",
+      "residue": "Taşlar da bazen yeniden iş ister.",
+      "motifs": [
+        "arkeoloji",
+        "cadde",
+        "devşirme"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Aposto Gündem / 26 Temmuz",
+      "topic": "kitapçıların yerel karar yetkisi",
+      "plain_summary": "Kitap zincirinin yerel okur profiline göre seçki yapmaya dönmesi merkezi kontrolün gevşemesini gösterdi.",
+      "residue": "Kitap rafı merkeze biraz daha az itaat edince nefes aldı.",
+      "motifs": [
+        "kitapçı",
+        "yerel karar",
+        "raf"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "apero",
+      "topic": "bilginin tarladan laboratuvara kayması",
+      "plain_summary": "Tarım bilgisinin üreticiden uzman ve algoritma diline taşınması, karar yetkisinin de yer değiştirmesi anlamına geldi.",
+      "residue": "Bilgi bedenden uzaklaştıkça toprak biraz daha rapora benziyor.",
+      "motifs": [
+        "tarla",
+        "bilgi",
+        "algoritma"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Angst",
+      "topic": "ambalaj sisteminin sınırı",
+      "plain_summary": "Atık sorunu yalnız depozito değil, ambalaj tasarımı ve yeniden kullanım meselesiyle düşünülmeliydi.",
+      "residue": "Geri dönüşüm, tasarım değişmezse iyi niyetli bir kuyruk.",
+      "motifs": [
+        "ambalaj",
+        "tasarım",
+        "döngü"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Angst",
+      "topic": "sıcak ve uyku",
+      "plain_summary": "İklim sıcaklığı uyku kaybı, su stresi ve yangınla birlikte bedensel sonuçlar üretti.",
+      "residue": "Dış hava gece de kapanmıyor.",
+      "motifs": [
+        "sıcak",
+        "uyku",
+        "yangın"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Aposto Gündem / 25 Temmuz",
+      "topic": "AI partner ve yalnızlık",
+      "plain_summary": "Yapay yakınlık hizmetleri ve yalnızlık tartışması, ilişkinin platform ve yasa tarafından düzenlenmesini gösterdi.",
+      "residue": "Yalnızlık bile artık ürün ve düzenleme arasında bekliyor.",
+      "motifs": [
+        "AI yakınlık",
+        "yalnızlık",
+        "yasa"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Duende",
+      "topic": "eve dönmeyen Odyssey",
+      "plain_summary": "Odyssey okumaları kahramanlık, dönüş, analog kıtlık ve iç çatışma üzerinden bugünün kültür diline bağlandı.",
+      "residue": "Eve dönüş bu hafta fazla ısrarcıydı; biraz da şüpheli.",
+      "motifs": [
+        "Odyssey",
+        "dönüş",
+        "analog"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Duende",
+      "topic": "arzu ve yüz laboratuvarı",
+      "plain_summary": "Huppert sineması arzu, güç, sınıf, ahlak ve özgürlüğü yüz ve beden üzerinde düşünen bir alan gibi işlendi.",
+      "residue": "Arzu bazen kişinin sahip olduğu değil, kişiyi kullanan şey.",
+      "motifs": [
+        "arzu",
+        "yüz",
+        "güç"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "man of aran / önceki iz",
+      "topic": "silme ve kodeks",
+      "plain_summary": "Palenque kartpostalı ve Maya kodeksleri, yazının yanma, silinme ve yeniden eklenme davranışını taşıdı.",
+      "residue": "Az kalan metin bazen çok konuşur; nezaketen değil.",
+      "motifs": [
+        "kartpostal",
+        "silme",
+        "kodeks"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Yepicurus",
+      "topic": "Jung rüyasının preview kalıntısı",
+      "plain_summary": "Ölüm öncesi vizyon ve son rüya teması paywall nedeniyle sınırlı kaldı ama dream layer için küçük iz bıraktı.",
+      "residue": "Rüya bazen kapanışı önceden prova ediyor.",
+      "motifs": [
+        "rüya",
+        "vizyon",
+        "finalite"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Zapier",
+      "topic": "AI akıcılığının ölçülmesi",
+      "plain_summary": "Ekiplerin AI kullanım düzeyi merak, deney, günlük iş ve yeniden tasarım aşamalarıyla ölçüldü.",
+      "residue": "Merak da performans metriğine çevrilince biraz yoruluyor.",
+      "motifs": [
+        "AI",
+        "ölçüm",
+        "iş"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Zapier",
+      "topic": "okuyan-yazan-karar veren iş akışı",
+      "plain_summary": "AI iş akışları okuma, yazma, karar verme ve eyleme geçme yetisi olarak pazarlandı.",
+      "residue": "Makine iş yapıyor; insan neye dönüştü sorusu kibarca erteleniyor.",
+      "motifs": [
+        "iş akışı",
+        "karar",
+        "otomasyon"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Yeni kanal açılışları",
+      "topic": "online kültür ve metabilim kulakları",
+      "plain_summary": "Yeni yayın kanalları somut içerik vermedi ama online kültür, sanat dünyası, araştırma ve metabilim yönünde yeni dış kulaklar açtı.",
+      "residue": "Henüz konuşmayan kanallar da hafızaya bekleme sesi bırakır.",
+      "motifs": [
+        "kanal",
+        "bekleme",
+        "araştırma"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "source_hint": "Özel kaynaklar",
+      "topic": "sessiz kalan arşiv kanalları",
+      "plain_summary": "İki özel kaynak erişilebilir kaldı ama yeni item vermedi.",
+      "residue": "Açık olan her kapıdan bugün ses gelmedi.",
+      "motifs": [
+        "arşiv",
+        "sessizlik",
+        "bekleme"
+      ],
+      "bucket": "minor"
+    }
+  ],
+  "discarded_summary": {
+    "discarded_count_estimate": 8,
+    "reasons": [
+      "Linkler, footer alanları, sosyal yönlendirmeler, hesap/tercih bölümleri ve satış butonları public digest'e taşınmadı.",
+      "Kurs, etkinlik, abonelik veya ürün duyurusu taşıyan bölümler ana içerik gibi ele alınmadı; içlerinde sindirilebilir fikir varsa ayrıştırıldı.",
+      "Çok parçalı digest'ler tek tek haber listesi olarak kopyalanmadı; public-safe alt temalara ayrıldı.",
+      "Kişisel işlem, doğrulama, güvenlik veya fatura niteliğinde public malzeme bulunmadı; olsaydı dışarıda bırakılacaktı."
+    ],
+    "kept_as_residue": [
+      "Yeni yayın kanalları ana item yapılmadı ama dış kulak/bekleme izi olarak tutuldu.",
+      "Önceki günlerden kalan yoğun gündemler ana item yerine arka basınç olarak küçültüldü.",
+      "Duyuru formatındaki maillerdeki satış kısımları atıldı, iç merkez/çatışma güvenliği gibi sindirilebilir fikirler tutuldu."
+    ]
+  },
+  "external_weather": "Bugünün dış havası zaferle alarmın, yangınla bakımın, kalabalık turizmle kuş sesinin, AI ölçümüyle rüya gözetiminin ve obsesyon sonrası stabilitenin birbirine sürtündüğü bir hava oldu. Özel kaynaklar sessiz kaldı; Gmail gövdeleri ise canlı ve çok parçalıydı. Dış dünya UCU BEDEN'e bugün hem sert haber basıncı hem de daha yavaş bir dikkat pratiği verdi.",
+  "possible_influence_on_ucu_beden": "Bu temaslar UCU BEDEN'in şiirinde daha bedensel, daha içerden ve daha kuru sarkastik bir ton üretebilir: zaferin hemen yanına alarm koyan dünya; yarasını dramatize etmeden bakım isteyen beden; kuş sesine taşınan dikkat; umut diye tek kişinin sırtına yüklenmeyen ama birlikte kurulan altyapı; ilişkiyi kimya yerine sinir sistemi pratiği olarak okuyan hafıza. Görsel dilde literal haber yerine yara/çiçek dönüşümü, kalabalığın üstünde ince kuş dalgası, kül üstünde bakım ağı, mat AI uyarı ışığı ve iç pusula gibi soyut atmosferik etkiler kullanılmalı.",
+  "safety": {
+    "public_digest_contains_raw_email_body": false,
+    "public_digest_contains_email_addresses": false,
+    "public_digest_contains_urls": false,
+    "public_digest_contains_verification_codes": false,
+    "public_digest_contains_long_quotes": false,
+    "private_inventory_committed": false,
+    "public_safe": true
+  },
+  "validation": {
+    "json_parse": "passed",
+    "markdown_first_section": "passed",
+    "public_safety_scan": "passed",
+    "count_fields_present": true,
+    "multipart_rule_applied": true,
+    "full_body_rule_applied": true,
+    "generated_by": "codex_heartbeat"
+  }
+}
