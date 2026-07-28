@@ -1,22 +1,37 @@
 {
-  "date": "2026-07-27",
+  "date": "2026-07-28",
   "timezone": "Europe/Istanbul",
-  "completed_at": "2026-07-27T04:07:18.134Z",
+  "completed_at": "2026-07-28T04:08:13.966Z",
   "mode": "daily_codex_external_intake",
-  "public_json": "data/external_intake/codex/json/2026-07-27.json",
-  "public_markdown": "data/external_intake/codex/markdown/2026-07-27.md",
-  "run_log": "data/external_intake/codex/runs/2026-07-27.log.md",
+  "public_json": "data/external_intake/codex/json/2026-07-28.json",
+  "public_markdown": "data/external_intake/codex/markdown/2026-07-28.md",
+  "run_log": "data/external_intake/codex/runs/2026-07-28.log.md",
   "gmail": {
-    "scanned": 21,
-    "full_body_read_count": 21,
+    "scanned": 19,
+    "full_body_read_count": 19,
     "snippet_only_count": 0,
     "subject_only_count": 0,
     "multipart_digest_count": 7,
-    "digest_items_count": 42
+    "digest_items_count": 39
   },
   "curated_rss": {
     "feeds_checked": 2,
-    "recent_items_72h": 0
+    "recent_items_72h": 0,
+    "items": [],
+    "feed_checks": [
+      {
+        "source_hint": "Grand Text Auto",
+        "status": "reachable",
+        "recent_items_72h": 0,
+        "safe_note": "Kaynak erisilebilir durumdaydi; son 72 saatte yeni item yoktu."
+      },
+      {
+        "source_hint": "Mixed Initiatives",
+        "status": "reachable",
+        "recent_items_72h": 0,
+        "safe_note": "Kaynak erisilebilir durumdaydi; son 72 saatte yeni item yoktu."
+      }
+    ]
   },
   "safety": {
     "public_digest_contains_raw_email_body": false,
