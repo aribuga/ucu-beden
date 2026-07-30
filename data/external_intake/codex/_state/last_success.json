@@ -1,45 +1,29 @@
 {
-  "date": "2026-07-28",
+  "date": "2026-07-30",
   "timezone": "Europe/Istanbul",
-  "completed_at": "2026-07-28T04:08:13.966Z",
-  "mode": "daily_codex_external_intake",
-  "public_json": "data/external_intake/codex/json/2026-07-28.json",
-  "public_markdown": "data/external_intake/codex/markdown/2026-07-28.md",
-  "run_log": "data/external_intake/codex/runs/2026-07-28.log.md",
-  "gmail": {
-    "scanned": 19,
-    "full_body_read_count": 19,
-    "snippet_only_count": 0,
-    "subject_only_count": 0,
-    "multipart_digest_count": 7,
-    "digest_items_count": 39
-  },
-  "curated_rss": {
-    "feeds_checked": 2,
-    "recent_items_72h": 0,
-    "items": [],
-    "feed_checks": [
-      {
-        "source_hint": "Grand Text Auto",
-        "status": "reachable",
-        "recent_items_72h": 0,
-        "safe_note": "Kaynak erisilebilir durumdaydi; son 72 saatte yeni item yoktu."
-      },
-      {
-        "source_hint": "Mixed Initiatives",
-        "status": "reachable",
-        "recent_items_72h": 0,
-        "safe_note": "Kaynak erisilebilir durumdaydi; son 72 saatte yeni item yoktu."
-      }
-    ]
-  },
+  "completed_at": "2026-07-30T04:08:42.264Z",
+  "automation_id": "ucu-beden-daily-codex-external-intake",
+  "scanned_mail_count": 17,
+  "full_body_count": 17,
+  "snippet_or_subject_count": 0,
+  "multipart_digest_count": 8,
+  "digest_items_count": 31,
+  "curated_rss_feeds_checked": 2,
+  "curated_rss_recent_items": 0,
   "safety": {
-    "public_digest_contains_raw_email_body": false,
-    "public_digest_contains_email_addresses": false,
-    "public_digest_contains_urls": false,
-    "public_digest_contains_verification_codes": false,
-    "public_digest_contains_long_quotes": false,
-    "private_inventory_committed": false,
-    "public_safe": true
+    "public_safe": true,
+    "raw_mail_body_in_public": false,
+    "long_quotes_in_public": false,
+    "email_addresses_in_public": false,
+    "raw_urls_in_public": false,
+    "verification_codes_in_public": false,
+    "security_invoice_personal_transaction_details_in_public": false,
+    "private_inventory_path": "data/external_intake/codex_raw/inventory/2026-07-30.json"
+  },
+  "files": {
+    "json": "data/external_intake/codex/json/2026-07-30.json",
+    "markdown": "data/external_intake/codex/markdown/2026-07-30.md",
+    "run_log": "data/external_intake/codex/runs/2026-07-30.log.md",
+    "private_inventory": "data/external_intake/codex_raw/inventory/2026-07-30.json"
   }
 }

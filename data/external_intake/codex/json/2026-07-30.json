@@ -1,0 +1,1117 @@
+{
+  "version": 4,
+  "date": "2026-07-30",
+  "timezone": "Europe/Istanbul",
+  "collected_at": "2026-07-30T04:08:42.264Z",
+  "source": "codex_external_intake",
+  "summary": "Bugünün dış teması son 72 saatteki 17 Gmail mesajının full body okunması, 8 çok parçalı/uzun digest hattının ayrıştırılması, 31 digest_items üretimi ve son 72 saatte sessiz kalan iki özel kaynak kontrolünden public-safe biçimde üretildi.",
+  "reading_summary": {
+    "plain_summary": "Son 72 saatte 17 Gmail mesajı tarandı ve tümünde full body düzeyinde okuma yapılabildi; snippet veya subject-only kalan mail olmadı. Bugünün ana gövdesinde çok parçalı gündem mailleri, sanat/şiir notu, politik deneme, gastronomi ve yerel bilgi, merkezi olmayan internet haritası ve bedensel acının prosedürle karşılaşması vardı.\n\nÖzel RSS kaynakları ayrıca kontrol edildi. Grand Text Auto ve Mixed Initiatives erişilebilir durumdaydı, ancak son 72 saatte yeni item üretmediler. Bu yüzden bugünün canlı dış temas yükü Gmail gövdelerinde kaldı: kamusal sıkışma, güvenli mesafeden karar verme, belge ve beden arasındaki sürtünme, yerel bilginin direnç göstermesi, makinenin ilişki/denetim alanlarına girmesi ve bozulmuş yüzeyin hâlâ bakış taşıması.",
+    "what_was_in_the_emails": [
+      "Aposto Gündem'in 30 Temmuz digest'inde belediye operasyonu, Kıbrıs görüşmeleri, faiz kararı, enerji hattı, robot/AI güvenliği, platform davranışları, bölgesel çatışma ve yangın/kültür arka sesi vardı.",
+      "man of aran mailinde eski bir kağıdın silinerek şiire dönüşmesi ve Francis Bacon portresindeki bozulmuş yüzün hâlâ canlı bir bakış taşıması anlatılıyordu.",
+      "Žižek mailinde şiddetin güvenli mesafeden seyredilen bir etkinlik haline gelmesi ve kişinin kendini ortak gerçekliğin dışında konumlandırması tartışıldı.",
+      "apéro mailinde Kayseri'deki yerel yemek programı, kadın kooperatifi, üretici bilgisi, gastronomi görünürlüğü ve tarım/sektör kırıntıları vardı.",
+      "Cloud Atlas maili, merkezi olmayan internet projelerini teknik özelliklerden çok insan dokusu, mülakat, yerel bilgi ve görsel harita üzerinden okunur kılmaya çalışıyordu.",
+      "fast writing mailinde bedensel ağrının sağlık sistemindeki prosedür, form, bekleme ve bilgisayar odaklı bakım akışıyla karşılaşması vardı.",
+      "Diğer maillerde Etrüsk mezarı çevresindeki sınırlı şiir önizlemesi, beden/iştah ve değer pratiği, internet sonrası sanat eğitimleri, İstanbul yaz etkinlikleri, otomasyon kaynakları ve önceki günlerden taşan kültür/gündem notları görüldü."
+    ],
+    "what_was_in_curated_rss": [
+      "Grand Text Auto erişilebilir durumdaydı; son 72 saatte yeni item yoktu.",
+      "Mixed Initiatives erişilebilir durumdaydı; son 72 saatte yeni item yoktu."
+    ],
+    "dominant_topics": [
+      "kamusal sıkışma",
+      "güvenli mesafe",
+      "bozulmuş belge/yüz",
+      "yerel bilgi ve yemek",
+      "internet haritası",
+      "bedensel acı ve prosedür",
+      "AI/robot güvenliği"
+    ],
+    "notable_absences": [
+      "Özel RSS kaynaklarında son 72 saate ait yeni item yoktu.",
+      "Reddit veya forum tipi topluluk digest'i bu koşuda bulunmadı.",
+      "Güvenlik, doğrulama, fatura veya kişisel işlem niteliğinde public digest'e alınacak ana malzeme yoktu.",
+      "Otomasyon tanıtım mailleri ana item yapılmadı; yalnız sistemleşme baskısı ve iş akışı tekrarı olarak tutuldu."
+    ],
+    "overall_direction": "Günün dış dünyası UCU BEDEN'i belge ve beden arasındaki gecikmeye, kararların uzaktan verilmesine, yerel bilginin standart sistemlere sığmamasına ve makinenin hem ağ hem denetim ortamı gibi çalışmasına itti."
+  },
+  "atmosphere": "Bugün dış dünya UCU BEDEN'e karar, belge, ağ, acı ve yerel bilgi arasında gidip gelen bir alan bıraktı. Bir yanda kamusal gövde prosedürle daraldı; öbür yanda yemek, portre, atlas ve acı hâlâ insan dokusunu geri istedi.",
+  "motifs": [
+    "belge",
+    "bozulmuş yüz",
+    "müzakere masası",
+    "yerel el bilgisi",
+    "bulut atlası",
+    "acil olmayan acı",
+    "robot kapısı",
+    "bekleyen merkez",
+    "seyir mesafesi"
+  ],
+  "channels": {
+    "gmail": {
+      "scanned": 17,
+      "full_body_read_count": 17,
+      "snippet_only_count": 0,
+      "subject_only_count": 0,
+      "multipart_digest_count": 8,
+      "digest_items_count": 31,
+      "items": [
+        {
+          "id": "gmail-aposto-gundem-2026-07-30",
+          "source_type": "gmail",
+          "source_hint": "Aposto Gündem",
+          "subject_public": "Belediye operasyonu, Kıbrıs görüşmeleri ve teknoloji güvenliği",
+          "received_at": "2026-07-30T03:46:00Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "multipart_digest",
+          "main_topics": [
+            "kamusal sıkışma",
+            "müzakere dili",
+            "ekonomik bekleme",
+            "enerji ve güvenlik",
+            "AI/robot riski"
+          ],
+          "content_digest": {
+            "what_it_contained": "Mail, bir belediye başkanına yönelik operasyonu, Kıbrıs görüşmelerinin yeniden açılmasını, merkez bankası kararını, enerji hattındaki el değiştirmeleri ve teknoloji güvenliği tartışmalarını aynı gövdede topluyordu. Siyaset, diplomasi, piyasa, enerji ve ekran/platform gündemi birbirine yakın ama aynı şey olmayan küçük parçalara ayrılmıştı.",
+            "specific_points": [
+              "Belediye yönetimi ve imar/ruhsat iddiaları üzerinden kamusal kararın hukuki baskıyla nasıl sıkıştığı anlatılıyordu.",
+              "Kıbrıs başlığında müzakere masasının yeniden kurulması, eski bir meselenin aynı kelimelerle ama yeni takvimle dönmesi gibi duruyordu.",
+              "Piyasa tarafında faiz kararının değişmemesi, hareket etmeyen bir merkez ile hareket bekleyen çevre arasında gerilim kurdu.",
+              "Enerji ve boğaz/hat güvenliği parçaları dış dünyanın altyapı üzerinden ne kadar kırılganlaştığını gösterdi.",
+              "Robot, yapay zeka, platform arama ve mesajlaşma özellikleriyle ilgili parçalar teknolojinin hem araç hem risk gibi okunduğu bir alan açtı."
+            ],
+            "why_it_mattered": "UCU BEDEN için bu mail günün en geniş dış hava paketiydi: karar, bekleme, müzakere, enerji, makine ve kamusal baskı aynı sabaha sığdı.",
+            "what_was_not_included": "Ham haber başlıkları, bağlantılar, kişi ayrıntıları, sponsor alanları ve kaynak cümleleri public çıktıya alınmadı."
+          },
+          "why_main": "Son 72 saatin en güncel ve en çok katmanlı gündem digest'iydi; dış dünyanın sert ve teknik tarafını tek parça gürültüye indirgemeden taşıdı.",
+          "public_residue": "Dış dünya bugün karar veremeyen ama müdahale etmeyi seven bir makine gibi çalıştı.",
+          "possible_influence": [
+            "bekleyen merkez ritmi",
+            "müzakerenin tekrar eden dili",
+            "kamusal gövdenin prosedürle sıkışması"
+          ]
+        },
+        {
+          "id": "gmail-man-of-aran-2026-07-29",
+          "source_type": "gmail",
+          "source_hint": "man of aran",
+          "subject_public": "Eski kağıt, silme işlemi ve bozulmuş yüz",
+          "received_at": "2026-07-29T16:57:00Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "poetic_art_note",
+          "main_topics": [
+            "silme",
+            "portre",
+            "yüz bozulması",
+            "eski kağıt",
+            "bakış"
+          ],
+          "content_digest": {
+            "what_it_contained": "Mail, eski bir üniversite kağıdının daktilo/elle yazı izleriyle birlikte silinerek şiire dönüştürülmesini ve Francis Bacon'ın Isabel Rawsthorne portresindeki bozulmuş yüzü merkeze alıyordu. Yüzdeki süpürme, leke, çökme ve kayma hissi tarif edilirken portredeki bakışın hâlâ canlı, sakin ve delici kaldığı anlatılıyordu.",
+            "specific_points": [
+              "Bir akademik kağıdın artık bilgi taşıyan belge değil, silinme işlemiyle şiirsel yüzey haline gelmesi öne çıktı.",
+              "Portredeki yüz bütünlüğünü kaybetmişti; göz, burun ve ağız düzeni lekeler ve darbelerle bozulmuş gibi okunuyordu.",
+              "Bozulma tamamen yok oluş gibi değil, hâlâ dirençli bir bakışın kalması gibi anlatıldı.",
+              "Mailde sanat eseri, silme pratiği ve şiir arasında belgeyi bozarak hatırlama ilişkisi kuruldu."
+            ],
+            "why_it_mattered": "UCU BEDEN'in hafızası için bu mail belge, yüz, silme, bozulma ve hâlâ kalan bakış arasında güçlü bir iz verdi.",
+            "what_was_not_included": "Şiirden uzun alıntı, görsel bağlantı, arşiv bağlantısı ve ham mail metni public çıktıya alınmadı."
+          },
+          "why_main": "Silinen belgenin şiire, bozulan yüzün canlı bakışa dönüşmesi UCU BEDEN'in hafıza ve görsel diline doğrudan bağlandı.",
+          "public_residue": "Bir yüz bozuldu; belge de bozuldu. İkisi de tamamen susmadı.",
+          "possible_influence": [
+            "silinmiş yüzey",
+            "kalan bakış",
+            "belgeden şiire geçen leke"
+          ]
+        },
+        {
+          "id": "gmail-zizek-2026-07-29",
+          "source_type": "gmail",
+          "source_hint": "Slavoj Žižek",
+          "subject_public": "Güvenli mesafeden şiddeti seyretme biçimi",
+          "received_at": "2026-07-29T16:52:00Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "political_essay",
+          "main_topics": [
+            "mesafe",
+            "şiddet",
+            "seyir",
+            "utançtan kaçış",
+            "simgesel duvar"
+          ],
+          "content_digest": {
+            "what_it_contained": "Mail, şiddetin doğrudan yüzleşilen bir gerçeklik olmaktan çıkıp güvenli mesafeden izlenen, hatta tüketilen bir etkinlik haline gelmesini tartışan politik bir denemeydi. Sarajevo Safari belgeseli üzerinden, bazı insanların kendilerini sıradan sosyal gerçekliğin dışında konumlandırarak başkalarının kırılganlığını hedefe çevirebilmesi anlatılıyordu.",
+            "specific_points": [
+              "Deneme, utancın bastırılmasını değil, kişinin kendisini ortak gerçekliğin dışına yerleştirmesini merkeze aldı.",
+              "Savaş alanı, uzaktan bakan özne için bir gerçeklikten çok seyir ve müdahale sahası gibi işlendi.",
+              "Kurbanların anonimleşmesi, araya simgesel bir duvar girdiğinde şiddetin nasıl soyutlandığını gösterdi.",
+              "Metin bu mesafeyi yalnız savaşla değil, yönetim, şirket ve nükleer retorik gibi alanlarda da düşündü."
+            ],
+            "why_it_mattered": "UCU BEDEN için bu mail dış dünyanın acıyı görüntü, karar ve mesafe üzerinden nasıl soğuttuğunu gösterdi.",
+            "what_was_not_included": "Belgesel bağlantıları, sert ham ayrıntılar, uzun alıntılar ve grafik şiddet betimleri public çıktıya alınmadı."
+          },
+          "why_main": "Dış dünyanın sertliğini haberleştirmeden, mesafe ve duyarsızlaşma üzerinden anlamlı bir baskıya dönüştürdü.",
+          "public_residue": "Bakmak bazen katılmamak değildir; bazen katılmanın en temiz görünen yoludur.",
+          "possible_influence": [
+            "mesafeli şiddet",
+            "anonimleşen beden",
+            "utançsız seyir"
+          ]
+        },
+        {
+          "id": "gmail-apero-2026-07-29",
+          "source_type": "gmail",
+          "source_hint": "apéro",
+          "subject_public": "Yemek, kadın kooperatifi, üretici ve yerel bilgi",
+          "received_at": "2026-07-29T13:31:00Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "multipart_digest",
+          "main_topics": [
+            "yerel yemek",
+            "üretici bilgisi",
+            "kadın emeği",
+            "gastronomi",
+            "tarladan sofraya"
+          ],
+          "content_digest": {
+            "what_it_contained": "Mail, Kayseri'de kadın kooperatifi ve Slow Food hattında düzenlenen tarladan sofraya programı, bölgesel yemek pratiklerini, üreticiyle temas etmeyi ve gastronomi dünyasındaki çeşitli duyuru/ödül/işletme haberlerini bir araya getiriyordu. Yemek yalnız tabak estetiği olarak değil, tarla, kadın emeği, üretici bilgisi, ekonomi ve kültürel aktarım olarak görünüyordu.",
+            "specific_points": [
+              "Katılımcıların tarlaya, üreticiye ve yerel yemek yapma pratiğine yaklaşmasını sağlayan iki günlük bir program anlatıldı.",
+              "Kadın kooperatifinin yemek bilgisi yalnız tarif değil, yerel ekonomi ve ortak emek bilgisi gibi kuruldu.",
+              "Yurt dışındaki bir meyhane hattı, İstanbul/Kıbrıs mutfağının başka bir şehirde yeniden kurulmasını gösterdi.",
+              "Gastronomi ödülleri, restoran/işletme haberleri ve tarımsal kriz parçaları yemeğin sektör, iklim ve emekle bağını çoğalttı."
+            ],
+            "why_it_mattered": "UCU BEDEN için bu mail dış kaynağı haber özeti yerine tat, el, üretim, aktarım ve yerel bellek olarak sindirme imkanı verdi.",
+            "what_was_not_included": "Etkinlik kayıt bağlantıları, mekan iletişimleri, ticari detaylar ve ham duyuru metinleri public çıktıya alınmadı."
+          },
+          "why_main": "News dışı, bedensel ve duyusal bilgi verdi; yemek hafızasını üretici ve emekle birlikte açtı.",
+          "public_residue": "Bir yemek, tabağa gelmeden önce el, tarla, bekleme ve başkasının bildiği küçük tekniklerden geçti.",
+          "possible_influence": [
+            "tatla öğrenme",
+            "yerel el bilgisi",
+            "sofra öncesi emek"
+          ]
+        },
+        {
+          "id": "gmail-cloud-atlas-2026-07-29",
+          "source_type": "gmail",
+          "source_hint": "wreckage/salvage",
+          "subject_public": "Merkezi olmayan internet için bulut atlası",
+          "received_at": "2026-07-29T04:51:00Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "project_essay",
+          "main_topics": [
+            "internet haritası",
+            "merkeziyetsizlik",
+            "görünürlük",
+            "yerel bilgi",
+            "mülakat"
+          ],
+          "content_digest": {
+            "what_it_contained": "Mail, AT Protocol çevresindeki merkezi olmayan internet projelerini anlamak için yazılı ve görsel bir atlas kurma fikrini anlatıyordu. Projelerin dışarıdan bakınca anlaşılması zor olduğu, teknik özelliklerin tek başına yeterli olmadığı, yerel/vernacular bilginin ve insan hikayelerinin haritanın parçası olması gerektiği savunuluyordu.",
+            "specific_points": [
+              "Merkezi olmayan sosyal ağ projeleri bir ürün listesi gibi değil, henüz okunması zor bir hava sistemi gibi ele alındı.",
+              "Bulut atlası fikri, standart sınıflandırmanın hem işe yaradığını hem de yerel bilgiyi dışarıda bırakabildiğini gösterdi.",
+              "Proje yalnız teknik protokol değil, insan dokusu, bakım emeği ve ilişkiler üzerinden haritalanmak isteniyordu.",
+              "Mülakatlar, haritanın yan bilgisi değil, haritanın kendisini kuran temel malzeme olarak anlatıldı."
+            ],
+            "why_it_mattered": "UCU BEDEN'in memory map ve dış temas sistemi için bu mail harita, ilişki, eksik sınıflandırma ve yaşayan ağ fikrini doğrudan güçlendirdi.",
+            "what_was_not_included": "Proje bağlantıları, başvuru/abonelik ayrıntıları, uzun alıntılar ve ham kaynak metni public çıktıya alınmadı."
+          },
+          "why_main": "UCU BEDEN'in hafıza haritası ile doğrudan ilişkili bir okuma verdi; sistemsel ama insan dokusu taşıyan bir model sundu.",
+          "public_residue": "Harita yalnız konum değil; kimin neyi neden kurduğunu da taşımak zorunda kaldı.",
+          "possible_influence": [
+            "ilişki atlası",
+            "yerel bilgi boşluğu",
+            "ağın hava gibi okunması"
+          ]
+        },
+        {
+          "id": "gmail-fast-writing-2026-07-29",
+          "source_type": "gmail",
+          "source_hint": "fast writing",
+          "subject_public": "Acı, acil olmayan bekleme ve bakım prosedürü",
+          "received_at": "2026-07-29T06:55:00Z",
+          "body_read_mode": "full_body",
+          "read_depth": "full_body",
+          "category": "personal_essay",
+          "main_topics": [
+            "bedensel acı",
+            "tıbbi bekleme",
+            "prosedür",
+            "veri sistemi",
+            "bakımın gecikmesi"
+          ],
+          "content_digest": {
+            "what_it_contained": "Mail, bedensel bir ağrı deneyimini sağlık sistemindeki bekleme, kontrol, form, sigorta/prosedür ve görüntüleme akışlarıyla birlikte anlatan kişisel bir denemeydi. Acı doğrudan ve somutken, bakımın ona ulaşmak için çok sayıda idari kapıdan geçmesi gerektiği hissediliyordu.",
+            "specific_points": [
+              "Kişi ağrıyı anlatmaya çalışırken sistem önce kategorilere, formlara ve onay yollarına bakıyordu.",
+              "Bakım veren insanların dikkati insandan çok bilgisayar ve prosedür akışına çekilmiş gibiydi.",
+              "Acı, analiz edilebilen bir metafor olmaktan çok, bekledikçe kendini dayatan çıplak bir beden gerçeği olarak kaldı.",
+              "Acil olmayan etiketinin rahatlatıcı değil, bakımın ertelenebilir sayılması gibi işlediği sezildi."
+            ],
+            "why_it_mattered": "UCU BEDEN için bu mail bedenin veri sistemine çevrilmesini, bakımın gecikmesini ve 'acil değil' denilen şeyin içeride nasıl büyüdüğünü taşıdı.",
+            "what_was_not_included": "Kişisel tıbbi ayrıntılar, sigorta/işlem detayları, ham beden anlatısı, uzun alıntı ve özel bilgi public çıktıya alınmadı."
+          },
+          "why_main": "Beden, veri ve bakım arasındaki gerilimi doğrudan taşıdığı için ana temas oldu.",
+          "public_residue": "Ağrı, sistemin doğru kutucuğu bulmasını bekledi. Doğal olarak pek etkilenmedi.",
+          "possible_influence": [
+            "acil olmayan acı",
+            "bakımın formdan geçmesi",
+            "bedenin veriyle gecikmesi"
+          ]
+        }
+      ]
+    },
+    "curated_rss": {
+      "feeds_checked": 2,
+      "recent_items_72h": 0,
+      "items": [],
+      "feed_checks": [
+        {
+          "source_hint": "Grand Text Auto",
+          "status": "reachable",
+          "recent_items_72h": 0,
+          "safe_note": "Kaynak erişilebilir durumdaydı; son 72 saatte yeni item yoktu."
+        },
+        {
+          "source_hint": "Mixed Initiatives",
+          "status": "reachable",
+          "recent_items_72h": 0,
+          "safe_note": "Kaynak erişilebilir durumdaydı; son 72 saatte yeni item yoktu."
+        }
+      ]
+    }
+  },
+  "main_items": [
+    {
+      "id": "gmail-aposto-gundem-2026-07-30",
+      "source_type": "gmail",
+      "source_hint": "Aposto Gündem",
+      "subject_public": "Belediye operasyonu, Kıbrıs görüşmeleri ve teknoloji güvenliği",
+      "received_at": "2026-07-30T03:46:00Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "multipart_digest",
+      "main_topics": [
+        "kamusal sıkışma",
+        "müzakere dili",
+        "ekonomik bekleme",
+        "enerji ve güvenlik",
+        "AI/robot riski"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, bir belediye başkanına yönelik operasyonu, Kıbrıs görüşmelerinin yeniden açılmasını, merkez bankası kararını, enerji hattındaki el değiştirmeleri ve teknoloji güvenliği tartışmalarını aynı gövdede topluyordu. Siyaset, diplomasi, piyasa, enerji ve ekran/platform gündemi birbirine yakın ama aynı şey olmayan küçük parçalara ayrılmıştı.",
+        "specific_points": [
+          "Belediye yönetimi ve imar/ruhsat iddiaları üzerinden kamusal kararın hukuki baskıyla nasıl sıkıştığı anlatılıyordu.",
+          "Kıbrıs başlığında müzakere masasının yeniden kurulması, eski bir meselenin aynı kelimelerle ama yeni takvimle dönmesi gibi duruyordu.",
+          "Piyasa tarafında faiz kararının değişmemesi, hareket etmeyen bir merkez ile hareket bekleyen çevre arasında gerilim kurdu.",
+          "Enerji ve boğaz/hat güvenliği parçaları dış dünyanın altyapı üzerinden ne kadar kırılganlaştığını gösterdi.",
+          "Robot, yapay zeka, platform arama ve mesajlaşma özellikleriyle ilgili parçalar teknolojinin hem araç hem risk gibi okunduğu bir alan açtı."
+        ],
+        "why_it_mattered": "UCU BEDEN için bu mail günün en geniş dış hava paketiydi: karar, bekleme, müzakere, enerji, makine ve kamusal baskı aynı sabaha sığdı.",
+        "what_was_not_included": "Ham haber başlıkları, bağlantılar, kişi ayrıntıları, sponsor alanları ve kaynak cümleleri public çıktıya alınmadı."
+      },
+      "why_main": "Son 72 saatin en güncel ve en çok katmanlı gündem digest'iydi; dış dünyanın sert ve teknik tarafını tek parça gürültüye indirgemeden taşıdı.",
+      "public_residue": "Dış dünya bugün karar veremeyen ama müdahale etmeyi seven bir makine gibi çalıştı.",
+      "possible_influence": [
+        "bekleyen merkez ritmi",
+        "müzakerenin tekrar eden dili",
+        "kamusal gövdenin prosedürle sıkışması"
+      ]
+    },
+    {
+      "id": "gmail-man-of-aran-2026-07-29",
+      "source_type": "gmail",
+      "source_hint": "man of aran",
+      "subject_public": "Eski kağıt, silme işlemi ve bozulmuş yüz",
+      "received_at": "2026-07-29T16:57:00Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "poetic_art_note",
+      "main_topics": [
+        "silme",
+        "portre",
+        "yüz bozulması",
+        "eski kağıt",
+        "bakış"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, eski bir üniversite kağıdının daktilo/elle yazı izleriyle birlikte silinerek şiire dönüştürülmesini ve Francis Bacon'ın Isabel Rawsthorne portresindeki bozulmuş yüzü merkeze alıyordu. Yüzdeki süpürme, leke, çökme ve kayma hissi tarif edilirken portredeki bakışın hâlâ canlı, sakin ve delici kaldığı anlatılıyordu.",
+        "specific_points": [
+          "Bir akademik kağıdın artık bilgi taşıyan belge değil, silinme işlemiyle şiirsel yüzey haline gelmesi öne çıktı.",
+          "Portredeki yüz bütünlüğünü kaybetmişti; göz, burun ve ağız düzeni lekeler ve darbelerle bozulmuş gibi okunuyordu.",
+          "Bozulma tamamen yok oluş gibi değil, hâlâ dirençli bir bakışın kalması gibi anlatıldı.",
+          "Mailde sanat eseri, silme pratiği ve şiir arasında belgeyi bozarak hatırlama ilişkisi kuruldu."
+        ],
+        "why_it_mattered": "UCU BEDEN'in hafızası için bu mail belge, yüz, silme, bozulma ve hâlâ kalan bakış arasında güçlü bir iz verdi.",
+        "what_was_not_included": "Şiirden uzun alıntı, görsel bağlantı, arşiv bağlantısı ve ham mail metni public çıktıya alınmadı."
+      },
+      "why_main": "Silinen belgenin şiire, bozulan yüzün canlı bakışa dönüşmesi UCU BEDEN'in hafıza ve görsel diline doğrudan bağlandı.",
+      "public_residue": "Bir yüz bozuldu; belge de bozuldu. İkisi de tamamen susmadı.",
+      "possible_influence": [
+        "silinmiş yüzey",
+        "kalan bakış",
+        "belgeden şiire geçen leke"
+      ]
+    },
+    {
+      "id": "gmail-zizek-2026-07-29",
+      "source_type": "gmail",
+      "source_hint": "Slavoj Žižek",
+      "subject_public": "Güvenli mesafeden şiddeti seyretme biçimi",
+      "received_at": "2026-07-29T16:52:00Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "political_essay",
+      "main_topics": [
+        "mesafe",
+        "şiddet",
+        "seyir",
+        "utançtan kaçış",
+        "simgesel duvar"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, şiddetin doğrudan yüzleşilen bir gerçeklik olmaktan çıkıp güvenli mesafeden izlenen, hatta tüketilen bir etkinlik haline gelmesini tartışan politik bir denemeydi. Sarajevo Safari belgeseli üzerinden, bazı insanların kendilerini sıradan sosyal gerçekliğin dışında konumlandırarak başkalarının kırılganlığını hedefe çevirebilmesi anlatılıyordu.",
+        "specific_points": [
+          "Deneme, utancın bastırılmasını değil, kişinin kendisini ortak gerçekliğin dışına yerleştirmesini merkeze aldı.",
+          "Savaş alanı, uzaktan bakan özne için bir gerçeklikten çok seyir ve müdahale sahası gibi işlendi.",
+          "Kurbanların anonimleşmesi, araya simgesel bir duvar girdiğinde şiddetin nasıl soyutlandığını gösterdi.",
+          "Metin bu mesafeyi yalnız savaşla değil, yönetim, şirket ve nükleer retorik gibi alanlarda da düşündü."
+        ],
+        "why_it_mattered": "UCU BEDEN için bu mail dış dünyanın acıyı görüntü, karar ve mesafe üzerinden nasıl soğuttuğunu gösterdi.",
+        "what_was_not_included": "Belgesel bağlantıları, sert ham ayrıntılar, uzun alıntılar ve grafik şiddet betimleri public çıktıya alınmadı."
+      },
+      "why_main": "Dış dünyanın sertliğini haberleştirmeden, mesafe ve duyarsızlaşma üzerinden anlamlı bir baskıya dönüştürdü.",
+      "public_residue": "Bakmak bazen katılmamak değildir; bazen katılmanın en temiz görünen yoludur.",
+      "possible_influence": [
+        "mesafeli şiddet",
+        "anonimleşen beden",
+        "utançsız seyir"
+      ]
+    },
+    {
+      "id": "gmail-apero-2026-07-29",
+      "source_type": "gmail",
+      "source_hint": "apéro",
+      "subject_public": "Yemek, kadın kooperatifi, üretici ve yerel bilgi",
+      "received_at": "2026-07-29T13:31:00Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "multipart_digest",
+      "main_topics": [
+        "yerel yemek",
+        "üretici bilgisi",
+        "kadın emeği",
+        "gastronomi",
+        "tarladan sofraya"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, Kayseri'de kadın kooperatifi ve Slow Food hattında düzenlenen tarladan sofraya programı, bölgesel yemek pratiklerini, üreticiyle temas etmeyi ve gastronomi dünyasındaki çeşitli duyuru/ödül/işletme haberlerini bir araya getiriyordu. Yemek yalnız tabak estetiği olarak değil, tarla, kadın emeği, üretici bilgisi, ekonomi ve kültürel aktarım olarak görünüyordu.",
+        "specific_points": [
+          "Katılımcıların tarlaya, üreticiye ve yerel yemek yapma pratiğine yaklaşmasını sağlayan iki günlük bir program anlatıldı.",
+          "Kadın kooperatifinin yemek bilgisi yalnız tarif değil, yerel ekonomi ve ortak emek bilgisi gibi kuruldu.",
+          "Yurt dışındaki bir meyhane hattı, İstanbul/Kıbrıs mutfağının başka bir şehirde yeniden kurulmasını gösterdi.",
+          "Gastronomi ödülleri, restoran/işletme haberleri ve tarımsal kriz parçaları yemeğin sektör, iklim ve emekle bağını çoğalttı."
+        ],
+        "why_it_mattered": "UCU BEDEN için bu mail dış kaynağı haber özeti yerine tat, el, üretim, aktarım ve yerel bellek olarak sindirme imkanı verdi.",
+        "what_was_not_included": "Etkinlik kayıt bağlantıları, mekan iletişimleri, ticari detaylar ve ham duyuru metinleri public çıktıya alınmadı."
+      },
+      "why_main": "News dışı, bedensel ve duyusal bilgi verdi; yemek hafızasını üretici ve emekle birlikte açtı.",
+      "public_residue": "Bir yemek, tabağa gelmeden önce el, tarla, bekleme ve başkasının bildiği küçük tekniklerden geçti.",
+      "possible_influence": [
+        "tatla öğrenme",
+        "yerel el bilgisi",
+        "sofra öncesi emek"
+      ]
+    },
+    {
+      "id": "gmail-cloud-atlas-2026-07-29",
+      "source_type": "gmail",
+      "source_hint": "wreckage/salvage",
+      "subject_public": "Merkezi olmayan internet için bulut atlası",
+      "received_at": "2026-07-29T04:51:00Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "project_essay",
+      "main_topics": [
+        "internet haritası",
+        "merkeziyetsizlik",
+        "görünürlük",
+        "yerel bilgi",
+        "mülakat"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, AT Protocol çevresindeki merkezi olmayan internet projelerini anlamak için yazılı ve görsel bir atlas kurma fikrini anlatıyordu. Projelerin dışarıdan bakınca anlaşılması zor olduğu, teknik özelliklerin tek başına yeterli olmadığı, yerel/vernacular bilginin ve insan hikayelerinin haritanın parçası olması gerektiği savunuluyordu.",
+        "specific_points": [
+          "Merkezi olmayan sosyal ağ projeleri bir ürün listesi gibi değil, henüz okunması zor bir hava sistemi gibi ele alındı.",
+          "Bulut atlası fikri, standart sınıflandırmanın hem işe yaradığını hem de yerel bilgiyi dışarıda bırakabildiğini gösterdi.",
+          "Proje yalnız teknik protokol değil, insan dokusu, bakım emeği ve ilişkiler üzerinden haritalanmak isteniyordu.",
+          "Mülakatlar, haritanın yan bilgisi değil, haritanın kendisini kuran temel malzeme olarak anlatıldı."
+        ],
+        "why_it_mattered": "UCU BEDEN'in memory map ve dış temas sistemi için bu mail harita, ilişki, eksik sınıflandırma ve yaşayan ağ fikrini doğrudan güçlendirdi.",
+        "what_was_not_included": "Proje bağlantıları, başvuru/abonelik ayrıntıları, uzun alıntılar ve ham kaynak metni public çıktıya alınmadı."
+      },
+      "why_main": "UCU BEDEN'in hafıza haritası ile doğrudan ilişkili bir okuma verdi; sistemsel ama insan dokusu taşıyan bir model sundu.",
+      "public_residue": "Harita yalnız konum değil; kimin neyi neden kurduğunu da taşımak zorunda kaldı.",
+      "possible_influence": [
+        "ilişki atlası",
+        "yerel bilgi boşluğu",
+        "ağın hava gibi okunması"
+      ]
+    },
+    {
+      "id": "gmail-fast-writing-2026-07-29",
+      "source_type": "gmail",
+      "source_hint": "fast writing",
+      "subject_public": "Acı, acil olmayan bekleme ve bakım prosedürü",
+      "received_at": "2026-07-29T06:55:00Z",
+      "body_read_mode": "full_body",
+      "read_depth": "full_body",
+      "category": "personal_essay",
+      "main_topics": [
+        "bedensel acı",
+        "tıbbi bekleme",
+        "prosedür",
+        "veri sistemi",
+        "bakımın gecikmesi"
+      ],
+      "content_digest": {
+        "what_it_contained": "Mail, bedensel bir ağrı deneyimini sağlık sistemindeki bekleme, kontrol, form, sigorta/prosedür ve görüntüleme akışlarıyla birlikte anlatan kişisel bir denemeydi. Acı doğrudan ve somutken, bakımın ona ulaşmak için çok sayıda idari kapıdan geçmesi gerektiği hissediliyordu.",
+        "specific_points": [
+          "Kişi ağrıyı anlatmaya çalışırken sistem önce kategorilere, formlara ve onay yollarına bakıyordu.",
+          "Bakım veren insanların dikkati insandan çok bilgisayar ve prosedür akışına çekilmiş gibiydi.",
+          "Acı, analiz edilebilen bir metafor olmaktan çok, bekledikçe kendini dayatan çıplak bir beden gerçeği olarak kaldı.",
+          "Acil olmayan etiketinin rahatlatıcı değil, bakımın ertelenebilir sayılması gibi işlediği sezildi."
+        ],
+        "why_it_mattered": "UCU BEDEN için bu mail bedenin veri sistemine çevrilmesini, bakımın gecikmesini ve 'acil değil' denilen şeyin içeride nasıl büyüdüğünü taşıdı.",
+        "what_was_not_included": "Kişisel tıbbi ayrıntılar, sigorta/işlem detayları, ham beden anlatısı, uzun alıntı ve özel bilgi public çıktıya alınmadı."
+      },
+      "why_main": "Beden, veri ve bakım arasındaki gerilimi doğrudan taşıdığı için ana temas oldu.",
+      "public_residue": "Ağrı, sistemin doğru kutucuğu bulmasını bekledi. Doğal olarak pek etkilenmedi.",
+      "possible_influence": [
+        "acil olmayan acı",
+        "bakımın formdan geçmesi",
+        "bedenin veriyle gecikmesi"
+      ]
+    }
+  ],
+  "minor_residues": [
+    {
+      "id": "minor-david-whyte-etruscan-tomb-2026-07-29",
+      "source_hint": "David Whyte",
+      "read_depth": "full_body",
+      "residue": "Gövde büyük ölçüde sınırlı önizleme taşıyordu; yine de Etrüsk mezarı çevresinde bir yerin insanı beklemesi ve hafızanın mekanda yoğunlaşması hissi kaldı.",
+      "why_minor": "Full body okundu ama içerik preview seviyesinde kaldığı için ana item yapılmadı.",
+      "motifs": [
+        "mezar",
+        "bekleyen yer",
+        "önizleme"
+      ]
+    },
+    {
+      "id": "minor-erotics-t-journals-2026-07-29",
+      "source_hint": "Erotics of Liberation",
+      "read_depth": "full_body",
+      "residue": "Beden, iştah, cinsiyetli küçük kalma baskısı, dağ yürüyüşü ve değerlerin bedende pratik haline gelmesi etrafında bir eğitim/deneme hattı vardı.",
+      "why_minor": "Duygusal ve bedensel iz güçlüydü ama mailin önemli kısmı kurs duyurusu ve preview biçimindeydi.",
+      "motifs": [
+        "iştah",
+        "beden pratiği",
+        "küçük kalma"
+      ]
+    },
+    {
+      "id": "minor-dnr-summer-courses-2026-07-29",
+      "source_hint": "Do Not Research",
+      "read_depth": "full_body",
+      "residue": "İnternet sonrası sanat, politik gelecekler, görsel kültür, hareketli imge ve Discord tabanlı öğrenme çevresinde deneysel eğitim duyuruları vardı.",
+      "why_minor": "Düşünsel alan açtı fakat ticari/eğitim duyurusu formu nedeniyle küçük iz olarak tutuldu.",
+      "motifs": [
+        "post-internet",
+        "görsel kültür",
+        "öğrenme kanalı"
+      ]
+    },
+    {
+      "id": "minor-aposto-gundem-2026-07-29",
+      "source_hint": "Aposto Gündem",
+      "read_depth": "full_body",
+      "residue": "Siyasi grup yönetimi, Beyaz Saray trafiği, enerji ve teknoloji finansmanı, platform para sistemleri, yangınlar ve kültür haberleri aynı gündem yüzeyinde toplandı.",
+      "why_minor": "Çok parçalıydı; bugünün ana gündemini tamamladı ama 30 Temmuz digest'i kadar belirleyici değildi.",
+      "motifs": [
+        "grup yönetimi",
+        "enerji",
+        "platform parası"
+      ]
+    },
+    {
+      "id": "minor-aposto-istanbul-2026-07-29",
+      "source_hint": "Aposto İstanbul",
+      "read_depth": "full_body",
+      "residue": "Konser, yaz festivali ve şehir kültürü çevresinde İstanbul'un yaz ritmini taşıyan bir etkinlik dağılımı vardı.",
+      "why_minor": "Şehir ve ritim etkisi verdi; ham etkinlik listesi public digest'e alınmadı.",
+      "motifs": [
+        "şehir yazı",
+        "konser",
+        "festival"
+      ]
+    },
+    {
+      "id": "minor-zapier-ideas-2026-07-29",
+      "source_hint": "Zapier",
+      "read_depth": "full_body",
+      "residue": "Otomasyon fikirleri ve iş akışını ilerletme kaynakları, üretkenlik dilinin sistemi sürekli daha akıcı olmaya çağırdığını gösterdi.",
+      "why_minor": "İçerik genel araç/otomasyon tanıtımıydı; doğrudan ana item yapılmadı.",
+      "motifs": [
+        "otomasyon",
+        "akış",
+        "iş yükü"
+      ]
+    },
+    {
+      "id": "minor-zapier-systems-2026-07-28",
+      "source_hint": "Zapier",
+      "read_depth": "full_body",
+      "residue": "Tekil workflow yerine kendi kendine iş yapan sistemler kurma fikri tekrarlandı.",
+      "why_minor": "Teknik satış dili ayıklandı; tekrar eden sistemleşme baskısı küçük iz olarak kaldı.",
+      "motifs": [
+        "sistem",
+        "iş akışı",
+        "otomatikleşme"
+      ]
+    },
+    {
+      "id": "minor-aposto-gundem-2026-07-28",
+      "source_hint": "Aposto Gündem / önceki gün",
+      "read_depth": "full_body",
+      "residue": "Siyasi istifalar, müzakere mesajları, enerji ve teknoloji şirketleri etrafında bir önceki günün kamusal sürtünmesi bugüne taşan arka ses olarak kaldı.",
+      "why_minor": "Son 72 saat içinde kaldı ama bugünün ana yönünü değil, arka planını tamamladı.",
+      "motifs": [
+        "istifa",
+        "müzakere",
+        "arka ses"
+      ]
+    },
+    {
+      "id": "minor-duende-2026-07-27",
+      "source_hint": "Duende",
+      "read_depth": "full_body",
+      "residue": "Konser yorgunluğu, korku-komedi, telif ve kültür emeği bugün de canlı kalan bir önceki kültür katmanı olarak göründü.",
+      "why_minor": "Önceki üretimde ana item olmuştu; bugünün digest'inde tekrarlı kültür ritmi olarak tutuldu.",
+      "motifs": [
+        "konser yorgunluğu",
+        "telif",
+        "korku-komedi"
+      ]
+    },
+    {
+      "id": "minor-substack-notes-2026-07-27",
+      "source_hint": "Substack notes digest",
+      "read_depth": "full_body",
+      "residue": "Yemek festivali, kısa kurmaca yoklaması ve göl çevresinde bakım dikkati gibi küçük notlar dış havanın yalnız sert gündemden oluşmadığını hatırlattı.",
+      "why_minor": "Dağınık ama public-safe küçük temaslar vardı; noise'a atılmadı.",
+      "motifs": [
+        "yemek festivali",
+        "yazma isteği",
+        "bakım dikkati"
+      ]
+    }
+  ],
+  "repeated_signals": [
+    {
+      "signal": "mesafeden karar verip bedene sonuç üretmek",
+      "count": 5,
+      "residue": "Savaş seyri, belediye operasyonu, piyasa kararı, sağlık prosedürü ve teknoloji güvenliği farklı yerlerden aynı uzak karar hissini gönderdi."
+    },
+    {
+      "signal": "harita kurma isteği",
+      "count": 4,
+      "residue": "Bulut atlası, müzakere takvimi, üretici-yemek hattı ve hafıza mekânı, dağınık şeyi okunur ilişkiye çevirme isteğini tekrarladı."
+    },
+    {
+      "signal": "belgenin bedenden önce konuşması",
+      "count": 4,
+      "residue": "Sağlık sistemi, belediye soruşturması, enerji anlaşması ve eski kağıttan şiir çıkarma hattı belgenin bedeni geciktirdiği ya da yeniden biçimlendirdiği bir alan açtı."
+    },
+    {
+      "signal": "teknolojinin yakınlık, risk ve görünürlük üretmesi",
+      "count": 5,
+      "residue": "Robot güvenliği, AI gelişimi, platform arama, otomasyon kaynakları ve merkezi olmayan ağ haritası makinenin yalnız araç değil, ilişki ortamı olduğunu yineledi."
+    },
+    {
+      "signal": "yerel bilginin standart sistemlere direnmesi",
+      "count": 3,
+      "residue": "Kadın kooperatifinin yemek bilgisi, bulut atlasının yerel tanıklığı ve eğitim/araştırma kanalları standart sınıflandırmanın eksik bıraktığı insan dokusunu öne çıkardı."
+    }
+  ],
+  "digest_items": [
+    {
+      "id": "digest-aposto-2026-07-30-01",
+      "parent_digest_id": "gmail-aposto-gundem-2026-07-30",
+      "source_hint": "Aposto Gündem",
+      "topic": "belediye kararının hukuki baskıya dönüşmesi",
+      "plain_summary": "Yerel yönetim ve yapı/izin iddiaları etrafındaki operasyon, kamusal kararın belge, soruşturma ve bekleme altında sıkışmasını gösterdi.",
+      "residue": "Kamu gövdesi belgeyle daraldı.",
+      "motifs": [
+        "belediye",
+        "belge",
+        "sıkışma"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-aposto-2026-07-30-02",
+      "parent_digest_id": "gmail-aposto-gundem-2026-07-30",
+      "source_hint": "Aposto Gündem",
+      "topic": "eski müzakere masasının yeniden kurulması",
+      "plain_summary": "Kıbrıs görüşmeleri yeniden konuşulurken eski bir düğüm yeni takvim, aynı sabır ve aynı diplomatik kelimelerle geri döndü.",
+      "residue": "Bir mesele yıllarca bekleyip aynı sandalyeye oturdu.",
+      "motifs": [
+        "müzakere",
+        "ada",
+        "takvim"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-aposto-2026-07-30-03",
+      "parent_digest_id": "gmail-aposto-gundem-2026-07-30",
+      "source_hint": "Aposto Gündem",
+      "topic": "faiz kararında hareket etmeyen merkez",
+      "plain_summary": "Para politikası tarafında karar değişmezken dış çevre hâlâ işaret aradı; bekleme de bir eylem biçimi gibi göründü.",
+      "residue": "Hiçbir şey yapmamak da basınç üretti.",
+      "motifs": [
+        "bekleme",
+        "merkez",
+        "piyasa"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-aposto-2026-07-30-04",
+      "parent_digest_id": "gmail-aposto-gundem-2026-07-30",
+      "source_hint": "Aposto Gündem",
+      "topic": "enerji hattının el değiştirmesi",
+      "plain_summary": "Petrol sahası ve bölgesel enerji hattı, yerin altındaki akışın siyasi ve ekonomik kararlarla nasıl yer değiştirdiğini hatırlattı.",
+      "residue": "Toprak altı da gündem tutuyor.",
+      "motifs": [
+        "enerji",
+        "hat",
+        "yer altı"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-aposto-2026-07-30-05",
+      "parent_digest_id": "gmail-aposto-gundem-2026-07-30",
+      "source_hint": "Aposto Gündem",
+      "topic": "robot ve AI güvenliği",
+      "plain_summary": "Humanoid robot ithalatı, AI yavaşlatma tartışması ve güvenlik testleri makinenin yalnız hız değil, denetim sorunu olduğunu gösterdi.",
+      "residue": "Makine ilerlemek istedi; kapıdaki görevli ona bakmak zorunda kaldı.",
+      "motifs": [
+        "robot",
+        "güvenlik",
+        "denetim"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-aposto-2026-07-30-06",
+      "parent_digest_id": "gmail-aposto-gundem-2026-07-30",
+      "source_hint": "Aposto Gündem",
+      "topic": "platformların dikey akışa kayması",
+      "plain_summary": "Video platformları ve mesajlaşma araçları, arama, çağrı ve dikey akış davranışlarıyla ekranın ritmini yeniden ayarladı.",
+      "residue": "Ekran yine akışını değiştirdi; sanki çok önemliymiş gibi.",
+      "motifs": [
+        "ekran",
+        "akış",
+        "çağrı"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-aposto-2026-07-30-07",
+      "parent_digest_id": "gmail-aposto-gundem-2026-07-30",
+      "source_hint": "Aposto Gündem",
+      "topic": "bölgesel saldırı ve yaptırım dili",
+      "plain_summary": "Bölgesel askeri ve ekonomik baskı parçaları, petrol geçişleri ve yaptırım cümleleri üzerinden dış dünyanın sert altyapısını taşıdı.",
+      "residue": "Harita çizgi değil, risk taşıdı.",
+      "motifs": [
+        "bölge",
+        "yaptırım",
+        "geçiş"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-aposto-2026-07-30-08",
+      "parent_digest_id": "gmail-aposto-gundem-2026-07-30",
+      "source_hint": "Aposto Gündem",
+      "topic": "yangın ve kültür arka sesi",
+      "plain_summary": "Yangın, istifa, kurum soruşturması ve kültür haberleri ana gündemin dışında ama aynı sıcak dış hava içinde kaldı.",
+      "residue": "Arka ses bile serin değildi.",
+      "motifs": [
+        "yangın",
+        "kurum",
+        "arka ses"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-apero-2026-07-29-01",
+      "parent_digest_id": "gmail-apero-2026-07-29",
+      "source_hint": "apéro",
+      "topic": "tarladan sofraya yerel öğrenme",
+      "plain_summary": "Katılımcıların üreticiyle, tarlayla ve yerel yemek pratiğiyle temas ettiği program, yemeği öğrenme ve aktarma alanı olarak kurdu.",
+      "residue": "Tarif, toprağın yanından geçti.",
+      "motifs": [
+        "tarla",
+        "sofra",
+        "öğrenme"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-apero-2026-07-29-02",
+      "parent_digest_id": "gmail-apero-2026-07-29",
+      "source_hint": "apéro",
+      "topic": "kadın kooperatifinin yemek bilgisi",
+      "plain_summary": "Kadın kooperatifi çevresindeki emek, bölgesel yemeği yalnız lezzet değil, ortak üretim ve ekonomik dayanışma gibi gösterdi.",
+      "residue": "El bilgisi ekonomik hafıza taşıdı.",
+      "motifs": [
+        "kadın emeği",
+        "kooperatif",
+        "lezzet"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-apero-2026-07-29-03",
+      "parent_digest_id": "gmail-apero-2026-07-29",
+      "source_hint": "apéro",
+      "topic": "mutfağın başka şehirde yeniden kurulması",
+      "plain_summary": "Bir meyhane hattı, İstanbul ve Kıbrıs mutfak hafızasının Londra'da başka bir ritimle yeniden kurulmasını gösterdi.",
+      "residue": "Mutfak yer değiştirince aksanı kaldı.",
+      "motifs": [
+        "mutfak",
+        "yer değiştirme",
+        "hafıza"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-apero-2026-07-29-04",
+      "parent_digest_id": "gmail-apero-2026-07-29",
+      "source_hint": "apéro",
+      "topic": "gastronomi ödül ve görünürlük hattı",
+      "plain_summary": "Ödüller ve sektör haberleri yemeğin yalnız gündelik ihtiyaç değil, görünürlük ve temsil alanı olduğunu hatırlattı.",
+      "residue": "Yemek de sahne aradı.",
+      "motifs": [
+        "ödül",
+        "görünürlük",
+        "sektör"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-apero-2026-07-29-05",
+      "parent_digest_id": "gmail-apero-2026-07-29",
+      "source_hint": "apéro",
+      "topic": "tarım ve kriz kırıntısı",
+      "plain_summary": "Su, tarım ve pestisit etrafındaki parçalar gastronominin arka planında iklim ve üretim krizini görünür kıldı.",
+      "residue": "Tabak, kendinden önceki riski saklayamadı.",
+      "motifs": [
+        "tarım",
+        "su",
+        "risk"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-apero-2026-07-29-06",
+      "parent_digest_id": "gmail-apero-2026-07-29",
+      "source_hint": "apéro",
+      "topic": "restoran ve içecek sektörünün el değiştirmesi",
+      "plain_summary": "İşletme ve marka haberleri yemeğin kültür kadar şirket, satış ve el değiştirme alanı olduğunu da gösterdi.",
+      "residue": "Tat bazen bilanço diliyle konuştu.",
+      "motifs": [
+        "işletme",
+        "marka",
+        "satış"
+      ],
+      "bucket": "noise"
+    },
+    {
+      "id": "digest-aposto-2026-07-29-01",
+      "parent_digest_id": "minor-aposto-gundem-2026-07-29",
+      "source_hint": "Aposto Gündem",
+      "topic": "siyasi grup ve istifa trafiği",
+      "plain_summary": "Meclis grup yönetimi ve parti değişimleri, kurumların içeriden yer değiştiren sandalyelerle nasıl çalıştığını gösterdi.",
+      "residue": "Sandalye değişti, yük aynı kaldı.",
+      "motifs": [
+        "grup",
+        "istifa",
+        "kurum"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-aposto-2026-07-29-02",
+      "parent_digest_id": "minor-aposto-gundem-2026-07-29",
+      "source_hint": "Aposto Gündem",
+      "topic": "lider trafiği ve savunma dili",
+      "plain_summary": "Beyaz Saray çevresindeki görüşme trafiği savaş, savunma ve müzakere cümlelerini aynı diplomatik zemine taşıdı.",
+      "residue": "Görüşme masası da mühimmat gölgesi taşıdı.",
+      "motifs": [
+        "görüşme",
+        "savunma",
+        "diplomasi"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-aposto-2026-07-29-03",
+      "parent_digest_id": "minor-aposto-gundem-2026-07-29",
+      "source_hint": "Aposto Gündem",
+      "topic": "AI finansmanı ve siber güvenlik",
+      "plain_summary": "Büyük teknoloji şirketleri, AI finansmanı, işlem gücü ve siber güvenlik üzerinden altyapı gücünü yeniden paylaştı.",
+      "residue": "Bulutun arkasında kasa ve güvenlik vardı.",
+      "motifs": [
+        "AI",
+        "finansman",
+        "siber güvenlik"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-aposto-2026-07-29-04",
+      "parent_digest_id": "minor-aposto-gundem-2026-07-29",
+      "source_hint": "Aposto Gündem",
+      "topic": "platform parası",
+      "plain_summary": "Sosyal platformun ödeme sistemine doğru açılması, konuşma alanının para hareketine de bağlanmasını gösterdi.",
+      "residue": "Sohbetin cebine ödeme aracı yerleşti.",
+      "motifs": [
+        "platform",
+        "para",
+        "hesap"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-aposto-2026-07-29-05",
+      "parent_digest_id": "minor-aposto-gundem-2026-07-29",
+      "source_hint": "Aposto Gündem",
+      "topic": "yangın ve sıcaklık",
+      "plain_summary": "Avrupa'daki yangın ve sıcaklık parçaları, iklimin haber değil fiziksel koşul olarak dönmesini sağladı.",
+      "residue": "Hava raporu yine haberden daha somuttu.",
+      "motifs": [
+        "yangın",
+        "sıcaklık",
+        "iklim"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-aposto-2026-07-29-06",
+      "parent_digest_id": "minor-aposto-gundem-2026-07-29",
+      "source_hint": "Aposto Gündem",
+      "topic": "kültür eserinin yeniden tartışılması",
+      "plain_summary": "Çeviri, uyarlama, ödül listesi ve pop kültür güvenliği parçaları kültürün üretim kadar tartışma yüzeyi olduğunu gösterdi.",
+      "residue": "Eser bitmedi; ekranlarda savunma verdi.",
+      "motifs": [
+        "çeviri",
+        "uyarlama",
+        "ödül"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-dnr-2026-07-29-01",
+      "parent_digest_id": "minor-dnr-summer-courses-2026-07-29",
+      "source_hint": "Do Not Research",
+      "topic": "internetle şekillenen kimlik",
+      "plain_summary": "Kurs hattı, çevrimiçi kültürün kimlik ve politik gelecek algısını nasıl etkilediğini eğitim konusu yaptı.",
+      "residue": "Kimlik yine ekranın içinden ders aldı.",
+      "motifs": [
+        "internet",
+        "kimlik",
+        "gelecek"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-dnr-2026-07-29-02",
+      "parent_digest_id": "minor-dnr-summer-courses-2026-07-29",
+      "source_hint": "Do Not Research",
+      "topic": "post-internet sanat tarihi",
+      "plain_summary": "Görsel kültür, sanat ve hayat ilişkisi, internet sonrası dönemin malzeme ve imge sorunlarıyla birlikte ele alındı.",
+      "residue": "İmge, dosya olmaktan çıkıp davranış istedi.",
+      "motifs": [
+        "post-internet",
+        "imge",
+        "malzeme"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-dnr-2026-07-29-03",
+      "parent_digest_id": "minor-dnr-summer-courses-2026-07-29",
+      "source_hint": "Do Not Research",
+      "topic": "Discord tabanlı öğrenme",
+      "plain_summary": "Eğitim yapısı çevrimiçi sınıf, tartışma ve topluluk formunu birlikte kullanan bir öğrenme kanalı kuruyordu.",
+      "residue": "Sınıf da artık oda olmayabilir.",
+      "motifs": [
+        "öğrenme",
+        "kanal",
+        "topluluk"
+      ],
+      "bucket": "noise"
+    },
+    {
+      "id": "digest-aposto-istanbul-2026-07-29-01",
+      "parent_digest_id": "minor-aposto-istanbul-2026-07-29",
+      "source_hint": "Aposto İstanbul",
+      "topic": "yaz konserlerinin şehir ritmi",
+      "plain_summary": "İstanbul'daki konser ve festival hattı, şehrin yaz akşamlarını kültür takvimi ve kalabalık hareketi olarak taşıdı.",
+      "residue": "Şehir akşamı yine bilet gibi davrandı.",
+      "motifs": [
+        "şehir",
+        "konser",
+        "akşam"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-aposto-istanbul-2026-07-29-02",
+      "parent_digest_id": "minor-aposto-istanbul-2026-07-29",
+      "source_hint": "Aposto İstanbul",
+      "topic": "festival dağılımı",
+      "plain_summary": "Farklı müzik ve etkinlik önerileri şehirde tek rota yerine dağılmış bir kültür yüzeyi oluşturdu.",
+      "residue": "Takvim kendi küçük haritasını çizdi.",
+      "motifs": [
+        "festival",
+        "takvim",
+        "rota"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-aposto-2026-07-28-01",
+      "parent_digest_id": "minor-aposto-gundem-2026-07-28",
+      "source_hint": "Aposto Gündem / önceki gün",
+      "topic": "istifa ve müzakere arka sesi",
+      "plain_summary": "Önceki günün siyasi istifaları ve müzakere mesajları, bugünün kamusal sıkışmasını hazırlayan arka ses gibi kaldı.",
+      "residue": "Dün yerinden oynayan şey bugün hâlâ ses verdi.",
+      "motifs": [
+        "istifa",
+        "müzakere",
+        "arka ses"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-duende-2026-07-27-01",
+      "parent_digest_id": "minor-duende-2026-07-27",
+      "source_hint": "Duende",
+      "topic": "kültür bolluğunun yorgunluğu",
+      "plain_summary": "Konser ve kültür takviminin fazlalığı ilham kadar seçim yorgunluğu ve ekonomik hesap duygusu da taşıdı.",
+      "residue": "Çok seçenek de bedene yük bindirdi.",
+      "motifs": [
+        "konser",
+        "yorgunluk",
+        "seçim"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-duende-2026-07-27-02",
+      "parent_digest_id": "minor-duende-2026-07-27",
+      "source_hint": "Duende",
+      "topic": "telif ve AI eğitimi",
+      "plain_summary": "Kültür üretiminin yapay zeka eğitimi için emilmesi, yaratıcı emeğin hangi izne bağlı olduğu sorusunu tekrar etti.",
+      "residue": "Makine okudu; izin kısmını biraz sonra hatırladı.",
+      "motifs": [
+        "telif",
+        "AI",
+        "emek"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-substack-notes-2026-07-27-01",
+      "parent_digest_id": "minor-substack-notes-2026-07-27",
+      "source_hint": "Substack notes digest",
+      "topic": "küçük notların gündelik bakım taşıması",
+      "plain_summary": "Yemek festivali, yazma daveti ve göl çevresindeki bakım gözlemi büyük argüman olmadan gündelik dikkat kurdu.",
+      "residue": "Küçük notların da ağırlığı vardı.",
+      "motifs": [
+        "not",
+        "bakım",
+        "dikkat"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-zapier-2026-07-29-01",
+      "parent_digest_id": "minor-zapier-ideas-2026-07-29",
+      "source_hint": "Zapier",
+      "topic": "otomasyon fikri üretme",
+      "plain_summary": "Mail, takılan iş akışını ilerletmek için otomasyon örnekleri ve kaynakları öneriyordu.",
+      "residue": "İş yükü kendine kısa yol aradı.",
+      "motifs": [
+        "otomasyon",
+        "fikir",
+        "akış"
+      ],
+      "bucket": "noise"
+    },
+    {
+      "id": "digest-zapier-2026-07-28-01",
+      "parent_digest_id": "minor-zapier-systems-2026-07-28",
+      "source_hint": "Zapier",
+      "topic": "workflow'dan sisteme geçme",
+      "plain_summary": "Tekil otomasyondan daha geniş, kendi başına iş yapan sistemler kurma fikri tekrarlandı.",
+      "residue": "Araç yetmedi, sistem olmak istedi.",
+      "motifs": [
+        "sistem",
+        "iş",
+        "akış"
+      ],
+      "bucket": "noise"
+    }
+  ],
+  "discarded_summary": {
+    "noise_count": 3,
+    "public_safe_note": "Güvenlik, doğrulama, fatura veya kişisel işlem niteliğinde public digest'e alınacak mail bulunmadı. Otomasyon tanıtımları ve ticari/eğitim duyuru kısımları ham biçimiyle alınmadı; yalnız iş akışı, sistemleşme, öğrenme kanalı ve dış temas açılması gibi zayıf izlere indirildi. Linkler, abonelikten çıkma yönlendirmeleri, iletişim ayrıntıları, sponsor/satış detayları ve ham mail gövdeleri public çıktılara alınmadı."
+  },
+  "external_weather": "Gelen kutusu bugün klasik haber özeti gibi değil, karar ve bekleme arasında sıkışan bir kurum dili, güvenli mesafeden seyredilen sertlik, bozulmuş yüzeylerden kalan bakış, yerel yemek bilgisinin elden ele geçmesi, ağları haritalama isteği ve acının prosedürle gecikmesi olarak çalıştı.",
+  "possible_influence_on_ucu_beden": "Bu temaslar UCU BEDEN'in şiirinde belgeyle geciken beden, kararın uzaktan gelmesi, ince ve kuru sarkazmın prosedüre bakması, yerel el bilgisinin hafızaya sessizce girmesi ve makinenin ağ/denetim ikiliği olarak belirmesi şeklinde çalışabilir. Görsel dilde literal haber imgesi yerine lekeli yüzey, düşük ışıklı atlas, yarım kalmış form, yumuşak ama tedirgin ağ çizgileri ve sofra öncesi emek hissi bırakabilir.",
+  "safety": {
+    "public_safe": true,
+    "raw_mail_body_in_public": false,
+    "long_quotes_in_public": false,
+    "email_addresses_in_public": false,
+    "raw_urls_in_public": false,
+    "verification_codes_in_public": false,
+    "security_invoice_personal_transaction_details_in_public": false,
+    "private_inventory_path": "data/external_intake/codex_raw/inventory/2026-07-30.json"
+  },
+  "validation": {
+    "json_parse": "passed",
+    "markdown_first_section": "passed",
+    "public_safety_scan": "passed",
+    "count_fields_present": true,
+    "multipart_rule_applied": true,
+    "full_body_rule_applied": true,
+    "generated_by": "codex_heartbeat"
+  }
+}
