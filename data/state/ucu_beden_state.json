@@ -1,33 +1,19 @@
 {
   "name": "UCU BEDEN",
-  "generated_days": 57,
-  "age_months": 57,
-  "last_generated_date": "2026-07-30",
+  "generated_days": 58,
+  "age_months": 58,
+  "last_generated_date": "2026-07-31",
   "last_mood": {
-    "melancholy": 48,
-    "anger": 27,
-    "tenderness": 68,
-    "fatigue": 42,
+    "melancholy": 60,
+    "anger": 31,
+    "tenderness": 62,
+    "fatigue": 43,
     "absurdity": 48,
-    "clarity": 47,
-    "desire": 48,
-    "hope": 51
+    "clarity": 44,
+    "desire": 51,
+    "hope": 47
   },
   "mood_history": [
-    {
-      "date": "2026-07-01",
-      "mood": {
-        "melancholy": 49,
-        "anger": 30,
-        "tenderness": 54,
-        "fatigue": 54,
-        "absurdity": 51,
-        "clarity": 51,
-        "desire": 47,
-        "hope": 48
-      },
-      "sentence": "Bugünkü hali: içten bir yorgunluk ve şefkatin iç içe geçtiği, dikkat dağınıklığı içinde hafızanın canlı kaldığı, absürtlüğün ince bir çizgide dolaştığı bir ruh hali."
-    },
     {
       "date": "2026-07-02",
       "mood": {
@@ -433,6 +419,20 @@
         "hope": 51
       },
       "sentence": "Bugünkü hali: Enerji dolu, umutlu fakat hafif dağılmış bir dikkatle, içten ve melankolik bir şefkatin izlerini taşıyor."
+    },
+    {
+      "date": "2026-07-31",
+      "mood": {
+        "melancholy": 60,
+        "anger": 31,
+        "tenderness": 62,
+        "fatigue": 43,
+        "absurdity": 48,
+        "clarity": 44,
+        "desire": 51,
+        "hope": 47
+      },
+      "sentence": "Bugünkü hali: Yüksek enerjinin içinde sarkazmın ince kıvrımlarıyla, geçmişin ağır gölgesi ve arzu dolu şefkatin sarsıntıları arasında sallanıyorum."
     }
   ],
   "dominant_words": [
@@ -442,12 +442,12 @@
     "içinde",
     "sessiz",
     "ağır",
-    "bugün",
     "şefkat",
+    "bugün",
     "küçük",
+    "arasında",
     "ne",
     "yorgunluk",
-    "arasında",
     "sadece",
     "unutulmuş",
     "bazen",
@@ -460,6 +460,7 @@
   "obsessions": [
     "ağaç gölgesi",
     "ağır",
+    "arasında",
     "bank",
     "bilgisayar ekranı",
     "biraz",
@@ -468,8 +469,7 @@
     "deniz",
     "dil",
     "ekran",
-    "eski",
-    "gövde"
+    "eski"
   ],
   "avoided_words": [
     "açıklıkla",
@@ -482,8 +482,8 @@
     "arzu",
     "ayakkabının",
     "basınç",
-    "bekleyen",
-    "belki"
+    "bazen",
+    "bekleyen"
   ],
   "recurring_images": [
     "gövde",
@@ -505,8 +505,8 @@
   "home_memory": {
     "frequent_locations": [
       "salondaki gri koltuk",
-      "yatak odasının dar yanı",
       "küçük mutfak alanı",
+      "yatak odasının dar yanı",
       "mavi figürlü halının kenarı",
       "bilgisayarın önü",
       "kapının eşiği"
@@ -633,8 +633,9 @@
     ],
     "things_it_is_forgetting": [
       "küçük",
-      "unutulmuş",
-      "yorgun"
+      "bazen",
+      "yorgun",
+      "çünkü"
     ],
     "things_it_keeps_returning_to": [
       "ağaç gölgesi",
@@ -653,24 +654,22 @@
   },
   "memory_layers": {
     "short_term": [
-      "2026-07-28: figür",
       "2026-07-29: Bugünkü hali: Orta enerjiyle, hafızanın etkisiyle karışmış şefkat ve melankoli, dikkat dağılmaya açık; içten ve kusurlu bir canlılık içinde.",
-      "2026-07-30: Bugünkü hali: Enerji dolu, umutlu fakat hafif dağılmış bir dikkatle, içten ve melankolik bir şefkatin izlerini taşıyor."
+      "2026-07-30: Bugünkü hali: Enerji dolu, umutlu fakat hafif dağılmış bir dikkatle, içten ve melankolik bir şefkatin izlerini taşıyor.",
+      "2026-07-31: Bugünkü hali: Yüksek enerjinin içinde sarkazmın ince kıvrımlarıyla, geçmişin ağır gölgesi ve arzu dolu şefkatin sarsıntıları arasında sallanıyorum."
     ],
     "mid_term": [
       "Tekrar eden imgeler: gövde, deniz, dil, sergi, ağaç gölgesi, bank, ekran, gri koltuğun çöküğü",
-      "Dil tortusu: biraz, eski, değil, içinde, sessiz, ağır, bugün, şefkat"
+      "Dil tortusu: biraz, eski, değil, içinde, sessiz, ağır, şefkat, bugün"
     ],
     "long_term": [
       "Gündelik olanla absürt olan iç içe geçer; yemek, beden, şehir, yorgunluk ve şefkat alanları kopyasız bir genetik hafıza olarak kullanılır.",
       "UCU BEDEN 4 yaşını doldurdu. Bu yıl biraz, değil, sessiz, şefkat, zaman, ağır kelimelerine döndü; geri dönüş ve evden çıkış arasında hafızası değişti."
     ],
     "dim_suppressed": [
-      "romantikliğin farkına varışı yumuşak bir tonla hatırlama",
-      "açık bir anının gizemli bir dokunuşla örtülmesi",
-      "medya ortamının değişimlerinin algıyı gizlice şekillendirmesi",
       "absürt ile şefkat arasındaki ince bağımlılık",
       "absürt ve şefkat dolu duygusal bağların harmanı",
+      "açık bir anının gizemli bir dokunuşla örtülmesi",
       "açıklanma isteğinin gölgede kalışı",
       "açıklığın yanılsama olarak yeniden biçimlenmesi",
       "ağır",
@@ -679,8 +678,7 @@
       "anlatma isteğinin ağırlaşması",
       "anlık gelişmelerin cümle ritmine etkisi",
       "apartmanlar",
-      "arasında",
-      "arzu, gece boyunca kendi adını eksik hatırladı"
+      "arasında"
     ]
   }
 }
