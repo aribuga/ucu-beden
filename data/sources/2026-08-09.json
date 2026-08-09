@@ -1,13 +1,13 @@
 {
   "date": "2026-08-09",
-  "collected_at": "2026-08-09T05:52:42.767Z",
+  "collected_at": "2026-08-09T07:05:47.232Z",
   "fallback_used": false,
   "weather": {
     "provider": "open-meteo",
-    "summary": "Kadıköy'de 25.7°C; nem 80%, rüzgar 17.2 km/s civarında.",
-    "temperature_c": 25.7,
-    "humidity_percent": 80,
-    "wind_kmh": 17.2,
+    "summary": "Kadıköy'de 26.2°C; nem 76%, rüzgar 21.6 km/s civarında.",
+    "temperature_c": 26.2,
+    "humidity_percent": 76,
+    "wind_kmh": 21.6,
     "body_effect": "nem gövdesine yapışıyor"
   },
   "turkey_news": {
@@ -229,42 +229,11 @@
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
       {
-        "title": "Ankara’da drift operasyonu: 11 sürücüye ev hapsi ve 2 milyon TL ceza",
+        "title": "Fenerbahçe’den Ayase Ueda için 20 milyon euroyu aşan teklif iddiası",
         "source": "BirGün",
         "category": "news",
-        "url": "https://www.birgun.net/haber/ankarada-drift-operasyonu-11-surucuye-ev-hapsi-ve-2-milyon-tl-ceza-728366",
-        "publishedAt": "Sun, 09 Aug 2026 08:26:00 +0300",
-        "moodTags": [
-          "anger",
-          "fatigue",
-          "melancholy"
-        ],
-        "moodScores": {
-          "melancholy": 2,
-          "anger": 10,
-          "tenderness": 2,
-          "fatigue": 10,
-          "absurdity": 0,
-          "clarity": 0,
-          "desire": 0,
-          "hope": 1
-        },
-        "keywords": [
-          "ceza",
-          "drift",
-          "hapsi",
-          "milyon",
-          "sürücü",
-          "açık"
-        ],
-        "shortAtmosphere": "içeride kabaran gündelik politik basınç"
-      },
-      {
-        "title": "Gülistan Doku dosyasında 108 kişilik liste: ‘Karanlık ilişki ağı ortaya çıktı’",
-        "source": "BirGün",
-        "category": "news",
-        "url": "https://www.birgun.net/haber/gulistan-doku-dosyasinda-108-kisilik-liste-karanlik-iliski-agi-ortaya-cikti-728365",
-        "publishedAt": "Sun, 09 Aug 2026 08:16:00 +0300",
+        "url": "https://www.birgun.net/haber/fenerbahceden-ayase-ueda-icin-20-milyon-euroyu-asan-teklif-iddiasi-728371",
+        "publishedAt": "Sun, 09 Aug 2026 09:34:00 +0300",
         "moodTags": [
           "anger",
           "fatigue",
@@ -273,7 +242,7 @@
         "moodScores": {
           "melancholy": 4,
           "anger": 10,
-          "tenderness": 4,
+          "tenderness": 0,
           "fatigue": 10,
           "absurdity": 0,
           "clarity": 0,
@@ -281,12 +250,43 @@
           "hope": 1
         },
         "keywords": [
-          "kişilik",
-          "liste",
-          "açıkladı",
-          "ağı",
-          "ailesinin",
-          "aralarında"
+          "milyon",
+          "teklif",
+          "arayışlarını",
+          "aşan",
+          "avronun",
+          "euroyu"
+        ],
+        "shortAtmosphere": "içeride kabaran gündelik politik basınç"
+      },
+      {
+        "title": "EPDK’den 27 şirkete lisans: 7 şirketin lisansı sonlandırıldı",
+        "source": "BirGün",
+        "category": "news",
+        "url": "https://www.birgun.net/haber/epdkden-27-sirkete-lisans-7-sirketin-lisansi-sonlandirildi-728370",
+        "publishedAt": "Sun, 09 Aug 2026 09:30:00 +0300",
+        "moodTags": [
+          "anger",
+          "fatigue",
+          "melancholy"
+        ],
+        "moodScores": {
+          "melancholy": 4,
+          "anger": 10,
+          "tenderness": 0,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 0,
+          "desire": 0,
+          "hope": 3
+        },
+        "keywords": [
+          "lisans",
+          "elektrik",
+          "piyasasında",
+          "şirkete",
+          "şirketin",
+          "açıkladı"
         ],
         "shortAtmosphere": "içeride kabaran gündelik politik basınç"
       },
@@ -920,8 +920,8 @@
         "buldu",
         "içeride",
         "kabaran",
-        "açık",
-        "adamlarından"
+        "adamlarından",
+        "almasının"
       ],
       "leakageWords": [
         "basınç",
@@ -932,10 +932,10 @@
         "buldu",
         "içeride",
         "kabaran",
-        "açık",
         "adamlarından",
-        "ağı",
-        "ailesinin",
+        "almasının",
+        "altyapısını",
+        "amaçlı",
         "basıncı",
         "duvarı"
       ],
@@ -963,16 +963,16 @@
           "buldu",
           "içeride",
           "kabaran",
-          "açık",
           "adamlarından",
-          "ağı",
-          "ailesinin"
+          "almasının",
+          "altyapısını",
+          "amaçlı"
         ],
         "novelty_terms": [
           "buldu",
           "adamlarından",
-          "ağı",
-          "ailesinin"
+          "almasının",
+          "amaçlı"
         ],
         "repeated_terms": [
           "basınç",
@@ -1189,7 +1189,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://arkeofili.com/feed/",
-        "lastCheckedAt": "2026-08-09T05:52:35.361Z",
+        "lastCheckedAt": "2026-08-09T07:05:41.337Z",
         "attemptedUrls": [
           "https://arkeofili.com/feed/"
         ],
@@ -1205,7 +1205,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://evrimagaci.org/rss.xml",
-        "lastCheckedAt": "2026-08-09T05:52:35.362Z",
+        "lastCheckedAt": "2026-08-09T07:05:41.339Z",
         "attemptedUrls": [
           "https://evrimagaci.org/rss.xml"
         ],
@@ -1221,7 +1221,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://altyazi.net/feed/",
-        "lastCheckedAt": "2026-08-09T05:52:35.363Z",
+        "lastCheckedAt": "2026-08-09T07:05:41.341Z",
         "attemptedUrls": [
           "https://altyazi.net/feed/"
         ],
@@ -1237,7 +1237,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.otekisinema.com/feed/",
-        "lastCheckedAt": "2026-08-09T05:52:35.934Z",
+        "lastCheckedAt": "2026-08-09T07:05:41.793Z",
         "attemptedUrls": [
           "https://www.otekisinema.com/feed/"
         ],
@@ -1253,7 +1253,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.bagimsizsinema.com/feed",
-        "lastCheckedAt": "2026-08-09T05:52:36.423Z",
+        "lastCheckedAt": "2026-08-09T07:05:42.245Z",
         "attemptedUrls": [
           "https://www.bagimsizsinema.com/feed"
         ],
@@ -1269,7 +1269,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://artdogistanbul.com/feed/",
-        "lastCheckedAt": "2026-08-09T05:52:36.628Z",
+        "lastCheckedAt": "2026-08-09T07:05:42.486Z",
         "attemptedUrls": [
           "https://artdogistanbul.com/feed/"
         ],
@@ -1285,7 +1285,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://argonotlar.com/feed/",
-        "lastCheckedAt": "2026-08-09T05:52:36.905Z",
+        "lastCheckedAt": "2026-08-09T07:05:42.710Z",
         "attemptedUrls": [
           "https://argonotlar.com/feed/"
         ],
@@ -1301,7 +1301,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.arkitera.com/feed/",
-        "lastCheckedAt": "2026-08-09T05:52:37.614Z",
+        "lastCheckedAt": "2026-08-09T07:05:43.274Z",
         "attemptedUrls": [
           "https://www.arkitera.com/feed/"
         ],
@@ -1317,7 +1317,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.artkolik.net/feed",
-        "lastCheckedAt": "2026-08-09T05:52:37.811Z",
+        "lastCheckedAt": "2026-08-09T07:05:43.766Z",
         "attemptedUrls": [
           "https://www.artkolik.net/feed"
         ],
@@ -1333,7 +1333,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://terrabayt.com/feed/",
-        "lastCheckedAt": "2026-08-09T05:52:38.003Z",
+        "lastCheckedAt": "2026-08-09T07:05:43.931Z",
         "attemptedUrls": [
           "https://terrabayt.com/feed/"
         ],
@@ -1349,7 +1349,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.nouvart.net/feed/",
-        "lastCheckedAt": "2026-08-09T05:52:38.868Z",
+        "lastCheckedAt": "2026-08-09T07:05:44.613Z",
         "attemptedUrls": [
           "https://www.nouvart.net/feed/"
         ],
@@ -1365,7 +1365,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds2.feedburner.com/itsnicethat/SlXC",
-        "lastCheckedAt": "2026-08-09T05:52:38.967Z",
+        "lastCheckedAt": "2026-08-09T07:05:44.717Z",
         "attemptedUrls": [
           "https://feeds2.feedburner.com/itsnicethat/SlXC"
         ],
@@ -1381,7 +1381,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://thecreativeindependent.com/feed.xml",
-        "lastCheckedAt": "2026-08-09T05:52:39.398Z",
+        "lastCheckedAt": "2026-08-09T07:05:44.870Z",
         "attemptedUrls": [
           "https://thecreativeindependent.com/feed.xml"
         ],
@@ -1397,7 +1397,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://bantmag.com/feed/",
-        "lastCheckedAt": "2026-08-09T05:52:39.584Z",
+        "lastCheckedAt": "2026-08-09T07:05:45.038Z",
         "attemptedUrls": [
           "https://bantmag.com/feed/"
         ],
@@ -1413,7 +1413,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://manifold.press/rss",
-        "lastCheckedAt": "2026-08-09T05:52:39.602Z",
+        "lastCheckedAt": "2026-08-09T07:05:45.192Z",
         "attemptedUrls": [
           "https://manifold.press/rss"
         ],
@@ -1429,7 +1429,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://playtusu.com/feed/",
-        "lastCheckedAt": "2026-08-09T05:52:40.128Z",
+        "lastCheckedAt": "2026-08-09T07:05:45.399Z",
         "attemptedUrls": [
           "https://playtusu.com/feed/"
         ],
@@ -1445,7 +1445,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://vesaire.press/feed/",
-        "lastCheckedAt": "2026-08-09T05:52:40.161Z",
+        "lastCheckedAt": "2026-08-09T07:05:45.835Z",
         "attemptedUrls": [
           "https://vesaire.press/feed/"
         ],
@@ -1461,7 +1461,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds.bbci.co.uk/turkce/rss.xml",
-        "lastCheckedAt": "2026-08-09T05:52:40.228Z",
+        "lastCheckedAt": "2026-08-09T07:05:45.861Z",
         "attemptedUrls": [
           "https://feeds.bbci.co.uk/turkce/rss.xml"
         ],
@@ -1477,7 +1477,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.birgun.net/rss/home",
-        "lastCheckedAt": "2026-08-09T05:52:40.480Z",
+        "lastCheckedAt": "2026-08-09T07:05:45.886Z",
         "attemptedUrls": [
           "https://www.birgun.net/rss/home"
         ],
@@ -1493,7 +1493,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.diken.com.tr/feed/",
-        "lastCheckedAt": "2026-08-09T05:52:40.495Z",
+        "lastCheckedAt": "2026-08-09T07:05:45.973Z",
         "attemptedUrls": [
           "https://www.diken.com.tr/feed/"
         ],
@@ -1509,7 +1509,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.radikal.com.tr/feed/",
-        "lastCheckedAt": "2026-08-09T05:52:40.540Z",
+        "lastCheckedAt": "2026-08-09T07:05:46.042Z",
         "attemptedUrls": [
           "https://www.radikal.com.tr/feed/"
         ],
@@ -1525,7 +1525,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.cumhuriyet.com.tr/rss",
-        "lastCheckedAt": "2026-08-09T05:52:41.075Z",
+        "lastCheckedAt": "2026-08-09T07:05:46.108Z",
         "attemptedUrls": [
           "https://www.cumhuriyet.com.tr/rss/son_dakika.xml"
         ],
@@ -1541,7 +1541,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://istanbullife.com.tr/feed/",
-        "lastCheckedAt": "2026-08-09T05:52:41.440Z",
+        "lastCheckedAt": "2026-08-09T07:05:46.187Z",
         "attemptedUrls": [
           "https://istanbullife.com.tr/feed/"
         ],
