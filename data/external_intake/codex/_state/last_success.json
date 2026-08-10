@@ -1,29 +1,24 @@
 {
-  "date": "2026-08-07",
+  "date": "2026-08-10",
   "timezone": "Europe/Istanbul",
-  "completed_at": "2026-08-07T04:08:12.406Z",
+  "completed_at": "2026-08-10T23:07:08+03:00",
   "automation_id": "ucu-beden-daily-codex-external-intake",
-  "scanned_mail_count": 14,
-  "full_body_count": 14,
-  "snippet_or_subject_count": 0,
-  "multipart_digest_count": 5,
-  "digest_items_count": 37,
-  "curated_rss_feeds_checked": 2,
-  "curated_rss_recent_items": 0,
+  "output_json": "data/external_intake/codex/json/2026-08-10.json",
+  "output_markdown": "data/external_intake/codex/markdown/2026-08-10.md",
+  "output_run_log": "data/external_intake/codex/runs/2026-08-10.log.md",
+  "counts": {
+    "scanned_mail_count": 14,
+    "full_body_read_count": 14,
+    "snippet_only_count": 0,
+    "subject_only_count": 0,
+    "multipart_digest_count": 8,
+    "digest_items_count": 38,
+    "curated_rss_recent_item_count": 0
+  },
   "safety": {
     "public_safe": true,
-    "raw_mail_body_in_public": false,
-    "long_quotes_in_public": false,
-    "email_addresses_in_public": false,
     "raw_urls_in_public": false,
-    "verification_codes_in_public": false,
-    "security_invoice_personal_transaction_details_in_public": false,
-    "private_inventory_path": "data/external_intake/codex_raw/inventory/2026-08-07.json"
-  },
-  "files": {
-    "json": "data/external_intake/codex/json/2026-08-07.json",
-    "markdown": "data/external_intake/codex/markdown/2026-08-07.md",
-    "run_log": "data/external_intake/codex/runs/2026-08-07.log.md",
-    "private_inventory": "data/external_intake/codex_raw/inventory/2026-08-07.json"
+    "email_addresses_in_public": false,
+    "private_inventory_not_staged": true
   }
 }
