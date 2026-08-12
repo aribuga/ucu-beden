@@ -9,6 +9,7 @@ import type {
   VisualMemoryMapEdge,
   VisualMemoryMapEdgeKind,
   VisualMemoryMapNode,
+  VisualMemoryMapNodeType,
   VisualMemoryMapRecallType
 } from "./types";
 
@@ -34,6 +35,22 @@ function shortText(value: string, limit = 190): string {
   const clipped = compact.slice(0, limit);
   const boundary = clipped.lastIndexOf(" ");
   return `${boundary > limit * 0.65 ? clipped.slice(0, boundary) : clipped}...`;
+}
+
+function traceNodeType(trace: MemoryGraphData["nodes"][number]): VisualMemoryMapNodeType {
+  if (trace.external_intake) return "external_intake";
+  if (trace.source === "source") return "source_effect";
+  return "memory_trace";
+}
+
+function traceNodeLabel(trace: MemoryGraphData["nodes"][number]): string {
+  if (trace.external_intake) return "dış temas hafızası";
+  if (trace.source === "source") return "dış etki";
+  return trace.kind.replaceAll("_", " ");
+}
+
+function traceAffinity(trace: MemoryGraphData["nodes"][number]): string[] {
+  return distinct(trace.transformed_text.split(/\s+/).map((term) => term.trim()).filter((term) => term.length >= 4)).slice(0, 18);
 }
 
 function subtractDays(date: string, days: number): string {
@@ -75,6 +92,7 @@ function traceRecallType(params: {
 function edgeWeight(kind: VisualMemoryMapEdgeKind): number {
   if (kind === "dream_return" || kind === "recall") return 1;
   if (kind === "mutation") return 0.86;
+  if (kind === "external_intake") return 0.74;
   if (kind === "source_effect") return 0.68;
   if (kind === "indirect") return 0.52;
   return 0.42;
@@ -91,6 +109,7 @@ function traceScore(node: MemoryGraphData["nodes"][number], selected: Set<string
   return (
     (selected.has(node.id) ? 80 : 0) +
     (node.date >= windowStart ? 22 : 0) +
+    (node.external_intake ? 16 : 0) +
     node.times_recalled * 5 +
     node.times_returned_in_dream * 9 +
     node.linked_traces.length * 2 +
@@ -128,6 +147,7 @@ export async function buildVisualMemoryMapData(params: {
       node.date >= windowStart &&
       (node.times_recalled > 0 ||
         node.times_returned_in_dream > 0 ||
+        node.external_intake ||
         node.kind === "dream_return" ||
         ["suppressed", "overexposed", "unstable"].includes(node.status));
     if (significantRecent) candidateIds.add(node.id);
@@ -185,9 +205,9 @@ export async function buildVisualMemoryMapData(params: {
     const dreamReturn = trace.kind === "dream_return" || trace.times_returned_in_dream > 0;
     nodes.push({
       id: trace.id,
-      type: trace.source === "source" ? "source_effect" : "memory_trace",
+      type: traceNodeType(trace),
       date: trace.date,
-      label: trace.source === "source" ? "dış etki" : trace.kind.replaceAll("_", " "),
+      label: traceNodeLabel(trace),
       summary: shortText(trace.transformed_text),
       source: trace.source,
       status: trace.status,
@@ -196,6 +216,13 @@ export async function buildVisualMemoryMapData(params: {
       suppressed: trace.status === "suppressed",
       dream_return: dreamReturn,
       overexposed: trace.status === "overexposed",
+      external_intake: trace.external_intake,
+      contact_residue_kind: trace.contact_residue_kind,
+      memory_layer: trace.memory_layer,
+      source_ref: trace.source_ref,
+      recallability: trace.recallability,
+      emotional_weight: trace.emotional_weight,
+      affinity_terms: traceAffinity(trace),
       related_poem_href: `/poem/${trace.date}`,
       related_dream_href: trace.source === "dream" || dreamReturn ? `/dreams/${trace.date}` : null
     });
@@ -260,6 +287,12 @@ export async function buildVisualMemoryMapData(params: {
       const target = poemId ?? dreamId;
       if (target) addEdge(edges, edgeKeys, node.id, target, "source_effect");
     }
+    if (node.type === "external_intake") {
+      const sameDatePoem = node.date === params.latestPoem?.date ? poemId : null;
+      const sameDateDream = node.date === params.latestDream?.date ? dreamId : null;
+      const target = sameDatePoem ?? sameDateDream;
+      if (target) addEdge(edges, edgeKeys, node.id, target, "external_intake");
+    }
     if (node.type === "mutation") {
       const target = mutationAnchors.get(node.id) ?? poemId ?? dreamId;
       if (target) addEdge(edges, edgeKeys, target, node.id, "mutation");
@@ -323,9 +356,9 @@ export async function buildFullVisualMemoryMapData(params: {
       const dreamReturn = trace.kind === "dream_return" || trace.times_returned_in_dream > 0;
       return {
         id: trace.id,
-        type: trace.source === "source" ? "source_effect" as const : "memory_trace" as const,
+        type: traceNodeType(trace),
         date: trace.date,
-        label: trace.source === "source" ? "dış etki" : trace.kind.replaceAll("_", " "),
+        label: traceNodeLabel(trace),
         summary: shortText(trace.transformed_text),
         source: trace.source,
         status: trace.status,
@@ -334,6 +367,13 @@ export async function buildFullVisualMemoryMapData(params: {
         suppressed: trace.status === "suppressed",
         dream_return: dreamReturn,
         overexposed: trace.status === "overexposed",
+        external_intake: trace.external_intake,
+        contact_residue_kind: trace.contact_residue_kind,
+        memory_layer: trace.memory_layer,
+        source_ref: trace.source_ref,
+        recallability: trace.recallability,
+        emotional_weight: trace.emotional_weight,
+        affinity_terms: traceAffinity(trace),
         related_poem_href: `/poem/${trace.date}`,
         related_dream_href: trace.source === "dream" || dreamReturn ? `/dreams/${trace.date}` : null
       };
@@ -417,6 +457,12 @@ export async function buildFullVisualMemoryMapData(params: {
       const sameDateDream = `dream:${node.date}`;
       const target = nodeIds.has(sameDatePoem) ? sameDatePoem : nodeIds.has(sameDateDream) ? sameDateDream : null;
       if (target) addEdge(edges, edgeKeys, node.id, target, "source_effect");
+    }
+    if (node.type === "external_intake") {
+      const sameDatePoem = `poem:${node.date}`;
+      const sameDateDream = `dream:${node.date}`;
+      const target = nodeIds.has(sameDatePoem) ? sameDatePoem : nodeIds.has(sameDateDream) ? sameDateDream : null;
+      if (target) addEdge(edges, edgeKeys, node.id, target, "external_intake");
     }
     if (node.type === "mutation") {
       const target = mutationAnchors.get(node.id);

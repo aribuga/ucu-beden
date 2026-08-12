@@ -17,7 +17,30 @@ function distinct<T>(items: T[]): T[] {
 
 function safeSourceRef(sourceRef: string): string | null {
   const normalized = sourceRef.replaceAll("\\", "/");
-  return /^data\/[a-z0-9_/-]+\.json(?:#[a-z0-9_-]+)?$/i.test(normalized) ? normalized : null;
+  return /^data\/[a-z0-9_/-]+\.json(?:#[a-z0-9_:-]+)?$/i.test(normalized) ? normalized : null;
+}
+
+export function isCodexExternalIntakeTrace(trace: Pick<MemoryTrace, "source" | "kind" | "source_ref">): boolean {
+  return (
+    trace.source === "contact_residue" &&
+    trace.kind === "external_pressure" &&
+    trace.source_ref.replaceAll("\\", "/").startsWith("data/external_intake/codex/json/")
+  );
+}
+
+function contactResidueKind(trace: MemoryTrace): "external_intake" | "legacy" | "other" | null {
+  if (trace.source !== "contact_residue") return null;
+  if (isCodexExternalIntakeTrace(trace)) return "external_intake";
+  if (trace.kind === "legacy_inferred" || trace.origin === "legacy_inferred") return "legacy";
+  return "other";
+}
+
+function memoryLayer(trace: MemoryTrace): "core" | "daily" | "external" | "dream" | "visual" {
+  if (isCodexExternalIntakeTrace(trace) || trace.source === "source") return "external";
+  if (trace.source === "daily_life" || trace.source === "walk") return "daily";
+  if (trace.source === "dream" || trace.kind === "dream_return") return "dream";
+  if (trace.source === "visual") return "visual";
+  return "core";
 }
 
 function recallModes(poems: DailyPoem[], dreams: DreamRecord[]): Map<string, Array<"poem" | "dream">> {
@@ -51,18 +74,42 @@ export async function buildMemoryGraphData(params: {
   const indirectIds = new Set(params.report.indirect_only);
   const edgeKeys = new Set<string>();
   const edges: MemoryGraphEdge[] = [];
+  const externalDailyEdgeCounts = new Map<string, number>();
 
   for (const trace of safeTraces) {
     for (const linkedId of trace.linked_traces) {
       if (!safeIds.has(linkedId)) continue;
+      const target = byId.get(linkedId);
+      if (!target) continue;
+      if (isCodexExternalIntakeTrace(trace) && target.source === "daily_life") {
+        const current = externalDailyEdgeCounts.get(trace.id) ?? 0;
+        if (current >= 2) continue;
+        externalDailyEdgeCounts.set(trace.id, current + 1);
+      }
       const pair = [trace.id, linkedId].sort();
       const key = pair.join("|");
       if (edgeKeys.has(key)) continue;
       edgeKeys.add(key);
-      const target = byId.get(linkedId);
-      if (!target) continue;
       edges.push({ id: key, source: trace.id, target: linkedId, kind: edgeKind(trace, target, indirectIds) });
     }
+  }
+
+  const byDate = new Map<string, MemoryTrace[]>();
+  for (const trace of safeTraces) byDate.set(trace.date, [...(byDate.get(trace.date) ?? []), trace]);
+  for (const trace of safeTraces.filter(isCodexExternalIntakeTrace)) {
+    const sameDaySourceTrace = (byDate.get(trace.date) ?? []).find((candidate) => candidate.source === "source");
+    if (!sameDaySourceTrace) continue;
+    const pair = [trace.id, sameDaySourceTrace.id].sort();
+    const key = pair.join("|");
+    if (edgeKeys.has(key)) continue;
+    edgeKeys.add(key);
+    edges.push({ id: key, source: trace.id, target: sameDaySourceTrace.id, kind: "linked" });
+  }
+
+  const graphLinksById = new Map<string, string[]>();
+  for (const edge of edges) {
+    graphLinksById.set(edge.source, [...(graphLinksById.get(edge.source) ?? []), edge.target]);
+    graphLinksById.set(edge.target, [...(graphLinksById.get(edge.target) ?? []), edge.source]);
   }
 
   return {
@@ -86,8 +133,11 @@ export async function buildMemoryGraphData(params: {
       last_recalled_at: trace.last_recalled_at,
       times_returned_in_dream: trace.times_returned_in_dream,
       last_dream_return_at: trace.last_dream_return_at,
-      linked_traces: trace.linked_traces.filter((id) => safeIds.has(id)),
-      recall_modes: modes.get(trace.id) ?? []
+      linked_traces: distinct(graphLinksById.get(trace.id) ?? trace.linked_traces.filter((id) => safeIds.has(id))).filter((id) => id !== trace.id).sort(),
+      recall_modes: modes.get(trace.id) ?? [],
+      external_intake: isCodexExternalIntakeTrace(trace),
+      contact_residue_kind: contactResidueKind(trace),
+      memory_layer: memoryLayer(trace)
     })),
     edges
   };

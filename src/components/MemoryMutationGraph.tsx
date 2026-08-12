@@ -6,15 +6,27 @@ import type { MemoryGraphData, MemoryGraphNode, MemoryTraceSource, MemoryTraceSt
 
 const width = 1000;
 const height = 680;
-const sourceOrder: MemoryTraceSource[] = ["poem", "dream", "daily_life", "source", "walk", "visual", "contact_residue"];
-const sourceColors: Record<MemoryTraceSource, string> = {
+type SourceLane = MemoryTraceSource | "external_intake";
+const sourceLanes: SourceLane[] = ["poem", "dream", "daily_life", "source", "external_intake", "walk", "visual", "contact_residue"];
+const sourceColors: Record<SourceLane, string> = {
   poem: "#d45a3a",
   dream: "#7253b6",
   daily_life: "#3f7f67",
   source: "#347ca8",
+  external_intake: "#c67652",
   walk: "#b18a32",
   visual: "#a84f82",
   contact_residue: "#66645f"
+};
+const sourceLabels: Record<SourceLane, string> = {
+  poem: "poem",
+  dream: "dream",
+  daily_life: "daily life",
+  source: "source / dış hava",
+  external_intake: "dış temas hafızası",
+  walk: "walk",
+  visual: "visual",
+  contact_residue: "contact residue"
 };
 
 type FilterId =
@@ -23,6 +35,7 @@ type FilterId =
   | MemoryTraceStatus
   | "dream_return"
   | "external"
+  | "external_intake"
   | MemoryTraceSource;
 
 type PositionedNode = MemoryGraphNode & {
@@ -39,7 +52,8 @@ const filterLabels: Array<[FilterId, string]> = [
   ["suppressed", "suppressed"],
   ["overexposed", "overexposed"],
   ["dream_return", "dream return"],
-  ["external", "external / internalized"],
+  ["external", "source / dış hava"],
+  ["external_intake", "dış temas hafızası"],
   ["poem", "poem"],
   ["dream", "dream"],
   ["daily_life", "daily life"],
@@ -70,11 +84,20 @@ function focusNode(node: MemoryGraphNode): boolean {
   );
 }
 
+function sourceLane(node: MemoryGraphNode): SourceLane {
+  return node.external_intake ? "external_intake" : node.source;
+}
+
+function traceSourceLabel(node: MemoryGraphNode): string {
+  return sourceLabels[sourceLane(node)];
+}
+
 function matchesFilter(node: MemoryGraphNode, filter: FilterId): boolean {
   if (filter === "focus") return focusNode(node);
   if (filter === "all") return true;
   if (filter === "dream_return") return node.kind === "dream_return" || node.times_returned_in_dream > 0;
   if (filter === "external") return node.source === "source";
+  if (filter === "external_intake") return node.external_intake;
   if (["active", "dim", "suppressed", "fossilized", "overexposed", "unstable"].includes(filter)) return node.status === filter;
   return node.source === filter;
 }
@@ -85,10 +108,10 @@ function initialFilter(data: MemoryGraphData): FilterId {
 
 function positions(data: MemoryGraphData): PositionedNode[] {
   const dates = Array.from(new Set(data.nodes.map((node) => node.date))).sort();
-  const activeSources = sourceOrder.filter((source) => data.nodes.some((node) => node.source === source));
+  const activeSources = sourceLanes.filter((source) => data.nodes.some((node) => sourceLane(node) === source));
   return data.nodes.map((node) => {
     const dateIndex = Math.max(0, dates.indexOf(node.date));
-    const sourceIndex = Math.max(0, activeSources.indexOf(node.source));
+    const sourceIndex = Math.max(0, activeSources.indexOf(sourceLane(node)));
     const jitter = (hashNumber(node.id) % 29) - 14;
     const x = dates.length <= 1 ? width / 2 : 75 + (dateIndex / (dates.length - 1)) * (width - 150) + jitter;
     const laneY = activeSources.length <= 1 ? height / 2 : 80 + (sourceIndex / (activeSources.length - 1)) * (height - 180);
@@ -101,7 +124,7 @@ function positions(data: MemoryGraphData): PositionedNode[] {
 }
 
 function NodeShape({ node, contextOnly }: { node: PositionedNode; contextOnly: boolean }) {
-  const fill = sourceColors[node.source];
+  const fill = sourceColors[sourceLane(node)];
   const opacity = contextOnly ? 0.17 : node.opacity;
   const common = {
     fill,
@@ -120,6 +143,14 @@ function NodeShape({ node, contextOnly }: { node: PositionedNode; contextOnly: b
   if (node.status === "unstable") {
     const points = `${node.x},${node.y - node.radius} ${node.x - node.radius},${node.y + node.radius} ${node.x + node.radius},${node.y + node.radius}`;
     return <polygon {...common} points={points} />;
+  }
+  if (node.external_intake) {
+    return (
+      <>
+        <circle {...common} cx={node.x} cy={node.y} r={node.radius} />
+        <circle className="mutation-node-external-ring" cx={node.x} cy={node.y} r={node.radius + 5} />
+      </>
+    );
   }
   return <circle {...common} cx={node.x} cy={node.y} r={node.radius} />;
 }
@@ -151,8 +182,9 @@ function TraceDetail({
       <p className="mutation-detail-text">{node.transformed_text}</p>
       <div className="mutation-detail-tags">
         <span>{node.date}</span>
-        <span>{node.source}</span>
+        <span>{traceSourceLabel(node)}</span>
         <span>{node.kind}</span>
+        {node.external_intake ? <span>dış temas hafızası</span> : null}
       </div>
       <section className="mutation-detail-block">
         <h3>Hatırlanma</h3>
@@ -168,7 +200,7 @@ function TraceDetail({
               <li key={trace.id}>
                 <button type="button" onClick={() => onSelect(trace.id)}>
                   <strong>{shortText(trace.transformed_text, 120)}</strong>
-                  <span>{trace.source} / {trace.status}</span>
+                  <span>{traceSourceLabel(trace)} / {trace.status}</span>
                 </button>
               </li>
             ))}
@@ -182,7 +214,7 @@ function TraceDetail({
                 <li key={trace.id}>
                   <button type="button" onClick={() => onSelect(trace.id)}>
                     <strong>{shortText(trace.transformed_text, 120)}</strong>
-                    <span>{trace.source} / {trace.status}</span>
+                    <span>{traceSourceLabel(trace)} / {trace.status}</span>
                   </button>
                 </li>
               ))}
@@ -194,6 +226,9 @@ function TraceDetail({
         <summary>teknik kayıt</summary>
         <dl className="state-list">
           <div><dt>id</dt><dd>{node.id}</dd></div>
+          <div><dt>katman</dt><dd>{node.memory_layer}</dd></div>
+          <div><dt>çağrılabilirlik</dt><dd>{node.recallability.toFixed(2)}</dd></div>
+          <div><dt>duygusal ağırlık</dt><dd>{node.emotional_weight.toFixed(2)}</dd></div>
           <div><dt>source ref</dt><dd>{node.source_ref ?? "gizli veya geçersiz"}</dd></div>
         </dl>
       </details>
@@ -263,8 +298,8 @@ export function MemoryMutationGraph({ data }: { data: MemoryGraphData }) {
           </button>
         </div>
         <div className="mutation-legend">
-          {sourceOrder.filter((source) => data.nodes.some((node) => node.source === source)).map((source) => (
-            <span key={source}><i style={{ background: sourceColors[source] }} />{source}</span>
+          {sourceLanes.filter((source) => data.nodes.some((node) => sourceLane(node) === source)).map((source) => (
+            <span key={source}><i style={{ background: sourceColors[source] }} />{sourceLabels[source]}</span>
           ))}
         </div>
       </div>
@@ -274,7 +309,7 @@ export function MemoryMutationGraph({ data }: { data: MemoryGraphData }) {
           {hovered ? (
             <div className="mutation-hover">
               <strong>{shortText(hovered.transformed_text)}</strong>
-              <span>{hovered.date} / {hovered.source} / {hovered.kind} / {hovered.status}</span>
+              <span>{hovered.date} / {traceSourceLabel(hovered)} / {hovered.kind} / {hovered.status}</span>
             </div>
           ) : null}
           <svg className="mutation-graph" viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Hafıza trace bağlantı grafiği">
@@ -307,10 +342,10 @@ export function MemoryMutationGraph({ data }: { data: MemoryGraphData }) {
                 return (
                   <g
                     key={node.id}
-                    className={`mutation-node status-${node.status}${isSelected ? " is-selected" : ""}${isHovered ? " is-hovered" : ""}`}
+                    className={`mutation-node status-${node.status}${node.external_intake ? " is-external-intake" : ""}${isSelected ? " is-selected" : ""}${isHovered ? " is-hovered" : ""}`}
                     role="button"
                     tabIndex={0}
-                    aria-label={`${node.date} ${node.source} ${node.kind} ${node.status}`}
+                    aria-label={`${node.date} ${traceSourceLabel(node)} ${node.kind} ${node.status}`}
                     onMouseEnter={() => setHoveredTraceId(node.id)}
                     onMouseLeave={() => setHoveredTraceId(null)}
                     onClick={(event) => {

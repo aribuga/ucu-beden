@@ -57,6 +57,7 @@ function relationForEdge(edge: VisualMemoryMapEdge, nodesById: Map<string, Visua
   if (source?.suppressed || target?.suppressed) return "suppressed";
   if (edge.kind === "dream_return" || source?.dream_return || target?.dream_return) return "dream";
   if (edge.kind === "mutation" || source?.type === "mutation" || target?.type === "mutation") return "mutation";
+  if (edge.kind === "external_intake" || source?.type === "external_intake" || target?.type === "external_intake") return "strong";
   if (edge.kind === "recall" || edge.kind === "source_effect" || edge.weight >= 0.68) return "strong";
   return "weak";
 }
@@ -66,6 +67,7 @@ function collisionRadius(node: VisualMemoryMapNode): number {
   if (node.type === "dream") return 52;
   if (node.type === "mutation") return 30;
   if (node.type === "source_effect") return 22;
+  if (node.type === "external_intake") return 28;
   return 25;
 }
 

@@ -51,6 +51,7 @@ const fullMapFilters: Array<[FullMapFilter, string]> = [
   ["dream", "dream"],
   ["memory_trace", "memory trace"],
   ["source_effect", "source effect"],
+  ["external_intake", "dış temas"],
   ["mutation", "mutation"],
   ["suppressed", "suppressed"],
   ["overexposed", "overexposed"]
@@ -61,6 +62,7 @@ const typeLabels: Record<VisualMemoryMapNodeType, string> = {
   dream: "rüya",
   memory_trace: "hafıza izi",
   source_effect: "içselleştirilmiş dış etki",
+  external_intake: "dış temas hafızası",
   mutation: "mutasyon"
 };
 
@@ -90,6 +92,7 @@ function nodeRadius(node: VisualMemoryMapNode): number {
   if (node.type === "poem") return 31;
   if (node.type === "dream") return 24;
   if (node.type === "source_effect") return 6;
+  if (node.type === "external_intake") return 9 + Math.min(5, node.times_recalled * 0.9);
   if (node.type === "mutation") return 8;
   return 8 + Math.min(7, node.times_recalled * 1.1) + (node.recall_type === "direct" ? 3 : 0);
 }
@@ -98,6 +101,7 @@ function fieldNodeRadius(node: VisualMemoryMapNode): number {
   if (node.type === "poem") return 43;
   if (node.type === "dream") return 31;
   if (node.type === "source_effect") return 9;
+  if (node.type === "external_intake") return 13 + Math.min(6, node.times_recalled * 0.95);
   if (node.type === "mutation") return 12;
   return 7 + Math.min(8, node.times_recalled * 1.15) + (node.recall_type === "direct" ? 3 : 0);
 }
@@ -108,6 +112,7 @@ function positionNearNodes(nodes: VisualMemoryMapNode[]): PositionedNode[] {
     dream: nodes.filter((node) => node.type === "dream"),
     direct: nodes.filter((node) => node.type === "memory_trace" && (node.recall_type === "direct" || node.recall_type === "dream_return")),
     indirect: nodes.filter((node) => node.type === "memory_trace" && !["direct", "dream_return"].includes(node.recall_type)),
+    externalIntake: nodes.filter((node) => node.type === "external_intake"),
     source: nodes.filter((node) => node.type === "source_effect"),
     mutation: nodes.filter((node) => node.type === "mutation")
   };
@@ -122,6 +127,7 @@ function positionNearNodes(nodes: VisualMemoryMapNode[]): PositionedNode[] {
         ? radialPosition(node, directIndex, groups.direct.length, 440, -0.45, 0.68)
         : radialPosition(node, indirectIndex, groups.indirect.length, 760, 0.3, 0.63);
     }
+    if (node.type === "external_intake") point = radialPosition(node, groups.externalIntake.findIndex((item) => item.id === node.id), groups.externalIntake.length, 940, 0.56, 0.58);
     if (node.type === "source_effect") point = radialPosition(node, groups.source.findIndex((item) => item.id === node.id), groups.source.length, 1120, 0.72, 0.56);
     if (node.type === "mutation") point = radialPosition(node, groups.mutation.findIndex((item) => item.id === node.id), groups.mutation.length, 260, 1.1, 0.78);
     return { ...node, ...point, radius: nodeRadius(node) };
@@ -151,6 +157,10 @@ function positionFullNodes(nodes: VisualMemoryMapNode[]): PositionedNode[] {
     if (node.type === "source_effect") {
       x += ((groupIndex % 3) - 1) * 48;
       y = 150 + Math.floor(groupIndex / 3) * 62 + jitter * 0.25;
+    }
+    if (node.type === "external_intake") {
+      x += ((groupIndex % 3) - 1) * 54;
+      y = center.y + 430 + Math.floor(groupIndex / 3) * 72 + jitter * 0.25;
     }
     if (node.type === "mutation") {
       x += ((groupIndex % 3) - 1) * 54;
@@ -247,7 +257,7 @@ function fieldRelationsForNode(
   return {
     poems: distinctRelated.filter((item) => item.type === "poem"),
     dreams: distinctRelated.filter((item) => item.type === "dream"),
-    sourceEffects: distinctRelated.filter((item) => item.type === "source_effect"),
+    sourceEffects: distinctRelated.filter((item) => item.type === "source_effect" || item.type === "external_intake"),
     mutations: distinctRelated.filter((item) => item.type === "mutation"),
     suppressed: distinctRelated.filter((item) => item.suppressed),
     commonWords,
@@ -268,6 +278,14 @@ function NodeGlyph({ node }: { node: PositionedNode }) {
     return <path d={`M ${node.x + node.radius * 0.72} ${node.y - node.radius} A ${node.radius} ${node.radius} 0 1 0 ${node.x + node.radius * 0.72} ${node.y + node.radius} A ${node.radius * 0.72} ${node.radius * 0.72} 0 0 1 ${node.x + node.radius * 0.72} ${node.y - node.radius}`} />;
   }
   if (node.type === "source_effect") return <circle cx={node.x} cy={node.y} r={node.radius} />;
+  if (node.type === "external_intake") {
+    return (
+      <>
+        <circle className="memory-map-external-ring" cx={node.x} cy={node.y} r={node.radius + 5} />
+        <circle cx={node.x} cy={node.y} r={node.radius} />
+      </>
+    );
+  }
   if (node.type === "mutation") {
     const points = `${node.x},${node.y - node.radius} ${node.x + node.radius},${node.y} ${node.x},${node.y + node.radius} ${node.x - node.radius},${node.y}`;
     return <polygon points={points} />;
@@ -321,8 +339,13 @@ function DetailPanel({ node, fieldRelations, onSelect }: {
         <div><dt>çağırma</dt><dd>{node.recall_type === "none" ? "kayıt yok" : node.recall_type}</dd></div>
         <div><dt>durum</dt><dd>{node.status ?? typeLabels[node.type]}</dd></div>
         <div><dt>çağrılma sayısı</dt><dd>{node.times_recalled}</dd></div>
+        {node.memory_layer ? <div><dt>katman</dt><dd>{node.memory_layer}</dd></div> : null}
+        {typeof node.recallability === "number" ? <div><dt>çağrılabilirlik</dt><dd>{node.recallability.toFixed(2)}</dd></div> : null}
+        {typeof node.emotional_weight === "number" ? <div><dt>duygusal ağırlık</dt><dd>{node.emotional_weight.toFixed(2)}</dd></div> : null}
+        {node.source_ref ? <div><dt>source ref</dt><dd>{node.source_ref}</dd></div> : null}
       </dl>
       <div className="memory-map-flags" aria-label="Hafıza durumu">
+        {node.external_intake ? <span>dış temas hafızası</span> : null}
         {node.suppressed ? <span>bastırılmış</span> : null}
         {node.dream_return ? <span>rüyadan dönmüş</span> : null}
         {node.overexposed ? <span>fazla görünmüş</span> : null}
@@ -338,7 +361,7 @@ function DetailPanel({ node, fieldRelations, onSelect }: {
           <section><h4>bağlı rüyalar</h4><RelationNodeList nodes={fieldRelations.dreams} onSelect={onSelect} /></section>
           <section><h4>ortak imgeler</h4><p>{fieldRelations.commonImages.join(", ") || "kayıt yok"}</p></section>
           <section><h4>ortak kelimeler</h4><p>{fieldRelations.commonWords.join(", ") || "kayıt yok"}</p></section>
-          <section><h4>source effect</h4><RelationNodeList nodes={fieldRelations.sourceEffects} onSelect={onSelect} /></section>
+          <section><h4>dış etki / dış temas</h4><RelationNodeList nodes={fieldRelations.sourceEffects} onSelect={onSelect} /></section>
           <section><h4>mutation geçmişi</h4><RelationNodeList nodes={fieldRelations.mutations} onSelect={onSelect} /></section>
           <section><h4>suppressed bağlantılar</h4><RelationNodeList nodes={fieldRelations.suppressed} onSelect={onSelect} /></section>
         </div>
@@ -384,7 +407,7 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
     [archiveLayout, data.edges, fullFieldLayout.edges, viewMode, visibleNodeIds]
   );
   const renderedNodes = useMemo(() => {
-    const layerOrder: Record<VisualMemoryMapNodeType, number> = { memory_trace: 0, source_effect: 1, mutation: 2, dream: 3, poem: 4 };
+    const layerOrder: Record<VisualMemoryMapNodeType, number> = { memory_trace: 0, external_intake: 1, source_effect: 2, mutation: 3, dream: 4, poem: 5 };
     return [...nodes].sort((a, b) => layerOrder[a.type] - layerOrder[b.type]);
   }, [nodes]);
   const selectedFieldRelations = useMemo(
@@ -541,6 +564,7 @@ export function VisualMemoryMap({ nearData, fullData }: { nearData: VisualMemory
           <span><i className="is-indirect" />dolaylı çağrı</span>
           <span><i className="is-dream" />rüya dönüşü</span>
           <span><i className="is-source" />dış etki</span>
+          <span><i className="is-external-intake" />dış temas hafızası</span>
         </div>
       </header>
       <div className="memory-map-scope-bar">

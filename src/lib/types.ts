@@ -651,6 +651,10 @@ export type MemorySelection = {
 
 export type MemoryGraphEdgeKind = "linked" | "dream_return" | "indirect";
 
+export type ContactResidueKind = "external_intake" | "legacy" | "other";
+
+export type MemoryLayer = "core" | "daily" | "external" | "dream" | "visual";
+
 export type MemoryGraphNode = {
   id: string;
   date: string;
@@ -669,6 +673,9 @@ export type MemoryGraphNode = {
   last_dream_return_at: string | null;
   linked_traces: string[];
   recall_modes: Array<"poem" | "dream">;
+  external_intake: boolean;
+  contact_residue_kind: ContactResidueKind | null;
+  memory_layer: MemoryLayer;
 };
 
 export type MemoryGraphEdge = {
@@ -687,7 +694,7 @@ export type MemoryGraphData = {
   edges: MemoryGraphEdge[];
 };
 
-export type VisualMemoryMapNodeType = "poem" | "dream" | "memory_trace" | "source_effect" | "mutation";
+export type VisualMemoryMapNodeType = "poem" | "dream" | "memory_trace" | "source_effect" | "external_intake" | "mutation";
 
 export type VisualMemoryMapRecallType = "direct" | "indirect" | "dream_return" | "none";
 
@@ -704,12 +711,18 @@ export type VisualMemoryMapNode = {
   suppressed: boolean;
   dream_return: boolean;
   overexposed: boolean;
+  external_intake?: boolean;
+  contact_residue_kind?: ContactResidueKind | null;
+  memory_layer?: MemoryLayer | null;
+  source_ref?: string | null;
+  recallability?: number | null;
+  emotional_weight?: number | null;
   affinity_terms?: string[];
   related_poem_href: string | null;
   related_dream_href: string | null;
 };
 
-export type VisualMemoryMapEdgeKind = "recall" | "indirect" | "dream_return" | "linked" | "mutation" | "source_effect";
+export type VisualMemoryMapEdgeKind = "recall" | "indirect" | "dream_return" | "linked" | "mutation" | "source_effect" | "external_intake";
 
 export type VisualMemoryMapEdge = {
   id: string;
