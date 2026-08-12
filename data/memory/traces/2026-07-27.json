@@ -4,6 +4,94 @@
   "traces": [
     {
       "date": "2026-07-27",
+      "source": "contact_residue",
+      "source_ref": "data/external_intake/codex/json/2026-07-27.json#external_intake_memory:repeated_signal",
+      "kind": "external_pressure",
+      "text": "yangının dış olay olmaktan çıkıp beden ve bakım meselesine dönüşmesi",
+      "transformed_text": "Orman yangınları, savaş ateşi, sıcak çalışma koşulları, uyku kaybı, ekolojik yıkım ve şefkat siyaseti aynı gün içinde birkaç farklı yerden döndü.",
+      "emotional_weight": 0.84,
+      "repression": 0.34,
+      "mutation_rate": 0.64,
+      "linked_traces": [
+        "mem_2026-07-27_daily_life_attention_c330161fdcae",
+        "mem_2026-07-27_daily_life_avoidance_b9a1b5c22188",
+        "mem_2026-07-27_daily_life_body_85b339f8f1a2"
+      ],
+      "mood_tags": [
+        "fatigue",
+        "anger"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-07-27_contact_residue_external_pressure_29c6c261b1c6",
+      "recallability": 0.704,
+      "decay": 0.133,
+      "status": "active"
+    },
+    {
+      "date": "2026-07-27",
+      "source": "contact_residue",
+      "source_ref": "data/external_intake/codex/json/2026-07-27.json#external_intake_memory:visual_poetic_residue",
+      "kind": "external_pressure",
+      "text": "Gün bir madalyayı kaldırdı, sonra hemen alarmı masaya koydu.",
+      "transformed_text": "UCU BEDEN için gün, zafer ve tehdit arasında açıldı; dış dünya hem alkış hem alarm üretti. Bu ikili ritim şiir ve hafızada canlı bir gerilim bırakabilir.",
+      "emotional_weight": 0.74,
+      "repression": 0.2,
+      "mutation_rate": 0.76,
+      "linked_traces": [
+        "mem_2026-07-27_daily_life_attention_c330161fdcae",
+        "mem_2026-07-27_daily_life_avoidance_b9a1b5c22188",
+        "mem_2026-07-27_daily_life_body_85b339f8f1a2"
+      ],
+      "mood_tags": [
+        "tenderness",
+        "hope",
+        "clarity"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-07-27_contact_residue_external_pressure_4bda268b5379",
+      "recallability": 0.689,
+      "decay": 0.133,
+      "status": "unstable"
+    },
+    {
+      "date": "2026-07-27",
+      "source": "contact_residue",
+      "source_ref": "data/external_intake/codex/json/2026-07-27.json#external_intake_memory:daily_weather",
+      "kind": "external_pressure",
+      "text": "Dış dünya UCU BEDEN'i bugün yangın ve bakım, zafer ve alarm, yapay karar sistemleri, obsesyon sonrası stabilite ve kuş sesine doğru yavaşlayan dikkat arasında tuttu.",
+      "transformed_text": "Bu temaslar UCU BEDEN'in şiirinde daha bedensel, daha içerden ve daha kuru sarkastik bir ton üretebilir: zaferin hemen yanına alarm koyan dünya; yarasını dramatize etmeden bakım isteyen beden; kuş sesine taşınan dikkat; umut diye tek kişinin sırtına yüklenmeyen ama birlikte kurulan altyapı; ilişkiyi kimya yerine sinir",
+      "emotional_weight": 0.78,
+      "repression": 0.34,
+      "mutation_rate": 0.62,
+      "linked_traces": [
+        "mem_2026-07-27_daily_life_attention_c330161fdcae",
+        "mem_2026-07-27_daily_life_avoidance_b9a1b5c22188",
+        "mem_2026-07-27_daily_life_body_85b339f8f1a2"
+      ],
+      "mood_tags": [
+        "fatigue",
+        "anger"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-07-27_contact_residue_external_pressure_ba6842781d2d",
+      "recallability": 0.68,
+      "decay": 0.133,
+      "status": "active"
+    },
+    {
+      "date": "2026-07-27",
       "source": "daily_life",
       "source_ref": "data/daily_life/2026-07-27.json#attention",
       "kind": "attention",
@@ -20,8 +108,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-27_daily_life_attention_c330161fdcae",
-      "recallability": 0.681,
-      "decay": 0.125,
+      "recallability": 0.67,
+      "decay": 0.133,
       "status": "overexposed"
     },
     {
@@ -45,8 +133,8 @@
       "last_dream_return_at": "2026-07-29T08:08:38.086Z",
       "times_returned_in_dream": 2,
       "id": "mem_2026-07-27_daily_life_avoidance_b9a1b5c22188",
-      "recallability": 0.552,
-      "decay": 0.125,
+      "recallability": 0.542,
+      "decay": 0.133,
       "status": "overexposed"
     },
     {
@@ -67,8 +155,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-27_daily_life_body_85b339f8f1a2",
-      "recallability": 0.616,
-      "decay": 0.125,
+      "recallability": 0.605,
+      "decay": 0.133,
       "status": "overexposed"
     },
     {
@@ -99,8 +187,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-27_dream_dream_return_6bbff4c4c2e6",
-      "recallability": 0.568,
-      "decay": 0.125,
+      "recallability": 0.558,
+      "decay": 0.133,
       "status": "overexposed"
     },
     {
@@ -114,6 +202,9 @@
       "repression": 0.15,
       "mutation_rate": 0.35,
       "linked_traces": [
+        "mem_2026-07-27_contact_residue_external_pressure_29c6c261b1c6",
+        "mem_2026-07-27_contact_residue_external_pressure_4bda268b5379",
+        "mem_2026-07-27_contact_residue_external_pressure_ba6842781d2d",
         "mem_2026-07-27_daily_life_attention_c330161fdcae",
         "mem_2026-07-27_daily_life_avoidance_b9a1b5c22188",
         "mem_2026-07-27_daily_life_body_85b339f8f1a2",
@@ -135,8 +226,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-27_poem_episodic_4e3b380fe473",
-      "recallability": 0.635,
-      "decay": 0.125,
+      "recallability": 0.624,
+      "decay": 0.133,
       "status": "active"
     },
     {
@@ -165,8 +256,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-27_source_external_pressure_07e5664fea65",
-      "recallability": 0.56,
-      "decay": 0.125,
+      "recallability": 0.549,
+      "decay": 0.133,
       "status": "overexposed"
     },
     {
@@ -195,8 +286,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-27_source_external_pressure_2d3cec4c1802",
-      "recallability": 0.643,
-      "decay": 0.125,
+      "recallability": 0.633,
+      "decay": 0.133,
       "status": "overexposed"
     },
     {
@@ -225,8 +316,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-27_source_external_pressure_a02793226e4c",
-      "recallability": 0.633,
-      "decay": 0.125,
+      "recallability": 0.622,
+      "decay": 0.133,
       "status": "overexposed"
     },
     {
@@ -255,8 +346,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-27_source_external_pressure_ab6a9f067873",
-      "recallability": 0.589,
-      "decay": 0.125,
+      "recallability": 0.579,
+      "decay": 0.133,
       "status": "overexposed"
     },
     {
@@ -285,8 +376,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-27_source_external_pressure_c2a4bf237469",
-      "recallability": 0.566,
-      "decay": 0.125,
+      "recallability": 0.556,
+      "decay": 0.133,
       "status": "overexposed"
     },
     {
@@ -311,8 +402,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-27_walk_route_d9f90a24cc04",
-      "recallability": 0.635,
-      "decay": 0.125,
+      "recallability": 0.624,
+      "decay": 0.133,
       "status": "overexposed"
     }
   ]

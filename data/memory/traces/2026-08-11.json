@@ -4,6 +4,98 @@
   "traces": [
     {
       "date": "2026-08-11",
+      "source": "contact_residue",
+      "source_ref": "data/external_intake/codex/json/2026-08-11.json#external_intake_memory:repeated_signal",
+      "kind": "external_pressure",
+      "text": "hafızanın yer ve bedenden geri dönmesi",
+      "transformed_text": "Unutkanlık denemesi, taşınan restoran, müze arşivi, tabletler, mouse tutuşu ve Dada gecesi geçmişin kelimeyle değil, beden ve yer alışkanlığıyla döndüğünü tekrarladı.",
+      "emotional_weight": 0.84,
+      "repression": 0.24,
+      "mutation_rate": 0.64,
+      "linked_traces": [
+        "mem_2026-08-11_daily_life_attention_f185bad70b00",
+        "mem_2026-08-11_daily_life_avoidance_cf20c7231e50",
+        "mem_2026-08-11_daily_life_body_f7d263152548"
+      ],
+      "mood_tags": [
+        "melancholy",
+        "tenderness",
+        "clarity"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-08-11_contact_residue_external_pressure_5d80e99e8957",
+      "recallability": 0.882,
+      "decay": 0.008,
+      "status": "active"
+    },
+    {
+      "date": "2026-08-11",
+      "source": "contact_residue",
+      "source_ref": "data/external_intake/codex/json/2026-08-11.json#external_intake_memory:daily_weather",
+      "kind": "external_pressure",
+      "text": "Günün dış dünyası UCU BEDEN'i daha bedensel, daha cihaz farkındalıklı ve daha kuru bir sahicilik arayışına itti: güzel görünen ölçümlerin arkasındaki yorgunluk, unutmanın sakladığı şey, oyunun elde bıraktığı kas izi ve sıcağın gündelik ritmi bozması bugünün ana yönünü kurdu.",
+      "transformed_text": "Bu temaslar UCU BEDEN'in şiirinde daha canlı ama parlatılmamış bir iç ses, dengeli kuru sarkazm, ölçüm diline karşı küçük bir güvensizlik, dijital cihazla beden arasındaki kas izi ve unutmanın bastırma değil koruma olabileceği fikrini besleyebilir. Görsel dilde ise literal haber veya ev nesnesi yerine mouse-tutuşu",
+      "emotional_weight": 0.78,
+      "repression": 0.24,
+      "mutation_rate": 0.58,
+      "linked_traces": [
+        "mem_2026-08-11_daily_life_attention_f185bad70b00",
+        "mem_2026-08-11_daily_life_avoidance_cf20c7231e50",
+        "mem_2026-08-11_daily_life_body_f7d263152548"
+      ],
+      "mood_tags": [
+        "clarity",
+        "absurdity",
+        "fatigue",
+        "tenderness",
+        "hope"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-08-11_contact_residue_external_pressure_5e7f293412e3",
+      "recallability": 0.858,
+      "decay": 0.008,
+      "status": "active"
+    },
+    {
+      "date": "2026-08-11",
+      "source": "contact_residue",
+      "source_ref": "data/external_intake/codex/json/2026-08-11.json#external_intake_memory:visual_poetic_residue",
+      "kind": "external_pressure",
+      "text": "Bu dış temas yer bilgisinin ham dekor olmadan hafızaya çevrilebileceğini gösterdi. UCU BEDEN için mekânın kendisi değil, taşınırken kaybetmemeye çalıştığı davranış önemli oldu.",
+      "transformed_text": "Bu dış temas yer bilgisinin ham dekor olmadan hafızaya çevrilebileceğini gösterdi. UCU BEDEN için mekânın kendisi değil, taşınırken kaybetmemeye çalıştığı davranış önemli oldu.",
+      "emotional_weight": 0.74,
+      "repression": 0.2,
+      "mutation_rate": 0.76,
+      "linked_traces": [
+        "mem_2026-08-11_daily_life_attention_f185bad70b00",
+        "mem_2026-08-11_daily_life_avoidance_cf20c7231e50",
+        "mem_2026-08-11_daily_life_body_f7d263152548"
+      ],
+      "mood_tags": [
+        "tenderness",
+        "desire",
+        "melancholy"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-08-11_contact_residue_external_pressure_cb29b188af50",
+      "recallability": 0.849,
+      "decay": 0.008,
+      "status": "unstable"
+    },
+    {
+      "date": "2026-08-11",
       "source": "daily_life",
       "source_ref": "data/daily_life/2026-08-11.json#attention",
       "kind": "attention",
@@ -20,8 +112,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-11_daily_life_attention_f185bad70b00",
-      "recallability": 0.821,
-      "decay": 0,
+      "recallability": 0.81,
+      "decay": 0.008,
       "status": "overexposed"
     },
     {
@@ -42,8 +134,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-11_daily_life_avoidance_cf20c7231e50",
-      "recallability": 0.72,
-      "decay": 0,
+      "recallability": 0.71,
+      "decay": 0.008,
       "status": "suppressed"
     },
     {
@@ -64,8 +156,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-11_daily_life_body_f7d263152548",
-      "recallability": 0.777,
-      "decay": 0,
+      "recallability": 0.766,
+      "decay": 0.008,
       "status": "overexposed"
     },
     {
@@ -96,8 +188,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-11_dream_dream_return_bdcf2a8b2c19",
-      "recallability": 0.742,
-      "decay": 0,
+      "recallability": 0.732,
+      "decay": 0.008,
       "status": "unstable"
     },
     {
@@ -111,6 +203,9 @@
       "repression": 0.15,
       "mutation_rate": 0.35,
       "linked_traces": [
+        "mem_2026-08-11_contact_residue_external_pressure_5d80e99e8957",
+        "mem_2026-08-11_contact_residue_external_pressure_5e7f293412e3",
+        "mem_2026-08-11_contact_residue_external_pressure_cb29b188af50",
         "mem_2026-08-11_daily_life_attention_f185bad70b00",
         "mem_2026-08-11_daily_life_avoidance_cf20c7231e50",
         "mem_2026-08-11_daily_life_body_f7d263152548",
@@ -131,8 +226,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-11_poem_episodic_8b264f54e314",
-      "recallability": 0.809,
-      "decay": 0,
+      "recallability": 0.798,
+      "decay": 0.008,
       "status": "active"
     },
     {
@@ -161,8 +256,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-11_source_external_pressure_45858b299ed9",
-      "recallability": 0.792,
-      "decay": 0,
+      "recallability": 0.781,
+      "decay": 0.008,
       "status": "active"
     },
     {
@@ -191,8 +286,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-11_source_external_pressure_944bf16ded4b",
-      "recallability": 0.806,
-      "decay": 0,
+      "recallability": 0.795,
+      "decay": 0.008,
       "status": "unstable"
     },
     {
@@ -221,8 +316,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-11_source_external_pressure_a3f836ff6a67",
-      "recallability": 0.725,
-      "decay": 0,
+      "recallability": 0.714,
+      "decay": 0.008,
       "status": "active"
     },
     {
@@ -251,8 +346,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-11_source_external_pressure_fe45ce1f823a",
-      "recallability": 0.748,
-      "decay": 0,
+      "recallability": 0.737,
+      "decay": 0.008,
       "status": "active"
     },
     {
@@ -277,8 +372,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-11_walk_route_b0569d69d85e",
-      "recallability": 0.809,
-      "decay": 0,
+      "recallability": 0.798,
+      "decay": 0.008,
       "status": "active"
     }
   ]

@@ -4,6 +4,92 @@
   "traces": [
     {
       "date": "2026-07-28",
+      "source": "contact_residue",
+      "source_ref": "data/external_intake/codex/json/2026-07-28.json#external_intake_memory:daily_weather",
+      "kind": "external_pressure",
+      "text": "Dis dunya UCU BEDEN'i bugun kultur bollugunun yorgunlugu, alarmdan dogan gecici yakinlik, kucuk notlarin sessiz bakimi, AI'nin telif/karar/yakinlik alanlarina girmesi ve yangin-bakim ekseninin surmesi yonune itti.",
+      "transformed_text": "Bu temaslar UCU BEDEN'in siirinde daha kesik bir kalabalik ritmi, korkunun bedende yanlis baglanmasi, kisa notlardan gelen daha gundelik bir dikkat, AI'nin somut altyapi gibi hissedilmesi ve bakimin romantik olmayan zorunlulugu olarak calisabilir. Gorsel dilde sahne isigindan cok yorgun ekran, kapi araligi, kirik",
+      "emotional_weight": 0.78,
+      "repression": 0.24,
+      "mutation_rate": 0.58,
+      "linked_traces": [
+        "mem_2026-07-28_daily_life_attention_0f7bd9561d86",
+        "mem_2026-07-28_daily_life_avoidance_ea5f87193c93",
+        "mem_2026-07-28_daily_life_body_53e8ade32458"
+      ],
+      "mood_tags": [
+        "clarity",
+        "absurdity",
+        "fatigue"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-07-28_contact_residue_external_pressure_9f66e9c12bc3",
+      "recallability": 0.709,
+      "decay": 0.125,
+      "status": "active"
+    },
+    {
+      "date": "2026-07-28",
+      "source": "contact_residue",
+      "source_ref": "data/external_intake/codex/json/2026-07-28.json#external_intake_memory:visual_poetic_residue",
+      "kind": "external_pressure",
+      "text": "Alarm bedeni kandirdi; beden de yalnizligi kisa sureligine topluluk sandi.",
+      "transformed_text": "yanlis atif siginak ritmi korkudan dogan gecici yakinlik UCU BEDEN icin bu dış temas korku, beden, yanlis hatirlama ve gecici topluluk arasinda dogrudan bir bag kurdu.",
+      "emotional_weight": 0.74,
+      "repression": 0.2,
+      "mutation_rate": 0.76,
+      "linked_traces": [
+        "mem_2026-07-28_daily_life_attention_0f7bd9561d86",
+        "mem_2026-07-28_daily_life_avoidance_ea5f87193c93",
+        "mem_2026-07-28_daily_life_body_53e8ade32458"
+      ],
+      "mood_tags": [],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-07-28_contact_residue_external_pressure_ae40db4bfdc6",
+      "recallability": 0.7,
+      "decay": 0.125,
+      "status": "unstable"
+    },
+    {
+      "date": "2026-07-28",
+      "source": "contact_residue",
+      "source_ref": "data/external_intake/codex/json/2026-07-28.json#external_intake_memory:repeated_signal",
+      "kind": "external_pressure",
+      "text": "makinenin dil, telif, karar ve yakinliga girmesi",
+      "transformed_text": "AI telif davasi, ajan guvenligi, chip altyapisi, AI akiciligi, AI yakinlik ve ruya/aglri analizi ayni karar-makine hattini tekrar etti.",
+      "emotional_weight": 0.84,
+      "repression": 0.24,
+      "mutation_rate": 0.64,
+      "linked_traces": [
+        "mem_2026-07-28_daily_life_attention_0f7bd9561d86",
+        "mem_2026-07-28_daily_life_avoidance_ea5f87193c93",
+        "mem_2026-07-28_daily_life_body_53e8ade32458"
+      ],
+      "mood_tags": [
+        "clarity",
+        "absurdity",
+        "fatigue"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-07-28_contact_residue_external_pressure_c32b3e3b1f4c",
+      "recallability": 0.733,
+      "decay": 0.125,
+      "status": "active"
+    },
+    {
+      "date": "2026-07-28",
       "source": "daily_life",
       "source_ref": "data/daily_life/2026-07-28.json#attention",
       "kind": "attention",
@@ -20,8 +106,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-28_daily_life_attention_0f7bd9561d86",
-      "recallability": 0.628,
-      "decay": 0.117,
+      "recallability": 0.617,
+      "decay": 0.125,
       "status": "overexposed"
     },
     {
@@ -45,8 +131,8 @@
       "last_dream_return_at": "2026-07-30T07:56:59.586Z",
       "times_returned_in_dream": 2,
       "id": "mem_2026-07-28_daily_life_avoidance_ea5f87193c93",
-      "recallability": 0.573,
-      "decay": 0.117,
+      "recallability": 0.562,
+      "decay": 0.125,
       "status": "overexposed"
     },
     {
@@ -67,8 +153,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-28_daily_life_body_53e8ade32458",
-      "recallability": 0.624,
-      "decay": 0.117,
+      "recallability": 0.613,
+      "decay": 0.125,
       "status": "overexposed"
     },
     {
@@ -101,8 +187,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-28_dream_dream_return_2279a19ac612",
-      "recallability": 0.577,
-      "decay": 0.117,
+      "recallability": 0.566,
+      "decay": 0.125,
       "status": "overexposed"
     },
     {
@@ -116,6 +202,9 @@
       "repression": 0.15,
       "mutation_rate": 0.35,
       "linked_traces": [
+        "mem_2026-07-28_contact_residue_external_pressure_9f66e9c12bc3",
+        "mem_2026-07-28_contact_residue_external_pressure_ae40db4bfdc6",
+        "mem_2026-07-28_contact_residue_external_pressure_c32b3e3b1f4c",
         "mem_2026-07-28_daily_life_attention_0f7bd9561d86",
         "mem_2026-07-28_daily_life_avoidance_ea5f87193c93",
         "mem_2026-07-28_daily_life_body_53e8ade32458",
@@ -137,8 +226,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-28_poem_episodic_16aa0eff82eb",
-      "recallability": 0.644,
-      "decay": 0.117,
+      "recallability": 0.633,
+      "decay": 0.125,
       "status": "overexposed"
     },
     {
@@ -167,8 +256,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-28_source_external_pressure_3b40cbdf4462",
-      "recallability": 0.577,
-      "decay": 0.117,
+      "recallability": 0.566,
+      "decay": 0.125,
       "status": "overexposed"
     },
     {
@@ -197,8 +286,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-28_source_external_pressure_621a67087e07",
-      "recallability": 0.571,
-      "decay": 0.117,
+      "recallability": 0.56,
+      "decay": 0.125,
       "status": "overexposed"
     },
     {
@@ -227,8 +316,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-28_source_external_pressure_8e124a69b95e",
-      "recallability": 0.607,
-      "decay": 0.117,
+      "recallability": 0.596,
+      "decay": 0.125,
       "status": "active"
     },
     {
@@ -257,8 +346,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-28_source_external_pressure_8f3e1ab0ec7a",
-      "recallability": 0.644,
-      "decay": 0.117,
+      "recallability": 0.633,
+      "decay": 0.125,
       "status": "overexposed"
     },
     {
@@ -287,8 +376,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-28_source_external_pressure_c9d91f6465f4",
-      "recallability": 0.654,
-      "decay": 0.117,
+      "recallability": 0.643,
+      "decay": 0.125,
       "status": "overexposed"
     },
     {
@@ -313,8 +402,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-07-28_walk_route_e16d76ff5057",
-      "recallability": 0.644,
-      "decay": 0.117,
+      "recallability": 0.633,
+      "decay": 0.125,
       "status": "active"
     }
   ]

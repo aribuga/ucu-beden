@@ -1,6 +1,12 @@
 import { createHash } from "node:crypto";
 
 import {
+  codexExternalIntakeDrafts,
+  externalIntakeUnsafePublicTerms,
+  listCodexExternalIntakeRecords,
+  unsafeExternalIntakeTextMatches
+} from "./codexExternalIntakeMemory";
+import {
   listDreams,
   listFiles,
   listGeneratedPoems,
@@ -171,11 +177,16 @@ function unsafeFragmentMatches(fragment: string, unsafeTerms: string[]): string[
   ]);
 }
 
+function publicTextUnsafeMatches(fragment: string, sourceUnsafeTerms: string[], externalUnsafeTerms: string[]): string[] {
+  return distinct([...unsafeFragmentMatches(fragment, sourceUnsafeTerms), ...unsafeExternalIntakeTextMatches(fragment, externalUnsafeTerms)]);
+}
+
 export async function validateMemoryPromptFragments(fragments: string[], rawSources?: SourceBundle[]): Promise<MemoryPromptValidation> {
-  const sources = rawSources ?? (await listSources());
+  const [sources, externalRecords] = await Promise.all([rawSources ? Promise.resolve(rawSources) : listSources(), listCodexExternalIntakeRecords()]);
   const unsafeTerms = promptUnsafeTerms(sources);
+  const externalUnsafeTerms = externalIntakeUnsafePublicTerms(externalRecords);
   const unsafeFragments = fragments
-    .map((fragment) => ({ fragment, matches: unsafeFragmentMatches(fragment, unsafeTerms) }))
+    .map((fragment) => ({ fragment, matches: publicTextUnsafeMatches(fragment, unsafeTerms, externalUnsafeTerms) }))
     .filter((item) => item.matches.length > 0);
   const unsafeSet = new Set(unsafeFragments.map((item) => item.fragment));
   return {
@@ -186,9 +197,10 @@ export async function validateMemoryPromptFragments(fragments: string[], rawSour
 }
 
 export async function filterPublicSafeMemoryTraces(traces: MemoryTrace[], rawSources?: SourceBundle[]): Promise<MemoryTrace[]> {
-  const sources = rawSources ?? (await listSources());
+  const [sources, externalRecords] = await Promise.all([rawSources ? Promise.resolve(rawSources) : listSources(), listCodexExternalIntakeRecords()]);
   const unsafeTerms = promptUnsafeTerms(sources);
-  return traces.filter((trace) => unsafeFragmentMatches(`${trace.text} ${trace.transformed_text}`, unsafeTerms).length === 0);
+  const externalUnsafeTerms = externalIntakeUnsafePublicTerms(externalRecords);
+  return traces.filter((trace) => publicTextUnsafeMatches(`${trace.text} ${trace.transformed_text}`, unsafeTerms, externalUnsafeTerms).length === 0);
 }
 
 function stableHash(value: string): string {
@@ -425,6 +437,10 @@ function legacyResidueDraft(poem: DailyPoem, poemTracesByDate: Map<string, Memor
   });
 }
 
+function isCodexExternalIntakeTrace(trace: Pick<MemoryTrace, "source" | "kind" | "source_ref">): boolean {
+  return trace.source === "contact_residue" && trace.kind === "external_pressure" && trace.source_ref.startsWith("data/external_intake/codex/json/");
+}
+
 function linkDailyTraces(traces: MemoryTrace[], dreams: Awaited<ReturnType<typeof listDreams>>): MemoryTrace[] {
   const byDate = new Map<string, MemoryTrace[]>();
   for (const trace of traces) byDate.set(trace.date, [...(byDate.get(trace.date) ?? []), trace]);
@@ -433,8 +449,8 @@ function linkDailyTraces(traces: MemoryTrace[], dreams: Awaited<ReturnType<typeo
     const sameDay = byDate.get(trace.date) ?? [];
     const linked =
       trace.source === "poem"
-        ? sameDay.filter((candidate) => ["daily_life", "walk", "source"].includes(candidate.source)).map((candidate) => candidate.id)
-        : trace.source === "source"
+        ? sameDay.filter((candidate) => ["daily_life", "walk", "source"].includes(candidate.source) || isCodexExternalIntakeTrace(candidate)).map((candidate) => candidate.id)
+        : trace.source === "source" || isCodexExternalIntakeTrace(trace)
           ? sameDay.filter((candidate) => candidate.source === "daily_life").map((candidate) => candidate.id)
           : trace.source === "dream"
             ? (byDate.get(dreamSourceDates.get(trace.date) ?? trace.date) ?? []).filter((candidate) => candidate.source === "poem" || candidate.kind === "avoidance").map((candidate) => candidate.id)
@@ -555,11 +571,11 @@ function average(traces: MemoryTrace[], value: (trace: MemoryTrace) => number): 
   return traces.length ? traces.reduce((sum, trace) => sum + value(trace), 0) / traces.length : 0;
 }
 
-function buildReport(traces: MemoryTrace[], builtThrough: string | null, sources: SourceBundle[]): MemoryReport {
+function buildReport(traces: MemoryTrace[], builtThrough: string | null, sources: SourceBundle[], externalUnsafeTerms: string[] = []): MemoryReport {
   const unsafeTerms = promptUnsafeTerms(sources);
-  const publicTraces = traces.filter((trace) => unsafeFragmentMatches(`${trace.text} ${trace.transformed_text}`, unsafeTerms).length === 0);
+  const publicTraces = traces.filter((trace) => publicTextUnsafeMatches(`${trace.text} ${trace.transformed_text}`, unsafeTerms, externalUnsafeTerms).length === 0);
   const suppressed = publicTraces.filter((trace) => trace.status === "suppressed");
-  const external = publicTraces.filter((trace) => trace.source === "source");
+  const external = publicTraces.filter((trace) => trace.source === "source" || isCodexExternalIntakeTrace(trace));
   const dreams = publicTraces.filter((trace) => trace.kind === "dream_return" || trace.times_returned_in_dream > 0);
   const indirect = publicTraces.filter((trace) => trace.status === "overexposed");
   const recalled = publicTraces.filter((trace) => trace.recallability >= 0.65 && trace.status !== "overexposed");
@@ -590,7 +606,14 @@ async function readDailyLifeRecords(): Promise<DailyLifeRecord[]> {
 }
 
 export async function buildMemoryArchive(): Promise<MemoryArchive> {
-  const [poems, dreams, dailyLife, sources, sourceDigests] = await Promise.all([listGeneratedPoems(), listDreams(), readDailyLifeRecords(), listSources(), listSourceDigests()]);
+  const [poems, dreams, dailyLife, sources, sourceDigests, externalIntakeRecords] = await Promise.all([
+    listGeneratedPoems(),
+    listDreams(),
+    readDailyLifeRecords(),
+    listSources(),
+    listSourceDigests(),
+    listCodexExternalIntakeRecords()
+  ]);
   const poemByDate = new Map(poems.map((poem) => [poem.date, poem]));
   const dailyByDate = new Map(dailyLife.map((record) => [record.date, record]));
   const drafts: TraceDraft[] = [];
@@ -603,6 +626,7 @@ export async function buildMemoryArchive(): Promise<MemoryArchive> {
   for (const record of dailyLife) drafts.push(...dailyLifeDrafts(record));
   const digestByDate = new Map(sourceDigests.map((digest) => [digest.date, digest]));
   for (const source of sources) drafts.push(...sourceDrafts(source, dailyByDate.get(source.date), sources.filter((item) => item.date < source.date), digestByDate.get(source.date)));
+  drafts.push(...codexExternalIntakeDrafts(externalIntakeRecords));
   for (const dream of dreams) {
     const item = dreamDraft(dream, poemByDate.get(dream.source_date));
     if (item) drafts.push(item);
@@ -615,11 +639,11 @@ export async function buildMemoryArchive(): Promise<MemoryArchive> {
   }
   traces = linkDailyTraces(traces, dreams);
   traces = applyRecallMetadata(traces, poems, dreams);
-  const dates = distinct([...poems.map((poem) => poem.date), ...dreams.map((dream) => dream.date), ...dailyLife.map((record) => record.date), ...sources.map((source) => source.date)]).sort();
+  const dates = distinct([...poems.map((poem) => poem.date), ...dreams.map((dream) => dream.date), ...dailyLife.map((record) => record.date), ...sources.map((source) => source.date), ...externalIntakeRecords.map((record) => record.date)]).sort();
   const builtThrough = dates.at(-1) ?? null;
   traces = finalizeTraces(traces, builtThrough);
   const traceFiles = dates.map((date): MemoryTraceFile => ({ version: 1, date, traces: traces.filter((trace) => trace.date === date) }));
-  return { traces, trace_files: traceFiles, index: buildIndex(traces, builtThrough), report: buildReport(traces, builtThrough, sources) };
+  return { traces, trace_files: traceFiles, index: buildIndex(traces, builtThrough), report: buildReport(traces, builtThrough, sources, externalIntakeUnsafePublicTerms(externalIntakeRecords)) };
 }
 
 export function previewMemoryCycleEffects(params: {
@@ -717,12 +741,17 @@ export async function validateMemoryArchive(archive: MemoryArchive, rawSources?:
   const nonDeterministicIds = archive.traces.filter((trace) => deterministicTraceId(trace) !== trace.id).map((trace) => trace.id).sort();
   const invalidSourceRefs: string[] = [];
   for (const trace of archive.traces) if (!(await pathExists(sourcePath(trace.source_ref)))) invalidSourceRefs.push(trace.source_ref);
-  const sourceBundles = rawSources ?? (await listSources());
+  const [sourceBundles, externalRecords] = await Promise.all([rawSources ? Promise.resolve(rawSources) : listSources(), listCodexExternalIntakeRecords()]);
+  const externalUnsafeTerms = externalIntakeUnsafePublicTerms(externalRecords);
   const sourceNames = distinct(sourceBundles.flatMap((source) => source.rss?.sources.map((item) => item.name) ?? [])).filter((name) => name.length >= 4);
   const unsafePublicText = archive.traces
     .filter((trace) => {
       const publicText = `${trace.text} ${trace.transformed_text}`;
-      return publicUnsafePattern.test(publicText) || (trace.source === "source" && sourceNames.some((name) => publicText.toLocaleLowerCase("tr").includes(name.toLocaleLowerCase("tr"))));
+      return (
+        publicTextUnsafeMatches(publicText, [], externalUnsafeTerms).length > 0 ||
+        publicUnsafePattern.test(publicText) ||
+        (trace.source === "source" && sourceNames.some((name) => publicText.toLocaleLowerCase("tr").includes(name.toLocaleLowerCase("tr"))))
+      );
     })
     .map((trace) => trace.id)
     .sort();
@@ -784,9 +813,14 @@ export async function selectMemoryForGeneration(params: {
   traces?: MemoryTrace[];
   sources?: SourceBundle[];
 }): Promise<MemorySelection> {
-  const [traces, sources] = await Promise.all([params.traces ? Promise.resolve(params.traces) : listMemoryTraces(), params.sources ? Promise.resolve(params.sources) : listSources()]);
+  const [traces, sources, externalRecords] = await Promise.all([
+    params.traces ? Promise.resolve(params.traces) : listMemoryTraces(),
+    params.sources ? Promise.resolve(params.sources) : listSources(),
+    listCodexExternalIntakeRecords()
+  ]);
   const unsafeTerms = promptUnsafeTerms(sources);
-  const safeForPrompt = (trace: MemoryTrace) => unsafeFragmentMatches(trace.transformed_text, unsafeTerms).length === 0;
+  const externalUnsafeTerms = externalIntakeUnsafePublicTerms(externalRecords);
+  const safeForPrompt = (trace: MemoryTrace) => publicTextUnsafeMatches(trace.transformed_text, unsafeTerms, externalUnsafeTerms).length === 0;
   const limit = params.limit ?? (params.mode === "dream" ? 10 : 8);
   const eligible = traces.filter((trace) => trace.date < params.date);
   const ranked = eligible
