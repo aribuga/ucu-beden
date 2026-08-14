@@ -1,24 +1,23 @@
 {
-  "date": "2026-08-12",
+  "date": "2026-08-14",
   "timezone": "Europe/Istanbul",
-  "completed_at": "2026-08-12T07:40:09+03:00",
-  "automation_id": "ucu-beden-daily-codex-external-intake",
-  "output_json": "data/external_intake/codex/json/2026-08-12.json",
-  "output_markdown": "data/external_intake/codex/markdown/2026-08-12.md",
-  "output_run_log": "data/external_intake/codex/runs/2026-08-12.log.md",
-  "counts": {
-    "scanned_mail_count": 15,
-    "full_body_read_count": 15,
-    "snippet_only_count": 0,
-    "subject_only_count": 0,
-    "multipart_digest_count": 10,
-    "digest_items_count": 42,
-    "curated_rss_recent_item_count": 0
+  "completed_at": "2026-08-14T07:09:03+03:00",
+  "source": "codex_automation",
+  "public_safe": true,
+  "scanned_mail_count": 9,
+  "full_body_read_count": 9,
+  "snippet_only_count": 0,
+  "subject_only_count": 0,
+  "multipart_digest_count": 5,
+  "digest_items_count": 21,
+  "curated_rss_sources_checked": 2,
+  "curated_rss_recent_item_count": 0,
+  "outputs": {
+    "json": "data/external_intake/codex/json/2026-08-14.json",
+    "markdown": "data/external_intake/codex/markdown/2026-08-14.md",
+    "run_log": "data/external_intake/codex/runs/2026-08-14.log.md"
   },
-  "safety": {
-    "public_safe": true,
-    "raw_urls_in_public": false,
-    "email_addresses_in_public": false,
-    "private_inventory_not_staged": true
-  }
+  "private_inventory_path": "data/external_intake/codex_raw/inventory/2026-08-14.json",
+  "git_pull_ff_only": true,
+  "gmail_state_changed": false
 }
