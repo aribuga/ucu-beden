@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "built_through": "2026-08-15",
-  "trace_count": 865,
+  "built_through": "2026-08-16",
+  "trace_count": 875,
   "climate": {
     "pressure": {
       "value": 0.572,
@@ -19,15 +19,13 @@
         "mem_2026-06-07_contact_residue_legacy_inferred_1a00637be758",
         "mem_2026-06-07_daily_life_avoidance_7339d4b54db1"
       ],
-      "summary": "pressure: 182 iz, ortalama 57."
+      "summary": "pressure: 184 iz, ortalama 57."
     },
     "clarity": {
-      "value": 0.393,
+      "value": 0.388,
       "trace_ids": [
         "mem_2026-07-26_contact_residue_external_pressure_acd32f840ae1",
-        "mem_2026-07-26_contact_residue_external_pressure_bd0672454bbd",
         "mem_2026-07-27_contact_residue_external_pressure_29c6c261b1c6",
-        "mem_2026-07-27_contact_residue_external_pressure_4bda268b5379",
         "mem_2026-07-28_contact_residue_external_pressure_9f66e9c12bc3",
         "mem_2026-07-28_contact_residue_external_pressure_ae40db4bfdc6",
         "mem_2026-07-28_contact_residue_external_pressure_c32b3e3b1f4c",
@@ -35,9 +33,11 @@
         "mem_2026-07-30_contact_residue_external_pressure_c737322d02a8",
         "mem_2026-07-30_contact_residue_external_pressure_eed13c36f1b8",
         "mem_2026-07-31_contact_residue_external_pressure_11964d5f8fc7",
-        "mem_2026-07-31_contact_residue_external_pressure_e4237f825016"
+        "mem_2026-07-31_contact_residue_external_pressure_e4237f825016",
+        "mem_2026-08-01_contact_residue_external_pressure_511fad0f858c",
+        "mem_2026-08-01_contact_residue_external_pressure_757027e328c4"
       ],
-      "summary": "clarity: 115 iz, ortalama 39."
+      "summary": "clarity: 113 iz, ortalama 39."
     },
     "leakage": {
       "value": 0.484,
@@ -55,10 +55,10 @@
         "mem_2026-06-06_source_external_pressure_15f46c7532d1",
         "mem_2026-06-06_source_external_pressure_1ed4c2ea18fb"
       ],
-      "summary": "leakage: 413 iz, ortalama 48."
+      "summary": "leakage: 418 iz, ortalama 48."
     },
     "decay": {
-      "value": 0.292,
+      "value": 0.297,
       "trace_ids": [
         "mem_2026-06-04_daily_life_attention_379f81945234",
         "mem_2026-06-04_daily_life_avoidance_051abe89a021",
@@ -73,23 +73,22 @@
         "mem_2026-06-04_walk_route_2d9934c80a2b",
         "mem_2026-06-05_contact_residue_legacy_inferred_03866585788a"
       ],
-      "summary": "decay: 215 iz, ortalama 29."
+      "summary": "decay: 226 iz, ortalama 30."
     },
     "repression": {
       "value": 0.276,
       "trace_ids": [
         "mem_2026-08-14_daily_life_avoidance_e43c885cb417",
-        "mem_2026-08-15_daily_life_avoidance_cd384172cdbd"
+        "mem_2026-08-15_daily_life_avoidance_cd384172cdbd",
+        "mem_2026-08-16_daily_life_avoidance_ffe05a287285"
       ],
-      "summary": "repression: 2 iz, ortalama 28."
+      "summary": "repression: 3 iz, ortalama 28."
     },
     "recallability": {
-      "value": 0.532,
+      "value": 0.53,
       "trace_ids": [
         "mem_2026-07-26_contact_residue_external_pressure_acd32f840ae1",
-        "mem_2026-07-26_contact_residue_external_pressure_bd0672454bbd",
         "mem_2026-07-27_contact_residue_external_pressure_29c6c261b1c6",
-        "mem_2026-07-27_contact_residue_external_pressure_4bda268b5379",
         "mem_2026-07-28_contact_residue_external_pressure_9f66e9c12bc3",
         "mem_2026-07-28_contact_residue_external_pressure_ae40db4bfdc6",
         "mem_2026-07-28_contact_residue_external_pressure_c32b3e3b1f4c",
@@ -97,9 +96,11 @@
         "mem_2026-07-30_contact_residue_external_pressure_c737322d02a8",
         "mem_2026-07-30_contact_residue_external_pressure_eed13c36f1b8",
         "mem_2026-07-31_contact_residue_external_pressure_11964d5f8fc7",
-        "mem_2026-07-31_contact_residue_external_pressure_e4237f825016"
+        "mem_2026-07-31_contact_residue_external_pressure_e4237f825016",
+        "mem_2026-08-01_contact_residue_external_pressure_511fad0f858c",
+        "mem_2026-08-01_contact_residue_external_pressure_757027e328c4"
       ],
-      "summary": "recallability: 115 iz, ortalama 53."
+      "summary": "recallability: 113 iz, ortalama 53."
     }
   },
   "easily_recalled": [
@@ -111,28 +112,29 @@
     "mem_2026-08-11_contact_residue_external_pressure_5d80e99e8957",
     "mem_2026-08-14_contact_residue_external_pressure_1675f8a45d20",
     "mem_2026-08-14_contact_residue_external_pressure_c12775f20bb2",
+    "mem_2026-08-16_daily_life_attention_fc4ed22389b2",
     "mem_2026-08-10_contact_residue_external_pressure_78dc25b0e1c5",
     "mem_2026-08-11_contact_residue_external_pressure_5e7f293412e3",
-    "mem_2026-08-12_contact_residue_external_pressure_891fc1e1a117",
-    "mem_2026-08-11_contact_residue_external_pressure_cb29b188af50"
+    "mem_2026-08-16_poem_episodic_fb3865a5414a"
   ],
   "suppressed": [
     "mem_2026-08-14_daily_life_avoidance_e43c885cb417",
-    "mem_2026-08-15_daily_life_avoidance_cd384172cdbd"
+    "mem_2026-08-15_daily_life_avoidance_cd384172cdbd",
+    "mem_2026-08-16_daily_life_avoidance_ffe05a287285"
   ],
   "external_leakage": [
-    "mem_2026-08-14_source_external_pressure_6db421d3688f",
-    "mem_2026-08-14_source_external_pressure_be0840172ff2",
-    "mem_2026-08-14_source_external_pressure_e51087a51620",
-    "mem_2026-08-14_source_external_pressure_f508f5ebc576",
-    "mem_2026-08-15_contact_residue_external_pressure_0c02db78f8a9",
     "mem_2026-08-15_contact_residue_external_pressure_617bf5b60e8d",
     "mem_2026-08-15_contact_residue_external_pressure_831159848a66",
     "mem_2026-08-15_source_external_pressure_792175230b1b",
     "mem_2026-08-15_source_external_pressure_98044cbc42f6",
     "mem_2026-08-15_source_external_pressure_aa8a54ba413d",
     "mem_2026-08-15_source_external_pressure_cc64111ac982",
-    "mem_2026-08-15_source_external_pressure_e2c7e945d6f9"
+    "mem_2026-08-15_source_external_pressure_e2c7e945d6f9",
+    "mem_2026-08-16_source_external_pressure_00553376798e",
+    "mem_2026-08-16_source_external_pressure_49b465f1fb52",
+    "mem_2026-08-16_source_external_pressure_573a2f9f78ee",
+    "mem_2026-08-16_source_external_pressure_97bc98d56392",
+    "mem_2026-08-16_source_external_pressure_ab50cbbf92b0"
   ],
   "dream_returns": [
     "mem_2026-08-09_dream_dream_return_0bcd4c7829da",
