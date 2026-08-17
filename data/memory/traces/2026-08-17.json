@@ -7,9 +7,9 @@
       "source": "daily_life",
       "source_ref": "data/daily_life/2026-08-17.json#attention",
       "kind": "attention",
-      "text": "mavi figürlü halı üzerinde oyalanıyor",
-      "transformed_text": "mavi figürlü halı üzerinde oyalanıyor | mavi figürlü halı | salondaki gri koltuk",
-      "emotional_weight": 0.675,
+      "text": "kapının metal sesi üzerinde oyalanıyor",
+      "transformed_text": "kapının metal sesi üzerinde oyalanıyor | kapının metal sesi | kapının eşiği",
+      "emotional_weight": 0.615,
       "repression": 0.15,
       "mutation_rate": 0.25,
       "linked_traces": [],
@@ -19,8 +19,8 @@
       "times_recalled": 0,
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
-      "id": "mem_2026-08-17_daily_life_attention_d776a04974ae",
-      "recallability": 0.843,
+      "id": "mem_2026-08-17_daily_life_attention_0cb043b0e33b",
+      "recallability": 0.819,
       "decay": 0,
       "status": "overexposed"
     },
@@ -31,7 +31,7 @@
       "kind": "avoidance",
       "text": "fazla açık bir hatıra",
       "transformed_text": "fazla açık bir hatıra | eski sesler bugün çekmecelerin kapanmasına izin vermiyor.",
-      "emotional_weight": 0.655,
+      "emotional_weight": 0.66,
       "repression": 0.82,
       "mutation_rate": 0.45,
       "linked_traces": [],
@@ -42,7 +42,7 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-17_daily_life_avoidance_c673cfdacfeb",
-      "recallability": 0.714,
+      "recallability": 0.716,
       "decay": 0,
       "status": "suppressed"
     },
@@ -52,8 +52,8 @@
       "source_ref": "data/daily_life/2026-08-17.json#body_state",
       "kind": "body",
       "text": "dili kuru, gövdesi nemli ve ağır",
-      "transformed_text": "dili kuru, gövdesi nemli ve ağır | nem gövdesine yapışıyor | öne eğilmiş",
-      "emotional_weight": 0.493,
+      "transformed_text": "dili kuru, gövdesi nemli ve ağır | nem gövdesine yapışıyor | uzanmış",
+      "emotional_weight": 0.49,
       "repression": 0.15,
       "mutation_rate": 0.2,
       "linked_traces": [],
@@ -64,9 +64,9 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-17_daily_life_body_6ff6dc315c14",
-      "recallability": 0.77,
+      "recallability": 0.769,
       "decay": 0,
-      "status": "active"
+      "status": "overexposed"
     },
     {
       "date": "2026-08-17",
@@ -75,19 +75,19 @@
       "kind": "dream_return",
       "text": "enerji: orta; huzursuzluk: düşük; şefkat: orta; öz farkındalık: yüksek; baskın ruh hali: şefkat,yorgunluk,arzu",
       "transformed_text": "altı: rüyada çağrılırken ilişkisi değişti | basınç: rüyada çağrılırken ilişkisi değişti | içeride: rüyada çağrılırken ilişkisi değişti | altı, basınç, içeride, açıklamalarda, açılan",
-      "emotional_weight": 0.6,
+      "emotional_weight": 0.61,
       "repression": 0.52,
       "mutation_rate": 0.82,
       "linked_traces": [
         "mem_2026-08-14_daily_life_avoidance_e43c885cb417",
         "mem_2026-08-15_daily_life_avoidance_cd384172cdbd",
         "mem_2026-08-17_daily_life_avoidance_c673cfdacfeb",
-        "mem_2026-08-17_poem_episodic_4f402efc7df8"
+        "mem_2026-08-17_poem_episodic_ee2a97644f3e"
       ],
       "mood_tags": [
         "tenderness",
         "fatigue",
-        "desire"
+        "absurdity"
       ],
       "origin": "observed",
       "last_recalled_at": null,
@@ -95,7 +95,7 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-17_dream_dream_return_fa382bf48e8a",
-      "recallability": 0.746,
+      "recallability": 0.75,
       "decay": 0,
       "status": "unstable"
     },
@@ -104,17 +104,17 @@
       "source": "poem",
       "source_ref": "data/generated_poems/2026-08-17.json",
       "kind": "episodic",
-      "text": "açıkladı kayması",
-      "transformed_text": "Bugünkü hali: enerji: orta; huzursuzluk: düşük; şefkat: orta; öz farkındalık: yüksek; baskın ruh hali: şefkat,yorgunluk,arzu; yorgunluk: orta; açıklık: orta; arzu: orta; dikkat yükü: dağılmış.",
-      "emotional_weight": 0.6,
+      "text": "Renkli Anların Sessizliği",
+      "transformed_text": "Bugünkü hali: Şefkat ve yorgunluk, absürtlüğün hafif gölgesinde; zihin dikkatle oyalanıyor, hafıza ise eski filmler gibi renkleri karıştırıyor. | deniz, rüzgar",
+      "emotional_weight": 0.61,
       "repression": 0.15,
       "mutation_rate": 0.35,
       "linked_traces": [
-        "mem_2026-08-17_daily_life_attention_d776a04974ae",
+        "mem_2026-08-17_daily_life_attention_0cb043b0e33b",
         "mem_2026-08-17_daily_life_avoidance_c673cfdacfeb",
         "mem_2026-08-17_daily_life_body_6ff6dc315c14",
+        "mem_2026-08-17_source_external_pressure_336b2490050d",
         "mem_2026-08-17_source_external_pressure_61da36e3cfec",
-        "mem_2026-08-17_source_external_pressure_9227648e6c7f",
         "mem_2026-08-17_source_external_pressure_ab70a16782de",
         "mem_2026-08-17_source_external_pressure_b09ad6d8ff81",
         "mem_2026-08-17_source_external_pressure_f5189c78ac95",
@@ -123,15 +123,45 @@
       "mood_tags": [
         "tenderness",
         "fatigue",
-        "desire"
+        "absurdity"
       ],
       "origin": "observed",
       "last_recalled_at": null,
       "times_recalled": 0,
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
-      "id": "mem_2026-08-17_poem_episodic_4f402efc7df8",
-      "recallability": 0.813,
+      "id": "mem_2026-08-17_poem_episodic_ee2a97644f3e",
+      "recallability": 0.817,
+      "decay": 0,
+      "status": "active"
+    },
+    {
+      "date": "2026-08-17",
+      "source": "source",
+      "source_ref": "data/source_digests/2026-08-17.json#source_influence_packet:science_culture",
+      "kind": "external_pressure",
+      "text": "science_culture | conceptual_drift / vocabulary_learning | clarity / hope / melancholy",
+      "transformed_text": "arkeolojik keşiflerin merak ve hayranlık uyandırması; güvenlik endişeleri dile getiriliyor",
+      "emotional_weight": 0.455,
+      "repression": 0.19,
+      "mutation_rate": 0.54,
+      "linked_traces": [
+        "mem_2026-08-17_daily_life_attention_0cb043b0e33b",
+        "mem_2026-08-17_daily_life_avoidance_c673cfdacfeb",
+        "mem_2026-08-17_daily_life_body_6ff6dc315c14"
+      ],
+      "mood_tags": [
+        "clarity",
+        "hope",
+        "melancholy"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-08-17_source_external_pressure_336b2490050d",
+      "recallability": 0.748,
       "decay": 0,
       "status": "active"
     },
@@ -141,12 +171,12 @@
       "source_ref": "data/source_digests/2026-08-17.json#source_influence_packet:news",
       "kind": "external_pressure",
       "text": "news | pressure / mood_pressure | fatigue / anger / clarity",
-      "transformed_text": "basınç / gündelik / politik / ağırlaşan; kısa ve uzun cümlelerin dönüşümlü kullanımı",
+      "transformed_text": "arkeolojik keşiflerin merak ve hayranlık uyandırması; politik gerilimlerin artışı anlatılıyor",
       "emotional_weight": 0.475,
       "repression": 0.35,
       "mutation_rate": 0.3,
       "linked_traces": [
-        "mem_2026-08-17_daily_life_attention_d776a04974ae",
+        "mem_2026-08-17_daily_life_attention_0cb043b0e33b",
         "mem_2026-08-17_daily_life_avoidance_c673cfdacfeb",
         "mem_2026-08-17_daily_life_body_6ff6dc315c14"
       ],
@@ -163,37 +193,7 @@
       "id": "mem_2026-08-17_source_external_pressure_61da36e3cfec",
       "recallability": 0.727,
       "decay": 0,
-      "status": "overexposed"
-    },
-    {
-      "date": "2026-08-17",
-      "source": "source",
-      "source_ref": "data/source_digests/2026-08-17.json#source_influence_packet:science_culture",
-      "kind": "external_pressure",
-      "text": "science_culture | conceptual_drift / vocabulary_learning | clarity / melancholy / hope",
-      "transformed_text": "açılan / bilgi / burada / derin; cümle ortasında yön değiştiren bağlantı",
-      "emotional_weight": 0.455,
-      "repression": 0.19,
-      "mutation_rate": 0.54,
-      "linked_traces": [
-        "mem_2026-08-17_daily_life_attention_d776a04974ae",
-        "mem_2026-08-17_daily_life_avoidance_c673cfdacfeb",
-        "mem_2026-08-17_daily_life_body_6ff6dc315c14"
-      ],
-      "mood_tags": [
-        "clarity",
-        "melancholy",
-        "hope"
-      ],
-      "origin": "observed",
-      "last_recalled_at": null,
-      "times_recalled": 0,
-      "last_dream_return_at": null,
-      "times_returned_in_dream": 0,
-      "id": "mem_2026-08-17_source_external_pressure_9227648e6c7f",
-      "recallability": 0.748,
-      "decay": 0,
-      "status": "overexposed"
+      "status": "active"
     },
     {
       "date": "2026-08-17",
@@ -201,12 +201,12 @@
       "source_ref": "data/source_digests/2026-08-17.json#source_influence_packet:life",
       "kind": "external_pressure",
       "text": "life | memory_association / attention_shift | tenderness / hope / desire",
-      "transformed_text": "basınç / gündelik / politik / ağırlaşan; kısa ve uzun cümlelerin dönüşümlü kullanımı",
+      "transformed_text": "arkeolojik keşiflerin merak ve hayranlık uyandırması; toplumsal dayanışma çağrısı yapılıyor",
       "emotional_weight": 0.388,
       "repression": 0.196,
       "mutation_rate": 0.44,
       "linked_traces": [
-        "mem_2026-08-17_daily_life_attention_d776a04974ae",
+        "mem_2026-08-17_daily_life_attention_0cb043b0e33b",
         "mem_2026-08-17_daily_life_avoidance_c673cfdacfeb",
         "mem_2026-08-17_daily_life_body_6ff6dc315c14"
       ],
@@ -223,7 +223,7 @@
       "id": "mem_2026-08-17_source_external_pressure_ab70a16782de",
       "recallability": 0.72,
       "decay": 0,
-      "status": "overexposed"
+      "status": "active"
     },
     {
       "date": "2026-08-17",
@@ -231,12 +231,12 @@
       "source_ref": "data/source_digests/2026-08-17.json#source_influence_packet:entertainment",
       "kind": "external_pressure",
       "text": "entertainment | rhythm_shift / attention_shift | absurdity / clarity / desire",
-      "transformed_text": "ışık / sahne / tuhaflaşan / yapay; kesintili cümle hareketi",
-      "emotional_weight": 0.565,
-      "repression": 0.2,
+      "transformed_text": "gündelik yaşamın yumuşamasıyla ortaya çıkan sıcaklık ve yakınlık; arkeolojik keşiflerin önemi vurgulanıyor",
+      "emotional_weight": 0.568,
+      "repression": 0.202,
       "mutation_rate": 0.67,
       "linked_traces": [
-        "mem_2026-08-17_daily_life_attention_d776a04974ae",
+        "mem_2026-08-17_daily_life_attention_0cb043b0e33b",
         "mem_2026-08-17_daily_life_avoidance_c673cfdacfeb",
         "mem_2026-08-17_daily_life_body_6ff6dc315c14"
       ],
@@ -251,9 +251,9 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-17_source_external_pressure_b09ad6d8ff81",
-      "recallability": 0.79,
+      "recallability": 0.791,
       "decay": 0,
-      "status": "overexposed"
+      "status": "active"
     },
     {
       "date": "2026-08-17",
@@ -261,12 +261,12 @@
       "source_ref": "data/source_digests/2026-08-17.json#source_influence_packet:art",
       "kind": "external_pressure",
       "text": "art | aesthetic_learning / image_expansion | clarity / desire / hope",
-      "transformed_text": "açılan / basıncı / duvarı / görüntü; doğrudan yanıt vermeyen soru dönüşü",
+      "transformed_text": "gündelik yaşamın yumuşamasıyla ortaya çıkan sıcaklık ve yakınlık; yerel yönetim değişiklikleri aktarılıyor",
       "emotional_weight": 0.603,
       "repression": 0.19,
       "mutation_rate": 0.737,
       "linked_traces": [
-        "mem_2026-08-17_daily_life_attention_d776a04974ae",
+        "mem_2026-08-17_daily_life_attention_0cb043b0e33b",
         "mem_2026-08-17_daily_life_avoidance_c673cfdacfeb",
         "mem_2026-08-17_daily_life_body_6ff6dc315c14"
       ],
@@ -283,7 +283,7 @@
       "id": "mem_2026-08-17_source_external_pressure_f5189c78ac95",
       "recallability": 0.807,
       "decay": 0,
-      "status": "overexposed"
+      "status": "unstable"
     },
     {
       "date": "2026-08-17",
@@ -292,14 +292,14 @@
       "kind": "route",
       "text": "Osmanağa sokakları",
       "transformed_text": "Osmanağa sokakları | nem gövdesine yapışıyor | kırmızı ışıkta bekleyen biri, parkta unutulmuş bardak, ıslak bank, sabah vapuru sesi | apartmanlar sabahı küçük küçük çiğnedi",
-      "emotional_weight": 0.6,
+      "emotional_weight": 0.61,
       "repression": 0.15,
       "mutation_rate": 0.3,
       "linked_traces": [],
       "mood_tags": [
         "tenderness",
         "fatigue",
-        "desire"
+        "absurdity"
       ],
       "origin": "observed",
       "last_recalled_at": null,
@@ -307,7 +307,7 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-08-17_walk_route_e06e6676b4bd",
-      "recallability": 0.813,
+      "recallability": 0.817,
       "decay": 0,
       "status": "active"
     }
