@@ -1,7 +1,7 @@
 {
   "version": 1,
   "built_through": "2026-08-20",
-  "trace_count": 919,
+  "trace_count": 920,
   "climate": {
     "pressure": {
       "value": 0.571,
@@ -58,7 +58,7 @@
       "summary": "leakage: 438 iz, ortalama 48."
     },
     "decay": {
-      "value": 0.315,
+      "value": 0.314,
       "trace_ids": [
         "mem_2026-06-04_daily_life_attention_379f81945234",
         "mem_2026-06-04_daily_life_avoidance_051abe89a021",
@@ -73,7 +73,7 @@
         "mem_2026-06-04_walk_route_2d9934c80a2b",
         "mem_2026-06-05_contact_residue_legacy_inferred_03866585788a"
       ],
-      "summary": "decay: 270 iz, ortalama 32."
+      "summary": "decay: 270 iz, ortalama 31."
     },
     "repression": {
       "value": 0.276,
@@ -113,9 +113,9 @@
     "mem_2026-08-20_source_external_pressure_e27deedec793",
     "mem_2026-08-18_poem_episodic_4fd82dbfae61",
     "mem_2026-08-18_walk_route_062cf4e71af4",
-    "mem_2026-08-11_contact_residue_external_pressure_5d80e99e8957",
     "mem_2026-08-14_contact_residue_external_pressure_1675f8a45d20",
-    "mem_2026-08-19_source_external_pressure_b43ceb39a992"
+    "mem_2026-08-19_source_external_pressure_b43ceb39a992",
+    "mem_2026-08-20_source_external_pressure_de9bda76feb0"
   ],
   "suppressed": [
     "mem_2026-08-18_daily_life_avoidance_1139048e155f",
@@ -137,8 +137,6 @@
     "mem_2026-08-20_source_external_pressure_e27deedec793"
   ],
   "dream_returns": [
-    "mem_2026-08-13_dream_dream_return_2bbc82b822cf",
-    "mem_2026-08-14_daily_life_avoidance_e43c885cb417",
     "mem_2026-08-14_dream_dream_return_29b535844998",
     "mem_2026-08-15_daily_life_avoidance_cd384172cdbd",
     "mem_2026-08-15_dream_dream_return_b95fc1923e2f",
@@ -148,7 +146,9 @@
     "mem_2026-08-17_dream_dream_return_fa382bf48e8a",
     "mem_2026-08-18_daily_life_avoidance_1139048e155f",
     "mem_2026-08-18_dream_dream_return_2edcfa5facb4",
-    "mem_2026-08-19_dream_dream_return_487ba38317e3"
+    "mem_2026-08-19_daily_life_avoidance_b12552ccf546",
+    "mem_2026-08-19_dream_dream_return_487ba38317e3",
+    "mem_2026-08-20_dream_dream_return_539bdf266309"
   ],
   "indirect_only": [
     "mem_2026-06-04_daily_life_attention_379f81945234",
