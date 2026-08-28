@@ -1,14 +1,14 @@
 {
   "date": "2026-08-28",
-  "collected_at": "2026-08-28T18:29:39.100Z",
+  "collected_at": "2026-08-28T19:24:32.006Z",
   "fallback_used": false,
   "weather": {
     "provider": "open-meteo",
-    "summary": "Kadıköy'de 21.9°C; nem 61%, rüzgar 13.8 km/s civarında.",
-    "temperature_c": 21.9,
-    "humidity_percent": 61,
-    "wind_kmh": 13.8,
-    "body_effect": "hava yüzünde ince bir açıklık bırakıyor"
+    "summary": "Kadıköy'de 21.2°C; nem 71%, rüzgar 13.4 km/s civarında.",
+    "temperature_c": 21.2,
+    "humidity_percent": 71,
+    "wind_kmh": 13.4,
+    "body_effect": "nem gövdesine yapışıyor"
   },
   "turkey_news": {
     "provider": "rss-news",
@@ -43,7 +43,7 @@
   "rss": {
     "items": [
       {
-        "title": "Deniz Göktaş'a tahliye ve 'Daltonlar çetesini övme' suçlamasıyla yeniden tutuklama",
+        "title": "Deniz Göktaş'a tahliye ve Daltonlar çetesini 'övme' suçlamasıyla yeniden tutuklama",
         "source": "BBC Türkçe",
         "category": "news",
         "url": "https://www.bbc.com/turkce/articles/c0qxdyl8zw3o?at_medium=RSS&at_campaign=rss",
@@ -136,20 +136,20 @@
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
       {
-        "title": "Sırbistan Adalet Bakanı: Ratko Mladiç devlet töreniyle gömülecek",
+        "title": "Türkiye, Avrupa Kadınlar Voleybol Şampiyonası'nda ilk kez mağlup",
         "source": "BBC Türkçe",
         "category": "news",
-        "url": "https://www.bbc.com/turkce/articles/c1dlp509329o?at_medium=RSS&at_campaign=rss",
-        "publishedAt": "Fri, 28 Aug 2026 14:11:00 GMT",
+        "url": "https://www.bbc.com/turkce/articles/cp3rgv5zgw3o?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Fri, 28 Aug 2026 18:52:37 GMT",
         "moodTags": [
-          "anger",
           "fatigue",
+          "anger",
           "clarity"
         ],
         "moodScores": {
           "melancholy": 2,
-          "anger": 10,
-          "tenderness": 2,
+          "anger": 7,
+          "tenderness": 0,
           "fatigue": 10,
           "absurdity": 0,
           "clarity": 3,
@@ -157,13 +157,14 @@
           "hope": 0
         },
         "keywords": [
-          "devlet",
-          "töreniyle",
-          "gömüleceğini",
-          "gömülecek",
-          "hapishanesinde"
+          "beş",
+          "gelen",
+          "gruptaki",
+          "ilk",
+          "kaybetti",
+          "kez"
         ],
-        "shortAtmosphere": "içeride kabaran gündelik politik basınç"
+        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
       {
         "title": "Ailesi skandallarla boğuşan Norveç'in yeni Kralı 8. Haakon kimdir?",
@@ -197,20 +198,20 @@
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
       {
-        "title": "SDG'nin feshi Türkiye ve Suriye Kürtleri için ne anlama geliyor?",
+        "title": "Sırbistan Adalet Bakanı: Ratko Mladiç devlet töreniyle gömülecek",
         "source": "BBC Türkçe",
         "category": "news",
-        "url": "https://www.bbc.com/turkce/articles/ceq8nq9l8y4o?at_medium=RSS&at_campaign=rss",
-        "publishedAt": "Thu, 27 Aug 2026 23:31:34 GMT",
+        "url": "https://www.bbc.com/turkce/articles/c1dlp509329o?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Fri, 28 Aug 2026 14:11:00 GMT",
         "moodTags": [
-          "fatigue",
           "anger",
+          "fatigue",
           "clarity"
         ],
         "moodScores": {
           "melancholy": 2,
-          "anger": 7,
-          "tenderness": 0,
+          "anger": 10,
+          "tenderness": 2,
           "fatigue": 10,
           "absurdity": 0,
           "clarity": 3,
@@ -218,14 +219,13 @@
           "hope": 0
         },
         "keywords": [
-          "anlama",
-          "geliyor",
-          "açıkladı",
-          "bekliyor",
-          "bundan",
-          "feshettiğini"
+          "devlet",
+          "töreniyle",
+          "gömüleceğini",
+          "gömülecek",
+          "hapishanesinde"
         ],
-        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
+        "shortAtmosphere": "içeride kabaran gündelik politik basınç"
       },
       {
         "title": "Deniz Göktaş hakkında hem tahliye hem tutuklama kararı verildi!",
@@ -930,8 +930,8 @@
         "gözaltına",
         "tahliye",
         "tutuklama",
-        "açıkladı",
         "açıklandı",
+        "alınan",
         "basıncı",
         "duvarı"
       ],
@@ -961,8 +961,8 @@
           "gözaltına",
           "tahliye",
           "tutuklama",
-          "açıkladı",
-          "açıklandı"
+          "açıklandı",
+          "alınan"
         ],
         "novelty_terms": [
           "tahliye",
@@ -1192,7 +1192,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://arkeofili.com/feed/",
-        "lastCheckedAt": "2026-08-28T18:29:19.695Z",
+        "lastCheckedAt": "2026-08-28T19:24:26.201Z",
         "attemptedUrls": [
           "https://arkeofili.com/feed/"
         ],
@@ -1208,7 +1208,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://evrimagaci.org/rss.xml",
-        "lastCheckedAt": "2026-08-28T18:29:19.697Z",
+        "lastCheckedAt": "2026-08-28T19:24:26.203Z",
         "attemptedUrls": [
           "https://evrimagaci.org/rss.xml"
         ],
@@ -1224,11 +1224,11 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://altyazi.net/feed/",
-        "lastCheckedAt": "2026-08-28T18:29:19.698Z",
+        "lastCheckedAt": "2026-08-28T19:24:26.204Z",
         "attemptedUrls": [
           "https://altyazi.net/feed/"
         ],
-        "retriedWithBrowserHeaders": true,
+        "retriedWithBrowserHeaders": false,
         "itemCount": 6
       },
       {
@@ -1240,7 +1240,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.otekisinema.com/feed/",
-        "lastCheckedAt": "2026-08-28T18:29:20.550Z",
+        "lastCheckedAt": "2026-08-28T19:24:26.818Z",
         "attemptedUrls": [
           "https://www.otekisinema.com/feed/"
         ],
@@ -1256,7 +1256,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.bagimsizsinema.com/feed",
-        "lastCheckedAt": "2026-08-28T18:29:21.308Z",
+        "lastCheckedAt": "2026-08-28T19:24:27.051Z",
         "attemptedUrls": [
           "https://www.bagimsizsinema.com/feed"
         ],
@@ -1272,7 +1272,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://artdogistanbul.com/feed/",
-        "lastCheckedAt": "2026-08-28T18:29:21.803Z",
+        "lastCheckedAt": "2026-08-28T19:24:27.371Z",
         "attemptedUrls": [
           "https://artdogistanbul.com/feed/"
         ],
@@ -1288,7 +1288,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://argonotlar.com/feed/",
-        "lastCheckedAt": "2026-08-28T18:29:22.820Z",
+        "lastCheckedAt": "2026-08-28T19:24:27.462Z",
         "attemptedUrls": [
           "https://argonotlar.com/feed/"
         ],
@@ -1300,16 +1300,16 @@
         "category": "art",
         "url": "https://www.arkitera.com/feed/",
         "enabled": true,
-        "fetched": false,
-        "status": "timeout",
-        "item_count": 0,
-        "lastCheckedAt": "2026-08-28T18:29:23.059Z",
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://www.arkitera.com/feed/",
+        "lastCheckedAt": "2026-08-28T19:24:27.993Z",
         "attemptedUrls": [
           "https://www.arkitera.com/feed/"
         ],
-        "retriedWithBrowserHeaders": true,
-        "error": "Timeout after 8000ms",
-        "itemCount": 0
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
       },
       {
         "name": "Artkolik",
@@ -1320,7 +1320,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.artkolik.net/feed",
-        "lastCheckedAt": "2026-08-28T18:29:23.852Z",
+        "lastCheckedAt": "2026-08-28T19:24:28.066Z",
         "attemptedUrls": [
           "https://www.artkolik.net/feed"
         ],
@@ -1336,7 +1336,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://terrabayt.com/feed/",
-        "lastCheckedAt": "2026-08-28T18:29:25.018Z",
+        "lastCheckedAt": "2026-08-28T19:24:28.414Z",
         "attemptedUrls": [
           "https://terrabayt.com/feed/"
         ],
@@ -1352,7 +1352,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.nouvart.net/feed/",
-        "lastCheckedAt": "2026-08-28T18:29:26.245Z",
+        "lastCheckedAt": "2026-08-28T19:24:28.945Z",
         "attemptedUrls": [
           "https://www.nouvart.net/feed/"
         ],
@@ -1368,7 +1368,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds2.feedburner.com/itsnicethat/SlXC",
-        "lastCheckedAt": "2026-08-28T18:29:26.991Z",
+        "lastCheckedAt": "2026-08-28T19:24:29.178Z",
         "attemptedUrls": [
           "https://feeds2.feedburner.com/itsnicethat/SlXC"
         ],
@@ -1384,7 +1384,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://thecreativeindependent.com/feed.xml",
-        "lastCheckedAt": "2026-08-28T18:29:27.239Z",
+        "lastCheckedAt": "2026-08-28T19:24:29.200Z",
         "attemptedUrls": [
           "https://thecreativeindependent.com/feed.xml"
         ],
@@ -1400,7 +1400,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://bantmag.com/feed/",
-        "lastCheckedAt": "2026-08-28T18:29:27.548Z",
+        "lastCheckedAt": "2026-08-28T19:24:29.351Z",
         "attemptedUrls": [
           "https://bantmag.com/feed/"
         ],
@@ -1416,7 +1416,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://manifold.press/rss",
-        "lastCheckedAt": "2026-08-28T18:29:27.874Z",
+        "lastCheckedAt": "2026-08-28T19:24:29.428Z",
         "attemptedUrls": [
           "https://manifold.press/rss"
         ],
@@ -1432,7 +1432,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://playtusu.com/feed/",
-        "lastCheckedAt": "2026-08-28T18:29:28.820Z",
+        "lastCheckedAt": "2026-08-28T19:24:29.940Z",
         "attemptedUrls": [
           "https://playtusu.com/feed/"
         ],
@@ -1448,7 +1448,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://vesaire.press/feed/",
-        "lastCheckedAt": "2026-08-28T18:29:29.837Z",
+        "lastCheckedAt": "2026-08-28T19:24:30.020Z",
         "attemptedUrls": [
           "https://vesaire.press/feed/"
         ],
@@ -1464,7 +1464,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds.bbci.co.uk/turkce/rss.xml",
-        "lastCheckedAt": "2026-08-28T18:29:30.253Z",
+        "lastCheckedAt": "2026-08-28T19:24:30.098Z",
         "attemptedUrls": [
           "https://feeds.bbci.co.uk/turkce/rss.xml"
         ],
@@ -1480,7 +1480,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.birgun.net/rss/home",
-        "lastCheckedAt": "2026-08-28T18:29:30.591Z",
+        "lastCheckedAt": "2026-08-28T19:24:30.135Z",
         "attemptedUrls": [
           "https://www.birgun.net/rss/home"
         ],
@@ -1496,7 +1496,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.diken.com.tr/feed/",
-        "lastCheckedAt": "2026-08-28T18:29:30.713Z",
+        "lastCheckedAt": "2026-08-28T19:24:30.281Z",
         "attemptedUrls": [
           "https://www.diken.com.tr/feed/"
         ],
@@ -1512,7 +1512,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.radikal.com.tr/feed/",
-        "lastCheckedAt": "2026-08-28T18:29:31.243Z",
+        "lastCheckedAt": "2026-08-28T19:24:30.504Z",
         "attemptedUrls": [
           "https://www.radikal.com.tr/feed/"
         ],
@@ -1528,7 +1528,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.cumhuriyet.com.tr/rss",
-        "lastCheckedAt": "2026-08-28T18:29:32.369Z",
+        "lastCheckedAt": "2026-08-28T19:24:30.555Z",
         "attemptedUrls": [
           "https://www.cumhuriyet.com.tr/rss/son_dakika.xml"
         ],
@@ -1544,7 +1544,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://istanbullife.com.tr/feed/",
-        "lastCheckedAt": "2026-08-28T18:29:32.709Z",
+        "lastCheckedAt": "2026-08-28T19:24:30.664Z",
         "attemptedUrls": [
           "https://istanbullife.com.tr/feed/"
         ],
@@ -1598,9 +1598,9 @@
     },
     {
       "name": "Arkitera",
-      "status": "timeout",
-      "itemCount": 0,
-      "error": "Timeout after 8000ms"
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://www.arkitera.com/feed/"
     },
     {
       "name": "Artkolik",
@@ -1694,7 +1694,6 @@
     }
   ],
   "notes": [
-    "NEWS_API_KEY yok; RSS gündem kullanıldı.",
-    "RSS Arkitera: Timeout after 8000ms"
+    "NEWS_API_KEY yok; RSS gündem kullanıldı."
   ]
 }
