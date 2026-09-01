@@ -1,18 +1,18 @@
 {
   "date": "2026-09-01",
-  "collected_at": "2026-09-01T09:56:28.923Z",
+  "collected_at": "2026-09-01T11:29:30.699Z",
   "fallback_used": false,
   "weather": {
     "provider": "open-meteo",
-    "summary": "Kadıköy'de 28.7°C; nem 53%, rüzgar 13.6 km/s civarında.",
-    "temperature_c": 28.7,
-    "humidity_percent": 53,
-    "wind_kmh": 13.6,
+    "summary": "Kadıköy'de 29.5°C; nem 50%, rüzgar 16 km/s civarında.",
+    "temperature_c": 29.5,
+    "humidity_percent": 50,
+    "wind_kmh": 16,
     "body_effect": "hava yüzünde ince bir açıklık bırakıyor"
   },
   "turkey_news": {
     "provider": "rss-news",
-    "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,melancholy; safe_terms=basınç,gündelik,politik,ağırlaşan,içeride,kabaran; weights=aesthetic:0.14,conceptual:0.33,rhythm:0.44,pressure:1",
+    "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,melancholy; safe_terms=basınç,gündelik,politik,ağırlaşan,içeride,kabaran; weights=aesthetic:0.13,conceptual:0.33,rhythm:0.43,pressure:1",
     "emotional_weight": 59,
     "fragments": [
       "basınç",
@@ -229,11 +229,42 @@
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
       {
-        "title": "Enzo Fernandez için dev anlaşma: Yeni adresi Manchester City",
+        "title": "Bandırmaspor - Antalyaspor Maçı Ne Zaman, Saat Kaçta ve Hangi Kanalda?",
         "source": "BirGün",
         "category": "news",
-        "url": "https://www.birgun.net/haber/enzo-fernandez-icin-dev-anlasma-yeni-adresi-manchester-city-732271",
-        "publishedAt": "Tue, 01 Sep 2026 12:45:00 +0300",
+        "url": "https://www.birgun.net/haber/bandirmaspor-antalyaspor-maci-ne-zaman-saat-kacta-ve-hangi-kanalda-732289",
+        "publishedAt": "Tue, 01 Sep 2026 13:45:00 +0300",
+        "moodTags": [
+          "anger",
+          "fatigue",
+          "melancholy"
+        ],
+        "moodScores": {
+          "melancholy": 4,
+          "anger": 10,
+          "tenderness": 2,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 0,
+          "desire": 0,
+          "hope": 1
+        },
+        "keywords": [
+          "yayın",
+          "aradığı",
+          "belli",
+          "bilgileri",
+          "canlı",
+          "detaylar"
+        ],
+        "shortAtmosphere": "içeride kabaran gündelik politik basınç"
+      },
+      {
+        "title": "Mauro Icardi’nin yeni adresi Lazio olabilir",
+        "source": "BirGün",
+        "category": "news",
+        "url": "https://www.birgun.net/haber/mauro-icardinin-yeni-adresi-lazio-olabilir-732288",
+        "publishedAt": "Tue, 01 Sep 2026 13:42:00 +0300",
         "moodTags": [
           "anger",
           "fatigue",
@@ -242,7 +273,7 @@
         "moodScores": {
           "melancholy": 2,
           "anger": 10,
-          "tenderness": 2,
+          "tenderness": 0,
           "fatigue": 10,
           "absurdity": 0,
           "clarity": 0,
@@ -250,43 +281,12 @@
           "hope": 3
         },
         "keywords": [
-          "adresi",
-          "anlaşma",
-          "anlaşmaya",
-          "bedeli",
-          "bonservis",
-          "dev"
-        ],
-        "shortAtmosphere": "içeride kabaran gündelik politik basınç"
-      },
-      {
-        "title": "Lionel Messi'nin rekorlarla dolu milli takım yolculuğu",
-        "source": "BirGün",
-        "category": "news",
-        "url": "https://www.birgun.net/haber/lionel-messi-nin-rekorlarla-dolu-milli-takim-yolculugu-732269",
-        "publishedAt": "Tue, 01 Sep 2026 12:41:00 +0300",
-        "moodTags": [
-          "anger",
-          "fatigue",
-          "absurdity"
-        ],
-        "moodScores": {
-          "melancholy": 2,
-          "anger": 10,
-          "tenderness": 0,
-          "fatigue": 10,
-          "absurdity": 4,
-          "clarity": 0,
-          "desire": 2,
-          "hope": 1
-        },
-        "keywords": [
-          "milli",
-          "takım",
           "açıkladı",
-          "atan",
-          "bıraktığını",
-          "çıkan"
+          "adresi",
+          "ardından",
+          "ayrılan",
+          "ekibinin",
+          "ermesinin"
         ],
         "shortAtmosphere": "içeride kabaran gündelik politik basınç"
       },
@@ -902,7 +902,7 @@
         "desire": 3,
         "hope": 3
       },
-      "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,melancholy; safe_terms=basınç,gündelik,politik,ağırlaşan,içeride,kabaran; weights=aesthetic:0.14,conceptual:0.33,rhythm:0.44,pressure:1 | category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=basıncı,duvarı,görüntü,sergi,açılan,açıyor; weights=aesthetic:1,conceptual:0.7,rhythm:0.49,pressure:0.19 | category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,hope,melancholy; safe_terms=açılan,bilgi,burada,derin,kırıntısı,zaman; weights=aesthetic:0.34,conceptual:1,rhythm:0.28,pressure:0.2 | category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yüz,tuhaflaşan,başlıyor,akşam; weights=aesthetic:0.6,conceptual:0.42,rhythm:1,pressure:0.26 | category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,hope,desire; safe_terms=appeared,gündelik,içi,şehir,temas,yumuşayan; weights=aesthetic:0.5,conceptual:0.33,rhythm:0.49,pressure:0.23",
+      "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,melancholy; safe_terms=basınç,gündelik,politik,ağırlaşan,içeride,kabaran; weights=aesthetic:0.13,conceptual:0.33,rhythm:0.43,pressure:1 | category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=basıncı,duvarı,görüntü,sergi,açılan,açıyor; weights=aesthetic:1,conceptual:0.7,rhythm:0.49,pressure:0.19 | category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,hope,melancholy; safe_terms=açılan,bilgi,burada,derin,kırıntısı,zaman; weights=aesthetic:0.34,conceptual:1,rhythm:0.28,pressure:0.2 | category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yüz,tuhaflaşan,başlıyor,akşam; weights=aesthetic:0.6,conceptual:0.42,rhythm:1,pressure:0.26 | category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,hope,desire; safe_terms=appeared,gündelik,içi,şehir,temas,yumuşayan; weights=aesthetic:0.5,conceptual:0.33,rhythm:0.49,pressure:0.23",
       "fragments": [
         "basınç",
         "gündelik",
@@ -982,11 +982,11 @@
           "anger",
           "melancholy"
         ],
-        "aesthetic_weight": 0.14,
+        "aesthetic_weight": 0.13,
         "conceptual_weight": 0.33,
-        "rhythm_weight": 0.44,
+        "rhythm_weight": 0.43,
         "pressure_weight": 1,
-        "summary_for_prompt": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,melancholy; safe_terms=basınç,gündelik,politik,ağırlaşan,içeride,kabaran; weights=aesthetic:0.14,conceptual:0.33,rhythm:0.44,pressure:1"
+        "summary_for_prompt": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,melancholy; safe_terms=basınç,gündelik,politik,ağırlaşan,içeride,kabaran; weights=aesthetic:0.13,conceptual:0.33,rhythm:0.43,pressure:1"
       },
       {
         "category": "art",
@@ -1183,7 +1183,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://arkeofili.com/feed/",
-        "lastCheckedAt": "2026-09-01T09:56:23.737Z",
+        "lastCheckedAt": "2026-09-01T11:29:22.832Z",
         "attemptedUrls": [
           "https://arkeofili.com/feed/"
         ],
@@ -1199,7 +1199,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://evrimagaci.org/rss.xml",
-        "lastCheckedAt": "2026-09-01T09:56:23.738Z",
+        "lastCheckedAt": "2026-09-01T11:29:22.833Z",
         "attemptedUrls": [
           "https://evrimagaci.org/rss.xml"
         ],
@@ -1215,7 +1215,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://altyazi.net/feed/",
-        "lastCheckedAt": "2026-09-01T09:56:23.739Z",
+        "lastCheckedAt": "2026-09-01T11:29:22.834Z",
         "attemptedUrls": [
           "https://altyazi.net/feed/"
         ],
@@ -1231,7 +1231,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.otekisinema.com/feed/",
-        "lastCheckedAt": "2026-09-01T09:56:24.279Z",
+        "lastCheckedAt": "2026-09-01T11:29:23.494Z",
         "attemptedUrls": [
           "https://www.otekisinema.com/feed/"
         ],
@@ -1247,7 +1247,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.bagimsizsinema.com/feed",
-        "lastCheckedAt": "2026-09-01T09:56:24.831Z",
+        "lastCheckedAt": "2026-09-01T11:29:24.031Z",
         "attemptedUrls": [
           "https://www.bagimsizsinema.com/feed"
         ],
@@ -1263,7 +1263,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://artdogistanbul.com/feed/",
-        "lastCheckedAt": "2026-09-01T09:56:24.915Z",
+        "lastCheckedAt": "2026-09-01T11:29:24.246Z",
         "attemptedUrls": [
           "https://artdogistanbul.com/feed/"
         ],
@@ -1279,7 +1279,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://argonotlar.com/feed/",
-        "lastCheckedAt": "2026-09-01T09:56:25.139Z",
+        "lastCheckedAt": "2026-09-01T11:29:24.509Z",
         "attemptedUrls": [
           "https://argonotlar.com/feed/"
         ],
@@ -1295,7 +1295,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.arkitera.com/feed/",
-        "lastCheckedAt": "2026-09-01T09:56:25.607Z",
+        "lastCheckedAt": "2026-09-01T11:29:25.252Z",
         "attemptedUrls": [
           "https://www.arkitera.com/feed/"
         ],
@@ -1311,7 +1311,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.artkolik.net/feed",
-        "lastCheckedAt": "2026-09-01T09:56:25.842Z",
+        "lastCheckedAt": "2026-09-01T11:29:25.432Z",
         "attemptedUrls": [
           "https://www.artkolik.net/feed"
         ],
@@ -1327,7 +1327,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://terrabayt.com/feed/",
-        "lastCheckedAt": "2026-09-01T09:56:26.013Z",
+        "lastCheckedAt": "2026-09-01T11:29:25.513Z",
         "attemptedUrls": [
           "https://terrabayt.com/feed/"
         ],
@@ -1343,7 +1343,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.nouvart.net/feed/",
-        "lastCheckedAt": "2026-09-01T09:56:26.704Z",
+        "lastCheckedAt": "2026-09-01T11:29:26.633Z",
         "attemptedUrls": [
           "https://www.nouvart.net/feed/"
         ],
@@ -1359,7 +1359,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds2.feedburner.com/itsnicethat/SlXC",
-        "lastCheckedAt": "2026-09-01T09:56:26.794Z",
+        "lastCheckedAt": "2026-09-01T11:29:26.702Z",
         "attemptedUrls": [
           "https://feeds2.feedburner.com/itsnicethat/SlXC"
         ],
@@ -1375,7 +1375,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://thecreativeindependent.com/feed.xml",
-        "lastCheckedAt": "2026-09-01T09:56:27.033Z",
+        "lastCheckedAt": "2026-09-01T11:29:27.120Z",
         "attemptedUrls": [
           "https://thecreativeindependent.com/feed.xml"
         ],
@@ -1391,7 +1391,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://bantmag.com/feed/",
-        "lastCheckedAt": "2026-09-01T09:56:27.074Z",
+        "lastCheckedAt": "2026-09-01T11:29:27.181Z",
         "attemptedUrls": [
           "https://bantmag.com/feed/"
         ],
@@ -1407,7 +1407,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://manifold.press/rss",
-        "lastCheckedAt": "2026-09-01T09:56:27.207Z",
+        "lastCheckedAt": "2026-09-01T11:29:27.304Z",
         "attemptedUrls": [
           "https://manifold.press/rss"
         ],
@@ -1423,7 +1423,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://playtusu.com/feed/",
-        "lastCheckedAt": "2026-09-01T09:56:27.213Z",
+        "lastCheckedAt": "2026-09-01T11:29:27.357Z",
         "attemptedUrls": [
           "https://playtusu.com/feed/"
         ],
@@ -1439,7 +1439,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://vesaire.press/feed/",
-        "lastCheckedAt": "2026-09-01T09:56:27.316Z",
+        "lastCheckedAt": "2026-09-01T11:29:27.488Z",
         "attemptedUrls": [
           "https://vesaire.press/feed/"
         ],
@@ -1455,7 +1455,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds.bbci.co.uk/turkce/rss.xml",
-        "lastCheckedAt": "2026-09-01T09:56:27.519Z",
+        "lastCheckedAt": "2026-09-01T11:29:27.570Z",
         "attemptedUrls": [
           "https://feeds.bbci.co.uk/turkce/rss.xml"
         ],
@@ -1471,7 +1471,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.birgun.net/rss/home",
-        "lastCheckedAt": "2026-09-01T09:56:27.626Z",
+        "lastCheckedAt": "2026-09-01T11:29:27.767Z",
         "attemptedUrls": [
           "https://www.birgun.net/rss/home"
         ],
@@ -1487,7 +1487,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.diken.com.tr/feed/",
-        "lastCheckedAt": "2026-09-01T09:56:27.773Z",
+        "lastCheckedAt": "2026-09-01T11:29:28.068Z",
         "attemptedUrls": [
           "https://www.diken.com.tr/feed/"
         ],
@@ -1503,7 +1503,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.radikal.com.tr/feed/",
-        "lastCheckedAt": "2026-09-01T09:56:27.795Z",
+        "lastCheckedAt": "2026-09-01T11:29:28.081Z",
         "attemptedUrls": [
           "https://www.radikal.com.tr/feed/"
         ],
@@ -1519,7 +1519,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.cumhuriyet.com.tr/rss",
-        "lastCheckedAt": "2026-09-01T09:56:27.949Z",
+        "lastCheckedAt": "2026-09-01T11:29:28.144Z",
         "attemptedUrls": [
           "https://www.cumhuriyet.com.tr/rss/son_dakika.xml"
         ],
@@ -1535,7 +1535,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://istanbullife.com.tr/feed/",
-        "lastCheckedAt": "2026-09-01T09:56:27.963Z",
+        "lastCheckedAt": "2026-09-01T11:29:28.220Z",
         "attemptedUrls": [
           "https://istanbullife.com.tr/feed/"
         ],
