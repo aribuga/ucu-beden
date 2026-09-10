@@ -1,28 +1,28 @@
 {
   "date": "2026-09-10",
-  "collected_at": "2026-09-10T09:35:24.998Z",
+  "collected_at": "2026-09-10T11:03:21.028Z",
   "fallback_used": false,
   "weather": {
     "provider": "open-meteo",
-    "summary": "Kadıköy'de 26.7°C; nem 55%, rüzgar 17.2 km/s civarında.",
-    "temperature_c": 26.7,
-    "humidity_percent": 55,
-    "wind_kmh": 17.2,
+    "summary": "Kadıköy'de 27.1°C; nem 56%, rüzgar 19.2 km/s civarında.",
+    "temperature_c": 27.1,
+    "humidity_percent": 56,
+    "wind_kmh": 19.2,
     "body_effect": "hava yüzünde ince bir açıklık bırakıyor"
   },
   "turkey_news": {
     "provider": "rss-news",
-    "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,clarity; safe_terms=basınç,gündelik,politik,ağırlaşan,alındı,ayında; weights=aesthetic:0.13,conceptual:0.33,rhythm:0.43,pressure:1",
+    "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,clarity; safe_terms=basınç,gündelik,politik,ağırlaşan,ayında,içeride; weights=aesthetic:0.14,conceptual:0.33,rhythm:0.43,pressure:1",
     "emotional_weight": 59,
     "fragments": [
       "basınç",
       "gündelik",
       "politik",
       "ağırlaşan",
-      "alındı",
       "ayında",
-      "gözaltına",
-      "içeride"
+      "içeride",
+      "kabaran",
+      "açık"
     ]
   },
   "art_world": {
@@ -36,18 +36,49 @@
       "görüntü",
       "sergi",
       "açıyor",
-      "alacak",
-      "aldığı"
+      "aldığı",
+      "başladı"
     ]
   },
   "rss": {
     "items": [
       {
+        "title": "'Turist vergisi': İngiltere'yi ziyaret daha pahalı hale gelebilir",
+        "source": "BBC Türkçe",
+        "category": "news",
+        "url": "https://www.bbc.com/turkce/articles/cj9xzn4rlnxo?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Thu, 10 Sep 2026 10:10:31 GMT",
+        "moodTags": [
+          "fatigue",
+          "anger",
+          "clarity"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 7,
+          "tenderness": 0,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 3,
+          "desire": 2,
+          "hope": 0
+        },
+        "keywords": [
+          "vergisi",
+          "alma",
+          "başkanlarına",
+          "belediye",
+          "gelebilir",
+          "gündemde"
+        ],
+        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
+      },
+      {
         "title": "Trump'tan ara seçim vaadi: 'Kazanırsak her yetişkin vatandaşa 5 bin dolar'",
         "source": "BBC Türkçe",
         "category": "news",
         "url": "https://www.bbc.com/turkce/articles/c804gevp75go?at_medium=RSS&at_campaign=rss",
-        "publishedAt": "Thu, 10 Sep 2026 04:44:32 GMT",
+        "publishedAt": "Thu, 10 Sep 2026 09:41:04 GMT",
         "moodTags": [
           "fatigue",
           "anger",
@@ -70,68 +101,6 @@
           "ayında",
           "bin",
           "bulundu"
-        ],
-        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
-      },
-      {
-        "title": "Bakan Gürlek: Gülistan Doku'nun naaşı kimyasal maddelerle ortadan kaldırılmış olabilir",
-        "source": "BBC Türkçe",
-        "category": "news",
-        "url": "https://www.bbc.com/turkce/articles/cpq0971yn20o?at_medium=RSS&at_campaign=rss",
-        "publishedAt": "Thu, 10 Sep 2026 08:10:31 GMT",
-        "moodTags": [
-          "fatigue",
-          "anger",
-          "melancholy"
-        ],
-        "moodScores": {
-          "melancholy": 4,
-          "anger": 7,
-          "tenderness": 0,
-          "fatigue": 10,
-          "absurdity": 0,
-          "clarity": 3,
-          "desire": 0,
-          "hope": 0
-        },
-        "keywords": [
-          "kaldırılmış",
-          "kimyasal",
-          "ortadan",
-          "açıkladı",
-          "alınamayan",
-          "beri"
-        ],
-        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
-      },
-      {
-        "title": "Depremde 35 kişinin öldüğü Ezgi Apartmanı davasında karar bekleniyor",
-        "source": "BBC Türkçe",
-        "category": "news",
-        "url": "https://www.bbc.com/turkce/articles/cz9zjp501d5o?at_medium=RSS&at_campaign=rss",
-        "publishedAt": "Thu, 10 Sep 2026 07:11:11 GMT",
-        "moodTags": [
-          "fatigue",
-          "anger",
-          "clarity"
-        ],
-        "moodScores": {
-          "melancholy": 2,
-          "anger": 7,
-          "tenderness": 0,
-          "fatigue": 10,
-          "absurdity": 0,
-          "clarity": 3,
-          "desire": 0,
-          "hope": 0
-        },
-        "keywords": [
-          "bekleniyor",
-          "davasında",
-          "karar",
-          "kişinin",
-          "depremlerinde",
-          "hayatını"
         ],
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
@@ -167,11 +136,42 @@
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
       {
-        "title": "Müzelere yönelik soygunlar neden daha sık ve pervasız hale geldi?",
+        "title": "Bakan Gürlek: Gülistan Doku'nun naaşı kimyasal maddelerle ortadan kaldırılmış olabilir",
         "source": "BBC Türkçe",
         "category": "news",
-        "url": "https://www.bbc.com/turkce/articles/cp30kvv7ngzo?at_medium=RSS&at_campaign=rss",
-        "publishedAt": "Thu, 10 Sep 2026 02:35:50 GMT",
+        "url": "https://www.bbc.com/turkce/articles/cpq0971yn20o?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Thu, 10 Sep 2026 08:10:31 GMT",
+        "moodTags": [
+          "fatigue",
+          "anger",
+          "melancholy"
+        ],
+        "moodScores": {
+          "melancholy": 4,
+          "anger": 7,
+          "tenderness": 0,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 3,
+          "desire": 0,
+          "hope": 0
+        },
+        "keywords": [
+          "kaldırılmış",
+          "kimyasal",
+          "ortadan",
+          "açıkladı",
+          "alınamayan",
+          "beri"
+        ],
+        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
+      },
+      {
+        "title": "Fenerbahçe 18 yıl aradan sonra Şampiyonlar Ligi'nde, rakip Roma",
+        "source": "BBC Türkçe",
+        "category": "news",
+        "url": "https://www.bbc.com/turkce/articles/cyvz7pqn4qjo?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Thu, 10 Sep 2026 09:41:41 GMT",
         "moodTags": [
           "fatigue",
           "anger",
@@ -188,21 +188,21 @@
           "hope": 0
         },
         "keywords": [
-          "hale",
-          "pervasız",
-          "bulunmuştu",
-          "çalıp",
-          "değerindeki",
-          "dört"
+          "ağırlayacak",
+          "aradan",
+          "ilk",
+          "katıldığı",
+          "lacivertliler",
+          "maçı"
         ],
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
       {
-        "title": "Merkez Bankası faiz kararını açıklayacak: Beklentiler ne yönde?",
+        "title": "Merkez Bankası politika faizini %37'de sabit tuttu",
         "source": "BBC Türkçe",
         "category": "news",
         "url": "https://www.bbc.com/turkce/articles/cvgypkn91kno?at_medium=RSS&at_campaign=rss",
-        "publishedAt": "Thu, 10 Sep 2026 08:40:04 GMT",
+        "publishedAt": "Thu, 10 Sep 2026 11:02:32 GMT",
         "moodTags": [
           "fatigue",
           "anger",
@@ -219,21 +219,52 @@
           "hope": 0
         },
         "keywords": [
-          "açıklayacak",
-          "faiz",
-          "kararını",
-          "ağustos",
-          "ayında",
-          "faizi"
+          "faizini",
+          "politika",
+          "sabit",
+          "aldı",
+          "bugünkü",
+          "kararı"
         ],
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
       {
-        "title": "Kaşif Kozinoğlu soruşturması: Gazeteci Selahattin Günday gözaltına alındı",
+        "title": "Filmekimi 9 Ekim'de İstanbul'da başlıyor",
         "source": "BirGün",
         "category": "news",
-        "url": "https://www.birgun.net/haber/kasif-kozinoglu-sorusturmasi-gazeteci-selahattin-gunday-gozaltina-alindi-733956",
-        "publishedAt": "Thu, 10 Sep 2026 11:37:00 +0300",
+        "url": "https://www.birgun.net/haber/filmekimi-9-ekim-de-istanbul-da-basliyor-733983",
+        "publishedAt": "Thu, 10 Sep 2026 13:29:00 +0300",
+        "moodTags": [
+          "anger",
+          "fatigue",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 10,
+          "tenderness": 0,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 0,
+          "desire": 2,
+          "hope": 5
+        },
+        "keywords": [
+          "ağırlamaya",
+          "ayında",
+          "başlıyor",
+          "filmleri",
+          "hazırlanıyor",
+          "ödüllü"
+        ],
+        "shortAtmosphere": "içeride kabaran gündelik politik basınç"
+      },
+      {
+        "title": "Uzmanlığın görünmeyen değeri",
+        "source": "BirGün",
+        "category": "news",
+        "url": "https://www.birgun.net/makale/uzmanligin-gorunmeyen-degeri-733981",
+        "publishedAt": "Thu, 10 Sep 2026 13:27:00 +0300",
         "moodTags": [
           "anger",
           "fatigue",
@@ -250,42 +281,38 @@
           "hope": 1
         },
         "keywords": [
-          "alındı",
-          "gözaltına",
-          "soruşturması"
+          "değeri",
+          "görünmeyen"
         ],
         "shortAtmosphere": "içeride kabaran gündelik politik basınç"
       },
       {
-        "title": "Menderes Belediyesi soruşturmasında yeni gelişme: Bir avukat gözaltına alındı",
-        "source": "BirGün",
-        "category": "news",
-        "url": "https://www.birgun.net/haber/menderes-belediyesi-sorusturmasinda-yeni-gelisme-bir-avukat-gozaltina-alindi-733955",
-        "publishedAt": "Thu, 10 Sep 2026 11:32:00 +0300",
+        "title": "Covent Garden Sinfonietta Bodrum Kalesi’nde",
+        "source": "Artdog",
+        "category": "art",
+        "url": "https://artdogistanbul.com/covent-garden-sinfonietta-bodrum-kalesinde/",
+        "publishedAt": "Thu, 10 Sep 2026 10:15:04 +0000",
         "moodTags": [
-          "anger",
-          "fatigue",
+          "clarity",
+          "desire",
           "hope"
         ],
         "moodScores": {
-          "melancholy": 2,
-          "anger": 10,
+          "melancholy": 0,
+          "anger": 0,
           "tenderness": 0,
-          "fatigue": 10,
-          "absurdity": 0,
-          "clarity": 0,
-          "desire": 2,
-          "hope": 3
+          "fatigue": 0,
+          "absurdity": 3,
+          "clarity": 9,
+          "desire": 8,
+          "hope": 4
         },
         "keywords": [
-          "avukat",
-          "gözaltına",
-          "açıklandı",
-          "alınan",
-          "alındı",
-          "cinsel"
+          "gerçekleştirdi",
+          "ilk",
+          "konserlerini"
         ],
-        "shortAtmosphere": "içeride kabaran gündelik politik basınç"
+        "shortAtmosphere": "açılan sergi duvarı ve görüntü basıncı"
       },
       {
         "title": "Kaos’un Geometrisi",
@@ -407,37 +434,6 @@
           "sanat",
           "sergisiyle",
           "sezonunu"
-        ],
-        "shortAtmosphere": "açılan sergi duvarı ve görüntü basıncı"
-      },
-      {
-        "title": "Mahalla KĪMIYĀ Büyük Valide Han’da",
-        "source": "Artdog",
-        "category": "art",
-        "url": "https://artdogistanbul.com/mahalla-kimiya-buyuk-valide-handa/",
-        "publishedAt": "Fri, 04 Sep 2026 10:24:55 +0000",
-        "moodTags": [
-          "clarity",
-          "desire",
-          "hope"
-        ],
-        "moodScores": {
-          "melancholy": 0,
-          "anger": 0,
-          "tenderness": 0,
-          "fatigue": 0,
-          "absurdity": 3,
-          "clarity": 9,
-          "desire": 8,
-          "hope": 4
-        },
-        "keywords": [
-          "alacak",
-          "arasında",
-          "başta",
-          "farklı",
-          "mekânlarında",
-          "olmak"
         ],
         "shortAtmosphere": "açılan sergi duvarı ve görüntü basıncı"
       },
@@ -905,32 +901,32 @@
         "desire": 3,
         "hope": 3
       },
-      "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,clarity; safe_terms=basınç,gündelik,politik,ağırlaşan,alındı,ayında; weights=aesthetic:0.13,conceptual:0.33,rhythm:0.43,pressure:1 | category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=açılan,basıncı,duvarı,görüntü,sergi,açıyor; weights=aesthetic:1,conceptual:0.71,rhythm:0.48,pressure:0.18 | category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,hope,melancholy; safe_terms=açılan,bilgi,burada,derin,kırıntısı,zaman; weights=aesthetic:0.35,conceptual:1,rhythm:0.3,pressure:0.2 | category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yapay,yüz,tuhaflaşan,akşam; weights=aesthetic:0.6,conceptual:0.42,rhythm:1,pressure:0.26 | category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,hope,desire; safe_terms=appeared,gündelik,içi,şehir,temas,yumuşayan; weights=aesthetic:0.5,conceptual:0.33,rhythm:0.49,pressure:0.23",
+      "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,clarity; safe_terms=basınç,gündelik,politik,ağırlaşan,ayında,içeride; weights=aesthetic:0.14,conceptual:0.33,rhythm:0.43,pressure:1 | category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=açılan,basıncı,duvarı,görüntü,sergi,açıyor; weights=aesthetic:1,conceptual:0.71,rhythm:0.48,pressure:0.18 | category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,hope,melancholy; safe_terms=açılan,bilgi,burada,derin,kırıntısı,zaman; weights=aesthetic:0.35,conceptual:1,rhythm:0.3,pressure:0.2 | category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yapay,yüz,tuhaflaşan,akşam; weights=aesthetic:0.6,conceptual:0.42,rhythm:1,pressure:0.26 | category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,hope,desire; safe_terms=appeared,gündelik,içi,şehir,temas,yumuşayan; weights=aesthetic:0.5,conceptual:0.33,rhythm:0.49,pressure:0.23",
       "fragments": [
         "basınç",
         "gündelik",
         "politik",
         "ağırlaşan",
-        "alındı",
         "ayında",
-        "gözaltına",
         "içeride",
         "kabaran",
-        "açık"
+        "açık",
+        "açıkladı",
+        "ağırlamaya"
       ],
       "leakageWords": [
         "basınç",
         "gündelik",
         "politik",
         "ağırlaşan",
-        "alındı",
         "ayında",
-        "gözaltına",
         "içeride",
         "kabaran",
         "açık",
         "açıkladı",
-        "açıklandı",
+        "ağırlamaya",
+        "ağırlayacak",
+        "aldı",
         "açılan",
         "basıncı"
       ],
@@ -954,25 +950,27 @@
           "gündelik",
           "politik",
           "ağırlaşan",
-          "alındı",
           "ayında",
-          "gözaltına",
           "içeride",
           "kabaran",
           "açık",
           "açıkladı",
-          "açıklandı"
+          "ağırlamaya",
+          "ağırlayacak",
+          "aldı"
         ],
-        "novelty_terms": [],
+        "novelty_terms": [
+          "ağırlayacak"
+        ],
         "repeated_terms": [
           "basınç",
           "gündelik",
           "politik",
           "ağırlaşan",
-          "alındı",
           "ayında",
-          "gözaltına",
-          "içeride"
+          "içeride",
+          "kabaran",
+          "açık"
         ],
         "rejected_terms": [],
         "mood_bias": [
@@ -980,11 +978,11 @@
           "anger",
           "clarity"
         ],
-        "aesthetic_weight": 0.13,
+        "aesthetic_weight": 0.14,
         "conceptual_weight": 0.33,
         "rhythm_weight": 0.43,
         "pressure_weight": 1,
-        "summary_for_prompt": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,clarity; safe_terms=basınç,gündelik,politik,ağırlaşan,alındı,ayında; weights=aesthetic:0.13,conceptual:0.33,rhythm:0.43,pressure:1"
+        "summary_for_prompt": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,clarity; safe_terms=basınç,gündelik,politik,ağırlaşan,ayında,içeride; weights=aesthetic:0.14,conceptual:0.33,rhythm:0.43,pressure:1"
       },
       {
         "category": "art",
@@ -1000,16 +998,17 @@
           "görüntü",
           "sergi",
           "açıyor",
-          "alacak",
           "aldığı",
-          "arasında",
           "başladı",
           "başlıklı",
-          "başta"
+          "bildiğimiz",
+          "biraz",
+          "buluşuyor"
         ],
         "novelty_terms": [
           "başladı",
-          "başta"
+          "bildiğimiz",
+          "biraz"
         ],
         "repeated_terms": [
           "açılan",
@@ -1018,10 +1017,12 @@
           "görüntü",
           "sergi",
           "açıyor",
-          "alacak",
-          "aldığı"
+          "aldığı",
+          "başlıklı"
         ],
-        "rejected_terms": [],
+        "rejected_terms": [
+          "proper_or_source_name:1"
+        ],
         "mood_bias": [
           "clarity",
           "desire",
@@ -1180,7 +1181,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://arkeofili.com/feed/",
-        "lastCheckedAt": "2026-09-10T09:35:17.246Z",
+        "lastCheckedAt": "2026-09-10T11:03:14.318Z",
         "attemptedUrls": [
           "https://arkeofili.com/feed/"
         ],
@@ -1196,7 +1197,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://evrimagaci.org/rss.xml",
-        "lastCheckedAt": "2026-09-10T09:35:17.248Z",
+        "lastCheckedAt": "2026-09-10T11:03:14.320Z",
         "attemptedUrls": [
           "https://evrimagaci.org/rss.xml"
         ],
@@ -1212,7 +1213,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://altyazi.net/feed/",
-        "lastCheckedAt": "2026-09-10T09:35:17.249Z",
+        "lastCheckedAt": "2026-09-10T11:03:14.321Z",
         "attemptedUrls": [
           "https://altyazi.net/feed/"
         ],
@@ -1228,7 +1229,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.otekisinema.com/feed/",
-        "lastCheckedAt": "2026-09-10T09:35:17.844Z",
+        "lastCheckedAt": "2026-09-10T11:03:14.825Z",
         "attemptedUrls": [
           "https://www.otekisinema.com/feed/"
         ],
@@ -1244,7 +1245,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.bagimsizsinema.com/feed",
-        "lastCheckedAt": "2026-09-10T09:35:18.257Z",
+        "lastCheckedAt": "2026-09-10T11:03:15.299Z",
         "attemptedUrls": [
           "https://www.bagimsizsinema.com/feed"
         ],
@@ -1260,7 +1261,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://artdogistanbul.com/feed/",
-        "lastCheckedAt": "2026-09-10T09:35:18.629Z",
+        "lastCheckedAt": "2026-09-10T11:03:15.471Z",
         "attemptedUrls": [
           "https://artdogistanbul.com/feed/"
         ],
@@ -1276,7 +1277,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://argonotlar.com/feed/",
-        "lastCheckedAt": "2026-09-10T09:35:19.672Z",
+        "lastCheckedAt": "2026-09-10T11:03:15.545Z",
         "attemptedUrls": [
           "https://argonotlar.com/feed/"
         ],
@@ -1292,7 +1293,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.arkitera.com/feed/",
-        "lastCheckedAt": "2026-09-10T09:35:20.676Z",
+        "lastCheckedAt": "2026-09-10T11:03:16.355Z",
         "attemptedUrls": [
           "https://www.arkitera.com/feed/"
         ],
@@ -1308,7 +1309,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.artkolik.net/feed",
-        "lastCheckedAt": "2026-09-10T09:35:20.804Z",
+        "lastCheckedAt": "2026-09-10T11:03:16.578Z",
         "attemptedUrls": [
           "https://www.artkolik.net/feed"
         ],
@@ -1324,7 +1325,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://terrabayt.com/feed/",
-        "lastCheckedAt": "2026-09-10T09:35:20.961Z",
+        "lastCheckedAt": "2026-09-10T11:03:16.736Z",
         "attemptedUrls": [
           "https://terrabayt.com/feed/"
         ],
@@ -1340,7 +1341,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.nouvart.net/feed/",
-        "lastCheckedAt": "2026-09-10T09:35:21.989Z",
+        "lastCheckedAt": "2026-09-10T11:03:17.774Z",
         "attemptedUrls": [
           "https://www.nouvart.net/feed/"
         ],
@@ -1356,7 +1357,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds2.feedburner.com/itsnicethat/SlXC",
-        "lastCheckedAt": "2026-09-10T09:35:22.172Z",
+        "lastCheckedAt": "2026-09-10T11:03:17.927Z",
         "attemptedUrls": [
           "https://feeds2.feedburner.com/itsnicethat/SlXC"
         ],
@@ -1372,7 +1373,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://thecreativeindependent.com/feed.xml",
-        "lastCheckedAt": "2026-09-10T09:35:22.247Z",
+        "lastCheckedAt": "2026-09-10T11:03:18.188Z",
         "attemptedUrls": [
           "https://thecreativeindependent.com/feed.xml"
         ],
@@ -1388,7 +1389,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://bantmag.com/feed/",
-        "lastCheckedAt": "2026-09-10T09:35:22.353Z",
+        "lastCheckedAt": "2026-09-10T11:03:18.434Z",
         "attemptedUrls": [
           "https://bantmag.com/feed/"
         ],
@@ -1404,7 +1405,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://manifold.press/rss",
-        "lastCheckedAt": "2026-09-10T09:35:22.399Z",
+        "lastCheckedAt": "2026-09-10T11:03:18.485Z",
         "attemptedUrls": [
           "https://manifold.press/rss"
         ],
@@ -1420,7 +1421,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://playtusu.com/feed/",
-        "lastCheckedAt": "2026-09-10T09:35:22.507Z",
+        "lastCheckedAt": "2026-09-10T11:03:18.605Z",
         "attemptedUrls": [
           "https://playtusu.com/feed/"
         ],
@@ -1436,7 +1437,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://vesaire.press/feed/",
-        "lastCheckedAt": "2026-09-10T09:35:23.007Z",
+        "lastCheckedAt": "2026-09-10T11:03:19.113Z",
         "attemptedUrls": [
           "https://vesaire.press/feed/"
         ],
@@ -1452,7 +1453,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds.bbci.co.uk/turkce/rss.xml",
-        "lastCheckedAt": "2026-09-10T09:35:23.259Z",
+        "lastCheckedAt": "2026-09-10T11:03:19.232Z",
         "attemptedUrls": [
           "https://feeds.bbci.co.uk/turkce/rss.xml"
         ],
@@ -1468,7 +1469,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.birgun.net/rss/home",
-        "lastCheckedAt": "2026-09-10T09:35:23.288Z",
+        "lastCheckedAt": "2026-09-10T11:03:19.443Z",
         "attemptedUrls": [
           "https://www.birgun.net/rss/home"
         ],
@@ -1484,7 +1485,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.diken.com.tr/feed/",
-        "lastCheckedAt": "2026-09-10T09:35:23.486Z",
+        "lastCheckedAt": "2026-09-10T11:03:19.490Z",
         "attemptedUrls": [
           "https://www.diken.com.tr/feed/"
         ],
@@ -1500,7 +1501,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.radikal.com.tr/feed/",
-        "lastCheckedAt": "2026-09-10T09:35:23.554Z",
+        "lastCheckedAt": "2026-09-10T11:03:19.508Z",
         "attemptedUrls": [
           "https://www.radikal.com.tr/feed/"
         ],
@@ -1516,7 +1517,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.cumhuriyet.com.tr/rss",
-        "lastCheckedAt": "2026-09-10T09:35:23.568Z",
+        "lastCheckedAt": "2026-09-10T11:03:19.715Z",
         "attemptedUrls": [
           "https://www.cumhuriyet.com.tr/rss/son_dakika.xml"
         ],
@@ -1532,7 +1533,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://istanbullife.com.tr/feed/",
-        "lastCheckedAt": "2026-09-10T09:35:23.781Z",
+        "lastCheckedAt": "2026-09-10T11:03:19.797Z",
         "attemptedUrls": [
           "https://istanbullife.com.tr/feed/"
         ],
