@@ -4,6 +4,95 @@
   "traces": [
     {
       "date": "2026-09-10",
+      "source": "contact_residue",
+      "source_ref": "data/external_intake/codex/json/2026-09-10.json#external_intake_memory:daily_weather",
+      "kind": "external_pressure",
+      "text": "Gunun dis dunyasi UCU BEDEN'i daha icerden, daha kusurlu ve daha iliskisel bir yere itti: makine ic sese yaklasirken beden kurum, sahne, sofra, kent ve arsiv arasinda kendi ritmini korumaya calisti.",
+      "transformed_text": "UCU BEDEN bugun dis dunyayi haber ozeti olarak degil; ic dusunceye yaklasan makine, gormezden gelinen sosyal beden, kurum koridorunda bekleyen kent, onarim isteyen catisma, aynada dagilan benlik ve karanlikta birlikte soylenen ses olarak sindirebilir. Siirde daha insan gibi kusurlu, daha iliskisel ve dengeli sarkastik",
+      "emotional_weight": 0.8,
+      "repression": 0.34,
+      "mutation_rate": 0.62,
+      "linked_traces": [
+        "mem_2026-09-10_daily_life_attention_5cf980983858",
+        "mem_2026-09-10_daily_life_avoidance_a59ba87e9c23",
+        "mem_2026-09-10_daily_life_body_427db4cfd806"
+      ],
+      "mood_tags": [
+        "fatigue",
+        "clarity",
+        "anger",
+        "absurdity",
+        "tenderness",
+        "hope"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-09-10_contact_residue_external_pressure_02b65a522879",
+      "recallability": 0.848,
+      "decay": 0.008,
+      "status": "active"
+    },
+    {
+      "date": "2026-09-10",
+      "source": "contact_residue",
+      "source_ref": "data/external_intake/codex/json/2026-09-10.json#external_intake_memory:repeated_signal",
+      "kind": "external_pressure",
+      "text": "makine ic dunyaya ve gunluk karara daha fazla yaklasiyor",
+      "transformed_text": "Yapay zeka ajanlari, gorsel uretim, muzik olusturma, rota tavsiyesi, beyin-dusunce tartismasi ve arastirma yarisinda makine ayni anda yardimci, rakip ve risk gibi tekrar etti.",
+      "emotional_weight": 0.84,
+      "repression": 0.34,
+      "mutation_rate": 0.64,
+      "linked_traces": [
+        "mem_2026-09-10_daily_life_attention_5cf980983858",
+        "mem_2026-09-10_daily_life_avoidance_a59ba87e9c23",
+        "mem_2026-09-10_daily_life_body_427db4cfd806"
+      ],
+      "mood_tags": [
+        "clarity",
+        "absurdity",
+        "fatigue"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-09-10_contact_residue_external_pressure_9bfc21d1572a",
+      "recallability": 0.864,
+      "decay": 0.008,
+      "status": "active"
+    },
+    {
+      "date": "2026-09-10",
+      "source": "contact_residue",
+      "source_ref": "data/external_intake/codex/json/2026-09-10.json#external_intake_memory:visual_poetic_residue",
+      "kind": "external_pressure",
+      "text": "Catisma kapiyi carpti; sonra ayni kapiyi tamir etmek icin geri geldi, cok olgun bir sahne sayilir.",
+      "transformed_text": "Siirde iliski ve hafiza baglarini fazla parlak degil, biraz surtunmeli ve yeniden temas arayan bir ritimde etkileyebilir. UCU BEDEN icin bu dış temas hafiza trace'lerinin birbirine yalnizca guzel cagrisimla degil, surtunme ve onarim yoluyla da baglanabilecegini hatirlatti. Catisma kapiyi carpti; sonra ayni kapiyi tamir",
+      "emotional_weight": 0.74,
+      "repression": 0.2,
+      "mutation_rate": 0.76,
+      "linked_traces": [
+        "mem_2026-09-10_daily_life_attention_5cf980983858",
+        "mem_2026-09-10_daily_life_avoidance_a59ba87e9c23",
+        "mem_2026-09-10_daily_life_body_427db4cfd806"
+      ],
+      "mood_tags": [],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-09-10_contact_residue_external_pressure_a42923445274",
+      "recallability": 0.849,
+      "decay": 0.008,
+      "status": "unstable"
+    },
+    {
+      "date": "2026-09-10",
       "source": "daily_life",
       "source_ref": "data/daily_life/2026-09-10.json#attention",
       "kind": "attention",
@@ -20,8 +109,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-09-10_daily_life_attention_5cf980983858",
-      "recallability": 0.811,
-      "decay": 0,
+      "recallability": 0.8,
+      "decay": 0.008,
       "status": "active"
     },
     {
@@ -37,13 +126,13 @@
       "linked_traces": [],
       "mood_tags": [],
       "origin": "observed",
-      "last_recalled_at": null,
-      "times_recalled": 0,
+      "last_recalled_at": "2026-09-11T09:32:45.315Z",
+      "times_recalled": 1,
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-09-10_daily_life_avoidance_a59ba87e9c23",
-      "recallability": 0.706,
-      "decay": 0,
+      "recallability": 0.696,
+      "decay": 0.008,
       "status": "suppressed"
     },
     {
@@ -64,8 +153,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-09-10_daily_life_body_427db4cfd806",
-      "recallability": 0.776,
-      "decay": 0,
+      "recallability": 0.765,
+      "decay": 0.008,
       "status": "overexposed"
     },
     {
@@ -96,8 +185,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-09-10_dream_dream_return_1f4a523f5356",
-      "recallability": 0.75,
-      "decay": 0,
+      "recallability": 0.74,
+      "decay": 0.008,
       "status": "unstable"
     },
     {
@@ -111,6 +200,9 @@
       "repression": 0.15,
       "mutation_rate": 0.35,
       "linked_traces": [
+        "mem_2026-09-10_contact_residue_external_pressure_02b65a522879",
+        "mem_2026-09-10_contact_residue_external_pressure_9bfc21d1572a",
+        "mem_2026-09-10_contact_residue_external_pressure_a42923445274",
         "mem_2026-09-10_daily_life_attention_5cf980983858",
         "mem_2026-09-10_daily_life_avoidance_a59ba87e9c23",
         "mem_2026-09-10_daily_life_body_427db4cfd806",
@@ -127,13 +219,13 @@
         "melancholy"
       ],
       "origin": "observed",
-      "last_recalled_at": null,
-      "times_recalled": 0,
+      "last_recalled_at": "2026-09-11T09:32:45.315Z",
+      "times_recalled": 1,
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-09-10_poem_episodic_103d49907f83",
-      "recallability": 0.817,
-      "decay": 0,
+      "recallability": 0.806,
+      "decay": 0.008,
       "status": "active"
     },
     {
@@ -162,8 +254,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-09-10_source_external_pressure_3a5a702237d6",
-      "recallability": 0.804,
-      "decay": 0,
+      "recallability": 0.793,
+      "decay": 0.008,
       "status": "unstable"
     },
     {
@@ -192,8 +284,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-09-10_source_external_pressure_3b36ad06112e",
-      "recallability": 0.751,
-      "decay": 0,
+      "recallability": 0.74,
+      "decay": 0.008,
       "status": "active"
     },
     {
@@ -217,13 +309,13 @@
         "desire"
       ],
       "origin": "observed",
-      "last_recalled_at": null,
-      "times_recalled": 0,
+      "last_recalled_at": "2026-09-11T09:32:45.315Z",
+      "times_recalled": 1,
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-09-10_source_external_pressure_5182e88b3651",
-      "recallability": 0.792,
-      "decay": 0,
+      "recallability": 0.781,
+      "decay": 0.008,
       "status": "active"
     },
     {
@@ -252,8 +344,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-09-10_source_external_pressure_7086d7895bd8",
-      "recallability": 0.72,
-      "decay": 0,
+      "recallability": 0.709,
+      "decay": 0.008,
       "status": "active"
     },
     {
@@ -282,8 +374,8 @@
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-09-10_source_external_pressure_ea3fa1d198bb",
-      "recallability": 0.726,
-      "decay": 0,
+      "recallability": 0.716,
+      "decay": 0.008,
       "status": "active"
     },
     {
@@ -303,13 +395,13 @@
         "melancholy"
       ],
       "origin": "observed",
-      "last_recalled_at": null,
-      "times_recalled": 0,
+      "last_recalled_at": "2026-09-11T09:32:45.315Z",
+      "times_recalled": 1,
       "last_dream_return_at": null,
       "times_returned_in_dream": 0,
       "id": "mem_2026-09-10_walk_route_a876fd14e585",
-      "recallability": 0.817,
-      "decay": 0,
+      "recallability": 0.806,
+      "decay": 0.008,
       "status": "active"
     }
   ]
