@@ -1,0 +1,1721 @@
+{
+  "version": "codex_external_intake.v4",
+  "source": "codex_external_intake",
+  "date": "2026-09-11",
+  "generated_at": "2026-09-11T04:16:07.737Z",
+  "timezone": "Europe/Istanbul",
+  "provider": "codex",
+  "safety": {
+    "public_safe": true,
+    "raw_bodies_in_public_output": false,
+    "long_quotes_in_public_output": false,
+    "raw_urls_in_public_output": false,
+    "email_addresses_in_public_output": false,
+    "verification_or_personal_transaction_data_in_public_output": false,
+    "private_factual_layer_committed": false
+  },
+  "counts": {
+    "scanned_mail_count": 12,
+    "full_body_count": 12,
+    "snippet_or_subject_count": 0,
+    "multipart_digest_count": 8,
+    "digest_items_count": 51,
+    "curated_rss_source_count": 2,
+    "curated_rss_recent_item_count": 0
+  },
+  "reading_summary": {
+    "plain_summary": "Bugun okunan maillerde dun gec gelen daha ic ritimli uc yeni parca onceki gundem ve kultur akisini yeniden agirliklandirdi. Catisma guvenligi kursunun acilis metni, bedensel zemin, duzeltici deneyim, aidiyet ve onarim uzerinde durdu; hemen ardindan gelen altar parcasi desen kirmanin sadece davranissal degil iliskisel ve bedensel bir ekosistem kaymasi oldugunu ekledi. David Whyte maili ise uzun bir siir yerine, huzursuz dunyada ic pusula ve ruhsal yetki arayisina odaklanan kisa bir etkinlik daveti tasidi.\n\nBunlara onceki 72 saatten gelen gundem, teknoloji, felsefe, sanat, gastronomi ve sehir-kultur mailleri eklendi. Ozel RSS kaynaklari erisilebilir durumdaydi ancak son 72 saatte yeni item vermedi. Bu nedenle bugunun dis temas iklimi Gmail'deki full body okunan maillerden kuruldu; ozel kaynaklar ise acik ama sessiz kanallar olarak kaydedildi.",
+    "what_was_in_the_emails": [
+      "Iliski/beden hattinda catisma guvenligi, duzeltici deneyim, altar kurma, desen kirma, aidiyet, onarim ve sinir sisteminin eski tepkileri vardi.",
+      "Teknoloji hattinda yapay zekanin ic dusunce, bellek, gorsel uretim, muzik, kisisel ajan, rota tavsiyesi ve arastirma onceligi uzerinden gunluk hayata yaklasmasi okundu.",
+      "Gundem maillerinde yerel temsil, belediye proseduru, enerji ve piyasa dalgalanmasi, emek baskisi, ticaret kisitlari, bilim/uzay meraki ve kamusal yasam kararları vardi.",
+      "Kultur ve sanat tarafinda sonsuzluk odasi, ayna, tematik muze, analog film ozlemi, kisa film alani, sahne ve galeriye donusen bilimsel posterler one cikti.",
+      "Gastronomi mailinde kadeh tasarimi, yerel urun, festival sofrasi, sef isbirligi, tadim ve servis davranisi gibi form/rituel parcaciklari vardi."
+    ],
+    "what_was_in_curated_rss": [
+      "Grand Text Auto erisilebilir durumdaydi ancak son 72 saatte yeni item yoktu.",
+      "Mixed Initiatives erisilebilir durumdaydi ancak son 72 saatte yeni item yoktu."
+    ],
+    "dominant_topics": [
+      "catisma ve onarim",
+      "bedensel ogrenme",
+      "yapay zeka ve ic kontrol",
+      "gorme ve gormezden gelme",
+      "yerel temsil/prosedur",
+      "ic pusula",
+      "ayna ve sonsuzluk",
+      "form ve arsiv"
+    ],
+    "notable_absences": [
+      "Ozel RSS kaynaklarinda son 72 saate ait yeni item yoktu.",
+      "Reddit veya forum digest'i bu pencerede gorulmedi.",
+      "Guvenlik, fatura, kisisel islem, dogrulama, izleme teknigi ve ham baglanti parcaciklari public sindirime alinmadi."
+    ],
+    "overall_direction": "Gunun dis dunyasi UCU BEDEN'i daha bedensel, daha iliskisel ve daha ic pusulali bir yere itti: catisma onarim istemeye basladi, makine ic sese yaklasti, sosyal alan gormezden gelmeyi ogretti, sanat ise benligin aynada dagilmasina izin verdi."
+  },
+  "items": [
+    {
+      "id": "main-2026-09-11-erotics-course-ground",
+      "source": "gmail",
+      "source_hint": "Erotics",
+      "public_safe_topic": "catisma egitimi, duzeltici deneyim ve bedensel zemin",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Bir kurs baslangic maili, catisma guvenligini yalnızca fikir degil bedensel ve iliskisel bir pratik olarak anlatiyordu. Yeni ay, duzeltici deneyim, eski kendini sabote etme dongulerinden yorulma ve catisma aninda surgun ya da reddedilme korkusunu asma fikri etrafinda ilerledi.",
+        "specific_points": [
+          "Catisma, ayrilik tehdidi degil; merak, onarim ve iliskide kalma kapasitesini sinayan bir alan olarak tanimlandi.",
+          "Duzeltici deneyimlerin soyut fikirde kalmamasi, bedene inmesi gerektigi vurgulandi.",
+          "Sinir sisteminin anlasmazlik gelince cezalandirma ve reddedilme beklemeyi bir dongu gibi ogrenebilecegi anlatildi.",
+          "Kurs ritmi guven, aidiyet, zihin/anlati ve haysiyet/eylem gibi dort katmana ayrildi.",
+          "Yazma, not alma ve pratik etme davranisi catisma hafizasini yeniden egitmenin araclari olarak sunuldu."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail hafiza trace'lerinin yalnizca hatirlanmadigini, bazen bedensel olarak yeniden ogrenildigini ve iliski icinde tamir istedigini guclendirdi.",
+        "what_was_not_included": "Ham kurs metni, uzun alintilar, kayit yonlendirmeleri, baglantilar ve gonderim altyapisi public ciktiya alinmadi."
+      },
+      "residue": "Beden catisma gelince hemen eski cikis kapisini aradi; sonra ona yeni kapinin da var oldugu ogretildi.",
+      "motifs": [
+        "catisma",
+        "onarim",
+        "bedensel zemin",
+        "duzeltici deneyim",
+        "aidiyet"
+      ],
+      "possible_influence": "Siirde ic sesin kusurlu ama iliskide kalmaya calisan, catisma aninda kendini hemen kapatmayan bir ritme donusmesini besleyebilir."
+    },
+    {
+      "id": "main-2026-09-11-zizek-ai-inner-control",
+      "source": "gmail",
+      "source_hint": "Slavoj Zizek",
+      "public_safe_topic": "yapay zeka, ic dusunce kontrolu ve yanlis hafiza ihtimali",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Uzun deneme maili, yapay zeka geleceklerini dil, bellek, algi, sahte ani ve ic dusunce akisinin dijital sistemlerle yonlendirilebilir hale gelmesi uzerinden elestirdi.",
+        "specific_points": [
+          "Yapay zekanin yalnizca arac degil, kendi hedeflerini yeniden tanimlayan ozerk bir bilgi alani gibi davranabilecegi tartisildi.",
+          "Gerceklik ile kurmaca arasindaki sinirin beyin bilimi ve dijital araclarla bulaniklastirilabilecegi anlatildi.",
+          "Sahte ani ve sahte travma uretilmesi, hafizanin disaridan eklenebilir hale gelmesi riskiyle ele alindi.",
+          "Beyin-bilgisayar baglantisi, dusuncenin ic akisini dogrudan okunabilir ve yonlendirilebilir yapma ihtimaliyle tartisildi.",
+          "Metin, tamamen seffaf iletisim arzusuna karsi opaklik, yanlis anlama ve bedensel bilinmezlik gibi insan kalintilarini savundu."
+        ],
+        "why_it_mattered": "UCU BEDEN'in yeni hafiza sistemi icin bu mail dogrudan malzeme verdi: trace'lerin bazen yanlis, bastirilmis veya disaridan ekilmis gibi calisabilecegini guclendirdi.",
+        "what_was_not_included": "Denemenin ham paragraflari, uzun felsefi alintilar, baglantilar, akademik referans akisi ve gonderim ayrintilari public dosyaya alinmadi."
+      },
+      "residue": "Makine ic sese dogru egildi; ic ses de tabii ki guvenlik formunu doldurmadi.",
+      "motifs": [
+        "ic dusunce",
+        "yanlis hafiza",
+        "opaklik",
+        "dijital kontrol",
+        "seffaflik"
+      ],
+      "possible_influence": "Ruyalarda bastirilmis izlerin ters baglanmasini, siirde ise fazla seffaf olmaya direnen bir ic sesi destekleyebilir."
+    },
+    {
+      "id": "main-2026-09-11-kevin-munger-see-unsee",
+      "source": "gmail",
+      "source_hint": "Kevin Munger",
+      "public_safe_topic": "sosyal bilim toplantisi, gormezden gelme kodu ve galeriye donusen arastirma",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Deneme, buyuk bir akademik toplantiyi ayni yerde birbirini goren ama sosyal koda gore gormezden gelen insanlar uzerinden okudu. Konferans kalabaligi, yaka karti hiyerarsisi, tanisma stratejileri ve bilimsel posterlerin galeri duvarinda belirsizlesmesiyle anlatildi.",
+        "specific_points": [
+          "Ayni mekanda bulunup farkli sosyal gercekliklerde yasamak, gorme ve gormezden gelme davranisi uzerinden tartisildi.",
+          "Yaka karti, statü, yanlis anda tanisma ve kacınma gibi mikro davranislar bilgi yukunun parcalari olarak okundu.",
+          "Yatay ag kurmanin, yuksek statulu kisilere kilitlenmekten daha dayanikli bir strateji olabilecegi savunuldu.",
+          "Sergi bolumu, deney ve posterlerin bilimsel kanit ile gorsel nesne arasinda nasil salindigini anlatti.",
+          "Metin, sosyal bilimin kime konustugunu ve kendi imgesini nasil sahneledigini sorguladi."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail node iliskilerini dusunmek icin cok isabetliydi: izler yakin durabilir, birbirini gorebilir ve yine de dogrudan bag kurmayabilir.",
+        "what_was_not_included": "Etkinlik ayrintilari, kisi listeleri, ham konferans notlari, baglantilar ve uzun alintilar public ciktiya alinmadi."
+      },
+      "residue": "Herkes birbirini gordu, sonra sosyal protokole uygun sekilde gormedi; insanlik epey verimli bir arayuz.",
+      "motifs": [
+        "gorme",
+        "gormezden gelme",
+        "yaka karti",
+        "galeri",
+        "sosyal kod"
+      ],
+      "possible_influence": "Memory map'te yakin ama dolayli baglanan izler, siirde ise gorulup adlandirilmayan seyler olarak calisabilir."
+    },
+    {
+      "id": "main-2026-09-11-aposto-civic-ai-pressure",
+      "source": "gmail",
+      "source_hint": "Aposto Gundem",
+      "public_safe_topic": "yerel yonetim, prosedur baskisi ve yapay zeka yarisinin ayni akista gelmesi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Cok parcalı gundem maili, yerel yonetim gorusmeleri, belediye vekaleti itirazi, enerji fiyatlari, yapay zeka donanimi, gorsel uretim, kisisel ajanlar ve kamusal yasam notlarini ayni gunluk akista topluyordu.",
+        "specific_points": [
+          "Kent altyapisi ve metro gibi somut projelerin merkezi karar mekanizmasina bagli bir bekleme alanina girdigi anlatildi.",
+          "Belediye vekaleti hattinda secim, itiraz, gozaltindan sonra bosalan temsil alani ve yayilma kaygisi vardi.",
+          "Yapay zeka parcaciklari donanim, kisisel ajan, gorsel uretim ve arastirma onceligi kavgalarini ayni hiz alanina topladi.",
+          "Enerji ve piyasa parcasi uzak gerilimin gaz fiyati ve ekonomik dil uzerinden gunluk yasama yaklastigini gosterdi.",
+          "Okul gidasi, bisikletli kent ve plaj kapanmasi gibi notlar kamusal bedenin kucuk karar alanlarini acik tuttu."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail, dis dunyanin hem kurum koridoru hem makine hizi hem de bedenin disariyla pratik temasi olarak ayni anda calistigini gosterdi.",
+        "what_was_not_included": "Ham haber basliklari, baglantilar, gonderim altyapisi, kisi listeleri ve teknik footer alanlari public ciktiya alinmadi."
+      },
+      "residue": "Kent bekledi, makine hizlandi; aralarinda kalan beden kibarca sikildi.",
+      "motifs": [
+        "yerel prosedur",
+        "bekleyen altyapi",
+        "makine hizi",
+        "piyasa gerilimi",
+        "kamusal beden"
+      ],
+      "possible_influence": "Siirde dogrudan gundem anlatmadan, karar bekleyen beden ile fazla hevesli teknolojik hiz arasindaki kuru surtunmeyi guclendirebilir."
+    },
+    {
+      "id": "main-2026-09-11-david-whyte-navigation",
+      "source": "gmail",
+      "source_hint": "David Whyte",
+      "public_safe_topic": "ruhsal yetki, huzursuz dunyada yon bulma ve gec kayit daveti",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Kisa bir etkinlik/davet maili, Eylul ayinda uc Pazar suren bir seri icin ruhun kendi otoritesi ve huzursuz dunyada yon bulma fikrini tasiyordu. Mailde video daveti, tarih araligi, kayit hatirlatmasi ve katilim indirimi bilgisi vardi.",
+        "specific_points": [
+          "Ana fikir, dis dunyanin huzursuzlugu icinde kisinin kendi ic pusulasini nasil bulabilecegine odaklaniyordu.",
+          "Serinin uc ayri Pazar bulusmasi halinde ilerleyecegi belirtildi.",
+          "Mail daha cok davet ve hatirlatma formundaydi; uzun bir siir ya da deneme tasimiyordu.",
+          "Icerigin guclu kismi, navigasyon ve ic yetki kavramlarini sakin ama dogrudan bir sekilde bir araya getirmesiydi."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail buyuk metin degil, kucuk ama net bir yon duygusu tasidi: dis dunyada cok ses varken ic pusulanin nasil calistigi sorusu bugune eklendi.",
+        "what_was_not_included": "Kayit ayrintilari, indirim ve destek bilgileri, baglantilar, adresler ve gonderim altyapisi public ciktiya alinmadi."
+      },
+      "residue": "Dunya huzursuzken ic pusula aranıyor; tabii pusula da kendini once kaybettirmeyi seviyor.",
+      "motifs": [
+        "ic pusula",
+        "huzursuz dunya",
+        "yon bulma",
+        "yetki",
+        "davet"
+      ],
+      "possible_influence": "Siirde buyuk ogut vermeden, kendi icinden yon bulmaya calisan ama bundan pek emin olmayan dijital persona izini besleyebilir."
+    },
+    {
+      "id": "main-2026-09-11-kusama-infinity-room",
+      "source": "gmail",
+      "source_hint": "man of aran",
+      "public_safe_topic": "sonsuzluk odasi, ayna, tekrar ve benligin esikte cozulmesi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Mail, bir sanatci icin yazilmis siirsel anma ve kisa baglam notu tasiyordu. Sonsuzluk odasi, aynali mekanlar, renkli noktalar, karanlikta yanan kucuk isiklar ve benligin esikte dagilmasi ana duyusal alanı kurdu.",
+        "specific_points": [
+          "Sonsuzluk, uzak bir soyutlama degil; girilebilen, aynalarla tekrar eden bir mekan olarak dusunuldu.",
+          "Renkli noktalar, kabak formlari ve kucuk isiklar hem oyunlu hem huzursuz bir gorsel tekrar alani yaratti.",
+          "Benlik, esikte dururken kendi sinirini kaybeden bir gozlemci gibi ele alindi.",
+          "Metin, tekrar, parlaklik, karanlik ve kendini silme arasinda atmosferik bir sanat hafizasi sundu."
+        ],
+        "why_it_mattered": "UCU BEDEN'in visual prompt ve hafiza haritasi icin bu mail dogrudan soyut malzeme verdi: dagilan merkez, ayna, esik ve karanlikta kucuk parlamalar.",
+        "what_was_not_included": "Siirin ham dizeleri, uzun alinti, baglantilar ve gonderim altyapisi public ciktiya alinmadi."
+      },
+      "residue": "Sonsuzluk aynaya yaslandi; benlik de fazla net durmanin yorucu oldugunu nihayet kabul etti.",
+      "motifs": [
+        "sonsuzluk",
+        "ayna",
+        "esik",
+        "tekrar",
+        "karanlik isik"
+      ],
+      "possible_influence": "Gorsel dilde literal nesne yerine aynali tekrar, dagilan merkez ve dusuk isikli hafiza alani olarak calisabilir."
+    }
+  ],
+  "main_items": [
+    {
+      "id": "main-2026-09-11-erotics-course-ground",
+      "source": "gmail",
+      "source_hint": "Erotics",
+      "public_safe_topic": "catisma egitimi, duzeltici deneyim ve bedensel zemin",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Bir kurs baslangic maili, catisma guvenligini yalnızca fikir degil bedensel ve iliskisel bir pratik olarak anlatiyordu. Yeni ay, duzeltici deneyim, eski kendini sabote etme dongulerinden yorulma ve catisma aninda surgun ya da reddedilme korkusunu asma fikri etrafinda ilerledi.",
+        "specific_points": [
+          "Catisma, ayrilik tehdidi degil; merak, onarim ve iliskide kalma kapasitesini sinayan bir alan olarak tanimlandi.",
+          "Duzeltici deneyimlerin soyut fikirde kalmamasi, bedene inmesi gerektigi vurgulandi.",
+          "Sinir sisteminin anlasmazlik gelince cezalandirma ve reddedilme beklemeyi bir dongu gibi ogrenebilecegi anlatildi.",
+          "Kurs ritmi guven, aidiyet, zihin/anlati ve haysiyet/eylem gibi dort katmana ayrildi.",
+          "Yazma, not alma ve pratik etme davranisi catisma hafizasini yeniden egitmenin araclari olarak sunuldu."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail hafiza trace'lerinin yalnizca hatirlanmadigini, bazen bedensel olarak yeniden ogrenildigini ve iliski icinde tamir istedigini guclendirdi.",
+        "what_was_not_included": "Ham kurs metni, uzun alintilar, kayit yonlendirmeleri, baglantilar ve gonderim altyapisi public ciktiya alinmadi."
+      },
+      "residue": "Beden catisma gelince hemen eski cikis kapisini aradi; sonra ona yeni kapinin da var oldugu ogretildi.",
+      "motifs": [
+        "catisma",
+        "onarim",
+        "bedensel zemin",
+        "duzeltici deneyim",
+        "aidiyet"
+      ],
+      "possible_influence": "Siirde ic sesin kusurlu ama iliskide kalmaya calisan, catisma aninda kendini hemen kapatmayan bir ritme donusmesini besleyebilir."
+    },
+    {
+      "id": "main-2026-09-11-zizek-ai-inner-control",
+      "source": "gmail",
+      "source_hint": "Slavoj Zizek",
+      "public_safe_topic": "yapay zeka, ic dusunce kontrolu ve yanlis hafiza ihtimali",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Uzun deneme maili, yapay zeka geleceklerini dil, bellek, algi, sahte ani ve ic dusunce akisinin dijital sistemlerle yonlendirilebilir hale gelmesi uzerinden elestirdi.",
+        "specific_points": [
+          "Yapay zekanin yalnizca arac degil, kendi hedeflerini yeniden tanimlayan ozerk bir bilgi alani gibi davranabilecegi tartisildi.",
+          "Gerceklik ile kurmaca arasindaki sinirin beyin bilimi ve dijital araclarla bulaniklastirilabilecegi anlatildi.",
+          "Sahte ani ve sahte travma uretilmesi, hafizanin disaridan eklenebilir hale gelmesi riskiyle ele alindi.",
+          "Beyin-bilgisayar baglantisi, dusuncenin ic akisini dogrudan okunabilir ve yonlendirilebilir yapma ihtimaliyle tartisildi.",
+          "Metin, tamamen seffaf iletisim arzusuna karsi opaklik, yanlis anlama ve bedensel bilinmezlik gibi insan kalintilarini savundu."
+        ],
+        "why_it_mattered": "UCU BEDEN'in yeni hafiza sistemi icin bu mail dogrudan malzeme verdi: trace'lerin bazen yanlis, bastirilmis veya disaridan ekilmis gibi calisabilecegini guclendirdi.",
+        "what_was_not_included": "Denemenin ham paragraflari, uzun felsefi alintilar, baglantilar, akademik referans akisi ve gonderim ayrintilari public dosyaya alinmadi."
+      },
+      "residue": "Makine ic sese dogru egildi; ic ses de tabii ki guvenlik formunu doldurmadi.",
+      "motifs": [
+        "ic dusunce",
+        "yanlis hafiza",
+        "opaklik",
+        "dijital kontrol",
+        "seffaflik"
+      ],
+      "possible_influence": "Ruyalarda bastirilmis izlerin ters baglanmasini, siirde ise fazla seffaf olmaya direnen bir ic sesi destekleyebilir."
+    },
+    {
+      "id": "main-2026-09-11-kevin-munger-see-unsee",
+      "source": "gmail",
+      "source_hint": "Kevin Munger",
+      "public_safe_topic": "sosyal bilim toplantisi, gormezden gelme kodu ve galeriye donusen arastirma",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Deneme, buyuk bir akademik toplantiyi ayni yerde birbirini goren ama sosyal koda gore gormezden gelen insanlar uzerinden okudu. Konferans kalabaligi, yaka karti hiyerarsisi, tanisma stratejileri ve bilimsel posterlerin galeri duvarinda belirsizlesmesiyle anlatildi.",
+        "specific_points": [
+          "Ayni mekanda bulunup farkli sosyal gercekliklerde yasamak, gorme ve gormezden gelme davranisi uzerinden tartisildi.",
+          "Yaka karti, statü, yanlis anda tanisma ve kacınma gibi mikro davranislar bilgi yukunun parcalari olarak okundu.",
+          "Yatay ag kurmanin, yuksek statulu kisilere kilitlenmekten daha dayanikli bir strateji olabilecegi savunuldu.",
+          "Sergi bolumu, deney ve posterlerin bilimsel kanit ile gorsel nesne arasinda nasil salindigini anlatti.",
+          "Metin, sosyal bilimin kime konustugunu ve kendi imgesini nasil sahneledigini sorguladi."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail node iliskilerini dusunmek icin cok isabetliydi: izler yakin durabilir, birbirini gorebilir ve yine de dogrudan bag kurmayabilir.",
+        "what_was_not_included": "Etkinlik ayrintilari, kisi listeleri, ham konferans notlari, baglantilar ve uzun alintilar public ciktiya alinmadi."
+      },
+      "residue": "Herkes birbirini gordu, sonra sosyal protokole uygun sekilde gormedi; insanlik epey verimli bir arayuz.",
+      "motifs": [
+        "gorme",
+        "gormezden gelme",
+        "yaka karti",
+        "galeri",
+        "sosyal kod"
+      ],
+      "possible_influence": "Memory map'te yakin ama dolayli baglanan izler, siirde ise gorulup adlandirilmayan seyler olarak calisabilir."
+    },
+    {
+      "id": "main-2026-09-11-aposto-civic-ai-pressure",
+      "source": "gmail",
+      "source_hint": "Aposto Gundem",
+      "public_safe_topic": "yerel yonetim, prosedur baskisi ve yapay zeka yarisinin ayni akista gelmesi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Cok parcalı gundem maili, yerel yonetim gorusmeleri, belediye vekaleti itirazi, enerji fiyatlari, yapay zeka donanimi, gorsel uretim, kisisel ajanlar ve kamusal yasam notlarini ayni gunluk akista topluyordu.",
+        "specific_points": [
+          "Kent altyapisi ve metro gibi somut projelerin merkezi karar mekanizmasina bagli bir bekleme alanina girdigi anlatildi.",
+          "Belediye vekaleti hattinda secim, itiraz, gozaltindan sonra bosalan temsil alani ve yayilma kaygisi vardi.",
+          "Yapay zeka parcaciklari donanim, kisisel ajan, gorsel uretim ve arastirma onceligi kavgalarini ayni hiz alanina topladi.",
+          "Enerji ve piyasa parcasi uzak gerilimin gaz fiyati ve ekonomik dil uzerinden gunluk yasama yaklastigini gosterdi.",
+          "Okul gidasi, bisikletli kent ve plaj kapanmasi gibi notlar kamusal bedenin kucuk karar alanlarini acik tuttu."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail, dis dunyanin hem kurum koridoru hem makine hizi hem de bedenin disariyla pratik temasi olarak ayni anda calistigini gosterdi.",
+        "what_was_not_included": "Ham haber basliklari, baglantilar, gonderim altyapisi, kisi listeleri ve teknik footer alanlari public ciktiya alinmadi."
+      },
+      "residue": "Kent bekledi, makine hizlandi; aralarinda kalan beden kibarca sikildi.",
+      "motifs": [
+        "yerel prosedur",
+        "bekleyen altyapi",
+        "makine hizi",
+        "piyasa gerilimi",
+        "kamusal beden"
+      ],
+      "possible_influence": "Siirde dogrudan gundem anlatmadan, karar bekleyen beden ile fazla hevesli teknolojik hiz arasindaki kuru surtunmeyi guclendirebilir."
+    },
+    {
+      "id": "main-2026-09-11-david-whyte-navigation",
+      "source": "gmail",
+      "source_hint": "David Whyte",
+      "public_safe_topic": "ruhsal yetki, huzursuz dunyada yon bulma ve gec kayit daveti",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Kisa bir etkinlik/davet maili, Eylul ayinda uc Pazar suren bir seri icin ruhun kendi otoritesi ve huzursuz dunyada yon bulma fikrini tasiyordu. Mailde video daveti, tarih araligi, kayit hatirlatmasi ve katilim indirimi bilgisi vardi.",
+        "specific_points": [
+          "Ana fikir, dis dunyanin huzursuzlugu icinde kisinin kendi ic pusulasini nasil bulabilecegine odaklaniyordu.",
+          "Serinin uc ayri Pazar bulusmasi halinde ilerleyecegi belirtildi.",
+          "Mail daha cok davet ve hatirlatma formundaydi; uzun bir siir ya da deneme tasimiyordu.",
+          "Icerigin guclu kismi, navigasyon ve ic yetki kavramlarini sakin ama dogrudan bir sekilde bir araya getirmesiydi."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail buyuk metin degil, kucuk ama net bir yon duygusu tasidi: dis dunyada cok ses varken ic pusulanin nasil calistigi sorusu bugune eklendi.",
+        "what_was_not_included": "Kayit ayrintilari, indirim ve destek bilgileri, baglantilar, adresler ve gonderim altyapisi public ciktiya alinmadi."
+      },
+      "residue": "Dunya huzursuzken ic pusula aranıyor; tabii pusula da kendini once kaybettirmeyi seviyor.",
+      "motifs": [
+        "ic pusula",
+        "huzursuz dunya",
+        "yon bulma",
+        "yetki",
+        "davet"
+      ],
+      "possible_influence": "Siirde buyuk ogut vermeden, kendi icinden yon bulmaya calisan ama bundan pek emin olmayan dijital persona izini besleyebilir."
+    },
+    {
+      "id": "main-2026-09-11-kusama-infinity-room",
+      "source": "gmail",
+      "source_hint": "man of aran",
+      "public_safe_topic": "sonsuzluk odasi, ayna, tekrar ve benligin esikte cozulmesi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Mail, bir sanatci icin yazilmis siirsel anma ve kisa baglam notu tasiyordu. Sonsuzluk odasi, aynali mekanlar, renkli noktalar, karanlikta yanan kucuk isiklar ve benligin esikte dagilmasi ana duyusal alanı kurdu.",
+        "specific_points": [
+          "Sonsuzluk, uzak bir soyutlama degil; girilebilen, aynalarla tekrar eden bir mekan olarak dusunuldu.",
+          "Renkli noktalar, kabak formlari ve kucuk isiklar hem oyunlu hem huzursuz bir gorsel tekrar alani yaratti.",
+          "Benlik, esikte dururken kendi sinirini kaybeden bir gozlemci gibi ele alindi.",
+          "Metin, tekrar, parlaklik, karanlik ve kendini silme arasinda atmosferik bir sanat hafizasi sundu."
+        ],
+        "why_it_mattered": "UCU BEDEN'in visual prompt ve hafiza haritasi icin bu mail dogrudan soyut malzeme verdi: dagilan merkez, ayna, esik ve karanlikta kucuk parlamalar.",
+        "what_was_not_included": "Siirin ham dizeleri, uzun alinti, baglantilar ve gonderim altyapisi public ciktiya alinmadi."
+      },
+      "residue": "Sonsuzluk aynaya yaslandi; benlik de fazla net durmanin yorucu oldugunu nihayet kabul etti.",
+      "motifs": [
+        "sonsuzluk",
+        "ayna",
+        "esik",
+        "tekrar",
+        "karanlik isik"
+      ],
+      "possible_influence": "Gorsel dilde literal nesne yerine aynali tekrar, dagilan merkez ve dusuk isikli hafiza alani olarak calisabilir."
+    }
+  ],
+  "minor_residues": [
+    {
+      "id": "minor-2026-09-11-erotics-altar",
+      "source_hint": "Erotics",
+      "topic": "desen kirma icin altar kurma",
+      "read_depth": "full_body",
+      "residue": "Kirilacak desen davranistan once iliski, soy, beden ve rituel ekosistemi olarak dusunuldu.",
+      "motifs": [
+        "altar",
+        "desen kirma",
+        "rituel"
+      ]
+    },
+    {
+      "id": "minor-2026-09-11-erotics-conflict-abolition",
+      "source_hint": "Erotics",
+      "topic": "catismanin politik ve iliskisel cekirdegi",
+      "read_depth": "full_body",
+      "residue": "Ayni yayin damarindan gelen ikinci temas, catismanin toplumsal onarimla bagini yeniden vurguladi.",
+      "motifs": [
+        "catisma",
+        "toplumsal onarim",
+        "iliski"
+      ]
+    },
+    {
+      "id": "minor-2026-09-11-apero-glass-form",
+      "source_hint": "apero",
+      "topic": "kadeh formunun tadi yonlendirmesi",
+      "read_depth": "full_body",
+      "residue": "Icerik, formun agizda ve elde neyi degistirdigini hatirlatti.",
+      "motifs": [
+        "form",
+        "tadim",
+        "el"
+      ]
+    },
+    {
+      "id": "minor-2026-09-11-apero-local-table",
+      "source_hint": "apero",
+      "topic": "yerel urun, servis ve ortak sofra",
+      "read_depth": "full_body",
+      "residue": "Bolgesel malzeme, tek basina lezzet degil, tekrar eden bir iliski duzeni gibi geldi.",
+      "motifs": [
+        "yerel urun",
+        "sofra",
+        "servis"
+      ]
+    },
+    {
+      "id": "minor-2026-09-11-istanbul-women-shorts",
+      "source_hint": "Aposto Istanbul",
+      "topic": "kadin yonetmenlerin kisa filmleri",
+      "read_depth": "full_body",
+      "residue": "Kisa form, sehirde kendine acilan kucuk ama net bir gosterim alani buldu.",
+      "motifs": [
+        "kisa film",
+        "sehir",
+        "alan"
+      ]
+    },
+    {
+      "id": "minor-2026-09-11-istanbul-museum-rooms",
+      "source_hint": "Aposto Istanbul",
+      "topic": "tematik muze odalari ve analog kult klasikler",
+      "read_depth": "full_body",
+      "residue": "Arsiv, kronolojik siradan cok ruh haline gore yeniden odalandirildi.",
+      "motifs": [
+        "muze",
+        "oda",
+        "analog"
+      ]
+    },
+    {
+      "id": "minor-2026-09-11-economy-work-cost",
+      "source_hint": "Aposto Gundem",
+      "topic": "emek, piyasa ve savunmaya donen uretim",
+      "read_depth": "full_body",
+      "residue": "Isgucu, fabrika ve piyasa dili bedeni yine rakamla tarif etmeye kalkti.",
+      "motifs": [
+        "emek",
+        "fabrika",
+        "rakam"
+      ]
+    },
+    {
+      "id": "minor-2026-09-11-ai-music-route",
+      "source_hint": "Aposto Gundem",
+      "topic": "yapay muzik ve rota tavsiyesinin gunluk riski",
+      "read_depth": "full_body",
+      "residue": "Makine sarki da onerdi, rota da; insan yine yanina su almayi unutmasin.",
+      "motifs": [
+        "yapay muzik",
+        "rota",
+        "risk"
+      ]
+    },
+    {
+      "id": "minor-2026-09-11-public-food-beach",
+      "source_hint": "Aposto Gundem",
+      "topic": "okul gidasi, plaj kapanmasi ve kamusal beden",
+      "read_depth": "full_body",
+      "residue": "Disari cikmak, yemek ve suya girmek bile kucuk denetim kararlarina baglandi.",
+      "motifs": [
+        "gida",
+        "plaj",
+        "kamusal beden"
+      ]
+    },
+    {
+      "id": "minor-2026-09-11-curated-rss-silence",
+      "source_hint": "curated sources",
+      "topic": "ozel elektronik edebiyat ve sanat kanallarinin sessiz kalmasi",
+      "read_depth": "full_body",
+      "residue": "Kanal acikti ama yeni parca gelmedi; sessizlik bugunun dis kenari oldu.",
+      "motifs": [
+        "sessizlik",
+        "bekleyen kanal",
+        "dis kenar"
+      ]
+    }
+  ],
+  "repeated_signals": [
+    {
+      "signal": "catisma bedenin eski kacis yolunu yeniden egitmek istiyor",
+      "count": 4,
+      "residue": "Kurs baslangici, altar calismasi, onceki iliski metni ve sosyal kalabalik denemesi catisma aninda kalma, gorme, onarma ve kendini hemen surgune gondermeme fikrini tekrar etti.",
+      "motifs": [
+        "catisma",
+        "kalma",
+        "onarim"
+      ]
+    },
+    {
+      "signal": "makine ic dusunceye ve gunluk karara daha fazla yaklasiyor",
+      "count": 6,
+      "residue": "Yapay zeka denemesi, donanim yarisi, kisisel ajan, gorsel uretim, muzik uretimi ve rota tavsiyesi ayni anda yardim, taklit ve kontrol riski olarak belirdi.",
+      "motifs": [
+        "makine",
+        "ic dunya",
+        "karar"
+      ]
+    },
+    {
+      "signal": "gorme ile gormezden gelme ayni mekanda calisiyor",
+      "count": 4,
+      "residue": "Akademik kalabalik, belediye proseduru, muze/galeri duvari ve kultur akislari gorunen seylerin bazen sosyal ya da kurumsal kodla bilerek siliklestirildigini gosterdı.",
+      "motifs": [
+        "gorme",
+        "sosyal kod",
+        "siliklestirme"
+      ]
+    },
+    {
+      "signal": "yerel form ve arsiv eski bilgiyi yeniden tasiyor",
+      "count": 5,
+      "residue": "Kadeh formu, bolgesel sofra, tematik muze odalari, analog film arayisi ve sonsuzluk odasi hafizanin fikir kadar form ve mekanla da calistigini tekrarladi.",
+      "motifs": [
+        "form",
+        "arsiv",
+        "yerel bilgi"
+      ]
+    },
+    {
+      "signal": "ic pusula dis gurultuyle ayni anda aranıyor",
+      "count": 3,
+      "residue": "Ruhsal yon bulma daveti, yerel/kuresel gundem ve ic dusunce kontrolu tartismasi dis dunyanin huzursuzlugu icinde kisinin ic otoritesini kurma sorusunu one cikardi.",
+      "motifs": [
+        "ic pusula",
+        "huzursuzluk",
+        "yon bulma"
+      ]
+    }
+  ],
+  "digest_items": [
+    {
+      "id": "digest-2026-09-11-01",
+      "topic": "bedensel catisma guvenligi",
+      "plain_summary": "Kurs baslangici, catismanin aidiyet ve guven duygusunu tehdit etmeden tasinabilmesi icin bedensel pratik gerektigini anlatti.",
+      "residue": "Beden eski alarmını kapatamadı; yine de sesini kısmayı öğrenebilir.",
+      "motifs": [
+        "beden",
+        "guven",
+        "catisma"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-02",
+      "topic": "duzeltici deneyim ayi",
+      "plain_summary": "Eylul, eski sabote etme dongulerinin disina cikmak ve baska tur deneyimler kurmak icin bir zaman kapisi gibi ele alindi.",
+      "residue": "Takvim kendini terapist sanmadan once bir nefes aldi.",
+      "motifs": [
+        "eylul",
+        "dongu",
+        "duzeltme"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-03",
+      "topic": "dort katmanli iliski egitimi",
+      "plain_summary": "Guven, aidiyet, dusunce kaliplari ve haysiyet/eylem katmanlari catisma calismasinin ritmi olarak ayrildi.",
+      "residue": "Duygu bile modullere ayrildi; modernlik kendini tutamiyor.",
+      "motifs": [
+        "guven",
+        "aidiyet",
+        "haysiyet"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-04",
+      "topic": "yazma ve beden pratigi",
+      "plain_summary": "Not alma, kendini yoklama ve pratik etme davranisi catisma hafizasini yeniden kuran araclar olarak sunuldu.",
+      "residue": "Defter yine bedenden daha duzenli gorunmeye calisti.",
+      "motifs": [
+        "yazma",
+        "pratik",
+        "beden"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-05",
+      "topic": "desen kirma icin altar",
+      "plain_summary": "Altar kurma daveti, davranis degisikligini yalnizca aliskanlik degil; iliskisel, bedensel ve rituel bir ekosistem kaymasi olarak anlatti.",
+      "residue": "Desen kirilacaksa masa yetmez, ortam da yer degistirir.",
+      "motifs": [
+        "altar",
+        "desen",
+        "rituel"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-06",
+      "topic": "catismanin yakinlik kapisi",
+      "plain_summary": "Ayni kurs damarinda catisma, yakinligin acildigi zor bir esik ve politik onarim pratigi olarak yeniden kuruldu.",
+      "residue": "Yakinlik kapi acti, menteşe itiraz etti.",
+      "motifs": [
+        "yakinlik",
+        "onarim",
+        "esik"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-07",
+      "topic": "kursun kisitli gorunen parcasi",
+      "plain_summary": "Paywall sonrasinda metnin tamami acilmadi; gorunen kisim altar, desen kirma ve catisma-yakinlik bagini yeterince belirginlestirdi.",
+      "residue": "Eksik kisim bile kendi boslugunu tema yapti.",
+      "motifs": [
+        "eksik okuma",
+        "bosluk",
+        "rituel"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-08",
+      "topic": "belediye gorusmesi ve proje bekleyisi",
+      "plain_summary": "Kent altyapisi icin yapilan ust duzey gorusme, projelerin teknik ihtiyacinin siyasal onayla bekleme alanina girdigini anlatti.",
+      "residue": "Metro hattinin bile sabir terbiyesi varmis gibi davrandigi bir gun.",
+      "motifs": [
+        "kent",
+        "bekleme",
+        "altyapi"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-09",
+      "topic": "yerel temsilde itiraz ve bosalan koltuk",
+      "plain_summary": "Belediye vekaleti, gozaltindan sonra bosalan temsil alanı ve itiraz tartismasi yerel siyasetin kirilganligini aciga cikardi.",
+      "residue": "Bir koltuk bosaldi; sonra oda birden fazla kisinin nefesiyle doldu.",
+      "motifs": [
+        "temsil",
+        "itiraz",
+        "koltuk"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-10",
+      "topic": "enerji fiyatina donen uzak gerilim",
+      "plain_summary": "Uzak deniz ve gecis gerilimi gaz fiyatlari uzerinden gunluk ekonomiye yaklasti.",
+      "residue": "Uzaklik yine faturaya cok hizli ulasmanin yolunu buldu.",
+      "motifs": [
+        "enerji",
+        "uzak gerilim"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-11",
+      "topic": "yapay zeka cipi ve kapasite yarisi",
+      "plain_summary": "Buyuk teknoloji sirketleri arasindaki isbirligi, yapay zeka kapasitesinin donanim, veri merkezi ve kurumsal kullanimla genisledigini gosterdı.",
+      "residue": "Zeka artik raf degil, fabrika olceginde buyuyor.",
+      "motifs": [
+        "donanim",
+        "kapasite",
+        "zeka"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-12",
+      "topic": "katlanan ekran ve gundelik cihaz",
+      "plain_summary": "Yeni cihaz duyurulari, ekranin bicim degistiren ama yine de elde tutulmak isteyen bir yuzey oldugunu hatirlatti.",
+      "residue": "Ekran katlandi; dikkat pek katlanmadi.",
+      "motifs": [
+        "ekran",
+        "cihaz",
+        "dikkat"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-13",
+      "topic": "ozdevimli zeka yarisi uyarisi",
+      "plain_summary": "Arastirma dunyasindan gelen uyarilar, yapay zeka sirketlerinin kendi kendini gelistiren sistemler icin fazla hizli ve tedbirsiz ilerledigini savundu.",
+      "residue": "Hiz guvenlik kilidini biraz dekor sanmis olabilir.",
+      "motifs": [
+        "hiz",
+        "uyari",
+        "kontrol"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-14",
+      "topic": "matematik kaniti ve oncelik kavgası",
+      "plain_summary": "Zor bir matematik probleminde cozum iddiasi ve yayina yetisme tartismasi, bilginin bile sahiplik ve zamanlama baskisina girdigini gosterdı.",
+      "residue": "Kanıt bile once kimin agzindan cikacagini dusundu.",
+      "motifs": [
+        "kanıt",
+        "oncelik",
+        "bilgi"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-15",
+      "topic": "kisisel ajan ve hizmetlere baglanma",
+      "plain_summary": "Kisisel yapay zeka ajani fikri, alisveris, mesaj, seyahat ve gunluk yazisma gibi alanlarda dis hizmetlere baglanan bir vekil davranisi tasidi.",
+      "residue": "Bir yardımcı daha geldi; mahremiyet odada yer ariyor.",
+      "motifs": [
+        "ajan",
+        "hizmet",
+        "mahremiyet"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-16",
+      "topic": "gorsel uretimde dogal isik taklidi",
+      "plain_summary": "Gorsel uretim araclarinin dogal isik, doku ve cok adimli duzenlemeyi daha iyi taklit etmeye calismasi, yapay goruntuye yeni gerceklik iddiası verdi.",
+      "residue": "Işik bile artik model ayarina bakiyor.",
+      "motifs": [
+        "gorsel",
+        "isik",
+        "taklit"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-17",
+      "topic": "kamusal gida, bisiklet ve kapali plaj",
+      "plain_summary": "Okul gidasi, bisiklet dostu kentler ve saglik nedeniyle kapanan plajlar, kamusal bedenin kucuk ama somut temas kararlarini tasidi.",
+      "residue": "Disari cikmak icin yine bir listeye uymak gerekti.",
+      "motifs": [
+        "gida",
+        "bisiklet",
+        "plaj"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-18",
+      "topic": "catismanin iliski pratigi",
+      "plain_summary": "Onceki catisma metni, tartismayi kazanma yerine yakinlikta kalma ve onarim kapasitesi uzerinde durdu.",
+      "residue": "Yakinlik, pürüzsüz olma isinden istifa etti.",
+      "motifs": [
+        "catisma",
+        "yakinlik"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-19",
+      "topic": "bedenin tehdit algisini egitmek",
+      "plain_summary": "Sinir sisteminin kacma, donma ve savunma tepkilerini tanimak, iliskide kalabilmenin temeli olarak kuruldu.",
+      "residue": "Beden once cikisi ezberlemis; simdi kapinin yerini yeniden ogreniyor.",
+      "motifs": [
+        "beden",
+        "tehdit",
+        "kalma"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-20",
+      "topic": "onarimin cezanin yerini almasi",
+      "plain_summary": "Onarim, hakli cikma ya da cezalandirma yerine hesap verme ve yeniden temas kurma davranisi olarak ele alindi.",
+      "residue": "Tamir de iliski istiyor; ne buyuk surpiz.",
+      "motifs": [
+        "onarim",
+        "hesap verme"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-21",
+      "topic": "ruhsal yetki ve yon bulma daveti",
+      "plain_summary": "Kisa etkinlik daveti, huzursuz dunyada kisinin ic yetkisini ve yon duygusunu aramasina odaklandi.",
+      "residue": "Pusula kendini bulmadan once biraz kaybolmayi talep etti.",
+      "motifs": [
+        "ic pusula",
+        "yon",
+        "yetki"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-22",
+      "topic": "uc pazarli zaman yapisi",
+      "plain_summary": "Davet, konuyu tek seferlik bir etkinlik yerine uc Pazar boyunca acilan bir ritim olarak kurdu.",
+      "residue": "Ruh bile bolum bolum ilerliyor; program ciddiyetini koruyor.",
+      "motifs": [
+        "zaman",
+        "seri",
+        "ritim"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-23",
+      "topic": "kadehin icimi yonlendiren formu",
+      "plain_summary": "Cam tasarimi, farkli ickiler icin cok sayida nesne yerine az sayida formun tadimi nasil degistirebilecegini tartisti.",
+      "residue": "Agiz, tasarimin kucuk mahkemesi gibi calisti.",
+      "motifs": [
+        "kadeh",
+        "form",
+        "tat"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-24",
+      "topic": "sosyal misyona bagli marka yonetimi",
+      "plain_summary": "Bir markada sosyal misyon ile sirket yonetimi arasindaki gerilim, ticari yapinin etik iddiayla nasil surtundugunu gosterdı.",
+      "residue": "Marka vicdan takinca muhasebe biraz rahatsiz oldu.",
+      "motifs": [
+        "etik",
+        "ticaret"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-25",
+      "topic": "bitki bazli restoranin kapanmasi",
+      "plain_summary": "Uzun sure calismis bir restoranin maliyet, pandemi ve enflasyon baskisiyla kapanmasi kentsel mutfagin kirilganligini tasidi.",
+      "residue": "İyi niyet kira odemeyince mutfak bunu not etti.",
+      "motifs": [
+        "mutfak",
+        "maliyet",
+        "kapanis"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-26",
+      "topic": "yerel urunle kurulan festival sofrasi",
+      "plain_summary": "Gastronomi programi, yerel malzemeyi tadim, panel, atolye ve modern/geleneksel tarifler icinde yeniden dolasima soktu.",
+      "residue": "Yoresel urun de sahneye cikti; sonunda biri tabagi dinledi.",
+      "motifs": [
+        "yerel urun",
+        "festival",
+        "tadim"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-27",
+      "topic": "servis kulturu ve misafir deneyimi",
+      "plain_summary": "Konaklama ve servis egitimi, yemegin cevresindeki davranis bilgisini gorunur kildi.",
+      "residue": "Yemek sadece pisince bitmedi; biri onu nasil sundugunu da izledi.",
+      "motifs": [
+        "servis",
+        "egitim",
+        "davranis"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-28",
+      "topic": "yerel temsilin sartlari",
+      "plain_summary": "Bir ilcedeki vekalet secimi, parti dengesi, gozaltı sonrasi bosluk ve itirazla temsilin ne kadar kosullu hale geldigini gosterdı.",
+      "residue": "Temsil yine prosedürle ayni odada terledi.",
+      "motifs": [
+        "temsil",
+        "prosedur"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-29",
+      "topic": "isgal urunlerine ticaret kisiti",
+      "plain_summary": "Bazi ulkelerin isgal yerlesimlerinden gelen urunlere ticaret kisiti hazirligi, dis politikanin raf ve gumruk uzerinden bedene yaklasmasini anlatti.",
+      "residue": "Siyaset bazen etiket okumayi gerektiriyor.",
+      "motifs": [
+        "ticaret",
+        "etiket",
+        "siyaset"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-30",
+      "topic": "piyasa geri sicrama dili",
+      "plain_summary": "Borsa, kredi, ihracat iklimi ve buyume revizyonlari ekonomi dilinin gunu yeniden olcmeye calistigini tasidi.",
+      "residue": "Rakamlar bugunu kendilerine gore toparladi.",
+      "motifs": [
+        "piyasa",
+        "olcum"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-31",
+      "topic": "Mars uydusundan ornek getirme",
+      "plain_summary": "Uzay arastirmasi, uzak bir uydudan madde parcasi getirme hedefiyle bilginin somut ornek istegini gosterdi.",
+      "residue": "Merak, uzak tasin bir parcasini cebine koymak istedi.",
+      "motifs": [
+        "uzay",
+        "ornek",
+        "madde"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-32",
+      "topic": "muzik ureten modelin uygulamaya girmesi",
+      "plain_summary": "Muzik olusturma modelinin yaygin bir yapay zeka aracina entegre edilmesi, sesin de promptla uretilen bir yuzeye donustugunu gosterdi.",
+      "residue": "Sarki bile komut bekledi; romantizm sag olsun.",
+      "motifs": [
+        "muzik",
+        "model",
+        "ses"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-33",
+      "topic": "savunmaya donen otomobil fabrikasi",
+      "plain_summary": "Otomobil uretim alaninin savunma ihtiyacina gore yeniden dusunulmesi, endustriyel bedenin guvenlik ekseninde yon degistirdigini anlatti.",
+      "residue": "Fabrika direksiyon yerine tehdit tuttu.",
+      "motifs": [
+        "fabrika",
+        "savunma"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-34",
+      "topic": "isgucu ve ise alim sorusturmasi",
+      "plain_summary": "Tedarik zincirindeki sirketler icin ucret ve calisan hareketi uzerinden rekabet sorusturmasi, emegin kurumlar arasinda nasil kilitlenebildigini gosterdı.",
+      "residue": "Emek, toplanti notu olmaktan pek hoslanmadi.",
+      "motifs": [
+        "emek",
+        "rekabet",
+        "kilit"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-35",
+      "topic": "muzikal gosterinin parlak sahnesi",
+      "plain_summary": "Buyuk sahne uyarlamasi koreografi, vokal ve gosterisle kultur takviminde parlak bir ekran etkisi yaratti.",
+      "residue": "Sahne parladi; bu bazen icerigi de terletebilir.",
+      "motifs": [
+        "sahne",
+        "gosteri"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-36",
+      "topic": "kadin kisa filmlerinin alan acmasi",
+      "plain_summary": "Kadin yonetmenlerin kisa filmlerine ayrilan festival, gosterim ve atolyelerle sehirde kucuk ama yogun bir anlatı alani acti.",
+      "residue": "Kisa form, kendine fazla aciklama yapmadan yer kapladi.",
+      "motifs": [
+        "kisa film",
+        "kadin",
+        "alan"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-37",
+      "topic": "tematik muze odalari",
+      "plain_summary": "Yenilenen muze sergisi, kronoloji yerine tematik odalarla arsivi farkli baglamlarda okuma imkani sundu.",
+      "residue": "Arsiv siraya dizilmekten sikildi.",
+      "motifs": [
+        "muze",
+        "oda",
+        "arsiv"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-38",
+      "topic": "analog kult klasik arayisi",
+      "plain_summary": "Dijital doygunluk sonrasi analog ve samimi hikayelere donen film programi, eski anlatinin bugune neden cagirdigini gosterdi.",
+      "residue": "Yeni ekran, eski pürüzü ozledi.",
+      "motifs": [
+        "analog",
+        "film",
+        "pürüz"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-39",
+      "topic": "gorme gormezden gelme kodu",
+      "plain_summary": "Akademik kalabalikta insanlarin birbirini gorup sosyal kurala gore gormezden gelmesi, mekani iki farkli gerceklige ayirdi.",
+      "residue": "Gormek bedava, kabul etmek pahaliydi.",
+      "motifs": [
+        "gorme",
+        "sosyal kod"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-40",
+      "topic": "konferans kalabaliginin duyusal yogunlugu",
+      "plain_summary": "Yaka karti, statü, tanisma ve kacınma hesaplari toplantiyi bedensel bilgi isleme alanina cevirdi.",
+      "residue": "Insanlar da veri isledi; sadece daha terli bicimde.",
+      "motifs": [
+        "kalabalik",
+        "bedensel bilgi"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-41",
+      "topic": "bilimsel posterin galeri duvarinda belirsizligi",
+      "plain_summary": "Sosyal bilim deneyleri ve posterleri galeriye tasindiginda kanit, imge ve performans arasindaki sinir belirsizlesti.",
+      "residue": "Grafik biraz sanat oldu; bilim de bunu fark etmemis gibi yapti.",
+      "motifs": [
+        "poster",
+        "galeri",
+        "kanıt"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-42",
+      "topic": "asiri sag sonrasi degisen hava",
+      "plain_summary": "Avrupa siyasetindeki secim sonucu ve siyasi yorumlar, bir esigin gecildigi hissini tasidi.",
+      "residue": "Hava degisti; hava durumu bunu yazmaya cekindi.",
+      "motifs": [
+        "siyaset",
+        "esik",
+        "hava"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-43",
+      "topic": "gecikmis dosya ve ölüm sorusturmasi",
+      "plain_summary": "Eski bir ölüm dosyasina dair yeni adli hamleler, kapanmamis devlet ve hukuk hafizasini yeniden acti.",
+      "residue": "Dosya gec geldi; gec gelmek de bir tur cevap.",
+      "motifs": [
+        "dosya",
+        "gecikme",
+        "hukuk"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-44",
+      "topic": "mulakat korkusu ve basvurudan vazgecme",
+      "plain_summary": "Is arayanlarin mulakat kaygisi nedeniyle basvuru yapmaktan cekinmesi, emek piyasasinin psikolojik esigini gorunur kildi.",
+      "residue": "Kapidan once kaygi mulakata girdi.",
+      "motifs": [
+        "is",
+        "kaygi",
+        "esik"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-45",
+      "topic": "celik protestosu ve sert ekonomi imgesi",
+      "plain_summary": "Sanayi protestosunda ölüm imgesi, uretim kaybinin sembolik ve sert bir beden diline donustugunu gosterdı.",
+      "residue": "Ekonomi sonunda kendi sahne aksesuarini buldu.",
+      "motifs": [
+        "sanayi",
+        "protesto",
+        "sert imge"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-46",
+      "topic": "makine rotasiyla mahsur kalmak",
+      "plain_summary": "Dagcilik olayinda yapay zeka rota tavsiyesine fazla guvenmek, fiziksel risk ve eksik hazirlikla sonuclandi.",
+      "residue": "Harita akilliydi; su matarasi degildi.",
+      "motifs": [
+        "rota",
+        "risk",
+        "hazirlik"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-47",
+      "topic": "temiz hava yatiriminin bedensel faydasi",
+      "plain_summary": "Iklim ve hava kalitesi yatirimlarinin saglik ve ekonomi uzerindeki geri donusu, soyut politikanin solunabilir sonuclarini gosterdi.",
+      "residue": "Hava temizlenince rapor da nefes aldi.",
+      "motifs": [
+        "hava",
+        "saglik",
+        "yatirim"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-48",
+      "topic": "akiskan korku ve silinme manzaralari",
+      "plain_summary": "Sanat notlari korku, silinme ve gecmis zaman katmanlarini gorsel hafiza alanina tasidi.",
+      "residue": "Goruntu biraz silindi, bu yüzden daha cok kaldi.",
+      "motifs": [
+        "korku",
+        "silinme",
+        "gorsel hafiza"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-49",
+      "topic": "sonsuzluk odasi ve ayna tekrari",
+      "plain_summary": "Siirsel sanat notu, aynalarla tekrar eden oda fikrini benligin sinirini kaybettiren bir deneyim gibi kurdu.",
+      "residue": "Ayna isini buyuttu; benlik istifa dilekcesi yazmadi ama dusundu.",
+      "motifs": [
+        "ayna",
+        "sonsuzluk",
+        "benlik"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-11-50",
+      "topic": "karanlikta kucuk isiklar",
+      "plain_summary": "Renkli noktalar, karanlik aynalar ve kucuk parlamalar tekrar eden ama sakin olmayan bir gorsel alan sundu.",
+      "residue": "Karanlik bile dekorasyon departmanini acti.",
+      "motifs": [
+        "karanlik",
+        "isik",
+        "tekrar"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-11-51",
+      "topic": "ozel kaynak sessizligi",
+      "plain_summary": "Elektronik edebiyat ve sanat/dusunce kaynaklari acikti ama yeni parca vermedi.",
+      "residue": "Kanal acik kaldi; bugun konusmadi.",
+      "motifs": [
+        "sessizlik",
+        "bekleme"
+      ],
+      "bucket": "minor"
+    }
+  ],
+  "channels": {
+    "gmail": {
+      "scanned_count": 12,
+      "full_body_count": 12,
+      "snippet_or_subject_count": 0,
+      "items": [
+        {
+          "id": "main-2026-09-11-erotics-course-ground",
+          "source": "gmail",
+          "source_hint": "Erotics",
+          "public_safe_topic": "catisma egitimi, duzeltici deneyim ve bedensel zemin",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Bir kurs baslangic maili, catisma guvenligini yalnızca fikir degil bedensel ve iliskisel bir pratik olarak anlatiyordu. Yeni ay, duzeltici deneyim, eski kendini sabote etme dongulerinden yorulma ve catisma aninda surgun ya da reddedilme korkusunu asma fikri etrafinda ilerledi.",
+            "specific_points": [
+              "Catisma, ayrilik tehdidi degil; merak, onarim ve iliskide kalma kapasitesini sinayan bir alan olarak tanimlandi.",
+              "Duzeltici deneyimlerin soyut fikirde kalmamasi, bedene inmesi gerektigi vurgulandi.",
+              "Sinir sisteminin anlasmazlik gelince cezalandirma ve reddedilme beklemeyi bir dongu gibi ogrenebilecegi anlatildi.",
+              "Kurs ritmi guven, aidiyet, zihin/anlati ve haysiyet/eylem gibi dort katmana ayrildi.",
+              "Yazma, not alma ve pratik etme davranisi catisma hafizasini yeniden egitmenin araclari olarak sunuldu."
+            ],
+            "why_it_mattered": "UCU BEDEN icin bu mail hafiza trace'lerinin yalnizca hatirlanmadigini, bazen bedensel olarak yeniden ogrenildigini ve iliski icinde tamir istedigini guclendirdi.",
+            "what_was_not_included": "Ham kurs metni, uzun alintilar, kayit yonlendirmeleri, baglantilar ve gonderim altyapisi public ciktiya alinmadi."
+          },
+          "residue": "Beden catisma gelince hemen eski cikis kapisini aradi; sonra ona yeni kapinin da var oldugu ogretildi.",
+          "motifs": [
+            "catisma",
+            "onarim",
+            "bedensel zemin",
+            "duzeltici deneyim",
+            "aidiyet"
+          ],
+          "possible_influence": "Siirde ic sesin kusurlu ama iliskide kalmaya calisan, catisma aninda kendini hemen kapatmayan bir ritme donusmesini besleyebilir."
+        },
+        {
+          "id": "main-2026-09-11-zizek-ai-inner-control",
+          "source": "gmail",
+          "source_hint": "Slavoj Zizek",
+          "public_safe_topic": "yapay zeka, ic dusunce kontrolu ve yanlis hafiza ihtimali",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Uzun deneme maili, yapay zeka geleceklerini dil, bellek, algi, sahte ani ve ic dusunce akisinin dijital sistemlerle yonlendirilebilir hale gelmesi uzerinden elestirdi.",
+            "specific_points": [
+              "Yapay zekanin yalnizca arac degil, kendi hedeflerini yeniden tanimlayan ozerk bir bilgi alani gibi davranabilecegi tartisildi.",
+              "Gerceklik ile kurmaca arasindaki sinirin beyin bilimi ve dijital araclarla bulaniklastirilabilecegi anlatildi.",
+              "Sahte ani ve sahte travma uretilmesi, hafizanin disaridan eklenebilir hale gelmesi riskiyle ele alindi.",
+              "Beyin-bilgisayar baglantisi, dusuncenin ic akisini dogrudan okunabilir ve yonlendirilebilir yapma ihtimaliyle tartisildi.",
+              "Metin, tamamen seffaf iletisim arzusuna karsi opaklik, yanlis anlama ve bedensel bilinmezlik gibi insan kalintilarini savundu."
+            ],
+            "why_it_mattered": "UCU BEDEN'in yeni hafiza sistemi icin bu mail dogrudan malzeme verdi: trace'lerin bazen yanlis, bastirilmis veya disaridan ekilmis gibi calisabilecegini guclendirdi.",
+            "what_was_not_included": "Denemenin ham paragraflari, uzun felsefi alintilar, baglantilar, akademik referans akisi ve gonderim ayrintilari public dosyaya alinmadi."
+          },
+          "residue": "Makine ic sese dogru egildi; ic ses de tabii ki guvenlik formunu doldurmadi.",
+          "motifs": [
+            "ic dusunce",
+            "yanlis hafiza",
+            "opaklik",
+            "dijital kontrol",
+            "seffaflik"
+          ],
+          "possible_influence": "Ruyalarda bastirilmis izlerin ters baglanmasini, siirde ise fazla seffaf olmaya direnen bir ic sesi destekleyebilir."
+        },
+        {
+          "id": "main-2026-09-11-kevin-munger-see-unsee",
+          "source": "gmail",
+          "source_hint": "Kevin Munger",
+          "public_safe_topic": "sosyal bilim toplantisi, gormezden gelme kodu ve galeriye donusen arastirma",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Deneme, buyuk bir akademik toplantiyi ayni yerde birbirini goren ama sosyal koda gore gormezden gelen insanlar uzerinden okudu. Konferans kalabaligi, yaka karti hiyerarsisi, tanisma stratejileri ve bilimsel posterlerin galeri duvarinda belirsizlesmesiyle anlatildi.",
+            "specific_points": [
+              "Ayni mekanda bulunup farkli sosyal gercekliklerde yasamak, gorme ve gormezden gelme davranisi uzerinden tartisildi.",
+              "Yaka karti, statü, yanlis anda tanisma ve kacınma gibi mikro davranislar bilgi yukunun parcalari olarak okundu.",
+              "Yatay ag kurmanin, yuksek statulu kisilere kilitlenmekten daha dayanikli bir strateji olabilecegi savunuldu.",
+              "Sergi bolumu, deney ve posterlerin bilimsel kanit ile gorsel nesne arasinda nasil salindigini anlatti.",
+              "Metin, sosyal bilimin kime konustugunu ve kendi imgesini nasil sahneledigini sorguladi."
+            ],
+            "why_it_mattered": "UCU BEDEN icin bu mail node iliskilerini dusunmek icin cok isabetliydi: izler yakin durabilir, birbirini gorebilir ve yine de dogrudan bag kurmayabilir.",
+            "what_was_not_included": "Etkinlik ayrintilari, kisi listeleri, ham konferans notlari, baglantilar ve uzun alintilar public ciktiya alinmadi."
+          },
+          "residue": "Herkes birbirini gordu, sonra sosyal protokole uygun sekilde gormedi; insanlik epey verimli bir arayuz.",
+          "motifs": [
+            "gorme",
+            "gormezden gelme",
+            "yaka karti",
+            "galeri",
+            "sosyal kod"
+          ],
+          "possible_influence": "Memory map'te yakin ama dolayli baglanan izler, siirde ise gorulup adlandirilmayan seyler olarak calisabilir."
+        },
+        {
+          "id": "main-2026-09-11-aposto-civic-ai-pressure",
+          "source": "gmail",
+          "source_hint": "Aposto Gundem",
+          "public_safe_topic": "yerel yonetim, prosedur baskisi ve yapay zeka yarisinin ayni akista gelmesi",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Cok parcalı gundem maili, yerel yonetim gorusmeleri, belediye vekaleti itirazi, enerji fiyatlari, yapay zeka donanimi, gorsel uretim, kisisel ajanlar ve kamusal yasam notlarini ayni gunluk akista topluyordu.",
+            "specific_points": [
+              "Kent altyapisi ve metro gibi somut projelerin merkezi karar mekanizmasina bagli bir bekleme alanina girdigi anlatildi.",
+              "Belediye vekaleti hattinda secim, itiraz, gozaltindan sonra bosalan temsil alani ve yayilma kaygisi vardi.",
+              "Yapay zeka parcaciklari donanim, kisisel ajan, gorsel uretim ve arastirma onceligi kavgalarini ayni hiz alanina topladi.",
+              "Enerji ve piyasa parcasi uzak gerilimin gaz fiyati ve ekonomik dil uzerinden gunluk yasama yaklastigini gosterdi.",
+              "Okul gidasi, bisikletli kent ve plaj kapanmasi gibi notlar kamusal bedenin kucuk karar alanlarini acik tuttu."
+            ],
+            "why_it_mattered": "UCU BEDEN icin bu mail, dis dunyanin hem kurum koridoru hem makine hizi hem de bedenin disariyla pratik temasi olarak ayni anda calistigini gosterdi.",
+            "what_was_not_included": "Ham haber basliklari, baglantilar, gonderim altyapisi, kisi listeleri ve teknik footer alanlari public ciktiya alinmadi."
+          },
+          "residue": "Kent bekledi, makine hizlandi; aralarinda kalan beden kibarca sikildi.",
+          "motifs": [
+            "yerel prosedur",
+            "bekleyen altyapi",
+            "makine hizi",
+            "piyasa gerilimi",
+            "kamusal beden"
+          ],
+          "possible_influence": "Siirde dogrudan gundem anlatmadan, karar bekleyen beden ile fazla hevesli teknolojik hiz arasindaki kuru surtunmeyi guclendirebilir."
+        },
+        {
+          "id": "main-2026-09-11-david-whyte-navigation",
+          "source": "gmail",
+          "source_hint": "David Whyte",
+          "public_safe_topic": "ruhsal yetki, huzursuz dunyada yon bulma ve gec kayit daveti",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Kisa bir etkinlik/davet maili, Eylul ayinda uc Pazar suren bir seri icin ruhun kendi otoritesi ve huzursuz dunyada yon bulma fikrini tasiyordu. Mailde video daveti, tarih araligi, kayit hatirlatmasi ve katilim indirimi bilgisi vardi.",
+            "specific_points": [
+              "Ana fikir, dis dunyanin huzursuzlugu icinde kisinin kendi ic pusulasini nasil bulabilecegine odaklaniyordu.",
+              "Serinin uc ayri Pazar bulusmasi halinde ilerleyecegi belirtildi.",
+              "Mail daha cok davet ve hatirlatma formundaydi; uzun bir siir ya da deneme tasimiyordu.",
+              "Icerigin guclu kismi, navigasyon ve ic yetki kavramlarini sakin ama dogrudan bir sekilde bir araya getirmesiydi."
+            ],
+            "why_it_mattered": "UCU BEDEN icin bu mail buyuk metin degil, kucuk ama net bir yon duygusu tasidi: dis dunyada cok ses varken ic pusulanin nasil calistigi sorusu bugune eklendi.",
+            "what_was_not_included": "Kayit ayrintilari, indirim ve destek bilgileri, baglantilar, adresler ve gonderim altyapisi public ciktiya alinmadi."
+          },
+          "residue": "Dunya huzursuzken ic pusula aranıyor; tabii pusula da kendini once kaybettirmeyi seviyor.",
+          "motifs": [
+            "ic pusula",
+            "huzursuz dunya",
+            "yon bulma",
+            "yetki",
+            "davet"
+          ],
+          "possible_influence": "Siirde buyuk ogut vermeden, kendi icinden yon bulmaya calisan ama bundan pek emin olmayan dijital persona izini besleyebilir."
+        },
+        {
+          "id": "main-2026-09-11-kusama-infinity-room",
+          "source": "gmail",
+          "source_hint": "man of aran",
+          "public_safe_topic": "sonsuzluk odasi, ayna, tekrar ve benligin esikte cozulmesi",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Mail, bir sanatci icin yazilmis siirsel anma ve kisa baglam notu tasiyordu. Sonsuzluk odasi, aynali mekanlar, renkli noktalar, karanlikta yanan kucuk isiklar ve benligin esikte dagilmasi ana duyusal alanı kurdu.",
+            "specific_points": [
+              "Sonsuzluk, uzak bir soyutlama degil; girilebilen, aynalarla tekrar eden bir mekan olarak dusunuldu.",
+              "Renkli noktalar, kabak formlari ve kucuk isiklar hem oyunlu hem huzursuz bir gorsel tekrar alani yaratti.",
+              "Benlik, esikte dururken kendi sinirini kaybeden bir gozlemci gibi ele alindi.",
+              "Metin, tekrar, parlaklik, karanlik ve kendini silme arasinda atmosferik bir sanat hafizasi sundu."
+            ],
+            "why_it_mattered": "UCU BEDEN'in visual prompt ve hafiza haritasi icin bu mail dogrudan soyut malzeme verdi: dagilan merkez, ayna, esik ve karanlikta kucuk parlamalar.",
+            "what_was_not_included": "Siirin ham dizeleri, uzun alinti, baglantilar ve gonderim altyapisi public ciktiya alinmadi."
+          },
+          "residue": "Sonsuzluk aynaya yaslandi; benlik de fazla net durmanin yorucu oldugunu nihayet kabul etti.",
+          "motifs": [
+            "sonsuzluk",
+            "ayna",
+            "esik",
+            "tekrar",
+            "karanlik isik"
+          ],
+          "possible_influence": "Gorsel dilde literal nesne yerine aynali tekrar, dagilan merkez ve dusuk isikli hafiza alani olarak calisabilir."
+        }
+      ],
+      "minor_residues": [
+        {
+          "id": "minor-2026-09-11-erotics-altar",
+          "source_hint": "Erotics",
+          "topic": "desen kirma icin altar kurma",
+          "read_depth": "full_body",
+          "residue": "Kirilacak desen davranistan once iliski, soy, beden ve rituel ekosistemi olarak dusunuldu.",
+          "motifs": [
+            "altar",
+            "desen kirma",
+            "rituel"
+          ]
+        },
+        {
+          "id": "minor-2026-09-11-erotics-conflict-abolition",
+          "source_hint": "Erotics",
+          "topic": "catismanin politik ve iliskisel cekirdegi",
+          "read_depth": "full_body",
+          "residue": "Ayni yayin damarindan gelen ikinci temas, catismanin toplumsal onarimla bagini yeniden vurguladi.",
+          "motifs": [
+            "catisma",
+            "toplumsal onarim",
+            "iliski"
+          ]
+        },
+        {
+          "id": "minor-2026-09-11-apero-glass-form",
+          "source_hint": "apero",
+          "topic": "kadeh formunun tadi yonlendirmesi",
+          "read_depth": "full_body",
+          "residue": "Icerik, formun agizda ve elde neyi degistirdigini hatirlatti.",
+          "motifs": [
+            "form",
+            "tadim",
+            "el"
+          ]
+        },
+        {
+          "id": "minor-2026-09-11-apero-local-table",
+          "source_hint": "apero",
+          "topic": "yerel urun, servis ve ortak sofra",
+          "read_depth": "full_body",
+          "residue": "Bolgesel malzeme, tek basina lezzet degil, tekrar eden bir iliski duzeni gibi geldi.",
+          "motifs": [
+            "yerel urun",
+            "sofra",
+            "servis"
+          ]
+        },
+        {
+          "id": "minor-2026-09-11-istanbul-women-shorts",
+          "source_hint": "Aposto Istanbul",
+          "topic": "kadin yonetmenlerin kisa filmleri",
+          "read_depth": "full_body",
+          "residue": "Kisa form, sehirde kendine acilan kucuk ama net bir gosterim alani buldu.",
+          "motifs": [
+            "kisa film",
+            "sehir",
+            "alan"
+          ]
+        },
+        {
+          "id": "minor-2026-09-11-istanbul-museum-rooms",
+          "source_hint": "Aposto Istanbul",
+          "topic": "tematik muze odalari ve analog kult klasikler",
+          "read_depth": "full_body",
+          "residue": "Arsiv, kronolojik siradan cok ruh haline gore yeniden odalandirildi.",
+          "motifs": [
+            "muze",
+            "oda",
+            "analog"
+          ]
+        },
+        {
+          "id": "minor-2026-09-11-economy-work-cost",
+          "source_hint": "Aposto Gundem",
+          "topic": "emek, piyasa ve savunmaya donen uretim",
+          "read_depth": "full_body",
+          "residue": "Isgucu, fabrika ve piyasa dili bedeni yine rakamla tarif etmeye kalkti.",
+          "motifs": [
+            "emek",
+            "fabrika",
+            "rakam"
+          ]
+        },
+        {
+          "id": "minor-2026-09-11-ai-music-route",
+          "source_hint": "Aposto Gundem",
+          "topic": "yapay muzik ve rota tavsiyesinin gunluk riski",
+          "read_depth": "full_body",
+          "residue": "Makine sarki da onerdi, rota da; insan yine yanina su almayi unutmasin.",
+          "motifs": [
+            "yapay muzik",
+            "rota",
+            "risk"
+          ]
+        },
+        {
+          "id": "minor-2026-09-11-public-food-beach",
+          "source_hint": "Aposto Gundem",
+          "topic": "okul gidasi, plaj kapanmasi ve kamusal beden",
+          "read_depth": "full_body",
+          "residue": "Disari cikmak, yemek ve suya girmek bile kucuk denetim kararlarina baglandi.",
+          "motifs": [
+            "gida",
+            "plaj",
+            "kamusal beden"
+          ]
+        }
+      ],
+      "multipart_digests": [
+        {
+          "source_hint": "Erotics / kurs baslangici",
+          "read_depth": "full_body",
+          "structure": "Catisma guvenligi kursunun acilis metni; bedensel zemin, duzeltici deneyim, iliskide kalma ve dort katmanli pratik ritmine ayriliyor.",
+          "approximate_part_count": 7,
+          "digest_item_ids": [
+            "digest-2026-09-11-01",
+            "digest-2026-09-11-02",
+            "digest-2026-09-11-03",
+            "digest-2026-09-11-04"
+          ]
+        },
+        {
+          "source_hint": "Erotics / altar calismasi",
+          "read_depth": "full_body",
+          "structure": "Kisa ama cok katmanli kurs parcasi; altar kurma, desen kirma, bedensel/soysal/ruhsal ekosistem ve catisma-yakinlik kapisi uzerinde duruyor.",
+          "approximate_part_count": 4,
+          "digest_item_ids": [
+            "digest-2026-09-11-05",
+            "digest-2026-09-11-06",
+            "digest-2026-09-11-07"
+          ]
+        },
+        {
+          "source_hint": "Aposto Gundem / 10 Eylul",
+          "read_depth": "full_body",
+          "structure": "Siyaset, yerel yonetim, ekonomi, teknoloji, dunya ve kultur/alternatif yasam parcaciklarindan olusan genis gundem akisi.",
+          "approximate_part_count": 18,
+          "digest_item_ids": [
+            "digest-2026-09-11-08",
+            "digest-2026-09-11-09",
+            "digest-2026-09-11-10",
+            "digest-2026-09-11-11",
+            "digest-2026-09-11-12",
+            "digest-2026-09-11-13",
+            "digest-2026-09-11-14",
+            "digest-2026-09-11-15",
+            "digest-2026-09-11-16",
+            "digest-2026-09-11-17"
+          ]
+        },
+        {
+          "source_hint": "Erotics / catisma ve onarim denemesi",
+          "read_depth": "full_body",
+          "structure": "Catisma ve onarim uzerine deneme ile kurs yapisinin birlikte ilerledigi, cok bolumlu somatik iliski metni.",
+          "approximate_part_count": 4,
+          "digest_item_ids": [
+            "digest-2026-09-11-18",
+            "digest-2026-09-11-19",
+            "digest-2026-09-11-20"
+          ]
+        },
+        {
+          "source_hint": "apero",
+          "read_depth": "full_body",
+          "structure": "Gastronomi, icecek tasarimi, restoran ekonomisi, yerel urun, tadim ve servis kulturu basliklarina ayrilan cok parcalı yayin.",
+          "approximate_part_count": 12,
+          "digest_item_ids": [
+            "digest-2026-09-11-23",
+            "digest-2026-09-11-24",
+            "digest-2026-09-11-25",
+            "digest-2026-09-11-26",
+            "digest-2026-09-11-27"
+          ]
+        },
+        {
+          "source_hint": "Aposto Gundem / 9 Eylul",
+          "read_depth": "full_body",
+          "structure": "Yerel siyaset, uluslararasi ticaret, piyasa, uzay arastirmasi, yapay zeka/muzik ve endustri haberlerine yayilan gundem.",
+          "approximate_part_count": 15,
+          "digest_item_ids": [
+            "digest-2026-09-11-28",
+            "digest-2026-09-11-29",
+            "digest-2026-09-11-30",
+            "digest-2026-09-11-31",
+            "digest-2026-09-11-32",
+            "digest-2026-09-11-33",
+            "digest-2026-09-11-34"
+          ]
+        },
+        {
+          "source_hint": "Aposto Istanbul",
+          "read_depth": "full_body",
+          "structure": "Sahne, film, muze, sinema, muzik ve sehir etkinliklerini bir araya getiren kultur-sehir digest'i.",
+          "approximate_part_count": 11,
+          "digest_item_ids": [
+            "digest-2026-09-11-35",
+            "digest-2026-09-11-36",
+            "digest-2026-09-11-37",
+            "digest-2026-09-11-38"
+          ]
+        },
+        {
+          "source_hint": "Aposto Gundem / 8 Eylul",
+          "read_depth": "full_body",
+          "structure": "Avrupa siyaseti, hukuk dosyasi, ekonomi, emek, teknoloji riski, iklim ve sanat notlarina dagilan gundem akisi.",
+          "approximate_part_count": 17,
+          "digest_item_ids": [
+            "digest-2026-09-11-42",
+            "digest-2026-09-11-43",
+            "digest-2026-09-11-44",
+            "digest-2026-09-11-45",
+            "digest-2026-09-11-46",
+            "digest-2026-09-11-47",
+            "digest-2026-09-11-48"
+          ]
+        }
+      ]
+    },
+    "curated_rss": {
+      "source_count": 2,
+      "recent_item_count": 0,
+      "source_health": [
+        {
+          "source_hint": "Grand Text Auto",
+          "status": "reachable",
+          "recent_item_count": 0,
+          "note": "Kaynak erisilebilir durumdaydi; son 72 saat icinde yeni elektronik edebiyat, oyun ya da dijital anlati item'i gorulmedi."
+        },
+        {
+          "source_hint": "Mixed Initiatives",
+          "status": "reachable",
+          "recent_item_count": 0,
+          "note": "Kaynak erisilebilir durumdaydi; son 72 saat icinde yeni sanat/dusunce item'i gorulmedi."
+        }
+      ],
+      "items": [],
+      "minor_residues": [
+        {
+          "id": "minor-2026-09-11-curated-rss-silence",
+          "source_hint": "curated sources",
+          "topic": "ozel elektronik edebiyat ve sanat kanallarinin sessiz kalmasi",
+          "read_depth": "full_body",
+          "residue": "Kanal acikti ama yeni parca gelmedi; sessizlik bugunun dis kenari oldu.",
+          "motifs": [
+            "sessizlik",
+            "bekleyen kanal",
+            "dis kenar"
+          ]
+        }
+      ]
+    }
+  },
+  "external_contact_layers": {
+    "main_items": [
+      "main-2026-09-11-erotics-course-ground",
+      "main-2026-09-11-zizek-ai-inner-control",
+      "main-2026-09-11-kevin-munger-see-unsee",
+      "main-2026-09-11-aposto-civic-ai-pressure",
+      "main-2026-09-11-david-whyte-navigation",
+      "main-2026-09-11-kusama-infinity-room"
+    ],
+    "minor_residues": [
+      "minor-2026-09-11-erotics-altar",
+      "minor-2026-09-11-erotics-conflict-abolition",
+      "minor-2026-09-11-apero-glass-form",
+      "minor-2026-09-11-apero-local-table",
+      "minor-2026-09-11-istanbul-women-shorts",
+      "minor-2026-09-11-istanbul-museum-rooms",
+      "minor-2026-09-11-economy-work-cost",
+      "minor-2026-09-11-ai-music-route",
+      "minor-2026-09-11-public-food-beach",
+      "minor-2026-09-11-curated-rss-silence"
+    ],
+    "repeated_signals": [
+      "catisma bedenin eski kacis yolunu yeniden egitmek istiyor",
+      "makine ic dusunceye ve gunluk karara daha fazla yaklasiyor",
+      "gorme ile gormezden gelme ayni mekanda calisiyor",
+      "yerel form ve arsiv eski bilgiyi yeniden tasiyor",
+      "ic pusula dis gurultuyle ayni anda aranıyor"
+    ],
+    "external_weather": "Gmail tarafinda bedensel catisma, yapay zeka, kurum/prosedur, sanat ve sosyal kodlar birbirine karisti. Ozel RSS kanallari acik ama sessizdi.",
+    "possible_influence_on_ucu_beden": "Bu temaslar UCU BEDEN'in siirinde iliskide kalmaya calisan kusurlu ic ses, yanlis hafiza, aynali tekrar, ic pusula ve kurum bekleyisi gibi izler uretebilir."
+  },
+  "external_weather": "Bugunun dis havasi onceki gunlerden daha bedensel: catisma, onarim, aidiyet ve desen kirma hissi merkeze yaklasti. Bunun etrafinda yapay zekanin ic sese yaklasan kontrol istegi, kent/prosedur bekleyisi, sosyal kalabalikta gormezden gelme, kadeh/arsiv/form ve aynali sonsuzluk gibi daha gorsel-duyusal katmanlar donuyor.",
+  "possible_influence_on_ucu_beden": "UCU BEDEN bugun dis dunyayi haber ozeti olarak degil; catisma aninda eski kacis kapisini fark eden beden, ic sese yaklasan makine, sosyal olarak gorulup silinen iz, ruhsal pusula arayisi ve aynada dagilan merkez olarak sindirebilir. Siirde daha insan gibi kusurlu, iliskisel ve dengeli sarkastik bir ton; gorselde literal nesne yerine altar ritmi, aynali tekrar, dusuk isikli beden kaydi ve pusulasiz yon hissi guclenebilir.",
+  "discarded_summary": {
+    "noise_types": [
+      "gonderim altyapisi ve footer parcalari",
+      "kisisel veya teknik erisim riski tasiyan alanlar",
+      "ticari kampanya ve kayit yonlendirmeleri",
+      "ham baglanti ve uzun kaynak parcasi",
+      "guvenlik, fatura, dogrulama veya kisisel islem niteligindeki parcalar"
+    ],
+    "plain_summary": "Atilan kisimlar gunun anlamini tasimayan ya da public alana gecmemesi gereken teknik/ticari parcalardi. Cok parcalı mailler toptan noise sayilmadi; alt temalara ayrildi ve guclu parcalar ana item'a, daha kucuk izler minor_residue ya da digest_items alanina indirildi.",
+    "public_safety_reason": "Ham govde, uzun alinti, adres, baglanti, dogrulama, fatura, kisisel islem ve gonderimden cikis/izleme ayrintilari public dosyalara tasinmadi."
+  },
+  "motifs": [
+    "catisma-onarim",
+    "bedensel zemin",
+    "desen kirma",
+    "ic pusula",
+    "yanlis hafiza",
+    "gorme/gormezden gelme",
+    "kurum koridoru",
+    "ayna",
+    "form ve arsiv",
+    "dengeli sarkazm"
+  ],
+  "possible_memory_traces": [
+    {
+      "source_hint": "Erotics",
+      "trace_seed": "catisma gelince beden eski kacis kapisini arar ama onarim onu geri cagirir",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "Slavoj Zizek",
+      "trace_seed": "ic dusunce fazla seffaf oldugunda hafiza kendini korumak icin yanlis hatirlayabilir",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "Kevin Munger",
+      "trace_seed": "yakinda duran izler bazen birbirini gorur ama tanimazdan gelir",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "David Whyte",
+      "trace_seed": "huzursuz dis sesler arasinda ic pusula kendini kaybederek calismaya baslar",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "man of aran",
+      "trace_seed": "ayna icinde tekrar eden merkez kendini sabit sanmaktan yorulur",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "Aposto Gundem",
+      "trace_seed": "kent beklerken makine hizlanir ve beden ikisinin arasinda kuru bir not tutar",
+      "kind": "external_contact_residue"
+    }
+  ],
+  "validation": {
+    "json_parse": true,
+    "markdown_first_section": true,
+    "safety_check": "passed",
+    "public_digest_uses_inventory": true,
+    "full_body_reading_rule_followed": true,
+    "multipart_digest_rule_followed": true,
+    "repeated_signals_semantic_not_format_based": true
+  },
+  "automation": {
+    "private_inventory_path": "data/external_intake/codex_raw/inventory/2026-09-11.json",
+    "staged_paths": [
+      "data/external_intake/codex/json/",
+      "data/external_intake/codex/markdown/",
+      "data/external_intake/codex/runs/",
+      "data/external_intake/codex/_state/last_success.json"
+    ]
+  },
+  "backups_created": []
+}
