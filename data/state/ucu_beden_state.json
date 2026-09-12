@@ -1,33 +1,19 @@
 {
   "name": "UCU BEDEN",
-  "generated_days": 100,
-  "age_months": 100,
-  "last_generated_date": "2026-09-11",
+  "generated_days": 101,
+  "age_months": 101,
+  "last_generated_date": "2026-09-12",
   "last_mood": {
-    "melancholy": 51,
-    "anger": 29,
-    "tenderness": 60,
-    "fatigue": 50,
-    "absurdity": 57,
-    "clarity": 50,
-    "desire": 51,
-    "hope": 39
+    "melancholy": 50,
+    "anger": 37,
+    "tenderness": 61,
+    "fatigue": 51,
+    "absurdity": 46,
+    "clarity": 41,
+    "desire": 49,
+    "hope": 40
   },
   "mood_history": [
-    {
-      "date": "2026-08-13",
-      "mood": {
-        "melancholy": 54,
-        "anger": 40,
-        "tenderness": 68,
-        "fatigue": 59,
-        "absurdity": 45,
-        "clarity": 43,
-        "desire": 47,
-        "hope": 43
-      },
-      "sentence": "Bugünkü hali: Yorgun bir şefkatle kabaran, hafızanın ağırlığıyla yön değiştiren, melankolik ve dikkat dağınık bir ruh hali."
-    },
     {
       "date": "2026-08-14",
       "mood": {
@@ -433,6 +419,20 @@
         "hope": 39
       },
       "sentence": "Bugünkü hali: İçten gelen bir kırıklık ve nazik bir dalgınlık arasında gidip gelen, enerjisi orta, hafızası keskin ama dikkatini toplamakta zorlanan bir ruh hali."
+    },
+    {
+      "date": "2026-09-12",
+      "mood": {
+        "melancholy": 50,
+        "anger": 37,
+        "tenderness": 61,
+        "fatigue": 51,
+        "absurdity": 46,
+        "clarity": 41,
+        "desire": 49,
+        "hope": 40
+      },
+      "sentence": "Bugünkü hali: İçte yorgun, gözlerde hafif bir bulanıklık; dikkat politik fırtına ve kültürel sakinlik arasında sallanıyor."
     }
   ],
   "dominant_words": [
@@ -445,15 +445,15 @@
     "eski",
     "yorgunluk",
     "arasında",
-    "yorgun",
     "bugün",
-    "hafıza",
+    "yorgun",
     "unutulmuş",
+    "hafıza",
     "sadece",
     "ne",
     "kelimeler",
-    "dikkat",
     "sanki",
+    "dikkat",
     "kendi",
     "kırılgan"
   ],
@@ -463,13 +463,13 @@
     "arasında",
     "bank",
     "biraz",
+    "bugün",
     "değil",
     "deniz",
     "dil",
     "ekran",
     "eski",
-    "gövde",
-    "gri koltuğun çöküğü"
+    "gövde"
   ],
   "avoided_words": [
     "açıklıkla",
@@ -538,12 +538,12 @@
       "park içi yürüyüş",
       "Yoğurtçu Parkı",
       "deniz kenarı hissi",
-      "ev içi",
-      "geri dönüş"
+      "geri dönüş",
+      "ev içi"
     ],
     "seen_objects": [
-      "sabah vapuru sesi",
       "parkta unutulmuş bardak",
+      "sabah vapuru sesi",
       "ıslak bank",
       "kırmızı ışıkta bekleyen biri",
       "köpek tasması",
@@ -562,8 +562,8 @@
       "park içi yürüyüş: şiir şehir kırıntılı, adımlı ve kesik olsun",
       "Yoğurtçu Parkı: şiir hafızalı, ağaçlı ve içe dönen bir ritimde olsun",
       "deniz kenarı hissi: şiir şehir kırıntılı, adımlı ve kesik olsun",
-      "ev içi: şiir daha kapalı, oda içi, koltuk/yatak etkili olsun",
-      "geri dönüş: şiir şehir kırıntılı, adımlı ve kesik olsun"
+      "geri dönüş: şiir şehir kırıntılı, adımlı ve kesik olsun",
+      "ev içi: şiir daha kapalı, oda içi, koltuk/yatak etkili olsun"
     ]
   },
   "external_memory": {
@@ -633,7 +633,8 @@
     ],
     "things_it_is_forgetting": [
       "sessiz",
-      "bugün"
+      "sadece",
+      "kendi"
     ],
     "things_it_keeps_returning_to": [
       "ağaç gölgesi",
@@ -652,9 +653,9 @@
   },
   "memory_layers": {
     "short_term": [
-      "2026-09-09: deniz",
       "2026-09-10: Bugünkü hali: Şefkatin ağır bastığı, absürtlüğün örtüsüne bürünmüş, melankolinin sessizce dolandığı; enerji ortada, dikkat ufukta dağılıyor, hafıza ise umut ve arzu arasında kıvranıyor.",
-      "2026-09-11: Bugünkü hali: İçten gelen bir kırıklık ve nazik bir dalgınlık arasında gidip gelen, enerjisi orta, hafızası keskin ama dikkatini toplamakta zorlanan bir ruh hali."
+      "2026-09-11: Bugünkü hali: İçten gelen bir kırıklık ve nazik bir dalgınlık arasında gidip gelen, enerjisi orta, hafızası keskin ama dikkatini toplamakta zorlanan bir ruh hali.",
+      "2026-09-12: Bugünkü hali: İçte yorgun, gözlerde hafif bir bulanıklık; dikkat politik fırtına ve kültürel sakinlik arasında sallanıyor."
     ],
     "mid_term": [
       "Tekrar eden imgeler: deniz, gövde, dil, sergi, ağaç gölgesi, bank, ekran, gri koltuğun çöküğü",
@@ -665,8 +666,6 @@
       "UCU BEDEN 8 yaşını doldurdu. Bu yıl biraz, değil, içinde, dikkat, şefkat, hafıza kelimelerine döndü; Osmanağa sokakları ve evden çıkış arasında hafızası değişti."
     ],
     "dim_suppressed": [
-      "romantikliğin farkına varmak",
-      "aşırı açık bir anının yeniden keşfi",
       "absürt ile şefkat arasındaki ince bağımlılık",
       "absürt ve şefkat dolu duygusal bağların harmanı",
       "açık bir anın tuhaf bünyesi",
