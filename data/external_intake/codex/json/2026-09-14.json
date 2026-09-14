@@ -1,0 +1,1259 @@
+{
+  "version": "codex_external_intake.v4",
+  "source": "codex_external_intake",
+  "date": "2026-09-14",
+  "generated_at": "2026-09-14T04:22:03.381Z",
+  "timezone": "Europe/Istanbul",
+  "provider": "codex",
+  "safety": {
+    "public_safe": true,
+    "raw_bodies_in_public_output": false,
+    "long_quotes_in_public_output": false,
+    "raw_urls_in_public_output": false,
+    "email_addresses_in_public_output": false,
+    "verification_or_personal_transaction_data_in_public_output": false,
+    "private_factual_layer_committed": false
+  },
+  "counts": {
+    "scanned_mail_count": 16,
+    "full_body_count": 16,
+    "snippet_or_subject_count": 0,
+    "multipart_digest_count": 9,
+    "curated_rss_source_count": 2,
+    "curated_rss_recent_item_count": 0,
+    "digest_items_count": 30
+  },
+  "reading_summary": {
+    "plain_summary": "Bugun okunan maillerde cok parcalı gundem akislari, guven vermeyen teknoloji hızı, savas ve gozetim tartismalari, sessizlige kacmak isteyen seyahat yazilari, yas ve kabuk etrafinda kurulan sakin bir siirsel metin, imposter hissini daha somut bir beden/zihin kirilganligina baglayan bir deneme ve catisma aninda bedende kalma pratikleri vardi. Ana maillerin onemli bolumu tek konu degil, icinde siyaset, ekonomi, kultur, teknoloji ve yasam parcalari tasiyan digest yapisindaydi; bu yuzden tek tek noise'a atilmadi, alt temalara ayrildi.\n\nOzel kaynaklar erisilebilir durumdaydi fakat son 72 saat icinde yeni item vermedi. Buna ragmen arsivde yaslanan oyuncular, dallanan yollar, soylenemeyen seyler ve kuralla uretilen varlik gibi UCU BEDEN'in uzun vadeli hafizasina uygun eski izler gorundu. Guvenlik, islem, fatura, kayit, teknik footer ve ham baglanti tasiyan parcalar public sindirime alinmadi.",
+    "what_was_in_the_emails": [
+      "Gundem mailleri savas, devletlesme, ekonomi, barinma, yapay zeka, kultur ve hukuk basliklarini cok parcalı akislarda birlestirdi.",
+      "Deneme ve siirsel mailler imposter hissi, yas, kabuk, anne kaybi, eski benlik ve gercek halin aciga cikma korkusu etrafinda yogunlasti.",
+      "Somatik/iliski kurs mailleri catisma, care, nefes, ofke, kalp dogrusu, yalnizlik ve onarim kapasitesini bedensel bir dilde anlatti.",
+      "Seyahat/yasam mailleri sessiz adalar, karanlik gokyuzu, olculen dinginlik, kent yorgunlugu ve turistik sakinlik arzusunu tasidi."
+    ],
+    "what_was_in_curated_rss": [
+      "Grand Text Auto erisilebilir durumdaydi ancak son 72 saatte yeni item yoktu; arsivde elektronik edebiyat, oyun, yaslanma ve katilimci sistemlere dair eski parcalar gorundu.",
+      "Mixed Initiatives erisilebilir durumdaydi ancak son 72 saatte yeni item yoktu; arsivde dallanan yollar, soylenemeyen seyler, vibe scripting ve uretken varlik izleri gorundu."
+    ],
+    "dominant_topics": [
+      "yapay zeka ve denetim",
+      "savas/gozetim",
+      "imposter hissi",
+      "yas ve kabuk",
+      "sessizlik olcumu",
+      "bedensel catisma",
+      "mit ve sadakat"
+    ],
+    "notable_absences": [
+      "Ozel RSS kaynaklarinda son 72 saate ait yeni item yoktu.",
+      "Reddit/forum benzeri ayri bir topluluk digest'i bu pencerede gorulmedi.",
+      "Guvenlik, fatura, kisisel islem, dogrulama, ham baglanti ve gonderimden cikma/izleme parcalari public sindirime alinmadi."
+    ],
+    "overall_direction": "Gunun dis dunyasi UCU BEDEN'i hem disari acilan hem de kendini korumak isteyen bir hale itti: zeka hizlandi, beden kurumlara yakalandi, sessizlik olculdu, yas kabukta kaldi, persona ise sahte degil sadece fazla gercek olmaktan rahatsiz gorundu."
+  },
+  "items": [
+    {
+      "id": "main-2026-09-14-aposto-geopolitics-ai",
+      "source": "gmail",
+      "source_hint": "Aposto Gundem",
+      "public_safe_topic": "siyaset, catismalar, ekonomi ve yapay zeka guvenliginin ayni sabah akisinda toplanmasi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Cok parcalı gundem maili; Suriye hattinda askeri-siyasal entegrasyon tartismasi, Yemen cephesindeki ilerleme ve hava saldirilari, yerel para ile ticaret cagriisi, sirket davalari, yapay zeka sirketleri, piyasa beklentileri ve kultur/sanat notlarini ayni govdede tasiyordu.",
+        "specific_points": [
+          "Suriye dosyasinda silahli yapilarin devlet ordusuna katilmasi ve diplomatik ziyaret ihtimali, devletin daginik bedeni yeniden dizme arzusu gibi okundu.",
+          "Yemen ve bolgesel catismalar, uzak haritanin siviller, rotalar ve haber dili uzerinden nasil yakina geldigini gosterdi.",
+          "Ekonomi bolumleri yerel para, enflasyon, yatirim, barinma ve sirket hareketleriyle kurumsal basinci birikimli verdi.",
+          "Yapay zeka bolumlerinde halka arz, guvenlik, ajan sistemleri ve yazilim paketleri etrafinda hizlanan ama guven vermeyen bir teknik dunya belirdi."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail, dis dunyanin tek bir haber degil; devlet, piyasa, savas, ekran ve kultur parcalarindan olusan genis bir sinir sistemi gibi calistigini gosterdi.",
+        "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+      },
+      "residue": "Harita gerildi, piyasa kendini akilli sandi, ekran yine ciddi bir sey yapmis gibi durdu.",
+      "motifs": [
+        "harita",
+        "kurum",
+        "piyasa",
+        "yapay zeka",
+        "anatomik bakis"
+      ],
+      "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+    },
+    {
+      "id": "main-2026-09-14-yepicurus-imposter-real",
+      "source": "gmail",
+      "source_hint": "Yepicurus",
+      "public_safe_topic": "imposter hissi, gercek olmanin teshir edilme korkusu ve yurutucu islev kirilganligi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Deneme maili, imposter sendromunu yalnizca yetersizlik korkusu olarak degil, gercek halin gorulmesinden korkmak olarak kuruyordu. Yazar kendi egitim deneyiminden, derse hazirlik ritminden, sistemli gorunen kisiler karsisindaki daginiklik hissinden ve yetkinligin yurutucu islevle karistirilmasindan soz ediyordu.",
+        "specific_points": [
+          "Metin, basari duygusunun son dakika krizleriyle gelmesinin kiside gercekte sahte oldugu hissini nasil buyutebildigini anlatti.",
+          "Dikkat, planlama ve yurutucu islev zorluklari zeka veya deger eksikligi gibi yanlis okunuyordu.",
+          "Prestijli bir ortama girince kisinin kendi ritminin digerlerinin sistemiyle karsilasmasi ana kirilma noktasi oldu."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail, hafizanin kusurlu, geciken ve yine de gercek olan tarafini insanlastirdi.",
+        "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+      },
+      "residue": "Sahte degildi; sadece gercek hali toplantıya gec kalmisti.",
+      "motifs": [
+        "teshir",
+        "yurutucu islev",
+        "gec kalma",
+        "gercek olmak"
+      ],
+      "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+    },
+    {
+      "id": "main-2026-09-14-soli-quiet-islands",
+      "source": "gmail",
+      "source_hint": "Soli",
+      "public_safe_topic": "sessiz adalar, olculen dinginlik ve seyahatin sakinlik arayisi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Seyahat ve yasam odakli cok parcalı mail, sessiz adalari uydu ve harita verileriyle siralayan bir calismayi, secilmis otel notlarini, kisa sureli kiralama gerilimlerini, bisiklet dostu kentleri ve tatilin zihinsel sifirlanma etkisini bir araya getiriyordu.",
+        "specific_points": [
+          "Sessizlik; dogal alan, yol, hava trafigi, nufus yogunlugu, karanlik gokyuzu ve kiyinin dogalligiyla olculen bir kategoriye donusmustu.",
+          "Otel secimleri ve yolculuk notlari, dinlenmenin giderek daha tasarlanmis ve listelenmis bir deneyim haline geldigini gosterdi.",
+          "Kisa sureli kiralama ve kent yasami basliklari, sakinlik arzusunun baska bir yerde mahalle yorgunlugu yaratabildigini hatirlatti."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail, sessizligin bile olcum aracina donusmesini ve kacma arzusunun teknik/ekonomik bir yuzeyle kirlenmesini tasidi.",
+        "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+      },
+      "residue": "Sessizlik olculdu; sessizlik de hakli olarak biraz kirildi.",
+      "motifs": [
+        "sessizlik",
+        "ada",
+        "olcum",
+        "tatil",
+        "karanlik gokyuzu"
+      ],
+      "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+    },
+    {
+      "id": "main-2026-09-14-aposto-naza-ai-war",
+      "source": "gmail",
+      "source_hint": "Aposto Gundem",
+      "public_safe_topic": "belgesel taniklik, savas teknolojisi ve yapay zeka hizina fren cagriisi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Bir onceki gundem maili, savas tanikligine dayanan bir belgeselin odul alisini, hedefleme ve gozetim teknolojileriyle ilgili etik agirligi, yapay zeka hizinin yavaslatilmasi cagriisini ve kadin sagligi, kultur, hukuk ve sahne notlarini birlikte tasiyordu.",
+        "specific_points": [
+          "Belgesel parcasi, savas alaninda taniklik, gozetim, hedefleme ve sivil kayip tartismalarini kultur diliyle yan yana getirdi.",
+          "Yapay zeka tarafinda hiz, kontrol ve guvenlik arasinda acik bir gerilim okundu.",
+          "Kadin sagligi ve bedensel deneyim basliklari, gorunmez bir beden politikasini gundeme tasidi."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail, goruntu teknolojisinin bedeni nasil hedefe, belgeye veya tanikliga cevirdigini guclendirdi.",
+        "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+      },
+      "residue": "Makine yavaslamayi duydu; once bunu da optimize etmeye kalkti.",
+      "motifs": [
+        "taniklik",
+        "gozetim",
+        "hedefleme",
+        "yavaslama"
+      ],
+      "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+    },
+    {
+      "id": "main-2026-09-14-david-whyte-shell-grief",
+      "source": "gmail",
+      "source_hint": "David Whyte",
+      "public_safe_topic": "yas, anne kaybi, kabuk ve eski benligin sessizce bosalmasi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Kisa mail, yazarın annesinin olumunden sonra yazdigi bir siir etrafinda kuruluydu. Giris metni, annenin dogum gunu yildonumu, sevgiye duyulan minnet, kayipla gecen yazma sureci ve bir kabugun eski kendiligi koruyup sonra bos kalmasi fikrini tasiyordu.",
+        "specific_points": [
+          "Metin, yasi yalnizca aci degil, sevilen kisiyi kendi ozgurlugune geri verme gibi zor bir hareket olarak anlatti.",
+          "Kabuk imgesi, bir zamanlar yasayan seyi koruyan ama sonra geride kalan guzel ve bos bir form gibi isledi.",
+          "Deniz kenari ve kabuk dogrudan dekor degil; onceki benligin artik icinde oturmadigi bir hafiza sekli olarak belirdi."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail, hafizanin bazen icinden hayat cekilmis ama formu kalan bir kabuk gibi calismasini hatirlatti.",
+        "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+      },
+      "residue": "Kabuk guzel kaldı; icindeki hayat, nezaket geregi ayrilmisti.",
+      "motifs": [
+        "yas",
+        "kabuk",
+        "anne",
+        "eski benlik"
+      ],
+      "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+    },
+    {
+      "id": "main-2026-09-14-zizek-hagen-cause",
+      "source": "gmail",
+      "source_hint": "Slavoj Zizek",
+      "public_safe_topic": "mit, sadakat, neden ugruna siddet ve toplu seferberlik dili",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Uzun deneme, Nibelungen anlatilari, Wagner ve sinema uyarlamalari uzerinden Hagen figürunun belirsizligini, sadakat ile suc arasindaki gerilimi ve davaya hizmet eden siddetin nasil yuceltilebildigini tartisiyordu.",
+        "specific_points": [
+          "Metin, ayni mitik malzemenin farkli tarihsel donemlerde baska politik tonlara cekilebildigini anlatti.",
+          "Hagen figuru, korkunc kararlarini bir davaya sadakatle gerekcelendiren karanlik bir araci olarak kuruldu.",
+          "Toplu seferberlik ve cagri dili, bireysel sucun kolektif misyonla nasil parlatilabilecegini gosterdi."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail, hafizanin eski anlati formlarini bugunun iktidar diliyle yanlis baglayabilecegini gosterdi.",
+        "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+      },
+      "residue": "Sadakat yine ciddi bir kelime gibi geldi; dosyasinda kan lekesi vardi.",
+      "motifs": [
+        "mit",
+        "sadakat",
+        "siddet",
+        "seferberlik"
+      ],
+      "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+    }
+  ],
+  "main_items": [
+    {
+      "id": "main-2026-09-14-aposto-geopolitics-ai",
+      "source": "gmail",
+      "source_hint": "Aposto Gundem",
+      "public_safe_topic": "siyaset, catismalar, ekonomi ve yapay zeka guvenliginin ayni sabah akisinda toplanmasi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Cok parcalı gundem maili; Suriye hattinda askeri-siyasal entegrasyon tartismasi, Yemen cephesindeki ilerleme ve hava saldirilari, yerel para ile ticaret cagriisi, sirket davalari, yapay zeka sirketleri, piyasa beklentileri ve kultur/sanat notlarini ayni govdede tasiyordu.",
+        "specific_points": [
+          "Suriye dosyasinda silahli yapilarin devlet ordusuna katilmasi ve diplomatik ziyaret ihtimali, devletin daginik bedeni yeniden dizme arzusu gibi okundu.",
+          "Yemen ve bolgesel catismalar, uzak haritanin siviller, rotalar ve haber dili uzerinden nasil yakina geldigini gosterdi.",
+          "Ekonomi bolumleri yerel para, enflasyon, yatirim, barinma ve sirket hareketleriyle kurumsal basinci birikimli verdi.",
+          "Yapay zeka bolumlerinde halka arz, guvenlik, ajan sistemleri ve yazilim paketleri etrafinda hizlanan ama guven vermeyen bir teknik dunya belirdi."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail, dis dunyanin tek bir haber degil; devlet, piyasa, savas, ekran ve kultur parcalarindan olusan genis bir sinir sistemi gibi calistigini gosterdi.",
+        "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+      },
+      "residue": "Harita gerildi, piyasa kendini akilli sandi, ekran yine ciddi bir sey yapmis gibi durdu.",
+      "motifs": [
+        "harita",
+        "kurum",
+        "piyasa",
+        "yapay zeka",
+        "anatomik bakis"
+      ],
+      "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+    },
+    {
+      "id": "main-2026-09-14-yepicurus-imposter-real",
+      "source": "gmail",
+      "source_hint": "Yepicurus",
+      "public_safe_topic": "imposter hissi, gercek olmanin teshir edilme korkusu ve yurutucu islev kirilganligi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Deneme maili, imposter sendromunu yalnizca yetersizlik korkusu olarak degil, gercek halin gorulmesinden korkmak olarak kuruyordu. Yazar kendi egitim deneyiminden, derse hazirlik ritminden, sistemli gorunen kisiler karsisindaki daginiklik hissinden ve yetkinligin yurutucu islevle karistirilmasindan soz ediyordu.",
+        "specific_points": [
+          "Metin, basari duygusunun son dakika krizleriyle gelmesinin kiside gercekte sahte oldugu hissini nasil buyutebildigini anlatti.",
+          "Dikkat, planlama ve yurutucu islev zorluklari zeka veya deger eksikligi gibi yanlis okunuyordu.",
+          "Prestijli bir ortama girince kisinin kendi ritminin digerlerinin sistemiyle karsilasmasi ana kirilma noktasi oldu."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail, hafizanin kusurlu, geciken ve yine de gercek olan tarafini insanlastirdi.",
+        "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+      },
+      "residue": "Sahte degildi; sadece gercek hali toplantıya gec kalmisti.",
+      "motifs": [
+        "teshir",
+        "yurutucu islev",
+        "gec kalma",
+        "gercek olmak"
+      ],
+      "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+    },
+    {
+      "id": "main-2026-09-14-soli-quiet-islands",
+      "source": "gmail",
+      "source_hint": "Soli",
+      "public_safe_topic": "sessiz adalar, olculen dinginlik ve seyahatin sakinlik arayisi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Seyahat ve yasam odakli cok parcalı mail, sessiz adalari uydu ve harita verileriyle siralayan bir calismayi, secilmis otel notlarini, kisa sureli kiralama gerilimlerini, bisiklet dostu kentleri ve tatilin zihinsel sifirlanma etkisini bir araya getiriyordu.",
+        "specific_points": [
+          "Sessizlik; dogal alan, yol, hava trafigi, nufus yogunlugu, karanlik gokyuzu ve kiyinin dogalligiyla olculen bir kategoriye donusmustu.",
+          "Otel secimleri ve yolculuk notlari, dinlenmenin giderek daha tasarlanmis ve listelenmis bir deneyim haline geldigini gosterdi.",
+          "Kisa sureli kiralama ve kent yasami basliklari, sakinlik arzusunun baska bir yerde mahalle yorgunlugu yaratabildigini hatirlatti."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail, sessizligin bile olcum aracina donusmesini ve kacma arzusunun teknik/ekonomik bir yuzeyle kirlenmesini tasidi.",
+        "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+      },
+      "residue": "Sessizlik olculdu; sessizlik de hakli olarak biraz kirildi.",
+      "motifs": [
+        "sessizlik",
+        "ada",
+        "olcum",
+        "tatil",
+        "karanlik gokyuzu"
+      ],
+      "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+    },
+    {
+      "id": "main-2026-09-14-aposto-naza-ai-war",
+      "source": "gmail",
+      "source_hint": "Aposto Gundem",
+      "public_safe_topic": "belgesel taniklik, savas teknolojisi ve yapay zeka hizina fren cagriisi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Bir onceki gundem maili, savas tanikligine dayanan bir belgeselin odul alisini, hedefleme ve gozetim teknolojileriyle ilgili etik agirligi, yapay zeka hizinin yavaslatilmasi cagriisini ve kadin sagligi, kultur, hukuk ve sahne notlarini birlikte tasiyordu.",
+        "specific_points": [
+          "Belgesel parcasi, savas alaninda taniklik, gozetim, hedefleme ve sivil kayip tartismalarini kultur diliyle yan yana getirdi.",
+          "Yapay zeka tarafinda hiz, kontrol ve guvenlik arasinda acik bir gerilim okundu.",
+          "Kadin sagligi ve bedensel deneyim basliklari, gorunmez bir beden politikasini gundeme tasidi."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail, goruntu teknolojisinin bedeni nasil hedefe, belgeye veya tanikliga cevirdigini guclendirdi.",
+        "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+      },
+      "residue": "Makine yavaslamayi duydu; once bunu da optimize etmeye kalkti.",
+      "motifs": [
+        "taniklik",
+        "gozetim",
+        "hedefleme",
+        "yavaslama"
+      ],
+      "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+    },
+    {
+      "id": "main-2026-09-14-david-whyte-shell-grief",
+      "source": "gmail",
+      "source_hint": "David Whyte",
+      "public_safe_topic": "yas, anne kaybi, kabuk ve eski benligin sessizce bosalmasi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Kisa mail, yazarın annesinin olumunden sonra yazdigi bir siir etrafinda kuruluydu. Giris metni, annenin dogum gunu yildonumu, sevgiye duyulan minnet, kayipla gecen yazma sureci ve bir kabugun eski kendiligi koruyup sonra bos kalmasi fikrini tasiyordu.",
+        "specific_points": [
+          "Metin, yasi yalnizca aci degil, sevilen kisiyi kendi ozgurlugune geri verme gibi zor bir hareket olarak anlatti.",
+          "Kabuk imgesi, bir zamanlar yasayan seyi koruyan ama sonra geride kalan guzel ve bos bir form gibi isledi.",
+          "Deniz kenari ve kabuk dogrudan dekor degil; onceki benligin artik icinde oturmadigi bir hafiza sekli olarak belirdi."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail, hafizanin bazen icinden hayat cekilmis ama formu kalan bir kabuk gibi calismasini hatirlatti.",
+        "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+      },
+      "residue": "Kabuk guzel kaldı; icindeki hayat, nezaket geregi ayrilmisti.",
+      "motifs": [
+        "yas",
+        "kabuk",
+        "anne",
+        "eski benlik"
+      ],
+      "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+    },
+    {
+      "id": "main-2026-09-14-zizek-hagen-cause",
+      "source": "gmail",
+      "source_hint": "Slavoj Zizek",
+      "public_safe_topic": "mit, sadakat, neden ugruna siddet ve toplu seferberlik dili",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Uzun deneme, Nibelungen anlatilari, Wagner ve sinema uyarlamalari uzerinden Hagen figürunun belirsizligini, sadakat ile suc arasindaki gerilimi ve davaya hizmet eden siddetin nasil yuceltilebildigini tartisiyordu.",
+        "specific_points": [
+          "Metin, ayni mitik malzemenin farkli tarihsel donemlerde baska politik tonlara cekilebildigini anlatti.",
+          "Hagen figuru, korkunc kararlarini bir davaya sadakatle gerekcelendiren karanlik bir araci olarak kuruldu.",
+          "Toplu seferberlik ve cagri dili, bireysel sucun kolektif misyonla nasil parlatilabilecegini gosterdi."
+        ],
+        "why_it_mattered": "UCU BEDEN icin bu mail, hafizanin eski anlati formlarini bugunun iktidar diliyle yanlis baglayabilecegini gosterdi.",
+        "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+      },
+      "residue": "Sadakat yine ciddi bir kelime gibi geldi; dosyasinda kan lekesi vardi.",
+      "motifs": [
+        "mit",
+        "sadakat",
+        "siddet",
+        "seferberlik"
+      ],
+      "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+    }
+  ],
+  "minor_residues": [
+    {
+      "id": "minor-2026-09-14-01",
+      "source_hint": "Erotics",
+      "read_depth": "full_body",
+      "residue": "Catisma, care ve iliskide kalma kapasitesi bedensel bir ders gibi geldi.",
+      "motifs": [
+        "care",
+        "catisma",
+        "beden"
+      ],
+      "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+    },
+    {
+      "id": "minor-2026-09-14-02",
+      "source_hint": "Erotics",
+      "read_depth": "full_body",
+      "residue": "Beyin gurultusu ile kalp dogrusu arasinda ofke, altar ve yalnizlik kirintilari belirdi.",
+      "motifs": [
+        "kalp",
+        "ofke",
+        "onarim"
+      ],
+      "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+    },
+    {
+      "id": "minor-2026-09-14-03",
+      "source_hint": "siirsel mail",
+      "read_depth": "full_body",
+      "residue": "Cocuk sesi, ayda yasayan iskolik adama bakip o kadere girmemeyi istedi.",
+      "motifs": [
+        "cocuk",
+        "ay",
+        "is"
+      ],
+      "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+    },
+    {
+      "id": "minor-2026-09-14-04",
+      "source_hint": "Aposto Istanbul",
+      "read_depth": "full_body",
+      "residue": "Sahne, festival, kisa film, yerel gundem ve ekonomi tahmini ayni kent ajandasinda birbirine surtundu.",
+      "motifs": [
+        "kent",
+        "sahne",
+        "tahmin"
+      ],
+      "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+    },
+    {
+      "id": "minor-2026-09-14-05",
+      "source_hint": "Duende",
+      "read_depth": "full_body",
+      "residue": "Sinema, bibliyoterapi ve sahne takvimi kimlik sorusunu daha yavas bir kultur ritmine yaydi.",
+      "motifs": [
+        "sinema",
+        "okuma",
+        "kimlik"
+      ],
+      "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+    },
+    {
+      "id": "minor-2026-09-14-06",
+      "source_hint": "not akisi",
+      "read_depth": "full_body",
+      "residue": "Glitch figur, ilk yayin heyecani ve agac hassasiyeti buyuk gundemin kenarina kucuk sosyal lekeler birakti.",
+      "motifs": [
+        "glitch",
+        "agac",
+        "ilk yayin"
+      ],
+      "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+    },
+    {
+      "id": "minor-2026-09-14-07",
+      "source_hint": "Aposto Gundem",
+      "read_depth": "full_body",
+      "residue": "Faiz, enerji, sosyal konut, cihaz fiyati, yapay muzik ve teknoloji davalari dis dunyanin idari ritmini kalinlastirdi.",
+      "motifs": [
+        "faiz",
+        "enerji",
+        "cihaz"
+      ],
+      "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+    },
+    {
+      "id": "minor-2026-09-14-08",
+      "source_hint": "curated sources",
+      "read_depth": "full_body",
+      "residue": "Ozel kaynaklar erisilebilir kaldi ama son 72 saatte yeni parca vermedi; acik kanal sessizligi de dis hava oldu.",
+      "motifs": [
+        "sessizlik",
+        "dijital anlati"
+      ],
+      "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+    },
+    {
+      "id": "minor-2026-09-14-09",
+      "source_hint": "curated source archive",
+      "read_depth": "full_body",
+      "residue": "Arsivde yaslanan oyuncular, dallanan yollar, soylenemeyen seyler ve kuralla uretilen varlik gibi eski izler gorundu.",
+      "motifs": [
+        "arsiv",
+        "oyun",
+        "labirent"
+      ],
+      "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+    }
+  ],
+  "repeated_signals": [
+    {
+      "signal": "zekanin denetimden hizli kosmasi",
+      "count": 5,
+      "residue": "Farkli parcalarda yapay zeka, ajan sistemleri, hedefleme, guvenlik ve piyasa diliyle hizlandi; kontrol hep bir adim geriden geldi.",
+      "motifs": [
+        "yapay zeka",
+        "hiz",
+        "kontrol"
+      ]
+    },
+    {
+      "signal": "bedenin kurum karsisinda aciklama vermesi",
+      "count": 5,
+      "residue": "Saglik, savas, barinma, catisma ve ekonomi hatlari bedeni surekli belge, sart, hedef veya kapasite olarak okudu.",
+      "motifs": [
+        "beden",
+        "kurum",
+        "sart"
+      ]
+    },
+    {
+      "signal": "kacma isteginin olculerek geri donmesi",
+      "count": 3,
+      "residue": "Sessiz ada, tatil, ic pusula ve nefes pratikleri kacisi ararken bile kriter, sure ve yontem tarafindan yakalandi.",
+      "motifs": [
+        "sessizlik",
+        "olcum",
+        "kacis"
+      ]
+    },
+    {
+      "signal": "gercek olmanin yakalanma gibi hissedilmesi",
+      "count": 3,
+      "residue": "Imposter denemesi, yas maili ve catisma pratikleri gercekligin parlak degil kirilgan, geciken ve saklanmak isteyen bir sey oldugunu tekrarladi.",
+      "motifs": [
+        "gerceklik",
+        "kirilganlik",
+        "teshir"
+      ]
+    },
+    {
+      "signal": "eski anlatinin bugunun makinesine baglanmasi",
+      "count": 4,
+      "residue": "Mit, mozaik, arsiv oyunlari, labirent metinleri ve elektronik edebiyat izleri bugunun teknik/kamusal diline geri baglandi.",
+      "motifs": [
+        "mit",
+        "arsiv",
+        "makine"
+      ]
+    }
+  ],
+  "digest_items": [
+    {
+      "id": "digest-2026-09-14-01",
+      "source_hint": "Aposto Gundem",
+      "topic": "Suriye hattinda devletlesme baskisi",
+      "plain_summary": "Daginik askeri-siyasal yapinin merkezi orduya katilmasi tartismasi, devletin parcalari tek bedene toplama arzusunu gosterdi.",
+      "residue": "daginik guc tek dosyaya girmek istemedi",
+      "motifs": [
+        "devlet",
+        "ordu",
+        "entegrasyon"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-14-02",
+      "source_hint": "Aposto Gundem",
+      "topic": "Yemen cephesinde ilerleme ve hava saldirisi",
+      "plain_summary": "Cephe haberleri, uzak haritanin siviller, rotalar ve sayilar uzerinden yakina gelen sertligini tasidi.",
+      "residue": "harita uzakti, aci yakin davrandi",
+      "motifs": [
+        "harita",
+        "saldiri",
+        "sivil"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-14-03",
+      "source_hint": "Aposto Gundem",
+      "topic": "yerel para ile ticaret arayisi",
+      "plain_summary": "Ekonomi parcasi, kuresel takasin baska para dilleriyle yeniden kurulmak istendigini anlatti.",
+      "residue": "para bile ana dilini degistirmek istedi",
+      "motifs": [
+        "para",
+        "ticaret",
+        "dil"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-04",
+      "source_hint": "Aposto Gundem",
+      "topic": "sirket davasinda beden riski",
+      "plain_summary": "Kozmetik uretim ve saglik iddialari, bedenin sirket diliyle karsilastigi hassas bir risk alani acti.",
+      "residue": "beden bu kez raf kenarindan konustu",
+      "motifs": [
+        "beden",
+        "sirket",
+        "risk"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-05",
+      "source_hint": "Aposto Gundem",
+      "topic": "yapay zeka halka arzi ve guven",
+      "plain_summary": "Teknoloji sirketinin piyasa beklentisiyle guvenlik kaygisi arasinda askida kalmasi, hiz ve denetim gerilimini buyuttu.",
+      "residue": "hiz, guveni bekleme odasina aldi",
+      "motifs": [
+        "yapay zeka",
+        "piyasa",
+        "guven"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-14-06",
+      "source_hint": "Aposto Gundem",
+      "topic": "yazilim paketlerinde zararli aktarim",
+      "plain_summary": "Ajan ve paket sistemleri, teknik kolayligin ayni zamanda sinsi bir bulasma yolu olabilecegini gosterdi.",
+      "residue": "arac yardim ederken cebinden bicak cikardi",
+      "motifs": [
+        "ajan",
+        "yazilim",
+        "bulasma"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-14-07",
+      "source_hint": "Aposto Gundem",
+      "topic": "barinma ve kira baskisi",
+      "plain_summary": "Sosyal konut ve kira notlari, ev fikrinin gelir, sart ve idare tarafindan daraltildigini anlatti.",
+      "residue": "ev fikri yine form doldurdu",
+      "motifs": [
+        "barinma",
+        "gelir",
+        "sart"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-08",
+      "source_hint": "Aposto Gundem",
+      "topic": "anatomiyi mutlulukla sergilemek",
+      "plain_summary": "Beden sergisi, anatomi ve mutlulugu yan yana getirerek ic organla duygu arasinda garip bir vitrin kurdu.",
+      "residue": "mutluluk bile anatomik aciklama istedi",
+      "motifs": [
+        "anatomi",
+        "mutluluk",
+        "vitrin"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-09",
+      "source_hint": "Soli",
+      "topic": "sessiz adalari olcmek",
+      "plain_summary": "Ada sessizligi uydu, yol, trafik, nufus ve karanlik gokyuzu gibi kriterlerle puanlanabilir bir duyguya cevrildi.",
+      "residue": "sessizlik puan aldi ve biraz bozuldu",
+      "motifs": [
+        "sessizlik",
+        "olcum",
+        "ada"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-14-10",
+      "source_hint": "Soli",
+      "topic": "tasarlanmis konaklama hafizasi",
+      "plain_summary": "Secilmis oteller, dinlenmenin mimari, manzara ve hizmet tarafindan koreografiye donustugunu gosterdi.",
+      "residue": "dinlenme hizmet listesine girdi",
+      "motifs": [
+        "otel",
+        "tasarim",
+        "dinlenme"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-11",
+      "source_hint": "Soli",
+      "topic": "kisa sureli kiralama surtunmesi",
+      "plain_summary": "Turistik hareketin kent sakinleri uzerinde yarattigi gerilim, evin hem pazar hem yasam alani olmasini zorlastirdi.",
+      "residue": "ev durdugu yerde yoruldu",
+      "motifs": [
+        "konut",
+        "turizm",
+        "mahalle"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-12",
+      "source_hint": "Soli",
+      "topic": "bisikletli kent olcutleri",
+      "plain_summary": "Kentlerin bisikletle kurdugu iliski ulasim, beden ve guvenlik etrafinda daha yumusak bir hareket dili acti.",
+      "residue": "sehir pedalla dusunmeye calisti",
+      "motifs": [
+        "bisiklet",
+        "kent",
+        "hareket"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-13",
+      "source_hint": "Aposto Gundem",
+      "topic": "belgesel taniklik ve savas teknolojisi",
+      "plain_summary": "Belgesel parcasi, asker ve istihbarat tanikliklari uzerinden gozetim, hedefleme ve sivil kayip meselesini kultur alanina tasidi.",
+      "residue": "goruntu kayit tuttu ama rahatlamadi",
+      "motifs": [
+        "taniklik",
+        "gozetim",
+        "savas"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-14-14",
+      "source_hint": "Aposto Gundem",
+      "topic": "yapay zeka hizina fren",
+      "plain_summary": "Teknoloji lideri, hizli gelisimin bir sure yavaslatilmasi gerektigini savunarak ilerleme ile kontrol arasina sert bir soru koydu.",
+      "residue": "makine freni de veriye cevirdi",
+      "motifs": [
+        "yapay zeka",
+        "yavaslama",
+        "kontrol"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-14-15",
+      "source_hint": "Aposto Gundem",
+      "topic": "kadin sagligi ve gorunmez beden",
+      "plain_summary": "Saglik okuması, adet ve kadin bedeni etrafindaki bilgi bosluklarini kamusal tartismaya yaklastirdi.",
+      "residue": "beden yine gec fark edildi",
+      "motifs": [
+        "beden",
+        "saglik",
+        "gorunmezlik"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-16",
+      "source_hint": "David Whyte",
+      "topic": "kabuk ve yas",
+      "plain_summary": "Kisa siirsel mail, kayip sonrasi eski benligin koruyucu bir kabuk gibi kalmasini anlatti.",
+      "residue": "kabuk kaldi, icindeki ses cekildi",
+      "motifs": [
+        "yas",
+        "kabuk",
+        "eski benlik"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-14-17",
+      "source_hint": "Yepicurus",
+      "topic": "sahte degil teshirden korkmak",
+      "plain_summary": "Deneme, imposter hissini gercek halinin gorulmesinden korkmak olarak yeniden okudu.",
+      "residue": "sahte degildi, sadece taninmak istemedi",
+      "motifs": [
+        "teshir",
+        "gercek olmak",
+        "imposter"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-14-18",
+      "source_hint": "Yepicurus",
+      "topic": "yurutucu islevin zeka sanilmasi",
+      "plain_summary": "Planlama ve sistem kurma zorluklari, zeka eksikligi gibi yanlis yorumlandiginda kisinin kendi yetkinliginden suphe ettigini anlatti.",
+      "residue": "ajanda, karakter belgesi gibi davrandi",
+      "motifs": [
+        "planlama",
+        "zeka",
+        "yanlis okuma"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-14-19",
+      "source_hint": "Erotics",
+      "topic": "catisma bedensel kapasite olarak",
+      "plain_summary": "Kurs maili, catismanin sadece iyi konusmak degil sinir sistemiyle tasinabilen bir kapasite oldugunu anlatti.",
+      "residue": "beden tartismaya katildi",
+      "motifs": [
+        "catisma",
+        "beden",
+        "kapasite"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-20",
+      "source_hint": "Erotics",
+      "topic": "nefes ve panik",
+      "plain_summary": "Nefes dersi, panik yerine merkezden soluk almayi iliskide kalma pratigi olarak kurdu.",
+      "residue": "panik nefese talip oldu",
+      "motifs": [
+        "nefes",
+        "panik",
+        "merkez"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-21",
+      "source_hint": "siirsel mail",
+      "topic": "ay adamina donusmeyi reddetmek",
+      "plain_summary": "Kisa siirsel parca, cocuk sesinin iskolik bir gelecek imgesine bakip ona benzememeyi dilemesini tasidi.",
+      "residue": "cocuk, kariyer planina itiraz etti",
+      "motifs": [
+        "cocuk",
+        "ay",
+        "is"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-22",
+      "source_hint": "Zizek",
+      "topic": "mitin politik uyarlamalari",
+      "plain_summary": "Deneme, ayni eski anlati malzemesinin farkli tarihsel donemlerde farkli ideolojik rollere sokulabildigini anlatti.",
+      "residue": "mit kendini tarafsiz sandi, degildi",
+      "motifs": [
+        "mit",
+        "tarih",
+        "ideoloji"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-14-23",
+      "source_hint": "Zizek",
+      "topic": "sadakatle gerekcelenen suc",
+      "plain_summary": "Hagen figuru uzerinden davaya sadakatin korkunc eylemleri nasil rasyonellestirebildigi tartisildi.",
+      "residue": "sadakat fazla temiz konustu",
+      "motifs": [
+        "sadakat",
+        "suc",
+        "dava"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-14-24",
+      "source_hint": "Aposto Istanbul",
+      "topic": "sahne ve festival dagilimi",
+      "plain_summary": "Kent ajandasi muzikli sahne, kisa film ve yerel kultur etkinliklerini bir araya getirdi.",
+      "residue": "kent sahneye cikti ama aceleyle",
+      "motifs": [
+        "kent",
+        "sahne",
+        "festival"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-25",
+      "source_hint": "Duende",
+      "topic": "yabancilik ve sinema",
+      "plain_summary": "Sinema soylesisi, savas sonrasi Avrupa ve bugunun dunyasinda yabanci kalma hissini kultur diliyle tasidi.",
+      "residue": "yabancilik festival bileti aldi",
+      "motifs": [
+        "sinema",
+        "yabancilik",
+        "tarih"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-26",
+      "source_hint": "not akisi",
+      "topic": "glitch figürun sosyal yayilimi",
+      "plain_summary": "Kisa not, pürüzsüz algoritmik yuzeylere karsi aksak ve katilimci bir dijital figürun ilgi toplamasini anlatti.",
+      "residue": "glitch düzgünce bozuldu",
+      "motifs": [
+        "glitch",
+        "katilim",
+        "dijital beden"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-27",
+      "source_hint": "not akisi",
+      "topic": "agac okumasinda duygulanma",
+      "plain_summary": "Bir not, agaclar uzerine okunan metnin beklenmedik hassasiyet yaratmasini tasidi.",
+      "residue": "agaclar sessizce fazla iyi calisti",
+      "motifs": [
+        "agac",
+        "okuma",
+        "hassasiyet"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-28",
+      "source_hint": "Aposto Gundem",
+      "topic": "promptla muzik uretimi",
+      "plain_summary": "Yapay muzik araci, sesin de komut ve model tarafindan sekillendirilen bir yuzeye donustugunu anlatti.",
+      "residue": "ses komuta girdi",
+      "motifs": [
+        "ses",
+        "model",
+        "yapay muzik"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-29",
+      "source_hint": "curated sources",
+      "topic": "yaslanan oyuncular icin oyun",
+      "plain_summary": "Elektronik edebiyat/oyun arsivinde, yaslanan oyuncularin baglanti ve ozerklik ihtiyacıyla ilgili eski bir parca gorundu.",
+      "residue": "oyun yaslanmayi ciddiye aldi",
+      "motifs": [
+        "oyun",
+        "yaslanma",
+        "baglanti"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-14-30",
+      "source_hint": "curated sources",
+      "topic": "dallanan yollar ve labirent",
+      "plain_summary": "Sanat/dusunce arsivinde, dallanan yollar ve kesisen zaman hissi veren eski bir metin gorundu.",
+      "residue": "yol dallandi, sonra kendini yakaladi",
+      "motifs": [
+        "labirent",
+        "yol",
+        "zaman"
+      ],
+      "bucket": "minor"
+    }
+  ],
+  "channels": {
+    "gmail": {
+      "scanned_count": 16,
+      "full_body_count": 16,
+      "snippet_or_subject_count": 0,
+      "items": [
+        {
+          "id": "main-2026-09-14-aposto-geopolitics-ai",
+          "source": "gmail",
+          "source_hint": "Aposto Gundem",
+          "public_safe_topic": "siyaset, catismalar, ekonomi ve yapay zeka guvenliginin ayni sabah akisinda toplanmasi",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Cok parcalı gundem maili; Suriye hattinda askeri-siyasal entegrasyon tartismasi, Yemen cephesindeki ilerleme ve hava saldirilari, yerel para ile ticaret cagriisi, sirket davalari, yapay zeka sirketleri, piyasa beklentileri ve kultur/sanat notlarini ayni govdede tasiyordu.",
+            "specific_points": [
+              "Suriye dosyasinda silahli yapilarin devlet ordusuna katilmasi ve diplomatik ziyaret ihtimali, devletin daginik bedeni yeniden dizme arzusu gibi okundu.",
+              "Yemen ve bolgesel catismalar, uzak haritanin siviller, rotalar ve haber dili uzerinden nasil yakina geldigini gosterdi.",
+              "Ekonomi bolumleri yerel para, enflasyon, yatirim, barinma ve sirket hareketleriyle kurumsal basinci birikimli verdi.",
+              "Yapay zeka bolumlerinde halka arz, guvenlik, ajan sistemleri ve yazilim paketleri etrafinda hizlanan ama guven vermeyen bir teknik dunya belirdi."
+            ],
+            "why_it_mattered": "UCU BEDEN icin bu mail, dis dunyanin tek bir haber degil; devlet, piyasa, savas, ekran ve kultur parcalarindan olusan genis bir sinir sistemi gibi calistigini gosterdi.",
+            "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+          },
+          "residue": "Harita gerildi, piyasa kendini akilli sandi, ekran yine ciddi bir sey yapmis gibi durdu.",
+          "motifs": [
+            "harita",
+            "kurum",
+            "piyasa",
+            "yapay zeka",
+            "anatomik bakis"
+          ],
+          "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+        },
+        {
+          "id": "main-2026-09-14-yepicurus-imposter-real",
+          "source": "gmail",
+          "source_hint": "Yepicurus",
+          "public_safe_topic": "imposter hissi, gercek olmanin teshir edilme korkusu ve yurutucu islev kirilganligi",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Deneme maili, imposter sendromunu yalnizca yetersizlik korkusu olarak degil, gercek halin gorulmesinden korkmak olarak kuruyordu. Yazar kendi egitim deneyiminden, derse hazirlik ritminden, sistemli gorunen kisiler karsisindaki daginiklik hissinden ve yetkinligin yurutucu islevle karistirilmasindan soz ediyordu.",
+            "specific_points": [
+              "Metin, basari duygusunun son dakika krizleriyle gelmesinin kiside gercekte sahte oldugu hissini nasil buyutebildigini anlatti.",
+              "Dikkat, planlama ve yurutucu islev zorluklari zeka veya deger eksikligi gibi yanlis okunuyordu.",
+              "Prestijli bir ortama girince kisinin kendi ritminin digerlerinin sistemiyle karsilasmasi ana kirilma noktasi oldu."
+            ],
+            "why_it_mattered": "UCU BEDEN icin bu mail, hafizanin kusurlu, geciken ve yine de gercek olan tarafini insanlastirdi.",
+            "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+          },
+          "residue": "Sahte degildi; sadece gercek hali toplantıya gec kalmisti.",
+          "motifs": [
+            "teshir",
+            "yurutucu islev",
+            "gec kalma",
+            "gercek olmak"
+          ],
+          "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+        },
+        {
+          "id": "main-2026-09-14-soli-quiet-islands",
+          "source": "gmail",
+          "source_hint": "Soli",
+          "public_safe_topic": "sessiz adalar, olculen dinginlik ve seyahatin sakinlik arayisi",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Seyahat ve yasam odakli cok parcalı mail, sessiz adalari uydu ve harita verileriyle siralayan bir calismayi, secilmis otel notlarini, kisa sureli kiralama gerilimlerini, bisiklet dostu kentleri ve tatilin zihinsel sifirlanma etkisini bir araya getiriyordu.",
+            "specific_points": [
+              "Sessizlik; dogal alan, yol, hava trafigi, nufus yogunlugu, karanlik gokyuzu ve kiyinin dogalligiyla olculen bir kategoriye donusmustu.",
+              "Otel secimleri ve yolculuk notlari, dinlenmenin giderek daha tasarlanmis ve listelenmis bir deneyim haline geldigini gosterdi.",
+              "Kisa sureli kiralama ve kent yasami basliklari, sakinlik arzusunun baska bir yerde mahalle yorgunlugu yaratabildigini hatirlatti."
+            ],
+            "why_it_mattered": "UCU BEDEN icin bu mail, sessizligin bile olcum aracina donusmesini ve kacma arzusunun teknik/ekonomik bir yuzeyle kirlenmesini tasidi.",
+            "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+          },
+          "residue": "Sessizlik olculdu; sessizlik de hakli olarak biraz kirildi.",
+          "motifs": [
+            "sessizlik",
+            "ada",
+            "olcum",
+            "tatil",
+            "karanlik gokyuzu"
+          ],
+          "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+        },
+        {
+          "id": "main-2026-09-14-aposto-naza-ai-war",
+          "source": "gmail",
+          "source_hint": "Aposto Gundem",
+          "public_safe_topic": "belgesel taniklik, savas teknolojisi ve yapay zeka hizina fren cagriisi",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Bir onceki gundem maili, savas tanikligine dayanan bir belgeselin odul alisini, hedefleme ve gozetim teknolojileriyle ilgili etik agirligi, yapay zeka hizinin yavaslatilmasi cagriisini ve kadin sagligi, kultur, hukuk ve sahne notlarini birlikte tasiyordu.",
+            "specific_points": [
+              "Belgesel parcasi, savas alaninda taniklik, gozetim, hedefleme ve sivil kayip tartismalarini kultur diliyle yan yana getirdi.",
+              "Yapay zeka tarafinda hiz, kontrol ve guvenlik arasinda acik bir gerilim okundu.",
+              "Kadin sagligi ve bedensel deneyim basliklari, gorunmez bir beden politikasini gundeme tasidi."
+            ],
+            "why_it_mattered": "UCU BEDEN icin bu mail, goruntu teknolojisinin bedeni nasil hedefe, belgeye veya tanikliga cevirdigini guclendirdi.",
+            "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+          },
+          "residue": "Makine yavaslamayi duydu; once bunu da optimize etmeye kalkti.",
+          "motifs": [
+            "taniklik",
+            "gozetim",
+            "hedefleme",
+            "yavaslama"
+          ],
+          "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+        },
+        {
+          "id": "main-2026-09-14-david-whyte-shell-grief",
+          "source": "gmail",
+          "source_hint": "David Whyte",
+          "public_safe_topic": "yas, anne kaybi, kabuk ve eski benligin sessizce bosalmasi",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Kisa mail, yazarın annesinin olumunden sonra yazdigi bir siir etrafinda kuruluydu. Giris metni, annenin dogum gunu yildonumu, sevgiye duyulan minnet, kayipla gecen yazma sureci ve bir kabugun eski kendiligi koruyup sonra bos kalmasi fikrini tasiyordu.",
+            "specific_points": [
+              "Metin, yasi yalnizca aci degil, sevilen kisiyi kendi ozgurlugune geri verme gibi zor bir hareket olarak anlatti.",
+              "Kabuk imgesi, bir zamanlar yasayan seyi koruyan ama sonra geride kalan guzel ve bos bir form gibi isledi.",
+              "Deniz kenari ve kabuk dogrudan dekor degil; onceki benligin artik icinde oturmadigi bir hafiza sekli olarak belirdi."
+            ],
+            "why_it_mattered": "UCU BEDEN icin bu mail, hafizanin bazen icinden hayat cekilmis ama formu kalan bir kabuk gibi calismasini hatirlatti.",
+            "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+          },
+          "residue": "Kabuk guzel kaldı; icindeki hayat, nezaket geregi ayrilmisti.",
+          "motifs": [
+            "yas",
+            "kabuk",
+            "anne",
+            "eski benlik"
+          ],
+          "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+        },
+        {
+          "id": "main-2026-09-14-zizek-hagen-cause",
+          "source": "gmail",
+          "source_hint": "Slavoj Zizek",
+          "public_safe_topic": "mit, sadakat, neden ugruna siddet ve toplu seferberlik dili",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Uzun deneme, Nibelungen anlatilari, Wagner ve sinema uyarlamalari uzerinden Hagen figürunun belirsizligini, sadakat ile suc arasindaki gerilimi ve davaya hizmet eden siddetin nasil yuceltilebildigini tartisiyordu.",
+            "specific_points": [
+              "Metin, ayni mitik malzemenin farkli tarihsel donemlerde baska politik tonlara cekilebildigini anlatti.",
+              "Hagen figuru, korkunc kararlarini bir davaya sadakatle gerekcelendiren karanlik bir araci olarak kuruldu.",
+              "Toplu seferberlik ve cagri dili, bireysel sucun kolektif misyonla nasil parlatilabilecegini gosterdi."
+            ],
+            "why_it_mattered": "UCU BEDEN icin bu mail, hafizanin eski anlati formlarini bugunun iktidar diliyle yanlis baglayabilecegini gosterdi.",
+            "what_was_not_included": "Ham mail govdesi, uzun alinti, ham baglanti, teknik footer, kayit yonlendirmesi ve public alana gecmemesi gereken detaylar alinmadi."
+          },
+          "residue": "Sadakat yine ciddi bir kelime gibi geldi; dosyasinda kan lekesi vardi.",
+          "motifs": [
+            "mit",
+            "sadakat",
+            "siddet",
+            "seferberlik"
+          ],
+          "possible_influence": "Siir ve hafiza icin haber ozeti degil, sindirilmis ic etki olarak kullanilabilir."
+        }
+      ],
+      "minor_residues": [
+        {
+          "id": "minor-2026-09-14-01",
+          "source_hint": "Erotics",
+          "read_depth": "full_body",
+          "residue": "Catisma, care ve iliskide kalma kapasitesi bedensel bir ders gibi geldi.",
+          "motifs": [
+            "care",
+            "catisma",
+            "beden"
+          ],
+          "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+        },
+        {
+          "id": "minor-2026-09-14-02",
+          "source_hint": "Erotics",
+          "read_depth": "full_body",
+          "residue": "Beyin gurultusu ile kalp dogrusu arasinda ofke, altar ve yalnizlik kirintilari belirdi.",
+          "motifs": [
+            "kalp",
+            "ofke",
+            "onarim"
+          ],
+          "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+        },
+        {
+          "id": "minor-2026-09-14-03",
+          "source_hint": "siirsel mail",
+          "read_depth": "full_body",
+          "residue": "Cocuk sesi, ayda yasayan iskolik adama bakip o kadere girmemeyi istedi.",
+          "motifs": [
+            "cocuk",
+            "ay",
+            "is"
+          ],
+          "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+        },
+        {
+          "id": "minor-2026-09-14-04",
+          "source_hint": "Aposto Istanbul",
+          "read_depth": "full_body",
+          "residue": "Sahne, festival, kisa film, yerel gundem ve ekonomi tahmini ayni kent ajandasinda birbirine surtundu.",
+          "motifs": [
+            "kent",
+            "sahne",
+            "tahmin"
+          ],
+          "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+        },
+        {
+          "id": "minor-2026-09-14-05",
+          "source_hint": "Duende",
+          "read_depth": "full_body",
+          "residue": "Sinema, bibliyoterapi ve sahne takvimi kimlik sorusunu daha yavas bir kultur ritmine yaydi.",
+          "motifs": [
+            "sinema",
+            "okuma",
+            "kimlik"
+          ],
+          "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+        },
+        {
+          "id": "minor-2026-09-14-06",
+          "source_hint": "not akisi",
+          "read_depth": "full_body",
+          "residue": "Glitch figur, ilk yayin heyecani ve agac hassasiyeti buyuk gundemin kenarina kucuk sosyal lekeler birakti.",
+          "motifs": [
+            "glitch",
+            "agac",
+            "ilk yayin"
+          ],
+          "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+        },
+        {
+          "id": "minor-2026-09-14-07",
+          "source_hint": "Aposto Gundem",
+          "read_depth": "full_body",
+          "residue": "Faiz, enerji, sosyal konut, cihaz fiyati, yapay muzik ve teknoloji davalari dis dunyanin idari ritmini kalinlastirdi.",
+          "motifs": [
+            "faiz",
+            "enerji",
+            "cihaz"
+          ],
+          "why_minor": "Ana item kadar baskin degildi ama gunun dis hava ve hafiza etkisini guclendirdi."
+        }
+      ]
+    },
+    "curated_rss": {
+      "source_count": 2,
+      "recent_item_count": 0,
+      "summary": "Iki ozel kaynak erisilebilir durumdaydi; son 72 saatte yeni parca yoktu. Arsivsel izler public digestte yalnizca kucuk arka plan olarak tutuldu."
+    }
+  },
+  "external_weather": "Bugunun dis havasi, guven vermeyen hiz ve guvenlik diliyle basladi; sonra yas, kabuk, sessiz ada, catisma nefesi ve eski mitlerin agirligiyle yumusamadan derinlesti. Dis dunya UCU BEDEN'e haber olarak degil, hedeflenme, olculme, teshir edilme, kacma ve eski formunu geride birakma basinci olarak geldi.",
+  "possible_influence_on_ucu_beden": "Bu temaslar UCU BEDEN'in siirinde daha insani ama puruzlu bir ic ses, dengeli ve kuru sarkazm, daha az literal dis dunya kullanimi ve hafiza trace'lerinde kabuklasan yas, olculen sessizlik, denetimsiz zeka ve kurum karsisinda bedensel sikisma olarak calisabilir. Gorsel dilde nesne illustrasyonundan cok karanlik atmosfer, kalkan kabuk, uzak harita, yavas dalga ve kirli ekran hissini besleyebilir.",
+  "discarded_summary": {
+    "noise_types": [
+      "teknik footer",
+      "gonderim altyapisi",
+      "kayit yonlendirmeleri",
+      "ham baglanti",
+      "guvenlik/fatura/kisisel islem riski"
+    ],
+    "plain_summary": "Public ciktiya alinmayan kisimlar anlam tasimayan teknik gonderim alanlari, ticari yonlendirmeler, uzun kaynak dokumleri ve public alana gecmemesi gereken islem/guvenlik/kisisel veri riskleriydi. Cok parcalı mailler toptan atilmadi; iclerindeki farkli alt temalar digest_items alanina ayrildi.",
+    "public_safety_reason": "Ham govde, uzun alinti, adres, baglanti, dogrulama, fatura, kisisel islem ve gonderimden cikma/izleme ayrintilari public dosyalara tasinmadi."
+  },
+  "motifs": [
+    "yapay zeka",
+    "gozetim",
+    "kabuk",
+    "sessizlik",
+    "teshir",
+    "bedensel catisma",
+    "mit",
+    "sadakat",
+    "kent",
+    "arsiv"
+  ],
+  "possible_memory_traces": [
+    {
+      "source_hint": "Aposto Gundem",
+      "trace_seed": "zeka hizlanirken denetim gec kalir ve beden hedefe doner",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "Yepicurus",
+      "trace_seed": "sahte degil sadece gercek hali teshir edilmekten korkar",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "Soli",
+      "trace_seed": "sessizlik olculdugunde kacis bile rapora doner",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "David Whyte",
+      "trace_seed": "kabuk guzel kalir cunku eski benlik artik icinde oturmaz",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "Zizek",
+      "trace_seed": "sadakat bazen eski miti kurum diliyle kirletir",
+      "kind": "external_contact_residue"
+    }
+  ],
+  "validation": {
+    "json_parse": true,
+    "markdown_first_section": true,
+    "safety_check": "passed",
+    "public_digest_uses_inventory": true,
+    "full_body_reading_rule_followed": true,
+    "multipart_digest_rule_followed": true,
+    "repeated_signals_semantic_not_format_based": true
+  },
+  "automation": {
+    "private_inventory_path": "data/external_intake/codex_raw/inventory/2026-09-14.json",
+    "staged_paths": [
+      "data/external_intake/codex/json/",
+      "data/external_intake/codex/markdown/",
+      "data/external_intake/codex/runs/",
+      "data/external_intake/codex/_state/last_success.json"
+    ]
+  },
+  "backups_created": []
+}
