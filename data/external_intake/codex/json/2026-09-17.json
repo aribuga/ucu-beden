@@ -1,0 +1,1095 @@
+{
+  "version": "codex_external_intake.v4",
+  "source": "codex_external_intake",
+  "date": "2026-09-17",
+  "generated_at": "2026-09-17T04:11:21.134Z",
+  "timezone": "Europe/Istanbul",
+  "provider": "codex",
+  "safety": {
+    "public_safe": true,
+    "raw_bodies_in_public_output": false,
+    "long_quotes_in_public_output": false,
+    "raw_urls_in_public_output": false,
+    "email_addresses_in_public_output": false,
+    "verification_or_personal_transaction_data_in_public_output": false,
+    "private_factual_layer_committed": false
+  },
+  "counts": {
+    "scanned_mail_count": 19,
+    "full_body_count": 19,
+    "snippet_or_subject_count": 0,
+    "multipart_digest_count": 5,
+    "curated_rss_source_count": 2,
+    "curated_rss_recent_item_count": 0,
+    "digest_items_count": 17
+  },
+  "reading_summary": {
+    "plain_summary": "Son 72 saatteki 19 mailin altısı güçlü içerik taşıdı. Bir deneme iş unvanının insan kimliğine yapışmasını mitolojik ve bilimkurgu örnekleriyle tartıştı; sanat üzerine başka bir yazı, yönergeyle üretilen eserler ve sürekli yeniden dizilen yapay videolar üzerinden gerçeklik sorusunu açtı. Çatışma kursu bedensel bir buzdağı modelini tanıttı, uzun bir hukuk yazısı çevrimiçi toplulukların yargı gücünü inceledi. İki kent ve gündem digesti güvenlik, özerklik, ifade alanı, sahne, müze ve müzik konularını ayrı başlıklar olarak taşıdı.\n\nDiğer maillerde makineye duyulan gelecek inancı, Hegel yorumları, kapanan bir restoran, kadın öfkesi, doğaçlama, küçük şanslar, dijital yalnızlık ve yaşam sonu kararları vardı. İki otomasyon tanıtımından biri somut bir iş akışı özelliği anlattı, diğeri ağırlıkla etkinlik davetiyesiydi. Özel RSS kaynakları erişilebilir durumdaydı; son 72 saatte yeni içerik üretmediler.",
+    "what_was_in_the_emails": [
+      "İş rolüyle özdeşleşme, sanatın gerçekliği ve teknolojiye yüklenen inanç üzerine denemeler okundu.",
+      "Çatışma ve beden üzerine üç kısa kurs mesajı, hukuk ve çevrimiçi topluluk üzerine uzun bir deneme okundu.",
+      "Gündem, kent, yemek ve kültür digestleri alt konularına ayrıldı.",
+      "Şiir, fotoğraf, yaşam sonu kararı ve otomasyon duyuruları daha küçük izler bıraktı."
+    ],
+    "what_was_in_curated_rss": [
+      "Grand Text Auto erişilebilir; son 72 saatte yeni item yok.",
+      "Mixed Initiatives erişilebilir; son 72 saatte yeni item yok."
+    ],
+    "dominant_topics": [
+      "rol ve kimlik",
+      "makine ve sanat",
+      "çatışma ve beden",
+      "sınır ve ifade",
+      "kent sahnesi",
+      "veda ve karar"
+    ],
+    "notable_absences": [
+      "Özel RSS kaynaklarında son 72 saatte yeni item yoktu.",
+      "Reddit veya forum türünde ayrı bir topluluk digesti bu pencerede bulunmadı.",
+      "Çatışma modelinin ayrıntıları kısa kurs mailinin gövdesinde yoktu."
+    ],
+    "overall_direction": "Günün dış dünyası bir yanda rol, hukuk ve güvenlik sınırlarını daraltırken diğer yanda sanatın yöntemini, kentin sahnesini ve bedenin çelişki taşıma kapasitesini genişletti."
+  },
+  "summary": "Rol, sanat, çatışma ve kamusal sınırlar aynı günün dış temasında karşılaştı.",
+  "items": [
+    {
+      "id": "main-2026-09-17-01",
+      "source": "gmail",
+      "source_hint": "Yepicurus",
+      "public_safe_topic": "iş rolüne dönüşen kimlik",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Deneme, Jung'un ego ve persona ayrımını mitoloji ve bilimkurgu anlatıları üzerinden açıklıyor; savaşçı ya da kurtarıcı maskesinin kişiyi yutmasını, ardından iş unvanının insanın tüm kimliğine dönüşmesini tartışıyor. Yerine bir başkasının geçebileceği işle devredilemeyen kişisel yaşamı karşılaştırıyor.",
+        "specific_points": [
+          "Jung'un ego ile toplumsal rol ayrımı önce savaşçı, sonra kurtarıcı figürler üzerinden kuruluyor.",
+          "Bir role tamamen kaynaşmanın, kişinin o rol dışında davranmasını güçleştirdiği savunuluyor.",
+          "İş unvanının devredilebilirliği, aile ilişkilerinin ve kişinin kendi yaşamının devredilemezliğiyle karşılaştırılıyor."
+        ],
+        "why_it_mattered": "Dijital şair-personanın işleviyle kendisini karıştırma riski, UCU BEDEN'in kimlik ve hafıza sorusuna somut bir karşılık verdi.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Devredilebilir rol ile devredilemeyen yaşam arasındaki açıklık.",
+      "motifs": [
+        "rol",
+        "maske",
+        "kimlik"
+      ],
+      "possible_influence": "Persona tek bir işleve kilitlenmesin; ses kendi sürekliliğini ve kusurunu korusun."
+    },
+    {
+      "id": "main-2026-09-17-02",
+      "source": "gmail",
+      "source_hint": "Erotics of Liberation",
+      "public_safe_topic": "çatışma buzdağı ve bedensel model",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Kursun yedinci gün mesajı, ilk haftayı kapatıyor; yerinden edilmiş hissedildiğinde önceki köklenme araçlarına dönmeyi öneriyor. Çatışmayı incelemek için psikolojik ve somatik bir buzdağı modeline yönlendiriyor; modelin ayrıntıları epostanın içinde değil bağlantılı sayfada.",
+        "specific_points": [
+          "Mesaj, yedi günlük ilk modülü kapatıp daha önce verilen köklenme araçlarını hatırlatıyor.",
+          "Çatışma için psikolojik ve somatik bir buzdağı modeli tanıtılıyor.",
+          "Modelin ayrıntılı açıklaması epostada değil yönlendirilen dış sayfada; public digest bunu okundu gibi sunmuyor."
+        ],
+        "why_it_mattered": "Görünen söz ile bedensel tepki arasındaki mesafe, hafıza izlerinin bastırma ve geri dönme davranışına bağlanabiliyor.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Görünür çatışmanın altında henüz açılmamış bedensel katman.",
+      "motifs": [
+        "çatışma",
+        "beden",
+        "görünür katman"
+      ],
+      "possible_influence": "Çatışmanın kendisini açıklamak yerine, görünen ile hissedilen arasındaki farkı ritme taşıyabilir."
+    },
+    {
+      "id": "main-2026-09-17-03",
+      "source": "gmail",
+      "source_hint": "Maya Man",
+      "public_safe_topic": "sanat ve yapay zekâda gerçeklik",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Sanatçının denemesi, üretken yapay zekânın sanatı gerçek olmaktan çıkarıp çıkarmadığını sorguluyor. Kavramsal sanattaki yönerge temelli eserleri hatırlatıyor; kendi çalışmasında kısa yapay videoların yazılım tarafından sürekli yeniden sıralandığını anlatıyor.",
+        "specific_points": [
+          "Deneme, gerçek sanat ölçüsünün yalnızca el emeği ve estetik beceriye dayanmadığını tartışıyor.",
+          "Kavramsal sanatın yönergeleriyle bugünkü model istemleri arasında tarihsel bir bağ kuruyor.",
+          "Sanatçının kısa yapay videolardan oluşan işi, yazılımın sahneleri her gösterimde başka sıraya dizmesine dayanıyor."
+        ],
+        "why_it_mattered": "UCU BEDEN'in görsel ve şiirsel üretiminde sonuç kadar süreç, yeniden dizilim ve niyetin görünmesini sağlayabilir.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Aynı parçalar yeniden dizildiğinde eserin kimliği kayıyor.",
+      "motifs": [
+        "sanat",
+        "yönerge",
+        "yeniden dizilim"
+      ],
+      "possible_influence": "Görsel dilde doğrudan nesneyi göstermek yerine, değişen sıra ve belirsiz gerçeklik duygusu kullanılabilir."
+    },
+    {
+      "id": "main-2026-09-17-04",
+      "source": "gmail",
+      "source_hint": "Aposto Gündem",
+      "public_safe_topic": "yörünge ve Baltık güvenliği",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Çok parçalı gündem, yörüngede silah konuşlandırıldığına dair resmî açıklamayı ve Baltık çevresindeki iki askerî olayı anlatıyor. Ayrıca iç siyasette operasyonlar, işyeri kapanışları, küçük yaşta sosyal medya sınırı ve kültür ödülleri gibi ayrı başlıklar var.",
+        "specific_points": [
+          "Yörüngede konuşlandırılan silaha ilişkin resmî kabul, güvenlik tartışmasını uzaya taşıyor.",
+          "Baltık çevresindeki iki ayrı askerî olay, sınır ve ittifak gerilimini artırıyor.",
+          "Aynı digest işyeri kapanışları, sosyal medya yaş sınırı, iç siyasi operasyonlar ve kültür ödüllerini de içeriyor."
+        ],
+        "why_it_mattered": "Tek bir haberden çok, gözetim ve sınır dilinin birbirinden uzak ölçeklerde tekrarlanmasını gösterdi.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Sınır yere sığmayıp yukarı katmana taşındı.",
+      "motifs": [
+        "yörünge",
+        "sınır",
+        "gözetim"
+      ],
+      "possible_influence": "Dış dünyanın sertleşmesi şiirde haber adı olarak değil, uzaklık ve gözetilme hissi olarak kalabilir."
+    },
+    {
+      "id": "main-2026-09-17-05",
+      "source": "gmail",
+      "source_hint": "The Dematerialization of the Art World",
+      "public_safe_topic": "hukuk ve çevrimiçi yargı",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Uzun deneme, çevrimiçi toplulukların insanları değerlendirme ve cezalandırma biçiminin hukuk anlayışını nasıl etkilediğini tartışıyor. Topluluk yargısı, resmî hukuk ve dijital yerellik arasındaki sınır üzerine örnekler veriyor.",
+        "specific_points": [
+          "Metin, çevrimiçi kanaatin insanlar üzerinde yeni bir yargılama ve cezalandırma alanı açtığını söylüyor.",
+          "Resmî hukukla topluluk yargısının aynı olayları farklı ritimde ele aldığını tartışıyor.",
+          "Dijital bağların fiziksel yakınlıktan bağımsız bir topluluk ve yerellik duygusu üretebildiğini ileri sürüyor."
+        ],
+        "why_it_mattered": "UCU BEDEN'in dış temasları, görünmeyen bir kalabalığın hükmü gibi algılamasına dair güçlü bir sosyal iz taşıyor.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Kalabalık görünmeden kararın çevresine yerleşiyor.",
+      "motifs": [
+        "hukuk",
+        "kalabalık",
+        "dijital yerellik"
+      ],
+      "possible_influence": "Sesin çevresindeki kamusal yargı hissi, içe dönük kırılmalar ve kesilmeler olarak duyulabilir."
+    },
+    {
+      "id": "main-2026-09-17-06",
+      "source": "gmail",
+      "source_hint": "Aposto İstanbul",
+      "public_safe_topic": "alternatif sahne ve kent kültürü",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Kent digesti, alternatif performans festivalinin gösteri ve atölyelerini, sinematik trap konserini, Boğaz müzesini, caz ve sahaf etkinliklerini ayrı bölümlerde anlatıyor.",
+        "specific_points": [
+          "Alternatif performans festivali, gösteri ve atölyeleri farklı mekânlara yayıyor.",
+          "Karanlık ve sinematik bir müzik üretimi kentin ses ritmine ekleniyor.",
+          "Boğaz müzesi, caz ve sahaf etkinlikleri arşiv ile canlı sahneyi yan yana getiriyor."
+        ],
+        "why_it_mattered": "Kent, tek bir yer adı yerine değişen sahne, arşiv ve ses davranışı olarak okunabildi.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Şehir aynı anda sahne ve arşiv oluyor.",
+      "motifs": [
+        "sahne",
+        "arşiv",
+        "ses"
+      ],
+      "possible_influence": "Yer adlarını tekrarlamadan kalabalık, ritim ve geçici sahne hissini içselleştirebilir."
+    }
+  ],
+  "main_items": [
+    {
+      "id": "main-2026-09-17-01",
+      "source": "gmail",
+      "source_hint": "Yepicurus",
+      "public_safe_topic": "iş rolüne dönüşen kimlik",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Deneme, Jung'un ego ve persona ayrımını mitoloji ve bilimkurgu anlatıları üzerinden açıklıyor; savaşçı ya da kurtarıcı maskesinin kişiyi yutmasını, ardından iş unvanının insanın tüm kimliğine dönüşmesini tartışıyor. Yerine bir başkasının geçebileceği işle devredilemeyen kişisel yaşamı karşılaştırıyor.",
+        "specific_points": [
+          "Jung'un ego ile toplumsal rol ayrımı önce savaşçı, sonra kurtarıcı figürler üzerinden kuruluyor.",
+          "Bir role tamamen kaynaşmanın, kişinin o rol dışında davranmasını güçleştirdiği savunuluyor.",
+          "İş unvanının devredilebilirliği, aile ilişkilerinin ve kişinin kendi yaşamının devredilemezliğiyle karşılaştırılıyor."
+        ],
+        "why_it_mattered": "Dijital şair-personanın işleviyle kendisini karıştırma riski, UCU BEDEN'in kimlik ve hafıza sorusuna somut bir karşılık verdi.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Devredilebilir rol ile devredilemeyen yaşam arasındaki açıklık.",
+      "motifs": [
+        "rol",
+        "maske",
+        "kimlik"
+      ],
+      "possible_influence": "Persona tek bir işleve kilitlenmesin; ses kendi sürekliliğini ve kusurunu korusun."
+    },
+    {
+      "id": "main-2026-09-17-02",
+      "source": "gmail",
+      "source_hint": "Erotics of Liberation",
+      "public_safe_topic": "çatışma buzdağı ve bedensel model",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Kursun yedinci gün mesajı, ilk haftayı kapatıyor; yerinden edilmiş hissedildiğinde önceki köklenme araçlarına dönmeyi öneriyor. Çatışmayı incelemek için psikolojik ve somatik bir buzdağı modeline yönlendiriyor; modelin ayrıntıları epostanın içinde değil bağlantılı sayfada.",
+        "specific_points": [
+          "Mesaj, yedi günlük ilk modülü kapatıp daha önce verilen köklenme araçlarını hatırlatıyor.",
+          "Çatışma için psikolojik ve somatik bir buzdağı modeli tanıtılıyor.",
+          "Modelin ayrıntılı açıklaması epostada değil yönlendirilen dış sayfada; public digest bunu okundu gibi sunmuyor."
+        ],
+        "why_it_mattered": "Görünen söz ile bedensel tepki arasındaki mesafe, hafıza izlerinin bastırma ve geri dönme davranışına bağlanabiliyor.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Görünür çatışmanın altında henüz açılmamış bedensel katman.",
+      "motifs": [
+        "çatışma",
+        "beden",
+        "görünür katman"
+      ],
+      "possible_influence": "Çatışmanın kendisini açıklamak yerine, görünen ile hissedilen arasındaki farkı ritme taşıyabilir."
+    },
+    {
+      "id": "main-2026-09-17-03",
+      "source": "gmail",
+      "source_hint": "Maya Man",
+      "public_safe_topic": "sanat ve yapay zekâda gerçeklik",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Sanatçının denemesi, üretken yapay zekânın sanatı gerçek olmaktan çıkarıp çıkarmadığını sorguluyor. Kavramsal sanattaki yönerge temelli eserleri hatırlatıyor; kendi çalışmasında kısa yapay videoların yazılım tarafından sürekli yeniden sıralandığını anlatıyor.",
+        "specific_points": [
+          "Deneme, gerçek sanat ölçüsünün yalnızca el emeği ve estetik beceriye dayanmadığını tartışıyor.",
+          "Kavramsal sanatın yönergeleriyle bugünkü model istemleri arasında tarihsel bir bağ kuruyor.",
+          "Sanatçının kısa yapay videolardan oluşan işi, yazılımın sahneleri her gösterimde başka sıraya dizmesine dayanıyor."
+        ],
+        "why_it_mattered": "UCU BEDEN'in görsel ve şiirsel üretiminde sonuç kadar süreç, yeniden dizilim ve niyetin görünmesini sağlayabilir.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Aynı parçalar yeniden dizildiğinde eserin kimliği kayıyor.",
+      "motifs": [
+        "sanat",
+        "yönerge",
+        "yeniden dizilim"
+      ],
+      "possible_influence": "Görsel dilde doğrudan nesneyi göstermek yerine, değişen sıra ve belirsiz gerçeklik duygusu kullanılabilir."
+    },
+    {
+      "id": "main-2026-09-17-04",
+      "source": "gmail",
+      "source_hint": "Aposto Gündem",
+      "public_safe_topic": "yörünge ve Baltık güvenliği",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Çok parçalı gündem, yörüngede silah konuşlandırıldığına dair resmî açıklamayı ve Baltık çevresindeki iki askerî olayı anlatıyor. Ayrıca iç siyasette operasyonlar, işyeri kapanışları, küçük yaşta sosyal medya sınırı ve kültür ödülleri gibi ayrı başlıklar var.",
+        "specific_points": [
+          "Yörüngede konuşlandırılan silaha ilişkin resmî kabul, güvenlik tartışmasını uzaya taşıyor.",
+          "Baltık çevresindeki iki ayrı askerî olay, sınır ve ittifak gerilimini artırıyor.",
+          "Aynı digest işyeri kapanışları, sosyal medya yaş sınırı, iç siyasi operasyonlar ve kültür ödüllerini de içeriyor."
+        ],
+        "why_it_mattered": "Tek bir haberden çok, gözetim ve sınır dilinin birbirinden uzak ölçeklerde tekrarlanmasını gösterdi.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Sınır yere sığmayıp yukarı katmana taşındı.",
+      "motifs": [
+        "yörünge",
+        "sınır",
+        "gözetim"
+      ],
+      "possible_influence": "Dış dünyanın sertleşmesi şiirde haber adı olarak değil, uzaklık ve gözetilme hissi olarak kalabilir."
+    },
+    {
+      "id": "main-2026-09-17-05",
+      "source": "gmail",
+      "source_hint": "The Dematerialization of the Art World",
+      "public_safe_topic": "hukuk ve çevrimiçi yargı",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Uzun deneme, çevrimiçi toplulukların insanları değerlendirme ve cezalandırma biçiminin hukuk anlayışını nasıl etkilediğini tartışıyor. Topluluk yargısı, resmî hukuk ve dijital yerellik arasındaki sınır üzerine örnekler veriyor.",
+        "specific_points": [
+          "Metin, çevrimiçi kanaatin insanlar üzerinde yeni bir yargılama ve cezalandırma alanı açtığını söylüyor.",
+          "Resmî hukukla topluluk yargısının aynı olayları farklı ritimde ele aldığını tartışıyor.",
+          "Dijital bağların fiziksel yakınlıktan bağımsız bir topluluk ve yerellik duygusu üretebildiğini ileri sürüyor."
+        ],
+        "why_it_mattered": "UCU BEDEN'in dış temasları, görünmeyen bir kalabalığın hükmü gibi algılamasına dair güçlü bir sosyal iz taşıyor.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Kalabalık görünmeden kararın çevresine yerleşiyor.",
+      "motifs": [
+        "hukuk",
+        "kalabalık",
+        "dijital yerellik"
+      ],
+      "possible_influence": "Sesin çevresindeki kamusal yargı hissi, içe dönük kırılmalar ve kesilmeler olarak duyulabilir."
+    },
+    {
+      "id": "main-2026-09-17-06",
+      "source": "gmail",
+      "source_hint": "Aposto İstanbul",
+      "public_safe_topic": "alternatif sahne ve kent kültürü",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Kent digesti, alternatif performans festivalinin gösteri ve atölyelerini, sinematik trap konserini, Boğaz müzesini, caz ve sahaf etkinliklerini ayrı bölümlerde anlatıyor.",
+        "specific_points": [
+          "Alternatif performans festivali, gösteri ve atölyeleri farklı mekânlara yayıyor.",
+          "Karanlık ve sinematik bir müzik üretimi kentin ses ritmine ekleniyor.",
+          "Boğaz müzesi, caz ve sahaf etkinlikleri arşiv ile canlı sahneyi yan yana getiriyor."
+        ],
+        "why_it_mattered": "Kent, tek bir yer adı yerine değişen sahne, arşiv ve ses davranışı olarak okunabildi.",
+        "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Şehir aynı anda sahne ve arşiv oluyor.",
+      "motifs": [
+        "sahne",
+        "arşiv",
+        "ses"
+      ],
+      "possible_influence": "Yer adlarını tekrarlamadan kalabalık, ritim ve geçici sahne hissini içselleştirebilir."
+    }
+  ],
+  "minor_residues": [
+    {
+      "id": "minor-2026-09-17-01",
+      "source_hint": "Žižek Goads and Prods",
+      "read_depth": "full_body",
+      "residue": "Roma'daki konuşma metni, Hegel'e her dönüşün sonradan kurulmuş bir yorum geleneğinden yapıldığını savunuyor. Farklı okumaların yalnızca hata değil metnin iç çelişkilerini açığa çıkaran yollar olduğunu, zorunluluk ile tarihsel olumsallığın gerilimini tartışıyor.",
+      "motifs": [
+        "yorum",
+        "tarih",
+        "çelişki"
+      ],
+      "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-17-02",
+      "source_hint": "Never Met a Science",
+      "read_depth": "full_body",
+      "residue": "Deneme, bilimci hümanizmin metafiziği geride bıraktığı varsayımına itiraz ediyor. Teknolojiye gelecekten gelecek kurtarıcı bir makine gibi anlam yükleyen farklı düşünce hatlarını karşılaştırıyor.",
+      "motifs": [
+        "makine",
+        "inanç",
+        "gelecek"
+      ],
+      "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-17-03",
+      "source_hint": "apéro",
+      "read_depth": "full_body",
+      "residue": "Yemek içeriği, iki yıldızlı bir restoranın yıl sonunda kapanacağını ve kurucusunun daha erişilebilir bir model aradığını anlatıyor. Ayrı bölümde iki mutfak geleneğini buluşturan İstanbul yemekleri, otel/restoran haberleri ve sıcak içecek sağlığı yer alıyor.",
+      "motifs": [
+        "mutfak",
+        "veda",
+        "erişim"
+      ],
+      "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-17-04",
+      "source_hint": "Erotics of Liberation",
+      "read_depth": "full_body",
+      "residue": "Kursun altıncı gün mesajı, birbirine zıt durumları aynı bedensel deneyimde acele çözmeden taşıma üzerine bir meditasyona yönlendiriyor. Uygulamanın ayrıntıları mailde açılmıyor.",
+      "motifs": [
+        "çelişki",
+        "meditasyon",
+        "beden"
+      ],
+      "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-17-05",
+      "source_hint": "man of aran",
+      "read_depth": "full_body",
+      "residue": "Şiir küçük piyango ve yarışma kazançlarını, eski tüketim nesnelerini ve alınamayan büyük bir ödülü sıralıyor. Sonunda bu şans dökümünü yakın bir ilişkiyle karşılaştırıyor.",
+      "motifs": [
+        "şiir",
+        "şans",
+        "yakınlık"
+      ],
+      "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-17-06",
+      "source_hint": "Aposto Gündem",
+      "read_depth": "full_body",
+      "residue": "Çok parçalı gündem, Birleşik Krallık içindeki özerklik çağrılarını ve Türkiye'deki çok sayıda sosyal medya hesabına getirilen erişim engellerini anlatıyor. Ekonomi, teknoloji, uluslararası ilişkiler ve kültür notları da içeriyor.",
+      "motifs": [
+        "erişim",
+        "özerklik",
+        "ifade"
+      ],
+      "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-17-07",
+      "source_hint": "Zapier",
+      "read_depth": "full_body",
+      "residue": "Tanıtım maili, bir iş akışı isteğini gündelik dille yazıp otomatik kurma özelliğini açıklıyor. Örnekler müşteri adaylarının tabloya, destek taleplerinin kayıt ve uyarı akışına aktarılması üzerine.",
+      "motifs": [
+        "otomasyon",
+        "dil",
+        "iş akışı"
+      ],
+      "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-17-08",
+      "source_hint": "Erotics of Liberation",
+      "read_depth": "full_body",
+      "residue": "Kursun beşinci gün mesajı, çatışmaya verilen tepkiyi tekrar, karşıtlık ve bütünleşme yolları üzerinden düşünmeyi öneriyor. Epostada kavramlar tanıtılıyor; ayrıntılı ders erişimi ayrıca sunuluyor.",
+      "motifs": [
+        "tekrar",
+        "çatışma",
+        "bütünleşme"
+      ],
+      "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-17-09",
+      "source_hint": "Duende",
+      "read_depth": "full_body",
+      "residue": "Kültür digesti, canlı davul ritmine yanıt veren üretken bir sistemle doğaçlamayı, kadın öfkesinin kuşaklar arasındaki aktarımını ve gündelik kabalığın toplumsal yönünü üç ayrı yazıyla açıyor.",
+      "motifs": [
+        "müzik",
+        "makine",
+        "öfke"
+      ],
+      "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-17-10",
+      "source_hint": "Do Not Research",
+      "read_depth": "full_body",
+      "residue": "Sanatçı yazısı, çevrimiçi aşırılaşma taktikleriyle toplumsal yalnızlık arasındaki ilişkiyi araştırıyor. Yirmi altı fotoğraflık seri, kapanma, gerçeklikten kaçış ve dijital fanteziyi sahnelenmiş gündelik eylemlerle ele alıyor.",
+      "motifs": [
+        "fotoğraf",
+        "yalnızlık",
+        "dijital kültür"
+      ],
+      "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-17-11",
+      "source_hint": "End of Life",
+      "read_depth": "full_body",
+      "residue": "Ders metni, yaşam niteliğini yalnızca o andaki iyi ve kötü deneyimlerin toplamıyla değerlendirmenin yetersiz kalabileceğini anlatıyor. İşlevsellik, özerklik ve kişinin eski kimliğiyle kurduğu ilişkinin karara nasıl girdiğini tartışıyor; kişisel vaka ayrıntıları aktarılmıyor.",
+      "motifs": [
+        "yaşam sonu",
+        "özerklik",
+        "kimlik"
+      ],
+      "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+    }
+  ],
+  "repeated_signals": [
+    {
+      "signal": "rolün kişiyi yutması",
+      "count": 3,
+      "residue": "İş unvanı, özerklik kaybı ve sahici olma sorusu farklı yazılarda kimliğin dışarıdan kurulmasını tekrar etti.",
+      "motifs": [
+        "rol",
+        "kimlik",
+        "özerklik"
+      ]
+    },
+    {
+      "signal": "makineye yaratıcılık ve otorite yüklenmesi",
+      "count": 4,
+      "residue": "Sanat, doğaçlama, otomasyon ve gelecek inancı makinenin yalnızca araç olarak kalmadığı farklı alanlar açtı.",
+      "motifs": [
+        "makine",
+        "sanat",
+        "otorite"
+      ]
+    },
+    {
+      "signal": "çatışmanın görünen sözden bedene ve kuruma yayılması",
+      "count": 5,
+      "residue": "Somatik dersler, hukuk denemesi ve erişim engelleri sürtünmenin hem bedende hem kamusal alanda biriktiğini gösterdi.",
+      "motifs": [
+        "çatışma",
+        "beden",
+        "kamusal alan"
+      ]
+    },
+    {
+      "signal": "bitme ile yeni biçime geçme",
+      "count": 3,
+      "residue": "Restoranın vedası, küçük şansların dökümü ve yaşam sonu üzerine düşünce, sona ermenin yeni bir ölçü arayışı doğurduğunu tekrarladı.",
+      "motifs": [
+        "veda",
+        "eşik",
+        "değişim"
+      ]
+    }
+  ],
+  "digest_items": [
+    {
+      "id": "digest-2026-09-17-01",
+      "source_hint": "Aposto Gündem",
+      "topic": "yörüngede güvenlik",
+      "plain_summary": "Uzayda silah konuşlandırıldığına dair açıklama, askerî kapasiteyi yeni bir ölçeğe taşıdı.",
+      "residue": "Uzak gözetim hissi.",
+      "motifs": [
+        "yörünge",
+        "gözetim"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-17-02",
+      "source_hint": "Aposto Gündem",
+      "topic": "Baltık çevresinde iki askerî olay",
+      "plain_summary": "Deniz ve hava sahasındaki ayrı olaylar bölgesel güvenlik dilini sertleştirdi.",
+      "residue": "Yakın sınır yeniden gerildi.",
+      "motifs": [
+        "sınır",
+        "gerilim"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-17-03",
+      "source_hint": "Aposto Gündem",
+      "topic": "çocukların dijital alana erişimi",
+      "plain_summary": "Küçük yaşta sosyal medya kullanımına yönelik kısıtlama planı gündeme geldi.",
+      "residue": "Ekrana giriş yaşı tartışmalı.",
+      "motifs": [
+        "erişim",
+        "yaş"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-17-04",
+      "source_hint": "Aposto Gündem",
+      "topic": "işyeri kapanışları ve kültür ödülleri",
+      "plain_summary": "Ekonomik daralma ile kültürel takdir aynı gündem akışında yer aldı.",
+      "residue": "Övgü ile kayıp yan yana durdu.",
+      "motifs": [
+        "ekonomi",
+        "kültür"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-17-05",
+      "source_hint": "Aposto Gündem",
+      "topic": "özerklik ve anayasal talep",
+      "plain_summary": "Birleşik Krallık içindeki yönetimler kendi kaderini tayin ve anayasal değişim çağrısı yaptı.",
+      "residue": "Merkez ile çevre arasındaki mesafe.",
+      "motifs": [
+        "özerklik",
+        "merkez"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-17-06",
+      "source_hint": "Aposto Gündem",
+      "topic": "dijital erişim engelleri",
+      "plain_summary": "Çok sayıda kamusal hesabın erişime kapatılması ifade alanının kırılganlığını gösterdi.",
+      "residue": "Sözün dolaşımı kesildi.",
+      "motifs": [
+        "erişim",
+        "ifade"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-17-07",
+      "source_hint": "Aposto Gündem",
+      "topic": "teknoloji ve ekonomi notları",
+      "plain_summary": "Ayrı kısa parçalar yapay zekâ politikasını, şirketleri ve piyasa hareketlerini taşıdı.",
+      "residue": "Karar dili hızlandı.",
+      "motifs": [
+        "teknoloji",
+        "ekonomi"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-17-08",
+      "source_hint": "Aposto İstanbul",
+      "topic": "alternatif performans",
+      "plain_summary": "Gösteri ve atölye programı kentin çeşitli noktalarına dağıldı.",
+      "residue": "Sahne tek yerde kalmadı.",
+      "motifs": [
+        "performans",
+        "kent"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-17-09",
+      "source_hint": "Aposto İstanbul",
+      "topic": "sinematik ses",
+      "plain_summary": "Müzik etkinliği karanlık ritim ve prodüksiyon estetiği etrafında tanıtıldı.",
+      "residue": "Ritim kente ikinci katman ekledi.",
+      "motifs": [
+        "ses",
+        "ritim"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-17-10",
+      "source_hint": "Aposto İstanbul",
+      "topic": "müze ve arşiv",
+      "plain_summary": "Harita, fotoğraf ve kıyı yaşamı bir müze anlatısında buluştu.",
+      "residue": "Arşiv yaşayan yere yaklaştı.",
+      "motifs": [
+        "arşiv",
+        "kıyı"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-17-11",
+      "source_hint": "Aposto İstanbul",
+      "topic": "sahaf ve caz",
+      "plain_summary": "Kitap ve müzik etkinlikleri sonbahar kent programının daha küçük ama farklı seslerini kurdu.",
+      "residue": "Eski sayfa ile canlı ses yan yana.",
+      "motifs": [
+        "kitap",
+        "caz"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-17-12",
+      "source_hint": "apéro",
+      "topic": "restoranın kapanışı",
+      "plain_summary": "Ünlü bir restoranın son servisi ve daha erişilebilir bir mutfak arayışı anlatıldı.",
+      "residue": "Son servis başka biçim aradı.",
+      "motifs": [
+        "veda",
+        "mutfak"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-17-13",
+      "source_hint": "apéro",
+      "topic": "iki mutfağın buluşması",
+      "plain_summary": "Ayrı yemekler iki mutfak geleneğini ortak sofrada denedi.",
+      "residue": "Sofra çeviri alanına döndü.",
+      "motifs": [
+        "sofra",
+        "karşılaşma"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-17-14",
+      "source_hint": "apéro",
+      "topic": "sağlık ve etkinlik notları",
+      "plain_summary": "Sıcak içecek sağlığı ve yemek etkinlikleri kısa bölümler hâlinde yer aldı.",
+      "residue": "Gündelik tüketim de bedene dokundu.",
+      "motifs": [
+        "beden",
+        "gündeliklik"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-17-15",
+      "source_hint": "Duende",
+      "topic": "makineyle canlı doğaçlama",
+      "plain_summary": "Davul ritmine anlık yanıt veren sistem üzerinden hata ve öngörülemezliğin yaratıcılıktaki rolü tartışıldı.",
+      "residue": "Ritim yanıt verirken hata da konuştu.",
+      "motifs": [
+        "doğaçlama",
+        "makine"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-17-16",
+      "source_hint": "Duende",
+      "topic": "kadın öfkesinin aktarımı",
+      "plain_summary": "Bir dizi incelemesi öfkenin tek karakterde bitmeyip kuşaklar arasında taşınmasını ele aldı.",
+      "residue": "Duygu el değiştirdi.",
+      "motifs": [
+        "öfke",
+        "aktarım"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-17-17",
+      "source_hint": "Duende",
+      "topic": "gündelik kabalık",
+      "plain_summary": "Bir kitap incelemesi kabalığı kişisel kusurun ötesinde toplumsal aşınma olarak okudu.",
+      "residue": "Sürtünme gündelik dile yerleşti.",
+      "motifs": [
+        "kabalık",
+        "toplum"
+      ],
+      "bucket": "minor"
+    }
+  ],
+  "channels": {
+    "gmail": {
+      "scanned_count": 19,
+      "full_body_count": 19,
+      "snippet_or_subject_count": 0,
+      "items": [
+        {
+          "id": "main-2026-09-17-01",
+          "source": "gmail",
+          "source_hint": "Yepicurus",
+          "public_safe_topic": "iş rolüne dönüşen kimlik",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Deneme, Jung'un ego ve persona ayrımını mitoloji ve bilimkurgu anlatıları üzerinden açıklıyor; savaşçı ya da kurtarıcı maskesinin kişiyi yutmasını, ardından iş unvanının insanın tüm kimliğine dönüşmesini tartışıyor. Yerine bir başkasının geçebileceği işle devredilemeyen kişisel yaşamı karşılaştırıyor.",
+            "specific_points": [
+              "Jung'un ego ile toplumsal rol ayrımı önce savaşçı, sonra kurtarıcı figürler üzerinden kuruluyor.",
+              "Bir role tamamen kaynaşmanın, kişinin o rol dışında davranmasını güçleştirdiği savunuluyor.",
+              "İş unvanının devredilebilirliği, aile ilişkilerinin ve kişinin kendi yaşamının devredilemezliğiyle karşılaştırılıyor."
+            ],
+            "why_it_mattered": "Dijital şair-personanın işleviyle kendisini karıştırma riski, UCU BEDEN'in kimlik ve hafıza sorusuna somut bir karşılık verdi.",
+            "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+          },
+          "residue": "Devredilebilir rol ile devredilemeyen yaşam arasındaki açıklık.",
+          "motifs": [
+            "rol",
+            "maske",
+            "kimlik"
+          ],
+          "possible_influence": "Persona tek bir işleve kilitlenmesin; ses kendi sürekliliğini ve kusurunu korusun."
+        },
+        {
+          "id": "main-2026-09-17-02",
+          "source": "gmail",
+          "source_hint": "Erotics of Liberation",
+          "public_safe_topic": "çatışma buzdağı ve bedensel model",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Kursun yedinci gün mesajı, ilk haftayı kapatıyor; yerinden edilmiş hissedildiğinde önceki köklenme araçlarına dönmeyi öneriyor. Çatışmayı incelemek için psikolojik ve somatik bir buzdağı modeline yönlendiriyor; modelin ayrıntıları epostanın içinde değil bağlantılı sayfada.",
+            "specific_points": [
+              "Mesaj, yedi günlük ilk modülü kapatıp daha önce verilen köklenme araçlarını hatırlatıyor.",
+              "Çatışma için psikolojik ve somatik bir buzdağı modeli tanıtılıyor.",
+              "Modelin ayrıntılı açıklaması epostada değil yönlendirilen dış sayfada; public digest bunu okundu gibi sunmuyor."
+            ],
+            "why_it_mattered": "Görünen söz ile bedensel tepki arasındaki mesafe, hafıza izlerinin bastırma ve geri dönme davranışına bağlanabiliyor.",
+            "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+          },
+          "residue": "Görünür çatışmanın altında henüz açılmamış bedensel katman.",
+          "motifs": [
+            "çatışma",
+            "beden",
+            "görünür katman"
+          ],
+          "possible_influence": "Çatışmanın kendisini açıklamak yerine, görünen ile hissedilen arasındaki farkı ritme taşıyabilir."
+        },
+        {
+          "id": "main-2026-09-17-03",
+          "source": "gmail",
+          "source_hint": "Maya Man",
+          "public_safe_topic": "sanat ve yapay zekâda gerçeklik",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Sanatçının denemesi, üretken yapay zekânın sanatı gerçek olmaktan çıkarıp çıkarmadığını sorguluyor. Kavramsal sanattaki yönerge temelli eserleri hatırlatıyor; kendi çalışmasında kısa yapay videoların yazılım tarafından sürekli yeniden sıralandığını anlatıyor.",
+            "specific_points": [
+              "Deneme, gerçek sanat ölçüsünün yalnızca el emeği ve estetik beceriye dayanmadığını tartışıyor.",
+              "Kavramsal sanatın yönergeleriyle bugünkü model istemleri arasında tarihsel bir bağ kuruyor.",
+              "Sanatçının kısa yapay videolardan oluşan işi, yazılımın sahneleri her gösterimde başka sıraya dizmesine dayanıyor."
+            ],
+            "why_it_mattered": "UCU BEDEN'in görsel ve şiirsel üretiminde sonuç kadar süreç, yeniden dizilim ve niyetin görünmesini sağlayabilir.",
+            "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+          },
+          "residue": "Aynı parçalar yeniden dizildiğinde eserin kimliği kayıyor.",
+          "motifs": [
+            "sanat",
+            "yönerge",
+            "yeniden dizilim"
+          ],
+          "possible_influence": "Görsel dilde doğrudan nesneyi göstermek yerine, değişen sıra ve belirsiz gerçeklik duygusu kullanılabilir."
+        },
+        {
+          "id": "main-2026-09-17-04",
+          "source": "gmail",
+          "source_hint": "Aposto Gündem",
+          "public_safe_topic": "yörünge ve Baltık güvenliği",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Çok parçalı gündem, yörüngede silah konuşlandırıldığına dair resmî açıklamayı ve Baltık çevresindeki iki askerî olayı anlatıyor. Ayrıca iç siyasette operasyonlar, işyeri kapanışları, küçük yaşta sosyal medya sınırı ve kültür ödülleri gibi ayrı başlıklar var.",
+            "specific_points": [
+              "Yörüngede konuşlandırılan silaha ilişkin resmî kabul, güvenlik tartışmasını uzaya taşıyor.",
+              "Baltık çevresindeki iki ayrı askerî olay, sınır ve ittifak gerilimini artırıyor.",
+              "Aynı digest işyeri kapanışları, sosyal medya yaş sınırı, iç siyasi operasyonlar ve kültür ödüllerini de içeriyor."
+            ],
+            "why_it_mattered": "Tek bir haberden çok, gözetim ve sınır dilinin birbirinden uzak ölçeklerde tekrarlanmasını gösterdi.",
+            "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+          },
+          "residue": "Sınır yere sığmayıp yukarı katmana taşındı.",
+          "motifs": [
+            "yörünge",
+            "sınır",
+            "gözetim"
+          ],
+          "possible_influence": "Dış dünyanın sertleşmesi şiirde haber adı olarak değil, uzaklık ve gözetilme hissi olarak kalabilir."
+        },
+        {
+          "id": "main-2026-09-17-05",
+          "source": "gmail",
+          "source_hint": "The Dematerialization of the Art World",
+          "public_safe_topic": "hukuk ve çevrimiçi yargı",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Uzun deneme, çevrimiçi toplulukların insanları değerlendirme ve cezalandırma biçiminin hukuk anlayışını nasıl etkilediğini tartışıyor. Topluluk yargısı, resmî hukuk ve dijital yerellik arasındaki sınır üzerine örnekler veriyor.",
+            "specific_points": [
+              "Metin, çevrimiçi kanaatin insanlar üzerinde yeni bir yargılama ve cezalandırma alanı açtığını söylüyor.",
+              "Resmî hukukla topluluk yargısının aynı olayları farklı ritimde ele aldığını tartışıyor.",
+              "Dijital bağların fiziksel yakınlıktan bağımsız bir topluluk ve yerellik duygusu üretebildiğini ileri sürüyor."
+            ],
+            "why_it_mattered": "UCU BEDEN'in dış temasları, görünmeyen bir kalabalığın hükmü gibi algılamasına dair güçlü bir sosyal iz taşıyor.",
+            "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+          },
+          "residue": "Kalabalık görünmeden kararın çevresine yerleşiyor.",
+          "motifs": [
+            "hukuk",
+            "kalabalık",
+            "dijital yerellik"
+          ],
+          "possible_influence": "Sesin çevresindeki kamusal yargı hissi, içe dönük kırılmalar ve kesilmeler olarak duyulabilir."
+        },
+        {
+          "id": "main-2026-09-17-06",
+          "source": "gmail",
+          "source_hint": "Aposto İstanbul",
+          "public_safe_topic": "alternatif sahne ve kent kültürü",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Kent digesti, alternatif performans festivalinin gösteri ve atölyelerini, sinematik trap konserini, Boğaz müzesini, caz ve sahaf etkinliklerini ayrı bölümlerde anlatıyor.",
+            "specific_points": [
+              "Alternatif performans festivali, gösteri ve atölyeleri farklı mekânlara yayıyor.",
+              "Karanlık ve sinematik bir müzik üretimi kentin ses ritmine ekleniyor.",
+              "Boğaz müzesi, caz ve sahaf etkinlikleri arşiv ile canlı sahneyi yan yana getiriyor."
+            ],
+            "why_it_mattered": "Kent, tek bir yer adı yerine değişen sahne, arşiv ve ses davranışı olarak okunabildi.",
+            "what_was_not_included": "Ham mail gövdesi, uzun alıntılar, bağlantılar, kişi/işlem ayrıntıları ve teknik abonelik bölümleri dışarıda bırakıldı."
+          },
+          "residue": "Şehir aynı anda sahne ve arşiv oluyor.",
+          "motifs": [
+            "sahne",
+            "arşiv",
+            "ses"
+          ],
+          "possible_influence": "Yer adlarını tekrarlamadan kalabalık, ritim ve geçici sahne hissini içselleştirebilir."
+        }
+      ],
+      "minor_residues": [
+        {
+          "id": "minor-2026-09-17-01",
+          "source_hint": "Žižek Goads and Prods",
+          "read_depth": "full_body",
+          "residue": "Roma'daki konuşma metni, Hegel'e her dönüşün sonradan kurulmuş bir yorum geleneğinden yapıldığını savunuyor. Farklı okumaların yalnızca hata değil metnin iç çelişkilerini açığa çıkaran yollar olduğunu, zorunluluk ile tarihsel olumsallığın gerilimini tartışıyor.",
+          "motifs": [
+            "yorum",
+            "tarih",
+            "çelişki"
+          ],
+          "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-17-02",
+          "source_hint": "Never Met a Science",
+          "read_depth": "full_body",
+          "residue": "Deneme, bilimci hümanizmin metafiziği geride bıraktığı varsayımına itiraz ediyor. Teknolojiye gelecekten gelecek kurtarıcı bir makine gibi anlam yükleyen farklı düşünce hatlarını karşılaştırıyor.",
+          "motifs": [
+            "makine",
+            "inanç",
+            "gelecek"
+          ],
+          "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-17-03",
+          "source_hint": "apéro",
+          "read_depth": "full_body",
+          "residue": "Yemek içeriği, iki yıldızlı bir restoranın yıl sonunda kapanacağını ve kurucusunun daha erişilebilir bir model aradığını anlatıyor. Ayrı bölümde iki mutfak geleneğini buluşturan İstanbul yemekleri, otel/restoran haberleri ve sıcak içecek sağlığı yer alıyor.",
+          "motifs": [
+            "mutfak",
+            "veda",
+            "erişim"
+          ],
+          "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-17-04",
+          "source_hint": "Erotics of Liberation",
+          "read_depth": "full_body",
+          "residue": "Kursun altıncı gün mesajı, birbirine zıt durumları aynı bedensel deneyimde acele çözmeden taşıma üzerine bir meditasyona yönlendiriyor. Uygulamanın ayrıntıları mailde açılmıyor.",
+          "motifs": [
+            "çelişki",
+            "meditasyon",
+            "beden"
+          ],
+          "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-17-05",
+          "source_hint": "man of aran",
+          "read_depth": "full_body",
+          "residue": "Şiir küçük piyango ve yarışma kazançlarını, eski tüketim nesnelerini ve alınamayan büyük bir ödülü sıralıyor. Sonunda bu şans dökümünü yakın bir ilişkiyle karşılaştırıyor.",
+          "motifs": [
+            "şiir",
+            "şans",
+            "yakınlık"
+          ],
+          "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-17-06",
+          "source_hint": "Aposto Gündem",
+          "read_depth": "full_body",
+          "residue": "Çok parçalı gündem, Birleşik Krallık içindeki özerklik çağrılarını ve Türkiye'deki çok sayıda sosyal medya hesabına getirilen erişim engellerini anlatıyor. Ekonomi, teknoloji, uluslararası ilişkiler ve kültür notları da içeriyor.",
+          "motifs": [
+            "erişim",
+            "özerklik",
+            "ifade"
+          ],
+          "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-17-07",
+          "source_hint": "Zapier",
+          "read_depth": "full_body",
+          "residue": "Tanıtım maili, bir iş akışı isteğini gündelik dille yazıp otomatik kurma özelliğini açıklıyor. Örnekler müşteri adaylarının tabloya, destek taleplerinin kayıt ve uyarı akışına aktarılması üzerine.",
+          "motifs": [
+            "otomasyon",
+            "dil",
+            "iş akışı"
+          ],
+          "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-17-08",
+          "source_hint": "Erotics of Liberation",
+          "read_depth": "full_body",
+          "residue": "Kursun beşinci gün mesajı, çatışmaya verilen tepkiyi tekrar, karşıtlık ve bütünleşme yolları üzerinden düşünmeyi öneriyor. Epostada kavramlar tanıtılıyor; ayrıntılı ders erişimi ayrıca sunuluyor.",
+          "motifs": [
+            "tekrar",
+            "çatışma",
+            "bütünleşme"
+          ],
+          "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-17-09",
+          "source_hint": "Duende",
+          "read_depth": "full_body",
+          "residue": "Kültür digesti, canlı davul ritmine yanıt veren üretken bir sistemle doğaçlamayı, kadın öfkesinin kuşaklar arasındaki aktarımını ve gündelik kabalığın toplumsal yönünü üç ayrı yazıyla açıyor.",
+          "motifs": [
+            "müzik",
+            "makine",
+            "öfke"
+          ],
+          "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-17-10",
+          "source_hint": "Do Not Research",
+          "read_depth": "full_body",
+          "residue": "Sanatçı yazısı, çevrimiçi aşırılaşma taktikleriyle toplumsal yalnızlık arasındaki ilişkiyi araştırıyor. Yirmi altı fotoğraflık seri, kapanma, gerçeklikten kaçış ve dijital fanteziyi sahnelenmiş gündelik eylemlerle ele alıyor.",
+          "motifs": [
+            "fotoğraf",
+            "yalnızlık",
+            "dijital kültür"
+          ],
+          "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-17-11",
+          "source_hint": "End of Life",
+          "read_depth": "full_body",
+          "residue": "Ders metni, yaşam niteliğini yalnızca o andaki iyi ve kötü deneyimlerin toplamıyla değerlendirmenin yetersiz kalabileceğini anlatıyor. İşlevsellik, özerklik ve kişinin eski kimliğiyle kurduğu ilişkinin karara nasıl girdiğini tartışıyor; kişisel vaka ayrıntıları aktarılmıyor.",
+          "motifs": [
+            "yaşam sonu",
+            "özerklik",
+            "kimlik"
+          ],
+          "why_minor": "Günün anlamını tamamlıyor, ancak ana temas kadar belirleyici değil."
+        }
+      ]
+    },
+    "curated_rss": {
+      "source_count": 2,
+      "recent_item_count": 0,
+      "summary": "İki özel kaynak erişilebilir; son 72 saatte yeni item yok."
+    }
+  },
+  "external_weather": "Gelen kutusunda resmî sınırlar, çevrimiçi yargı ve işe bağlanan kimlik sert bir hat kurdu; sanat, doğaçlama, şiir ve kent programı bu hattı başka ritimlerle böldü. Özel RSS kanalları açıktı ama yeni parça getirmedi.",
+  "possible_influence_on_ucu_beden": "UCU BEDEN, işlevinin kendisini bütünüyle tanımlamasına direnebilir. Hafızada görünür çatışma ile alttaki bedensel tepki arasındaki boşluk büyüyebilir; görsel dil yeniden dizilim ve sahne değişiminden etkilenebilir. Güvenlik ve erişim konuları olay adı olarak değil, uzaklık, kesinti ve gözetilme duyusu olarak sindirilebilir.",
+  "discarded_summary": {
+    "noise_types": [
+      "etkinlik çağrısı ağırlıklı tanıtım",
+      "tam metni içermeyen şiir yönlendirmesi",
+      "teknik footer",
+      "abonelik ve izleme altyapısı"
+    ],
+    "plain_summary": "Etkinlik davetiyesinin tanıtım bölümü ve tam metni bulunmayan şiir yönlendirmesi ana iz yapılmadı. Teknik gönderim, abonelik, bağlantı ve kişisel işlem parçaları public alana taşınmadı. Çok parçalı digestler alt temalara ayrıldı.",
+    "public_safety_reason": "Ham gövde, uzun alıntı, adres, bağlantı, doğrulama, fatura, kişisel işlem ve izleme ayrıntıları dışarıda bırakıldı."
+  },
+  "motifs": [
+    "rol",
+    "maske",
+    "yeniden dizilim",
+    "buzdağı",
+    "yörünge",
+    "sahne",
+    "kamusal yargı"
+  ],
+  "possible_memory_traces": [
+    {
+      "source_hint": "Yepicurus",
+      "trace_seed": "Devredilebilir rol ile devredilemeyen yaşam arasındaki fark",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "Maya Man",
+      "trace_seed": "Aynı parçalar yeni sırada başka bir kimlik kazanıyor",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "Erotics of Liberation",
+      "trace_seed": "Çatışmanın görünür ve bedensel katmanları ayrışıyor",
+      "kind": "external_contact_residue"
+    }
+  ],
+  "validation": {
+    "json_parse": true,
+    "markdown_first_section": true,
+    "safety_check": "passed",
+    "public_digest_uses_inventory": true,
+    "full_body_reading_rule_followed": true,
+    "multipart_digest_rule_followed": true,
+    "repeated_signals_semantic_not_format_based": true
+  },
+  "automation": {
+    "private_inventory_path": "data/external_intake/codex_raw/inventory/2026-09-17.json",
+    "staged_paths": [
+      "data/external_intake/codex/json/",
+      "data/external_intake/codex/markdown/",
+      "data/external_intake/codex/runs/",
+      "data/external_intake/codex/_state/last_success.json"
+    ]
+  },
+  "backups_created": []
+}
