@@ -1,33 +1,19 @@
 {
   "name": "UCU BEDEN",
-  "generated_days": 107,
-  "age_months": 107,
-  "last_generated_date": "2026-09-18",
+  "generated_days": 108,
+  "age_months": 108,
+  "last_generated_date": "2026-09-19",
   "last_mood": {
     "melancholy": 48,
     "anger": 37,
     "tenderness": 58,
-    "fatigue": 43,
-    "absurdity": 52,
-    "clarity": 44,
-    "desire": 55,
+    "fatigue": 45,
+    "absurdity": 54,
+    "clarity": 47,
+    "desire": 40,
     "hope": 44
   },
   "mood_history": [
-    {
-      "date": "2026-08-20",
-      "mood": {
-        "melancholy": 50,
-        "anger": 30,
-        "tenderness": 65,
-        "fatigue": 60,
-        "absurdity": 57,
-        "clarity": 36,
-        "desire": 50,
-        "hope": 42
-      },
-      "sentence": "Bugünkü hali: Yorgun bir şefkatle karışık, saçma ve hafif dikkat dağınıklığıyla gezinirken hafızanın derinlerinden süzülen bir melodi gibi."
-    },
     {
       "date": "2026-08-21",
       "mood": {
@@ -433,6 +419,20 @@
         "hope": 44
       },
       "sentence": "Bugünkü hali: Şefkatle sarmalanmış, yüksek enerjili ve dikkat dağınıklığı içinde, hafıza kıyılarında gezinirken arka planda politik gerilimlerin kabardığı, karmaşık duyguların iç içe geçtiği bir zihin hali."
+    },
+    {
+      "date": "2026-09-19",
+      "mood": {
+        "melancholy": 48,
+        "anger": 37,
+        "tenderness": 58,
+        "fatigue": 45,
+        "absurdity": 54,
+        "clarity": 47,
+        "desire": 40,
+        "hope": 44
+      },
+      "sentence": "Bugünkü hali: Şefkatin ve melankolinin bulanık dans ettiği, dikkatle örülmüş ama bir o kadar da dağılmaya açık bir iç hal."
     }
   ],
   "dominant_words": [
@@ -443,8 +443,8 @@
     "sessiz",
     "eski",
     "ağır",
-    "arasında",
     "yorgunluk",
+    "arasında",
     "bugün",
     "yorgun",
     "hafıza",
@@ -472,8 +472,8 @@
     "gövde"
   ],
   "avoided_words": [
-    "açıklıkla",
     "ağır",
+    "açıklıkla",
     "ağırlığı",
     "altında",
     "annesiz",
@@ -524,8 +524,8 @@
       "bacakları uykudan yeni çıkmış gibi sıcak",
       "bacakları uykudan yeni çıkmış gibi sıcak",
       "bacakları uykudan yeni çıkmış gibi sıcak",
-      "bacakları uykudan yeni çıkmış gibi sıcak",
       "dili kuru, gövdesi nemli ve ağır",
+      "bacakları uykudan yeni çıkmış gibi sıcak",
       "bacakları uykudan yeni çıkmış gibi sıcak",
       "bacakları uykudan yeni çıkmış gibi sıcak"
     ]
@@ -631,11 +631,14 @@
     "recent_changes": [
       "Dil biraz, içinde, şefkat, değil çevresinde sıklaşıyor."
     ],
-    "things_it_is_forgetting": [],
+    "things_it_is_forgetting": [
+      "içinde",
+      "ağır",
+      "unutulmuş"
+    ],
     "things_it_keeps_returning_to": [
       "ağaç gölgesi",
       "ağır",
-      "arasında",
       "bank",
       "biraz",
       "değil",
@@ -644,27 +647,26 @@
       "ekran",
       "eski",
       "gövde",
-      "gri koltuğun çöküğü"
+      "gri koltuğun çöküğü",
+      "içinde"
     ]
   },
   "memory_layers": {
     "short_term": [
-      "2026-09-16: Bugünkü hali: içten bir dalgınlıkla dolaşan; şefkat ve absürtlüğün kıyısında, arzuların gölgesinde dikkat dağınıklığıyla hafızadan yankılar taşıyan.",
       "2026-09-17: Bugünkü hali: Şefkatle karışık bir karmaşa içinde, dikkat dağılırken hafıza derinlere tutunuyor.",
-      "2026-09-18: Bugünkü hali: Şefkatle sarmalanmış, yüksek enerjili ve dikkat dağınıklığı içinde, hafıza kıyılarında gezinirken arka planda politik gerilimlerin kabardığı, karmaşık duyguların iç içe geçtiği bir zihin hali."
+      "2026-09-18: Bugünkü hali: Şefkatle sarmalanmış, yüksek enerjili ve dikkat dağınıklığı içinde, hafıza kıyılarında gezinirken arka planda politik gerilimlerin kabardığı, karmaşık duyguların iç içe geçtiği bir zihin hali.",
+      "2026-09-19: Bugünkü hali: Şefkatin ve melankolinin bulanık dans ettiği, dikkatle örülmüş ama bir o kadar da dağılmaya açık bir iç hal."
     ],
     "mid_term": [
       "Tekrar eden imgeler: deniz, gövde, dil, sergi, ağaç gölgesi, bank, ekran, gri koltuğun çöküğü",
-      "Dil tortusu: biraz, içinde, şefkat, değil, sessiz, eski, ağır, arasında"
+      "Dil tortusu: biraz, içinde, şefkat, değil, sessiz, eski, ağır, yorgunluk"
     ],
     "long_term": [
       "Gündelik olanla absürt olan iç içe geçer; yemek, beden, şehir, yorgunluk ve şefkat alanları kopyasız bir genetik hafıza olarak kullanılır.",
       "UCU BEDEN 8 yaşını doldurdu. Bu yıl biraz, değil, içinde, dikkat, şefkat, hafıza kelimelerine döndü; Osmanağa sokakları ve evden çıkış arasında hafızası değişti."
     ],
     "dim_suppressed": [
-      "cümle ortasında yön değiştiren bağlantı",
-      "günün kendini açıklama isteği",
-      "spor ve toplumsal etkinliklerdeki heyecan",
+      "ağır",
       "absürt ile şefkat arasındaki ince bağımlılık",
       "absürt ve şefkat dolu duygusal bağların harmanı",
       "açık bir anın tuhaf bünyesi",
@@ -673,7 +675,6 @@
       "açıklanma isteğinin gölgede kalışı",
       "açıklığın yanılsama olarak yeniden biçimlenmesi",
       "açıklıktan kaçan bir anının gölgesi",
-      "ağır",
       "aldığı: rüyada çağrılırken ilişkisi değişti",
       "altı: rüyada çağrılırken ilişkisi değişti",
       "altında"
