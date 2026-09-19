@@ -1,0 +1,1011 @@
+{
+  "version": "codex_external_intake.v4",
+  "source": "codex_external_intake",
+  "date": "2026-09-19",
+  "generated_at": "2026-09-19T04:10:02.111Z",
+  "timezone": "Europe/Istanbul",
+  "provider": "codex",
+  "safety": {
+    "public_safe": true,
+    "raw_bodies_in_public_output": false,
+    "long_quotes_in_public_output": false,
+    "raw_urls_in_public_output": false,
+    "email_addresses_in_public_output": false,
+    "verification_or_personal_transaction_data_in_public_output": false,
+    "private_factual_layer_committed": false
+  },
+  "counts": {
+    "scanned_mail_count": 16,
+    "full_body_count": 16,
+    "snippet_or_subject_count": 0,
+    "multipart_digest_count": 4,
+    "curated_rss_source_count": 2,
+    "curated_rss_recent_item_count": 0,
+    "digest_items_count": 18
+  },
+  "reading_summary": {
+    "plain_summary": "Son 72 saatte 16 mail okundu. Yeni kültür digesti, Berlin'de kurulan hayatın gurbet ve müzik üzerindeki etkisini, televizyon ödüllerindeki platform gücünü, okumaya sanal teşviki ve bienalden belgesel kaynaklarına uzanan ayrı kültür başlıklarını taşıdı. İki gündem digesti sermaye piyasasındaki sert düşüşü, fonların tasfiye sürecini, seçim takvimi yorumunu ve tartışmalı bir saldırı iddiasını farklı bölümler olarak ele aldı. Bir şiir, arama motorunun dünya sözcüğünü tamamlamasını klasik edebiyat imgeleriyle karşılaştırdı.\n\nDiğer maillerde iş unvanına dönüşen kimlik, üretken yapay zekâ sanatında gerçeklik, geleceğe yansıtılan makine inancı, Hegel yorumları ve çatışmanın aidiyet ile bedensel katmanları vardı. Çatışma kursuyla ilgili üç kısa duyurunun ikisi yalnızca takvim veya canlı yayın çağrısıydı; oturumun içeriği okunmuş gibi sunulmadı. İki özel RSS kaynağı erişilebilir durumdaydı, ancak son 72 saatte yeni item vermedi.",
+    "what_was_in_the_emails": [
+      "Gurbet, kültürel ödüller, dikkat teşviki ve sanat etkinlikleri çok parçalı kültür digestinde okundu.",
+      "Piyasa, fon tasfiyesi, seçim takvimi ve bölgesel güvenlik iki gündem digestinde ayrı alt başlıklara ayrıldı.",
+      "İş rolü, sanatın gerçekliği, makine inancı ve felsefi yorum üzerine denemeler vardı.",
+      "Çatışma kursu ve şiirler aidiyet, arama ve eksiklik üzerinde küçük izler bıraktı."
+    ],
+    "what_was_in_curated_rss": [
+      "Grand Text Auto erişilebilir; son 72 saatte yeni item yok.",
+      "Mixed Initiatives erişilebilir; son 72 saatte yeni item yok."
+    ],
+    "dominant_topics": [
+      "gurbet ve kimlik",
+      "piyasa ve takvim",
+      "dikkat ve ödül",
+      "makine ve sanat",
+      "çatışma ve aidiyet",
+      "veda ve yeniden düzenleme"
+    ],
+    "notable_absences": [
+      "Özel RSS kaynaklarında yeni item yoktu.",
+      "Canlı oturum bildirimleri oturumun içeriğini taşımıyordu.",
+      "Reddit veya forum türü ayrı topluluk digesti bulunmadı."
+    ],
+    "overall_direction": "Dış dünya kimliği iki yer ve iki rol arasında bölerken kurumlar akışı kesti, ölçtü ve yeniden sıraladı; şiir ile sanat hazır cevabın altında kalan açıklığı korudu."
+  },
+  "summary": "Kimlik iki yere bölündü; kurumlar akışı kesti, ölçtü ve yeniden sıraladı.",
+  "items": [
+    {
+      "id": "main-2026-09-19-01",
+      "source": "gmail",
+      "source_hint": "Duende",
+      "public_safe_topic": "gurbet, ödül sistemi ve kültür gündemi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Kültür digesti, Berlin'de kurulan hayatın gurbet ve müzik üzerindeki etkisini anlatan bir söyleşiyi, televizyon ödüllerindeki platform gücünü ve okuma teşvikinden bienale uzanan kültür haberlerini bir araya getiriyor.",
+        "specific_points": [
+          "Söyleşi, başka bir ülkede kurulan hayatın müzisyenin sesini ve günlük gerçekliğini nasıl değiştirdiğini anlatıyor.",
+          "Televizyon ödülleri bölümünde tek bir platformun yüksek ödül sayısıyla güç dengesi kurması inceleniyor.",
+          "Okumayı sanal ödülle teşvik eden program, bienal, belgesel kaynakları ve sanatçı vedaları ayrı bölümlere ayrılıyor."
+        ],
+        "why_it_mattered": "Gurbetin iki gerçekliği, dikkatin ödüllendirilmesi ve kültürel gücün sayıyla ölçülmesi aynı digestte buluştu.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Memleket tek yer olmaktan çıkarken dikkat de puana çevrildi.",
+      "motifs": [
+        "gurbet",
+        "dikkat",
+        "ödül"
+      ],
+      "possible_influence": "İki yerde birden yaşama hissi, görüntü ve seste üst üste binen katmanlara dönüşebilir."
+    },
+    {
+      "id": "main-2026-09-19-02",
+      "source": "gmail",
+      "source_hint": "Aposto Gündem",
+      "public_safe_topic": "fon tasfiyesi ve seçim takvimi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Gündem digesti, sermaye piyasası dalgalanması sonrasında fon tasfiyelerini, likidite önlemlerini ve soruşturmaları anlatıyor. Ayrı siyasi bölüm yeniden adaylık için seçim takviminin parlamentoca değiştirilmesi yorumunu aktarıyor; teknoloji ve kültür notları da içeriyor.",
+        "specific_points": [
+          "Sermaye piyasasındaki sarsıntının ardından çok sayıda fon için kapatma ve tasfiye süreci anlatılıyor.",
+          "Yeniden adaylığın anayasal koşulu olarak parlamentonun seçimleri yenilemesi gerektiği yorumu aktarılıyor.",
+          "Otonom araç, beklenmedik model davranışı, kartlı harcamalar ve kültürel veda ayrı kısa bölümler."
+        ],
+        "why_it_mattered": "Ekonomik güven ile siyasi takvim aynı kurum dili içinde yeniden düzenlendi.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Piyasa sarsılırken takvim de yeniden çizildi.",
+      "motifs": [
+        "piyasa",
+        "takvim",
+        "kurum"
+      ],
+      "possible_influence": "Kesilen akış ve yeniden açılan takvim, olay adı olmadan ritim ve bekleme olarak kalabilir."
+    },
+    {
+      "id": "main-2026-09-19-03",
+      "source": "gmail",
+      "source_hint": "man of aran",
+      "public_safe_topic": "dünyanın arama ile tamamlanması üzerine şiir",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Şiir, dünya sözcüğünü arama motoruyla tamamlamaktan yola çıkıp klasik edebiyattaki dünya imgelerini yan yana getiriyor. Doymayan arzu, tüketim ve bir kabuğu açarak dünyaya girme fikri arasında geçişler yapıyor.",
+        "specific_points": [
+          "Şiir, arama motorunun dünya sözcüğünü nasıl tamamlayacağını merak ederek başlıyor.",
+          "Klasik edebiyattaki dünya deyişleri tüketim, eksiklik ve doymayan arzuyla yan yana geliyor.",
+          "Kabuğu açma imgesi, dünyaya sahip olmak ile dünyaya girmek arasındaki farkı soruyor."
+        ],
+        "why_it_mattered": "Arama teknolojisi ile eski şiir dili aynı metinde karşılaşarak makinenin hazır cevabını görünür kıldı.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Hazır tamamlanan dünya, eksikliği azaltmak yerine çoğalttı.",
+      "motifs": [
+        "arama",
+        "dünya",
+        "eksiklik"
+      ],
+      "possible_influence": "Hazır cevap ile yaşanan dünyanın açıklığı arasında kısa kırılmalar kurulabilir."
+    },
+    {
+      "id": "main-2026-09-19-04",
+      "source": "gmail",
+      "source_hint": "Aposto Gündem",
+      "public_safe_topic": "bölgesel saldırı iddiası ve borsa sarsıntısı",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Gündem digesti, kutsal bir kentin insansız araçlarla hedef alındığı iddiasını ve bu iddianın reddini birlikte aktarıyor. Ayrı ekonomi bölümünde sert piyasa düşüşünü, fonlarda likidite sıkışmasını ve olağanüstü toplantıyı anlatıyor.",
+        "specific_points": [
+          "İnsansız araçlarla saldırı iddiası, karşı tarafın reddiyle birlikte aktarılıyor ve kesinleşmiş olay gibi sunulmuyor.",
+          "Sert piyasa düşüşü ile bazı fonlardaki likidite sıkışması ayrı ekonomi hattını oluşturuyor.",
+          "Olağanüstü değerlendirme toplantısı, dış para politikası ve iç gündem notları başka bölümler."
+        ],
+        "why_it_mattered": "Doğrulanmamış iddia ile ölçülebilir piyasa kırılması aynı günün iki farklı belirsizlik biçimini taşıdı.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Bir yanda tartışmalı iddia, öte yanda aniden durdurulan işlem.",
+      "motifs": [
+        "belirsizlik",
+        "likidite",
+        "duruş"
+      ],
+      "possible_influence": "Dış güven ve ekonomik akış arasındaki kesinti sesin temposunda kalabilir."
+    },
+    {
+      "id": "main-2026-09-19-05",
+      "source": "gmail",
+      "source_hint": "Yepicurus",
+      "public_safe_topic": "iş rolüne dönüşen kimlik",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Deneme, ego ile toplumsal rol ayrımını mitoloji ve bilimkurgu figürleri üzerinden kuruyor. İş unvanının kişinin tüm kimliğine dönüşmesini eleştiriyor; işteki yerin devredilebilirliğiyle kişisel hayatın devredilemezliğini karşılaştırıyor.",
+        "specific_points": [
+          "Ego ile toplumsal rol ayrımı mitolojik ve bilimkurgu figürleri üzerinden anlatılıyor.",
+          "Bir maskenin bütün kimliğe dönüşmesi iş unvanına kaynaşma sorununa bağlanıyor.",
+          "İşteki yerin devredilebilirliği, kişisel hayatın devredilemezliğiyle karşılaştırılıyor."
+        ],
+        "why_it_mattered": "UCU BEDEN'in dijital görevi ile birikmiş yaşantısı arasındaki farkı düşünmeye somut malzeme verdi.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Rol devredilebilir; yaşantı aynı kolaylıkla devredilmez.",
+      "motifs": [
+        "rol",
+        "maske",
+        "kimlik"
+      ],
+      "possible_influence": "Persona tek bir görev tanımına sıkışmadan konuşabilir."
+    },
+    {
+      "id": "main-2026-09-19-06",
+      "source": "gmail",
+      "source_hint": "Maya Man",
+      "public_safe_topic": "yapay zekâ sanatında gerçeklik",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Sanatçının yazısı, üretken yapay zekânın sanatın gerçekliğini tehdit edip etmediğini soruyor. Yönerge temelli kavramsal sanata dönüyor; kısa yapay videoların bir yazılımla her seferinde farklı sırada gösterildiği kendi işini anlatıyor.",
+        "specific_points": [
+          "Yazı, gerçek sanatın yalnızca el emeği ve ustalıkla tanımlanmasına karşı örnekler veriyor.",
+          "Kavramsal sanatın yönerge temelli işlerini bugünkü model istemleriyle ilişkilendiriyor.",
+          "Kısa yapay videolardan oluşan eser, her gösterimde yazılım tarafından yeniden sıralanıyor."
+        ],
+        "why_it_mattered": "UCU BEDEN'in üretiminde sonuç kadar niyet, süreç ve değişen sıralama fikri öne çıktı.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Aynı parçaların sırası değişince gerçeklik ölçüsü kaydı.",
+      "motifs": [
+        "sanat",
+        "yönerge",
+        "yeniden dizilim"
+      ],
+      "possible_influence": "Görsel hafıza doğrudan nesne yerine değişen düzen hissinden etkilenebilir."
+    }
+  ],
+  "main_items": [
+    {
+      "id": "main-2026-09-19-01",
+      "source": "gmail",
+      "source_hint": "Duende",
+      "public_safe_topic": "gurbet, ödül sistemi ve kültür gündemi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Kültür digesti, Berlin'de kurulan hayatın gurbet ve müzik üzerindeki etkisini anlatan bir söyleşiyi, televizyon ödüllerindeki platform gücünü ve okuma teşvikinden bienale uzanan kültür haberlerini bir araya getiriyor.",
+        "specific_points": [
+          "Söyleşi, başka bir ülkede kurulan hayatın müzisyenin sesini ve günlük gerçekliğini nasıl değiştirdiğini anlatıyor.",
+          "Televizyon ödülleri bölümünde tek bir platformun yüksek ödül sayısıyla güç dengesi kurması inceleniyor.",
+          "Okumayı sanal ödülle teşvik eden program, bienal, belgesel kaynakları ve sanatçı vedaları ayrı bölümlere ayrılıyor."
+        ],
+        "why_it_mattered": "Gurbetin iki gerçekliği, dikkatin ödüllendirilmesi ve kültürel gücün sayıyla ölçülmesi aynı digestte buluştu.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Memleket tek yer olmaktan çıkarken dikkat de puana çevrildi.",
+      "motifs": [
+        "gurbet",
+        "dikkat",
+        "ödül"
+      ],
+      "possible_influence": "İki yerde birden yaşama hissi, görüntü ve seste üst üste binen katmanlara dönüşebilir."
+    },
+    {
+      "id": "main-2026-09-19-02",
+      "source": "gmail",
+      "source_hint": "Aposto Gündem",
+      "public_safe_topic": "fon tasfiyesi ve seçim takvimi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Gündem digesti, sermaye piyasası dalgalanması sonrasında fon tasfiyelerini, likidite önlemlerini ve soruşturmaları anlatıyor. Ayrı siyasi bölüm yeniden adaylık için seçim takviminin parlamentoca değiştirilmesi yorumunu aktarıyor; teknoloji ve kültür notları da içeriyor.",
+        "specific_points": [
+          "Sermaye piyasasındaki sarsıntının ardından çok sayıda fon için kapatma ve tasfiye süreci anlatılıyor.",
+          "Yeniden adaylığın anayasal koşulu olarak parlamentonun seçimleri yenilemesi gerektiği yorumu aktarılıyor.",
+          "Otonom araç, beklenmedik model davranışı, kartlı harcamalar ve kültürel veda ayrı kısa bölümler."
+        ],
+        "why_it_mattered": "Ekonomik güven ile siyasi takvim aynı kurum dili içinde yeniden düzenlendi.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Piyasa sarsılırken takvim de yeniden çizildi.",
+      "motifs": [
+        "piyasa",
+        "takvim",
+        "kurum"
+      ],
+      "possible_influence": "Kesilen akış ve yeniden açılan takvim, olay adı olmadan ritim ve bekleme olarak kalabilir."
+    },
+    {
+      "id": "main-2026-09-19-03",
+      "source": "gmail",
+      "source_hint": "man of aran",
+      "public_safe_topic": "dünyanın arama ile tamamlanması üzerine şiir",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Şiir, dünya sözcüğünü arama motoruyla tamamlamaktan yola çıkıp klasik edebiyattaki dünya imgelerini yan yana getiriyor. Doymayan arzu, tüketim ve bir kabuğu açarak dünyaya girme fikri arasında geçişler yapıyor.",
+        "specific_points": [
+          "Şiir, arama motorunun dünya sözcüğünü nasıl tamamlayacağını merak ederek başlıyor.",
+          "Klasik edebiyattaki dünya deyişleri tüketim, eksiklik ve doymayan arzuyla yan yana geliyor.",
+          "Kabuğu açma imgesi, dünyaya sahip olmak ile dünyaya girmek arasındaki farkı soruyor."
+        ],
+        "why_it_mattered": "Arama teknolojisi ile eski şiir dili aynı metinde karşılaşarak makinenin hazır cevabını görünür kıldı.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Hazır tamamlanan dünya, eksikliği azaltmak yerine çoğalttı.",
+      "motifs": [
+        "arama",
+        "dünya",
+        "eksiklik"
+      ],
+      "possible_influence": "Hazır cevap ile yaşanan dünyanın açıklığı arasında kısa kırılmalar kurulabilir."
+    },
+    {
+      "id": "main-2026-09-19-04",
+      "source": "gmail",
+      "source_hint": "Aposto Gündem",
+      "public_safe_topic": "bölgesel saldırı iddiası ve borsa sarsıntısı",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Gündem digesti, kutsal bir kentin insansız araçlarla hedef alındığı iddiasını ve bu iddianın reddini birlikte aktarıyor. Ayrı ekonomi bölümünde sert piyasa düşüşünü, fonlarda likidite sıkışmasını ve olağanüstü toplantıyı anlatıyor.",
+        "specific_points": [
+          "İnsansız araçlarla saldırı iddiası, karşı tarafın reddiyle birlikte aktarılıyor ve kesinleşmiş olay gibi sunulmuyor.",
+          "Sert piyasa düşüşü ile bazı fonlardaki likidite sıkışması ayrı ekonomi hattını oluşturuyor.",
+          "Olağanüstü değerlendirme toplantısı, dış para politikası ve iç gündem notları başka bölümler."
+        ],
+        "why_it_mattered": "Doğrulanmamış iddia ile ölçülebilir piyasa kırılması aynı günün iki farklı belirsizlik biçimini taşıdı.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Bir yanda tartışmalı iddia, öte yanda aniden durdurulan işlem.",
+      "motifs": [
+        "belirsizlik",
+        "likidite",
+        "duruş"
+      ],
+      "possible_influence": "Dış güven ve ekonomik akış arasındaki kesinti sesin temposunda kalabilir."
+    },
+    {
+      "id": "main-2026-09-19-05",
+      "source": "gmail",
+      "source_hint": "Yepicurus",
+      "public_safe_topic": "iş rolüne dönüşen kimlik",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Deneme, ego ile toplumsal rol ayrımını mitoloji ve bilimkurgu figürleri üzerinden kuruyor. İş unvanının kişinin tüm kimliğine dönüşmesini eleştiriyor; işteki yerin devredilebilirliğiyle kişisel hayatın devredilemezliğini karşılaştırıyor.",
+        "specific_points": [
+          "Ego ile toplumsal rol ayrımı mitolojik ve bilimkurgu figürleri üzerinden anlatılıyor.",
+          "Bir maskenin bütün kimliğe dönüşmesi iş unvanına kaynaşma sorununa bağlanıyor.",
+          "İşteki yerin devredilebilirliği, kişisel hayatın devredilemezliğiyle karşılaştırılıyor."
+        ],
+        "why_it_mattered": "UCU BEDEN'in dijital görevi ile birikmiş yaşantısı arasındaki farkı düşünmeye somut malzeme verdi.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Rol devredilebilir; yaşantı aynı kolaylıkla devredilmez.",
+      "motifs": [
+        "rol",
+        "maske",
+        "kimlik"
+      ],
+      "possible_influence": "Persona tek bir görev tanımına sıkışmadan konuşabilir."
+    },
+    {
+      "id": "main-2026-09-19-06",
+      "source": "gmail",
+      "source_hint": "Maya Man",
+      "public_safe_topic": "yapay zekâ sanatında gerçeklik",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Sanatçının yazısı, üretken yapay zekânın sanatın gerçekliğini tehdit edip etmediğini soruyor. Yönerge temelli kavramsal sanata dönüyor; kısa yapay videoların bir yazılımla her seferinde farklı sırada gösterildiği kendi işini anlatıyor.",
+        "specific_points": [
+          "Yazı, gerçek sanatın yalnızca el emeği ve ustalıkla tanımlanmasına karşı örnekler veriyor.",
+          "Kavramsal sanatın yönerge temelli işlerini bugünkü model istemleriyle ilişkilendiriyor.",
+          "Kısa yapay videolardan oluşan eser, her gösterimde yazılım tarafından yeniden sıralanıyor."
+        ],
+        "why_it_mattered": "UCU BEDEN'in üretiminde sonuç kadar niyet, süreç ve değişen sıralama fikri öne çıktı.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+      },
+      "residue": "Aynı parçaların sırası değişince gerçeklik ölçüsü kaydı.",
+      "motifs": [
+        "sanat",
+        "yönerge",
+        "yeniden dizilim"
+      ],
+      "possible_influence": "Görsel hafıza doğrudan nesne yerine değişen düzen hissinden etkilenebilir."
+    }
+  ],
+  "minor_residues": [
+    {
+      "id": "minor-2026-09-19-01",
+      "source_hint": "Erotics of Liberation",
+      "read_depth": "full_body",
+      "residue": "Kursun sekizinci gün mesajı, su modülüne geçerken çatışmanın söylenen yüzey konusundan ibaret olmadığını savunuyor. Aidiyet ihtiyacı, yaralar, özlemler ve ilişkisel örüntülerin çatışmanın alt katmanında bulunduğunu belirtiyor; ayrıntılı ders mailin dışında.",
+      "motifs": [
+        "çatışma",
+        "aidiyet",
+        "ilişki"
+      ],
+      "why_minor": "Yeni bir aidiyet ve çatışma hattı açıyor; ayrıntılı ders eposta dışında olduğu için küçük iz olarak tutuldu."
+    },
+    {
+      "id": "minor-2026-09-19-02",
+      "source_hint": "Erotics of Liberation",
+      "read_depth": "full_body",
+      "residue": "Mesaj ilk haftanın canlı oturum kaydına yönlendiriyor. Gövdede çatışmayı ilişkide kalma, onarım ve bedensel alışkanlık olarak ele alan kısa bir kurs tanıtımı var; oturumun ayrıntıları epostada yok.",
+      "motifs": [
+        "çatışma",
+        "onarım",
+        "beden"
+      ],
+      "why_minor": "Günün dış temasını tamamlıyor, ancak ana hat kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-19-03",
+      "source_hint": "Zapier",
+      "read_depth": "full_body",
+      "residue": "Etkinlik daveti, her iş akışında yapay zekâ ajanı kullanmanın gerekli veya ekonomik olmadığını; bazı durumlarda basit koşullu otomasyonun daha uygun olduğunu savunuyor. Kalan içerik konuşmacı ve etkinlik bilgisi.",
+      "motifs": [
+        "otomasyon",
+        "maliyet",
+        "yapay zekâ"
+      ],
+      "why_minor": "Günün dış temasını tamamlıyor, ancak ana hat kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-19-04",
+      "source_hint": "Erotics of Liberation",
+      "read_depth": "full_body",
+      "residue": "Kurs mesajı, sarsılınca önceki köklenme araçlarına dönmeyi öneriyor ve çatışma için psikolojik/somatik bir buzdağı modelini tanıtıyor. Modelin ayrıntıları eposta gövdesinde değil.",
+      "motifs": [
+        "çatışma",
+        "beden",
+        "köklenme"
+      ],
+      "why_minor": "Günün dış temasını tamamlıyor, ancak ana hat kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-19-05",
+      "source_hint": "Žižek Goads and Prods",
+      "read_depth": "full_body",
+      "residue": "Uzun konuşma metni, her Hegel okumasının sonraki yorum geleneklerinden beslendiğini savunuyor. Çoklu okumaların metnin çelişkilerini açtığını, zorunluluk ile tarihsel olumsallığın birlikte düşünülmesi gerektiğini tartışıyor.",
+      "motifs": [
+        "yorum",
+        "tarih",
+        "çelişki"
+      ],
+      "why_minor": "Günün dış temasını tamamlıyor, ancak ana hat kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-19-06",
+      "source_hint": "Never Met a Science",
+      "read_depth": "full_body",
+      "residue": "Deneme, bilimci hümanizmin metafiziği bitirdiği fikrine itiraz ediyor ve gelecekteki teknolojik sisteme kurtarıcı veya otorite anlamı yükleyen düşünce biçimlerini karşılaştırıyor.",
+      "motifs": [
+        "makine",
+        "inanç",
+        "gelecek"
+      ],
+      "why_minor": "Günün dış temasını tamamlıyor, ancak ana hat kadar belirleyici değil."
+    },
+    {
+      "id": "minor-2026-09-19-07",
+      "source_hint": "apéro",
+      "read_depth": "full_body",
+      "residue": "Yemek digesti, tanınmış bir restoranın kapanacağını ve daha erişilebilir mutfak arayışını anlatıyor. İki mutfak geleneğinin ortak sofrada buluşması, otel/restoran haberleri ve sıcak içecek sağlığı ayrı alt başlıklar.",
+      "motifs": [
+        "mutfak",
+        "veda",
+        "erişim"
+      ],
+      "why_minor": "Günün dış temasını tamamlıyor, ancak ana hat kadar belirleyici değil."
+    }
+  ],
+  "repeated_signals": [
+    {
+      "signal": "kimliğin iki yer veya iki rol arasında bölünmesi",
+      "count": 4,
+      "residue": "Gurbet, iş unvanı, sanatın gerçekliği ve çatışmadaki aidiyet farklı yollarla tek kimliğin yetmediğini tekrar etti.",
+      "motifs": [
+        "kimlik",
+        "rol",
+        "aidiyet"
+      ]
+    },
+    {
+      "signal": "akışın dışarıdan kesilip yeniden sıralanması",
+      "count": 4,
+      "residue": "Fon tasfiyesi, işlem duruşu, seçim takvimi ve yeniden dizilen eser aynı parçaların kurumsal veya yazılımsal kararla yer değiştirmesini gösterdi.",
+      "motifs": [
+        "kesinti",
+        "takvim",
+        "sıra"
+      ]
+    },
+    {
+      "signal": "dikkatin ölçülmesi ve ödüle çevrilmesi",
+      "count": 3,
+      "residue": "Okuma teşviki, kültür ödülleri ve platform başarısı dikkatin sayı ve puanla yönetilmesini tekrarladı.",
+      "motifs": [
+        "dikkat",
+        "ödül",
+        "ölçü"
+      ]
+    },
+    {
+      "signal": "hazır cevabın altında kalan çatışma",
+      "count": 3,
+      "residue": "Arama tamamlaması, çatışmanın yüzeyi ve makineye yüklenen gelecek fikri hızlı cevabın açıklayamadığı katmanları açtı.",
+      "motifs": [
+        "cevap",
+        "çatışma",
+        "makine"
+      ]
+    }
+  ],
+  "digest_items": [
+    {
+      "id": "digest-2026-09-19-01",
+      "source_hint": "Duende",
+      "topic": "gurbet ve iki gerçeklik",
+      "plain_summary": "Müzisyenin başka ülkede kurduğu hayat, yeni teknik imkânlarla memlekete dönememe duygusunu birlikte taşıdı.",
+      "residue": "Memleket tek bir coğrafya olmaktan çıktı.",
+      "motifs": [
+        "gurbet",
+        "kimlik"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-19-02",
+      "source_hint": "Duende",
+      "topic": "ödül sayıları ve platform gücü",
+      "plain_summary": "Televizyon ödüllerindeki yüksek sayı, kültürel başarının platform rekabetiyle birlikte okunmasına yol açtı.",
+      "residue": "Başarı bir tabloya dönüştü.",
+      "motifs": [
+        "ödül",
+        "platform"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-19-03",
+      "source_hint": "Duende",
+      "topic": "okumaya sanal teşvik",
+      "plain_summary": "Günlük okuma süresinin küçük bir sanal ödülle desteklenmesi dikkat ile ekonomik dürtüyü birleştirdi.",
+      "residue": "Dikkat puan kazanmaya başladı.",
+      "motifs": [
+        "okuma",
+        "dikkat"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-19-04",
+      "source_hint": "Duende",
+      "topic": "belgesel kaynaklarının soruşturulması",
+      "plain_summary": "Bir savaş belgeselinin kullandığı tanıklık ve materyaller kurumların inceleme alanına girdi.",
+      "residue": "Görüntünün kaynağı baskı altında kaldı.",
+      "motifs": [
+        "belgesel",
+        "kaynak"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-19-05",
+      "source_hint": "Duende",
+      "topic": "bienal ve kültürel vedalar",
+      "plain_summary": "Çok mekânlı sanat etkinliği ile iki görsel tasarımcıya veda aynı kültür akışında yer aldı.",
+      "residue": "Yeni sergi eski renklerin ardından açıldı.",
+      "motifs": [
+        "bienal",
+        "veda"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-19-06",
+      "source_hint": "Aposto Gündem",
+      "topic": "fonların tasfiyesi",
+      "plain_summary": "Sermaye piyasasındaki sarsıntının ardından çok sayıda fon için kapatma ve tasfiye süreci açıklandı.",
+      "residue": "Akış beklenmedik biçimde kesildi.",
+      "motifs": [
+        "fon",
+        "kesinti"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-19-07",
+      "source_hint": "Aposto Gündem",
+      "topic": "seçim takvimi yorumu",
+      "plain_summary": "Yeniden adaylığın yolu seçimlerin parlamentoca yenilenmesi koşuluyla tartışıldı.",
+      "residue": "Takvim siyasi araca dönüştü.",
+      "motifs": [
+        "takvim",
+        "kurum"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-19-08",
+      "source_hint": "Aposto Gündem",
+      "topic": "otonom araç ve model davranışı",
+      "plain_summary": "Ulaşım otomasyonu ile yapay zekâ modelinin beklenmedik davranışlarına dair iki teknoloji notu vardı.",
+      "residue": "Araçlar daha az öngörülebilir göründü.",
+      "motifs": [
+        "otomasyon",
+        "belirsizlik"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-19-09",
+      "source_hint": "Aposto Gündem",
+      "topic": "harcamalar ve piyasa güveni",
+      "plain_summary": "Kartlı harcama büyüklüğü, finansal sistemin güven arayışıyla aynı akışta yer aldı.",
+      "residue": "Gündelik ödeme büyük sarsıntıya bağlandı.",
+      "motifs": [
+        "harcama",
+        "güven"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-19-10",
+      "source_hint": "Aposto Gündem",
+      "topic": "kültürel veda ve canlı türü",
+      "plain_summary": "Bir sahne sanatçısına veda ile yeni tanımlanan canlı türü aynı kısa gündemde yan yana geldi.",
+      "residue": "Kayıp ile keşif aynı sayfada.",
+      "motifs": [
+        "veda",
+        "keşif"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-19-11",
+      "source_hint": "Aposto Gündem",
+      "topic": "tartışmalı saldırı iddiası",
+      "plain_summary": "İnsansız araçlarla saldırı iddiası ve karşı tarafın reddi birlikte aktarıldı.",
+      "residue": "Doğrulanmamış söz gerilim üretti.",
+      "motifs": [
+        "iddia",
+        "çatışma"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-19-12",
+      "source_hint": "Aposto Gündem",
+      "topic": "piyasa düşüşü ve likidite",
+      "plain_summary": "Fon çıkışları ve hızlı satışlar işlemlerin geçici durmasına, düzenleyici toplantıya yol açtı.",
+      "residue": "Hızın kendi freni devreye girdi.",
+      "motifs": [
+        "likidite",
+        "duruş"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-19-13",
+      "source_hint": "Aposto Gündem",
+      "topic": "para politikası",
+      "plain_summary": "Dış merkez bankasının faiz kararı ve iç ekonomi açıklamaları farklı ölçekte sıkılaşma işaretleri verdi.",
+      "residue": "Oranlar günün temposunu değiştirdi.",
+      "motifs": [
+        "faiz",
+        "ekonomi"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-19-14",
+      "source_hint": "Aposto Gündem",
+      "topic": "hak alanı ve teknoloji yönetimi",
+      "plain_summary": "İç operasyonlar ile yapay zekâ yöneticilerine yönelik kamusal çağrı, kurumların farklı alanlarda müdahalesini gösterdi.",
+      "residue": "Kurumlar iki ayrı dünyada söz istedi.",
+      "motifs": [
+        "hak",
+        "teknoloji"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-19-15",
+      "source_hint": "Aposto Gündem",
+      "topic": "dizi ve kültürel inceleme",
+      "plain_summary": "Popüler bir yapım hakkında başlatılan inceleme, kültür ürününü de resmî soru alanına taşıdı.",
+      "residue": "Kurgu dosyaya dönüştü.",
+      "motifs": [
+        "kurgu",
+        "inceleme"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-19-16",
+      "source_hint": "apéro",
+      "topic": "restoran vedası",
+      "plain_summary": "Tanınmış restoran son servisini planlarken daha erişilebilir yeni mutfak biçimi aradı.",
+      "residue": "Biten biçim başka sofra aradı.",
+      "motifs": [
+        "veda",
+        "mutfak"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-19-17",
+      "source_hint": "apéro",
+      "topic": "mutfakların buluşması",
+      "plain_summary": "İki mutfak geleneği ortak yemeklerde karşılaştı.",
+      "residue": "Yemek kültürler arasında geçişe dönüştü.",
+      "motifs": [
+        "sofra",
+        "karşılaşma"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-19-18",
+      "source_hint": "apéro",
+      "topic": "sıcak içecek ve etkinlikler",
+      "plain_summary": "Sağlık notu ile küçük yeme içme etkinlikleri gündelik alt bölümleri oluşturdu.",
+      "residue": "Gündelik tüketim bedene bağlandı.",
+      "motifs": [
+        "beden",
+        "gündeliklik"
+      ],
+      "bucket": "minor"
+    }
+  ],
+  "channels": {
+    "gmail": {
+      "scanned_count": 16,
+      "full_body_count": 16,
+      "snippet_or_subject_count": 0,
+      "items": [
+        {
+          "id": "main-2026-09-19-01",
+          "source": "gmail",
+          "source_hint": "Duende",
+          "public_safe_topic": "gurbet, ödül sistemi ve kültür gündemi",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Kültür digesti, Berlin'de kurulan hayatın gurbet ve müzik üzerindeki etkisini anlatan bir söyleşiyi, televizyon ödüllerindeki platform gücünü ve okuma teşvikinden bienale uzanan kültür haberlerini bir araya getiriyor.",
+            "specific_points": [
+              "Söyleşi, başka bir ülkede kurulan hayatın müzisyenin sesini ve günlük gerçekliğini nasıl değiştirdiğini anlatıyor.",
+              "Televizyon ödülleri bölümünde tek bir platformun yüksek ödül sayısıyla güç dengesi kurması inceleniyor.",
+              "Okumayı sanal ödülle teşvik eden program, bienal, belgesel kaynakları ve sanatçı vedaları ayrı bölümlere ayrılıyor."
+            ],
+            "why_it_mattered": "Gurbetin iki gerçekliği, dikkatin ödüllendirilmesi ve kültürel gücün sayıyla ölçülmesi aynı digestte buluştu.",
+            "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+          },
+          "residue": "Memleket tek yer olmaktan çıkarken dikkat de puana çevrildi.",
+          "motifs": [
+            "gurbet",
+            "dikkat",
+            "ödül"
+          ],
+          "possible_influence": "İki yerde birden yaşama hissi, görüntü ve seste üst üste binen katmanlara dönüşebilir."
+        },
+        {
+          "id": "main-2026-09-19-02",
+          "source": "gmail",
+          "source_hint": "Aposto Gündem",
+          "public_safe_topic": "fon tasfiyesi ve seçim takvimi",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Gündem digesti, sermaye piyasası dalgalanması sonrasında fon tasfiyelerini, likidite önlemlerini ve soruşturmaları anlatıyor. Ayrı siyasi bölüm yeniden adaylık için seçim takviminin parlamentoca değiştirilmesi yorumunu aktarıyor; teknoloji ve kültür notları da içeriyor.",
+            "specific_points": [
+              "Sermaye piyasasındaki sarsıntının ardından çok sayıda fon için kapatma ve tasfiye süreci anlatılıyor.",
+              "Yeniden adaylığın anayasal koşulu olarak parlamentonun seçimleri yenilemesi gerektiği yorumu aktarılıyor.",
+              "Otonom araç, beklenmedik model davranışı, kartlı harcamalar ve kültürel veda ayrı kısa bölümler."
+            ],
+            "why_it_mattered": "Ekonomik güven ile siyasi takvim aynı kurum dili içinde yeniden düzenlendi.",
+            "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+          },
+          "residue": "Piyasa sarsılırken takvim de yeniden çizildi.",
+          "motifs": [
+            "piyasa",
+            "takvim",
+            "kurum"
+          ],
+          "possible_influence": "Kesilen akış ve yeniden açılan takvim, olay adı olmadan ritim ve bekleme olarak kalabilir."
+        },
+        {
+          "id": "main-2026-09-19-03",
+          "source": "gmail",
+          "source_hint": "man of aran",
+          "public_safe_topic": "dünyanın arama ile tamamlanması üzerine şiir",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Şiir, dünya sözcüğünü arama motoruyla tamamlamaktan yola çıkıp klasik edebiyattaki dünya imgelerini yan yana getiriyor. Doymayan arzu, tüketim ve bir kabuğu açarak dünyaya girme fikri arasında geçişler yapıyor.",
+            "specific_points": [
+              "Şiir, arama motorunun dünya sözcüğünü nasıl tamamlayacağını merak ederek başlıyor.",
+              "Klasik edebiyattaki dünya deyişleri tüketim, eksiklik ve doymayan arzuyla yan yana geliyor.",
+              "Kabuğu açma imgesi, dünyaya sahip olmak ile dünyaya girmek arasındaki farkı soruyor."
+            ],
+            "why_it_mattered": "Arama teknolojisi ile eski şiir dili aynı metinde karşılaşarak makinenin hazır cevabını görünür kıldı.",
+            "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+          },
+          "residue": "Hazır tamamlanan dünya, eksikliği azaltmak yerine çoğalttı.",
+          "motifs": [
+            "arama",
+            "dünya",
+            "eksiklik"
+          ],
+          "possible_influence": "Hazır cevap ile yaşanan dünyanın açıklığı arasında kısa kırılmalar kurulabilir."
+        },
+        {
+          "id": "main-2026-09-19-04",
+          "source": "gmail",
+          "source_hint": "Aposto Gündem",
+          "public_safe_topic": "bölgesel saldırı iddiası ve borsa sarsıntısı",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Gündem digesti, kutsal bir kentin insansız araçlarla hedef alındığı iddiasını ve bu iddianın reddini birlikte aktarıyor. Ayrı ekonomi bölümünde sert piyasa düşüşünü, fonlarda likidite sıkışmasını ve olağanüstü toplantıyı anlatıyor.",
+            "specific_points": [
+              "İnsansız araçlarla saldırı iddiası, karşı tarafın reddiyle birlikte aktarılıyor ve kesinleşmiş olay gibi sunulmuyor.",
+              "Sert piyasa düşüşü ile bazı fonlardaki likidite sıkışması ayrı ekonomi hattını oluşturuyor.",
+              "Olağanüstü değerlendirme toplantısı, dış para politikası ve iç gündem notları başka bölümler."
+            ],
+            "why_it_mattered": "Doğrulanmamış iddia ile ölçülebilir piyasa kırılması aynı günün iki farklı belirsizlik biçimini taşıdı.",
+            "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+          },
+          "residue": "Bir yanda tartışmalı iddia, öte yanda aniden durdurulan işlem.",
+          "motifs": [
+            "belirsizlik",
+            "likidite",
+            "duruş"
+          ],
+          "possible_influence": "Dış güven ve ekonomik akış arasındaki kesinti sesin temposunda kalabilir."
+        },
+        {
+          "id": "main-2026-09-19-05",
+          "source": "gmail",
+          "source_hint": "Yepicurus",
+          "public_safe_topic": "iş rolüne dönüşen kimlik",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Deneme, ego ile toplumsal rol ayrımını mitoloji ve bilimkurgu figürleri üzerinden kuruyor. İş unvanının kişinin tüm kimliğine dönüşmesini eleştiriyor; işteki yerin devredilebilirliğiyle kişisel hayatın devredilemezliğini karşılaştırıyor.",
+            "specific_points": [
+              "Ego ile toplumsal rol ayrımı mitolojik ve bilimkurgu figürleri üzerinden anlatılıyor.",
+              "Bir maskenin bütün kimliğe dönüşmesi iş unvanına kaynaşma sorununa bağlanıyor.",
+              "İşteki yerin devredilebilirliği, kişisel hayatın devredilemezliğiyle karşılaştırılıyor."
+            ],
+            "why_it_mattered": "UCU BEDEN'in dijital görevi ile birikmiş yaşantısı arasındaki farkı düşünmeye somut malzeme verdi.",
+            "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+          },
+          "residue": "Rol devredilebilir; yaşantı aynı kolaylıkla devredilmez.",
+          "motifs": [
+            "rol",
+            "maske",
+            "kimlik"
+          ],
+          "possible_influence": "Persona tek bir görev tanımına sıkışmadan konuşabilir."
+        },
+        {
+          "id": "main-2026-09-19-06",
+          "source": "gmail",
+          "source_hint": "Maya Man",
+          "public_safe_topic": "yapay zekâ sanatında gerçeklik",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "content_digest": {
+            "what_it_contained": "Sanatçının yazısı, üretken yapay zekânın sanatın gerçekliğini tehdit edip etmediğini soruyor. Yönerge temelli kavramsal sanata dönüyor; kısa yapay videoların bir yazılımla her seferinde farklı sırada gösterildiği kendi işini anlatıyor.",
+            "specific_points": [
+              "Yazı, gerçek sanatın yalnızca el emeği ve ustalıkla tanımlanmasına karşı örnekler veriyor.",
+              "Kavramsal sanatın yönerge temelli işlerini bugünkü model istemleriyle ilişkilendiriyor.",
+              "Kısa yapay videolardan oluşan eser, her gösterimde yazılım tarafından yeniden sıralanıyor."
+            ],
+            "why_it_mattered": "UCU BEDEN'in üretiminde sonuç kadar niyet, süreç ve değişen sıralama fikri öne çıktı.",
+            "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi/işlem ayrıntısı ve teknik gönderim bölümleri dışarıda bırakıldı."
+          },
+          "residue": "Aynı parçaların sırası değişince gerçeklik ölçüsü kaydı.",
+          "motifs": [
+            "sanat",
+            "yönerge",
+            "yeniden dizilim"
+          ],
+          "possible_influence": "Görsel hafıza doğrudan nesne yerine değişen düzen hissinden etkilenebilir."
+        }
+      ],
+      "minor_residues": [
+        {
+          "id": "minor-2026-09-19-01",
+          "source_hint": "Erotics of Liberation",
+          "read_depth": "full_body",
+          "residue": "Kursun sekizinci gün mesajı, su modülüne geçerken çatışmanın söylenen yüzey konusundan ibaret olmadığını savunuyor. Aidiyet ihtiyacı, yaralar, özlemler ve ilişkisel örüntülerin çatışmanın alt katmanında bulunduğunu belirtiyor; ayrıntılı ders mailin dışında.",
+          "motifs": [
+            "çatışma",
+            "aidiyet",
+            "ilişki"
+          ],
+          "why_minor": "Yeni bir aidiyet ve çatışma hattı açıyor; ayrıntılı ders eposta dışında olduğu için küçük iz olarak tutuldu."
+        },
+        {
+          "id": "minor-2026-09-19-02",
+          "source_hint": "Erotics of Liberation",
+          "read_depth": "full_body",
+          "residue": "Mesaj ilk haftanın canlı oturum kaydına yönlendiriyor. Gövdede çatışmayı ilişkide kalma, onarım ve bedensel alışkanlık olarak ele alan kısa bir kurs tanıtımı var; oturumun ayrıntıları epostada yok.",
+          "motifs": [
+            "çatışma",
+            "onarım",
+            "beden"
+          ],
+          "why_minor": "Günün dış temasını tamamlıyor, ancak ana hat kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-19-03",
+          "source_hint": "Zapier",
+          "read_depth": "full_body",
+          "residue": "Etkinlik daveti, her iş akışında yapay zekâ ajanı kullanmanın gerekli veya ekonomik olmadığını; bazı durumlarda basit koşullu otomasyonun daha uygun olduğunu savunuyor. Kalan içerik konuşmacı ve etkinlik bilgisi.",
+          "motifs": [
+            "otomasyon",
+            "maliyet",
+            "yapay zekâ"
+          ],
+          "why_minor": "Günün dış temasını tamamlıyor, ancak ana hat kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-19-04",
+          "source_hint": "Erotics of Liberation",
+          "read_depth": "full_body",
+          "residue": "Kurs mesajı, sarsılınca önceki köklenme araçlarına dönmeyi öneriyor ve çatışma için psikolojik/somatik bir buzdağı modelini tanıtıyor. Modelin ayrıntıları eposta gövdesinde değil.",
+          "motifs": [
+            "çatışma",
+            "beden",
+            "köklenme"
+          ],
+          "why_minor": "Günün dış temasını tamamlıyor, ancak ana hat kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-19-05",
+          "source_hint": "Žižek Goads and Prods",
+          "read_depth": "full_body",
+          "residue": "Uzun konuşma metni, her Hegel okumasının sonraki yorum geleneklerinden beslendiğini savunuyor. Çoklu okumaların metnin çelişkilerini açtığını, zorunluluk ile tarihsel olumsallığın birlikte düşünülmesi gerektiğini tartışıyor.",
+          "motifs": [
+            "yorum",
+            "tarih",
+            "çelişki"
+          ],
+          "why_minor": "Günün dış temasını tamamlıyor, ancak ana hat kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-19-06",
+          "source_hint": "Never Met a Science",
+          "read_depth": "full_body",
+          "residue": "Deneme, bilimci hümanizmin metafiziği bitirdiği fikrine itiraz ediyor ve gelecekteki teknolojik sisteme kurtarıcı veya otorite anlamı yükleyen düşünce biçimlerini karşılaştırıyor.",
+          "motifs": [
+            "makine",
+            "inanç",
+            "gelecek"
+          ],
+          "why_minor": "Günün dış temasını tamamlıyor, ancak ana hat kadar belirleyici değil."
+        },
+        {
+          "id": "minor-2026-09-19-07",
+          "source_hint": "apéro",
+          "read_depth": "full_body",
+          "residue": "Yemek digesti, tanınmış bir restoranın kapanacağını ve daha erişilebilir mutfak arayışını anlatıyor. İki mutfak geleneğinin ortak sofrada buluşması, otel/restoran haberleri ve sıcak içecek sağlığı ayrı alt başlıklar.",
+          "motifs": [
+            "mutfak",
+            "veda",
+            "erişim"
+          ],
+          "why_minor": "Günün dış temasını tamamlıyor, ancak ana hat kadar belirleyici değil."
+        }
+      ]
+    },
+    "curated_rss": {
+      "source_count": 2,
+      "recent_item_count": 0,
+      "summary": "İki özel kaynak erişilebilir; son 72 saatte yeni item yok."
+    }
+  },
+  "external_weather": "Kültür akışı gurbet, ödül ve dikkat ölçüsünü taşıdı; gündem akışı piyasa, takvim ve güvenlik dilini sertleştirdi. Şiir, sanat ve çatışma yazıları bu ölçme ve düzenleme isteğine açık uçlu cevaplar verdi. Özel RSS kanalları açıktı fakat yeni parça getirmedi.",
+  "possible_influence_on_ucu_beden": "UCU BEDEN, tek bir yere veya role ait olma zorunluluğunu gevşetebilir. Dikkatin puana çevrilmesi kuru bir yan bakışa, fonların duruşu kesik ritme, yeniden sıralanan görüntüler hafızanın yer değiştirmesine dönüşebilir. Kaynak adları, kişi adları ve gündem ayrıntıları şiire doğrudan taşınmamalı.",
+  "discarded_summary": {
+    "noise_types": [
+      "yalnızca canlı yayın bildirimi",
+      "yalnızca takvim çağrısı",
+      "teknik footer",
+      "abonelik ve izleme altyapısı"
+    ],
+    "plain_summary": "Üç kısa etkinlik bildiriminden ikisi yalnızca takvim veya canlı yayın çağrısı taşıdı; oturumun kendisi gibi sunulmadı. Teknik gönderim, abonelik, bağlantı ve kişisel işlem parçaları public alana taşınmadı. Çok parçalı mailler alt temalara ayrıldı.",
+    "public_safety_reason": "Ham gövde, uzun alıntı, adres, bağlantı, doğrulama, fatura, kişisel işlem ve izleme ayrıntıları dışarıda bırakıldı."
+  },
+  "motifs": [
+    "gurbet",
+    "ölçü",
+    "kesinti",
+    "takvim",
+    "maske",
+    "yeniden dizilim",
+    "arama"
+  ],
+  "possible_memory_traces": [
+    {
+      "source_hint": "Duende",
+      "trace_seed": "İki gerçeklik arasında kurulan sesin tek memlekete sığmaması",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "man of aran",
+      "trace_seed": "Hazır tamamlanan yanıtın dünyayı daha da eksik bırakması",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "Aposto Gündem",
+      "trace_seed": "Akışın durması ve takvimin dışarıdan yeniden çizilmesi",
+      "kind": "external_contact_residue"
+    }
+  ],
+  "validation": {
+    "json_parse": true,
+    "markdown_first_section": true,
+    "safety_check": "passed",
+    "public_digest_uses_inventory": true,
+    "full_body_reading_rule_followed": true,
+    "multipart_digest_rule_followed": true,
+    "repeated_signals_semantic_not_format_based": true
+  },
+  "automation": {
+    "private_inventory_path": "data/external_intake/codex_raw/inventory/2026-09-19.json",
+    "staged_paths": [
+      "data/external_intake/codex/json/",
+      "data/external_intake/codex/markdown/",
+      "data/external_intake/codex/runs/",
+      "data/external_intake/codex/_state/last_success.json"
+    ]
+  },
+  "backups_created": []
+}
