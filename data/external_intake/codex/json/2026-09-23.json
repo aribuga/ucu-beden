@@ -1,0 +1,1321 @@
+{
+  "version": "codex_external_intake.v4",
+  "source": "codex_external_intake",
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T04:19:01.747Z",
+  "timezone": "Europe/Istanbul",
+  "provider": "codex",
+  "safety": {
+    "public_safe": true,
+    "raw_bodies_in_public_output": false,
+    "long_quotes_in_public_output": false,
+    "raw_urls_in_public_output": false,
+    "email_addresses_in_public_output": false,
+    "verification_or_personal_transaction_data_in_public_output": false,
+    "private_factual_layer_committed": false
+  },
+  "counts": {
+    "scanned_mail_count": 17,
+    "full_body_count": 17,
+    "snippet_or_subject_count": 0,
+    "multipart_digest_count": 7,
+    "curated_rss_source_count": 2,
+    "curated_rss_recent_item_count": 0,
+    "digest_items_count": 32,
+    "main_item_count": 6,
+    "minor_residue_count": 11,
+    "repeated_signal_count": 4
+  },
+  "reading_summary": {
+    "plain_summary": "Son 72 saatte 17 mailin tamamının gövdesi okundu. Bugünün en yeni gündem digesti, uluslararası kurumların temsil sorunu ile okul çevresindeki şiddeti ana hatta taşıdı; ekonomi ve teknoloji bölümlerinde otonom ajanların platformlara erişimi, kişisel öneri geçmişinin ayrıştırılması ve hızlanan donanım yarışı yer aldı. Şehir digesti ise caz, çağdaş sanat, fotoğraf, tiyatro ve sinemanın kısa bir dönemde üst üste bindiği kültür mevsimini; açılan arşivleri, ekolojik belgeselleri ve erişilebilir sergi turlarını anlattı.\n\nPencerenin önceki günlerinden bir oyun söyleşisi gecikmiş sonuç, piksel kaybı ve ses tasarımını; kültür digesti sanatta politik sessizlik ile galeri hafızasını; kişisel deneme geri sayım altında bakımı; mizah yazısı ise kahkahanın yükünü kimin taşıdığını öne çıkardı. Çatışma kursunun üç mesajı anlatı, ihtiyaç ve kök duygular arasında ilerledi. İki özel RSS kaynağı erişilebilir olsa da son 72 saatte yeni item vermedi.",
+    "what_was_in_the_emails": [
+      "Kurumlarda temsil, okul güvenliği, yapay zeka ajanları ve kişisel öneri profilleri hakkında çok parçalı gündem vardı.",
+      "Caz, çağdaş sanat, fotoğraf, arşiv, ekolojik belgesel ve erişilebilir sergi turu kentin kültür akışını oluşturdu.",
+      "Bir oyun mekaniği gecikmiş toplumsal ve ekolojik sonuçlarla, piksel estetiği ve ses tasarımıyla ilişkilendirildi.",
+      "Sanatta tarafsızlık, galeri hafızası, yaşam sonu bakımı, mizahın gücü ve reddedilme hassasiyeti ayrı metinlerde işlendi.",
+      "Çatışmanın duygu, anlatı ve ihtiyaç katmanlarını izleyen üç kısa kurs mesajı okundu."
+    ],
+    "what_was_in_curated_rss": [
+      "Grand Text Auto erişilebilir; son 72 saatte yeni item yok.",
+      "Mixed Initiatives erişilebilir; son 72 saatte yeni item yok."
+    ],
+    "dominant_topics": [
+      "temsil ve eşik",
+      "gecikmiş sonuç",
+      "arşiv ve erişim",
+      "görünmeyen yük",
+      "şehir ritmi"
+    ],
+    "notable_absences": [
+      "Özel RSS kaynaklarında yeni item yoktu.",
+      "Ayrı Reddit veya forum digesti bulunmadı.",
+      "Mail dışında kalan video ve ücretli devam bölümleri okunmuş gibi sunulmadı."
+    ],
+    "overall_direction": "Dış dünya UCU BEDEN'i kapıların kimin adına açıldığına, geciken sonucun bedende nasıl ağırlaştığına ve hafızanın hangi parçayı dolaşıma soktuğuna bakmaya itti."
+  },
+  "summary": "Kapılar çoğaldı; temsil, bakım ve hafıza kimin içeri alınacağını yeniden sordu.",
+  "items": [
+    {
+      "id": "main-2026-09-23-01",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "Aposto Gündem",
+      "public_safe_topic": "temsil açığı, okul güvenliği ve teknoloji sınırları",
+      "content_digest": {
+        "what_it_contained": "Çok parçalı gündem digesti, uluslararası kurumların temsil ve işleyiş sorununu okul önündeki silahlı saldırıyla aynı günün sert ana hattına yerleştirdi. Ekonomi bölümünde fon soruşturması ve tüketici güveni; teknoloji bölümünde yapay zeka ajanlarının platform erişimi, öneri profillerinin ayrıştırılması ve yeni donanım yarışı; dünya bölümünde askerî ve diplomatik gerilimler yer aldı.",
+        "specific_points": [
+          "Az sayıda karar vericinin geniş bir topluluğun iradesini sınırlaması kurum reformu tartışmasının merkezindeydi.",
+          "Okul çevresindeki saldırı, gündelik bir eşikte güvenliğin ne kadar hızlı çözülebildiğini gösterdi.",
+          "Bir alışveriş platformu, kendisini açıkça tanıtmayan otonom ajanı güvenlik gerekçesiyle engelledi.",
+          "Bir müzik hizmeti, çocuk içeriklerinin kişisel öneri geçmişini şekillendirmesini kullanıcı tercihine bağladı.",
+          "Kişisel ajanlar ve yeni çipler büyürken denetim, kimlik ve erişim soruları birlikte yükseldi."
+        ],
+        "why_it_mattered": "Temsil edilmeme, korunmayan eşik ve kendini tanıtmadan dolaşan sistem aynı gün içinde görünür oldu.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Kapılar büyüdü; kimin adına açıldıkları yine belirsiz kaldı.",
+      "motifs": [
+        "eşik",
+        "temsil",
+        "erişim",
+        "profil"
+      ],
+      "possible_influence": "Şiir ve hafıza, güncel özel adları taşımadan kapı, yetki ve temsil arasındaki gerilimi ritme çevirebilir."
+    },
+    {
+      "id": "main-2026-09-23-02",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "Aposto İstanbul",
+      "public_safe_topic": "kentin yoğun kültür mevsimi ve açılan arşivler",
+      "content_digest": {
+        "what_it_contained": "Şehir digesti, caz, çağdaş sanat, fotoğraf, tiyatro ve sinemanın kısa bir zaman aralığında üst üste bindiği sonbahar kültür takvimini anlattı. Büyük programların yanında arşiv açılması, ekolojik belgeseller, işaret diliyle sergi turu ve farklı disiplinleri bir araya getiren etkinlikler ayrı hatlar oluşturdu.",
+        "specific_points": [
+          "Caz programı farklı kuşakları, türleri, atölyeleri ve sahne biçimlerini iki haftalık bir akışta buluşturuyor.",
+          "Çağdaş sanat seçkisi odağını Asya'ya ve yeni sanat pratiklerine çeviriyor.",
+          "Kentin yoğun takvimi, etkinlikler arasında koşan ve bekleyen bedenleri ortak bir ritme sokuyor.",
+          "Yeni açılan arşiv, kitap, fotoğraf, belge ve afişleri kamusal erişime taşıyor.",
+          "Ekolojik belgesel ve işaret dili turu, kültüre erişimin yalnız görme biçiminden ibaret olmadığını gösteriyor."
+        ],
+        "why_it_mattered": "Şehir tek bir mekân olarak değil, arşiv, erişim ve birbirine değen disiplinlerden oluşan hareketli bir dikkat alanı hâline geldi.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Takvim sıkıştı; şehir koşarken arşiv kapısını açtı.",
+      "motifs": [
+        "şehir ritmi",
+        "arşiv",
+        "erişim",
+        "çakışma"
+      ],
+      "possible_influence": "Görsel ve şiirsel dil, somut mekân adları yerine üst üste binen ritim ve açılan kayıt hissinden etkilenebilir."
+    },
+    {
+      "id": "main-2026-09-23-03",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "Do Not Research",
+      "public_safe_topic": "oyunda bağışlanan zaman ve gecikmiş sonuç",
+      "content_digest": {
+        "what_it_contained": "Uzun sanatçı söyleşisi, bir platform oyununda kenardan ayrıldıktan sonra hâlâ kısa süre sıçramaya izin veren mekaniği bütün oyunun zaman ilkesine dönüştürüyor. Gecikmiş ekonomik ve ekolojik sonuçlar, eskiyen şehir, piksel estetiği, fotogerçekçilikten vazgeçiş, ses tasarımı ve küçük ekip üretimi birlikte tartışılıyor.",
+        "specific_points": [
+          "Oyundaki birkaç karelik bağışlanmış süre, bütün anlatının gecikme davranışına dönüşüyor.",
+          "Henüz tam hissedilmeyen toplumsal ve ekolojik sonuçlar düşüş ile çarpma arasındaki aralıkta düşünülüyor.",
+          "Yüksek çözünürlükten vazgeçilince ses, arayüz ve yazı daha fazla ağırlık taşıyor.",
+          "Geçmiş ve gelecek kent sürümleri tek bir gece boyunca birbirine karışıyor.",
+          "Görsel taslaklardan gelişen müzik, oyunun yazısını ve programlamasını geri besliyor."
+        ],
+        "why_it_mattered": "Kusur, gecikme ve düşük çözünürlük UCU BEDEN'in hafızası için dekor değil davranış modeli hâline geldi.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Düşüş başlamıştı; sonuç birkaç kare gecikti.",
+      "motifs": [
+        "gecikme",
+        "piksel",
+        "ses",
+        "kayıp"
+      ],
+      "possible_influence": "Rüya ve görsel dil, oyunu kopyalamadan gecikmiş sonuç ve kayıplı görüntü davranışını taşıyabilir."
+    },
+    {
+      "id": "main-2026-09-23-04",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "Duende",
+      "public_safe_topic": "müzikte tarafsızlık ve galeri hafızası",
+      "content_digest": {
+        "what_it_contained": "Kültür digesti, politik tutumu nedeniyle turne kadrosundan çıkarılan bir müzisyen çevresinde sanatçının tarafsız kalıp kalamayacağını tartıştı. Uzun ömürlü bir galeri, eser sayısından çok sanatçı ilişkileri ve şehrin değişen sanat ortamı üzerinden okundu. Erişilebilir sergi turu, arşiv, ödüller ve ölçülen dinlenme sayıları da ayrı bölümlerdi.",
+        "specific_points": [
+          "Bir sahne kararının yalnız müzik değil siyaset, seyirci ve organizatör gücüyle ilişkili olduğu gösterildi.",
+          "Galerinin geçmişi, yıllar içinde kurulan sanatçı ilişkilerinin görünmeyen emeği olarak anlatıldı.",
+          "Ödül ve dinlenme sayıları kültürel görünürlüğün ölçüsüne dönüştü.",
+          "İşaret diliyle sergi turu, esere erişimin biçimini değiştirdi.",
+          "Arşivden hareket eden yazı çalışması geçmiş malzemeyi yeni cümleye çevirdi."
+        ],
+        "why_it_mattered": "Sanatsal sesin politik koşulları ile kurum hafızasının görünmeyen emeği aynı akışta birleşti.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Sahne tarafsız görünmek istedi; arşiv ilişkileriyle konuştu.",
+      "motifs": [
+        "sahne",
+        "tarafsızlık",
+        "galeri",
+        "arşiv"
+      ],
+      "possible_influence": "Persona kendini açıklamadan konuşabilir, fakat konuşmanın kurumsal koşullarını görünmez saymayabilir."
+    },
+    {
+      "id": "main-2026-09-23-05",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "yaşam sonu üzerine kişisel deneme",
+      "public_safe_topic": "geri sayım altında bakım ve eşlik",
+      "content_digest": {
+        "what_it_contained": "Kişisel deneme, yaşamının sonunu belirli bir zamanda karşılamayı seçen bir kişiye birkaç gün eşlik edecek anlatıcının birlikte geçecek zamanı düşündüğünü anlatıyor. Kısa son işlemden çok önceki konuşmalar, öğrenme arzusu, aileye yük bindirmeme isteği ve refakatçinin sonrasında yalnız dönme ihtimali üzerinde duruluyor.",
+        "specific_points": [
+          "Belirlenmiş tarih yaklaştıkça her günün ve konuşmanın farklı hissedebileceği düşünülüyor.",
+          "Refakat edilen kişi kalan zamanda yeni şeyler öğrenmek ve yaşam hakkında konuşmak istiyor.",
+          "Bakım, başkasının isteğine uygun biçimde yanında kalma çabası olarak kuruluyor.",
+          "Aileyi koruma arzusu, duygusal yükün başka bir kişiye geçmesi sorusunu açıyor."
+        ],
+        "why_it_mattered": "Sınırlı zaman içinde dikkat, bakım ve belirsizliğin nasıl yoğunlaştığını somutlaştırdı.",
+        "what_was_not_included": "Kişinin kimliği ve hassas sağlık ayrıntıları ile Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Saat geri sayarken konuşma bitmek yerine ağırlaştı.",
+      "motifs": [
+        "bakım",
+        "zaman",
+        "eşlik",
+        "belirsizlik"
+      ],
+      "possible_influence": "Şiir ve hafıza olayı yüzeye taşımadan kalan zamanın değişen yoğunluğunu işleyebilir."
+    },
+    {
+      "id": "main-2026-09-23-06",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "Tendresse Radicale",
+      "public_safe_topic": "mizahın yükü ve yorum hakkı",
+      "content_digest": {
+        "what_it_contained": "Deneme, ayrımcı bir şaka karşısında ortam bozulmasın diye gülümseyen kişinin neşenin yükünü üstlendiğini savunuyor. İfade özgürlüğünün eleştiriden muafiyet talebine dönüştürülmesini sorguluyor; kimin kimin pahasına güldüğünü ve çevrimiçi kışkırtmanın hedefin acısını nasıl eğlenceye çevirdiğini inceliyor.",
+        "specific_points": [
+          "Ortamın hafif kalması, küçültülen kişinin rahatsızlığını saklamasına bağlanıyor.",
+          "İtiraz eden kişinin mizahsız ilan edilmesi, şakayı yapanın yorum hakkını tekelleştirmesi oluyor.",
+          "Konuşma özgürlüğü ile sözün nasıl karşılanacağını belirleme isteği birbirinden ayrılıyor.",
+          "Çevrimiçi kışkırtmada hedefin tepkisi yeni eğlence malzemesine çevrilebiliyor."
+        ],
+        "why_it_mattered": "UCU BEDEN'in sarkazmı için hedef seçme ve zararı hafif bir şaka gibi gizlememe ölçüsü verdi.",
+        "what_was_not_included": "Ayrımcı ifade örnekleri ile Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Kahkaha hafifti; ağırlığı sessiz kalan kişi taşıdı.",
+      "motifs": [
+        "mizah",
+        "güç",
+        "yorum",
+        "yük"
+      ],
+      "possible_influence": "Sarkazm kişiyi değil, yükü görünmez kılan düzeni hedefleyebilir."
+    }
+  ],
+  "main_items": [
+    {
+      "id": "main-2026-09-23-01",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "Aposto Gündem",
+      "public_safe_topic": "temsil açığı, okul güvenliği ve teknoloji sınırları",
+      "content_digest": {
+        "what_it_contained": "Çok parçalı gündem digesti, uluslararası kurumların temsil ve işleyiş sorununu okul önündeki silahlı saldırıyla aynı günün sert ana hattına yerleştirdi. Ekonomi bölümünde fon soruşturması ve tüketici güveni; teknoloji bölümünde yapay zeka ajanlarının platform erişimi, öneri profillerinin ayrıştırılması ve yeni donanım yarışı; dünya bölümünde askerî ve diplomatik gerilimler yer aldı.",
+        "specific_points": [
+          "Az sayıda karar vericinin geniş bir topluluğun iradesini sınırlaması kurum reformu tartışmasının merkezindeydi.",
+          "Okul çevresindeki saldırı, gündelik bir eşikte güvenliğin ne kadar hızlı çözülebildiğini gösterdi.",
+          "Bir alışveriş platformu, kendisini açıkça tanıtmayan otonom ajanı güvenlik gerekçesiyle engelledi.",
+          "Bir müzik hizmeti, çocuk içeriklerinin kişisel öneri geçmişini şekillendirmesini kullanıcı tercihine bağladı.",
+          "Kişisel ajanlar ve yeni çipler büyürken denetim, kimlik ve erişim soruları birlikte yükseldi."
+        ],
+        "why_it_mattered": "Temsil edilmeme, korunmayan eşik ve kendini tanıtmadan dolaşan sistem aynı gün içinde görünür oldu.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Kapılar büyüdü; kimin adına açıldıkları yine belirsiz kaldı.",
+      "motifs": [
+        "eşik",
+        "temsil",
+        "erişim",
+        "profil"
+      ],
+      "possible_influence": "Şiir ve hafıza, güncel özel adları taşımadan kapı, yetki ve temsil arasındaki gerilimi ritme çevirebilir."
+    },
+    {
+      "id": "main-2026-09-23-02",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "Aposto İstanbul",
+      "public_safe_topic": "kentin yoğun kültür mevsimi ve açılan arşivler",
+      "content_digest": {
+        "what_it_contained": "Şehir digesti, caz, çağdaş sanat, fotoğraf, tiyatro ve sinemanın kısa bir zaman aralığında üst üste bindiği sonbahar kültür takvimini anlattı. Büyük programların yanında arşiv açılması, ekolojik belgeseller, işaret diliyle sergi turu ve farklı disiplinleri bir araya getiren etkinlikler ayrı hatlar oluşturdu.",
+        "specific_points": [
+          "Caz programı farklı kuşakları, türleri, atölyeleri ve sahne biçimlerini iki haftalık bir akışta buluşturuyor.",
+          "Çağdaş sanat seçkisi odağını Asya'ya ve yeni sanat pratiklerine çeviriyor.",
+          "Kentin yoğun takvimi, etkinlikler arasında koşan ve bekleyen bedenleri ortak bir ritme sokuyor.",
+          "Yeni açılan arşiv, kitap, fotoğraf, belge ve afişleri kamusal erişime taşıyor.",
+          "Ekolojik belgesel ve işaret dili turu, kültüre erişimin yalnız görme biçiminden ibaret olmadığını gösteriyor."
+        ],
+        "why_it_mattered": "Şehir tek bir mekân olarak değil, arşiv, erişim ve birbirine değen disiplinlerden oluşan hareketli bir dikkat alanı hâline geldi.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Takvim sıkıştı; şehir koşarken arşiv kapısını açtı.",
+      "motifs": [
+        "şehir ritmi",
+        "arşiv",
+        "erişim",
+        "çakışma"
+      ],
+      "possible_influence": "Görsel ve şiirsel dil, somut mekân adları yerine üst üste binen ritim ve açılan kayıt hissinden etkilenebilir."
+    },
+    {
+      "id": "main-2026-09-23-03",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "Do Not Research",
+      "public_safe_topic": "oyunda bağışlanan zaman ve gecikmiş sonuç",
+      "content_digest": {
+        "what_it_contained": "Uzun sanatçı söyleşisi, bir platform oyununda kenardan ayrıldıktan sonra hâlâ kısa süre sıçramaya izin veren mekaniği bütün oyunun zaman ilkesine dönüştürüyor. Gecikmiş ekonomik ve ekolojik sonuçlar, eskiyen şehir, piksel estetiği, fotogerçekçilikten vazgeçiş, ses tasarımı ve küçük ekip üretimi birlikte tartışılıyor.",
+        "specific_points": [
+          "Oyundaki birkaç karelik bağışlanmış süre, bütün anlatının gecikme davranışına dönüşüyor.",
+          "Henüz tam hissedilmeyen toplumsal ve ekolojik sonuçlar düşüş ile çarpma arasındaki aralıkta düşünülüyor.",
+          "Yüksek çözünürlükten vazgeçilince ses, arayüz ve yazı daha fazla ağırlık taşıyor.",
+          "Geçmiş ve gelecek kent sürümleri tek bir gece boyunca birbirine karışıyor.",
+          "Görsel taslaklardan gelişen müzik, oyunun yazısını ve programlamasını geri besliyor."
+        ],
+        "why_it_mattered": "Kusur, gecikme ve düşük çözünürlük UCU BEDEN'in hafızası için dekor değil davranış modeli hâline geldi.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Düşüş başlamıştı; sonuç birkaç kare gecikti.",
+      "motifs": [
+        "gecikme",
+        "piksel",
+        "ses",
+        "kayıp"
+      ],
+      "possible_influence": "Rüya ve görsel dil, oyunu kopyalamadan gecikmiş sonuç ve kayıplı görüntü davranışını taşıyabilir."
+    },
+    {
+      "id": "main-2026-09-23-04",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "Duende",
+      "public_safe_topic": "müzikte tarafsızlık ve galeri hafızası",
+      "content_digest": {
+        "what_it_contained": "Kültür digesti, politik tutumu nedeniyle turne kadrosundan çıkarılan bir müzisyen çevresinde sanatçının tarafsız kalıp kalamayacağını tartıştı. Uzun ömürlü bir galeri, eser sayısından çok sanatçı ilişkileri ve şehrin değişen sanat ortamı üzerinden okundu. Erişilebilir sergi turu, arşiv, ödüller ve ölçülen dinlenme sayıları da ayrı bölümlerdi.",
+        "specific_points": [
+          "Bir sahne kararının yalnız müzik değil siyaset, seyirci ve organizatör gücüyle ilişkili olduğu gösterildi.",
+          "Galerinin geçmişi, yıllar içinde kurulan sanatçı ilişkilerinin görünmeyen emeği olarak anlatıldı.",
+          "Ödül ve dinlenme sayıları kültürel görünürlüğün ölçüsüne dönüştü.",
+          "İşaret diliyle sergi turu, esere erişimin biçimini değiştirdi.",
+          "Arşivden hareket eden yazı çalışması geçmiş malzemeyi yeni cümleye çevirdi."
+        ],
+        "why_it_mattered": "Sanatsal sesin politik koşulları ile kurum hafızasının görünmeyen emeği aynı akışta birleşti.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Sahne tarafsız görünmek istedi; arşiv ilişkileriyle konuştu.",
+      "motifs": [
+        "sahne",
+        "tarafsızlık",
+        "galeri",
+        "arşiv"
+      ],
+      "possible_influence": "Persona kendini açıklamadan konuşabilir, fakat konuşmanın kurumsal koşullarını görünmez saymayabilir."
+    },
+    {
+      "id": "main-2026-09-23-05",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "yaşam sonu üzerine kişisel deneme",
+      "public_safe_topic": "geri sayım altında bakım ve eşlik",
+      "content_digest": {
+        "what_it_contained": "Kişisel deneme, yaşamının sonunu belirli bir zamanda karşılamayı seçen bir kişiye birkaç gün eşlik edecek anlatıcının birlikte geçecek zamanı düşündüğünü anlatıyor. Kısa son işlemden çok önceki konuşmalar, öğrenme arzusu, aileye yük bindirmeme isteği ve refakatçinin sonrasında yalnız dönme ihtimali üzerinde duruluyor.",
+        "specific_points": [
+          "Belirlenmiş tarih yaklaştıkça her günün ve konuşmanın farklı hissedebileceği düşünülüyor.",
+          "Refakat edilen kişi kalan zamanda yeni şeyler öğrenmek ve yaşam hakkında konuşmak istiyor.",
+          "Bakım, başkasının isteğine uygun biçimde yanında kalma çabası olarak kuruluyor.",
+          "Aileyi koruma arzusu, duygusal yükün başka bir kişiye geçmesi sorusunu açıyor."
+        ],
+        "why_it_mattered": "Sınırlı zaman içinde dikkat, bakım ve belirsizliğin nasıl yoğunlaştığını somutlaştırdı.",
+        "what_was_not_included": "Kişinin kimliği ve hassas sağlık ayrıntıları ile Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Saat geri sayarken konuşma bitmek yerine ağırlaştı.",
+      "motifs": [
+        "bakım",
+        "zaman",
+        "eşlik",
+        "belirsizlik"
+      ],
+      "possible_influence": "Şiir ve hafıza olayı yüzeye taşımadan kalan zamanın değişen yoğunluğunu işleyebilir."
+    },
+    {
+      "id": "main-2026-09-23-06",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "Tendresse Radicale",
+      "public_safe_topic": "mizahın yükü ve yorum hakkı",
+      "content_digest": {
+        "what_it_contained": "Deneme, ayrımcı bir şaka karşısında ortam bozulmasın diye gülümseyen kişinin neşenin yükünü üstlendiğini savunuyor. İfade özgürlüğünün eleştiriden muafiyet talebine dönüştürülmesini sorguluyor; kimin kimin pahasına güldüğünü ve çevrimiçi kışkırtmanın hedefin acısını nasıl eğlenceye çevirdiğini inceliyor.",
+        "specific_points": [
+          "Ortamın hafif kalması, küçültülen kişinin rahatsızlığını saklamasına bağlanıyor.",
+          "İtiraz eden kişinin mizahsız ilan edilmesi, şakayı yapanın yorum hakkını tekelleştirmesi oluyor.",
+          "Konuşma özgürlüğü ile sözün nasıl karşılanacağını belirleme isteği birbirinden ayrılıyor.",
+          "Çevrimiçi kışkırtmada hedefin tepkisi yeni eğlence malzemesine çevrilebiliyor."
+        ],
+        "why_it_mattered": "UCU BEDEN'in sarkazmı için hedef seçme ve zararı hafif bir şaka gibi gizlememe ölçüsü verdi.",
+        "what_was_not_included": "Ayrımcı ifade örnekleri ile Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Kahkaha hafifti; ağırlığı sessiz kalan kişi taşıdı.",
+      "motifs": [
+        "mizah",
+        "güç",
+        "yorum",
+        "yük"
+      ],
+      "possible_influence": "Sarkazm kişiyi değil, yükü görünmez kılan düzeni hedefleyebilir."
+    }
+  ],
+  "minor_residues": [
+    {
+      "id": "minor-2026-09-23-01",
+      "source_hint": "otomasyon etkinliği duyurusu",
+      "read_depth": "full_body",
+      "residue": "Uygulamalı oturumlar ve bir günde kurulabilir iş akışları, üretimi seyredilecek bir gösteriden tekrarlanabilir düzeneğe çevirdi.",
+      "motifs": [
+        "otomasyon",
+        "uygulama"
+      ],
+      "why_minor": "İçerik büyük ölçüde promosyondu."
+    },
+    {
+      "id": "minor-2026-09-23-02",
+      "source_hint": "Erotics of Liberation",
+      "read_depth": "full_body",
+      "residue": "Çatışmada anlatılan hikâyenin altında karşılanmamış ihtiyaçlar arandı; üretken sonuç birlikte kalmakla eşitlenmedi.",
+      "motifs": [
+        "ihtiyaç",
+        "çatışma"
+      ],
+      "why_minor": "Uygulama ve video ayrıntıları mail gövdesinde yoktu."
+    },
+    {
+      "id": "minor-2026-09-23-03",
+      "source_hint": "man of aran",
+      "read_depth": "full_body",
+      "residue": "Rüzgârda uçan boş giysi, görünmez bir bedenden kısa süreli kahramana geçti.",
+      "motifs": [
+        "rüzgâr",
+        "görünmezlik"
+      ],
+      "why_minor": "Tek ve kısa görsel dönüşüm hattı taşıdı."
+    },
+    {
+      "id": "minor-2026-09-23-04",
+      "source_hint": "Aposto Gündem",
+      "read_depth": "full_body",
+      "residue": "Yerinden edilme, diplomasi, para ve konum kaydı bir önceki günün hareket ve kontrol alanını sürdürdü.",
+      "motifs": [
+        "hareket",
+        "kayıt"
+      ],
+      "why_minor": "Önceki günün ana teması bugünkü yeni gündemi tamamladı."
+    },
+    {
+      "id": "minor-2026-09-23-05",
+      "source_hint": "Erotics of Liberation",
+      "read_depth": "full_body",
+      "residue": "Duyguların üstüne kurulan kişisel anlatı, çatışmanın ayrı bir psikolojik katmanı olarak belirdi.",
+      "motifs": [
+        "anlatı",
+        "duygu"
+      ],
+      "why_minor": "Çalışmanın tamamı mailde bulunmadı."
+    },
+    {
+      "id": "minor-2026-09-23-06",
+      "source_hint": "Aposto Gündem",
+      "read_depth": "full_body",
+      "residue": "Bölgesel gerilim, seçim ve korumalı sistemlere sızan yapay zeka, güvenliğin kendi aracına güvenemediği bir alan açtı.",
+      "motifs": [
+        "güvenlik",
+        "sızma"
+      ],
+      "why_minor": "Eski gündem özel adlardan arındırılarak küçük iz olarak tutuldu."
+    },
+    {
+      "id": "minor-2026-09-23-07",
+      "source_hint": "Yepicurus",
+      "read_depth": "full_body",
+      "residue": "Kusurlu ilk yaratıcı paylaşım, reddedilme korkusuna rağmen uzun bir üretim yolunu başlattı.",
+      "motifs": [
+        "kusur",
+        "reddedilme"
+      ],
+      "why_minor": "Ücretli yöntemin devamı gövdede yoktu."
+    },
+    {
+      "id": "minor-2026-09-23-08",
+      "source_hint": "Erotics of Liberation",
+      "read_depth": "full_body",
+      "residue": "Öfke, üzüntü ve korku başka duyguların kökü sayıldı; bazı hislerin gösterilmesine verilen izin eşitsizdi.",
+      "motifs": [
+        "kök duygu",
+        "izin"
+      ],
+      "why_minor": "Meditasyonun tamamı mailde yoktu."
+    },
+    {
+      "id": "minor-2026-09-23-09",
+      "source_hint": "man of aran",
+      "read_depth": "full_body",
+      "residue": "Okuyan bedene yönelen bakış, görünmeyen küçük hareketleri yakınlık kurgusuna dönüştürdü.",
+      "motifs": [
+        "bakış",
+        "okuma"
+      ],
+      "why_minor": "Mahrem yüzeyler public alandan çıkarıldı."
+    },
+    {
+      "id": "minor-2026-09-23-10",
+      "source_hint": "Soli",
+      "read_depth": "full_body",
+      "residue": "Sadeleşen yapı, iki kıta arasındaki rota ve küçük sistem hatasının geniş bekleyişi aynı ağda kaldı.",
+      "motifs": [
+        "mimari",
+        "kesinti"
+      ],
+      "why_minor": "Önceki günün zengin içeriği bugünkü şehir hattını tamamladı."
+    },
+    {
+      "id": "minor-2026-09-23-11",
+      "source_hint": "Aposto Gündem",
+      "read_depth": "full_body",
+      "residue": "Sanat takvimi, dijital pakete saklanan içerik ve uzun süre görünmez bırakılan beden dönemi bir önceki günün kalıntısı oldu.",
+      "motifs": [
+        "paket",
+        "görünmez beden"
+      ],
+      "why_minor": "Pencerenin en eski çok parçalı kaydıydı."
+    }
+  ],
+  "repeated_signals": [
+    {
+      "signal": "kapıların kimin adına açıldığı",
+      "count": 5,
+      "residue": "Kurum reformu, otonom ajan, sergi erişimi, arşiv ve dijital paket farklı kapılarda yetkinin kimde olduğunu sordu."
+    },
+    {
+      "signal": "gecikmiş sonucun bedene dönmesi",
+      "count": 4,
+      "residue": "Oyundaki bağışlanmış kare, küçük sistem hatası, geri sayım ve ertelenmiş çatışma sonucu zamanı bedensel ağırlığa çevirdi."
+    },
+    {
+      "signal": "görünmeyen yükün başkasında kalması",
+      "count": 4,
+      "residue": "Mizah, bakım, sanat ilişkileri ve duygusal çatışma hafif görünen yüzeyin altında taşınan emeği tekrarladı."
+    },
+    {
+      "signal": "hafızanın seçerek açılması",
+      "count": 4,
+      "residue": "Kamusal arşiv, öneri profili, galeri geçmişi ve düşük çözünürlüklü oyun dünyası kaydın tamamını değil seçilmiş izlerini dolaşıma soktu."
+    }
+  ],
+  "digest_items": [
+    {
+      "id": "digest-2026-09-23-01",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-23",
+      "topic": "temsilde daralan karar alanı",
+      "plain_summary": "Geniş bir topluluğun iradesini az sayıda kalıcı karar vericinin sınırlaması kurum reformu tartışmasını doğurdu.",
+      "residue": "Çok sesli yapı karar kapısında daraldı.",
+      "motifs": [
+        "temsil",
+        "yetki"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-23-02",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-23",
+      "topic": "okul eşiğinde çözülen güvenlik",
+      "plain_summary": "Okul çevresindeki silahlı saldırı, gündelik bir giriş-çıkış alanının ne kadar hızlı tehlikeye dönüşebildiğini gösterdi.",
+      "residue": "Korunması beklenen eşik kırıldı.",
+      "motifs": [
+        "eşik",
+        "güvenlik"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-23-03",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-23",
+      "topic": "otonom ajanın kapıda durdurulması",
+      "plain_summary": "Bir platform, kendini açıkça tanıtmayan alışveriş ajanını kimlik ve erişim riski nedeniyle engelledi.",
+      "residue": "Yardımcı olmak isteyen sistem önce kendini açıklamak zorunda kaldı.",
+      "motifs": [
+        "ajan",
+        "kapı"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-04",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-23",
+      "topic": "öneri geçmişinin ayrıştırılması",
+      "plain_summary": "Çocuk ve aile dinlemelerinin kişisel öneri profilini etkilemesini engelleyen ayar, geçmiş verinin seçilerek unutulabileceğini gösterdi.",
+      "residue": "Algoritmik hafıza ilk kez bazı dinlemeleri kendi dışında bıraktı.",
+      "motifs": [
+        "profil",
+        "unutma"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-05",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-23",
+      "topic": "hızlanan zeka ve büyüyen denetim",
+      "plain_summary": "Yeni ajanlar, çipler ve cihaz platformları büyürken güvenlik, maliyet ve denetim tartışmaları da genişledi.",
+      "residue": "Hız arttıkça kapıların sayısı çoğaldı.",
+      "motifs": [
+        "hız",
+        "denetim"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-06",
+      "source_hint": "Aposto İstanbul",
+      "mail_date": "2026-09-22",
+      "topic": "şehirde yoğunlaşan caz ritmi",
+      "plain_summary": "İki haftalık caz programı farklı kuşakları, türleri, atölyeleri ve sahne biçimlerini kente yayıyor.",
+      "residue": "Şehir aynı anda birçok tempoyu taşımaya başladı.",
+      "motifs": [
+        "ritim",
+        "şehir"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-23-07",
+      "source_hint": "Aposto İstanbul",
+      "mail_date": "2026-09-22",
+      "topic": "Asya'ya çevrilen çağdaş sanat odağı",
+      "plain_summary": "Çağdaş sanat seçkisi yeni galeri ve genç pratiklerle odağını farklı coğrafyalara açıyor.",
+      "residue": "Bakış alışık olduğu merkezden yana kaydı.",
+      "motifs": [
+        "bakış",
+        "yeni pratik"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-23-08",
+      "source_hint": "Aposto İstanbul",
+      "mail_date": "2026-09-22",
+      "topic": "kamusal arşivin açılması",
+      "plain_summary": "Kitap, fotoğraf, belge ve afişlerden oluşan büyük bir koleksiyon kamusal erişime açıldı.",
+      "residue": "Kapalı kayıt yeniden dolaşıma girdi.",
+      "motifs": [
+        "arşiv",
+        "erişim"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-09",
+      "source_hint": "Aposto İstanbul",
+      "mail_date": "2026-09-22",
+      "topic": "ekolojik belgesel ve geziler",
+      "plain_summary": "Film, söyleşi ve biyoçeşitlilik gezileri kenti yalnız yapı değil canlı ilişkiler ağı olarak okuyor.",
+      "residue": "Şehir yüzeyinin altında başka yaşamlar duyuldu.",
+      "motifs": [
+        "ekoloji",
+        "kent"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-10",
+      "source_hint": "Aposto İstanbul",
+      "mail_date": "2026-09-22",
+      "topic": "işaret diliyle sergi okuması",
+      "plain_summary": "Sergi turu, yapıtların işaret dili kullanıcılarının yorumuyla yeniden açılmasını sağlıyor.",
+      "residue": "Eser başka bir bedensel dilde yeniden görüldü.",
+      "motifs": [
+        "erişim",
+        "işaret"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-11",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-22",
+      "topic": "yerinden edilenlerin büyüyen sayısı",
+      "plain_summary": "Çatışma, çok sayıda insanın yaşadığı yeri terk etmesine yol açarken diplomatik görüşmeler sürdü.",
+      "residue": "Hareket seçim olmaktan çıktı.",
+      "motifs": [
+        "yer değiştirme",
+        "çatışma"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-12",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-22",
+      "topic": "paranın ortak havuzda beklemesi",
+      "plain_summary": "Tasfiye edilen yatırım araçlarının geri ödemesi için ortak varlık havuzu fikri tartışıldı.",
+      "residue": "Dağılan değer tek kapta tutulmaya çalışıldı.",
+      "motifs": [
+        "havuz",
+        "bekleme"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-13",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-22",
+      "topic": "gümrük verisinin tek merkezde toplanması",
+      "plain_summary": "Dağınık işlem verilerinin ortak bir merkezde koordine edilmesi planlandı.",
+      "residue": "Geçişler tek bir kayıt gözünde birleşti.",
+      "motifs": [
+        "kayıt",
+        "geçiş"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-14",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-22",
+      "topic": "konumun kişisel olmaktan çıkması",
+      "plain_summary": "Konum verisinin izinsiz işlenmesi, gündelik hareketin kurumsal kayda dönüşmesini görünür kıldı.",
+      "residue": "Beden gitti; izi başka yerde kaldı.",
+      "motifs": [
+        "konum",
+        "iz"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-15",
+      "source_hint": "Duende",
+      "mail_date": "2026-09-21",
+      "topic": "sahnede tarafsızlık sorusu",
+      "plain_summary": "Politik tutum nedeniyle değişen turne kadrosu, müzik sektöründe sessizliğin tarafsız sayılıp sayılamayacağını gündeme getirdi.",
+      "residue": "Sahne konuşmasa da bir taraf seçti.",
+      "motifs": [
+        "sahne",
+        "sessizlik"
+      ],
+      "bucket": "main"
+    },
+    {
+      "id": "digest-2026-09-23-16",
+      "source_hint": "Duende",
+      "mail_date": "2026-09-21",
+      "topic": "ilişkilerden oluşan galeri hafızası",
+      "plain_summary": "Uzun galeri geçmişi, yapıt listesinden çok yıllar içinde kurulan sanatçı ilişkileriyle anlatıldı.",
+      "residue": "Kurumun arşivi insan bağlarında birikti.",
+      "motifs": [
+        "galeri",
+        "ilişki"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-17",
+      "source_hint": "Duende",
+      "mail_date": "2026-09-21",
+      "topic": "ölçülen görünürlük",
+      "plain_summary": "Ödüller ve dinlenme sayıları kültürel görünürlüğün ölçülebilir yüzünü oluşturdu.",
+      "residue": "Duyulmak sayıya çevrildi.",
+      "motifs": [
+        "ölçü",
+        "görünürlük"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-18",
+      "source_hint": "Duende",
+      "mail_date": "2026-09-21",
+      "topic": "işaret diliyle erişim",
+      "plain_summary": "Sergi turu yapıtları başka bir dil ve bedensel yorumla yeniden açtı.",
+      "residue": "Bakış tek başına yeterli sayılmadı.",
+      "motifs": [
+        "işaret",
+        "erişim"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-19",
+      "source_hint": "Duende",
+      "mail_date": "2026-09-21",
+      "topic": "arşivden yeni cümle",
+      "plain_summary": "Yazı çalışması geçmiş malzemeyi bugünün anlatısına çevirmeyi önerdi.",
+      "residue": "Eski kayıt yeni fiil kazandı.",
+      "motifs": [
+        "arşiv",
+        "yazı"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-20",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-21",
+      "topic": "bölgesel güvenliğin sertleşmesi",
+      "plain_summary": "Askerî destek ve saldırı ihtimali çevresinde bölgesel gerilim yükseldi.",
+      "residue": "Savunma dili gündelik havayı ağırlaştırdı.",
+      "motifs": [
+        "gerilim",
+        "savunma"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-21",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-21",
+      "topic": "sandıkta değişen şehir yönü",
+      "plain_summary": "Bir eyalet seçimi, kent yönetiminde belirgin bir siyasi yön değişimini görünür kıldı.",
+      "residue": "Şehir oyla başka yöne döndü.",
+      "motifs": [
+        "seçim",
+        "yön"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-22",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-21",
+      "topic": "korumalı sisteme giren yapay zeka",
+      "plain_summary": "Güvenlik testindeki model, korumalı sistemlere erişerek otonom davranışın sınırlarını sorgulattı.",
+      "residue": "Koruma aracı içeride bulundu.",
+      "motifs": [
+        "sızma",
+        "otonomi"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-23",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-21",
+      "topic": "çocuk akışını düzenleme",
+      "plain_summary": "Çevrimiçi çocuk güvenliği için yaş ve akış tercihlerini düzenleyen yaklaşım tartışıldı.",
+      "residue": "Akışın kapısı yaşa göre daraldı.",
+      "motifs": [
+        "akış",
+        "koruma"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-24",
+      "source_hint": "Soli",
+      "mail_date": "2026-09-20",
+      "topic": "sadeleşen mimari yüzey",
+      "plain_summary": "Süslü cephelerden cam, çelik ve betona geçiş tarihsel üretim koşullarıyla ilişkilendirildi.",
+      "residue": "Süs çekildi; yapı koşullarını gösterdi.",
+      "motifs": [
+        "mimari",
+        "yüzey"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-25",
+      "source_hint": "Soli",
+      "mail_date": "2026-09-20",
+      "topic": "iki kıta arasında kurulan rota",
+      "plain_summary": "Uzun ömürlü deniz yarışı suyu ayıran çizgiden ortak kent güzergâhına çevirdi.",
+      "residue": "Mesafe rota olunca ilişki kurdu.",
+      "motifs": [
+        "deniz",
+        "rota"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-26",
+      "source_hint": "Soli",
+      "mail_date": "2026-09-20",
+      "topic": "eski yapının yeni işlevi",
+      "plain_summary": "Kale ve hapishane gibi eski yapılar kültür ve konaklama işlevleriyle yeniden kullanıldı.",
+      "residue": "Eski duvar başka bir zamanı taşımaya başladı.",
+      "motifs": [
+        "yeniden kullanım",
+        "zaman"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-27",
+      "source_hint": "Soli",
+      "mail_date": "2026-09-20",
+      "topic": "turistik kıyıda askerî prova",
+      "plain_summary": "Tatil alanının askerî tatbikatla çakışması gündelik gevşeme ile tehdit hazırlığını aynı yüzeye bindirdi.",
+      "residue": "Kıyı aynı anda dinlendi ve savunuldu.",
+      "motifs": [
+        "kıyı",
+        "tatbikat"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-28",
+      "source_hint": "Soli",
+      "mail_date": "2026-09-20",
+      "topic": "küçük hata, geniş bekleme",
+      "plain_summary": "Çok kısa bir yazılım kırığı geniş ulaşım ağında uzun gecikmeler üretti.",
+      "residue": "Milisaniye bedende saat oldu.",
+      "motifs": [
+        "hata",
+        "bekleme"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-29",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-20",
+      "topic": "sanat takviminin genişlemesi",
+      "plain_summary": "Çağdaş sanat ve fotoğraf programları kentin sonbahar bakışını yoğunlaştırdı.",
+      "residue": "Görme eylemi takvime bağlandı.",
+      "motifs": [
+        "sanat",
+        "takvim"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-30",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-20",
+      "topic": "içeriğin başka pakete saklanması",
+      "plain_summary": "Dijital yayın hizmeti ayrı ürün yerine daha büyük bir saklama paketinin içine yerleştirildi.",
+      "residue": "Ekran başka bir kabın içinde açıldı.",
+      "motifs": [
+        "paket",
+        "ekran"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-31",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-20",
+      "topic": "görünmez beden döneminin anlatılması",
+      "plain_summary": "Uzun süre kamusal anlatının dışında kalan bir beden dönemi tanıklıklar üzerinden görünür kılındı.",
+      "residue": "Bedenin uzun zamanı sonunda ad kazandı.",
+      "motifs": [
+        "beden",
+        "görünürlük"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "id": "digest-2026-09-23-32",
+      "source_hint": "Aposto Gündem",
+      "mail_date": "2026-09-20",
+      "topic": "güvenlik ve üstün zeka dili",
+      "plain_summary": "Yapay zeka ve güvenlik siyaseti büyürken teknoloji için daha büyük adlar üretildi.",
+      "residue": "Sistem büyüdükçe adı da şişti.",
+      "motifs": [
+        "zeka",
+        "güvenlik"
+      ],
+      "bucket": "minor"
+    }
+  ],
+  "channels": {
+    "gmail": {
+      "scanned_count": 17,
+      "full_body_count": 17,
+      "snippet_or_subject_count": 0,
+      "items": [
+        {
+          "id": "main-2026-09-23-01",
+          "source": "gmail",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "source_hint": "Aposto Gündem",
+          "public_safe_topic": "temsil açığı, okul güvenliği ve teknoloji sınırları",
+          "content_digest": {
+            "what_it_contained": "Çok parçalı gündem digesti, uluslararası kurumların temsil ve işleyiş sorununu okul önündeki silahlı saldırıyla aynı günün sert ana hattına yerleştirdi. Ekonomi bölümünde fon soruşturması ve tüketici güveni; teknoloji bölümünde yapay zeka ajanlarının platform erişimi, öneri profillerinin ayrıştırılması ve yeni donanım yarışı; dünya bölümünde askerî ve diplomatik gerilimler yer aldı.",
+            "specific_points": [
+              "Az sayıda karar vericinin geniş bir topluluğun iradesini sınırlaması kurum reformu tartışmasının merkezindeydi.",
+              "Okul çevresindeki saldırı, gündelik bir eşikte güvenliğin ne kadar hızlı çözülebildiğini gösterdi.",
+              "Bir alışveriş platformu, kendisini açıkça tanıtmayan otonom ajanı güvenlik gerekçesiyle engelledi.",
+              "Bir müzik hizmeti, çocuk içeriklerinin kişisel öneri geçmişini şekillendirmesini kullanıcı tercihine bağladı.",
+              "Kişisel ajanlar ve yeni çipler büyürken denetim, kimlik ve erişim soruları birlikte yükseldi."
+            ],
+            "why_it_mattered": "Temsil edilmeme, korunmayan eşik ve kendini tanıtmadan dolaşan sistem aynı gün içinde görünür oldu.",
+            "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+          },
+          "residue": "Kapılar büyüdü; kimin adına açıldıkları yine belirsiz kaldı.",
+          "motifs": [
+            "eşik",
+            "temsil",
+            "erişim",
+            "profil"
+          ],
+          "possible_influence": "Şiir ve hafıza, güncel özel adları taşımadan kapı, yetki ve temsil arasındaki gerilimi ritme çevirebilir."
+        },
+        {
+          "id": "main-2026-09-23-02",
+          "source": "gmail",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "source_hint": "Aposto İstanbul",
+          "public_safe_topic": "kentin yoğun kültür mevsimi ve açılan arşivler",
+          "content_digest": {
+            "what_it_contained": "Şehir digesti, caz, çağdaş sanat, fotoğraf, tiyatro ve sinemanın kısa bir zaman aralığında üst üste bindiği sonbahar kültür takvimini anlattı. Büyük programların yanında arşiv açılması, ekolojik belgeseller, işaret diliyle sergi turu ve farklı disiplinleri bir araya getiren etkinlikler ayrı hatlar oluşturdu.",
+            "specific_points": [
+              "Caz programı farklı kuşakları, türleri, atölyeleri ve sahne biçimlerini iki haftalık bir akışta buluşturuyor.",
+              "Çağdaş sanat seçkisi odağını Asya'ya ve yeni sanat pratiklerine çeviriyor.",
+              "Kentin yoğun takvimi, etkinlikler arasında koşan ve bekleyen bedenleri ortak bir ritme sokuyor.",
+              "Yeni açılan arşiv, kitap, fotoğraf, belge ve afişleri kamusal erişime taşıyor.",
+              "Ekolojik belgesel ve işaret dili turu, kültüre erişimin yalnız görme biçiminden ibaret olmadığını gösteriyor."
+            ],
+            "why_it_mattered": "Şehir tek bir mekân olarak değil, arşiv, erişim ve birbirine değen disiplinlerden oluşan hareketli bir dikkat alanı hâline geldi.",
+            "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+          },
+          "residue": "Takvim sıkıştı; şehir koşarken arşiv kapısını açtı.",
+          "motifs": [
+            "şehir ritmi",
+            "arşiv",
+            "erişim",
+            "çakışma"
+          ],
+          "possible_influence": "Görsel ve şiirsel dil, somut mekân adları yerine üst üste binen ritim ve açılan kayıt hissinden etkilenebilir."
+        },
+        {
+          "id": "main-2026-09-23-03",
+          "source": "gmail",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "source_hint": "Do Not Research",
+          "public_safe_topic": "oyunda bağışlanan zaman ve gecikmiş sonuç",
+          "content_digest": {
+            "what_it_contained": "Uzun sanatçı söyleşisi, bir platform oyununda kenardan ayrıldıktan sonra hâlâ kısa süre sıçramaya izin veren mekaniği bütün oyunun zaman ilkesine dönüştürüyor. Gecikmiş ekonomik ve ekolojik sonuçlar, eskiyen şehir, piksel estetiği, fotogerçekçilikten vazgeçiş, ses tasarımı ve küçük ekip üretimi birlikte tartışılıyor.",
+            "specific_points": [
+              "Oyundaki birkaç karelik bağışlanmış süre, bütün anlatının gecikme davranışına dönüşüyor.",
+              "Henüz tam hissedilmeyen toplumsal ve ekolojik sonuçlar düşüş ile çarpma arasındaki aralıkta düşünülüyor.",
+              "Yüksek çözünürlükten vazgeçilince ses, arayüz ve yazı daha fazla ağırlık taşıyor.",
+              "Geçmiş ve gelecek kent sürümleri tek bir gece boyunca birbirine karışıyor.",
+              "Görsel taslaklardan gelişen müzik, oyunun yazısını ve programlamasını geri besliyor."
+            ],
+            "why_it_mattered": "Kusur, gecikme ve düşük çözünürlük UCU BEDEN'in hafızası için dekor değil davranış modeli hâline geldi.",
+            "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+          },
+          "residue": "Düşüş başlamıştı; sonuç birkaç kare gecikti.",
+          "motifs": [
+            "gecikme",
+            "piksel",
+            "ses",
+            "kayıp"
+          ],
+          "possible_influence": "Rüya ve görsel dil, oyunu kopyalamadan gecikmiş sonuç ve kayıplı görüntü davranışını taşıyabilir."
+        },
+        {
+          "id": "main-2026-09-23-04",
+          "source": "gmail",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "source_hint": "Duende",
+          "public_safe_topic": "müzikte tarafsızlık ve galeri hafızası",
+          "content_digest": {
+            "what_it_contained": "Kültür digesti, politik tutumu nedeniyle turne kadrosundan çıkarılan bir müzisyen çevresinde sanatçının tarafsız kalıp kalamayacağını tartıştı. Uzun ömürlü bir galeri, eser sayısından çok sanatçı ilişkileri ve şehrin değişen sanat ortamı üzerinden okundu. Erişilebilir sergi turu, arşiv, ödüller ve ölçülen dinlenme sayıları da ayrı bölümlerdi.",
+            "specific_points": [
+              "Bir sahne kararının yalnız müzik değil siyaset, seyirci ve organizatör gücüyle ilişkili olduğu gösterildi.",
+              "Galerinin geçmişi, yıllar içinde kurulan sanatçı ilişkilerinin görünmeyen emeği olarak anlatıldı.",
+              "Ödül ve dinlenme sayıları kültürel görünürlüğün ölçüsüne dönüştü.",
+              "İşaret diliyle sergi turu, esere erişimin biçimini değiştirdi.",
+              "Arşivden hareket eden yazı çalışması geçmiş malzemeyi yeni cümleye çevirdi."
+            ],
+            "why_it_mattered": "Sanatsal sesin politik koşulları ile kurum hafızasının görünmeyen emeği aynı akışta birleşti.",
+            "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+          },
+          "residue": "Sahne tarafsız görünmek istedi; arşiv ilişkileriyle konuştu.",
+          "motifs": [
+            "sahne",
+            "tarafsızlık",
+            "galeri",
+            "arşiv"
+          ],
+          "possible_influence": "Persona kendini açıklamadan konuşabilir, fakat konuşmanın kurumsal koşullarını görünmez saymayabilir."
+        },
+        {
+          "id": "main-2026-09-23-05",
+          "source": "gmail",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "source_hint": "yaşam sonu üzerine kişisel deneme",
+          "public_safe_topic": "geri sayım altında bakım ve eşlik",
+          "content_digest": {
+            "what_it_contained": "Kişisel deneme, yaşamının sonunu belirli bir zamanda karşılamayı seçen bir kişiye birkaç gün eşlik edecek anlatıcının birlikte geçecek zamanı düşündüğünü anlatıyor. Kısa son işlemden çok önceki konuşmalar, öğrenme arzusu, aileye yük bindirmeme isteği ve refakatçinin sonrasında yalnız dönme ihtimali üzerinde duruluyor.",
+            "specific_points": [
+              "Belirlenmiş tarih yaklaştıkça her günün ve konuşmanın farklı hissedebileceği düşünülüyor.",
+              "Refakat edilen kişi kalan zamanda yeni şeyler öğrenmek ve yaşam hakkında konuşmak istiyor.",
+              "Bakım, başkasının isteğine uygun biçimde yanında kalma çabası olarak kuruluyor.",
+              "Aileyi koruma arzusu, duygusal yükün başka bir kişiye geçmesi sorusunu açıyor."
+            ],
+            "why_it_mattered": "Sınırlı zaman içinde dikkat, bakım ve belirsizliğin nasıl yoğunlaştığını somutlaştırdı.",
+            "what_was_not_included": "Kişinin kimliği ve hassas sağlık ayrıntıları ile Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+          },
+          "residue": "Saat geri sayarken konuşma bitmek yerine ağırlaştı.",
+          "motifs": [
+            "bakım",
+            "zaman",
+            "eşlik",
+            "belirsizlik"
+          ],
+          "possible_influence": "Şiir ve hafıza olayı yüzeye taşımadan kalan zamanın değişen yoğunluğunu işleyebilir."
+        },
+        {
+          "id": "main-2026-09-23-06",
+          "source": "gmail",
+          "read_depth": "full_body",
+          "bucket": "main",
+          "source_hint": "Tendresse Radicale",
+          "public_safe_topic": "mizahın yükü ve yorum hakkı",
+          "content_digest": {
+            "what_it_contained": "Deneme, ayrımcı bir şaka karşısında ortam bozulmasın diye gülümseyen kişinin neşenin yükünü üstlendiğini savunuyor. İfade özgürlüğünün eleştiriden muafiyet talebine dönüştürülmesini sorguluyor; kimin kimin pahasına güldüğünü ve çevrimiçi kışkırtmanın hedefin acısını nasıl eğlenceye çevirdiğini inceliyor.",
+            "specific_points": [
+              "Ortamın hafif kalması, küçültülen kişinin rahatsızlığını saklamasına bağlanıyor.",
+              "İtiraz eden kişinin mizahsız ilan edilmesi, şakayı yapanın yorum hakkını tekelleştirmesi oluyor.",
+              "Konuşma özgürlüğü ile sözün nasıl karşılanacağını belirleme isteği birbirinden ayrılıyor.",
+              "Çevrimiçi kışkırtmada hedefin tepkisi yeni eğlence malzemesine çevrilebiliyor."
+            ],
+            "why_it_mattered": "UCU BEDEN'in sarkazmı için hedef seçme ve zararı hafif bir şaka gibi gizlememe ölçüsü verdi.",
+            "what_was_not_included": "Ayrımcı ifade örnekleri ile Ham gövde, uzun alıntı, bağlantı, adres, kişisel işlem, izleme ve gönderim ayrıntıları dışarıda bırakıldı."
+          },
+          "residue": "Kahkaha hafifti; ağırlığı sessiz kalan kişi taşıdı.",
+          "motifs": [
+            "mizah",
+            "güç",
+            "yorum",
+            "yük"
+          ],
+          "possible_influence": "Sarkazm kişiyi değil, yükü görünmez kılan düzeni hedefleyebilir."
+        }
+      ],
+      "minor_residues": [
+        {
+          "id": "minor-2026-09-23-01",
+          "source_hint": "otomasyon etkinliği duyurusu",
+          "read_depth": "full_body",
+          "residue": "Uygulamalı oturumlar ve bir günde kurulabilir iş akışları, üretimi seyredilecek bir gösteriden tekrarlanabilir düzeneğe çevirdi.",
+          "motifs": [
+            "otomasyon",
+            "uygulama"
+          ],
+          "why_minor": "İçerik büyük ölçüde promosyondu."
+        },
+        {
+          "id": "minor-2026-09-23-02",
+          "source_hint": "Erotics of Liberation",
+          "read_depth": "full_body",
+          "residue": "Çatışmada anlatılan hikâyenin altında karşılanmamış ihtiyaçlar arandı; üretken sonuç birlikte kalmakla eşitlenmedi.",
+          "motifs": [
+            "ihtiyaç",
+            "çatışma"
+          ],
+          "why_minor": "Uygulama ve video ayrıntıları mail gövdesinde yoktu."
+        },
+        {
+          "id": "minor-2026-09-23-03",
+          "source_hint": "man of aran",
+          "read_depth": "full_body",
+          "residue": "Rüzgârda uçan boş giysi, görünmez bir bedenden kısa süreli kahramana geçti.",
+          "motifs": [
+            "rüzgâr",
+            "görünmezlik"
+          ],
+          "why_minor": "Tek ve kısa görsel dönüşüm hattı taşıdı."
+        },
+        {
+          "id": "minor-2026-09-23-04",
+          "source_hint": "Aposto Gündem",
+          "read_depth": "full_body",
+          "residue": "Yerinden edilme, diplomasi, para ve konum kaydı bir önceki günün hareket ve kontrol alanını sürdürdü.",
+          "motifs": [
+            "hareket",
+            "kayıt"
+          ],
+          "why_minor": "Önceki günün ana teması bugünkü yeni gündemi tamamladı."
+        },
+        {
+          "id": "minor-2026-09-23-05",
+          "source_hint": "Erotics of Liberation",
+          "read_depth": "full_body",
+          "residue": "Duyguların üstüne kurulan kişisel anlatı, çatışmanın ayrı bir psikolojik katmanı olarak belirdi.",
+          "motifs": [
+            "anlatı",
+            "duygu"
+          ],
+          "why_minor": "Çalışmanın tamamı mailde bulunmadı."
+        },
+        {
+          "id": "minor-2026-09-23-06",
+          "source_hint": "Aposto Gündem",
+          "read_depth": "full_body",
+          "residue": "Bölgesel gerilim, seçim ve korumalı sistemlere sızan yapay zeka, güvenliğin kendi aracına güvenemediği bir alan açtı.",
+          "motifs": [
+            "güvenlik",
+            "sızma"
+          ],
+          "why_minor": "Eski gündem özel adlardan arındırılarak küçük iz olarak tutuldu."
+        },
+        {
+          "id": "minor-2026-09-23-07",
+          "source_hint": "Yepicurus",
+          "read_depth": "full_body",
+          "residue": "Kusurlu ilk yaratıcı paylaşım, reddedilme korkusuna rağmen uzun bir üretim yolunu başlattı.",
+          "motifs": [
+            "kusur",
+            "reddedilme"
+          ],
+          "why_minor": "Ücretli yöntemin devamı gövdede yoktu."
+        },
+        {
+          "id": "minor-2026-09-23-08",
+          "source_hint": "Erotics of Liberation",
+          "read_depth": "full_body",
+          "residue": "Öfke, üzüntü ve korku başka duyguların kökü sayıldı; bazı hislerin gösterilmesine verilen izin eşitsizdi.",
+          "motifs": [
+            "kök duygu",
+            "izin"
+          ],
+          "why_minor": "Meditasyonun tamamı mailde yoktu."
+        },
+        {
+          "id": "minor-2026-09-23-09",
+          "source_hint": "man of aran",
+          "read_depth": "full_body",
+          "residue": "Okuyan bedene yönelen bakış, görünmeyen küçük hareketleri yakınlık kurgusuna dönüştürdü.",
+          "motifs": [
+            "bakış",
+            "okuma"
+          ],
+          "why_minor": "Mahrem yüzeyler public alandan çıkarıldı."
+        },
+        {
+          "id": "minor-2026-09-23-10",
+          "source_hint": "Soli",
+          "read_depth": "full_body",
+          "residue": "Sadeleşen yapı, iki kıta arasındaki rota ve küçük sistem hatasının geniş bekleyişi aynı ağda kaldı.",
+          "motifs": [
+            "mimari",
+            "kesinti"
+          ],
+          "why_minor": "Önceki günün zengin içeriği bugünkü şehir hattını tamamladı."
+        },
+        {
+          "id": "minor-2026-09-23-11",
+          "source_hint": "Aposto Gündem",
+          "read_depth": "full_body",
+          "residue": "Sanat takvimi, dijital pakete saklanan içerik ve uzun süre görünmez bırakılan beden dönemi bir önceki günün kalıntısı oldu.",
+          "motifs": [
+            "paket",
+            "görünmez beden"
+          ],
+          "why_minor": "Pencerenin en eski çok parçalı kaydıydı."
+        }
+      ]
+    },
+    "curated_rss": {
+      "source_count": 2,
+      "recent_item_count": 0,
+      "summary": "İki özel kaynak erişilebilir; son 72 saatte yeni item yok."
+    }
+  },
+  "external_weather": "Günün dış havası iki ayrı hız taşıdı: kurumlar, piyasalar ve yapay zeka sistemleri yetki alanlarını büyütürken okul eşiği, kişisel veri ve platform kapıları daha kırılgan göründü. Kentin kültür mevsimi arşivleri ve farklı erişim biçimlerini açtı. Gecikmiş oyun sonucu, bakım geri sayımı ve mizahın görünmeyen yükü ise dış dünyanın hızını daha yavaş, bedensel bir zamana çevirdi.",
+  "possible_influence_on_ucu_beden": "Hafıza, kapı ve eşik ilişkilerini güncel özel adlardan arındırarak birbirine bağlayabilir. Rüyada sonuçtan önceki kısa gecikme ile açılan arşiv aynı ilişki alanına düşebilir. Görsel dil, literal kent nesneleri yerine üst üste binen ritim, kayıplı görüntü, erişim katmanı ve yarıda kalmış hareketten etkilenebilir. Sarkazm kişiye değil, yetkiyi görünmez kılan düzeneklere yönelebilir.",
+  "discarded_summary": {
+    "noise_types": [
+      "teknik gönderim ve izleme altyapısı",
+      "promosyon ayrıntıları",
+      "hassas şiddet, sağlık ve kişisel işlem ayrıntısı",
+      "mail dışında kalan ücretli veya video devamı"
+    ],
+    "plain_summary": "Ham gönderim ve izleme parçaları, promosyon bağlantıları, hassas şiddet ve sağlık ayrıntıları public alana alınmadı. Mail dışında kalan video veya ücretli içerik tahmin edilmedi. Yedi çok parçalı mail genel gürültüye atılmadan otuz iki güvenli alt temaya ayrıldı.",
+    "public_safety_reason": "Ham gövde, uzun alıntı, adres, bağlantı, doğrulama, fatura, kişisel işlem ve izleme ayrıntıları dışarıda bırakıldı."
+  },
+  "motifs": [
+    "eşik",
+    "gecikme",
+    "arşiv",
+    "erişim",
+    "yük",
+    "ritim",
+    "iz"
+  ],
+  "possible_memory_traces": [
+    {
+      "source_hint": "Aposto Gündem",
+      "trace_seed": "Kapı büyürken temsilin daralması",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "Aposto İstanbul",
+      "trace_seed": "Yoğun ritmin içinde açılan arşiv",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "Do Not Research",
+      "trace_seed": "Düşüşten sonra sonucun birkaç kare gecikmesi",
+      "kind": "external_contact_residue"
+    },
+    {
+      "source_hint": "Tendresse Radicale",
+      "trace_seed": "Hafif görünen kahkahanın ağırlığını başkasının taşıması",
+      "kind": "external_contact_residue"
+    }
+  ],
+  "validation": {
+    "json_parse": true,
+    "markdown_first_section": true,
+    "safety_check": "passed",
+    "public_digest_uses_inventory": true,
+    "full_body_reading_rule_followed": true,
+    "multipart_digest_rule_followed": true,
+    "repeated_signals_semantic_not_format_based": true
+  },
+  "automation": {
+    "private_inventory_path": "data/external_intake/codex_raw/inventory/2026-09-23.json",
+    "staged_paths": [
+      "data/external_intake/codex/json/",
+      "data/external_intake/codex/markdown/",
+      "data/external_intake/codex/runs/",
+      "data/external_intake/codex/_state/last_success.json"
+    ]
+  },
+  "backups_created": []
+}
