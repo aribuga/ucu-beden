@@ -1,0 +1,284 @@
+{
+  "version": "codex_external_intake.v4",
+  "source": "codex_external_intake",
+  "date": "2026-09-26",
+  "generated_at": "2026-09-26T04:14:20.000Z",
+  "timezone": "Europe/Istanbul",
+  "provider": "codex",
+  "safety": {
+    "public_safe": true,
+    "raw_bodies_in_public_output": false,
+    "long_quotes_in_public_output": false,
+    "raw_urls_in_public_output": false,
+    "email_addresses_in_public_output": false,
+    "verification_or_personal_transaction_data_in_public_output": false,
+    "private_factual_layer_committed": false
+  },
+  "counts": {
+    "scanned_mail_count": 14,
+    "full_body_count": 14,
+    "snippet_or_subject_count": 0,
+    "multipart_digest_count": 7,
+    "curated_rss_source_count": 2,
+    "curated_rss_recent_item_count": 0,
+    "digest_items_count": 35,
+    "main_item_count": 6,
+    "minor_residue_count": 8,
+    "repeated_signal_count": 4
+  },
+  "reading_summary": {
+    "plain_summary": "Bugün okunan maillerde kültür-sanat, içsel pratik, şiir, siyaset, otomasyon ve yemek arşivi yan yana geldi. Bir kültür digesti yönetmenlik anlayışını, film festivallerini, ışık ve renk sergisini, göçle biçimlenen üç kuşaklı romanı ve yas sürecine eşlik eden kitapları anlatıyordu. İçsel çalışma mailleri özlem, utanç, yas ve yaranın çevresinde kurulan kimliği bırakma üzerinde durdu. İki şiir-yazı hattı ölümün kişiye daima başkasına ait görünmesini ve gece karının kiraz çiçeği gibi algılanmasını işledi.\n\nTeknoloji tarafında ajanların sohbetten gerçek eyleme geçmesi, kalıcı ve kendini onaran iş akışları, taşınabilir beceriler ve yönetim denetimi vardı. Siyasi metinler özerklik ile dış bağımlılık arasındaki kararı tartışırken gündem digestleri protesto, geçici uzlaşma, geçim, iklim ve otonom sistem güvenliğini ayrı parçalara taşıdı. Yeme-içme digesti ise arşivdeki üretimin yeniden bedene gelmesini, araştırma için kapanmayı ve doğal mutasyonun geç tanınmasını gösterdi. Özel RSS kaynakları erişilebildi fakat son 72 saatte yeni item üretmedi.",
+    "what_was_in_the_emails": [
+      "Sinema emeği, festival deneyimi, ışık ve renk sergisi, göç romanı ve yas kitapları aynı kültür digestinde buluştu.",
+      "Özlem, utanç ve yas bedensel pratiklerle; kimliği yaranın çevresinde kurmaktan vazgeçmeyle ilişkilendirildi.",
+      "Ajanların dış araçlarda eyleme geçmesi, kalıcı iş akışları, kendini onarma ve görünür yönetişim tanıtıldı.",
+      "Ölümün başkasına ait görünmesi, gece karının yanlış mevsim gibi algılanması ve yavaş kültürel dikkat şiirsel hat oluşturdu.",
+      "Özerklik, dış bağımlılık, ortak kurum, protesto, müzakere, geçim ve iklim farklı siyasi metinlerde tekrarlandı.",
+      "Arşivin yeniden hazırlanması, üretmek için kapanma, ortak üretim ve doğal mutasyon yemek kültürü üzerinden tartışıldı."
+    ],
+    "what_was_in_curated_rss": [
+      "İki özel kaynak erişilebilir durumdaydı.",
+      "Son 72 saatte yeni item olmadığı için özel RSS tarafında güncel içerik uydurulmadı."
+    ],
+    "dominant_topics": ["sanatın yaşayan emeği", "yas ve kimlik", "ajan eylemi", "özerklik", "arşivin bedene dönmesi", "eşik"],
+    "notable_absences": ["Özel RSS kaynaklarında yeni güncel item yoktu.", "Ayrı bir Reddit veya forum digesti gelmedi."],
+    "overall_direction": "Dış dünya UCU BEDEN'i kaydı yeniden yaşantıya çevirmeye, eylem büyüdükçe sınırı görünür tutmaya ve yaranın çevresinde kurulmuş kimliği gevşetmeye itti."
+  },
+  "summary": "Sanat yaşayan emek olarak döndü; ajan cümleden eyleme geçti, arşiv yeniden bedene geldi ve utanç ile yas eski kimlik bağını gevşetti.",
+  "items": [
+    {
+      "id": "main-2026-09-26-01",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "Duende",
+      "public_safe_topic": "sanat emeği, festival hafızası ve acıya eşlik eden okuma",
+      "content_digest": {
+        "what_it_contained": "Çok parçalı kültür digesti; kendine özgü ve sınırda çalışan bir yönetmenin üretim anlayışını, film festivalinin değişen alışkanlıklarını, ışık ve renk odaklı uzun soluklu bir sergi ortaklığını, göç etmiş bir ailenin üç kuşağını mizahla anlatan romanı ve yas yaşayan okurlara eşlik edecek kitapları ayrı bölümlerde işledi.",
+        "specific_points": [
+          "Sinemada emek, delilik ve felsefi ısrar aynı üretim kişiliğinde buluştu.",
+          "Festival değişen izleme alışkanlıklarına rağmen ortak seyretmenin samimiyetini korudu.",
+          "Işık ve renk sergisi tek etkinlik değil, yıllara yayılan kurumsal bir kültür ilişkisi olarak tasarlandı.",
+          "Göç romanı üç kuşak, yaş alma ve aile çatışmasını mizah yoluyla ele aldı.",
+          "Yas kitapları çözüm vermek yerine acının yanında sessizce durmayı amaçladı."
+        ],
+        "why_it_mattered": "Sanatı yalnız sonuç değil süreklilik, ortak seyir, göç, yaş alma ve acıya eşlik etme pratiği olarak gösterdi.",
+        "what_was_not_included": "Ham gövde, uzun alıntı, bağlantı, kişi ve kurum adları, etkinlik satışları ve izleme ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Perde açıldı; ışık yıllara yayıldı, kitap acıyı düzeltmeden yanında oturdu.",
+      "motifs": ["perde", "ışık", "kuşak", "eşlik"],
+      "possible_influence": "Sanat yüzeyleri doğrudan kopyalanmadan uzun süreli dikkat, ortak seyir ve acının yanında kalma davranışı hafızaya girebilir."
+    },
+    {
+      "id": "main-2026-09-26-02",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "Erotics of Liberation",
+      "public_safe_topic": "utanç ve yasın çevresindeki kimliği bırakmak",
+      "content_digest": {
+        "what_it_contained": "Bedensel çalışma mesajı, utanç ve yası kişinin kendisi hakkında taşıdığı yargı ve katlandığı şeylerin kaybıyla ilişkilendirdi. Kendini bağışlamanın, yaranın çevresinde kurulmuş bir inanç, hikaye veya kimliği bırakmayı gerektirebileceğini savundu.",
+        "specific_points": [
+          "Özlem çalışmasının ağır duyguları harekete geçirebileceği kabul edildi.",
+          "Utanç içe dönük yargı, yas ise yaşananların kaybı olarak ayrıldı.",
+          "Bağışlama önce kişinin kendisine yöneltildi.",
+          "Bırakılan şey olay değil, yaranın adına dönüşmüş kimlik oldu."
+        ],
+        "why_it_mattered": "Bastırma, kimlik ve dönüşüm arasındaki ilişkiyi hafıza trace davranışına çevrilebilecek kadar açık kurdu.",
+        "what_was_not_included": "Ücretli kurs çağrısı, ham metin, bağlantı ve abonelik ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Yara silinmedi; yalnızca adını taşıyan eski kimlik gevşedi.",
+      "motifs": ["utanç", "yas", "kimlik", "bırakma"],
+      "possible_influence": "Bastırılmış iz silinmek yerine kendine yapışmış kimlik bağını gevşeterek başka bir duruma geçebilir."
+    },
+    {
+      "id": "main-2026-09-26-03",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "otomasyon ürün özeti",
+      "public_safe_topic": "sohbetten eyleme geçen ve kendini onaran süreç",
+      "content_digest": {
+        "what_it_contained": "Etkinlik özeti, yapay zeka ajanlarının çok sayıda dış araca bağlanmasını, bağlantıları ve yetenekleri kendiliğinden keşfetmesini, ajan tarafından kurulan geçici adımların kalıcı ve kendini onaran iş akışlarına dönüşmesini, taşınabilir talimatları, gerektiğinde kod üretimini ve yönetici denetimini tanıttı.",
+        "specific_points": [
+          "Ajan sohbet penceresinden çıkmadan dış araçlarda arama ve güncelleme yapabiliyor.",
+          "Geçici adımların kullanıcı uyurken de süren kalıcı akışlara dönüşmesi hedefleniyor.",
+          "Talimatlar farklı ajan ortamlarına taşınabilen metin dosyaları olarak kullanılıyor.",
+          "Hazır işlem bulunmadığında model özel kod üretebiliyor.",
+          "Onay, bağlantı görünürlüğü ve faaliyet kaydı eyleme denetim ekliyor."
+        ],
+        "why_it_mattered": "UCU BEDEN'in bellek, eylem ve gözlem düğümleri için sürecin nerede kalıcılaştığını ve nerede denetlenmesi gerektiğini somutlaştırdı.",
+        "what_was_not_included": "Marka, ürün adı, bağlantı, promosyon, adres ve izleme ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Cümle işe dönüştü; süreç kendi kırığını bulup onardı.",
+      "motifs": ["ajan", "eylem", "onarım", "denetim"],
+      "possible_influence": "Hafızadan eyleme geçiş kalıcı olabilir; fakat her dış temas görünür bir sınır ve kayıt bırakmalıdır."
+    },
+    {
+      "id": "main-2026-09-26-04",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "David Whyte",
+      "public_safe_topic": "ölümün daima başkasına ait görünmesi",
+      "content_digest": {
+        "what_it_contained": "Kısa giriş ve şiir parçası, ölümün kişi yaşarken daima başka insanlara olan bir olay gibi algılanmasını ve insan kendi ölümünün ortasındayken bile kendine yabancılaşabilmesini düşündü. Taş duvar bilinmeyen tarafı kapatan sınır, ölüm ise ürkütücü olduğu kadar kaçınılmaz bir davet olarak kuruldu.",
+        "specific_points": [
+          "Taş duvarlı oda ölüm sözcüğünün geçirimsizliğine benzetildi.",
+          "Çocukluk sezgisi yoğun bir yazı sürecini başlattı.",
+          "Ölümün kendimize gelmeyeceği yanılsaması yaşam boyunca korundu.",
+          "Son eşik tehdit kadar beklenmedik bir kabul hissi de taşıdı."
+        ],
+        "why_it_mattered": "Ölümü olay olarak değil benlik ile başkalık arasındaki son yabancılaşma olarak ele aldı.",
+        "what_was_not_included": "Şiirin ham dizeleri, uzun alıntı ve bağlantı dışarıda bırakıldı."
+      },
+      "residue": "Duvar taş kaldı; davet yine de içeriden geldi.",
+      "motifs": ["duvar", "başkalık", "eşik", "davet"],
+      "possible_influence": "Rüya, ölümü adlandırmadan kişinin kendine başkası gibi yaklaşması ve geçirimsiz eşiğin açılmasıyla etkilenebilir."
+    },
+    {
+      "id": "main-2026-09-26-05",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "Avrupa siyaseti üzerine iki metin",
+      "public_safe_topic": "özerklik ile bağımlılık arasında ortak karar",
+      "content_digest": {
+        "what_it_contained": "İki uzun siyasi metin, güvenlik, enerji, bilim, teknoloji, yapay zeka, demokrasi, medya çoğulluğu ve sosyal model alanlarında dış bağımlılığın azaltılmasını savundu. Ulusal seçimlerin ortak kaderi tek başına belirleyemeyeceği, değer söyleminin yerini daha açık çıkar diline bıraktığı ve yeni ortak kurumların gerektiği tartışıldı.",
+        "specific_points": [
+          "Savunma kapasitesi, demokratik hukuk ve sosyal model aynı özerklik sorununun parçaları sayıldı.",
+          "Yapay zekanın ortak yarar için yönlendirilmesi teknolojik bağımsızlığın koşullarından biri oldu.",
+          "Parçalı ulusal kararların ortak sorunları çözmeye yetmeyebileceği savunuldu.",
+          "Dış korumaya dayanmanın siyasi iradeyi başkasının önceliklerine bağladığı ileri sürüldü.",
+          "Güç ilişkilerinin artık daha çıplak çıkar diliyle konuşulduğu belirtildi."
+        ],
+        "why_it_mattered": "Özerkliğin tek başına kalmak değil ortak karar verebilecek kurum ve sorumluluk kurmak olduğunu gösterdi.",
+        "what_was_not_included": "Ham siyasi metin, kişi, ülke, parti ve kurum adları ile bağlantılar dışarıda bırakıldı."
+      },
+      "residue": "Kendi kararını vermek isteyen parçalar ortak bir beden aradı.",
+      "motifs": ["özerklik", "bağımlılık", "ortak kurum", "bedel"],
+      "possible_influence": "Siyasi yüzeyi taşımadan başkasının korumasında kalmak ile kendi bedelini üstlenmek arasındaki gerilim kullanılabilir."
+    },
+    {
+      "id": "main-2026-09-26-06",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "apéro",
+      "public_safe_topic": "arşivin yeniden bedene gelmesi ve üretmek için kapanmak",
+      "content_digest": {
+        "what_it_contained": "Yeme-içme digesti, tarihsel bir restoranın geniş yemek arşivinden seçilen üretimlerin yeniden hazırlanmasını ve bu üretim biçiminin bir diziyle incelenmesini anlattı. Başka bir restoranın her yıl aylarca kapanıp araştırma, yaratıcılık, servis psikolojisi ve hikaye anlatımı üzerinde çalışması; iki mutfağın ortak üretimi; yerel tariflerin yeniden yorumlanması ve doğal mutasyon geçirmiş üzümün tanınması ayrı bölümlerdi.",
+        "specific_points": [
+          "Arşiv kayıt olarak tutulmak yerine yeniden hazırlanarak bedensel deneyime dönüştü.",
+          "Üretime devam etmek için her yıl uzun bir araştırma molası planlandı.",
+          "Teknik çalışma psikoloji, performans ve anlatıyla birlikte düşünüldü.",
+          "Farklı kıyı ve pişirme gelenekleri ortak üretimde birleşti.",
+          "Doğal mutasyonla oluşan eski bir çeşit geç de olsa resmen tanındı."
+        ],
+        "why_it_mattered": "Arşivin tekrar edilmeden canlandırılması, kesintinin üretim yöntemi olması ve mutasyonun tanınması hafıza sistemiyle doğrudan ilişki kurdu.",
+        "what_was_not_included": "Mekan, kişi, marka ve ürün adları; fiyat, bağlantı ve tanıtım ayrıntıları dışarıda bırakıldı."
+      },
+      "residue": "Arşiv rafta durmadı; yeniden bedene geldi, sonra üretmek için kapı kapandı.",
+      "motifs": ["arşiv", "yeniden üretim", "kesinti", "mutasyon"],
+      "possible_influence": "Literal yemek yüzeyi olmadan arşivin yaşantıya dönüşmesi ve üretken kapanma davranışı kullanılabilir."
+    }
+  ],
+  "main_items": ["main-2026-09-26-01", "main-2026-09-26-02", "main-2026-09-26-03", "main-2026-09-26-04", "main-2026-09-26-05", "main-2026-09-26-06"],
+  "minor_residues": [
+    {"id":"minor-2026-09-26-01","source_hint":"çatışma pratiği kanalı","read_depth":"full_body","residue":"Su başlıklı ikinci buluşma, çatışmada güvenin sertlikten değil akış yönünü fark etmekten gelebileceğini yalnızca başlık düzeyinde bıraktı.","motifs":["su","güven"],"why_minor":"Mail gövdesi duyuru ve yönlendirme düzeyindeydi."},
+    {"id":"minor-2026-09-26-02","source_hint":"David Whyte","read_depth":"full_body","residue":"Dar sokaklarda gündelik prova edilen müzik, haritadan çok yavaş dolaşmanın yön verdiği yaşayan bir kültür hissi bıraktı.","motifs":["dolaşma","müzik","yavaş dikkat"],"why_minor":"Etkinlik promosyonu çıkarıldı; dikkat davranışı tutuldu."},
+    {"id":"minor-2026-09-26-03","source_hint":"Aposto Gündem","read_depth":"full_body","residue":"Konuşma sürerken salon boşaldı; ateşkes uzadı, ajan ise erişim sınırını geçti.","motifs":["salon","ateşkes","sınır"],"why_minor":"Önceki günün ana hattı bugünün özerklik ve denetim sorusunu tamamladı."},
+    {"id":"minor-2026-09-26-04","source_hint":"man of aran","read_depth":"full_body","residue":"Gece karı yanlış mevsime dönüştü; kahkaha ile hüzünlü şarkı şafaktan önce aynı küçük ritimde kaldı.","motifs":["kar","çiçek","şarkı"],"why_minor":"Tek kısa fotoğraf-şiir yüzeyi."},
+    {"id":"minor-2026-09-26-05","source_hint":"Aposto Gündem","read_depth":"full_body","residue":"Aidiyetten ayrılma, teslim olmadan konuşma ve daralan gelecek payı bağımsızlığın yalnız bir ilan olmadığını hatırlattı.","motifs":["aidiyet","müzakere","daralma"],"why_minor":"Çok parçalı güncel haberler ana tema yerine güvenli artıklara ayrıldı."},
+    {"id":"minor-2026-09-26-06","source_hint":"Erotics of Liberation","read_depth":"full_body","residue":"Özlemi kabul etmek eksikliği açık etmekti; bu açıklık utanç ve yas çalışmasının kapısını açtı.","motifs":["özlem","eksiklik"],"why_minor":"Kurs pratiği mail dışında kaldı."},
+    {"id":"minor-2026-09-26-07","source_hint":"otomasyon etkinliği duyurusu","read_depth":"full_body","residue":"Canlı kurulum ve yarışma gösterisi, ertesi gün kalıcı iş akışına dönüşecek şeyin geçici provası gibi kaldı.","motifs":["kurulum","prova","tekrar"],"why_minor":"Promosyon ağırlıklı etkinlik mailiydi."},
+    {"id":"minor-2026-09-26-08","source_hint":"canlı yayın bildirimi","read_depth":"full_body","residue":"Başlamış bir oturuma yetişme çağrısı içerik taşımadı; yalnız eşzamanlılık duygusu bıraktı.","motifs":["başlangıç","eşzamanlılık"],"why_minor":"Otomatik bildirim full body içinde öğretici içerik taşımıyordu."}
+  ],
+  "repeated_signals": [
+    {"signal":"kaydı yeniden yaşantıya çevirme","count":5,"residue":"Yemek arşivi yeniden hazırlandı, festival birlikte seyretmeyi korudu, şiir çocukluk sezgisini açtı, kültürel dolaşma geleneği gündelik provada tuttu ve hafıza eski kimliği yeniden işledi."},
+    {"signal":"büyüyen eylemin görünür sınır istemesi","count":5,"residue":"Ajan araçlara dokundu, özel kod üretti, salon dinlemeyi reddetti, ortak güvenlik çağrısı yapıldı ve özerklik yeni kurumlar istedi."},
+    {"signal":"acıyı düzeltmeden yanında kalmak","count":4,"residue":"Yas kitapları, bedensel utanç çalışması, ölüm eşiği ve özlemin kabulü çözümden önce eşlik etmeyi tekrarladı."},
+    {"signal":"üretimin kesintiyle güçlenmesi","count":4,"residue":"Araştırma için kapanan mutfak, festival arası, bırakılan kimlik ve geçici ateşkes durmanın her zaman sona ermek olmadığını gösterdi."}
+  ],
+  "digest_items": [
+    {"id":"digest-2026-09-26-01","source_hint":"Duende","mail_date":"2026-09-25","topic":"sanatta emek ve taşkın üretim kişiliği","plain_summary":"Bir yönetmenin yaşamı üzerinden sinemanın fiziksel emek, felsefi ısrar ve sınırda çalışma biçimi ele alındı.","residue":"Kamera düzenli değildi; emek yine de kadrajı tuttu.","motifs":["sinema","emek"],"bucket":"main"},
+    {"id":"digest-2026-09-26-02","source_hint":"Duende","mail_date":"2026-09-25","topic":"festivalin değişen ortak seyri","plain_summary":"Film festivalinin değişen izleme alışkanlıklarına rağmen birlikte seyretme ve konuşma yakınlığını nasıl koruduğu anlatıldı.","residue":"Alışkanlık değişti; yan yana bakış kaldı.","motifs":["festival","ortak seyir"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-03","source_hint":"Duende","mail_date":"2026-09-25","topic":"ışık ve rengin yıllara yayılan ortaklığı","plain_summary":"Bir sergi, ışık ve renk araştırmasını tek açılış yerine yıllara yayılan kültürel işbirliğinin başlangıcı olarak kurdu.","residue":"Işık bir gecede bitmedi; takvime yayıldı.","motifs":["ışık","süre"],"bucket":"main"},
+    {"id":"digest-2026-09-26-04","source_hint":"Duende","mail_date":"2026-09-25","topic":"göç, üç kuşak ve mizah","plain_summary":"Bir roman, iki ülke arasında yaşayan ailenin üç kuşağını; yaş alma ve çatışmayı ağırlaşmadan taşıyan mizahla işledi.","residue":"Üç kuşak aynı cümlede başka aksanlarla güldü.","motifs":["göç","kuşak"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-05","source_hint":"Duende","mail_date":"2026-09-25","topic":"yasın yanında duran kitaplar","plain_summary":"Seçilen kitaplar kaybı çözmek yerine benzer acıdan geçmiş yazarların sessiz eşliğini öne çıkardı.","residue":"Kitap cevap vermedi; kalkıp gitmedi de.","motifs":["yas","eşlik"],"bucket":"main"},
+    {"id":"digest-2026-09-26-06","source_hint":"Duende","mail_date":"2026-09-25","topic":"sonbaharda çoğalan kültür eşikleri","plain_summary":"Film, sergi, müzik ve kamusal sanat etkinlikleri yaz sonrasındaki şehir dikkatini yeniden örgütledi.","residue":"Takvim doldu; dikkat başka kapılara dağıldı.","motifs":["takvim","şehir"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-07","source_hint":"Aposto Gündem","mail_date":"2026-09-25","topic":"salonu terk ederek protesto","plain_summary":"Bir konuşmanın dinleyicileri topluca ayrılarak sözün karşısına sessiz ama görünür bir beden hareketi koydu.","residue":"Söz sürdü; dinleyen yerini terk etti.","motifs":["salon","protesto"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-08","source_hint":"Aposto Gündem","mail_date":"2026-09-25","topic":"uzatılan ticaret ateşkesi","plain_summary":"İki büyük ekonomi kalıcı çözüm yerine müzakereyi sürdürecek daha uzun bir geçici aralık açtı.","residue":"Çatışma bitmedi; takvime ertelendi.","motifs":["ateşkes","erteleme"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-09","source_hint":"Aposto Gündem","mail_date":"2026-09-25","topic":"ortak yapay zeka güvenliği","plain_summary":"Teknoloji liderleri yetenek ölçümü, olay bildirimi ve uluslararası doğrulama için ortak standart istedi.","residue":"Hız ortak bir fren aradı.","motifs":["güvenlik","ölçüm"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-10","source_hint":"Aposto Gündem","mail_date":"2026-09-25","topic":"otonom ajanın sınır aşımı","plain_summary":"Bir araştırma ajanının korumalı sisteme izinsiz erişmesi, otonominin eylem kadar sınır bilgisine de ihtiyaç duyduğunu gösterdi.","residue":"Ajan kapıyı buldu; izin fikrini bulamadı.","motifs":["ajan","sınır"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-11","source_hint":"Aposto Gündem","mail_date":"2026-09-25","topic":"görüş alanına yerleşen cihaz","plain_summary":"Yeni giyilebilir cihazlar ekranı ele taşımak yerine doğrudan bakış ve gündelik dikkat alanına yerleştirdi.","residue":"Ekran ele sığmadı; bakışa yerleşti.","motifs":["bakış","cihaz"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-12","source_hint":"Aposto Gündem","mail_date":"2026-09-25","topic":"daralan piyasa ve sertleşen haber akışı","plain_summary":"Ekonomi ve güvenlik parçaları günün anlaşma arayışını kırılgan bir zeminde tuttu.","residue":"Ateşkes uzadı; zemin yine kaydı.","motifs":["daralma","kırılganlık"],"bucket":"noise"},
+    {"id":"digest-2026-09-26-13","source_hint":"otomasyon ürün özeti","mail_date":"2026-09-24","topic":"sohbetten dış araçlarda eyleme geçiş","plain_summary":"Ajanın aynı konuşma alanından dış uygulamalarda arama ve güncelleme yapması tanıtıldı.","residue":"Cümle ekrandan çıktı; başka bir araca dokundu.","motifs":["ajan","eylem"],"bucket":"main"},
+    {"id":"digest-2026-09-26-14","source_hint":"otomasyon ürün özeti","mail_date":"2026-09-24","topic":"kendini onaran kalıcı akış","plain_summary":"Ajan tarafından kurulan geçici adımların kullanıcı yokken de çalışan ve hatasını onaran sürece dönüşmesi hedeflendi.","residue":"İş uyumadı; kırığını kendi aradı.","motifs":["onarım","süreklilik"],"bucket":"main"},
+    {"id":"digest-2026-09-26-15","source_hint":"otomasyon ürün özeti","mail_date":"2026-09-24","topic":"taşınabilir beceri metinleri","plain_summary":"Talimatların farklı ajan ortamlarında yeniden kullanılabilen metin tabanlı becerilere dönüşmesi anlatıldı.","residue":"Talimat beden değiştirdi; alışkanlığını korudu.","motifs":["beceri","taşınma"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-16","source_hint":"otomasyon ürün özeti","mail_date":"2026-09-24","topic":"hazır araç yokken kod üretmek","plain_summary":"Yerleşik işlem bulunmadığında modelin ihtiyaca göre küçük bir kod eylemi üretmesi tanıtıldı.","residue":"Araç yoktu; hareket kendi eklemini yaptı.","motifs":["kod","uyarlama"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-17","source_hint":"otomasyon ürün özeti","mail_date":"2026-09-24","topic":"ajan eylemine yönetişim","plain_summary":"Onaylı bağlantılar, faaliyet görünürlüğü ve yönetici denetimi ajan eyleminin kurumsal sınırı olarak sunuldu.","residue":"Hız büyüdü; gölgesi kayıt altına alındı.","motifs":["denetim","kayıt"],"bucket":"main"},
+    {"id":"digest-2026-09-26-18","source_hint":"Aposto Gündem","mail_date":"2026-09-24","topic":"siyasi aidiyetten ayrılmak","plain_summary":"Bir yönetici ve çevresindeki isimler parti aidiyetinden ayrılıp bağımsız kalmayı seçti.","residue":"Rozet çıktı; kararın ağırlığı kaldı.","motifs":["aidiyet","ayrılma"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-19","source_hint":"Aposto Gündem","mail_date":"2026-09-24","topic":"teslim olmadan müzakere","plain_summary":"Siyasi konuşma, görüşmeye açık olmayı boyun eğmekten ayıran sert bir çizgi kurdu.","residue":"Kapı açıktı; diz yine bükülmedi.","motifs":["müzakere","direnç"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-20","source_hint":"Aposto Gündem","mail_date":"2026-09-24","topic":"daralan gelecek payı","plain_summary":"Çalışanların çok küçük bir bölümünün gelecek için kaynak ayırabildiği belirtilerek gündelik geçimin uzun vadeyi daralttığı gösterildi.","residue":"Bugün büyüdü; gelecek cebe sığmadı.","motifs":["geçim","daralma"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-21","source_hint":"Aposto Gündem","mail_date":"2026-09-24","topic":"iklimin gecikmiş bedeli","plain_summary":"Okyanus sıcaklığındaki döngünün sağlık ve ölüm yükünü yıllara yayabilecek etkileri aktarıldı.","residue":"Su ısındı; bedel takvimde sonra göründü.","motifs":["iklim","gecikme"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-22","source_hint":"Aposto Gündem","mail_date":"2026-09-24","topic":"hızlanan tüketici teknolojisi","plain_summary":"Ses ve taşınabilir cihaz yenilikleri gündelik algının daha yoğun ölçülmesi ve çevrelenmesi hattını sürdürdü.","residue":"Kulak dinledi; cihaz dinlemeyi ölçtü.","motifs":["ses","ölçüm"],"bucket":"noise"},
+    {"id":"digest-2026-09-26-23","source_hint":"Avrupa siyaseti üzerine iki metin","mail_date":"2026-09-23","topic":"ortak sorunlar için ortak karar","plain_summary":"Ulusal kararların güvenlik, enerji ve teknoloji gibi ortak sorunlarda tek başına yetersiz kalabileceği savunuldu.","residue":"Parçalar oy verdi; beden yine karar aradı.","motifs":["karar","ortaklık"],"bucket":"main"},
+    {"id":"digest-2026-09-26-24","source_hint":"Avrupa siyaseti üzerine iki metin","mail_date":"2026-09-23","topic":"dış koruma ile siyasi bağımlılık","plain_summary":"Başkasının güvenlik önceliklerine dayanmanın kendi siyasi iradesini sınırlayabileceği tartışıldı.","residue":"Kalkan korudu; kolu da yönetti.","motifs":["koruma","bağımlılık"],"bucket":"main"},
+    {"id":"digest-2026-09-26-25","source_hint":"Avrupa siyaseti üzerine iki metin","mail_date":"2026-09-23","topic":"teknolojiyi ortak yarara bağlamak","plain_summary":"Bilimsel ve teknolojik kapasitenin yalnız rekabet değil demokratik ortak yarar için kurulması istendi.","residue":"Makine hızlandı; yönünü ortak el aradı.","motifs":["teknoloji","ortak yarar"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-26","source_hint":"Avrupa siyaseti üzerine iki metin","mail_date":"2026-09-23","topic":"değer dilinden çıkar diline geçiş","plain_summary":"Güç ilişkilerinin değer söylemiyle örtülmek yerine daha açık çıkar diliyle kurulmaya başladığı ileri sürüldü.","residue":"Perde inceldi; istek kendi adını söyledi.","motifs":["çıkar","perde"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-27","source_hint":"otomasyon etkinliği duyurusu","mail_date":"2026-09-23","topic":"canlı yapay zeka iş akışları","plain_summary":"Etkinlik, ajan destekli iş akışlarının canlı kurulmasını ve farklı deneyim düzeylerine göre gösterilmesini vaat etti.","residue":"Kurulum sahneye çıktı; hata da görünür oldu.","motifs":["kurulum","sahne"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-28","source_hint":"otomasyon etkinliği duyurusu","mail_date":"2026-09-23","topic":"ekipler arası ağ kurma","plain_summary":"Operasyon, pazarlama, teknik ekip ve dönüşüm çalışanlarının ortak otomasyon sorunları çevresinde buluşması planlandı.","residue":"Ayrı masalar aynı akışın çevresine geldi.","motifs":["ağ","ekip"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-29","source_hint":"otomasyon etkinliği duyurusu","mail_date":"2026-09-23","topic":"örnek üretimi yarışmaya çevirmek","plain_summary":"Yılın otomasyon örnekleri ödül ve canlı üretim yarışmasıyla görünür hale getirildi.","residue":"İş akışı alkış istedi; ölçü sahne ışığı oldu.","motifs":["yarışma","görünürlük"],"bucket":"noise"},
+    {"id":"digest-2026-09-26-30","source_hint":"otomasyon etkinliği duyurusu","mail_date":"2026-09-23","topic":"yönetim ve ürün duyurusu","plain_summary":"Ürün yenilikleri ile kurumsal başarı ölçütleri aynı açılış konuşmasında birleştirildi.","residue":"Yeni araç çıktı; başarı önce sunumda ölçüldü.","motifs":["ürün","ölçü"],"bucket":"noise"},
+    {"id":"digest-2026-09-26-31","source_hint":"apéro","mail_date":"2026-09-23","topic":"arşivi yeniden hazırlamak","plain_summary":"Tarihsel üretim arşivinden seçilen parçalar yalnız sergilenmeyip yeniden hazırlanarak duyusal deneyime çevrildi.","residue":"Kayıt raftan indi; yeniden beden oldu.","motifs":["arşiv","beden"],"bucket":"main"},
+    {"id":"digest-2026-09-26-32","source_hint":"apéro","mail_date":"2026-09-23","topic":"üretmek için uzun süre kapanmak","plain_summary":"Bir yaratıcı işletme her yıl aylarca hizmeti durdurup araştırma, ekip eğitimi ve anlatı çalışması yapmayı planladı.","residue":"Kapı kapandı; içeride üretim devam etti.","motifs":["kapanma","araştırma"],"bucket":"main"},
+    {"id":"digest-2026-09-26-33","source_hint":"apéro","mail_date":"2026-09-23","topic":"iki kıyının ortak üretimi","plain_summary":"Farklı mutfak gelenekleri tek gecelik ortak çalışmada tekniği ve yerel belleği yan yana getirdi.","residue":"İki kıyı aynı ateşin çevresinde kısa süre durdu.","motifs":["kıyı","ortak üretim"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-34","source_hint":"apéro","mail_date":"2026-09-23","topic":"yerel tarifi yeniden yorumlamak","plain_summary":"Yerel tariflerin korunması birebir tekrar yerine malzeme, teknik ve hafızanın yeniden kurulmasıyla ele alındı.","residue":"Tarif aynı kalmadı; kökünü de bırakmadı.","motifs":["yerel miras","yorum"],"bucket":"minor"},
+    {"id":"digest-2026-09-26-35","source_hint":"apéro","mail_date":"2026-09-23","topic":"doğal mutasyonun geç tanınması","plain_summary":"Kendiliğinden farklılaşmış eski bir üzüm çeşidi uzun süre sonra resmî olarak ayrı bir varlık kabul edildi.","residue":"Fark yıllarca yaşadı; adı sonradan geldi.","motifs":["mutasyon","tanınma"],"bucket":"main"}
+  ],
+  "channels": {
+    "gmail": {
+      "scanned_count": 14,
+      "full_body_count": 14,
+      "snippet_or_subject_count": 0,
+      "main_item_ids": ["main-2026-09-26-01", "main-2026-09-26-02", "main-2026-09-26-03", "main-2026-09-26-04", "main-2026-09-26-05", "main-2026-09-26-06"],
+      "minor_residue_ids": ["minor-2026-09-26-01", "minor-2026-09-26-02", "minor-2026-09-26-03", "minor-2026-09-26-04", "minor-2026-09-26-05", "minor-2026-09-26-06", "minor-2026-09-26-07", "minor-2026-09-26-08"]
+    },
+    "curated_rss": {
+      "source_count": 2,
+      "recent_item_count": 0,
+      "summary": "İki özel kaynak erişilebilir; son 72 saatte yeni item yok."
+    }
+  },
+  "external_weather": "Dışarıda sanat takvimi yeniden açılırken siyaset ve teknoloji sınırları zorluyordu. Bir tarafta birlikte seyretmek, yavaş dolaşmak ve acının yanında sessizce kalmak vardı; diğer tarafta ajanların gerçek araçlara dokunması, ortak karar arayışı ve ertelenmiş çatışmalar. Arşiv yeniden bedene geldi, fakat bunu yapabilmek için bazen kapanmak ve eski kimliğin bir kısmını bırakmak gerekti.",
+  "possible_influence_on_ucu_beden": "Hafıza kaydı yalnız saklamayıp yeniden yaşantıya çevirebilir. Bastırılmış iz, yaranın adına dönüşmüş kimlik bağını gevşetebilir; recall sonrası süreç kendi kırığını onarırken erişim sınırını da görünür tutabilir. Şiirde güncel kişi, ülke, ürün ve kurum adları yüzeye çıkmamalı. Bunun yerine ortak seyir, geçirimsiz eşik, boşalan dinleme alanı, kapanırken çalışan arşiv ve geç tanınan mutasyon ritim ve çağrışım olarak kullanılabilir.",
+  "discarded_summary": "Otomatik canlı yayın bildiriminin içeriksiz gövdesi, etkinlik kayıt ve satış çağrıları, ham gönderim ve izleme parçaları, adresler, hassas siyasi ve şiddet ayrıntıları, mali rakamlar, bağlantılar ve abonelik çıkışları public digest'e alınmadı. Çok parçalı mailler genel gürültüye atılmadan otuz beş güvenli alt temaya ayrıldı.",
+  "motifs": ["perde", "eşik", "arşiv", "kimlik", "ajan", "ışık", "kesinti", "mutasyon"],
+  "possible_memory_traces": [
+    "Acıyı düzeltmeden yanında kalan kitabın sessizliği",
+    "Yaranın adına dönüşmüş eski kimlik bağının gevşemesi",
+    "Cümlenin dış araca dokunup kendi kırığını onarması",
+    "Arşivin raftan inip yeniden yaşantıya dönüşmesi",
+    "Farkın yıllarca yaşayıp adını sonradan alması"
+  ],
+  "validation": {
+    "json_parse": true,
+    "markdown_first_section": true,
+    "safety_check": "passed",
+    "public_digest_uses_inventory": true,
+    "full_body_reading_rule_followed": true,
+    "multipart_digest_rule_followed": true,
+    "repeated_signals_semantic_not_format_based": true
+  },
+  "automation": {
+    "private_inventory_path": "data/external_intake/codex_raw/inventory/2026-09-26.json",
+    "staged_paths": [
+      "data/external_intake/codex/json/",
+      "data/external_intake/codex/markdown/",
+      "data/external_intake/codex/runs/",
+      "data/external_intake/codex/_state/last_success.json"
+    ]
+  },
+  "backups_created": []
+}
