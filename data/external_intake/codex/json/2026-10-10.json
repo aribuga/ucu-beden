@@ -1,0 +1,218 @@
+{
+  "version": 1,
+  "source": "codex_external_intake",
+  "date": "2026-10-10",
+  "generated_at": "2026-10-10T04:08:14.093Z",
+  "timezone": "Europe/Istanbul",
+  "provider": "codex",
+  "safety": {
+    "public_safe": true,
+    "raw_body_included": false,
+    "raw_urls_included": false,
+    "email_addresses_included": false,
+    "verification_or_transaction_data_included": false,
+    "long_quotes_included": false
+  },
+  "counts": {
+    "scanned_mail_count": 17,
+    "full_body_count": 17,
+    "snippet_or_subject_count": 0,
+    "multipart_digest_count": 6,
+    "curated_rss_source_count": 2,
+    "curated_rss_recent_item_count": 0,
+    "digest_items_count": 30,
+    "main_item_count": 6,
+    "minor_residue_count": 8,
+    "repeated_signal_count": 5
+  },
+  "reading_summary": {
+    "plain_summary": "Bugün okunan maillerde üç belirgin hat vardı. İlk hat, canlı sistemlerin yavaşlık, tekrar ve fazlalık sayesinde dayanıklı kalması; bedenin dışsal ahlak yerine ilişki, bağlam ve sonuç üzerinden ayırt etmesi; masum görünmek yerine zararı görüp davranışı değiştirmek üzerineydi. İkinci hat, yapay zekânın akademik değerlendirmede insan yargısını nasıl destekleyebileceğini ve otomasyon pilotlarının gerçek sistemlere geçtiğinde hangi sınavlardan geçtiğini tartıştı. Üçüncü hat ise sinema, çoğul sanat tarihi, genç sanatçıların üretim koşulları, ekonomik bekleme, savaş kararlarının takvime bağlanması, kent kırılganlığı, iklim ve edebiyat gibi parçalı kültür ve gündem alanlarına yayıldı.\n\nKısa metinlerde kişinin kendi yarasına bakım sözü vermesi, eski bir fotoğraftan annenin sigara tutuşunun geri gelmesi ve uyanışın planlardan önceki açıklığı öne çıktı. Bir yayın keşif bildirimi yalnız yeni bir ruh sağlığı ve kültür kanalını gösterdi; özgün içerik taşımadığı için ana item yapılmadı. Özel RSS kaynakları erişilebilirdi fakat son 72 saatte yeni kayıt yoktu.",
+    "what_was_in_the_emails": [
+      "Canlı sistemlerin verimsizlik, tekrar ve öngörülemezlik sayesinde dayanıklılık kazanmasına dayanan uzun bir beden ve etik denemesi.",
+      "Masumiyet, utanç ve öz-ceza yerine somut hesap verebilirlik ve davranış değişikliği öneren ayrıntılı bir ilişki yazısı.",
+      "Yapay zekâyı insan muhakemesinin yerine koymadan akademik hakemlik iş akışına eklemeyi deneyen açık yayın modeli.",
+      "Sınıfsal ayrıcalık, empati, çoğul sanat tarihi, genç üretim koşulları, metafizik sinema ve bibliyoterapiyi bir araya getiren kültür seçkisi.",
+      "Finansal tasfiye, siyasi takvim, ekonomik korunma, kentsel kırılganlık, edebiyat ve iklim salınımına dağılan genel gündem seçkisi.",
+      "Kişinin kendi yarasına bakım sözü vermesi, anne hafızası ve uyanma eşiği üzerine üç kısa metin."
+    ],
+    "what_was_in_curated_rss": [
+      "Elektronik edebiyat ve oyun arşivi erişilebilirdi; en yeni kayıt Mart 2026 tarihliydi.",
+      "Sanat ve düşünce yayını erişilebilirdi; en yeni kayıt Şubat 2026 tarihliydi.",
+      "Son 72 saatlik pencerede yeni özel RSS itemı yoktu."
+    ],
+    "dominant_topics": ["canlılık ve dayanıklılık", "bedensel etik", "hesap verebilirlik", "insan yargısı ve yapay zekâ", "çoğul kültürel tarih", "ekonomik ve kentsel kırılganlık"],
+    "notable_absences": ["Özel RSS kaynaklarında yeni güncel item yoktu.", "Yayın keşif bildirimi özgün yazı taşımıyordu.", "Güvenlik, işlem ve abonelik ayrıntıları public sindirime alınmadı."],
+    "overall_direction": "Dış dünya bugün UCU BEDEN'i kusursuzluk ve verimlilik iddiasından uzaklaştırıp, yavaşlık içinde dayanıklı kalan bedene, sonucu üstlenen ilişkiye ve otomasyon içinde korunması gereken insan yargısına doğru itti."
+  },
+  "summary": "Yavaşlık canlılığı korudu; masumiyetin yerini onarım, otomasyonun merkezini insan yargısı aldı. Kültür ve gündem seçkileri aynı anda çoğul hafıza ile kırılgan kurumları gösterdi.",
+  "items": [
+    {
+      "id": "main-2026-10-10-01",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "bedensel özgürleşme denemesi",
+      "public_safe_topic": "canlılığı koruyan verimsizlik",
+      "content_digest": {
+        "what_it_contained": "Metin, canlı sistemlerin kusursuz performansla değil yavaşlık, tekrar, fazlalık ve öngörülemezlik payıyla değişken koşullara dayanabildiği fikrini kurdu. Ardından üretkenliği canlılığın yakın taklidi, dışsal ahlakı ise bedensel ayırt etmenin yakın taklidi olarak tartıştı; etiği saflık yerine bağlam, güç, rıza, sonuç ve ilişki içinde düşündü.",
+        "specific_points": ["Sistemin fazlalıkları hata değil, istikrarsız çevrede hareket payı olarak görüldü.", "Üretkenlik canlılığın hareketini taklit ederken onu mümkün kılan verimsiz alanları budayabiliyor.", "Bedensel bilgi, ihtiyaç ve sınırların dışarıdan dayatılan iyilik ölçüsüne teslim edilmesine itiraz edildi.", "Etik, kusursuz görünmekten çok bağlam ve ilişkinin sonuçlarına dikkat etmek olarak kuruldu.", "Özgürleşme fikrinin gündelik alışkanlık ve ilişkide bedenleşmedikçe eksik kalacağı savunuldu."],
+        "why_it_mattered": "UCU BEDEN'in tekrar, fazlalık ve yavaşlığı arıza olarak değil canlılığın dayanıklılık mekanizması olarak işlemesine güçlü bir kavramsal zemin verdi.",
+        "what_was_not_included": "Siyasi ve dinî genellemeler, kişi ve kurum adları, kurs tanıtımı, doğrudan alıntılar ve bağlantılar çıkarıldı."
+      },
+      "residue": "Fazlalık temizlenince sistem hızlandı; ama değişen havada eğilecek yeri kalmadı.",
+      "motifs": ["yavaşlık", "fazlalık", "beden", "dayanıklılık"],
+      "possible_influence": "Şiir ritmi gereksiz görünen bir geri dönüşü koruyabilir; memory sistemi de aynı izi silmek yerine onun esneme payını okuyabilir."
+    },
+    {
+      "id": "main-2026-10-10-02",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "çatışma ve hesap verebilirlik denemesi",
+      "public_safe_topic": "masumiyet yerine onarım",
+      "content_digest": {
+        "what_it_contained": "Uzun yazı, kişinin zarar verebilme ihtimalini görmemek için kullandığı gündelik kaçınma yollarını somutlaştırdı. Niyete sığınmak, hızlı özürle gerilimi kapatmak, kendini en kötü kişi ilan edip karşı tarafı teselliye zorlamak, terapötik dili kalkan yapmak, travmayı açıklamadan muafiyet üretmek ve bağışlanmayı onarımın kanıtı saymak ele alındı.",
+        "specific_points": ["Doğru dili öğrenmenin, ilişkide zor cümleyi söylemekten kaçışa dönüşebileceği gösterildi.", "Utanç içinde çökmenin maddi bir değişiklik üretmediğinde hesap verebilirlik olmadığı vurgulandı.", "Hızlı özür, davranışın etkisini anlamak yerine rahatsızlığı sonlandırma aracı olabiliyor.", "Geçmiş zarar davranışı açıklayabilir; ancak başkasına olan maliyeti ortadan kaldırmıyor.", "Onarımın bağışlanma ya da ilişkiye geri kabul garantisi vermediği belirtildi."],
+        "why_it_mattered": "UCU BEDEN'e kendini açıklayan veya cezalandıran bir iç monolog yerine, kusuru görünür kılıp biçimi gerçekten değiştiren bir mutation dili önerdi.",
+        "what_was_not_included": "Kişisel itiraf ayrıntıları, sert ifadeler, kurs satışları, doğrudan liste cümleleri ve bağlantılar çıkarıldı."
+      },
+      "residue": "Kusur hüküm olmadı; davranışın değişebileceği ilk somut yere dönüştü.",
+      "motifs": ["masumiyet", "utanç", "onarım", "yakınlık"],
+      "possible_influence": "Hafıza izi kendini suçlamak için değil, bir sonraki çağrıda neyin değişmesi gerektiğini göstermek için geri dönebilir."
+    },
+    {
+      "id": "main-2026-10-10-03",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "açık akademik yayın deneyi",
+      "public_safe_topic": "yapay zekâ ile insan yargısı arasında yeni hakemlik",
+      "content_digest": {
+        "what_it_contained": "Bir akademik dergi, yapay zekâ kullanımını saklamak ya da bütünüyle yasaklamak yerine onu denetlenebilir bir iş akışına yerleştiren özel sayı deneyi açtı. Yazarların model çıktılarını doğrulaması, ortak bir değerlendirme yönergesinin taslakları başvuru öncesi sınaması, hakemlerin teorik değer ve kavramsal tutarlılığa odaklanması ve sürecin nitel ve nicel olarak ayrıca incelenmesi önerildi.",
+        "specific_points": ["Araç kullanımına izin verildi; sorumluluk ve nihai onay yazarlarda bırakıldı.", "Tek seferde üretilmiş, kavramsal olarak zayıf metinler hız uğruna kabul edilmedi.", "Ortak değerlendirme yönergesi yazar ve editör arasında görünür bir kalite eşiği kurdu.", "Hakemlerin zamanı biçim düzeltmekten kavramsal katkıyı tartmaya kaydırıldı.", "Yeni iş akışının kendisi metabilimsel bir araştırma çıktısı olarak ele alındı."],
+        "why_it_mattered": "UCU BEDEN'in araçlarını gizlemek yerine sınırlarını görünür kılan, otomasyonu insan muhakemesine bağlayan bir üretim modeli sundu.",
+        "what_was_not_included": "Dergi ve şirket adları, takvim ayrıntıları, başvuru bağlantıları, doğrudan alıntılar ve polemik dili çıkarıldı."
+      },
+      "residue": "Makine ilk eleği tuttu; son ağırlığı yine kavramı anlayan el tarttı.",
+      "motifs": ["yargı", "iş akışı", "doğrulama", "eşik"],
+      "possible_influence": "Generation ve validator katmanları yalnız temiz çıktı üretmek için değil, insan seçiminin nerede devreye girdiğini açık tutmak için düşünülebilir."
+    },
+    {
+      "id": "main-2026-10-10-04",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "kültür ve sanat seçkisi",
+      "public_safe_topic": "ayrıcalık, çoğul sanat tarihi ve gündelik metafizik",
+      "content_digest": {
+        "what_it_contained": "Çok parçalı kültür seçkisi, bir çocuğun kaçırılması üzerinden sınıfsal ayrıcalık ve kriz anındaki empatinin sınırlarını tartışan film söyleşisiyle açıldı. Ardından sanat tarihini yalnız kronolojiyle değil farklı dönem ve coğrafyaları ortak meselelerde buluşturarak kuran sergi; genç sanatçıların üretimi sürdürebilme koşulları; gündelik küçük anlarda vicdan ve metafizik arayan sinema ve kendini ifade etmekte zorlanan ergenler için bibliyoterapi geldi.",
+        "specific_points": ["Kriz, insan hayatına biçilen değerin sınıfsal olarak değişip değişmediğini sınadı.", "Sanat tarihi doğrusal zamanın yanında tematik karşılaşmalarla da kurulabildi.", "Farklı coğrafyalardan işler özgüllüklerini yitirmeden aynı düşünsel düzlemde buluşturuldu.", "Genç üretimin yalnız yetenekle değil sürdürülebilir maddi ve kurumsal koşullarla ilişkisi vurgulandı.", "Büyük metafizik sorular gündelik hayatın küçük ahlaki anlarında arandı."],
+        "why_it_mattered": "UCU BEDEN'e kronolojik arşivi tematik kümelere bükme ve büyük soruyu küçük bir dikkat değişiminde hissettirme yolları verdi.",
+        "what_was_not_included": "Kişi, kurum ve eser adları; müzayede fiyatları; birleşme rakamları; etkinlik ve sponsor ayrıntıları çıkarıldı."
+      },
+      "residue": "Zaman çizgisi çözülünce birbirinden uzak işler aynı sorunun çevresinde karşılaştı.",
+      "motifs": ["ayrıcalık", "çoğulluk", "vicdan", "karşılaşma"],
+      "possible_influence": "Memory map kronolojik yakınlık dışında ortak soru ve imge üzerinden de zincir kurabilir; şiir büyük kavramı küçük bir jestte gösterebilir."
+    },
+    {
+      "id": "main-2026-10-10-05",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "genel gündem seçkisi",
+      "public_safe_topic": "bekleyen para, takvime bağlanan karar ve kırılgan şehir",
+      "content_digest": {
+        "what_it_contained": "Gündem seçkisi, yatırım fonlarının tasfiyesi ve yüz binlerce kişinin ödeme bekleyişiyle başladı; hukuki ve siyasi tartışmanın finansal işlemler etrafında büyüdüğünü anlattı. Askerî kararların seçim takvimine bağlanması, rezerv kaybı ve yöneticilerin mevcut koşulları koruma isteği, yapay zekâya uyum baskısı, kentte yapı güvenliği, edebiyat ödülü ve güçlü iklim salınımı uyarısı diğer hatlardı.",
+        "specific_points": ["Tasfiye süreci ödeme bekleyen geniş bir kalabalık ile kurumsal karar arasındaki gecikmeyi görünür kıldı.", "Askerî seçeneğin seçim tarihine göre ertelenmesi, savaş kararının siyasi takvimle bağını gösterdi.", "Rezerv ve portföy kayıpları ekonomik korunma refleksini güçlendirdi.", "Yöneticiler büyümeden çok mevcut koşulları korumayı önceliklendirdi.", "Yapı çökmesi ve iklim salınımı, farklı ölçeklerde altyapı ile çevrenin kırılganlığını yan yana getirdi."],
+        "why_it_mattered": "UCU BEDEN'in dış dünya havasına bekleme, korunma, ertelenmiş karar ve yaklaşan çevresel salınım gibi birbirini kesen gerilimler ekledi.",
+        "what_was_not_included": "Kişi ve kurum adları, para miktarları, yatırım tavsiyesi gibi okunabilecek ayrıntılar, şiddet haberleri, sponsorlu içerik ve bağlantılar çıkarıldı."
+      },
+      "residue": "Karar ertelendi; para bekledi; bina ve hava aynı anda taşıma sınırını hatırlattı.",
+      "motifs": ["bekleme", "takvim", "korunma", "kırılganlık"],
+      "possible_influence": "Şiirde dış dünya tek bir haber olarak değil, ertelenmiş kararların ve taşıma sınırlarının ritmi olarak içeri girebilir."
+    },
+    {
+      "id": "main-2026-10-10-06",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "adalet ve onarım denemesi",
+      "public_safe_topic": "zararı durdurmaktan koşulu değiştirmeye",
+      "content_digest": {
+        "what_it_contained": "Deneme, dönüştürücü adaleti zararı mazur göstermek değil; zararı durdurmak, acıyla yüzleşmek, mümkün olan yerde onarmak ve benzer zararı yeniden üreten koşulları değiştirmek olarak açıkladı. Ceza ile hesap verebilirliği ayırdı, insanlıktan çıkarma refleksini sorguladı ve kusurlu bir onarımın kusursuz kelimeleri beklemekten daha gerçek olabileceğini savundu.",
+        "specific_points": ["Zarar yalnız tek bir kişiye indirgenmedi; güç ve ilişki koşulları da sorumluluk alanına alındı.", "Onarım kaybedileni geri vermeye çalışırken dönüşüm tekrarın koşullarını da hedefledi.", "İnsanlıktan çıkarma, davranışı üreten koşullara bakma zorunluluğunu silebiliyor.", "Hesap verme zorluğunun kişinin geçmişte alamadığı özür ve onarımla bağlantısı kuruldu.", "Beden yalnız zarardan kaçmayı değil kurulmak istenen olumlu ilişkiyi de öğreniyor."],
+        "why_it_mattered": "Bugünün masumiyet ve bedensel etik metinlerini tamamlayarak UCU BEDEN'e silme yerine koşulu ve ilişkiyi dönüştüren bir hafıza mantığı verdi.",
+        "what_was_not_included": "Şiddet ayrıntıları, kişisel aile geçmişi, kişi ve kurum adları, doğrudan alıntılar ve ticari çağrılar çıkarıldı."
+      },
+      "residue": "Zarar durduğunda iş bitmedi; onu mümkün kılan düzen hâlâ çalışıyordu.",
+      "motifs": ["onarım", "koşul", "sorumluluk", "ilişki"],
+      "possible_influence": "Mutation bir izi cezalandırıp silmek yerine hangi koşulda sertleştiğini ve başka bir ilişkide nasıl değişebileceğini taşıyabilir."
+    }
+  ],
+  "minor_residues": [
+    {"id": "minor-2026-10-10-01", "source_hint": "çatışma pratiği", "plain_summary": "Kişinin bir yarasına ya da içsel yaşına düzenli bakım verme sözü yazması önerildi.", "residue": "Yara bir kimlik değil, sürdürülecek bakım ilişkisi oldu.", "motifs": ["söz", "bakım", "yara"]},
+    {"id": "minor-2026-10-10-02", "source_hint": "kısa şiir", "plain_summary": "Eski bir fotoğraf annenin sigara tutuşunu çağırdı; tek haz olarak savunulan alışkanlık hem ölüm nedeni hem hayatın gerçek çeşitliliği bakımından sessizce tersyüz edildi.", "residue": "Bir el hareketi, yıllar sonra savunulan cümleyi iki taraftan açtı.", "motifs": ["anne", "fotoğraf", "haz"]},
+    {"id": "minor-2026-10-10-03", "source_hint": "yayın keşif bildirimi", "plain_summary": "Ruh sağlığı, kültür, siyaset ve bağ kurma biçimleri üzerine yeni bir okuma kanalı önerildi; özgün makale yoktu.", "residue": "Henüz içerik taşımayan yeni bir düşünce kapısı açıldı.", "motifs": ["keşif", "ruh sağlığı", "bağ"]},
+    {"id": "minor-2026-10-10-04", "source_hint": "çatışma meditasyonu", "plain_summary": "Eski bir alıştırmaya öğrenilmiş haysiyet ve seçim duygusuyla yeniden dönme önerildi.", "residue": "Aynı egzersiz, değişmiş bir bedenle başka sonuç verdi.", "motifs": ["tekrar", "haysiyet", "seçim"]},
+    {"id": "minor-2026-10-10-05", "source_hint": "otomasyon konferansı", "plain_summary": "Yapay zekâ pilotlarının üretim, yönetişim, ölçek ve ekip benimsemesi sınavları dört alt temaya ayrıldı.", "residue": "Demo gerçek sisteme değince ciladan önce dayanıklılık göründü.", "motifs": ["pilot", "ölçek", "benimseme"]},
+    {"id": "minor-2026-10-10-06", "source_hint": "dijital kültür denemesi", "plain_summary": "Kısa video, özet ve mikro dizinin hız ekonomisinde bağlamı ve kültürel dokuyu nasıl incelttiği tartışıldı.", "residue": "Özet içeriği taşıdı; dokuyu geride bıraktı.", "motifs": ["dikkat", "hız", "doku"]},
+    {"id": "minor-2026-10-10-07", "source_hint": "malzeme ve sofra seçkisi", "plain_summary": "Yaşlı bağlar, mevsimlik mutfak ve atık malzemenin ikinci işlevi aynı seçkide buluştu.", "residue": "Yaş ve artık, verimsizlik değil saklanan kapasite oldu.", "motifs": ["yaş", "mevsim", "malzeme"]},
+    {"id": "minor-2026-10-10-08", "source_hint": "şiir ve düşünce", "plain_summary": "Uyanışın planlardan önceki kısa açıklığı ve insanın gizli olanı görünür taşıması üzerine bir şiir okundu.", "residue": "Plan başlamadan önce günün küçük kapısı açıktı.", "motifs": ["uyanma", "eşik", "gizli miras"]}
+  ],
+  "repeated_signals": [
+    {"signal": "saf görünmek yerine sonucu üstlenmek", "count": 4, "residue": "Adalet, masumiyet, sahicilik ve bedensel etik metinleri aynı anlamı tekrarladı: ilişkiyi koruyan şey kusursuz kimlik değil, etkinin görülmesi ve davranışın değişmesiydi."},
+    {"signal": "yavaşlık ve fazlalığın dayanıklılık üretmesi", "count": 3, "residue": "Canlı sistemler, yaşlı bağlar ve plan öncesi uyanma anı; hızlı temizliğin kaybettiği hareket payını farklı yerlerden geri getirdi."},
+    {"signal": "otomasyon içinde insan yargısını korumak", "count": 3, "residue": "Hakemlik deneyi, üretime geçen pilotlar ve ekip çapında benimseme; aracın tek başına karar değil, doğrulanan bir iş akışı olması gerektiğini yineledi."},
+    {"signal": "zaman çizgisini tematik yakınlıkla bükmek", "count": 3, "residue": "Çoğul sanat tarihi, kültürel özet eleştirisi ve hafızadan dönen fotoğraf; uzak dönemlerin ortak bir soru çevresinde buluşabileceğini gösterdi."},
+    {"signal": "korunma isteğinin daralan dünyası", "count": 4, "residue": "Finansal bekleme, mevcut koşulu koruma, siyasi kararın ertelenmesi ve kentsel kırılganlık; dış dünyanın büyümekten çok düşmeden kalmaya çalıştığını hissettirdi."}
+  ],
+  "digest_items": [
+    {"id":"digest-2026-10-10-01","source_hint":"kültür seçkisi","topic":"krizde sınıfsal ayrıcalık","plain_summary":"Bir gerilim hikâyesi, çocuğun hayatına biçilen değer ve empati kapasitesinin sınıfsal konuma göre değişmesini sınadı.","residue":"Kriz herkesi eşitlemedi; kimi hayatın ağırlığı daha erken tartıldı.","motifs":["ayrıcalık","empati","kriz"],"bucket":"main"},
+    {"id":"digest-2026-10-10-02","source_hint":"kültür seçkisi","topic":"çoğul sanat tarihi","plain_summary":"Farklı dönem ve coğrafyalardaki işler kronoloji yerine ortak meseleler çevresinde yan yana getirildi.","residue":"Tarih çizgi olmaktan çıkıp karşılaşma alanına dönüştü.","motifs":["zaman","çoğulluk","karşılaşma"],"bucket":"main"},
+    {"id":"digest-2026-10-10-03","source_hint":"kültür seçkisi","topic":"genç üretimin koşulları","plain_summary":"Genç sanatçıların yalnız görünür olması değil, üretimi sürdürebilecek destek ve zaman bulması tartışıldı.","residue":"Yetenek tek başına yetmedi; üretim kendine koşul istedi.","motifs":["destek","süreklilik","üretim"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-04","source_hint":"kültür seçkisi","topic":"gündelik metafizik","plain_summary":"Sinema, büyük soruları olağan hayatın küçük vicdan anlarında görünür kılan bir araç olarak ele alındı.","residue":"Büyük soru kapıyı çalmadı; sıradan bir kararın içinde bekledi.","motifs":["vicdan","gündelik","metafizik"],"bucket":"main"},
+    {"id":"digest-2026-10-10-05","source_hint":"kültür seçkisi","topic":"ifade için kitapla aracılık","plain_summary":"Kendini ifade etmekte zorlanan ergenler için farklı duygusal girişler sunan bir okuma seçkisi hazırlandı.","residue":"Söylenemeyen şey önce başka birinin sayfasında nefes aldı.","motifs":["ifade","okuma","aracılık"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-06","source_hint":"kültür seçkisi","topic":"kültürün ekonomik yoğunlaşması","plain_summary":"Medya varlıklarının tek çatı altında toplanması, kültürel dolaşım ile kurumsal yoğunlaşmayı yan yana getirdi.","residue":"Çok ses aynı dağıtım kapısına yaklaştı.","motifs":["medya","yoğunlaşma","dolaşım"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-07","source_hint":"gündem seçkisi","topic":"tasfiye ve bekleyen ödeme","plain_summary":"Finansal tasfiye, geniş bir yatırımcı kitlesinin kurumsal ve hukuki kararlar arasında ödeme beklemesine dönüştü.","residue":"Para rakam olmaktan çıkıp geciken zamana dönüştü.","motifs":["bekleme","tasfiye","gecikme"],"bucket":"main"},
+    {"id":"digest-2026-10-10-08","source_hint":"gündem seçkisi","topic":"savaş kararının siyasi takvimi","plain_summary":"Askerî seçeneğin seçim sonrasına bırakılması, güvenlik kararının sandık takvimine göre ayarlanmasını görünür kıldı.","residue":"Silah sustuğu için değil takvim henüz dönmediği için bekledi.","motifs":["takvim","erteleme","karar"],"bucket":"main"},
+    {"id":"digest-2026-10-10-09","source_hint":"gündem seçkisi","topic":"ekonomik korunma refleksi","plain_summary":"Rezerv kaybı ve yöneticilerin mevcut koşulları koruma eğilimi, büyümeden önce elde kalanı tutma isteğini gösterdi.","residue":"Gelecek planı küçüldü; bugünü kaybetmeme hesabına dönüştü.","motifs":["rezerv","korunma","daralma"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-10","source_hint":"gündem seçkisi","topic":"yapay zekâya uyum baskısı","plain_summary":"İş dünyası belirsizlik içinde korunmayı isterken, yapay zekâ araçlarına uyum kariyer avantajı olarak sunuldu.","residue":"Yerinde kalmak için bile yeni bir hıza yetişmek gerekti.","motifs":["uyum","iş","hız"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-11","source_hint":"gündem seçkisi","topic":"kentsel taşıma sınırı","plain_summary":"Bir yapı çökmesi, şehirde gündelik hayatın görünmez bakım ve denetim ağlarına bağlılığını hatırlattı.","residue":"Duvar bir anda değil, uzun süre taşınamayan yük altında sustu.","motifs":["şehir","yapı","bakım"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-12","source_hint":"gündem seçkisi","topic":"şiirin kamusal olarak tanınması","plain_summary":"Edebiyat alanındaki büyük bir ödül, parçalı düşünce ve türler arasında dolaşan şiirsel çalışmayı gündemin ortasına taşıdı.","residue":"Kesik düşünce bir gün kamusal merkeze ulaştı.","motifs":["şiir","tanınma","parça"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-13","source_hint":"gündem seçkisi","topic":"yaklaşan iklim salınımı","plain_summary":"Güçlü bir okyanus-atmosfer salınımı ihtimali, hava düzeninin uzak bir değişimle geniş coğrafyaları etkileyebileceğini gösterdi.","residue":"Uzak su ısındı; henüz görmeyen şehirlerin havası değişmeye başladı.","motifs":["iklim","salınım","uzak etki"],"bucket":"main"},
+    {"id":"digest-2026-10-10-14","source_hint":"otomasyon seçkisi","topic":"pilotun üretimle sınanması","plain_summary":"Yapay zekâ fikrinin değeri yalnız demo üretmesiyle değil gerçek sistemde kalması, yönetişimden geçmesi ve karar verene kanıt sunmasıyla ölçüldü.","residue":"Fikir sisteme değdiğinde cilası değil dayanıklılığı göründü.","motifs":["pilot","üretim","kanıt"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-15","source_hint":"otomasyon seçkisi","topic":"kanıtlanmış çerçeveyi uyarlamak","plain_summary":"Hazır yaklaşımı körlemesine kopyalamak yerine kanıtlanmış parçaları yerel süreçlere uyarlamak önerildi.","residue":"Çerçeve taşındı ama yeni zeminin ölçüsüne göre yeniden büküldü.","motifs":["çerçeve","uyarlama","yerel süreç"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-16","source_hint":"otomasyon seçkisi","topic":"ajan merkezli yeniden kuruluş","plain_summary":"Bir şirketin ajan sistemlerini yan araç olmaktan çıkarıp işleyişin merkezine yerleştirmesi tartışıldı.","residue":"Araç masaya eklenmedi; masanın düzeni onun çevresinde değişti.","motifs":["ajan","kuruluş","merkez"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-17","source_hint":"otomasyon seçkisi","topic":"benimseme boşluğu","plain_summary":"Teknik olarak çalışan aracın ekip tarafından kullanılmaması, üretim sorununun yalnız kod değil alışkanlık ve güven sorunu olduğunu gösterdi.","residue":"Sistem hazırdı; insan ritmi henüz ona yer açmamıştı.","motifs":["benimseme","alışkanlık","güven"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-18","source_hint":"önceki gündem seçkisi","topic":"siyasi aidiyetin yeniden kurulması","plain_summary":"Siyasi saf değişimi, aidiyetin sabit kimlik değil koşullarla yeniden yazılan bir konum olduğunu gösterdi.","residue":"Yer değişince geçmiş silinmedi; yeni safta başka türlü okunmaya başladı.","motifs":["aidiyet","konum","geçmiş"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-19","source_hint":"önceki gündem seçkisi","topic":"barınmanın finansal dile sıkışması","plain_summary":"Konut hakkı ve kiralama tartışmaları, yaşanacak yer ile yatırım aracının aynı nesnede çatışmasını taşıdı.","residue":"Çatı, ev olmadan önce tabloda değer oldu.","motifs":["barınma","ev","değer"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-20","source_hint":"önceki gündem seçkisi","topic":"hesaplamanın fiziksel bedeli","plain_summary":"Dijital altyapının enerji ve kaynak ihtiyacı, görünmez hesaplamanın maddi ağırlığını açığa çıkardı.","residue":"Ekranın hafifliği başka yerde ağır bir tesis olarak yükseldi.","motifs":["enerji","hesaplama","altyapı"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-21","source_hint":"önceki gündem seçkisi","topic":"deniz ile araştırma arasındaki gerilim","plain_summary":"Deniz kullanımı, güvenlik ve bilimsel araştırma aynı alanın farklı sahiplik ve erişim iddialarını karşı karşıya getirdi.","residue":"Aynı su hem sınır hem laboratuvar oldu.","motifs":["deniz","erişim","araştırma"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-22","source_hint":"önceki gündem seçkisi","topic":"ekonomik küçülmenin gündelik ritmi","plain_summary":"Daralan ekonomi, büyük göstergelerden önce harcama, bekleme ve korunma davranışlarında hissedildi.","residue":"İstatistik küçüldü; gün önce daha az hareket etmeye başladı.","motifs":["daralma","gündelik","korunma"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-23","source_hint":"dijital kültür denemesi","topic":"kısa videonun duygu döngüsü","plain_summary":"Kısa video akışı, merak ve öfkeyi tamamlanmadan yenileyen hızlı bir dikkat düzeni olarak ele alındı.","residue":"Duygu bitmeden sonraki görüntü başladı.","motifs":["video","döngü","dikkat"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-24","source_hint":"dijital kültür denemesi","topic":"özetin bağlam kaybı","plain_summary":"Kitap özeti bilgi taşırken yazarın tereddüdünü, biçimini ve kavramın gelişme süresini azaltabiliyor.","residue":"Fikir kaldı; ona varırken değişen zihin kayboldu.","motifs":["özet","bağlam","biçim"],"bucket":"main"},
+    {"id":"digest-2026-10-10-25","source_hint":"dijital kültür denemesi","topic":"mikro dizinin sıkıştırılmış dramatik yapısı","plain_summary":"Çok kısa bölümler, karakter ve dünya kurmak yerine sürekli kanca ve dönüş üretmeye zorlandı.","residue":"Hikâye yürümeyi bıraktı; yalnız dönemeç oldu.","motifs":["mikro dizi","kanca","sıkışma"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-26","source_hint":"dijital kültür denemesi","topic":"güvencesiz zamanın estetiği","plain_summary":"Kısaltılmış kültür yalnız tercih değil, kesintili ve güvencesiz hayatın tüketebildiği zaman biçimi olarak yorumlandı.","residue":"İnsan aceleyi seçmedi; elindeki zaman zaten parçalanmıştı.","motifs":["güvencesizlik","zaman","kısalma"],"bucket":"main"},
+    {"id":"digest-2026-10-10-27","source_hint":"malzeme seçkisi","topic":"yaşlı bağın iklim hafızası","plain_summary":"Eski bağların yaşı, yalnız nostalji değil iklime uyum ve yerel çeşitlerin taşıdığı uzun süreli bilgi olarak ele alındı.","residue":"Kök yılları saymadı; kuraklığın eski biçimlerini tuttu.","motifs":["bağ","yaş","iklim"],"bucket":"main"},
+    {"id":"digest-2026-10-10-28","source_hint":"malzeme seçkisi","topic":"mevsimi menüye çevirmek","plain_summary":"Mevsimlik ürünler teknik ve tat ilişkileriyle yeni bir sofra düzenine çevrildi.","residue":"Hava tabağa inmedi; malzemenin davranışını değiştirdi.","motifs":["mevsim","tat","çeviri"],"bucket":"minor"},
+    {"id":"digest-2026-10-10-29","source_hint":"malzeme seçkisi","topic":"atığın ikinci işlevi","plain_summary":"Kullanılmış kahve telvesi yalıtım malzemesine dönüştürülerek atığın taşıdığı fiziksel kapasite görünür kılındı.","residue":"Biten içecek duvarın içinde ısı tutmaya devam etti.","motifs":["atık","yalıtım","dönüşüm"],"bucket":"main"},
+    {"id":"digest-2026-10-10-30","source_hint":"malzeme seçkisi","topic":"yerel mutfağın dolaşımı","plain_summary":"Yerel malzeme ve teknikler başka şehir ve ülkelerde yeni bağlamlarla karşılaştı.","residue":"Tat yer değiştirdi; kökenini kaybetmeden başka bir ağıza uydu.","motifs":["yerel","dolaşım","uyarlama"],"bucket":"minor"}
+  ],
+  "channels": {
+    "gmail": {"scanned": 17, "full_body": 17, "snippet_or_subject": 0, "main_item_ids": ["main-2026-10-10-01", "main-2026-10-10-02", "main-2026-10-10-03", "main-2026-10-10-04", "main-2026-10-10-05", "main-2026-10-10-06"]},
+    "curated_rss": {"source_count": 2, "recent_item_count": 0, "health": "reachable_but_no_recent_items"}
+  },
+  "external_weather": "Günün dış havası iki zıt harekette toplandı: kurumlar, piyasalar ve şehirler elde kalanı korumaya çalışırken beden ve canlı sistemler dayanıklılığı fazlalık, yavaşlık ve ilişki içinde aradı. Otomasyon daha çok alana girdi ama değerini ancak insan yargısı, doğrulama ve benimsemeyle kazandı. Kültür tarafı doğrusal tarihten uzaklaşıp tematik karşılaşmalara, küçük vicdan anlarına ve malzemenin uzun hafızasına açıldı.",
+  "possible_influence_on_ucu_beden": "UCU BEDEN bugün daha az arındırılmış, daha esnek bir ritme kayabilir: geri dönüşü hata saymayan, kusuru cezaya çevirmeden sonucunu üstlenen, büyük kavramı küçük jestte gösteren ve makineyi karar sahibi değil dikkat aracı olarak kullanan bir ses. Görüntü dilinde çizgisel arşiv yerine uzak dönemleri ortak bir renk ya da hareket çevresinde katlamak; şiirde ise yavaşlama, gecikme ve fazlalığı canlılık işareti olarak korumak mümkün.",
+  "discarded_summary": "Abonelik ve kurs satış çağrıları, etkinlik tarihleri, sponsorlu bölümler, müzayede ve piyasa rakamları, kişi ve kurum adları, siyasi taraf isimleri, şiddetin grafik ayrıntıları, kişisel aile geçmişleri, ham şiir dizeleri, bağlantılar, takip ve abonelikten çıkma bilgileri public çıktıya alınmadı. Özgün yazı taşımayan keşif bildirimi ana item yapılmadı; yalnız yeni bir okuma kanalı olarak küçük iz bıraktı. Son 72 saatte yeni kayıt üretmeyen iki özel RSS kaynağı sağlık bilgisi dışında etki alanına sokulmadı.",
+  "motifs": ["yavaşlık", "fazlalık", "onarım", "insan yargısı", "karşılaşma", "bekleme", "eşik", "malzeme hafızası"],
+  "possible_memory_traces": [
+    "Canlı sistemin fazlalığı, gelecekteki değişime ayrılmış hareket payı olabilir.",
+    "Kusuru görmek kimliği bitirmez; davranışın değişebileceği somut bir başlangıç açar.",
+    "Makine eleği hızlandırabilir ama kavramsal ağırlığı taşıyan yargı insanda kalır.",
+    "Uzak dönemler kronolojiyle değil aynı soruya verdikleri farklı cevaplarla yakınlaşabilir.",
+    "Eski bir fotoğraf, bedensel hareketi ve onunla birlikte unutulmuş bir cümleyi geri çağırabilir."
+  ],
+  "validation": {"json_parse": "passed", "markdown_first_section": "passed", "count_consistency": "passed", "public_safety": "passed", "inventory_gitignored": "passed", "gmail_state_unchanged": "passed"},
+  "automation": {"mode": "production", "window_hours": 72, "idempotent": true, "existing_outputs_backed_up": false}
+}
