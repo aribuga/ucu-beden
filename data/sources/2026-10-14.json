@@ -1,18 +1,18 @@
 {
   "date": "2026-10-14",
-  "collected_at": "2026-10-14T10:03:40.790Z",
+  "collected_at": "2026-10-14T11:36:38.161Z",
   "fallback_used": false,
   "weather": {
     "provider": "open-meteo",
-    "summary": "Kadıköy'de 18.5°C; nem 84%, rüzgar 21.2 km/s civarında.",
-    "temperature_c": 18.5,
-    "humidity_percent": 84,
-    "wind_kmh": 21.2,
+    "summary": "Kadıköy'de 19.4°C; nem 85%, rüzgar 14.4 km/s civarında.",
+    "temperature_c": 19.4,
+    "humidity_percent": 85,
+    "wind_kmh": 14.4,
     "body_effect": "nem gövdesine yapışıyor"
   },
   "turkey_news": {
     "provider": "rss-news",
-    "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,clarity; safe_terms=basınç,gündelik,politik,ağırlaşan,içeride,kabaran; weights=aesthetic:0.14,conceptual:0.34,rhythm:0.43,pressure:1",
+    "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,melancholy; safe_terms=basınç,gündelik,politik,ağırlaşan,içeride,kabaran; weights=aesthetic:0.14,conceptual:0.33,rhythm:0.43,pressure:1",
     "emotional_weight": 59,
     "fragments": [
       "basınç",
@@ -42,6 +42,37 @@
   },
   "rss": {
     "items": [
+      {
+        "title": "İmamoğlu'nun savunması başladı: 'Sürecin aktörleri Türk yargısı önünde hesap verecek'",
+        "source": "BBC Türkçe",
+        "category": "news",
+        "url": "https://www.bbc.com/turkce/articles/cmy93v7l7pleo?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Wed, 14 Oct 2026 10:47:21 GMT",
+        "moodTags": [
+          "fatigue",
+          "anger",
+          "desire"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 7,
+          "tenderness": 2,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 3,
+          "desire": 4,
+          "hope": 2
+        },
+        "keywords": [
+          "aktörleri",
+          "başladı",
+          "davasında",
+          "görevden",
+          "gün",
+          "hesap"
+        ],
+        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
+      },
       {
         "title": "Halk TV'ye kayyum atandı, haber yayını durduruldu",
         "source": "BBC Türkçe",
@@ -105,37 +136,6 @@
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
       {
-        "title": "İBB davasında Ekrem İmamoğlu savunmasına başladı",
-        "source": "BBC Türkçe",
-        "category": "news",
-        "url": "https://www.bbc.com/turkce/articles/cmy93v7l7pleo?at_medium=RSS&at_campaign=rss",
-        "publishedAt": "Wed, 14 Oct 2026 09:36:37 GMT",
-        "moodTags": [
-          "fatigue",
-          "anger",
-          "desire"
-        ],
-        "moodScores": {
-          "melancholy": 2,
-          "anger": 7,
-          "tenderness": 2,
-          "fatigue": 10,
-          "absurdity": 0,
-          "clarity": 3,
-          "desire": 4,
-          "hope": 2
-        },
-        "keywords": [
-          "davasında",
-          "başladı",
-          "görevden",
-          "savunma",
-          "savunmasına",
-          "tutuklandıktan"
-        ],
-        "shortAtmosphere": "ağırlaşan gündelik politik basınç"
-      },
-      {
         "title": "Türkiye'den Avrupa Birliği'nde vize muafiyeti hamlesi",
         "source": "BBC Türkçe",
         "category": "news",
@@ -167,33 +167,33 @@
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
       {
-        "title": "'Klip editörü' gençler sosyal medyadan nasıl yüz binlerce dolar kazanıyor?",
+        "title": "Dünyanın en eski gemi batığı Antalya'da keşfedildi",
         "source": "BBC Türkçe",
         "category": "news",
-        "url": "https://www.bbc.com/turkce/articles/c620r92jve4qo?at_medium=RSS&at_campaign=rss",
-        "publishedAt": "Tue, 13 Oct 2026 23:09:52 GMT",
+        "url": "https://www.bbc.com/turkce/articles/cr15jvepdewxo?at_medium=RSS&at_campaign=rss",
+        "publishedAt": "Wed, 14 Oct 2026 11:21:19 GMT",
         "moodTags": [
           "fatigue",
           "anger",
-          "clarity"
+          "melancholy"
         ],
         "moodScores": {
-          "melancholy": 2,
+          "melancholy": 4,
           "anger": 7,
           "tenderness": 0,
           "fatigue": 10,
-          "absurdity": 2,
+          "absurdity": 0,
           "clarity": 3,
           "desire": 0,
           "hope": 0
         },
         "keywords": [
-          "binlerce",
-          "dolar",
-          "yüz",
-          "dikey",
-          "editörleri",
-          "editörü"
+          "eski",
+          "olduğunu",
+          "ait",
+          "batığı",
+          "batığın",
+          "gemi"
         ],
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
@@ -229,49 +229,18 @@
         "shortAtmosphere": "ağırlaşan gündelik politik basınç"
       },
       {
-        "title": "Yapay zekâ gözlerden yaş tahmini yaptı: Hata payı şaşırttı",
+        "title": "Aras Kargo-Galatasaray maçı hangi kanalda, saat kaçta?",
         "source": "BirGün",
         "category": "news",
-        "url": "https://www.birgun.net/haber/yapay-zeka-gozlerden-yas-tahmini-yapti-hata-payi-sasirtti-740337",
-        "publishedAt": "Wed, 14 Oct 2026 12:53:00 +0300",
-        "moodTags": [
-          "anger",
-          "fatigue",
-          "clarity"
-        ],
-        "moodScores": {
-          "melancholy": 2,
-          "anger": 10,
-          "tenderness": 0,
-          "fatigue": 10,
-          "absurdity": 0,
-          "clarity": 4,
-          "desire": 0,
-          "hope": 1
-        },
-        "keywords": [
-          "retina",
-          "yaş",
-          "zekâ",
-          "arasındaki",
-          "arka",
-          "bilim"
-        ],
-        "shortAtmosphere": "içeride kabaran gündelik politik basınç"
-      },
-      {
-        "title": "Netflix, Dünya Kupası'nın iki ülkedeki yayın haklarını satın aldı",
-        "source": "BirGün",
-        "category": "news",
-        "url": "https://www.birgun.net/haber/netflix-dunya-kupasi-nin-iki-ulkedeki-yayin-haklarini-satin-aldi-740334",
-        "publishedAt": "Wed, 14 Oct 2026 12:12:00 +0300",
+        "url": "https://www.birgun.net/haber/aras-kargo-galatasaray-maci-hangi-kanalda-saat-kacta-740332",
+        "publishedAt": "Wed, 14 Oct 2026 14:00:00 +0300",
         "moodTags": [
           "anger",
           "fatigue",
           "melancholy"
         ],
         "moodScores": {
-          "melancholy": 4,
+          "melancholy": 2,
           "anger": 10,
           "tenderness": 0,
           "fatigue": 10,
@@ -281,12 +250,39 @@
           "hope": 1
         },
         "keywords": [
-          "aldı",
-          "haklarını",
-          "satın",
-          "yayın",
-          "canlı",
-          "iki"
+          "hangi",
+          "maçı",
+          "kaçta",
+          "kanalda",
+          "saat",
+          "canlı"
+        ],
+        "shortAtmosphere": "içeride kabaran gündelik politik basınç"
+      },
+      {
+        "title": "Harlem’in unutturulan yazı",
+        "source": "BirGün",
+        "category": "news",
+        "url": "https://www.birgun.net/makale/harlemin-unutturulan-yazi-740348",
+        "publishedAt": "Wed, 14 Oct 2026 13:50:00 +0300",
+        "moodTags": [
+          "anger",
+          "fatigue",
+          "melancholy"
+        ],
+        "moodScores": {
+          "melancholy": 2,
+          "anger": 10,
+          "tenderness": 0,
+          "fatigue": 10,
+          "absurdity": 0,
+          "clarity": 0,
+          "desire": 0,
+          "hope": 1
+        },
+        "keywords": [
+          "unutturulan",
+          "yazı"
         ],
         "shortAtmosphere": "içeride kabaran gündelik politik basınç"
       },
@@ -731,11 +727,67 @@
         "shortAtmosphere": "tuhaflaşan sahne, yüz ve yapay ışık"
       },
       {
-        "title": "Uncovering Player Opinions on Pacific Spins Casino",
+        "title": "How Often Does Bk9 Casino Introduce New Games?",
         "source": "Istanbul Life",
         "category": "life",
-        "url": "https://istanbullife.com.tr/genel/uncovering-player-opinions-on-pacific-spins-casino-5810/",
-        "publishedAt": "Fri, 03 Jul 2026 19:08:13 +0000",
+        "url": "https://istanbullife.com.tr/genel/how-often-does-bk9-casino-introduce-new-games-5850/",
+        "publishedAt": "Tue, 14 Jul 2026 23:38:10 +0000",
+        "moodTags": [
+          "tenderness",
+          "desire",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 0,
+          "anger": 0,
+          "tenderness": 8,
+          "fatigue": 0,
+          "absurdity": 0,
+          "clarity": 0,
+          "desire": 5,
+          "hope": 5
+        },
+        "keywords": [
+          "and"
+        ],
+        "shortAtmosphere": "yumuşayan şehir içi küçük gündelik temas"
+      },
+      {
+        "title": "What Makes Lucky Mister Casino a Member Favorite?",
+        "source": "Istanbul Life",
+        "category": "life",
+        "url": "https://istanbullife.com.tr/genel/what-makes-lucky-mister-casino-a-member-favorite-5898/",
+        "publishedAt": "Sat, 11 Jul 2026 18:44:23 +0000",
+        "moodTags": [
+          "tenderness",
+          "desire",
+          "hope"
+        ],
+        "moodScores": {
+          "melancholy": 0,
+          "anger": 0,
+          "tenderness": 8,
+          "fatigue": 0,
+          "absurdity": 0,
+          "clarity": 0,
+          "desire": 5,
+          "hope": 5
+        },
+        "keywords": [
+          "gaming",
+          "online",
+          "among",
+          "and",
+          "appeared"
+        ],
+        "shortAtmosphere": "yumuşayan şehir içi küçük gündelik temas"
+      },
+      {
+        "title": "Player Reviews: What to Expect from Xtra Spin Casino",
+        "source": "Istanbul Life",
+        "category": "life",
+        "url": "https://istanbullife.com.tr/genel/player-reviews-what-to-expect-from-xtra-spin-casino-5878/",
+        "publishedAt": "Fri, 10 Jul 2026 20:21:54 +0000",
         "moodTags": [
           "tenderness",
           "desire",
@@ -753,51 +805,20 @@
         },
         "keywords": [
           "and",
-          "players",
-          "with",
+          "from",
+          "its",
           "aims",
           "appeared",
-          "attention"
+          "array"
         ],
         "shortAtmosphere": "yumuşayan şehir içi küçük gündelik temas"
       },
       {
-        "title": "hello world",
+        "title": "Is Jackpot Jill Casino Worth the Hype? Find Out Now!",
         "source": "Istanbul Life",
         "category": "life",
-        "url": "https://istanbullife.com.tr/zeynep-guler-ceylan/hello-world-629547-5613/",
-        "publishedAt": "Thu, 02 Jul 2026 10:27:35 +0000",
-        "moodTags": [
-          "tenderness",
-          "desire",
-          "hope"
-        ],
-        "moodScores": {
-          "melancholy": 0,
-          "anger": 0,
-          "tenderness": 8,
-          "fatigue": 0,
-          "absurdity": 0,
-          "clarity": 0,
-          "desire": 5,
-          "hope": 5
-        },
-        "keywords": [
-          "hello",
-          "world",
-          "appeared",
-          "first",
-          "life",
-          "post"
-        ],
-        "shortAtmosphere": "yumuşayan şehir içi küçük gündelik temas"
-      },
-      {
-        "title": "Opplevelsen av å spille med Rizk Casino sine bonuser",
-        "source": "Istanbul Life",
-        "category": "life",
-        "url": "https://istanbullife.com.tr/genel/opplevelsen-av-a-spille-med-rizk-casino-sine-bonuser-5687/",
-        "publishedAt": "Wed, 01 Jul 2026 17:33:53 +0000",
+        "url": "https://istanbullife.com.tr/genel/is-jackpot-jill-casino-worth-the-hype-find-out-now-5846/",
+        "publishedAt": "Wed, 08 Jul 2026 14:08:03 +0000",
         "moodTags": [
           "tenderness",
           "desire",
@@ -814,52 +835,20 @@
           "hope": 5
         },
         "keywords": [
-          "som",
-          "med",
-          "spille",
-          "bonusene",
-          "bonuser",
-          "for"
+          "and",
+          "for",
+          "gaming",
+          "aims",
+          "appeared"
         ],
         "shortAtmosphere": "yumuşayan şehir içi küçük gündelik temas"
       },
       {
-        "title": "Vorteile der Ggbet Casino mobilen Plattform",
+        "title": "How Responsive Is the Customer Care at Ws Casino?",
         "source": "Istanbul Life",
         "category": "life",
-        "url": "https://istanbullife.com.tr/genel/vorteile-der-ggbet-casino-mobilen-plattform-5748/",
-        "publishedAt": "Wed, 01 Jul 2026 08:09:52 +0000",
-        "moodTags": [
-          "tenderness",
-          "desire",
-          "hope"
-        ],
-        "moodScores": {
-          "melancholy": 0,
-          "anger": 0,
-          "tenderness": 8,
-          "fatigue": 2,
-          "absurdity": 0,
-          "clarity": 0,
-          "desire": 5,
-          "hope": 5
-        },
-        "keywords": [
-          "der",
-          "für",
-          "mobile",
-          "mobilen",
-          "bietet",
-          "eine"
-        ],
-        "shortAtmosphere": "yumuşayan şehir içi küçük gündelik temas"
-      },
-      {
-        "title": "Oppdag de nyeste kampanjene hos Qbet Casino",
-        "source": "Istanbul Life",
-        "category": "life",
-        "url": "https://istanbullife.com.tr/genel/oppdag-de-nyeste-kampanjene-hos-qbet-casino-5742/",
-        "publishedAt": "Tue, 30 Jun 2026 04:44:45 +0000",
+        "url": "https://istanbullife.com.tr/genel/how-responsive-is-the-customer-care-at-ws-casino-5924/",
+        "publishedAt": "Sun, 05 Jul 2026 01:03:02 +0000",
         "moodTags": [
           "tenderness",
           "desire",
@@ -876,12 +865,10 @@
           "hope": 5
         },
         "keywords": [
-          "kampanjene",
-          "nyeste",
-          "hos",
-          "appeared",
-          "artikkelen",
-          "både"
+          "gaming",
+          "its",
+          "also",
+          "and"
         ],
         "shortAtmosphere": "yumuşayan şehir içi küçük gündelik temas"
       }
@@ -899,7 +886,7 @@
         "desire": 4,
         "hope": 3
       },
-      "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,clarity; safe_terms=basınç,gündelik,politik,ağırlaşan,içeride,kabaran; weights=aesthetic:0.14,conceptual:0.34,rhythm:0.43,pressure:1 | category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=açılan,basıncı,duvarı,görüntü,sergi,açıldı; weights=aesthetic:1,conceptual:0.72,rhythm:0.49,pressure:0.2 | category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,hope,melancholy; safe_terms=açılan,bilgi,burada,derin,kırıntısı,zaman; weights=aesthetic:0.34,conceptual:1,rhythm:0.28,pressure:0.21 | category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yapay,yüz,tuhaflaşan,başlıyor; weights=aesthetic:0.62,conceptual:0.43,rhythm:1,pressure:0.27 | category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,desire,hope; safe_terms=gündelik,içi,şehir,temas,yumuşayan,appeared; weights=aesthetic:0.5,conceptual:0.32,rhythm:0.48,pressure:0.23",
+      "summary": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,melancholy; safe_terms=basınç,gündelik,politik,ağırlaşan,içeride,kabaran; weights=aesthetic:0.14,conceptual:0.33,rhythm:0.43,pressure:1 | category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=açılan,basıncı,duvarı,görüntü,sergi,açıldı; weights=aesthetic:1,conceptual:0.72,rhythm:0.49,pressure:0.2 | category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,hope,melancholy; safe_terms=açılan,bilgi,burada,derin,kırıntısı,zaman; weights=aesthetic:0.34,conceptual:1,rhythm:0.28,pressure:0.21 | category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yapay,yüz,tuhaflaşan,başlıyor; weights=aesthetic:0.62,conceptual:0.43,rhythm:1,pressure:0.27 | category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,desire,hope; safe_terms=and,gündelik,içi,şehir,temas,yumuşayan; weights=aesthetic:0.5,conceptual:0.32,rhythm:0.48,pressure:0.22",
       "fragments": [
         "basınç",
         "gündelik",
@@ -923,8 +910,8 @@
         "açıkladı",
         "adımı",
         "ağustos",
+        "ait",
         "akışı",
-        "alabilmek",
         "açılan",
         "basıncı"
       ],
@@ -932,7 +919,7 @@
         "category=art; items=5; influence=aesthetic_learning,image_expansion; mood=clarity,desire,hope; safe_terms=açılan,basıncı,duvarı,görüntü,sergi,açıldı; weights=aesthetic:1,conceptual:0.72,rhythm:0.49,pressure:0.2",
         "category=science_culture; items=5; influence=conceptual_drift,vocabulary_learning; mood=clarity,hope,melancholy; safe_terms=açılan,bilgi,burada,derin,kırıntısı,zaman; weights=aesthetic:0.34,conceptual:1,rhythm:0.28,pressure:0.21",
         "category=entertainment; items=5; influence=rhythm_shift,attention_shift; mood=absurdity,clarity,desire; safe_terms=ışık,sahne,yapay,yüz,tuhaflaşan,başlıyor; weights=aesthetic:0.62,conceptual:0.43,rhythm:1,pressure:0.27",
-        "category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,desire,hope; safe_terms=gündelik,içi,şehir,temas,yumuşayan,appeared; weights=aesthetic:0.5,conceptual:0.32,rhythm:0.48,pressure:0.23"
+        "category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,desire,hope; safe_terms=and,gündelik,içi,şehir,temas,yumuşayan; weights=aesthetic:0.5,conceptual:0.32,rhythm:0.48,pressure:0.22"
       ]
     },
     "source_influence_packet": [
@@ -954,14 +941,13 @@
           "açıkladı",
           "adımı",
           "ağustos",
-          "akışı",
-          "alabilmek"
+          "ait",
+          "akışı"
         ],
         "novelty_terms": [
           "kayyum",
           "ağustos",
-          "akışı",
-          "alabilmek"
+          "akışı"
         ],
         "repeated_terms": [
           "basınç",
@@ -977,13 +963,13 @@
         "mood_bias": [
           "fatigue",
           "anger",
-          "clarity"
+          "melancholy"
         ],
         "aesthetic_weight": 0.14,
-        "conceptual_weight": 0.34,
+        "conceptual_weight": 0.33,
         "rhythm_weight": 0.43,
         "pressure_weight": 1,
-        "summary_for_prompt": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,clarity; safe_terms=basınç,gündelik,politik,ağırlaşan,içeride,kabaran; weights=aesthetic:0.14,conceptual:0.34,rhythm:0.43,pressure:1"
+        "summary_for_prompt": "category=news; items=8; influence=pressure,mood_pressure; mood=fatigue,anger,melancholy; safe_terms=basınç,gündelik,politik,ağırlaşan,içeride,kabaran; weights=aesthetic:0.14,conceptual:0.33,rhythm:0.43,pressure:1"
       },
       {
         "category": "art",
@@ -1133,29 +1119,34 @@
           "attention_shift"
         ],
         "safe_terms": [
-          "gündelik",
-          "içi",
-          "şehir",
-          "temas",
-          "yumuşayan",
-          "appeared",
-          "aims",
           "and",
-          "artikkelen",
-          "attention",
-          "både",
-          "bietet"
-        ],
-        "novelty_terms": [],
-        "repeated_terms": [
           "gündelik",
           "içi",
           "şehir",
           "temas",
           "yumuşayan",
           "appeared",
+          "gaming",
           "aims",
-          "and"
+          "its",
+          "also",
+          "among"
+        ],
+        "novelty_terms": [
+          "gaming",
+          "its",
+          "also",
+          "among"
+        ],
+        "repeated_terms": [
+          "and",
+          "gündelik",
+          "içi",
+          "şehir",
+          "temas",
+          "yumuşayan",
+          "appeared",
+          "gaming"
         ],
         "rejected_terms": [
           "proper_or_source_name:5"
@@ -1168,8 +1159,8 @@
         "aesthetic_weight": 0.5,
         "conceptual_weight": 0.32,
         "rhythm_weight": 0.48,
-        "pressure_weight": 0.23,
-        "summary_for_prompt": "category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,desire,hope; safe_terms=gündelik,içi,şehir,temas,yumuşayan,appeared; weights=aesthetic:0.5,conceptual:0.32,rhythm:0.48,pressure:0.23"
+        "pressure_weight": 0.22,
+        "summary_for_prompt": "category=life; items=5; influence=memory_association,attention_shift; mood=tenderness,desire,hope; safe_terms=and,gündelik,içi,şehir,temas,yumuşayan; weights=aesthetic:0.5,conceptual:0.32,rhythm:0.48,pressure:0.22"
       }
     ],
     "sources": [
@@ -1182,7 +1173,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://arkeofili.com/feed/",
-        "lastCheckedAt": "2026-10-14T10:03:24.224Z",
+        "lastCheckedAt": "2026-10-14T11:36:15.812Z",
         "attemptedUrls": [
           "https://arkeofili.com/feed/"
         ],
@@ -1198,7 +1189,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://evrimagaci.org/rss.xml",
-        "lastCheckedAt": "2026-10-14T10:03:24.226Z",
+        "lastCheckedAt": "2026-10-14T11:36:15.814Z",
         "attemptedUrls": [
           "https://evrimagaci.org/rss.xml"
         ],
@@ -1214,7 +1205,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://altyazi.net/feed/",
-        "lastCheckedAt": "2026-10-14T10:03:24.227Z",
+        "lastCheckedAt": "2026-10-14T11:36:15.815Z",
         "attemptedUrls": [
           "https://altyazi.net/feed/"
         ],
@@ -1226,16 +1217,16 @@
         "category": "entertainment",
         "url": "https://www.otekisinema.com/feed/",
         "enabled": true,
-        "fetched": false,
-        "status": "timeout",
-        "item_count": 0,
-        "lastCheckedAt": "2026-10-14T10:03:24.741Z",
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://www.otekisinema.com/feed/",
+        "lastCheckedAt": "2026-10-14T11:36:16.584Z",
         "attemptedUrls": [
           "https://www.otekisinema.com/feed/"
         ],
-        "retriedWithBrowserHeaders": true,
-        "error": "Timeout after 8000ms",
-        "itemCount": 0
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
       },
       {
         "name": "Bağımsız Sinema",
@@ -1246,7 +1237,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.bagimsizsinema.com/feed",
-        "lastCheckedAt": "2026-10-14T10:03:25.029Z",
+        "lastCheckedAt": "2026-10-14T11:36:16.838Z",
         "attemptedUrls": [
           "https://www.bagimsizsinema.com/feed"
         ],
@@ -1262,7 +1253,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://artdogistanbul.com/feed/",
-        "lastCheckedAt": "2026-10-14T10:03:25.186Z",
+        "lastCheckedAt": "2026-10-14T11:36:17.093Z",
         "attemptedUrls": [
           "https://artdogistanbul.com/feed/"
         ],
@@ -1278,7 +1269,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://argonotlar.com/feed/",
-        "lastCheckedAt": "2026-10-14T10:03:25.859Z",
+        "lastCheckedAt": "2026-10-14T11:36:17.226Z",
         "attemptedUrls": [
           "https://argonotlar.com/feed/"
         ],
@@ -1290,32 +1281,32 @@
         "category": "art",
         "url": "https://www.arkitera.com/feed/",
         "enabled": true,
-        "fetched": true,
-        "status": "ok",
-        "item_count": 6,
-        "usedUrl": "https://www.arkitera.com/feed/",
-        "lastCheckedAt": "2026-10-14T10:03:26.218Z",
+        "fetched": false,
+        "status": "timeout",
+        "item_count": 0,
+        "lastCheckedAt": "2026-10-14T11:36:18.157Z",
         "attemptedUrls": [
           "https://www.arkitera.com/feed/"
         ],
-        "retriedWithBrowserHeaders": false,
-        "itemCount": 6
+        "retriedWithBrowserHeaders": true,
+        "error": "Timeout after 8000ms",
+        "itemCount": 0
       },
       {
         "name": "Artkolik",
         "category": "art",
         "url": "https://www.artkolik.net/feed",
         "enabled": true,
-        "fetched": false,
-        "status": "failed",
-        "item_count": 0,
-        "lastCheckedAt": "2026-10-14T10:03:26.807Z",
+        "fetched": true,
+        "status": "ok",
+        "item_count": 6,
+        "usedUrl": "https://www.artkolik.net/feed",
+        "lastCheckedAt": "2026-10-14T11:36:18.187Z",
         "attemptedUrls": [
           "https://www.artkolik.net/feed"
         ],
-        "retriedWithBrowserHeaders": true,
-        "error": "fetch failed",
-        "itemCount": 0
+        "retriedWithBrowserHeaders": false,
+        "itemCount": 6
       },
       {
         "name": "Terrabayt",
@@ -1326,7 +1317,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://terrabayt.com/feed/",
-        "lastCheckedAt": "2026-10-14T10:03:27.511Z",
+        "lastCheckedAt": "2026-10-14T11:36:18.485Z",
         "attemptedUrls": [
           "https://terrabayt.com/feed/"
         ],
@@ -1342,7 +1333,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.nouvart.net/feed/",
-        "lastCheckedAt": "2026-10-14T10:03:27.515Z",
+        "lastCheckedAt": "2026-10-14T11:36:19.064Z",
         "attemptedUrls": [
           "https://www.nouvart.net/feed/"
         ],
@@ -1358,7 +1349,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds2.feedburner.com/itsnicethat/SlXC",
-        "lastCheckedAt": "2026-10-14T10:03:27.952Z",
+        "lastCheckedAt": "2026-10-14T11:36:19.603Z",
         "attemptedUrls": [
           "https://feeds2.feedburner.com/itsnicethat/SlXC"
         ],
@@ -1374,7 +1365,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://thecreativeindependent.com/feed.xml",
-        "lastCheckedAt": "2026-10-14T10:03:28.065Z",
+        "lastCheckedAt": "2026-10-14T11:36:19.625Z",
         "attemptedUrls": [
           "https://thecreativeindependent.com/feed.xml"
         ],
@@ -1390,7 +1381,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://bantmag.com/feed/",
-        "lastCheckedAt": "2026-10-14T10:03:28.156Z",
+        "lastCheckedAt": "2026-10-14T11:36:19.836Z",
         "attemptedUrls": [
           "https://bantmag.com/feed/"
         ],
@@ -1406,7 +1397,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://manifold.press/rss",
-        "lastCheckedAt": "2026-10-14T10:03:28.279Z",
+        "lastCheckedAt": "2026-10-14T11:36:19.902Z",
         "attemptedUrls": [
           "https://manifold.press/rss"
         ],
@@ -1422,7 +1413,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://playtusu.com/feed/",
-        "lastCheckedAt": "2026-10-14T10:03:28.364Z",
+        "lastCheckedAt": "2026-10-14T11:36:20.442Z",
         "attemptedUrls": [
           "https://playtusu.com/feed/"
         ],
@@ -1438,7 +1429,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.vesaire.press/rss/",
-        "lastCheckedAt": "2026-10-14T10:03:28.879Z",
+        "lastCheckedAt": "2026-10-14T11:36:20.668Z",
         "attemptedUrls": [
           "https://vesaire.press/feed/"
         ],
@@ -1454,7 +1445,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://feeds.bbci.co.uk/turkce/rss.xml",
-        "lastCheckedAt": "2026-10-14T10:03:29.290Z",
+        "lastCheckedAt": "2026-10-14T11:36:21.121Z",
         "attemptedUrls": [
           "https://feeds.bbci.co.uk/turkce/rss.xml"
         ],
@@ -1470,7 +1461,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.birgun.net/rss/home",
-        "lastCheckedAt": "2026-10-14T10:03:29.423Z",
+        "lastCheckedAt": "2026-10-14T11:36:21.450Z",
         "attemptedUrls": [
           "https://www.birgun.net/rss/home"
         ],
@@ -1486,7 +1477,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.diken.com.tr/feed/",
-        "lastCheckedAt": "2026-10-14T10:03:29.520Z",
+        "lastCheckedAt": "2026-10-14T11:36:21.454Z",
         "attemptedUrls": [
           "https://www.diken.com.tr/feed/"
         ],
@@ -1502,7 +1493,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://www.radikal.com.tr/feed/",
-        "lastCheckedAt": "2026-10-14T10:03:30.081Z",
+        "lastCheckedAt": "2026-10-14T11:36:21.803Z",
         "attemptedUrls": [
           "https://www.radikal.com.tr/feed/"
         ],
@@ -1514,16 +1505,16 @@
         "category": "news",
         "url": "https://www.cumhuriyet.com.tr/rss/son_dakika.xml",
         "enabled": true,
-        "fetched": true,
-        "status": "ok",
-        "item_count": 6,
-        "usedUrl": "https://www.cumhuriyet.com.tr/rss",
-        "lastCheckedAt": "2026-10-14T10:03:30.390Z",
+        "fetched": false,
+        "status": "timeout",
+        "item_count": 0,
+        "lastCheckedAt": "2026-10-14T11:36:22.119Z",
         "attemptedUrls": [
           "https://www.cumhuriyet.com.tr/rss/son_dakika.xml"
         ],
-        "retriedWithBrowserHeaders": false,
-        "itemCount": 6
+        "retriedWithBrowserHeaders": true,
+        "error": "Timeout after 8000ms",
+        "itemCount": 0
       },
       {
         "name": "Istanbul Life",
@@ -1534,7 +1525,7 @@
         "status": "ok",
         "item_count": 6,
         "usedUrl": "https://istanbullife.com.tr/feed/",
-        "lastCheckedAt": "2026-10-14T10:03:30.667Z",
+        "lastCheckedAt": "2026-10-14T11:36:22.925Z",
         "attemptedUrls": [
           "https://istanbullife.com.tr/feed/"
         ],
@@ -1564,9 +1555,9 @@
     },
     {
       "name": "Öteki Sinema",
-      "status": "timeout",
-      "itemCount": 0,
-      "error": "Timeout after 8000ms"
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://www.otekisinema.com/feed/"
     },
     {
       "name": "Bağımsız Sinema",
@@ -1588,15 +1579,15 @@
     },
     {
       "name": "Arkitera",
-      "status": "ok",
-      "itemCount": 6,
-      "usedUrl": "https://www.arkitera.com/feed/"
+      "status": "timeout",
+      "itemCount": 0,
+      "error": "Timeout after 8000ms"
     },
     {
       "name": "Artkolik",
-      "status": "failed",
-      "itemCount": 0,
-      "error": "fetch failed"
+      "status": "ok",
+      "itemCount": 6,
+      "usedUrl": "https://www.artkolik.net/feed"
     },
     {
       "name": "Terrabayt",
@@ -1672,9 +1663,9 @@
     },
     {
       "name": "Cumhuriyet",
-      "status": "ok",
-      "itemCount": 6,
-      "usedUrl": "https://www.cumhuriyet.com.tr/rss"
+      "status": "timeout",
+      "itemCount": 0,
+      "error": "Timeout after 8000ms"
     },
     {
       "name": "Istanbul Life",
@@ -1685,7 +1676,7 @@
   ],
   "notes": [
     "NEWS_API_KEY yok; RSS gündem kullanıldı.",
-    "RSS Öteki Sinema: Timeout after 8000ms",
-    "RSS Artkolik: fetch failed"
+    "RSS Arkitera: Timeout after 8000ms",
+    "RSS Cumhuriyet: Timeout after 8000ms"
   ]
 }
