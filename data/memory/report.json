@@ -1,10 +1,10 @@
 {
   "version": 1,
   "built_through": "2026-10-30",
-  "trace_count": 1847,
+  "trace_count": 1848,
   "climate": {
     "pressure": {
-      "value": 0.579,
+      "value": 0.58,
       "trace_ids": [
         "mem_2026-06-05_contact_residue_legacy_inferred_03866585788a",
         "mem_2026-06-05_daily_life_avoidance_32cc4d464dd3",
@@ -78,12 +78,11 @@
     "repression": {
       "value": 0.275,
       "trace_ids": [
-        "mem_2026-10-27_daily_life_avoidance_edea09583d0a",
         "mem_2026-10-28_daily_life_avoidance_036128c35f8f",
         "mem_2026-10-29_daily_life_avoidance_fa0d3f3c9c33",
         "mem_2026-10-30_daily_life_avoidance_2af1306e9bf5"
       ],
-      "summary": "repression: 4 iz, ortalama 28."
+      "summary": "repression: 3 iz, ortalama 28."
     },
     "recallability": {
       "value": 0.497,
@@ -119,7 +118,6 @@
     "mem_2026-10-27_contact_residue_external_pressure_f33216cdb2dd"
   ],
   "suppressed": [
-    "mem_2026-10-27_daily_life_avoidance_edea09583d0a",
     "mem_2026-10-28_daily_life_avoidance_036128c35f8f",
     "mem_2026-10-29_daily_life_avoidance_fa0d3f3c9c33",
     "mem_2026-10-30_daily_life_avoidance_2af1306e9bf5"
@@ -139,8 +137,6 @@
     "mem_2026-10-30_source_external_pressure_f36c908c91d9"
   ],
   "dream_returns": [
-    "mem_2026-10-22_dream_dream_return_4f927cb895cb",
-    "mem_2026-10-23_daily_life_avoidance_a8e07ce3a5cb",
     "mem_2026-10-23_dream_dream_return_b3778ba055d6",
     "mem_2026-10-24_daily_life_avoidance_2690f0495fea",
     "mem_2026-10-24_dream_dream_return_a4f26c2ba935",
@@ -150,7 +146,9 @@
     "mem_2026-10-27_daily_life_avoidance_edea09583d0a",
     "mem_2026-10-27_dream_dream_return_d3035df21989",
     "mem_2026-10-28_daily_life_avoidance_036128c35f8f",
-    "mem_2026-10-29_dream_dream_return_6cd65ae7bdec"
+    "mem_2026-10-29_daily_life_avoidance_fa0d3f3c9c33",
+    "mem_2026-10-29_dream_dream_return_6cd65ae7bdec",
+    "mem_2026-10-30_dream_dream_return_3cdc829db748"
   ],
   "indirect_only": [
     "mem_2026-06-04_daily_life_attention_379f81945234",
