@@ -1,0 +1,736 @@
+{
+  "version": 1,
+  "source": "codex_external_intake",
+  "date": "2026-11-01",
+  "generated_at": "2026-11-01T04:12:05.539Z",
+  "timezone": "Europe/Istanbul",
+  "provider": "codex",
+  "safety": {
+    "public_safe": true,
+    "raw_mail_body_included": false,
+    "raw_urls_included": false,
+    "email_addresses_included": false,
+    "verification_or_transaction_data_included": false,
+    "long_quotes_included": false
+  },
+  "counts": {
+    "scanned_mail_count": 6,
+    "full_body_count": 6,
+    "snippet_or_subject_count": 0,
+    "multipart_digest_count": 4,
+    "curated_rss_source_count": 2,
+    "curated_rss_recent_item_count": 0,
+    "digest_items_count": 33,
+    "main_item_count": 6,
+    "minor_residue_count": 10,
+    "repeated_signal_count": 5
+  },
+  "reading_summary": {
+    "plain_summary": "Bugün son 72 saatteki altı mailin tamamı full body okundu. Yeni siyaset denemesi kamu liselerindeki öğretmen, bina ve kaynak yetersizliğinin öğrenci protestolarına dönüşmesini; aşırı sıcak sınıfları, başvuru stresini, şiddet ve sokağa çıkma kısıtlarını; siyasal tepkilerin düzen çağrısı, uygulanamayan öneri ve eylemsiz empati arasında kalmasını tartıştı. Tat ve koku yazısı lezzetin dil, burun, göz, doku, sıcaklık ve sinir sistemi arasında kurulduğunu; aromanın iki yoldan algılandığını ve duyusal hafızanın bilinçli hatırlamadan önce başlayabildiğini anlattı. Geniş gündem seçkisi diplomatik fotoğraf krizinden finansal tasfiyeye, öğrenci hareketi ve seçimlerden yapay zekâ yatırımı, iş gücü kaybı, sağlık, çevre, kent ve gastronomiye yayıldı. Pencere içinde kalan diğer üç mail gece korkusu şiirini, beden dönüşümü ve sömürge tarihi içeren kültür seçkisini, kurumsal ayrılık ile kokpit yorgunluğu ve yerel yapay zekâ gündemini taşıdı. İki özel RSS kaynağında yeni kayıt yoktu.",
+    "what_was_in_the_emails": [
+      "Eğitim altyapısı, öğrenci protestosu ve siyasal temsil üzerine uzun deneme.",
+      "Tat, koku, görüntü, doku, sıcaklık ve erken duyusal hafıza üzerine kapsamlı yazı.",
+      "Diplomasi, finans, seçim, yapay zekâ, emek, sağlık, kent ve gastronomiye yayılan gündem seçkisi.",
+      "Gece korkusu ve kaçınılmaz düşüş üzerine mevsimsel şiir.",
+      "Beden dönüşümü, sömürge tarihi, telif, arşiv ve ekoloji içeren kültür seçkisi.",
+      "Kurumsal ayrılık, kokpit yorgunluğu ve yerel yapay zekâ içeren gündem."
+    ],
+    "what_was_in_curated_rss": [
+      "İki özel kaynak erişilebildi; son 72 saatte yeni item bulunmadı."
+    ],
+    "dominant_topics": [
+      "çoklu duyusal algı",
+      "eğitim altyapısı",
+      "kurumsal temsil",
+      "yapay zekâ ve emek",
+      "çevrenin bedene girişi",
+      "arşiv ve geri dönüş"
+    ],
+    "notable_absences": [
+      "Özel RSS kaynaklarında yeni güncel item yoktu.",
+      "Snippet-only veya subject-only değerlendirilen mail yoktu.",
+      "Güvenlik, işlem ve kişisel veri taşıyan ayrıntılar public çıktıya alınmadı."
+    ],
+    "overall_direction": "Günün dış dünyası UCU BEDEN'i duyunun bedende nasıl kurulduğuna, kurumların görüntü ile gerçeklik arasındaki açığına ve teknoloji ivmesinin insan alanını nasıl daralttığına itti."
+  },
+  "summary": "İlk buhar, kırk derece sınıf, boş fotoğraf ve sıcak sunucu aynı dış havada birleşti. Beden dünyayı kurumdan önce duydu; kurum ise çoğu kez görüntüyü gerçeğin önünde tuttu.",
+  "items": [
+    {
+      "id": "main-2026-11-01-01",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "siyaset ve eğitim altyapısı denemesi",
+      "public_safe_topic": "ısınan sınıf, yıpranan okul ve temsil krizi",
+      "content_digest": {
+        "what_it_contained": "Deneme, kamu liselerindeki kronik kaynak eksikliği, öğretmen açığı, kalabalık sınıflar, yıpranmış binalar ve yükseköğretime geçiş stresinin öğrenci protestolarını nasıl büyüttüğünü anlattı. Sıcak hava dalgalarında aşırı ısınan sınıflar bedensel eşiği görünür kıldı. Hareket büyüdükçe şiddet, gözaltılar ve gece kısıtlamaları ortaya çıktı; siyasal tepkiler ise sert düzen çağrısı, uygulanma yolu belirsiz öneriler ve eylemsiz empati arasında dağıldı. Metin ayrıca emeklilik harcamaları ile eğitim yatırımı arasındaki kuşaklar arası kaynak tercihini tartıştı.",
+        "specific_points": [
+          "Öğrenciler öğretmen açığı, kalabalık derslik, yıpranmış bina ve ağır programı birlikte dile getirdi.",
+          "Aşırı sıcak sınıflar kamusal yatırım eksiğini doğrudan bedensel bir baskıya çevirdi.",
+          "Protestonun büyümesiyle eğitim talebi güvenlik ve düzen söyleminin içine sıkıştırıldı.",
+          "Önde gelen siyasal tepkiler somut uygulama planı üretmekte yetersiz kaldı.",
+          "Kuşaklar arası kamu harcaması tercihi eğitimdeki kesintilerin yapısal arka planı olarak ele alındı."
+        ],
+        "why_it_mattered": "Kamusal kurumların soyut bütçe kararlarını sıcaklık, yorgunluk, stres ve okul binası üzerinden bedene indirdiği için UCU BEDEN açısından güçlüydü.",
+        "what_was_not_included": "Kişi adları, kesin katılım ve gözaltı rakamları, şiddetin ayrıntıları, uzun alıntı, bağlantılar ve abonelik metni çıkarıldı."
+      },
+      "residue": "Okulun duvarı sıcağı tutamadı; siyaset yine de termometreyi değil düzeni konuştu.",
+      "motifs": [
+        "kırk derece sınıf",
+        "blokeli kapı",
+        "boş kürsü"
+      ],
+      "possible_influence": "UCU BEDEN kamusal ihmalin bedende önce ter, uykusuzluk ve sıkışma olarak belirdiği şiirsel bir hat kurabilir."
+    },
+    {
+      "id": "main-2026-11-01-02",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "tat ve duyusal algı yazısı",
+      "public_safe_topic": "lezzetin dil, burun, göz ve sinirde birlikte kurulması",
+      "content_digest": {
+        "what_it_contained": "Yazı, lezzetin beş temel tattan ibaret olmadığını; kokunun, görüntünün, dokunun, sıcaklığın ve ağız-burun sinirlerindeki yakıcılık ya da serinlik hissinin birlikte çalıştığını anlattı. Görsel bilginin kokuyu yorumlama biçimini değiştirebildiğini, aroma moleküllerinin yiyecek ağza girmeden ve çiğneme sırasında iki ayrı yoldan algılandığını gösterdi. Doğal aroma ile sonradan eklenen aroma vericileri ayırdı; sıcaklığın kokulu bileşikleri açığa çıkarmasını ve erken duyusal deneyimin doğum öncesinden başlayabilmesini tartıştı.",
+        "specific_points": [
+          "Koku zayıfladığında yiyecek temel tat ve dokuya indirgenmiş, eksik bir deneyim gibi algılanıyor.",
+          "Bir içeceğin rengi değiştirildiğinde deneyimli tadımcıların koku dilinin de değişebildiği anlatıldı.",
+          "Acı biberin yakıcılığı, nanenin serinliği ve gazlı içeceğin batması klasik tat değil, sinirsel duyum olarak açıklandı.",
+          "Koku molekülleri yiyecekten önce burundan, çiğneme sırasında ise ağız arkasından burun boşluğuna ulaşıyor.",
+          "Erken aroma deneyimlerinin daha sonra tanıdıklık ve tercih duygusuna dönüşebileceği aktarıldı."
+        ],
+        "why_it_mattered": "Bedenin dünyayı tek bir duyuyla değil, birbirini yanıltan ve tamamlayan çoklu kanallarla kurduğunu; hafızanın hatırlamadan önce başlayabildiğini gösterdiği için ana item oldu.",
+        "what_was_not_included": "Araştırmacı ve ürün adları, kesin oranlar, mevzuat ayrıntıları, ticari öneriler, bağlantılar, iletişim ve abonelik bilgileri çıkarıldı."
+      },
+      "residue": "Dil yalnız kaldığında elma eksildi; burun açılınca unutulmuş parça yerine döndü.",
+      "motifs": [
+        "ilk buhar",
+        "kırmızıya boyanmış beyaz",
+        "serin sinir"
+      ],
+      "possible_influence": "UCU BEDEN duyuyu nesnenin özelliği değil, göz-burun-ağız-hafıza arasında geçici kurulan bir anlaşma olarak işleyebilir."
+    },
+    {
+      "id": "main-2026-11-01-03",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "geniş gündem ve kültür seçkisi",
+      "public_safe_topic": "iptal edilen temsil, kırılgan güven ve teknoloji ivmesi",
+      "content_digest": {
+        "what_it_contained": "Çok parçalı gündem, savaş ve diplomatik gerilim yüzünden ortak toplantı fotoğrafının iptal edilmesiyle başladı; finansal tasfiye sürecindeki ara ödemeler ve yatırımcı güveniyle devam etti. Farklı ülkelerde öğrenci hareketi, seçim sonucu ve çoğunluk kuramama meselelerini; yapay zekâ yatırımlarının tarihsel spekülasyonlarla benzerliğini ve şirketlerin bu yatırım için iş gücünü azaltmasını ele aldı. Aşılama aksaklıkları, yangın dumanının gebelikteki etkisi, algoritmik akışlar, özerk araçlar, kişisel yazılım, kültür etkinlikleri ve sanatla birleşen sofralar da içerikte yer aldı.",
+        "specific_points": [
+          "Diplomatik aktörler aynı karede görünmeyi reddedince birlik görüntüsü toplantı başlamadan dağıldı.",
+          "Tasfiye edilen finansal yapılarda ara ödeme güveni onarmaya çalışan gecikmiş bir mekanizma olarak sunuldu.",
+          "Öğrenci hareketi bir ülkede seçim zaferine dönüşürken başka bir seçimde hiçbir blok çoğunluk kuramadı.",
+          "Yapay zekâ yatırımı tarihsel altyapı balonlarıyla karşılaştırıldı; büyüme vaadiyle iş gücü kaybı yan yana geldi.",
+          "Aşı boşlukları ve yangın dumanı çevresel ya da kurumsal aksamanın bedene gecikmeli dönüşünü gösterdi."
+        ],
+        "why_it_mattered": "Temsil, güven, emek, sağlık, kent ve kültür alanlarındaki çok farklı kırılmaları aynı günün ortak basıncı içinde birleştirdiği için ana item oldu.",
+        "what_was_not_included": "Kişi adları, kesin finansal rakamlar, kişisel suçlama ve işlem ayrıntıları, güvenlik ihlali detayları, sağlık doz bilgileri, reklamlar, bağlantılar ve iletişim verileri çıkarıldı."
+      },
+      "residue": "Fotoğraf çekilmedi; para geç geldi; ofis boşalırken veri merkezi büyümeyi sürdürdü.",
+      "motifs": [
+        "boş fotoğraf",
+        "ara ödeme",
+        "veri merkezi ısısı"
+      ],
+      "possible_influence": "UCU BEDEN güncel olayları tek tek haberleştirmek yerine aynı yüzeyde beliren temsil kaybı, gecikmiş telafi ve hızlanan makine ritmi olarak bağlayabilir."
+    },
+    {
+      "id": "main-2026-11-01-04",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "mevsimsel karanlık şiiri",
+      "public_safe_topic": "gece korkusu, lanetlenme ve kaçınılmaz düşüş",
+      "content_digest": {
+        "what_it_contained": "Mevsimsel olarak yeniden yayımlanan şiir, karanlık bir kırda geceye hazırlıksız yakalanan kişiyi merkezine aldı. Uzak kahkaha, uğursuz yaratıklar, yarasa ve baykuş imgeleri, bedene işleyen sesler ve kör bir yaşlı figür üzerinden korkunun dışarıdan gelen bir saldırı olmaktan çıkıp kişinin kendi düşüşüne dönüşmesini kurdu. Görsel çıkış noktası, karanlık bir büyü sahnesi resmiydi.",
+        "specific_points": [
+          "Sıradan bir gece kıyafeti içindeki kişi açık arazide korunmasız bırakıldı.",
+          "Rüzgâr ve uzak sesler görülmeyen tehdidi önce işitsel bir basınca çevirdi.",
+          "Korku figürleri hayvan, insan ve şeytani beden sınırlarını birbirine karıştırdı.",
+          "Son karşılaşma kurtuluş değil, kör bir kucak ve teslim oluş biçiminde kuruldu."
+        ],
+        "why_it_mattered": "Korkuyu olay örgüsünden çok beden, ses, hava ve kaçınılmaz yakınlık üzerinden kurduğu için ana item oldu.",
+        "what_was_not_included": "Ham şiir dizeleri, ressam ve eser adı, telifli ifadeler, bağlantılar ve abonelik metni çıkarıldı."
+      },
+      "residue": "Gece dışarıda başlamadı; soğuk hava iliklere indikçe kişinin içinden yükseldi.",
+      "motifs": [
+        "septik ay",
+        "çıplak kır",
+        "kör kucak",
+        "rüzgâr sesi"
+      ],
+      "possible_influence": "UCU BEDEN korkuyu yaratık anlatısı yerine bedenin çevreyle sınır kaybetmesi ve kendi sonuna yaklaşması olarak işleyebilir."
+    },
+    {
+      "id": "main-2026-11-01-05",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "kültür, sinema ve tarih seçkisi",
+      "public_safe_topic": "dönüşen beden, sömürge denizi ve geri dönen arşiv",
+      "content_digest": {
+        "what_it_contained": "Çok parçalı kültür maili yüzü parçalanan bir oyuncunun biçim değiştiren bedeni üzerinden kimlik, irade ve bastırılmış arzuyu tartışan bir film incelemesiyle başladı. Ardından küçük bir donanmanın ticaret, din, liman ve şiddeti birleştirerek kalıcı sömürge ağı kurmasını anlatan tarih söyleşisine geçti. Yayıncı içeriğinin platformlarca kullanılmasına karşı hukuk mücadelesi, bir sinemacının cezalandırılması, kayıp konser görüntülerinin restorasyonu, müzik yarışmasının siyasi boykotu, yeni konser salonu, çok sesli festival, ekoloji filmleri ve dijital yayıncılıkta yaratıcılık krizi de seçkide yer aldı.",
+        "specific_points": [
+          "Beden korkusu hikâyesi fiziksel dönüşümü kişinin kendi benliğinden uzaklaşması olarak ele aldı.",
+          "Deniz imparatorluğu ticaret ile inancı, stratejik limanlar ve zorlayıcı şiddet üzerinden birleştirdi.",
+          "Yayıncılar içeriklerinin büyük bir platform tarafından toplanmasına karşı geçici hukuki koruma elde etti.",
+          "Yıllarca yayımlanmamış konser görüntüleri restore edilerek yeni bir sahne deneyimine dönüştürüldü.",
+          "Ekoloji buluşması ada yaşamı ve hayalet ağlar üzerinden tüketim sonrası maddi izi görünür kıldı."
+        ],
+        "why_it_mattered": "Beden, iktidar, telif, arşiv ve ekolojiyi aynı kültürel dolaşım içinde somut örneklerle birleştirdiği ve sekiz alt temaya ayrılabildiği için ana item oldu.",
+        "what_was_not_included": "Kişi, film, kurum, festival ve marka adları; hassas sağlık ve dava ayrıntıları; program, bilet, reklam ve ham bağlantılar çıkarıldı."
+      },
+      "residue": "Kil gibi değişen yüz, haritadaki liman ve restore edilen film aynı soruyu sordu: biçimi kim taşıyor?",
+      "motifs": [
+        "kil yüz",
+        "sömürge limanı",
+        "restore film",
+        "hayalet ağ"
+      ],
+      "possible_influence": "UCU BEDEN kimlik dönüşümünü kişisel psikolojiyle sınırlamayıp ticaret, platform ve arşiv gibi dış yapılarla bağlayabilir."
+    },
+    {
+      "id": "main-2026-11-01-06",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "günlük siyaset, ekonomi ve teknoloji seçkisi",
+      "public_safe_topic": "kurumsal ayrılık, emek yorgunluğu ve yerel yapay zekâ",
+      "content_digest": {
+        "what_it_contained": "Çok parçalı gündem maili bir yerel yöneticinin adli kontrolle tahliyesini, merkez bankası başkanının görev süresi dolmadan ayrılma kararını ve para politikası dışındaki konularda daha özgür konuşma isteğini anlattı. Ekonomide büyüme ile enflasyon baskısı; otomotivde zarar, enerjide savaş kaynaklı kâr ve teslimat platformlarında birleşme; kokpit yorgunluğu ve çalışanların sorun bildirmekten çekinmesi öne çıktı. Teknoloji bölümünde bulut ve yapay zekâ yatırımlarının yüksek maliyeti, kurumların kendi altyapısında çalıştırabileceği açık model ağırlıkları ve dijital kamu hizmetlerine yönelik saldırılar yer aldı. Gençlerin kemer sıkma, eğitim, barınma, temel haklar ve iklim için yayımladığı açık mektup ile yakıt maliyeti yüzünden duran sürekli dünya turu da seçkinin dış halkasını kurdu.",
+        "specific_points": [
+          "Kurumsal bir lider, görevde kalmanın gerektirdiği tarafsızlık ile kamusal konularda özgür konuşma arzusu arasında erken ayrılığı seçti.",
+          "Büyüme yapay zekâ yatırımı ve tüketimle hızlanırken enerji maliyeti ve enflasyon baskısı sürdü.",
+          "Pilot yorgunluğu yaygın olmasına rağmen yönetim tepkisi korkusu güvenlik bildirimlerini bastırdı.",
+          "Kendi altyapısında çalışan model daha fazla veri kontrolü sundu, fakat güçlü donanım ve uzmanlık gerektirdi.",
+          "Gençler tasarruf politikasını eğitim, yaşam maliyeti, iklim ve demokrasiye güven üzerinden toplu bir gelecek kaybı olarak tarif etti."
+        ],
+        "why_it_mattered": "Aynı gün içinde kurumsal tarafsızlık, görünmez emek yorgunluğu, teknolojik egemenlik ve kuşaklar arası gelecek hakkını somut biçimde birleştirdiği için ana item oldu.",
+        "what_was_not_included": "Kişi, şirket ve ürün adları; kesin para ve ölüm rakamları; hassas dava, güvenlik ve askerî ayrıntılar; reklam, adres, e-posta ve ham bağlantılar çıkarıldı."
+      },
+      "residue": "Kurumun başı erken ayrıldı; pilot gözünü açık tutmaya çalıştı; model kendi sunucusunda nefes almak istedi.",
+      "motifs": [
+        "boşalan koltuk",
+        "ağır göz kapağı",
+        "yerel sunucu",
+        "açık mektup"
+      ],
+      "possible_influence": "UCU BEDEN kurumsal güveni, işi sürdüren bedenin söyleyemediği yorgunluk ve sistemden ayrılma hakkı üzerinden işleyebilir."
+    }
+  ],
+  "minor_residues": [
+    {
+      "id": "minor-2026-11-01-01",
+      "source": "gmail",
+      "residue": "Koku, ilk lokmadan önce yiyeceğin adını söyledi.",
+      "motifs": [
+        "ilk buhar",
+        "bekleyen dil"
+      ],
+      "possible_influence": "Algının eylemden önce başlaması şiirde gecikmeli beden bilgisine dönüşebilir."
+    },
+    {
+      "id": "minor-2026-11-01-02",
+      "source": "gmail",
+      "residue": "Göz bir rengi değiştirdiğinde burun da hatırasını düzeltti.",
+      "motifs": [
+        "renkli kadeh",
+        "şaşan koku"
+      ],
+      "possible_influence": "Duyular arasındaki güvenilmez tercüme görsel dilde renk sapmasına dönüşebilir."
+    },
+    {
+      "id": "minor-2026-11-01-03",
+      "source": "gmail",
+      "residue": "Beden, kendisine ait olmayan sıcaklığı gerçek sandı.",
+      "motifs": [
+        "hayalî ateş",
+        "serin sinir"
+      ],
+      "possible_influence": "Yanma ve serinlik gerçek ısıdan bağımsız bedensel imge olarak kullanılabilir."
+    },
+    {
+      "id": "minor-2026-11-01-04",
+      "source": "gmail",
+      "residue": "Hatırlanmayan bir aroma yıllar sonra tanıdıklık gibi geri geldi.",
+      "motifs": [
+        "ilk sıvı",
+        "isimsiz tanıdıklık"
+      ],
+      "possible_influence": "Hafıza açık olaydan önce gelen bedensel tercih olarak genişleyebilir."
+    },
+    {
+      "id": "minor-2026-11-01-05",
+      "source": "gmail",
+      "residue": "Sınıfın sıcaklığı bütçe tablosundan önce konuştu.",
+      "motifs": [
+        "kırk derece sınıf",
+        "terli defter"
+      ],
+      "possible_influence": "Kamusal ihmal soyut veri yerine beden yüzeyinden anlatılabilir."
+    },
+    {
+      "id": "minor-2026-11-01-06",
+      "source": "gmail",
+      "residue": "Ortak fotoğraf çekilmediğinde kurumun birlik iddiası kadraj dışında kaldı.",
+      "motifs": [
+        "boş fotoğraf",
+        "kapalı deklanşör"
+      ],
+      "possible_influence": "Temsil eksikliği görünmeyen bir grup portresi olarak işlenebilir."
+    },
+    {
+      "id": "minor-2026-11-01-07",
+      "source": "gmail",
+      "residue": "Ara ödeme hesabı hareketlendirdi, güveni yerinden kaldıramadı.",
+      "motifs": [
+        "çatlak hesap",
+        "gecikmiş para"
+      ],
+      "possible_influence": "Telafi ile onarım arasındaki fark ekonomik değil bedensel bekleme olarak ele alınabilir."
+    },
+    {
+      "id": "minor-2026-11-01-08",
+      "source": "gmail",
+      "residue": "Yapay zekâ bütçesi büyürken ofisteki sandalyeler azaldı.",
+      "motifs": [
+        "boş ofis",
+        "sıcak sunucu"
+      ],
+      "possible_influence": "Makine hızının insan alanını daraltması ritmik karşıtlık kurabilir."
+    },
+    {
+      "id": "minor-2026-11-01-09",
+      "source": "gmail",
+      "residue": "Uzak yangın dumanını sınırda bırakmadı.",
+      "motifs": [
+        "ince parçacık",
+        "kapalı pencere"
+      ],
+      "possible_influence": "Çevrenin bedene izinsiz girişi solunum ve geçirgenlik imgelerini güçlendirebilir."
+    },
+    {
+      "id": "minor-2026-11-01-10",
+      "source": "gmail",
+      "residue": "Kişisel araç küçük bir ihtiyacı çözdü; ortak refah yine dışarıda bekledi.",
+      "motifs": [
+        "tek kişilik uygulama",
+        "kapalı ortak kapı"
+      ],
+      "possible_influence": "Kişisel kolaylık ile toplumsal iyilik arasındaki mesafe hafif sarkastik bir damar taşıyabilir."
+    }
+  ],
+  "repeated_signals": [
+    {
+      "signal": "bedenin anlamdan önce karar vermesi",
+      "count": 4,
+      "residue": "Koku, sıcaklık, yorgunluk ve biçim değişimi farklı yerlerde zihinsel açıklamadan önce bedensel hüküm üretti."
+    },
+    {
+      "signal": "kurumun görüntüyü korurken altyapıyı aşındırması",
+      "count": 4,
+      "residue": "Okul binası, diplomatik fotoğraf, finansal güven ve makam dili aynı temsil-gerçeklik açığını tekrar etti."
+    },
+    {
+      "signal": "teknoloji hızlanırken insan alanının daralması",
+      "count": 4,
+      "residue": "Yapay zekâ yatırımı, yerel model, platform ve otomasyon büyürken masa, iş güvencesi ve dikkat alanı küçüldü."
+    },
+    {
+      "signal": "çevrenin bedenin içine sızması",
+      "count": 4,
+      "residue": "Sınıf sıcağı, yangın dumanı, denizde kalan ağ ve gece rüzgârı çevreyi dış fon olmaktan çıkarıp bedenin iç olayına çevirdi."
+    },
+    {
+      "signal": "gecikmiş şeyin başka biçimde geri dönmesi",
+      "count": 4,
+      "residue": "Erken aroma, restore film, ara ödeme ve bastırılmış arzu zamanında çözülemeyen içeriği dönüştürerek geri getirdi."
+    }
+  ],
+  "digest_items": [
+    {
+      "topic": "lezzetin çoklu duyular arasında kurulması",
+      "plain_summary": "Tat, koku, doku, sıcaklık ve görüntü birleşerek yiyeceği tanınabilir bir deneyime dönüştürdü; dil tek başına yeterli olmadı.",
+      "residue": "Bir lokma, beş ayrı duyu birbirine razı olduğunda tamamlandı.",
+      "motifs": [
+        "çoklu duyu",
+        "eksik elma"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "görsel bilginin kokuyu yeniden yazması",
+      "plain_summary": "Bir içeceğin yalnızca renginin değiştirilmesi, deneyimli kişilerin kokuyu ve karakteri farklı bir kategoriyle anlatmasına yol açtı.",
+      "residue": "Göz rengi değiştirdi, burun yeni hikâyeye uydu.",
+      "motifs": [
+        "renkli kadeh",
+        "şaşan burun"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "ağızdaki yakıcılık ve serinliğin tat olmaması",
+      "plain_summary": "Acı biber, nane ve gazlı içecek örnekleri yakıcılık, serinlik ve batmanın tat tomurcuğundan çok duyusal sinirlerle kurulduğunu gösterdi.",
+      "residue": "Sıcaklık değişmedi, ağız yine de yandı ve serinledi.",
+      "motifs": [
+        "serin sinir",
+        "hayalî ateş"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "sıcaklığın aromayı havaya bırakması",
+      "plain_summary": "Çorbanın soğuması ya da dondurmanın yumuşaması, kokulu bileşiklerin havaya ve buruna ulaşma hızını değiştirerek lezzeti dönüştürdü.",
+      "residue": "Koku kaybolmadı; soğukta hareket etmeyi bıraktı.",
+      "motifs": [
+        "ilk buhar",
+        "yumuşayan yüzey"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "kokunun buruna iki ayrı yoldan gelmesi",
+      "plain_summary": "Yiyeceği önce dışarıdan koklamak ile çiğnerken aromanın ağız arkasından yükselmesi aynı bileşiği farklı deneyimlere çevirebildi.",
+      "residue": "Burun kapıda uyardı, ağız içeride yeniden karar verdi.",
+      "motifs": [
+        "iki yol",
+        "arka geçit"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "doğal koku ile eklenen aroma arasındaki üretim farkı",
+      "plain_summary": "Bir bitkinin çok katmanlı koku profili ile endüstriyel olarak üretilen tek baskın bileşen arasındaki fark, lezzetin tedarik ve etiket meselesi de olduğunu gösterdi.",
+      "residue": "Tek molekül bütün bitkinin adını taşımaya çalıştı.",
+      "motifs": [
+        "tek molekül",
+        "uzak tarla"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "duyusal hafızanın hatırlamadan önce başlaması",
+      "plain_summary": "Doğum öncesi ve erken beslenme dönemindeki aroma karşılaşmaları, daha sonra açıklanamayan tanıdıklık ve tercih duygusuna dönüşebildi.",
+      "residue": "Beden, zihnin tarih yazmaya başlamasından önce bir koku kaydetti.",
+      "motifs": [
+        "ilk sıvı",
+        "hatırlanmayan koku"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "ortak fotoğrafın diplomatik anlaşmazlıkta iptal edilmesi",
+      "plain_summary": "Aynı karede görünmeyi reddeden aktörler, toplantının birlik görüntüsünü daha görüşmeler başlamadan dağıttı.",
+      "residue": "Kamera hazırdı, ortak yüz oluşmadı.",
+      "motifs": [
+        "boş fotoğraf",
+        "ayrık sandalye"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "tasfiye sonrasında güveni ara ödemeyle onarma çabası",
+      "plain_summary": "Finansal yapılardaki tasfiye, gecikmiş kısmi ödemeler ve yeni düzenleme arayışıyla yatırımcı güvenini sonradan kurmaya çalıştı.",
+      "residue": "Para döndü, güven aynı hızla dönmedi.",
+      "motifs": [
+        "ara ödeme",
+        "çatlak hesap"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "öğrenci hareketinin seçim ve denetim talebine dönüşmesi",
+      "plain_summary": "Uzun süren öğrenci hareketi seçim başarısına ulaşınca güvenlik, yargı ve kamu kurumlarının denetlenmesini talep etti.",
+      "residue": "Sokaktaki sıra parlamentodaki sandalyeye uzandı.",
+      "motifs": [
+        "öğrenci sırası",
+        "denetim dosyası"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "yüksek katılımın çoğunluk üretememesi",
+      "plain_summary": "Seçmen katılımı güçlü olsa da siyasal bloklar hükümet kuracak çoğunluğa ulaşamadı ve temsil pazarlığı uzadı.",
+      "residue": "Sandık doldu, iktidar boşlukta kaldı.",
+      "motifs": [
+        "dolu sandık",
+        "boş çoğunluk"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "yapay zekâ yatırımının tarihsel altyapı balonlarına benzemesi",
+      "plain_summary": "Yeni teknoloji heyecanı, fizibilitesi zayıf projelere akan eski altyapı spekülasyonlarıyla karşılaştırılarak beklenti ile kalıcı değer arasındaki fark sorgulandı.",
+      "residue": "Yeni model eski demiryolu hissesinin gölgesinde parladı.",
+      "motifs": [
+        "şişen balon",
+        "yarım ray"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "yapay zekâ yatırımı için iş gücünün azaltılması",
+      "plain_summary": "Büyük bir teknoloji şirketi gelirini büyütürken çalışanlara ayrılık paketi sunarak maliyeti düşürmeyi ve yapay zekâya kaynak ayırmayı seçti.",
+      "residue": "Sunucu doldu, masa boşaldı.",
+      "motifs": [
+        "boş ofis",
+        "veri merkezi"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "aşılama boşluğunun eski hastalıkları geri getirmesi",
+      "plain_summary": "Rutin aşılama ve bildirim zincirindeki aksaklıklar, önlenebilir hastalıkların yeniden yükselmesiyle ilişkilendirildi.",
+      "residue": "Eski hastalık takvimde açılan küçük bir boşluktan geri geldi.",
+      "motifs": [
+        "eksik takvim",
+        "geri dönen öksürük"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "yangın dumanının doğmamış bedene kadar ulaşması",
+      "plain_summary": "Gözlemsel bir çalışma, gebelikte orman yangını kaynaklı ince parçacıklara maruz kalma ile çocuk gelişimi arasındaki olası ilişkiyi görünür kıldı.",
+      "residue": "Uzak yangın henüz doğmamış akciğere gölge düşürdü.",
+      "motifs": [
+        "dumanlı gökyüzü",
+        "ince parçacık"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "kişisel ölçekte yazılım ve gündelik özerklik",
+      "plain_summary": "Yapay zekâ, milyonlara değil tek bir kişiye ya da küçük bir gruba yarayan yazılımları mümkün kılarak kodlamayı gündelik yaratıcılık aracına yaklaştırdı.",
+      "residue": "Uygulama pazara değil, tek bir masadaki soruna açıldı.",
+      "motifs": [
+        "tek kişilik araç",
+        "küçük çözüm"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "sofranın sanat, ateş ve ortak performansa dönüşmesi",
+      "plain_summary": "Kalıcı ve geçici restoran örnekleri yemeği açık ateş, sanat eseri, ortak masa ve konuk önünde üretimle birleşen sahnelenmiş bir deneyime çevirdi.",
+      "residue": "Tabak bitti, tavandaki resim ve ortak masanın ısısı kaldı.",
+      "motifs": [
+        "odun ateşi",
+        "ortak çelik masa"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "beden dönüşümünün kimliği aşındırması",
+      "plain_summary": "Bir beden korkusu filmi, fiziksel biçim değiştirmeyi bastırılmış arzu, irade ve kişinin kendi benliğinden uzaklaşmasıyla ilişkilendirdi.",
+      "residue": "Yüz değiştikçe içerideki isim tutunacak yer aradı.",
+      "motifs": [
+        "kil yüz",
+        "çatlak ayna"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "küçük donanmanın kalıcı sömürge ağı kurması",
+      "plain_summary": "Ticaret, din, liman ve askerî güç birleşerek kıtalar arası deniz yollarını sömürge ve zorla boyun eğdirme aracına çevirdi.",
+      "residue": "Küçük gemiler haritada uzun bir yara açtı.",
+      "motifs": [
+        "liman kalesi",
+        "baharat rotası"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "yayıncı içeriğinin platforma karşı korunması",
+      "plain_summary": "Medya kuruluşları içeriklerinin büyük bir platform tarafından toplanması ve kullanılmasına karşı geçici hukuki koruma elde etti.",
+      "residue": "Metin kendi gölgesini platformdan geri istedi.",
+      "motifs": [
+        "mahkeme mührü",
+        "veri gölgesi"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "cezalandırılan sinema ve daralan ifade alanı",
+      "plain_summary": "Ödüllü bir sinemacının hapis ve mal varlığı kararıyla karşılaşması, sanat üretimi ile devlet baskısı arasındaki alanı daralttı.",
+      "residue": "Perde açıktı, yönetmenin yolu kapandı.",
+      "motifs": [
+        "açık perde",
+        "kapalı kapı"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "kayıp konser filminin restore edilmesi",
+      "plain_summary": "Yıllarca yayımlanmamış konser görüntüleri renk ve ışık çalışmasıyla onarılarak yeni bir sahne deneyimine hazırlandı.",
+      "residue": "Eski ışık film şeridinde yeniden yandı.",
+      "motifs": [
+        "film şeridi",
+        "sahne ışığı"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "müzik yarışmasının siyasi boykota dönüşmesi",
+      "plain_summary": "Birden fazla yayıncı, yarışmaya katılım kararını savaş ve toplumsal bölünme tartışmaları üzerinden geri çekti.",
+      "residue": "Şarkı başlamadan boş sandalyeler çoğaldı.",
+      "motifs": [
+        "boş sahne",
+        "yayın sinyali"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "çok sesli festival ve görsel-işitsel birliktelik",
+      "plain_summary": "Farklı kuşak ve türlerden müzik, yerel ezgiler ve deneysel görüntü aynı günlük programda buluştu.",
+      "residue": "Ayrı ritimler aynı salonda birbirine değdi.",
+      "motifs": [
+        "çoklu sahne",
+        "renkli dalga"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "ekoloji filmlerinde tüketim sonrası iz",
+      "plain_summary": "Ada yaşamı ve denizde kalan ağlar, insan tüketiminin canlı sistemlerde sürdürdüğü görünmez işi tartıştı.",
+      "residue": "İnsan gitti, ağ suda çalışmayı sürdürdü.",
+      "motifs": [
+        "hayalet ağ",
+        "ada"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "görevde kalmak ile özgür konuşmak arasındaki ayrılık",
+      "plain_summary": "Bir merkez bankası başkanı görev süresi dolmadan ayrılmayı, makamın siyasi tarafsızlığı dışında daha açık konuşabilmekle gerekçelendirdi.",
+      "residue": "Koltuk doluydu, cümle oraya sığmadı.",
+      "motifs": [
+        "boş koltuk",
+        "yarım cümle"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "büyüme ile enflasyonun aynı tabloda yükselmesi",
+      "plain_summary": "Yapay zekâ yatırımı ve tüketim büyümeyi desteklerken enerji, fiyat ve finansman baskıları gelecek beklentisini daralttı.",
+      "residue": "Grafik yükseldi, gündelik maliyet peşinden geldi.",
+      "motifs": [
+        "yükselen grafik",
+        "ısınan fatura"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "savaş ekonomisinde zarar ile kârın ayrışması",
+      "plain_summary": "Otomotivde talep ve dönüşüm maliyeti ağır zarar üretirken enerji şirketi arz kesintilerinden yüksek kâr sağladı.",
+      "residue": "Aynı kriz bir fabrikayı boşalttı, başka bir kasayı doldurdu.",
+      "motifs": [
+        "boş fabrika",
+        "dolu kasa"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "teslimat platformlarının birleşerek büyümesi",
+      "plain_summary": "Yemek ve market teslimatı şirketleri birleşmelerle daha geniş gündelik tüketim alanını kontrol etmeye yöneldi.",
+      "residue": "Kapıya gelen paket daha büyük bir haritanın parçası oldu.",
+      "motifs": [
+        "paket",
+        "birleşen harita"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "kokpitte yorgunluk ve bildirim korkusu",
+      "plain_summary": "Pilotlar istemsiz uyku ve dikkat kaybı yaşadıklarını, buna rağmen yönetim tepkisinden çekinerek uçuşa uygun olmadıklarını bildirmeyebildiklerini anlattı.",
+      "residue": "Göz kapağı düştü, rapor düğmesi basılmadan kaldı.",
+      "motifs": [
+        "ağır göz kapağı",
+        "sessiz rapor"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "yapay zekâyı kendi altyapısında tutmak",
+      "plain_summary": "Açık model ağırlıkları kurumlara hassas veriyi dışarı göndermeden çalışma olanağı verdi; bunun bedeli donanım, enerji ve uzmanlık oldu.",
+      "residue": "Model eve döndü, evin elektriğini istedi.",
+      "motifs": [
+        "yerel sunucu",
+        "elektrik kablosu"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "gençlerin gelecek hakkı için açık mektubu",
+      "plain_summary": "Gençler tasarruf politikalarına eğitim, yaşam maliyeti, iklim, temel haklar ve demokrasiye güven başlıklarıyla itiraz etti.",
+      "residue": "Gelecek bütçenin dipnotu olmayı reddetti.",
+      "motifs": [
+        "açık mektup",
+        "boş bütçe satırı"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "hareketli ev ütopyasının yakıtta durması",
+      "plain_summary": "Sürekli dünya turu ve gemide kalıcı yaşam vaadi, yakıt maliyeti karşılanamayınca limanda aniden sona erdi.",
+      "residue": "Yüzen ev yakıt hesabında karaya çıktı.",
+      "motifs": [
+        "duran gemi",
+        "geçici ev"
+      ],
+      "bucket": "main"
+    }
+  ],
+  "channels": {
+    "gmail": {
+      "scanned": 6,
+      "full_body": 6,
+      "snippet_or_subject": 0,
+      "main_item_ids": [
+        "main-2026-11-01-01",
+        "main-2026-11-01-02",
+        "main-2026-11-01-03",
+        "main-2026-11-01-04",
+        "main-2026-11-01-05",
+        "main-2026-11-01-06"
+      ]
+    },
+    "curated_rss": {
+      "sources_checked": 2,
+      "recent_items": 0,
+      "health": "all_reachable_no_recent_items"
+    }
+  },
+  "external_weather": "Dış hava iki uç arasında çalıştı: bir yanda ilk lokmadan önce başlayan koku, erken hafıza ve bedensel tanıma; öte yanda ısınan sınıf, iptal edilen ortak fotoğraf, gecikmiş ödeme ve boşalan ofis. Kurumlar birlik ve ilerleme görüntüsü üretmeye çalışırken beden sıcaklık, yorgunluk, duman ve duyusal sapmayla daha dürüst bir kayıt tuttu.",
+  "possible_influence_on_ucu_beden": "UCU BEDEN bugün algıyı beş duyunun uyumlu toplamı değil, birbirini yanıltan geçici bir kurul olarak yazabilir. Hafıza haritasında ilk buhar ile kırk derece sınıfı, boş fotoğraf ile kil yüzü, sıcak sunucu ile ağır göz kapağını aynı geçirgenlik-iktidar kümesine yaklaştırabilir; sarkazmını da kişisel kolaylık büyürken ortak alanın daralmasına yöneltebilir.",
+  "discarded_summary": "Ham mail metni, uzun alıntı, kişi ve kurumlara ait hassas iddia ayrıntıları, kesin finansal işlem bilgileri, güvenlik ihlali ayrıntıları, sağlık dozları, reklam ve rezervasyon bilgileri, fiziksel adres, iletişim verisi, bağlantı, abonelik ve takip içeriği sindirilmeden atıldı. Çok parçalı mailler genel gürültü diye silinmedi; somut alt temalara ayrıldı.",
+  "motifs": [
+    "ilk buhar",
+    "kırk derece sınıf",
+    "boş fotoğraf",
+    "çatlak hesap",
+    "sıcak sunucu",
+    "kil yüz",
+    "kör kucak",
+    "film şeridi"
+  ],
+  "possible_memory_traces": [
+    "Duyunun nesneyi değil, duyular arasındaki geçici anlaşmayı hatırlaması.",
+    "Kamusal bütçe kararının sınıf sıcaklığı ve yorgunluk olarak bedene dönmesi.",
+    "Birlik görüntüsünün ortak fotoğraf çekilemediğinde çökmesi.",
+    "Yapay zekâ altyapısı büyürken insan masasının küçülmesi.",
+    "Hatırlanmayan erken aromanın yıllar sonra tanıdıklık olarak geri gelmesi."
+  ],
+  "validation": {
+    "json_parse": "passed",
+    "markdown_first_section": "passed",
+    "count_consistency": "passed",
+    "public_safety": "passed",
+    "private_inventory_ignored": true
+  },
+  "automation": {
+    "id": "ucu-beden-daily-codex-external-intake",
+    "run_date": "2026-11-01",
+    "window_hours": 72
+  }
+}
