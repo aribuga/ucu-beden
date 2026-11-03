@@ -1,19 +1,19 @@
 {
-  "date": "2026-11-02",
-  "generated_at": "2026-11-02T04:10:31.078Z",
+  "date": "2026-11-03",
   "timezone": "Europe/Istanbul",
-  "status": "success",
-  "provider": "codex",
-  "output_json": "data/external_intake/codex/json/2026-11-02.json",
-  "output_markdown": "data/external_intake/codex/markdown/2026-11-02.md",
-  "output_run_log": "data/external_intake/codex/runs/2026-11-02.log.md",
+  "completed_at": "2026-11-03T04:11:36.351Z",
+  "automation_id": "ucu-beden-daily-codex-external-intake",
+  "outputs": {
+    "json": "data/external_intake/codex/json/2026-11-03.json",
+    "markdown": "data/external_intake/codex/markdown/2026-11-03.md",
+    "run_log": "data/external_intake/codex/runs/2026-11-03.log.md"
+  },
   "counts": {
-    "scanned_mail_count": 9,
-    "full_body_count": 9,
+    "scanned_mail_count": 14,
+    "full_body_count": 14,
     "snippet_or_subject_count": 0,
-    "multipart_digest_count": 5,
-    "curated_rss_source_count": 2,
-    "curated_rss_recent_item_count": 0,
-    "digest_items_count": 45
-  }
+    "multipart_digest_count": 9,
+    "digest_items_count": 75
+  },
+  "safety": "passed"
 }
