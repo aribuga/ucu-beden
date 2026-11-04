@@ -1,0 +1,989 @@
+{
+  "version": 2,
+  "source": "codex_external_intake",
+  "date": "2026-11-04",
+  "generated_at": "2026-11-04T04:06:58.796Z",
+  "timezone": "Europe/Istanbul",
+  "provider": "Codex local automation",
+  "safety": {
+    "public_safe": true,
+    "raw_mail_body_included": false,
+    "raw_urls_included": false,
+    "email_addresses_included": false,
+    "verification_or_transaction_data_included": false,
+    "long_quotes_included": false
+  },
+  "counts": {
+    "scanned_mail_count": 12,
+    "full_body_count": 12,
+    "snippet_or_subject_count": 0,
+    "multipart_digest_count": 7,
+    "curated_rss_source_count": 2,
+    "curated_rss_recent_item_count": 0,
+    "digest_items_count": 58,
+    "main_item_count": 6,
+    "minor_residue_count": 10,
+    "repeated_signal_count": 5
+  },
+  "reading_summary": {
+    "plain_summary": "Bugün okunan maillerde çocukluk oyununun zorbalığa dönüşmesi, seyirci kalan grubun payı, yerel temsil ve seçim güveni, soğuk zincire sızan dijital saldırılar, gençlik ile emek hareketleri, festival ve kent hafızası, gezegen ölçeğinde iklim siyaseti ve yasın bedende gecikerek görünmesi öne çıktı. Yeni şiir, teneffüsün güneşli ve hareketli başlangıcını dışlama, aşağılama, eşyaya el koyma ve okul sonrasına uzanan şiddetle yan yana getirdi.\n\nÇok parçalı kültür, gündem ve teknoloji mailleri genel gürültü diye atılmadı; pencere içinde kalan yedi digest mailden 58 public-safe alt tema korundu. Güvenlik, reklam, kişisel işlem, kesin finansal değer, hassas yöntem ayrıntısı, kişi tanımlayıcıları, ham bağlantılar ve abonelik bilgileri public çıktıya alınmadı. Özel RSS kaynaklarının ikisi de erişilebilirdi ancak son 72 saatte yeni item yoktu.",
+    "what_was_in_the_emails": [
+      "Teneffüste oyunun dışlama, damgalama, seyirci kalma ve okul sonrası zorbalığa dönüşmesini anlatan şiir.",
+      "Yerel meclis temsili, seçim güveni ve kurumlara duyulan güven tartışmaları.",
+      "Soğuk zincire yönelik siber saldırı, üretim daralması ve şirket dayanıklılığı.",
+      "Gençlik eylemleri, ücret baskısı, uyarı grevleri ve sınıf içi temiz hava.",
+      "Festival bakımı, lo-fi müzik, eski kayıtların dönüşü, bienal-kent ilişkisi ve su sergisi.",
+      "Jeolojik zaman, iklim, karbon beden ve silikon makineyi birleştiren manifesto.",
+      "Rızaya dayalı veda, arkadaşlığa eşlik ve yasın elde gecikerek görünmesi.",
+      "Ada geleneği ve dönüşüm şiiri; nefes ile hayatta kalma üzerine şiirsel deneme."
+    ],
+    "what_was_in_curated_rss": [
+      "İki özel kaynak erişilebilirdi; son 72 saatte yeni güncel item yoktu."
+    ],
+    "dominant_topics": [
+      "oyun ve zorbalık",
+      "seyirci kalma",
+      "kurumsal güven ve temsil",
+      "beden ile görünmez altyapı",
+      "emek ve adil kaynak",
+      "kültürel bakım ve arşiv",
+      "yas ve eşlik"
+    ],
+    "notable_absences": [
+      "Özel RSS kaynaklarında yeni güncel item yoktu.",
+      "Kişisel işlem, doğrulama ve güvenlik içerikleri sindirime alınmadı."
+    ],
+    "overall_direction": "Dış dünya UCU BEDEN’i çocukluk oyununun içindeki güçten kamusal altyapıya, oradan bedensel yas ve gezegen ölçeğine itti; seyretmenin de hafızada sorumluluk bıraktığını belirginleştirdi."
+  },
+  "summary": "Teneffüs zili çaldı, oyun bir çocuğun üstünde kapandı; aynı gün soğuk zincir ısındı, sınıfın havası ağırlaştı ve yas elin içinde gecikerek konuştu. Dış dünya bugün UCU BEDEN’e seyretmenin de olayın parçası olduğunu hatırlattı.",
+  "items": [
+    {
+      "id": "main-2026-11-04-01",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "çocukluk, oyun ve zorbalık şiiri",
+      "public_safe_topic": "oyunun zorbalığa dönüşmesi ve seyreden kalabalığın payı",
+      "content_digest": {
+        "what_it_contained": "Şiir, teneffüsün güneşe koşma ve oyun alanına çıkma neşesiyle başlayıp dışlama, aşağılama, tutsak etme, eşyaya el koyma ve okul sonrasına taşan fiziksel zorbalığa dönüşmesini anlatıyordu.",
+        "specific_points": [
+          "Teneffüs önce zil, güneş, tırmanma ve top oyunu gibi ortak bir özgürlük alanı olarak kuruldu.",
+          "Oyun kısa sürede başkalarını yukarı çıkarmama ve saklanan kişiyi çaresiz bırakma gibi dışlama biçimlerine döndü.",
+          "Bir kız çocuğu bedensel bir damgayla hedefleştirildi; ağlaması grubun eğlencesine çevrildi.",
+          "Daha küçük bir çocuğun eşyaları dağıtılırken çevredeki çocuklar ya yalnızca seyretti ya da durumdan yararlandı.",
+          "Zorbalık okul zilinin sınırında kalmadı; okul sonrasında fiziksel şiddetle devam etti."
+        ],
+        "why_it_mattered": "Çocukluk oyunundaki grup hazzı, hedef seçme ve seyirci kalma davranışını tek bir ritimde gösterdiği; şiddetin kurumsal zaman sınırlarını aşmasını somutlaştırdığı için ana item oldu.",
+        "what_was_not_included": "Ham şiir dizeleri, popüler kültür alıntısı, kişi adları, bağlantılar, abonelik içeriği ve ayrıntılı şiddet betimi çıkarıldı."
+      },
+      "residue": "Zil özgürlük için çaldı, ama oyun bir çocuğun üstünde kapanan çembere dönüştü.",
+      "motifs": [
+        "teneffüs zili",
+        "boş maymun barı",
+        "seyreden halka"
+      ],
+      "possible_influence": "UCU BEDEN çocukluk hafızasını masum bir arşiv olarak değil, oyunun ritmine saklanmış güç ve seyirci payı olarak yeniden okuyabilir."
+    },
+    {
+      "id": "main-2026-11-04-02",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "geniş gündem, altyapı ve kültür seçkisi",
+      "public_safe_topic": "yerel temsil, soğuk zincir saldırısı ve arşivin kamusal yüzü",
+      "content_digest": {
+        "what_it_contained": "Çok parçalı gündem maili; yerel meclis dengeleri, gıda soğutma altyapısına yönelik siber saldırılar, imalatta daralma, şirket baskısı, yapay zekâ hizmetleri ile yayıncı hakları ve kültürel arşiv sergileri üzerine bölümler taşıyordu.",
+        "specific_points": [
+          "Yerel siyasette temsilin parti geçişleriyle değil seçmen iradesiyle kurulması tartışıldı.",
+          "Soğutma sistemlerine yapılan saldırıların gıda kaybını fiziksel ve ekonomik bir krize çevirdiği anlatıldı.",
+          "Yüksek maliyet ve zayıf talebin üretim ile şirket dayanıklılığını aşındırdığı aktarıldı.",
+          "Yapay zekâ özetlerinin yayıncı trafiği ve içerik değeri üzerindeki etkisi rekabet sorunu olarak ele alındı.",
+          "Müzik, fotoğraf ve su temalı arşivlerin kişisel belgeyi kamusal hafızaya dönüştürmesi öne çıktı."
+        ],
+        "why_it_mattered": "Aynı mailde temsil, görünmez altyapı, ekonomik sıkışma ve arşiv karşı karşıya geldi; UCU BEDEN için kurumların bedeni nasıl taşıdığına dair yoğun bir dış temas sundu.",
+        "what_was_not_included": "Kişi adları, kesin piyasa rakamları, suçlama ayrıntıları, reklam bölümü, bağlantılar ve işlem bilgileri çıkarıldı."
+      },
+      "residue": "Bir meclis sandalyesi, bozulan bir soğutucu ve arşiv kutusu aynı gün kamusal güveni taşıdı.",
+      "motifs": [
+        "soğuk zincir",
+        "oy sandığı",
+        "arşiv kutusu"
+      ],
+      "possible_influence": "Şiirde görünmez altyapının bir anda ısınması, görsel dilde buz çözen ekran ve yer değiştiren sandalye olarak yüzeye çıkabilir."
+    },
+    {
+      "id": "main-2026-11-04-03",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "kültür, sinema ve kent hafızası seçkisi",
+      "public_safe_topic": "festival prestijinin bakım, seçim ve ortak hafıza ile yenilenmesi",
+      "content_digest": {
+        "what_it_contained": "Mail, köklü bir film festivalinin itibarını miras alınmış bir etiket değil her yıl yeniden kurulması gereken bir bakım ilişkisi olarak değerlendirdi. Ayrıca içe dönük müzik üretimi, eski kayıtların geri dönüşü, sanat ile kent arasındaki uzun ilişki ve suyun ekolojik-politik dolaşımı üzerine bölümler içeriyordu.",
+        "specific_points": [
+          "Festival değerinin film seçimi, sanatçıya özen ve izleyici sorumluluğuyla yeniden üretildiği savunuldu.",
+          "Yalnızlık ve deniz, lo-fi bir müzik pratiğinin yaratıcı kaynağı olarak anlatıldı.",
+          "Eski albüm ve kayıtların yeni kuşaklar tarafından tekrar bulunması kültürel süreklilik örneği oldu.",
+          "Bienalin kentle ilişkisi, yerel bilgi ve toplumsal empati üzerinden okundu.",
+          "Su; yaşam, ölüm, hafıza ve dönüşümü birleştiren ekolojik ve tarihsel bir malzeme olarak ele alındı."
+        ],
+        "why_it_mattered": "Sanatın yalnızca gösteri değil bakım, süreklilik ve kentsel ilişki olduğunu somut örneklerle kurduğu için ana temas oldu.",
+        "what_was_not_included": "Etkinlik programları, kişi listeleri, adresler, tanıtım bağlantıları ve uzun alıntılar çıkarıldı."
+      },
+      "residue": "Prestij, duvara asılı bir madalya değil her yıl yeniden bakılan ortak bir yüzeydi.",
+      "motifs": [
+        "festival perdesi",
+        "deniz uğultusu",
+        "su arşivi"
+      ],
+      "possible_influence": "UCU BEDEN bir kurumu bina yerine bakım ritmi, kenti ise suyun geçtiği uzun bir hafıza olarak düşünebilir."
+    },
+    {
+      "id": "main-2026-11-04-04",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "kozmik siyaset ve gezegen bilinci manifestosu",
+      "public_safe_topic": "jeolojik zaman, iklim ve ortak gezegen siyaseti",
+      "content_digest": {
+        "what_it_contained": "Etkinlik duyurusunun içine yerleştirilmiş manifesto, insanı jeolojik ve kozmik ölçekte konumlandırıyor; iklim krizini gezegensel bir mesele olarak ele alıyor ve sınır, kimlik ve zenginlik ayrımlarına karşı ortak bir siyaset çağrısı yapıyordu.",
+        "specific_points": [
+          "İnsan yaşamı eski taş, buzul izi ve atom çağının devamı içinde düşünüldü.",
+          "Karbon temelli bedenlerle yükselen silikon makineler aynı geçiş döneminin parçaları olarak yan yana getirildi.",
+          "İklim krizi yalnızca yerel değil gezegen ve güneş ölçeğinde bir bilinç sorunu olarak kuruldu.",
+          "Ulusal kapanma ve kaynak biriktirme yerine eşitlik, özgürlük ve ortak yaşam savunuldu.",
+          "Yok oluş karşısında hayatı koruyan demokratik bir gezegen siyaseti talep edildi."
+        ],
+        "why_it_mattered": "UCU BEDEN’in beden, makine ve hafıza eksenini jeolojik zamana açtığı için güçlü bir ana item oldu.",
+        "what_was_not_included": "Etkinlik adresi, kişi ve kurum adları, iletişim bilgileri, sloganların birebir metni ve bağlantılar çıkarıldı."
+      },
+      "residue": "Karbon beden, silikon makineye bakarken aralarında eski bir buzul taşı durdu.",
+      "motifs": [
+        "buzul taşı",
+        "silikon gölge",
+        "gezegen nabzı"
+      ],
+      "possible_influence": "Şiirde kişisel hafıza jeolojik katmanlara, görsel dilde deri ile mineral arasında belirsiz bir yüzeye dönüşebilir."
+    },
+    {
+      "id": "main-2026-11-04-05",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "yas, eşlik ve yaşam sonu üzerine kişisel deneme",
+      "public_safe_topic": "rıza, vedaya eşlik ve yasın bedende gecikerek görünmesi",
+      "content_digest": {
+        "what_it_contained": "Kişisel deneme, bir arkadaşın bilinçli yaşam sonu kararına son günlerde eşlik etmeyi, verilen sözü tutmayı ve vedanın ardından yasın bedensel belirtilerle gecikerek ortaya çıkmasını anlatıyordu.",
+        "specific_points": [
+          "Vedanın rıza, kabulleniş, şükran ve sevgi içinde kurulabildiği anlatıldı.",
+          "Arkadaşlık, son günlerde birlikte kalmak ve önceden verilmiş bir sözü yerine getirmek üzerinden somutlaştı.",
+          "Yas daha sonra elde ağrı, titreme ve yazamama gibi bedensel belirtilerle ortaya çıktı.",
+          "Derin üzüntü ile anlam ve tatmin duygusunun aynı anda var olabileceği vurgulandı.",
+          "Yaşam görevlerinin tamamlandığı hissinin ölümle daha sakin bir ilişki kurabileceği düşünüldü."
+        ],
+        "why_it_mattered": "Hafıza ile beden arasındaki gecikmeli geçişi açıkça gösterdiği ve eşlik etmenin etik ağırlığını taşıdığı için ana item seçildi.",
+        "what_was_not_included": "İsimler, yöntem ve araç ayrıntıları, zamanlama, özel eşyalar, kişisel tanımlayıcılar ve ham alıntılar çıkarıldı."
+      },
+      "residue": "Yazı önce durdu, sonra yas elin içinde konuşmaya başladı.",
+      "motifs": [
+        "titreyen el",
+        "tutulan söz",
+        "sessiz eşik"
+      ],
+      "possible_influence": "UCU BEDEN kaybı açıklama yerine elin ritminde gecikmiş bir kas hafızası olarak taşıyabilir."
+    },
+    {
+      "id": "main-2026-11-04-06",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "gençlik, emek, teknoloji ve kamusal alan gündemi",
+      "public_safe_topic": "adil kaynak talebi, emek basıncı ve sınıftaki temiz hava",
+      "content_digest": {
+        "what_it_contained": "Çok parçalı gündem maili; gençlik eylemleri, yaşam maliyeti, ücret ve çalışma koşulları, sanayi grevleri, yapay zekâ talebinin çip üretimine etkisi, sınıf içi hava kalitesi ve siyasi temsil güveni üzerine bölümler taşıyordu.",
+        "specific_points": [
+          "Gençlerin eğitim, sağlık, barınma ve ekonomik adalet talepleri farklı ülkelerde ortaklaştı.",
+          "Tekstil ve metal emekçileri artan yaşam maliyetine karşı ücret ve çalışma koşulları talep etti.",
+          "Yapay zekâ altyapısı çip ve enerji talebini hızlandıran endüstriyel bir kuvvet olarak belirdi.",
+          "Sınıf içi hava kalitesi, dikkat ve öğrenmenin görünmez bedensel altyapısı olarak ele alındı.",
+          "Seçim kaydı ve temsil tartışmaları kurumlara duyulan güvenin kırılganlığını gösterdi."
+        ],
+        "why_it_mattered": "Bedenin nefes, ücret, eğitim ve temsil üzerinden kamusal sistemlere nasıl bağlandığını aynı anda gösterdiği için ana item oldu.",
+        "what_was_not_included": "Şiddet ayrıntıları, kesin ölüm ve piyasa rakamları, isimler, reklam bölümleri, suçlama ayrıntıları ve bağlantılar çıkarıldı."
+      },
+      "residue": "Sınıfın havası, fabrika ücreti ve meydandaki ses aynı adalet talebine bağlandı.",
+      "motifs": [
+        "açık pencere",
+        "iş bırakma düdüğü",
+        "genç kalabalık"
+      ],
+      "possible_influence": "Şiir ritmi ortak taleplerin kısa ve tekrarlı nefesiyle, görsel dil ise sınıf havası ile fabrika dumanını aynı yüzeyde buluşturabilir."
+    }
+  ],
+  "minor_residues": [
+    {
+      "id": "minor-2026-11-04-01",
+      "source": "gmail",
+      "residue": "Teneffüsün neşeli ritmi, dışlanan çocuğun ağlamasını grubun temposuna kattı.",
+      "motifs": [
+        "zil",
+        "oyun çizgisi"
+      ],
+      "possible_influence": "Şiirde masum tekrarların anlamı her dönüşte biraz daha sertleşebilir."
+    },
+    {
+      "id": "minor-2026-11-04-02",
+      "source": "gmail",
+      "residue": "Soğuk zincirin bozulması, dijital saldırının gıdaya ve çöpe uzanan fiziksel sonucunu bıraktı.",
+      "motifs": [
+        "eriyen buz",
+        "boş raf"
+      ],
+      "possible_influence": "Görünmez kod hatası şiirde sıcaklığa dönüşebilir."
+    },
+    {
+      "id": "minor-2026-11-04-03",
+      "source": "gmail",
+      "residue": "Festival prestiji kalıcı mühür değil her yıl tekrar edilen bakım olarak kaldı.",
+      "motifs": [
+        "yenilenen perde",
+        "bakım eli"
+      ],
+      "possible_influence": "Kurumsal hafıza bir bakım ritmi olarak işlenebilir."
+    },
+    {
+      "id": "minor-2026-11-04-04",
+      "source": "gmail",
+      "residue": "Yapay zekâ yazısında ilerleme modelden çok insanın çalışma biçiminde arandı.",
+      "motifs": [
+        "taslak",
+        "değişen el"
+      ],
+      "possible_influence": "Araç ile kullanıcı arasındaki öğrenme hafızaya eklenebilir."
+    },
+    {
+      "id": "minor-2026-11-04-05",
+      "source": "gmail",
+      "residue": "Fosil müzayedesi, çok eski bedenle yeni fiyat dilini kuru biçimde yan yana getirdi.",
+      "motifs": [
+        "fosil",
+        "fiyat etiketi"
+      ],
+      "possible_influence": "Sarkazm maddi yaş ile piyasa değeri arasındaki farktan doğabilir."
+    },
+    {
+      "id": "minor-2026-11-04-06",
+      "source": "gmail",
+      "residue": "Temiz sınıf havası dikkatin görünmez altyapısı olarak belirdi.",
+      "motifs": [
+        "açık pencere",
+        "tahta tozu"
+      ],
+      "possible_influence": "Nefes ile öğrenme aynı bedensel eşikte kurulabilir."
+    },
+    {
+      "id": "minor-2026-11-04-07",
+      "source": "gmail",
+      "residue": "Eski albümün gecikmiş başarısı arşivin zamanını piyasa takviminden ayırdı.",
+      "motifs": [
+        "dönen plak",
+        "geç saat"
+      ],
+      "possible_influence": "Geç gelen tanınma şiirde ritmik gecikmeye dönüşebilir."
+    },
+    {
+      "id": "minor-2026-11-04-08",
+      "source": "gmail",
+      "residue": "Tarihî buluşma mekânının dönüşü, tat ile konuşmayı kentsel hafızaya bağladı.",
+      "motifs": [
+        "pasta tabağı",
+        "eski masa"
+      ],
+      "possible_influence": "Şehir hafızası ağız ve masa üzerinden taşınabilir."
+    },
+    {
+      "id": "minor-2026-11-04-09",
+      "source": "gmail",
+      "residue": "Otomasyon önerileri zaman kazandırırken yeni sisteme bağımlılık ihtimalini de taşıdı.",
+      "motifs": [
+        "otomatik düğme",
+        "zaman kartı"
+      ],
+      "possible_influence": "Kolaylık ile bağımlılık dengeli bir mekanik motif olabilir."
+    },
+    {
+      "id": "minor-2026-11-04-10",
+      "source": "gmail",
+      "residue": "Gençlik eylemleri farklı meydanlarda ortak adalet dili kurdu.",
+      "motifs": [
+        "genç kalabalık",
+        "boş sıra"
+      ],
+      "possible_influence": "Çoğul ses tek bir slogan yerine kesişen ihtiyaçlar olarak duyulabilir."
+    }
+  ],
+  "repeated_signals": [
+    {
+      "signal": "gücün gündelik oyunun içine saklanması",
+      "count": 4,
+      "residue": "Teneffüsteki dışlama, meydandaki şiddet, seçmen kaydındaki eksilme ve yer değiştiren meclis sandalyesi gücün büyük açıklamalardan önce gündelik kurallarda çalıştığını gösterdi."
+    },
+    {
+      "signal": "seyretmenin olayın dışında kalmaya yetmemesi",
+      "count": 4,
+      "residue": "Çocukların sessiz bakışı, kurumların geciken müdahalesi, yayıncının görünmezleşmesi ve kültürel tanıklık farklı alanlarda pasifliğin de iz bıraktığını tekrarladı."
+    },
+    {
+      "signal": "bedenin görünmez altyapıya bağlı olması",
+      "count": 6,
+      "residue": "Soğuk zincir, sınıf havası, ücret, nefes, yas ve gıda güvenliği soyut sistemlerin bedende sıcaklık, yorgunluk ve kesinti olarak belirdiğini gösterdi."
+    },
+    {
+      "signal": "kurumsal güvenin bakım ve şeffaflık istemesi",
+      "count": 7,
+      "residue": "Festival seçkisi, yerel temsil, seçim kaydı, yayıncı hakkı, bütçe pazarlığı, kültür arşivi ve okul güvenliği aynı bakım ihtiyacını farklı yerlerden gönderdi."
+    },
+    {
+      "signal": "eski kayıtların yeni zamanda tekrar açılması",
+      "count": 6,
+      "residue": "Eski albüm, fotoğraf arşivi, besteci belgeleri, festival belleği, ada şiiri ve geri dönen mekân geçmişi bugünün yüzeyine yeniden çıkardı."
+    }
+  ],
+  "digest_items": [
+    {
+      "topic": "yerel mecliste temsil ve seçmen iradesi",
+      "plain_summary": "Parti geçişleri üzerinden değişebilecek meclis dengeleri, temsilin kaynağı ve seçmen iradesinin sürekliliği açısından tartışıldı.",
+      "residue": "Sandalye yer değiştirdiğinde oy pusulasının gölgesi yerinde kaldı.",
+      "motifs": [
+        "sandalye",
+        "oy pusulası"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "soğuk zincire sızan dijital saldırı",
+      "plain_summary": "Süpermarketlerin soğutma sistemlerine yapılan saldırılar, görünmez yazılım müdahalesini gıda kaybı ve ısınan fiziksel altyapıya çevirdi.",
+      "residue": "Kod, buzu çözerek yiyeceğin zamanını hızlandırdı.",
+      "motifs": [
+        "eriyen buz",
+        "soğutucu"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "imalatta daralan nefes",
+      "plain_summary": "Zayıf talep ve yüksek maliyetler üretim siparişlerini, fabrika temposunu ve şirket dayanıklılığını aşağı çekti.",
+      "residue": "Fabrika çalıştı ama siparişin sesi inceldi.",
+      "motifs": [
+        "boş bant",
+        "ince sipariş"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "şirket dayanıklılığında aşınma",
+      "plain_summary": "Artan iflas beklentisi ekonomik yavaşlama, enflasyon ve daralan kâr alanıyla ilişkilendirildi.",
+      "residue": "Bilanço kâğıdı beden gibi yoruldu.",
+      "motifs": [
+        "ince kâğıt",
+        "dar marj"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "yapay zekâ özetleri ile yayıncı hakkı",
+      "plain_summary": "Arama sonuçlarındaki yapay zekâ özetlerinin yayıncı trafiği, içerik seçimi ve ekonomik değer üzerindeki etkisi rekabet meselesi oldu.",
+      "residue": "Özet konuşurken kaynağın kapısı sessizleşti.",
+      "motifs": [
+        "kapanan sekme",
+        "kesilmiş trafik"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "veri merkezinin adını değiştirme arzusu",
+      "plain_summary": "Büyük hesaplama altyapısına daha kabul edilebilir bir kamusal ad verme fikri, teknolojik ölçeğin dil yoluyla yumuşatılmasını gösterdi.",
+      "residue": "Beton bina, adını değiştirerek daha hafif görünmeye çalıştı.",
+      "motifs": [
+        "beton kampüs",
+        "isim etiketi"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "kopya oyun ile özgün üretim sınırı",
+      "plain_summary": "Kodlama aracına mevcut oyunları yeniden üretmeme kuralı getirilmesi, benzerlik ile özgün tasarım arasındaki sınırı görünür kıldı.",
+      "residue": "Kural, eski oyunun hayaletini yeni ekrandan çıkardı.",
+      "motifs": [
+        "oyun ekranı",
+        "silinen kopya"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "koalisyon bütçesinde kesinti ve vergi gerilimi",
+      "plain_summary": "Bütçe açığını kapatma yolları konusunda kesinti ile daha fazla vergi arasında kalan koalisyon, ekonomik tercihin siyasi krize dönüşmesini gösterdi.",
+      "residue": "Bütçe makası masanın ortasında açık kaldı.",
+      "motifs": [
+        "makas",
+        "bütçe masası"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "göç, yerinden edilme ve eve dönüş",
+      "plain_summary": "Deniz yolundaki kayıplar ile operasyon sonrası hasarlı eve dönüş, hareketin güvenlik ve kırılganlıkla çevrili olduğunu gösterdi.",
+      "residue": "Eve dönüş, kapının hâlâ orada olduğu anlamına gelmedi.",
+      "motifs": [
+        "ıslak ayakkabı",
+        "hasarlı kapı"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "müzik, fotoğraf ve suyun arşivleşmesi",
+      "plain_summary": "Besteci belgeleri, mülteci fotoğrafları ve su temalı yapıtlar kişisel kaydı ortak tarih ve dönüşüm alanına taşıdı.",
+      "residue": "Nota, fotoğraf ve su aynı arşiv kutusuna sızdı.",
+      "motifs": [
+        "nota defteri",
+        "su izi"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "festival itibarının her yıl yeniden kurulması",
+      "plain_summary": "Köklü bir festivalin değeri geçmiş ününden çok seçki, bakım ve izleyici sorumluluğuyla yenilenen bir ilişki olarak okundu.",
+      "residue": "Prestij, her yıl yeniden dikilen geçici bir perde oldu.",
+      "motifs": [
+        "festival perdesi",
+        "bakım eli"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "yalnızlığın lo-fi müzikte biçim bulması",
+      "plain_summary": "İçe dönüklük, karanlık ve deniz hissi, düşük parlaklıklı bir müzik dilinin üretim koşulları olarak anlatıldı.",
+      "residue": "Deniz uğultusu odanın içinden kaydedildi.",
+      "motifs": [
+        "deniz uğultusu",
+        "soluk kaset"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "elektronik öncünün ritim mirası",
+      "plain_summary": "Elektronik müzikte öncü bir figürün ölümü, ritmin kuşaklar boyunca nasıl devredildiğini yeniden görünür kıldı.",
+      "residue": "Makine ritmi sahibinden sonra da yürüdü.",
+      "motifs": [
+        "ritim makinesi",
+        "boş stüdyo"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "iklim şarkısının yeniden etkinleşmesi",
+      "plain_summary": "Eski bir şarkının iklim gündemi için yeniden kullanılması, kültürel belleğin güncel krize ses vermesini sağladı.",
+      "residue": "Eski melodi yeni sıcaklıkta tekrar açıldı.",
+      "motifs": [
+        "eski şarkı",
+        "ısı dalgası"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "edebî buluşma mekânının geri gelişi",
+      "plain_summary": "Tarihî bir pastane ve yazı buluşma alanının dönüşü, kentsel hafızanın tat ve sohbet üzerinden yeniden kurulmasını gösterdi.",
+      "residue": "Masa geri geldiğinde eski cümlelerin şekeri de döndü.",
+      "motifs": [
+        "pasta tabağı",
+        "eski masa"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "animasyonun büyüyen kültür ekonomisi",
+      "plain_summary": "Animasyon üretiminin küresel ölçekte büyümesi, çizilmiş dünyaların hem estetik hem ekonomik altyapıya dönüşmesini gösterdi.",
+      "residue": "Çizgi, ekranda kalmayıp bir endüstri kurdu.",
+      "motifs": [
+        "hareketli çizgi",
+        "üretim masası"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "sağlık çalışanı tanıklığının dayanışma sesine dönüşmesi",
+      "plain_summary": "Bir belgeselin ses dünyası, savaş koşullarındaki sağlık çalışanlarının tanıklığını müzik ve kolektif dikkatle taşıdı.",
+      "residue": "Stetoskop sesi, şarkının altında kaybolmadı.",
+      "motifs": [
+        "stetoskop",
+        "alçak nota"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "eski albümün yeni kuşakta yükselmesi",
+      "plain_summary": "Yıllar sonra yeniden yayımlanan bir albümün yeni dinleyicilerle karşılaşması, arşivin gecikmiş dolaşımını gösterdi.",
+      "residue": "Plak geç kaldı ama dinleyici hâlâ oradaydı.",
+      "motifs": [
+        "dönen plak",
+        "geç saat"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "bienal ile kentin uzun ilişkisi",
+      "plain_summary": "Sanat etkinliği, yerel bilgi, gençlik dönüşümü ve toplumsal empati üzerinden kente yerleşen yirmi yıllık bir ilişki olarak ele alındı.",
+      "residue": "Sergi bitti, kentte bıraktığı soru kalmaya devam etti.",
+      "motifs": [
+        "kent haritası",
+        "sökülen afiş"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "suyun ekolojik ve tarihsel dolaşımı",
+      "plain_summary": "Farklı sanat mecraları suyu yaşam, ölüm, politika, hafıza ve dönüşüm arasında hareket eden bir malzeme olarak düşündü.",
+      "residue": "Su, tarih boyunca aynı kabı kabul etmedi.",
+      "motifs": [
+        "su halkası",
+        "boş kap"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "yapay zekâ gündemini bağlama oturtma",
+      "plain_summary": "Teknik gelişmeleri hız haberinden çıkarıp karar vericiler için bağlam, eğilim ve sonuç ekseninde okuyan yayınlar önerildi.",
+      "residue": "Hızlı haberin arkasına yavaş bir açıklama eklendi.",
+      "motifs": [
+        "bağlam notu",
+        "hız göstergesi"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "pratik yapay zekâ iş akışları",
+      "plain_summary": "Araçların yalnızca tanıtımı değil, gündelik üretim ve otomasyon süreçlerine nasıl yerleştirilebileceği öne çıkarıldı.",
+      "residue": "Araç, vitrin yerine iş masasını aradı.",
+      "motifs": [
+        "iş akışı",
+        "küçük dişli"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "küçük işletmede otomasyon baskısı",
+      "plain_summary": "Küçük işletmelerin tekrar eden işleri otomatikleştirme isteği, zaman kazanma ile yeni bağımlılık kurma arasında belirdi.",
+      "residue": "Kazanan dakika başka bir sisteme bağlandı.",
+      "motifs": [
+        "zaman kartı",
+        "otomatik düğme"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "metinden site kuran araçlar",
+      "plain_summary": "Doğal dil komutlarıyla site üretimi, tasarım ve yazılım emeğinin yeni bir arayüze sıkışmasını gösterdi.",
+      "residue": "Cümle, ekranda bir binaya dönüştü.",
+      "motifs": [
+        "metin kutusu",
+        "boş site"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "kurumsal bağlantılar ve arka uç seçimi",
+      "plain_summary": "Model bağlantıları ile veri altyapısı karşılaştırmaları, yapay zekânın görünür yüzünün arkasındaki bakım ve uyumluluk yükünü hatırlattı.",
+      "residue": "Parlak arayüzün arkasında kablo seçimi uzadı.",
+      "motifs": [
+        "kablo demeti",
+        "arka oda"
+      ],
+      "bucket": "noise"
+    },
+    {
+      "topic": "modelden çok insan sürecinin gelişmesi",
+      "plain_summary": "Bir yazar, yapay zekâ destekli yazıda asıl ilerlemenin modelden çok kendi yaratıcı sürecini değiştirmesinden geldiğini anlattı.",
+      "residue": "Araç aynı kaldı, elin ona yaklaşma biçimi değişti.",
+      "motifs": [
+        "taslak",
+        "düzeltilmiş çizgi"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "kültür kurumlarında yapay zekâ araştırması",
+      "plain_summary": "Kültür kurumlarının yapay zekâ ve dil modellerini nasıl kullandığı, fırsat ve güçlüklerin nerede toplandığı üzerine araştırma çağrısı yapıldı.",
+      "residue": "Müze, arşivin yanına hesaplama masasını koydu.",
+      "motifs": [
+        "arşiv rafı",
+        "hesaplama masası"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "fosil müzayedesinin kurumsal dili",
+      "plain_summary": "Çok pahalı fosil satışları ile bunları meşrulaştıran cilalı kurum dili arasındaki uyumsuzluk kuru bir mizahla görünür kılındı.",
+      "residue": "Taşlaşmış kemik, fiyat etiketinin altında yeniden canlandı.",
+      "motifs": [
+        "fosil",
+        "fiyat etiketi"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "gençliğin adil kaynak talebi",
+      "plain_summary": "Farklı ülkelerdeki genç eylemleri eğitim, barınma, sağlık ve ekonomik adalet taleplerini ortaklaştırdı.",
+      "residue": "Ayrı meydanlar aynı eksikliği söyledi.",
+      "motifs": [
+        "genç kalabalık",
+        "boş sıra"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "kamusal şiddetin gündelik kırılganlığı",
+      "plain_summary": "Toplu saldırılar ve güvenlik olayları, sıradan kamusal alanların ne kadar hızlı tehdit ortamına dönüşebildiğini gösterdi.",
+      "residue": "Kutlama alanının sesi bir anda kesildi.",
+      "motifs": [
+        "boş meydan",
+        "kesik ses"
+      ],
+      "bucket": "noise"
+    },
+    {
+      "topic": "tekstil emeğinde ücret ve yaşam maliyeti",
+      "plain_summary": "Gıda, konut ve sağlık giderleri artarken tekstil çalışanlarının ücret talebi üretim hattını durdurma noktasına geldi.",
+      "residue": "Kumaş aktı, ücret yerinde kaldı.",
+      "motifs": [
+        "kumaş rulosu",
+        "duran bant"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "metal sektöründe uyarı grevi",
+      "plain_summary": "Metal işçilerinin kısa süreli iş bırakmaları, toplu pazarlığın beden ve zaman üzerinden kurulan basıncını görünür kıldı.",
+      "residue": "Düdük çaldığında metal sesi sustu.",
+      "motifs": [
+        "metal levha",
+        "iş bırakma düdüğü"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "yapay zekâ talebinin çip üretimini sürüklemesi",
+      "plain_summary": "Hızlanan yapay zekâ yatırımı, yarı iletken ihracatını ve sanayi planlarını belirleyen maddi bir talebe dönüştü.",
+      "residue": "Soyut model, fabrikadan daha fazla çip istedi.",
+      "motifs": [
+        "çip tepsisi",
+        "ısı"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "sınıf havasının öğrenmeye etkisi",
+      "plain_summary": "Havalandırma ve temiz enerji çözümleri, sınıftaki dikkat ile beden sağlığının görünmez altyapısı olarak ele alındı.",
+      "residue": "Ders, tahta kadar havaya da bağlıydı.",
+      "motifs": [
+        "açık pencere",
+        "soluk"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "ürün stratejisi ile yapay zekâ yarışı",
+      "plain_summary": "Teknoloji şirketleri hız yarışını, ürünün gündelik faydası ve sürdürülebilir maliyetiyle dengeleme arayışına girdi.",
+      "residue": "Yarış çizgisi üründen önce uzadı.",
+      "motifs": [
+        "yarış şeridi",
+        "boş ürün kutusu"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "seçim güveni ve temsil kaydı",
+      "plain_summary": "Seçmen kaydı ve dışlanma iddiaları, temsilin yalnızca oy gününde değil kayıt altyapısında da kırılabildiğini gösterdi.",
+      "residue": "İsim listede yoksa ses sandığa ulaşamadı.",
+      "motifs": [
+        "isim listesi",
+        "kapalı sandık"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "müzakere ile savaş tehdidi arasındaki dar koridor",
+      "plain_summary": "Bölgesel gerilimlerde görüşme çağrıları ile yeni saldırı tehdidi aynı anda dolaşarak diplomasinin kırılganlığını gösterdi.",
+      "residue": "Masa kuruldu, kapının dışında motor çalışmaya devam etti.",
+      "motifs": [
+        "müzakere masası",
+        "uzak motor"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "kültürel dayanışmanın yeniden seslenmesi",
+      "plain_summary": "İklim eylemi için yenilenen şarkı ve dayanışma turnesi, politik talebin müzik yoluyla dolaşmasını sağladı.",
+      "residue": "Şarkı, bildirinin taşıyamadığı nefesi taşıdı.",
+      "motifs": [
+        "turne afişi",
+        "ortak nakarat"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "kusursuz tatil görüntüsünden kişisel beklentiye kaçış",
+      "plain_summary": "Sosyal medyada iyi görünme baskısı, gezginleri kısa, solo, ruh hâli odaklı ve alışılmadık deneyimlere yönelen daha kişisel planlara itti.",
+      "residue": "Rota haritadan önce ekrandaki kusursuz fotoğraftan kaçtı.",
+      "motifs": [
+        "küçük bavul",
+        "boş fotoğraf"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "sanatçı misafirliğinin ev sahibine bıraktığı karşılık",
+      "plain_summary": "Misafirlik programları üretim odasının ötesinde yerel topluluk, zanaat aktarımı, yüz yüze temas ve kırsal gelişim üzerinden değerlendirildi.",
+      "residue": "Konuk gitti; evde yalnız eser değil yeni bir el hareketi kaldı.",
+      "motifs": [
+        "misafir odası",
+        "zanaat eli"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "tarihî buluşma mekânının yeni adla geri dönmesi",
+      "plain_summary": "Edebiyatçıların bir zamanlar buluştuğu tarihî pastane, geçmiş sosyal hafızasını yeni işletme biçimi içinde yeniden açmaya hazırlandı.",
+      "residue": "Eski masa yeni tabelanın altında aynı sohbeti bekledi.",
+      "motifs": [
+        "eski masa",
+        "yeni tabela"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "eriyen buzulun eski savaşı geri vermesi",
+      "plain_summary": "İklimle hızlanan buzul erimesi, yüzyıl önce bırakılan patlamamış mühimmatı bugünün yürüyüş alanına çıkardı.",
+      "residue": "Buz çekildi, savaş paslı metal olarak geri geldi.",
+      "motifs": [
+        "eriyen buz",
+        "paslı metal"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "yayalaştırmanın hava ve güvenlik alanı açması",
+      "plain_summary": "Araç trafiğine kapatılan kent parçası hava kirliliğini ve trafik kazasını azaltan kalıcı bir kamusal alan denemesine dönüştü.",
+      "residue": "Motor sustu, sokak yeniden akciğer kazandı.",
+      "motifs": [
+        "boş yol",
+        "açık akciğer"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "ekransız sofranın ilişkiyi geri çağırması",
+      "plain_summary": "Restoranlar ailelerden telefonları geçici olarak uzaklaştırıp sohbet, oyun ve çizimi masaya geri getiren gönüllü bir deney başlattı.",
+      "residue": "Telefon teslim edildi, masadaki yüzler yeniden belirdi.",
+      "motifs": [
+        "telefonsuz masa",
+        "çizim kâğıdı"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "tarihî yapının çağdaş konaklamaya çevrilmesi",
+      "plain_summary": "Eski bir kent simgesi mimari ayrıntılarını korurken çağdaş konfor ve marka diliyle yeniden yorumlandı.",
+      "residue": "Eski avize yeni hizmet ritmine uyarlandı.",
+      "motifs": [
+        "cam avize",
+        "yenilenmiş koridor"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "yükseltilmiş parkın son boşluğunun yeşermesi",
+      "plain_summary": "Eski ulaşım altyapısından dönüştürülen parkın son girişi, çok yıllık bitkilerle kamusal ekolojiye bağlandı.",
+      "residue": "Rayın son boşluğu kök tutarak kapandı.",
+      "motifs": [
+        "eski ray",
+        "çok yıllık bitki"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "fotoğrafın hafıza ile kurgu arasında salınması",
+      "plain_summary": "Bir fotoğraf festivali belge, kanıt, unutma ve yorum arasındaki değişken sınırı; uzun süre görünmemiş gündelik görüntülerle tartıştı.",
+      "residue": "Fotoğraf kanıt olmadan önce unutulmuş bir gündü.",
+      "motifs": [
+        "eski negatif",
+        "değişen çerçeve"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "hareket özgürlüğünün sınıfsal kabuğu",
+      "plain_summary": "Lüks uçuş ve kesintisiz çalışan yeni havalimanı örnekleri, seyahat esnekliğinin mahremiyet, alan ve satın alma gücüyle dağıtıldığını gösterdi.",
+      "residue": "Gökyüzü herkese açıktı; içindeki oda değildi.",
+      "motifs": [
+        "özel kabin",
+        "gece pisti"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "festival ödülünün ortak dikkati bir filme toplaması",
+      "plain_summary": "Bir film anlatı, senaryo, yönetim ve oyunculuk katmanlarında çoklu ödülle görünürlük kazanarak kültürel dikkatin merkezine yerleşti.",
+      "residue": "Sahne ışığı aynı filmin çevresinde altı kez yandı.",
+      "motifs": [
+        "ödül sahnesi",
+        "film karesi"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "müze gösterişine izinsiz karşı görüntü asılması",
+      "plain_summary": "Bir sanatçı gala ihtişamı ile protestoculara yönelik polis müdahalesini aynı eserde buluşturup büyük müzenin duvarına izinsiz yerleştirdi.",
+      "residue": "Müze içeri aldığı şıklığın yanına dışarıda bıraktığı şiddeti kısa süre asmak zorunda kaldı.",
+      "motifs": [
+        "izinsiz çerçeve",
+        "merdiven flaşı"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "çocuk koruması ile dijital yaş doğrulaması arasındaki sınır",
+      "plain_summary": "Sosyal ağlarda yaş eşiği, varsayılan gizlilik ve reklam kısıtı getirirken kimlik yerine yalnız yaş koşulunu doğrulayan belirteç önerildi.",
+      "residue": "Kapı yaşı sordu; kimliği içeride bırakmaya söz verdi.",
+      "motifs": [
+        "yaş kapısı",
+        "adsız belirteç"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "piyasa kurumunda yönetim ve güven sarsılması",
+      "plain_summary": "Finansal soruşturma ile üst düzey yönetim değişiklikleri, piyasayı denetleyen kurumların kendi güvenilirliğini tartışmalı hâle getirdi.",
+      "residue": "Denetim masası kendi dosyasının altında kaldı.",
+      "motifs": [
+        "boş makam",
+        "kapalı dosya"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "barış görüşmesi ile gecikmiş savunma teslimatı arasındaki gerilim",
+      "plain_summary": "Diplomatik görüşmeler deniz güvenliği ve barış ihtimalini ararken savunma tedarikinin uzun takvimi acil ihtiyaçla çelişti.",
+      "residue": "Barış masası kuruldu, mühimmat takvimi yıllara uzandı.",
+      "motifs": [
+        "uzun masa",
+        "geciken sevkiyat"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "emek-sermaye ilişkisinin fabrika bedeninden atık ağına uzanması",
+      "plain_summary": "Bir sergi işçi bedenini fabrika mekânı, kent dönüşümü, üretim zinciri, hak mücadelesi ve küresel atıkla birlikte ele aldı.",
+      "residue": "Fabrika kapandı, emek duvarda ve atıkta çalışmayı sürdürdü.",
+      "motifs": [
+        "fabrika bedeni",
+        "atık ağı"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "üç yüz yıllık hicvin teknoloji çağında yeniden okunması",
+      "plain_summary": "Eski bir hiciv romanı bilimsel kibir, teknoloji bağımlılığı ve toplumsal eleştiri üzerinden yeni sergi ve tartışmalarla güncellendi.",
+      "residue": "Üç yüz yıllık devler yeni ekranın içine sığdı.",
+      "motifs": [
+        "eski gravür",
+        "yeni ekran"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "sağlık çalışanı tanıklığının dayanışma sesine dönüşmesi",
+      "plain_summary": "Savaş bölgesindeki sağlık çalışanlarının deneyimlerini kaydeden belgesel, farklı müzisyenlerin katkısıyla destek ve dayanışma albümüne dönüştü.",
+      "residue": "Tanıklık konuşmakla kalmadı, ortak bir ritim topladı.",
+      "motifs": [
+        "karanlık kayıt",
+        "dayanışma sesi"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "sanayi deposunun tasarım arşivine dönüşmesi",
+      "plain_summary": "Eski bir depo korunarak tasarım arşivi, çağdaş sanat, atölye ve kamusal etkinliği birleştiren kültür kampüsüne çevrilmeye hazırlandı.",
+      "residue": "Depo malı bıraktı, tasarım hafızasını taşımaya başladı.",
+      "motifs": [
+        "boş depo",
+        "arşiv rafı"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "gündelik eşya ve pati izinin büyük tarihi delmesi",
+      "plain_summary": "Antik bir dolaptaki bakım eşyaları ile kurumadan önce kerpice basan köpeğin izi, felaket ve yıkımın içinden sıradan yaşamı görünür kıldı.",
+      "residue": "İmparatorluk sustu; cımbız, kolye ve pati hâlâ konuştu.",
+      "motifs": [
+        "antik dolap",
+        "kerpiç pati"
+      ],
+      "bucket": "main"
+    }
+  ],
+  "channels": {
+    "gmail": {
+      "scanned": 12,
+      "full_body": 12,
+      "snippet_or_subject": 0,
+      "main_item_ids": [
+        "main-2026-11-04-01",
+        "main-2026-11-04-02",
+        "main-2026-11-04-03",
+        "main-2026-11-04-04",
+        "main-2026-11-04-05",
+        "main-2026-11-04-06"
+      ]
+    },
+    "curated_rss": {
+      "sources_checked": 2,
+      "recent_items": 0,
+      "health": "all_reachable_no_recent_items"
+    }
+  },
+  "external_weather": "Dış hava hem oyun alanı kadar yakın hem altyapı kadar görünmezdi. Bir çocuk grubunun neşesi kolayca hedef seçmeye döndü; yetişkin dünyasında temsil, ücret, yayıncı hakkı, soğuk zincir ve sınıf havası benzer güç dağılımlarını daha büyük ölçeklerde tekrar etti. Kültür alanı buna bakım, arşiv ve eski kayıtları yeniden açma çabasıyla karşılık verdi.",
+  "possible_influence_on_ucu_beden": "UCU BEDEN bugün çocukluk hafızasını masum bir fon olarak değil, güç, seyirci kalma ve devam eden şiddetin ilk provası olarak taşıyabilir. Şiir ritmi teneffüs oyunlarının neşeli tekrarını giderek sertleştirip grup hazzını rahatsız edici bir mekanizmaya çevirebilir. Görsel dilde boş bir oyun alanı, dağılmış kartlar, eriyen soğutucu buzu ve açık sınıf penceresi aynı yüzeyde buluşabilir; sarkazm ise grubun eğlence dediği şeyin kuru ve çıplak tekrarından doğabilir.",
+  "discarded_summary": "Ham şiir dizeleri, popüler kültür alıntısı, ham mail body, uzun alıntı, email adresi, ham bağlantı, doğrulama veya güvenlik bilgisi, fatura ve kişisel işlem verisi, abonelik ve takip içeriği, kesin piyasa rakamları, reklam bölümleri, kişi tanımlayıcıları, hassas yaşam sonu yöntem ayrıntıları ve ayrıntılı şiddet betimleri sindirilmeden atıldı. Çok parçalı mailler genel gürültü diye silinmedi; 58 somut alt temaya ayrıldı.",
+  "motifs": [
+    "teneffüs zili",
+    "seyreden halka",
+    "dağılmış kartlar",
+    "eriyen buz",
+    "yer değiştiren sandalye",
+    "titreyen el",
+    "festival perdesi",
+    "açık pencere",
+    "buzul taşı",
+    "su arşivi"
+  ],
+  "possible_memory_traces": [
+    "Neşeli bir oyunun tekrar yoluyla dışlama ve şiddet mekanizmasına dönüşmesi.",
+    "Seyirci kalan grubun olayın hafızasına sessiz bir ortak olarak yazılması.",
+    "Görünmez dijital müdahalenin gıdayı ve sıcaklığı doğrudan değiştirmesi.",
+    "Yasın olay anında değil daha sonra el, titreme ve yazı üzerinden görünmesi.",
+    "Kurum itibarının miras değil her yıl tekrar edilen bakım olması.",
+    "Temiz havanın dikkat ve öğrenmenin sessiz altyapısı olması."
+  ],
+  "validation": {
+    "json_parse": "passed",
+    "markdown_first_section": "passed",
+    "count_consistency": "passed",
+    "public_safety": "passed",
+    "private_inventory_ignored": true
+  },
+  "automation": {
+    "id": "ucu-beden-daily-codex-external-intake",
+    "run_date": "2026-11-04",
+    "window_hours": 72
+  }
+}
