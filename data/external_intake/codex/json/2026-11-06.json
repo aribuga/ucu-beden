@@ -1,0 +1,808 @@
+{
+  "version": 2,
+  "source": "codex_external_intake",
+  "date": "2026-11-06",
+  "generated_at": "2026-11-06T04:05:23.490Z",
+  "timezone": "Europe/Istanbul",
+  "provider": "Codex local automation",
+  "safety": {
+    "public_safe": true,
+    "raw_mail_body_included": false,
+    "raw_urls_included": false,
+    "email_addresses_included": false,
+    "verification_or_transaction_data_included": false,
+    "long_quotes_included": false
+  },
+  "counts": {
+    "scanned_mail_count": 11,
+    "full_body_count": 11,
+    "snippet_or_subject_count": 0,
+    "multipart_digest_count": 4,
+    "curated_rss_source_count": 2,
+    "curated_rss_recent_item_count": 0,
+    "digest_items_count": 40,
+    "main_item_count": 6,
+    "minor_residue_count": 10,
+    "repeated_signal_count": 5
+  },
+  "reading_summary": {
+    "plain_summary": "Son 72 saatte on bir Gmail maili full body düzeyinde okundu. Yeni gelenlerde askerî bir oyuncağın çocukluk mahallesini savaş provasına çevirdiği şiirsel metin, eski partnere duyulan nefretin yas ve kontrolle ilişkisini sekiz başlıkta açan uzun deneme ve İrlanda’ya dönüşü kara, deniz, dil ve ortak hafıza üzerinden kuran şiirsel çağrı öne çıktı. Pencere içinde kalan diğer mailler yapay zekâya beceri devri, okul koşullarından büyüyen protestolar, çocukluk zorbalığı, queer dostluk, şehir arşivi, yangından kurtarılan eserler, gastronomi etiği ve kamusal denetim üzerineydi.\n\nDört çok parçalı mail tek bir genel gündem etiketiyle geçiştirilmedi. Seçim ve doğrulama, ekonomi ve teknoloji, gastronomi ve tüketim, şehir ve kültürel onarım alanlarındaki kırk alt tema ayrı digest item olarak korundu. Güvenlik, işlem, kişisel veri, ham bağlantı, abonelik ve takip katmanları public çıktıya alınmadı.",
+    "what_was_in_the_emails": [
+      "Çocukluk oyununa savaş dili taşıyan askerî oyuncak üzerine şiirsel metin.",
+      "Ayrılık sonrası nefretin yas, utanç, kontrol, kaybedilen gelecek ve onarım ihtiyacıyla ilişkisini tartışan uzun deneme.",
+      "İrlanda’ya dönüşü kara, deniz, dil, sürgün ve ortak hafıza üzerinden kuran şiirsel çağrı ve şiir.",
+      "Yapay zekâ kolaylığının ilişki ve becerileri tekrar yoluyla aşındırabileceğini savunan davranış yazısı.",
+      "Eğitim altyapısından doğan protestoların temsil, program ve örgütlenme sorunlarını tartışan siyasi deneme.",
+      "Seçim, teknoloji, ekonomi, gastronomi ve şehir kültürü alanlarına yayılan dört çok parçalı seçki."
+    ],
+    "what_was_in_curated_rss": [
+      "Elektronik edebiyat ve oyun arşivi erişilebilirdi; son 72 saatte yeni item yoktu.",
+      "Sanat ve düşünce yayını erişilebilirdi; son 72 saatte yeni item yoktu."
+    ],
+    "dominant_topics": [
+      "oyun ve savaş provası",
+      "nefret ve yas",
+      "eve dönüş ve ortak hafıza",
+      "beceri devri",
+      "protesto ve yön",
+      "hasarlı kültürel kayıt"
+    ],
+    "notable_absences": [
+      "Özel RSS kaynaklarında yeni güncel item yoktu.",
+      "Okunan maillerde doğrulama, fatura veya kişisel işlem içeriği ana temaya alınmadı."
+    ],
+    "overall_direction": "Dış dünya UCU BEDEN’i oyunun masumiyetini sorgulamaya, keskin öfkenin altındaki yası duymaya ve dönüşü kusursuz bir eve varış değil değişmiş dille yeniden ilişki kurma hareketi olarak düşünmeye itti."
+  },
+  "summary": "Oyuncak mahalleyi cepheye çevirdi, nefret yası kapıda tuttu, kıyı ise değişmiş bir dili geri çağırdı. Dış dünya bugün davranışın prova ile kurulduğunu ve dönüşün çelişkiyi taşıma cesareti istediğini söyledi.",
+  "items": [
+    {
+      "id": "main-2026-11-06-01",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "çocukluk oyunu, savaş taklidi ve oyuncak silah şiiri",
+      "public_safe_topic": "askerî oyuncağın mahalleyi hayalî savaş alanına çevirmesi",
+      "content_digest": {
+        "what_it_contained": "Şiirsel metin, 1960’larda erkek çocuklarına pazarlanan çok işlevli bir askerî oyuncağı hatırlıyor; dokuz yaşındaki bir çocuğun Noel hediyesini mahalle oyununa taşımasıyla yol, bisiklet, çim ve kardeşlik ilişkilerinin savaş taklidine dönüşmesini anlatıyordu.",
+        "specific_points": [
+          "Giriş, eski askerî oyuncağın bugün benzer dürtüleri taşıyan video oyunları karşısında kültürel olarak geride kaldığını belirtiyordu.",
+          "Çocuk, gerçek savaştan uzakta olmasına rağmen haber ve kurmaca imgelerini mahalle oyununa aktarıyordu.",
+          "Saklambaç, bisiklet sürme ve çim alanda dolaşma gibi sıradan oyunlar hedef, düşman bölgesi ve esir alma kurgusuna çevriliyordu.",
+          "Kardeşler arasındaki oyun, oyuncak silahların boş fişlerle bile ölümcül bir koreografiyi prova edebildiğini gösteriyordu.",
+          "Metin, çocukluk masumiyetini tek başına yüceltmek yerine pazar, savaş imgesi ve grup heyecanının oyuna nasıl sızdığını görünür kılıyordu."
+        ],
+        "why_it_mattered": "Savaş kültürünün uzak bir olay olmaktan çıkıp oyuncak, Noel ve mahalle ritmi içinde bedensel bir prova hâline gelmesini somutlaştırdığı için ana item oldu.",
+        "what_was_not_included": "Ham şiir dizeleri, silahın ayrıntılı işlev listesi, çocuk adları, grafik şiddet, bağlantılar ve abonelik içeriği çıkarıldı."
+      },
+      "residue": "Oyuncak boş ses çıkardı; mahalle yine de bir anlığına cephe düzenine girdi.",
+      "motifs": [
+        "plastik nişangâh",
+        "Noel kutusu",
+        "mahalle çizgisi"
+      ],
+      "possible_influence": "UCU BEDEN çocukluk oyununu masum bir sığınak değil, dış dünyanın ölüm dilini fark etmeden prova eden bir kas hafızası olarak taşıyabilir."
+    },
+    {
+      "id": "main-2026-11-06-02",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "ayrılık, nefret, yas ve hesap verebilirlik denemesi",
+      "public_safe_topic": "nefretin kayıp, özlem ve karmaşıklığa karşı savunma olması",
+      "content_digest": {
+        "what_it_contained": "Uzun deneme, eski partnere duyulan nefretin çoğu zaman kaybedilen gelecek, karşılanmamış özlem ve ilişkide oluşmuş benlik için yas tutmaktan daha kolay geldiğini sekiz ayrı hat üzerinden tartışıyordu.",
+        "specific_points": [
+          "Nefretin, artık bulunmayan kişiyi zihinde tutan son yakınlık biçimine dönüşebileceği savunuldu.",
+          "Hayal kırıklığı ile ihanet ayrıştırıldı; eski yaraların bedende bu ikisini birbirine karıştırabileceği belirtildi.",
+          "Nefret kesinlik sağlarken yasın aynı anda sevgi, zarar, özlem ve öfkeyi taşıyan daha karmaşık bir alan istediği anlatıldı.",
+          "Kaybın yalnız kişiyi değil, birlikte kurulacağı sanılan gelecek ile o gelecekteki benliği de kapsadığı vurgulandı.",
+          "Yazar, karşılıklı faillik bulunan ilişkilerle istismarı açıkça ayırdı; iyileşmenin karşı tarafın özrüne veya cezalandırılmasına bağlı kalmaması gerektiğini savundu."
+        ],
+        "why_it_mattered": "Duygusal keskinliği basit bir düşman hikâyesi olarak değil, yas, utanç, kontrol ve onarım ihtiyacının savunması olarak açtığı için ana item oldu.",
+        "what_was_not_included": "Kişisel ilişki ayrıntıları, ham alıntılar, kurs tanıtımı ve takvimi, bağlantılar ve abonelik içeriği çıkarıldı; istismar ile karşılıklı faillik ayrımı korundu."
+      },
+      "residue": "Nefret kapıyı çarptı; içeride kalan gelecek planı hâlâ odasını boşaltmadı.",
+      "motifs": [
+        "kilitli veda",
+        "boş gelecek",
+        "çift sesli yas"
+      ],
+      "possible_influence": "UCU BEDEN keskin öfkeyi son söz değil, çelişkiyi taşımaya henüz hazır olmayan bir bedenin geçici sertliği olarak işleyebilir."
+    },
+    {
+      "id": "main-2026-11-06-03",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "İrlanda, dönüş ve ortak hafıza üzerine şiirsel çağrı",
+      "public_safe_topic": "sürgün duygusundan eve dönüşün kara ve denizle kurulması",
+      "content_digest": {
+        "what_it_contained": "Şiirsel çağrı ve beraberindeki metin, İrlanda’nın ortak hafızasını kara, okyanus, dil ve eve dönüş duygusuyla ele alıyor; yas içindeki sürgünden dönüşü mitik yolculuk, sadelik, eşlik ve cesur konuşma üzerinden kuruyordu.",
+        "specific_points": [
+          "Toprağın ve okyanusun yalnız manzara değil, kuşakların taşıdığı ortak hafızanın etkin parçaları olduğu öne sürüldü.",
+          "Eve dönüş, coğrafi varıştan çok yasın içinden geçerek dile ve ilişkiye yeniden katılma biçimi olarak anlatıldı.",
+          "Vazgeçmek ile kendini akışa bırakmak arasındaki fark, yolculuğun etik ve ruhsal eşiği olarak işlendi.",
+          "Eşlik, sadelik ve açık konuşma, insanın kendine ve topluluğa geri dönmesini mümkün kılan pratikler olarak sunuldu.",
+          "Ekteki şiir, kıyı kuşları, mağaramsı ağız, kış ve denize benzeyen gökyüzü imgeleriyle sevinç ve kederi aynı dönüş hareketinde tuttu."
+        ],
+        "why_it_mattered": "Ortak hafızayı soyut miras yerine dil, kıyı, yas ve geri dönme hareketi içinde kurduğu için ana item oldu.",
+        "what_was_not_included": "Ham şiir dizeleri, etkinlik tarihi, ücret, indirim, destek adresi, bağlantılar ve abonelik içeriği çıkarıldı."
+      },
+      "residue": "Kıyı geri çağırdı; dönen kişinin dili sevinçle kederi aynı nefeste söyledi.",
+      "motifs": [
+        "kış kıyısı",
+        "deniz göğü",
+        "geri dönen dil"
+      ],
+      "possible_influence": "UCU BEDEN hafızayı geride kalmış arşiv değil, bedenin aynı kıyıya değişmiş bir dille dönme kapasitesi olarak kurabilir."
+    },
+    {
+      "id": "main-2026-11-06-04",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "yapay zekâ, ilişki ve beceri üzerine davranış yazısı",
+      "public_safe_topic": "kolay seçimin ilişkiyi ve beceriyi yavaşça aşındırması",
+      "content_digest": {
+        "what_it_contained": "Yazı, biri insan biri robotik iki eşin bulunduğu iki kapılı bir düşünce deneyiyle başlayıp gündelik kolay seçimin insan ilişkisine ve kişisel becerilere zaman içinde nasıl zarar verebileceğini tartışıyordu.",
+        "specific_points": [
+          "Robotik eşin her akşam kusursuz destek sunması, yorgun bir insan için kolay ama kısa vadeli bir seçim olarak kuruldu.",
+          "İnsan ilişkisinin ihmal edildikçe kırılması ve sonraki seçimlerde daha az cazip hâle gelmesi bir geri besleme döngüsü olarak anlatıldı.",
+          "Aynı döngü yazma, düşünme ve karar verme gibi yapay zekâya devredilen becerilere uygulandı.",
+          "Tek tek bakıldığında makul görünen küçük kararların yıllar içinde büyük ve kalıcı bir sonuç üretebileceği savunuldu.",
+          "Yazar, evrak ve planlama gibi işleri devretmeyi; kimliği kuran ilişkiler ile temel becerileri ise bilinçli biçimde korumayı önerdi."
+        ],
+        "why_it_mattered": "Teknoloji etkisini araç kalitesinden çok tekrar edilen seçim, ihmal ve kişilik oluşumu üzerinden somutlaştırdığı için ana item oldu.",
+        "what_was_not_included": "Ham düşünce deneyi cümleleri, uzun alıntılar, bağlantılar ve abonelik içeriği çıkarıldı."
+      },
+      "residue": "Kolay kapı her gece biraz daha kolaylaştı; kullanılmayan el ise biraz daha yabancılaştı.",
+      "motifs": [
+        "iki kapı",
+        "körelen kalem",
+        "boş akşam"
+      ],
+      "possible_influence": "UCU BEDEN beceri kaybını ani çöküş değil, tekrar edilen rahat seçimlerin kas ve ilişki üzerinde bıraktığı sessiz aşınma olarak taşıyabilir."
+    },
+    {
+      "id": "main-2026-11-06-05",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "protesto, temsil ve siyasal örgütlenme denemesi",
+      "public_safe_topic": "kamusal öfkenin kalıcı programa dönüşme güçlüğü",
+      "content_digest": {
+        "what_it_contained": "Uzun siyasi deneme, kamu okullarındaki kaynak eksikliği, personel açığı, aşırı sıcak sınıflar ve başvuru baskısı etrafında büyüyen öğrenci-emek protestolarını önceki kitlesel hareketlerle karşılaştırıyor; öfkenin temsil, program ve örgütlenmeye dönüşememesi üzerine tartışmalı bir argüman kuruyordu.",
+        "specific_points": [
+          "Öğrenci talepleri öğretmen eksikliği, kalabalık sınıflar, yıpranmış binalar, ağır program ve sıcaklık baskısı çevresinde toplandı.",
+          "Yazar, geçmiş özgürleşme söylemlerinin piyasa tarafından esnek çalışma ve kişisel marka diline çevrildiğini savundu.",
+          "Farklı ekonomik talepleri birleştiren kitlesel hareketlerin temsil boşluğunu görünür kıldığı ama tutarlı programa geçmekte zorlandığı öne sürüldü.",
+          "Lidersiz ve dağınık basıncın iktidarı sarsabildiği, fakat uzun vadeli kurum kurmak için örgütlü karar kapasitesi gerektiği iddia edildi.",
+          "Merkezin zayıflamasıyla sağ ve sol popülizmin öfkeyi farklı yönlere taşıdığı, demokratik çıkış alanının daraldığı ileri sürüldü."
+        ],
+        "why_it_mattered": "Hareket ile yön, öfke ile program ve sıcak sınıf ile büyük siyasal temsil arasındaki bağı kurduğu için güçlü bir dış temas oldu.",
+        "what_was_not_included": "Kişi adları, taraflı suçlamalar, kesin katılım ve gözaltı rakamları, savaş ve ölüm örnekleri, uzun siyasi alıntılar, bağlantılar ve abonelik içeriği çıkarıldı."
+      },
+      "residue": "Kalabalık hareket etti; hareketin nereye varacağını söyleyecek cümle geride kaldı.",
+      "motifs": [
+        "sıcak sınıf",
+        "dağınık yürüyüş",
+        "boş kürsü"
+      ],
+      "possible_influence": "Şiirde ortak öfke, yönünü bulamayan çoğul ritim; görsel dilde aşırı ısınmış sınıftan taşan ama haritası olmayan kalabalık olarak belirebilir."
+    },
+    {
+      "id": "main-2026-11-06-06",
+      "source": "gmail",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "source_hint": "seçim, doğrulama, iklim ve kültür gündemi",
+      "public_safe_topic": "kamusal denetim ile maddi kırılganlığın aynı gündemde buluşması",
+      "content_digest": {
+        "what_it_contained": "Çok parçalı gündem maili; seçim sonucunun denetim dengesini değiştirmesi, üyelik hedefleri ile demokratik ölçütler arasındaki açıklık, model kimliği doğrulama teknolojisi, yaş sınırları, gümrükte parçalanan sanat eseri, fosil yakıttan çıkış planı ve eski bir gemi batığının korunması üzerine bölümler taşıyordu.",
+        "specific_points": [
+          "Seçim sonucu yasama denetimi ve yürütmeyle uzlaşma ihtimalini yeniden düzenledi.",
+          "Demokrasi, insan hakları ve yargı bağımsızlığı ölçütleriyle resmî üyelik hedefi arasındaki farkın büyüdüğü raporlandı.",
+          "Bir yapay zekâ yanıtının gerçekten seçilen modelden gelip gelmediğini özel veriyi açmadan doğrulayan dijital parmak izi yaklaşımı tanıtıldı.",
+          "Romantik etkileşim sunan uygulamalar için yaş sınırı ve gerçek zamanlı konum açıklaması gibi koruma kuralları gündeme geldi.",
+          "Görüntülenemeyen sanat parçalarının gümrükte fiziksel olarak kırılması, güvenlik kontrolü ile geri döndürülemez kültürel kayıp arasındaki çatışmayı gösterdi."
+        ],
+        "why_it_mattered": "Denetim, doğrulama ve koruma amacı taşıyan kurumların bazen hak, içerik veya nesne üzerinde yıkıcı sonuç üretebilmesini somut örneklerle gösterdiği için ana item oldu.",
+        "what_was_not_included": "Kişi adları, seçim ve piyasa rakamları, adli iddia ayrıntıları, ürün ve şirket tanıtımları, sağlık tavsiyesi, adresler ve bağlantılar çıkarıldı."
+      },
+      "residue": "Doğrulamak isteyen el, eserin içine bakamayınca eseri kırdı.",
+      "motifs": [
+        "kırık beton",
+        "dijital parmak izi",
+        "denge terazisi"
+      ],
+      "possible_influence": "UCU BEDEN koruma ile tahribat arasındaki ince çizgiyi kırılmış bir eser ve doğrulanmış ama soğuk bir model izi üzerinden taşıyabilir."
+    }
+  ],
+  "minor_residues": [
+    {
+      "id": "minor-2026-11-06-01",
+      "source": "gmail",
+      "residue": "Askerî oyuncağın çok işlevli oluşu, savaşı tek bir patlama değil taşınabilir bir oyun sistemi gibi sundu.",
+      "motifs": [
+        "katlanan oyuncak",
+        "işlev düğmesi"
+      ],
+      "possible_influence": "Şiirde nesne, bir çocuğun eline sığan ideoloji olarak görünebilir."
+    },
+    {
+      "id": "minor-2026-11-06-02",
+      "source": "gmail",
+      "residue": "Noel hediyesi ile savaş koreografisinin yan yana gelişi, kutlama ve tahakküm arasındaki kuru çelişkiyi açtı.",
+      "motifs": [
+        "hediye kâğıdı",
+        "boş fiş"
+      ],
+      "possible_influence": "Görüntü dilinde parlak paket ile karanlık prova aynı yüzeyde tutulabilir."
+    },
+    {
+      "id": "minor-2026-11-06-03",
+      "source": "gmail",
+      "residue": "Nefretin eski partneri zihinde tutan son yakınlık biçimi olması, ayrılığın bağın bittiği anlamına gelmediğini gösterdi.",
+      "motifs": [
+        "ters bağ",
+        "kapalı telefon"
+      ],
+      "possible_influence": "Duygusal ritim itme ile tutma arasında gidip gelebilir."
+    },
+    {
+      "id": "minor-2026-11-06-04",
+      "source": "gmail",
+      "residue": "Hayal kırıklığı ile ihanetin bedende karışması, eski yaranın yeni olayı büyütebildiğini hatırlattı.",
+      "motifs": [
+        "çift gölge",
+        "eski yara"
+      ],
+      "possible_influence": "Hafıza bugünkü acının içine geçmiş bir ölçü hatası gibi çalışabilir."
+    },
+    {
+      "id": "minor-2026-11-06-05",
+      "source": "gmail",
+      "residue": "Yasın sevgi ve zararı aynı anda taşıması, tek hükümlü anlatının rahatlığını bozdu.",
+      "motifs": [
+        "iki kefeli terazi",
+        "açık düğüm"
+      ],
+      "possible_influence": "Şiir kesin hüküm yerine çelişkiyi açık bırakabilir."
+    },
+    {
+      "id": "minor-2026-11-06-06",
+      "source": "gmail",
+      "residue": "Kaybedilen gelecek, kaybedilen kişiden ayrı bir yas nesnesi olarak belirdi.",
+      "motifs": [
+        "boş takvim",
+        "kurulmamış masa"
+      ],
+      "possible_influence": "Gelecek geçmişe ait bir oda gibi hafızaya inebilir."
+    },
+    {
+      "id": "minor-2026-11-06-07",
+      "source": "gmail",
+      "residue": "İrlanda metninde kara ve deniz, dönüş yapan kişinin dilini yeniden ayarlayan ortak hafıza yüzeyleri oldu.",
+      "motifs": [
+        "kıyı taşı",
+        "tuzlu dil"
+      ],
+      "possible_influence": "Görsel dil coğrafyayı içsel portreye çevirmeden bedensel eşik olarak kullanabilir."
+    },
+    {
+      "id": "minor-2026-11-06-08",
+      "source": "gmail",
+      "residue": "Yangından kurtarılan sanat parçaları, eksiksiz onarım yerine hasarla birlikte yeniden görünmeyi sürdürdü.",
+      "motifs": [
+        "yanık çerçeve",
+        "kurtarılan parça"
+      ],
+      "possible_influence": "Hafıza kusuru örtmek yerine taşıyan kamusal bir yüzey olabilir."
+    },
+    {
+      "id": "minor-2026-11-06-09",
+      "source": "gmail",
+      "residue": "Queer dostluk yazısında ağırlık kaldırırken istenen destek, tanınma ve yakınlığın küçük bedensel başlangıcı oldu.",
+      "motifs": [
+        "halter barı",
+        "destek eli"
+      ],
+      "possible_influence": "Yakınlık büyük itiraftan önce güvenli bir hareket olarak yerleşebilir."
+    },
+    {
+      "id": "minor-2026-11-06-10",
+      "source": "gmail",
+      "residue": "Teneffüs şiiri, grup oyunundaki seyirciliğin zorbalığa sessiz ortaklık bırakabildiğini gösterdi.",
+      "motifs": [
+        "teneffüs zili",
+        "seyreden halka"
+      ],
+      "possible_influence": "Çocukluk hafızası neşeyle güç gösterisini aynı ritimde taşıyabilir."
+    }
+  ],
+  "repeated_signals": [
+    {
+      "signal": "oyunun ve kolaylığın davranışı yavaşça eğitmesi",
+      "count": 5,
+      "residue": "Askerî oyuncak, yapay zekâya devredilen beceri, sonsuz akış ve markalı deneyim farklı alanlarda tekrarın kişiyi sessizce biçimlendirdiğini söyledi."
+    },
+    {
+      "signal": "kaybı basit düşman hikâyesine çevirme isteği",
+      "count": 4,
+      "residue": "Ayrılık nefreti, çocuklukta hedef seçme, siyasal kutuplaşma ve rekabet dili karmaşık kaybı tek bir karşı tarafa sabitleme arzusunu tekrarladı."
+    },
+    {
+      "signal": "hareketin yön ve programa ihtiyaç duyması",
+      "count": 4,
+      "residue": "Protesto, enerji geçişi, emek talebi ve eve dönüş farklı biçimlerde hareketin yalnız hız değil yön, tarih ve eşlik istediğini gösterdi."
+    },
+    {
+      "signal": "hasarlı kaydın yeniden kamusal alana dönmesi",
+      "count": 5,
+      "residue": "Yangından kalan eser, kırılan enstalasyon, besteci belgeleri, eski okul ve batık gemi hafızanın kusursuz korunmadığını ama yeniden dolaşıma girebildiğini tekrarladı."
+    },
+    {
+      "signal": "bedenin kamusal ve duygusal altyapıyı doğrudan hissetmesi",
+      "count": 6,
+      "residue": "Sıcak sınıf, ağırlık kaldırma, yas, çocukluk oyunu, fiyat baskısı ve kıyıya dönüş büyük yapıları dikkat, kas, nefes ve ritim üzerinden bedene yazdı."
+    }
+  ],
+  "digest_items": [
+    {
+      "topic": "seçim sonucunun denetim dengesini değiştirmesi",
+      "plain_summary": "Yasama çoğunluğundaki değişim, yürütmenin gündemini sınırlama ve soruşturma kapasitesini artırma ihtimali doğurdu.",
+      "residue": "Sandık yalnız iktidarı değil, denetimin yönünü de değiştirdi.",
+      "motifs": [
+        "sandık",
+        "denge kolu"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "üyelik hedefi ile demokratik ölçüt arasındaki açıklık",
+      "plain_summary": "Resmî ortaklık hedefi sürerken hukuk, haklar ve yargı bağımsızlığı alanındaki gerilemenin mesafeyi büyüttüğü raporlandı.",
+      "residue": "Hedef tabelası yerinde kaldı, yol geriye doğru uzadı.",
+      "motifs": [
+        "uzak tabela",
+        "çatlak ölçek"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "enerji fiyatının enflasyonu taşıması",
+      "plain_summary": "Fiyat baskısının önemli bir bölümü enerji maliyetinden gelirken gündelik gıda ve hizmet alanları da bu ağırlığı paylaştı.",
+      "residue": "Fatura, market rafına görünmez bir gölge bıraktı.",
+      "motifs": [
+        "enerji sayacı",
+        "market rafı"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "metal emeğinde ücret ve iş güvencesi",
+      "plain_summary": "Genişleyen grevler, çalışanların yalnız zam değil üretim tesislerinin ve işlerin korunmasını da talep ettiğini gösterdi.",
+      "residue": "Duran makine hem ücret hem gelecek istedi.",
+      "motifs": [
+        "metal pres",
+        "duran vardiya"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "model kimliğinin matematiksel doğrulanması",
+      "plain_summary": "Dijital parmak izi yaklaşımı, kullanıcıya seçtiği yapay zekâ modelinin habersizce daha ucuz bir modelle değiştirilip değiştirilmediğini kontrol etme olanağı vaat etti.",
+      "residue": "Yanıtın sesi ilk kez kimlik belgesi taşımaya başladı.",
+      "motifs": [
+        "sayısal iz",
+        "kapalı kutu"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "romantik yapay zekâ için yaş ve konum sınırı",
+      "plain_summary": "Romantik etkileşim sunan uygulamalar için yetişkin derecelendirmesi ve konum paylaşımının açıkça bildirilmesi çocuk güvenliği bağlamında ele alındı.",
+      "residue": "Yakınlık taklidi, kapısına yaş ve konum uyarısı astı.",
+      "motifs": [
+        "yaş kapısı",
+        "konum noktası"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "güvenlik kontrolünün sanat eserini yok etmesi",
+      "plain_summary": "İç yapısı görüntülenemeyen bir enstalasyonun parçalanması, denetim prosedürünün geri döndürülemez kültürel kayba dönüşmesini gösterdi.",
+      "residue": "Kontrol tamamlandı; bakılacak eser kalmadı.",
+      "motifs": [
+        "balyoz izi",
+        "kırık form"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "fosil yakıttan çıkışın tarihsiz yol haritası",
+      "plain_summary": "Küresel geçiş planı sübvansiyon, metan ve yenilenebilir kapasiteyi ele aldı; bağlayıcı tarih içermemesi uygulama gücünü zayıflattı.",
+      "residue": "Harita çizildi, varış tarihi boş bırakıldı.",
+      "motifs": [
+        "boş takvim",
+        "enerji haritası"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "eski ceza yapılarının kütüphaneye dönüşmesi",
+      "plain_summary": "Bir kent okuma başkenti olurken eski hapishane ve karakol yapılarının kütüphaneye çevrilmesi, denetim mekânını anlatı alanına dönüştürdü.",
+      "residue": "Kilitli oda raflara açıldı.",
+      "motifs": [
+        "eski hücre",
+        "kitap rafı"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "çok eski batığın kamusal arşive taşınması",
+      "plain_summary": "Binlerce yıllık gemi batığı, su altı kazısından müze planına uzanarak ticaret ve yolculuk hafızasını bugüne taşıdı.",
+      "residue": "Deniz, en eski yükünü sergi ışığına bıraktı.",
+      "motifs": [
+        "batık amfora",
+        "derin su"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "ara seçimin yönetim desteğini ölçmesi",
+      "plain_summary": "Oy pusulasında liderin adı bulunmasa da sonuçların yönetimin kalan dönemindeki yasama gücünü ölçmesi beklendi.",
+      "residue": "İsim görünmedi, gölgesi bütün pusuladaydı.",
+      "motifs": [
+        "boş isim",
+        "oy sandığı"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "denetim kurumuna sızma iddiası",
+      "plain_summary": "Mali soruşturma, tekil işlemden çok denetim ve bürokrasi katmanlarına uzandığı öne sürülen örgütlü bir güven krizine dönüştü.",
+      "residue": "Bekçi kapıyı korurken kilidin içi sorgulandı.",
+      "motifs": [
+        "iç kilit",
+        "denetim masası"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "giyim, gıda ve konutta fiyat baskısı",
+      "plain_summary": "Enflasyonun gündelik harcama alanlarında yoğunlaşması, soyut oranı bedenin giyinme, beslenme ve barınma maliyetine indirdi.",
+      "residue": "Rakam üç ayrı kapıdan eve girdi.",
+      "motifs": [
+        "ayakkabı",
+        "ekmek",
+        "kira zarfı"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "emeklilik gelirine ek destek arayışı",
+      "plain_summary": "Yasal artışın ötesinde kira, yakıt ve ulaşım desteği seçenekleri, yaşlılık gelirinin temel giderlere yetişememesini görünür kıldı.",
+      "residue": "Aylık, kış kapısında yeniden hesaplandı.",
+      "motifs": [
+        "yakıt fişi",
+        "boş cüzdan"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "sanayi ortaklığının kamu fonuna devri",
+      "plain_summary": "Büyük bir üretim ortaklığındaki payların kamu fonu ve iletişim şirketine geçmesi, mülkiyet ile borç azaltma kararını birbirine bağladı.",
+      "residue": "Hisse el değiştirirken fabrika aynı yerde kaldı.",
+      "motifs": [
+        "hisse kâğıdı",
+        "fabrika kapısı"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "yapay zekâ altyapısında büyüme ve zarar",
+      "plain_summary": "Çok büyük hesaplama yatırımları, hızla artan gelirle birlikte ağır işletme maliyeti ve zarar üreten maddi altyapıyı gösterdi.",
+      "residue": "Model büyüdükçe arkasındaki elektrik odası da büyüdü.",
+      "motifs": [
+        "sunucu koridoru",
+        "kırmızı bilanço"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "sohbet ile çalışma arayüzünün birleşmesi",
+      "plain_summary": "Fikir geliştirme ile dosya ve sunum üretiminin aynı ekranda buluşması, gündelik sohbeti üretim ortamına daha doğrudan bağladı.",
+      "residue": "Sohbet kutusu masaya dönüştü.",
+      "motifs": [
+        "birleşen sekme",
+        "çalışma masası"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "sonsuz kaydırmanın ruh sağlığına maliyeti",
+      "plain_summary": "Genç kullanıcıların otomatik oynatma ve sonsuz akışla kontrol etmekte zorlandıkları alışkanlıklar geliştirdiği iddiası hukuki uzlaşmaya taşındı.",
+      "residue": "Akış durmadı; parmak yorulduğunu geç fark etti.",
+      "motifs": [
+        "sonsuz şerit",
+        "yorgun başparmak"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "müze kalabalığı ile arşiv sahnesi",
+      "plain_summary": "Yüksek ziyaretçi sayıları ve tiyatro afişlerinden oluşan sergi, kültür kurumunu hem kalabalık ölçüsü hem de emek arşivi olarak gösterdi.",
+      "residue": "Turnike saydı, eskiz hatırladı.",
+      "motifs": [
+        "müze turnikesi",
+        "sahne eskizi"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "üstün gelme dilinin yılın kelimesi olması",
+      "plain_summary": "Birini görünüş, statü veya performansla gölgede bırakmayı anlatan ifade, rekabetin gündelik dile ne kadar yerleştiğini gösterdi.",
+      "residue": "Dil, karşılaşmayı bir gölge yarışına çevirdi.",
+      "motifs": [
+        "uzayan gölge",
+        "ölçü cetveli"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "gastronomiyi kültür ve etkileşim alanı olarak kurmak",
+      "plain_summary": "Şef, üretici, konaklama, pastacılık ve bar dünyasını buluşturan konferans, mutfağı tariften çok ilişki ve sektör ağı olarak sundu.",
+      "residue": "Mutfak tezgâhı toplantı masasına uzadı.",
+      "motifs": [
+        "uzun masa",
+        "açık mutfak"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "bölgesel mutfak mirasının okul programına dönüşmesi",
+      "plain_summary": "Mesleki eğitim projesi, farklı bölgelerin ürün ve yemek bilgisini beş yıllık okul programlarıyla yeni kuşağa aktarmayı hedefledi.",
+      "residue": "Tarif, aile defterinden ders programına geçti.",
+      "motifs": [
+        "ders defteri",
+        "yerel ürün"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "moda markasının restoranı deneyim alanına çevirmesi",
+      "plain_summary": "Tarihî restoran, arşiv dekoru, üniforma ve özel menüyle perakende ile topluluk hissini birleştiren geçici marka sahnesine dönüştürüldü.",
+      "residue": "Sofra, ürün etiketinin dekoruna dönüştü.",
+      "motifs": [
+        "üniforma",
+        "markalı tabak"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "haz ile utanç arasındaki yemek ritüeli",
+      "plain_summary": "Tartışmalı kuş yeme geleneğinde başı örten peçete, kokuyu tutma kadar yapılanı saklama ve hayvan etiği sorusunu da taşıdı.",
+      "residue": "Lezzet büyüdükçe peçete yüzü daha çok örttü.",
+      "motifs": [
+        "beyaz peçete",
+        "küçük kuş"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "lagün ekosistemi ile balıkçılık geleneği",
+      "plain_summary": "Kıyı lagünü, biyolojik çeşitlilik, kuşaklar arası balıkçılık ve istilacı türü kontrollü ekonomik değere çevirme çabasıyla anlatıldı.",
+      "residue": "Ağ yalnız balık değil ekosistem kararı da topladı.",
+      "motifs": [
+        "lagün suyu",
+        "eski ağ"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "puansız sadakatin topluluk duygusu araması",
+      "plain_summary": "Kahve markası klasik puan sistemi yerine kişiselleştirilmiş ödül ve deneyimlerle bağlılık kurmaya yöneldi.",
+      "residue": "Sadakat karttan çıkıp aidiyet dekoruna girdi.",
+      "motifs": [
+        "boş kart",
+        "kahve fincanı"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "lifli içeceğin sağlık trendine eklenmesi",
+      "plain_summary": "Bitki bazlı içecek üreticisi, daralan pazarda lif ve düşük şeker taleplerini yeni büyüme alanına çevirdi.",
+      "residue": "Beslenme ihtiyacı raf dilinde yeni bir işleve dönüştü.",
+      "motifs": [
+        "lif şeridi",
+        "sade kutu"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "geri dönüşüm etiketinin yeşil iddiayı düzeltmesi",
+      "plain_summary": "Şirketler, şişenin yalnız belirli parçalarının geri dönüştürülmüş olduğunu daha açık yazmayı ve kapalı döngü yanılsaması yaratan görsellerden kaçınmayı kabul etti.",
+      "residue": "Yeşil ok, kapağa gelince durdu.",
+      "motifs": [
+        "eksik halka",
+        "plastik kapak"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "protein talebinin atıştırmalığı yeniden biçimlendirmesi",
+      "plain_summary": "Büyük üretici, artan protein ilgisini yeni bar ürünleri ve mevcut markalarda içerik artışıyla karşılamaya yöneldi.",
+      "residue": "Gündelik atıştırmalık performans ölçüsüne girdi.",
+      "motifs": [
+        "protein etiketi",
+        "küçük bar"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "koleksiyonun yeniden yapılanma nedeniyle durması",
+      "plain_summary": "Uzun süredir yıllık çıkan sınırlı üretim koleksiyonu, maliyet azaltma ve tüketici beklentisini yeniden değerlendirme sürecinde iptal edildi.",
+      "residue": "Nadir şişenin takviminde bir yıl boş kaldı.",
+      "motifs": [
+        "boş raf",
+        "iptal damgası"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "farklı müzik türlerinin keşif alanı kurması",
+      "plain_summary": "Pop, punk, caz, elektronik ve saykedelyanın aynı festivalde karışması, canlı dinlemeyi yeniden keşif mekanizmasına çevirdi.",
+      "residue": "Çalma listesi sahnede birbirine karıştı.",
+      "motifs": [
+        "karışık kanal",
+        "canlı hoparlör"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "tarihî pastanenin edebî buluşma hafızasıyla dönmesi",
+      "plain_summary": "Eski pastane yeni adla açılırken tatlı ve masa kültürüne gömülü yazar buluşmalarını da bugüne taşıdı.",
+      "residue": "Masa geri geldiğinde eski konuşmaların şekeri de döndü.",
+      "motifs": [
+        "pasta tabağı",
+        "eski masa"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "müzenin canlı yayın stüdyosuna dönüşmesi",
+      "plain_summary": "Sergi turu ve atölyelerin sosyal medya canlı yayınıyla buluşması, müze ziyaretini eşzamanlı ekran deneyimine çevirdi.",
+      "residue": "Sergi salonuna dikey bir yayın penceresi açıldı.",
+      "motifs": [
+        "telefon ekranı",
+        "müze vitrini"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "besteci arşivinin kamusal sergiye dönüşmesi",
+      "plain_summary": "Nota defteri, afiş, fotoğraf ve yazışmalar kronolojik olarak sergilenerek müzik üretiminin gündelik belgeleri görünür kılındı.",
+      "residue": "Melodi, kâğıt izleriyle yeniden kuruldu.",
+      "motifs": [
+        "nota defteri",
+        "eski afiş"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "eski okulun kültür ofisi olarak yeniden kullanılması",
+      "plain_summary": "Yüzyıllık eğitim yapısı uzun restorasyon ve mülkiyet sürecinden sonra kültür ve yolculuk ofisine dönüştürüldü.",
+      "residue": "Derslik, başka bir yolculuğun kapısını açtı.",
+      "motifs": [
+        "taş derslik",
+        "ipek yolu"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "lo-fi müziğin gizem alanı açması",
+      "plain_summary": "Kırılgan vokal, gitar ve üst üste kayıtlar elektronik ile akustik arasında düşük parlaklıklı bir ses dünyası kurdu.",
+      "residue": "Ses, netleşmek yerine sisini korudu.",
+      "motifs": [
+        "soluk kaset",
+        "sisli gitar"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "kontrol ritüellerinin yalnızlık duvarı kurması",
+      "plain_summary": "Tiyatro oyunu, kural, hijyen ve yasaklarla kendini koruyan bir akademisyenin denetim arttıkça yalnızlaşan hayatını izledi.",
+      "residue": "Temizlenen yüzeyin çevresinde kimse kalmadı.",
+      "motifs": [
+        "mühürlü çanta",
+        "boş oda"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "kuklanın el yapımı çoklu dünyaları",
+      "plain_summary": "Farklı ülkelerden kukla teknikleri hayvan, pire sirki, ahşap figür ve klasik masalı küçük sahnelerde bir araya getirdi.",
+      "residue": "El, cansız malzemeye geçici bir nabız verdi.",
+      "motifs": [
+        "ipli figür",
+        "küçük sahne"
+      ],
+      "bucket": "minor"
+    },
+    {
+      "topic": "fotoğrafçının kişisel adasının geriye bakması",
+      "plain_summary": "Siyah-beyaz kıyılar, panoramik şehirler, portreler ve yolculuk fotoğrafları bir kariyerin görsel haritasında toplandı.",
+      "residue": "Kıyı çizgisi yıllar boyunca aynı adayı aradı.",
+      "motifs": [
+        "panoramik kıyı",
+        "karanlık oda"
+      ],
+      "bucket": "main"
+    },
+    {
+      "topic": "yangından kurtulan eserlerin dayanışma sergisi",
+      "plain_summary": "Ev ve atölye yangınından kalan işler, sanatçının yeniden hayata ve üretime tutunmasını destekleyen sergide buluştu.",
+      "residue": "Yanık çerçeve duvara yeniden asıldığında eksikliği de sergilendi.",
+      "motifs": [
+        "yanık çerçeve",
+        "kurtarılan parça"
+      ],
+      "bucket": "main"
+    }
+  ],
+  "channels": {
+    "gmail": {
+      "scanned": 11,
+      "full_body": 11,
+      "snippet_or_subject": 0,
+      "main_item_ids": [
+        "main-2026-11-06-01",
+        "main-2026-11-06-02",
+        "main-2026-11-06-03",
+        "main-2026-11-06-04",
+        "main-2026-11-06-05",
+        "main-2026-11-06-06"
+      ]
+    },
+    "curated_rss": {
+      "sources_checked": 2,
+      "recent_items": 0,
+      "health": "all_reachable_no_recent_items"
+    }
+  },
+  "external_weather": "Dış hava oyun, savunma ve geri dönüş arasında gerildi. Askerî oyuncak çocukluğa savaş koreografisi taşıdı; nefret kaybı tek bir düşmana bağlayarak yasın karmaşıklığını erteledi; kıyı ve dil ise eve dönüşün hem sevinç hem keder taşıyabileceğini hatırlattı. Aynı anda yapay zekâ kolaylığı beceriyi, protesto yön arayışını, kırık ve yanık sanat parçaları da kamusal hafızanın maddi kırılganlığını görünür kıldı.",
+  "possible_influence_on_ucu_beden": "UCU BEDEN bugün oyunu dış dünyanın şiddetini fark etmeden prova eden bir kas, nefreti yası geciktiren sert bir kabuk ve dönüşü aynı yere farklı bir dille varmak olarak kurabilir. Şiir ritminde çocuk komutu, yetişkin kesinliği ve kıyının çift sesli çağrısı birbirini kesebilir. Görsel dilde parlak hediye kâğıdı, plastik nişangâh, boş takvim, kış kıyısı, sayısal parmak izi ve yanık çerçeve aynı atmosferde durabilir.",
+  "discarded_summary": "Ham mail body, uzun alıntı, email adresi, ham bağlantı, doğrulama veya güvenlik bilgisi, fatura ve kişisel işlem verisi, abonelik ve takip içeriği, çocuk adları, ayrıntılı silah işlevleri, grafik şiddet, özel ilişki ayrıntıları, kurs ve etkinlik tanıtımı, fiyat ve destek bilgileri, kesin seçim ve piyasa rakamları, sağlık tavsiyesi ve kişisel tanımlayıcılar sindirilmeden atıldı. Dört çok parçalı mail genel gürültü diye silinmedi; kırk somut alt temaya ayrıldı.",
+  "motifs": [
+    "plastik nişangâh",
+    "Noel kutusu",
+    "kilitli veda",
+    "boş gelecek",
+    "kış kıyısı",
+    "geri dönen dil",
+    "iki kapı",
+    "sıcak sınıf",
+    "sayısal parmak izi",
+    "yanık çerçeve"
+  ],
+  "possible_memory_traces": [
+    "Çocukluk oyununun dış dünyadaki tahakküm biçimlerini oyuncak ve komut yoluyla prova etmesi.",
+    "Nefretin kaybedilmiş kişiyi ve geleceği zihinde tutan son yakınlık biçimine dönüşmesi.",
+    "Yasın sevgi ile zararı, özlem ile öfkeyi aynı anda taşıyabilmesi.",
+    "Eve dönüşün aynı yere değil, değişmiş bir dil ve bedenle yeniden ilişkiye varması.",
+    "Tek tek rahat görünen seçimlerin yıllar içinde beceri ve ilişkiyi geriletmesi.",
+    "Koruma ve denetim amacı taşıyan sistemlerin bazen nesneyi kırması, kaydı eksiltmesi veya hareketi yönsüz bırakması."
+  ],
+  "validation": {
+    "json_parse": "passed",
+    "markdown_first_section": "passed",
+    "count_consistency": "passed",
+    "public_safety": "passed",
+    "private_inventory_ignored": true
+  },
+  "automation": {
+    "id": "ucu-beden-daily-codex-external-intake",
+    "run_date": "2026-11-06",
+    "window_hours": 72
+  }
+}
