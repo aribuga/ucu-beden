@@ -1,0 +1,42 @@
+name: Prepare approved image web copies
+on:
+  push:
+    branches: [repair/approved-images-20261111]
+    paths: [ops/visual-delivery-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: ucu-beden-approved-images-20261111
+  cancel-in-progress: false
+jobs:
+  optimize:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: repair/approved-images-20261111
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Verify original archive and generation results
+        run: node --import ./node_modules/tsx/dist/loader.mjs ops/backfill-approved-images.mjs verify
+      - name: Create high-quality delivery copies without API calls
+        run: node --import ./node_modules/tsx/dist/loader.mjs ops/optimize-approved-images.mjs
+      - name: Verify archive preservation
+        run: node --import ./node_modules/tsx/dist/loader.mjs ops/backfill-approved-images.mjs verify-protected
+      - name: Preserve delivery assets on repair branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          node -e "const cp=require('child_process'),m=require('./ops/visual-backfill-manifest.json');const paths=m.targets.flatMap(t=>[t.visual_file,t.dream_file,t.image_file.replace(/\.png$/,'.webp')]).filter(Boolean);cp.execFileSync('git',['add','--',...paths,'ops/visual-delivery-report.json']);"
+          git commit -m 'Prepare quality-95 WebP copies of approved images; preserve PNG originals'
+          git push origin HEAD:repair/approved-images-20261111
+      - uses: actions/upload-artifact@v4
+        with:
+          name: approved-image-delivery-report
+          path: ops/visual-delivery-report.json
+          retention-days: 7
