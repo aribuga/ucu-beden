@@ -4,18 +4,18 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-10-28",
   "title": "arkasında kırılması",
-  "generated_at": "2026-10-28T11:35:44.486Z",
+  "generated_at": "2026-11-11T07:46:47.139Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of sanat, arşiv, sahne, romantiklik, politik öfke; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "arkasında kırılması rüyasından sanat, arşiv, sahne taşıyan bulanık kayıt.",
-  "image_path": null,
-  "provider": "metadata-fallback",
-  "model": "gpt-image-1",
+  "image_path": "/generated/visuals/2026-10-28-dream.png",
+  "provider": "openai",
+  "model": "gpt-image-2.5-flare-2026-09-08",
   "size": "1024x1280",
   "quality": "low",
   "output_format": "png",
-  "fallback": true,
-  "error": "The model 'gpt-image-1' does not exist.",
+  "fallback": false,
+  "error": null,
   "style_tags": [
     "airbrush",
     "soft blur",
@@ -35,7 +35,7 @@
     "#15385f"
   ],
   "fallback_seed": 3809597896,
-  "image_status": "failed",
+  "image_status": "ready",
   "api_size": "1024x1536",
   "prompt_hash": "311e4d8febf6dd56bdae81dcb907b58be782696b5706bff5ac41f6b6a27258fa"
 }

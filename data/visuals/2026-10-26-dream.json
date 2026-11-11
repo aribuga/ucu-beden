@@ -4,18 +4,18 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-10-26",
   "title": "birbiriyle kayması",
-  "generated_at": "2026-10-26T11:30:49.852Z",
+  "generated_at": "2026-11-11T07:47:37.813Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of kendi kurgusu seçmek, şefkat, bastırılmış romantizm, değerler, dalgalanan dikkat; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "birbiriyle kayması rüyasından kendi kurgusu seçmek, şefkat, bastırılmış romantizm taşıyan bulanık kayıt.",
-  "image_path": null,
-  "provider": "metadata-fallback",
-  "model": "gpt-image-1",
+  "image_path": "/generated/visuals/2026-10-26-dream.png",
+  "provider": "openai",
+  "model": "gpt-image-2.5-flare-2026-09-08",
   "size": "1024x1280",
   "quality": "low",
   "output_format": "png",
-  "fallback": true,
-  "error": "The model 'gpt-image-1' does not exist.",
+  "fallback": false,
+  "error": null,
   "style_tags": [
     "airbrush",
     "soft blur",
@@ -35,7 +35,7 @@
     "#483d78"
   ],
   "fallback_seed": 507212622,
-  "image_status": "failed",
+  "image_status": "ready",
   "api_size": "1024x1536",
   "prompt_hash": "e22d5c897349079dca8456fd9aa0939df717a907e376b747ef693c47a26c8af9"
 }

@@ -4,18 +4,18 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-11-03",
   "title": "Karmaşık Nefesler",
-  "generated_at": "2026-11-03T12:45:06.111Z",
+  "generated_at": "2026-11-11T07:44:06.404Z",
   "visual_prompt": "4:5 portrait aspect ratio. Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme. Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı. Günlük görsel brief: asıl içerik omurgası budur; aşağıdaki açıklamaları, başlıkları ve kelimeleri görselde yazı olarak üretme. Görsel subject: mavi figürlü halının yıpranmış kenarında, nemle ağırlanmış yumuşak lifler üzerinde hafifçe dalgalanan eski ses bantlarından kalma kararmış plastik. İçerik dayanağı: mavi figürlü halının aşınmış ve nemle şişmiş yumuşak dokusu; üzerine düzensiz yayılmış, çatlamış ve kararmış eski ses bantlarının. Kompozisyon mantığı: kompozisyon merkezinde mavi halının yumuşamış ve katmanlanmış kenarı, bu alan üzerinde dağılmış eski ses bantlarının aşınmış plastik kalıntıları ile çevrelenmiş; ince toz. Malzeme mantığı: nemli halı liflerinin yumuşak ve hacimli dokusuyla, sertleşip çatlamış, mat ve kararmış plastik bant parçalarının kontrastı; yüzeyde dağılan ve ışıkla belirginleşen ince. Hareket veya gerilim: toz zerreciklerinin halının yumuşakça hareket eden lifleri arasında hafifçe ve düzensiz sürüklenmesi; bant kalıntılarının durağanlığı ile halı liflerinin kütlesel baskısı arasında küçük. Bugüne bağ: günlük hayattan mavi figürlü halının kilit önemi, şairin mavi halı üzerinde oyalanan dikkatinin ve eski seslerin çekmece kapanmasını engelleyen etkisinin görselleştirilmesi; bedendeki nem ve. Son günlerden tekrar etme: kapı eşiği / dar yatak kenarı / gri koltuk çöküğü / bacak izi veya gövde silueti / mutfak tezgahı. Mood yalnızca renk basıncı ve hareket gerilimini ayarlasın: şefkat, yorgunluk, absürtlük. Brief'i gölgelemeyen küçük yüzey notları: geri, dönüş, gövdesine, yapışıyor, köpek, tasması / beden, zihnin, tarih, yazmaya, başlamasından, koku / erken, aroma, restore, film, ödeme, bastırılmış. Kaynak etkileri yalnızca doku ve ritim ayrıntısı olarak kalsın: ipuçları, ağırlaşan, politik, atmosferin, yarattığı, gerilim / ipuçları, haberlerde, artan, yoğunluk, tekrar, eden / kaymaları, politik, haberlerden, kültürel, etkinliklere, geçiş. Oda, koltuk, yatak, masa, pencere, halı, sokak, park, ekran ve apartman gibi ev/yer/yürüyüş izleri bugünkü veriden geliyorsa doğrudan sahne veya tanınır nesne olarak değil; iz, kalıntı, deformasyon, gölge, yüzey, leke, kırık form veya iç doku olarak dönüştür. Gövde kelimesi geçiyorsa insan figürü veya beden konturu üretme; bunu yüzey ağırlığı, kütle baskısı, nesne hacmi veya deforme olmuş ev içi yüzey gibi yorumla. Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık yüzey izleri, deforme olmuş nesne kalıntıları, katmanlı lekeler ve lo-fi yüzey gürültüsüyle doldur. Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay.",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "Karmaşık Nefesler şiirinin duygusal iklimini ve hafıza basıncını taşıyan soyut lo-fi görsel.",
-  "image_path": null,
-  "provider": "metadata-fallback",
-  "model": "gpt-image-1",
+  "image_path": "/generated/visuals/2026-11-03-poem.png",
+  "provider": "openai",
+  "model": "gpt-image-2.5-flare-2026-09-08",
   "size": "1024x1280",
   "quality": "low",
   "output_format": "png",
-  "fallback": true,
-  "error": "The model 'gpt-image-1' does not exist.",
+  "fallback": false,
+  "error": null,
   "visual_brief": {
     "visual_subject": "mavi figürlü halının yıpranmış kenarında, nemle ağırlanmış yumuşak lifler üzerinde hafifçe dalgalanan eski ses bantlarından kalma kararmış plastik",
     "content_anchor": "mavi figürlü halının aşınmış ve nemle şişmiş yumuşak dokusu; üzerine düzensiz yayılmış, çatlamış ve kararmış eski ses bantlarının",
@@ -56,7 +56,7 @@
     "#483d78"
   ],
   "fallback_seed": 388990482,
-  "image_status": "failed",
+  "image_status": "ready",
   "api_size": "1024x1536",
   "prompt_hash": "55b3b55b17e7be212095c12bdd52fcce6c89d1f2b3056193ce23d7749377c4df"
 }

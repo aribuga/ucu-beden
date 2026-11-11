@@ -4,18 +4,18 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-11-01",
   "title": "Düşüşün Sessiz Tuhaflığı",
-  "generated_at": "2026-11-01T11:48:06.157Z",
+  "generated_at": "2026-11-11T07:45:03.545Z",
   "visual_prompt": "4:5 portrait aspect ratio. Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme. Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı. Günlük görsel brief: asıl içerik omurgası budur; aşağıdaki açıklamaları, başlıkları ve kelimeleri görselde yazı olarak üretme. Görsel subject: dar yatağın yıpranmış kenarında, nemle gevşemiş eski kumaş lifleri arasında bükülmüş ve çatlamış köpek tasması kalıntıları, hafifçe sallanan. İçerik dayanağı: dar yatak kenarının aşınmış, nemli ve yumuşamış yüzeyi; unutulmuş köpek tasması kalıntıları; oda atmosferinde dolaşan ince toz zerrecikleri. Kompozisyon mantığı: kompozisyon merkezde dar yatağın yumuşamış dokusu ve üzerine yerleşmiş köpek tasması kalıntıları etrafında, hafif bozulmuş ve dağılmış düzenlemeyle; toz zerreciklerinin birkaç küçük. Malzeme mantığı: yatak kumaşının nemle yumuşamış, lif lif ayrılmış dokusu ile köpek tasmasının sert, çatlamış plastik ve deri parçalarının kontrastı; üzerlerinde duran ince, hafifçe. Hareket veya gerilim: toz zerreciklerinin kalıntılar arasında hafifçe ve kararsızca sürüklenmesi, bu küçük hareket durağan ve ağırlaşmış yatak yüzeyinin nemli, yumuşak baskısı ile dengelenir; yapısal. Bugüne bağ: bugün şefkat ve melankolinin iç içe geçtiği ruh hali, hafızanın parçalanmış kalıntıları ve içeriye sinmiş nemin ağırlığını yansıtıyor; eski seslerin çekmeceleri kapatmaya izin vermemesi. Son günlerden tekrar etme: halı kenarı ayak izleri / küçük mutfak tezgahı kenarı / eski ses bantları kalıntıları / nemle ağırlaşmış koltuk çöküğü / çekmece kenarı tozları / gri koltuk çöküğü / bacak izinden sızan yüzey. Mood yalnızca renk basıncı ve hareket gerilimini ayarlasın: şefkat, absürtlük, melankoli. Brief'i gölgelemeyen küçük yüzey notları: geri, dönüş, gövdesine, yapışıyor, köpek, tasması / sömürge, rotası, platform, içeriği, teslimat, birleşmesi / eğlencenin, tuhaflık, netlik, karışımı, duygular, yaratması. Kaynak etkileri yalnızca doku ve ritim ayrıntısı olarak kalsın: ipuçları, birleştiriyor, buluşturmak, düzenlemek, geniş, güçlerini / ipuçları, yanıt, vermeyen, soru, dönüşü, ortasında / kaymaları, range, yumuşayan, şehir. Oda, koltuk, yatak, masa, pencere, halı, sokak, park, ekran ve apartman gibi ev/yer/yürüyüş izleri bugünkü veriden geliyorsa doğrudan sahne veya tanınır nesne olarak değil; iz, kalıntı, deformasyon, gölge, yüzey, leke, kırık form veya iç doku olarak dönüştür. Gövde kelimesi geçiyorsa insan figürü veya beden konturu üretme; bunu yüzey ağırlığı, kütle baskısı, nesne hacmi veya deforme olmuş ev içi yüzey gibi yorumla. Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık yüzey izleri, deforme olmuş nesne kalıntıları, katmanlı lekeler ve lo-fi yüzey gürültüsüyle doldur. Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay.",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "Düşüşün Sessiz Tuhaflığı şiirinin duygusal iklimini ve hafıza basıncını taşıyan soyut lo-fi görsel.",
-  "image_path": null,
-  "provider": "metadata-fallback",
-  "model": "gpt-image-1",
+  "image_path": "/generated/visuals/2026-11-01-poem.png",
+  "provider": "openai",
+  "model": "gpt-image-2.5-flare-2026-09-08",
   "size": "1024x1280",
   "quality": "low",
   "output_format": "png",
-  "fallback": true,
-  "error": "The model 'gpt-image-1' does not exist.",
+  "fallback": false,
+  "error": null,
   "visual_brief": {
     "visual_subject": "dar yatağın yıpranmış kenarında, nemle gevşemiş eski kumaş lifleri arasında bükülmüş ve çatlamış köpek tasması kalıntıları, hafifçe sallanan",
     "content_anchor": "dar yatak kenarının aşınmış, nemli ve yumuşamış yüzeyi; unutulmuş köpek tasması kalıntıları; oda atmosferinde dolaşan ince toz zerrecikleri",
@@ -58,7 +58,7 @@
     "#15385f"
   ],
   "fallback_seed": 2581901876,
-  "image_status": "failed",
+  "image_status": "ready",
   "api_size": "1024x1536",
   "prompt_hash": "1b5202e430c45d406132013bbbc16ea4e8e96ec84d6d8ba44fb600134ea51bc5"
 }

@@ -4,18 +4,18 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-11-06",
   "title": "yumuşak çizik",
-  "generated_at": "2026-11-06T12:52:23.099Z",
+  "generated_at": "2026-11-11T07:42:55.947Z",
   "visual_prompt": "4:5 portrait aspect ratio. Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme. Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı. Günlük görsel brief: asıl içerik omurgası budur; aşağıdaki açıklamaları, başlıkları ve kelimeleri görselde yazı olarak üretme. Görsel subject: mavi figürlü halının solgun kenarında, katmanlaşmış yumuşak kumaş liflerinin arasında hafifçe titreyen eski metal kapı sesi kalıntıları. İçerik dayanağı: mavi figürlü halının aşınmış, solgun kenarı; lif lif ayrılmış, yumuşamış kumaş dokusu; bu dokular arasında dağılmış, eski metal. Kompozisyon mantığı: kompozisyon, halının yumuşamış ve aşınmış kenar dokusunu merkezde tutarak, liflerin arasında dağılmış metal kapı sesi kalıntıları ile katmanlı bir doku ve hafif. Malzeme mantığı: halının nemle yumuşamış, lif lif ayrılmış yumuşak kumaş dokusu ile sert, eski metal kapı sesinden kalan izlerin fiziksel ve görsel kontrastı; metal. Hareket veya gerilim: hafifçe titreyen ve odanın içinde kısa, kararsız adımlar gibi yayılan metal kapı sesi kalıntılarının yarattığı küçük titreşim hareketleri; bu hareket, halının durağan. Bugüne bağ: bugün halının kenarındaki eski metal kapı sesi kalıntıları, hafif yumuşamış liflerin arasında, şefkat ve yorgunlukla karışık umut hissiyle beliriyor; dikkat kapı sesinin yarattığı titreşim. Son günlerden tekrar etme: dar yatağın yıpranmış kenarı / eski ses bantlarından kalan plastik kalıntılar / toz zerrecikleri / katmanlı halı yüzeyi / eski seslerin yarattığı kalıntı / bant kalıntılarının çatlak yapısı / yumuşak kumaş lifleri arasında titreşim / kapı eşiği ve plastik yüzey kalıntıları. Mood yalnızca renk basıncı ve hareket gerilimini ayarlasın: şefkat, umut, yorgunluk. Brief'i gölgelemeyen küçük yüzey notları: yaşam, haberlerinde, güven, rahatlama, rehberlik, güvenlik / eğlence, haberlerinde, canlılık, arzusu, etkinliklerin, atmosferini / kalamış, parkı, hava, yüzünde, ince, bırakıyor. Kaynak etkileri yalnızca doku ve ritim ayrıntısı olarak kalsın: ipuçları, ağırlaşan, gündelik, politik, atmosferi, sergi / ipuçları, duygusal, tonların, değişkenliği, bilgi, kırıntılarının / kaymaları, gündelik, politik, basınçtan, derin, zaman. Oda, koltuk, yatak, masa, pencere, halı, sokak, park, ekran ve apartman gibi ev/yer/yürüyüş izleri bugünkü veriden geliyorsa doğrudan sahne veya tanınır nesne olarak değil; iz, kalıntı, deformasyon, gölge, yüzey, leke, kırık form veya iç doku olarak dönüştür. Gövde kelimesi geçiyorsa insan figürü veya beden konturu üretme; bunu yüzey ağırlığı, kütle baskısı, nesne hacmi veya deforme olmuş ev içi yüzey gibi yorumla. Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık yüzey izleri, deforme olmuş nesne kalıntıları, katmanlı lekeler ve lo-fi yüzey gürültüsüyle doldur. Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay.",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "yumuşak çizik şiirinin duygusal iklimini ve hafıza basıncını taşıyan soyut lo-fi görsel.",
-  "image_path": null,
-  "provider": "metadata-fallback",
-  "model": "gpt-image-1",
+  "image_path": "/generated/visuals/2026-11-06-poem.png",
+  "provider": "openai",
+  "model": "gpt-image-2.5-flare-2026-09-08",
   "size": "1024x1280",
   "quality": "low",
   "output_format": "png",
-  "fallback": true,
-  "error": "The model 'gpt-image-1' does not exist.",
+  "fallback": false,
+  "error": null,
   "visual_brief": {
     "visual_subject": "mavi figürlü halının solgun kenarında, katmanlaşmış yumuşak kumaş liflerinin arasında hafifçe titreyen eski metal kapı sesi kalıntıları",
     "content_anchor": "mavi figürlü halının aşınmış, solgun kenarı; lif lif ayrılmış, yumuşamış kumaş dokusu; bu dokular arasında dağılmış, eski metal",
@@ -59,7 +59,7 @@
     "#152b38"
   ],
   "fallback_seed": 3080446993,
-  "image_status": "failed",
+  "image_status": "ready",
   "api_size": "1024x1536",
   "prompt_hash": "fb703115c4ee5454fc331604927f5aa7f1157fee1396d910d371c5d3fd788652"
 }
