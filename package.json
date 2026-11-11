@@ -14,6 +14,7 @@
     "scan:graph": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/scanRepoGraph.ts",
     "validate:graph": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/validateRepoGraph.ts --determinism",
     "test:anatomy": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/testAnatomyUi.ts",
+    "test:memory-safety": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/testMemorySafety.ts",
     "rebuild:memory": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/rebuildMemory.ts",
     "validate:memory": "npm run rebuild:memory -- --dry-run --validate",
     "debug:memory-cycle": "node --preserve-symlinks --preserve-symlinks-main --import ./node_modules/tsx/dist/loader.mjs src/scripts/debugMemoryCycle.ts",

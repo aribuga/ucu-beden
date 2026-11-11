@@ -27,6 +27,9 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
+      - name: Memory safety regression tests
+        run: npm run test:memory-safety
+
       - name: Build
         env:
           NEXT_PUBLIC_BASE_PATH: /ucu-beden
