@@ -171,6 +171,9 @@ function unsafeFragmentMatches(fragment: string, unsafeTerms: string[]): string[
   return distinct([
     ...(publicUnsafePattern.test(fragment) ? ["url_or_contact"] : []),
     ...unsafeTerms.filter((term) => {
+      // The escaped regex can only match a literal occurrence. Most archive
+      // terms are absent; avoid compiling thousands of regexes per fragment.
+      if (!value.includes(term)) return false;
       const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
       return new RegExp(`(^|[^a-zçğıöşü0-9])${escaped}([^a-zçğıöşü0-9]|$)`, "u").test(value);
     })

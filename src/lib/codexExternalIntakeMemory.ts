@@ -159,6 +159,8 @@ export function externalIntakeUnsafePublicTerms(records: CodexExternalIntakeReco
 export function unsafeExternalIntakeTextMatches(text: string, unsafeTerms: string[]): string[] {
   const value = normalized(text);
   const matches = unsafeTerms.filter((term) => {
+    // Keep the boundary check for candidates, without compiling absent terms.
+    if (!value.includes(term)) return false;
     const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     return new RegExp(`(^|[^a-zçğıöşü0-9])${escaped}([^a-zçğıöşü0-9]|$)`, "u").test(value);
   });
