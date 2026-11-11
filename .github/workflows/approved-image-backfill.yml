@@ -1,0 +1,72 @@
+name: One-time approved image backfill
+on:
+  push:
+    branches: [repair/approved-images-20261111]
+    paths: [ops/visual-backfill-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: ucu-beden-approved-images-20261111
+  cancel-in-progress: false
+jobs:
+  backfill:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: repair/approved-images-20261111
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Verify approved request and protected archive
+        run: |
+          node --import ./node_modules/tsx/dist/loader.mjs ops/backfill-approved-images.mjs verify
+          node -e "const r=require('./ops/visual-backfill-request.json'); if(!['sample','remaining'].includes(r.mode))process.exit(1)"
+      - name: Persist exclusive phase claim before spending
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          node ops/claim-image-backfill.mjs start
+          git add ops/visual-backfill-claim.json
+          git commit -m 'Claim approved image backfill phase before API requests'
+          git push origin HEAD:repair/approved-images-20261111
+      - name: Generate scoped images without retries
+        id: generate
+        continue-on-error: true
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          MODE=$(node -p "require('./ops/visual-backfill-request.json').mode")
+          node --import ./node_modules/tsx/dist/loader.mjs ops/backfill-approved-images.mjs "$MODE"
+      - name: Verify preservation
+        if: always()
+        run: node --import ./node_modules/tsx/dist/loader.mjs ops/backfill-approved-images.mjs verify-protected
+      - name: Commit approved assets and cost ledger to repair branch only
+        if: always() && steps.generate.outcome != 'skipped'
+        run: |
+          node --import ./node_modules/tsx/dist/loader.mjs ops/backfill-approved-images.mjs verify-protected
+          node ops/claim-image-backfill.mjs finish '${{ steps.generate.outcome }}'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          node -e "const fs=require('fs'),cp=require('child_process'),m=require('./ops/visual-backfill-manifest.json'); const paths=m.targets.flatMap(t=>[t.visual_file,t.dream_file,t.image_file]).filter(p=>p&&fs.existsSync(p)); cp.execFileSync('git',['add','--',...paths,'ops/visual-backfill-ledger.json','ops/visual-backfill-claim.json']);"
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Record approved image backfill assets and measured API usage'
+          git push origin HEAD:repair/approved-images-20261111
+      - name: Report failed or uncertain generation
+        if: steps.generate.outcome == 'failure'
+        run: exit 1
+      - name: Preserve ledger and generated files even on a failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: approved-image-backfill-${{ github.run_id }}
+          path: |
+            ops/visual-backfill-ledger.json
+            public/generated/visuals/2026-10-2[4-9]-*.png
+            public/generated/visuals/2026-10-3*.png
+            public/generated/visuals/2026-11-*.png
+          retention-days: 7
