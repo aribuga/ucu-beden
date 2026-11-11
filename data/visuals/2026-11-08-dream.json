@@ -4,15 +4,14 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-11-08",
   "title": "basınç sonrası gündelik",
-  "generated_at": "2026-11-11T07:42:18.829Z",
+  "generated_at": "2026-11-11T12:58:40.483Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of sessizlik, ağırkanlı yorgunluk, alaysı gülümseme, bulanık sahneler, eski şarkılar; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "basınç sonrası gündelik rüyasından sessizlik, ağırkanlı yorgunluk, alaysı gülümseme taşıyan bulanık kayıt.",
   "image_path": "/generated/visuals/2026-11-08-dream.webp",
   "provider": "openai",
-  "model": "gpt-image-2.5-flare-2026-09-08",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
   "output_format": "webp",
   "fallback": false,
   "error": null,
@@ -36,6 +35,34 @@
   ],
   "fallback_seed": 450470245,
   "image_status": "ready",
-  "api_size": "1024x1536",
-  "prompt_hash": "a087a0ee67e432ce630c6a0196a864fbb63488f5f2c8cf2dc6c843560538a7f1"
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T12:58:40.483Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create one 4:5 portrait abstract artwork, not a scene. Use the reference ONLY for soft lo-fi airbrush language, never copy its composition. Enlarged low-resolution old digital wallpaper: broad diffuse asymmetrical color masses, soft but distinctly separated edges, fine scan grain, chromatic bleeding, subtle compression ghosts. Flat atmospheric color, no rendered objects. A wide indigo softness folds across the lower half, almost meeting a burgundy blur then quietly separating. Washed blue-grey echoes sink behind it in progressively dimmer bands, touched by one understated dusty pink warmth. The upper region holds smoky green and pale mauve variations. Silent knotting and gentle fracture of meaning, old songs returning as quiet mourning, dry humor tucked into sadness, explanation left behind, tired tenderness moving softly through distracted depth. No bright focal glow. Entire frame active but restful, edges visibly readable through airbrush softness. Exclude text, letters, words, numbers, people, faces, body outlines, scales of justice, domestic props, photography, 3D, torn-paper collage, actual fabric or wood microtexture. Crucial composition correction: strong tonal contrast between near-black and pale masses, distinct soft contours visible even at thumbnail size; layered medium-size broken patches and displaced bands, not a washed-out gradient. Use visible granular scan noise and mottled internal tonal variation. Keep the requested restricted palette and abstract emotional relationships. Soft airbrush, but clearly structured, never featureless.",
+    "prompt_sha256": "79631dd173ff84ef5c10978924cd68f1e9f68c234a6af3578ed2adf5194efd48",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this replacement.",
+    "saved_visual_prompt_sha256": "d1ccad6e5f2e8bf53d6e9719dcd8ec4fac0687f9e25b6340a2f41a32b981da77",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-21-dream.png",
+        "sha256": "6a6c975421900108df559c4bfff12bb88490d4a92d14ae10e69c40227fffa0ee"
+      }
+    ],
+    "original_png_sha256": "d940880dfeb538f3629fa8e60a6cbf0539b468915af422e9f6a7b93a1c403628",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "86cc71c8297111b24a841dd6e26581061d8577ffe6ffb758f688a6f47e1275a7"
+    },
+    "replaces_image_from_commit": "fd5cbaae3eb67c7cbe7bc773865ac0d1b0d1a0c2"
+  }
 }

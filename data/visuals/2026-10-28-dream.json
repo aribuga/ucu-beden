@@ -4,15 +4,14 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-10-28",
   "title": "arkasında kırılması",
-  "generated_at": "2026-11-11T07:46:47.139Z",
+  "generated_at": "2026-11-11T12:45:51.118Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of sanat, arşiv, sahne, romantiklik, politik öfke; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "arkasında kırılması rüyasından sanat, arşiv, sahne taşıyan bulanık kayıt.",
   "image_path": "/generated/visuals/2026-10-28-dream.webp",
   "provider": "openai",
-  "model": "gpt-image-2.5-flare-2026-09-08",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
   "output_format": "webp",
   "fallback": false,
   "error": null,
@@ -36,6 +35,34 @@
   ],
   "fallback_seed": 3809597896,
   "image_status": "ready",
-  "api_size": "1024x1536",
-  "prompt_hash": "311e4d8febf6dd56bdae81dcb907b58be782696b5706bff5ac41f6b6a27258fa"
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T12:45:51.118Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create a new 4:5 portrait abstract image. Reference is STYLE ONLY: soft blurry low-fi airbrush, broad diffused masses, fine grain and faint scan noise, color bleeding, low-resolution enlarged old digital wallpaper. Invent a different composition. No text, letters, glyphs, figures, faces, body outlines, objects, interiors, photography, 3D, hard edges, collage, fabric or wood microtexture. Entire image nonfigurative and softly out of focus, not empty gradient. Large translucent dusty pink veils drift apart over muted teal, an oblique dark wine mass thinning as its older color traces fall away. Unfinished echo-smudges descend and then unexpectedly return upward; an absurd gentle interruption with a missing connection. Romantic amber shadow leans into tense red-purple pressure then swerves toward cool creative blue. Displaced depth and broken recurrence reorganize the composition, pale tenderness between dense unrest, dreamlike broad bleeding masses.",
+    "prompt_sha256": "cc584364a846801e3e1a0be162b4e237d8e8999744dda7338a624780cc8909a9",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this replacement.",
+    "saved_visual_prompt_sha256": "7705c14d4804d267028cdc78b41a80fb9c749662bb5311d3936594238e07e840",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-21-dream.png",
+        "sha256": "6a6c975421900108df559c4bfff12bb88490d4a92d14ae10e69c40227fffa0ee"
+      }
+    ],
+    "original_png_sha256": "781f30da40ab4d84773822cf11087838392a5f1d3fa54991a4c2769f9b432626",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "443ac2d9b427497dd31944bd118c20efaaa18d1b45ad9a93096b16abec975b3e"
+    },
+    "replaces_image_from_commit": "fd5cbaae3eb67c7cbe7bc773865ac0d1b0d1a0c2"
+  }
 }

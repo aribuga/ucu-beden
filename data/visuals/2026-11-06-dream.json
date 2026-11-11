@@ -4,15 +4,14 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-11-06",
   "title": "anlamı kayması",
-  "generated_at": "2026-11-11T07:43:06.564Z",
+  "generated_at": "2026-11-11T12:43:16.303Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of bastırılmış kalıntılar, kırık yankı, umut, kültürlerarası etkileşim, romantiklik; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "anlamı kayması rüyasından bastırılmış kalıntılar, kırık yankı, umut taşıyan bulanık kayıt.",
   "image_path": "/generated/visuals/2026-11-06-dream.webp",
   "provider": "openai",
-  "model": "gpt-image-2.5-flare-2026-09-08",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
   "output_format": "webp",
   "fallback": false,
   "error": null,
@@ -36,6 +35,34 @@
   ],
   "fallback_seed": 2801469611,
   "image_status": "ready",
-  "api_size": "1024x1536",
-  "prompt_hash": "e1f888726608df4f94259bbcef4db8c69e8bb2ad17337e4cd445a4994684be41"
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T12:43:16.303Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create one 4:5 portrait abstract artwork, not a scene. Use the reference ONLY for soft lo-fi airbrush language, never copy its composition. Enlarged low-resolution old digital wallpaper: broad diffuse asymmetrical color masses, deeply blurred edges, fine scan grain, chromatic bleeding, subtle compression ghosts. Flat atmospheric color, no rendered objects. A broad off-center violet curl almost folds inward but breaks into three soft rust-pink echo patches, with a small muted gold-green contact between two patches. Behind it, deep blue layers slide slowly downward and distant olive color passes sideways. Repressed feeling returning obliquely, a dry joke with hidden meaning, heavy memory and fatigue seeking trust, rediscovered romance, cross-cultural traces receding into deep time; tenderness touches hope and new meaning emerges through broken rhythm. All forms nebulous, no drawn lines. Entire frame active but restful, every edge blurred. Exclude text, letters, words, numbers, people, faces, body outlines, scales of justice, domestic props, photography, 3D, torn-paper collage, actual fabric or wood microtexture.",
+    "prompt_sha256": "87f7da649b730d30b846c20e1deba61c96a268bd7f23ca46035d0797e048acd2",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this replacement.",
+    "saved_visual_prompt_sha256": "5f98caf64a817cbaed6b835b1b224dcc6fd6a4b870bea827b136122f31f499fe",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-21-dream.png",
+        "sha256": "6a6c975421900108df559c4bfff12bb88490d4a92d14ae10e69c40227fffa0ee"
+      }
+    ],
+    "original_png_sha256": "ca8a7a1ad32d1a848b5bbbba5858b5a4d46f4588c741c816f907b547f1c62d2d",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "a04b539aad6989d79ae7238d24996e2c367d8062dce67246e4f3e17cdd40fd62"
+    },
+    "replaces_image_from_commit": "fd5cbaae3eb67c7cbe7bc773865ac0d1b0d1a0c2"
+  }
 }

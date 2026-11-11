@@ -4,15 +4,14 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-11-04",
   "title": "çalar kayması",
-  "generated_at": "2026-11-11T07:43:54.954Z",
+  "generated_at": "2026-11-11T12:48:56.961348Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of kırık kelimeler, politik güç değişimi, duygusal dolanım, ince sarkazm, kültür ve sanat; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "çalar kayması rüyasından kırık kelimeler, politik güç değişimi, duygusal dolanım taşıyan bulanık kayıt.",
   "image_path": "/generated/visuals/2026-11-04-dream.webp",
   "provider": "openai",
-  "model": "gpt-image-2.5-flare-2026-09-08",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
   "output_format": "webp",
   "fallback": false,
   "error": null,
@@ -36,6 +35,34 @@
   ],
   "fallback_seed": 2054865489,
   "image_status": "ready",
-  "api_size": "1024x1536",
-  "prompt_hash": "b2f1b4f68277c56fbff04ed5869456e01d4248c79941b7ad89a1be4f7d562599"
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T12:48:56.961348Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create a new 4:5 portrait Ucu Beden abstract artwork, stylized-concept. Reference is STYLE ONLY; do not copy its composition or objects. Soft blurry lo-fi airbrush, broad diffused abstract pigment masses, fine grain and scan noise, color bleeding, enlarged low-resolution old digital wallpaper. Entire frame layered and active, never an empty gradient. All edges diffuse. No text, letters, words, symbols, people, faces, body outlines, scales-of-justice, domestic props, identifiable objects or scenery, photographs, 3D, crisp torn-paper collage, literal fabric or wood microtexture. Quiet limited palette of soot charcoal, muted parchment ochre and faded rust, with no teal, pink or lilac. Four broad interrupted nearly horizontal dark diffuse strata are displaced toward opposing sides and overlap loosely in a low ochre fog. Uneven small rust pulses fade upward while faint older layers remain behind them. Broken distant speech becomes irregular fading rhythm, dry humor faint grain against soft masses, tenderness and fatigue overlapping slow strata, suppressed emotion returning a second displaced stain, meeting geographies converging fields, shifting political power a sideways imbalance moving into a softened middle. Archival romance is warm buried strata, rewriting is an imperfect shifted echo along an open boundary. Flat broad layered geometry, not landscape or S-shaped swirls. Pure abstract relationships, no maps, paper, hands, letters or symbols.",
+    "prompt_sha256": "47360988216acead6e300a6b6c0b61e3dd4a809909aecd13133dceaa5da86361",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this replacement.",
+    "saved_visual_prompt_sha256": "a0e26e01f03691f3fadbf2336bfde114f017766d98584a6400f4adc08d848bac",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-23-dream.png",
+        "sha256": "d1302e75e47f196b4325b61eb3c838f69e5639952a4bee4ef6d69f5c5c1522c6"
+      }
+    ],
+    "original_png_sha256": "a5acb697ffdbbddc8cc6952069fc0e3e6768ffdc912d4c1c6205b91010ace30a",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "a4eacbb10722d5d4dcbbf5dd9a41c5a33a0f1d90551e7c3a5c5ac650035ad069"
+    },
+    "replaces_image_from_commit": "fd5cbaae3eb67c7cbe7bc773865ac0d1b0d1a0c2"
+  }
 }

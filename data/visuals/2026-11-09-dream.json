@@ -4,15 +4,14 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-11-09",
   "title": "açık tortusu",
-  "generated_at": "2026-11-11T07:41:57.998Z",
+  "generated_at": "2026-11-11T12:47:25.792Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of ağırlaşan zaman, sanata geçiş, kırık cümleler, gizli romantizm, gölgeleşen anılar; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "açık tortusu rüyasından ağırlaşan zaman, sanata geçiş, kırık cümleler taşıyan bulanık kayıt.",
   "image_path": "/generated/visuals/2026-11-09-dream.webp",
   "provider": "openai",
-  "model": "gpt-image-2.5-flare-2026-09-08",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
   "output_format": "webp",
   "fallback": false,
   "error": null,
@@ -36,6 +35,34 @@
   ],
   "fallback_seed": 2456245452,
   "image_status": "ready",
-  "api_size": "1024x1536",
-  "prompt_hash": "e78cd8fb10784ee827af573d0beef9b6065e6bbd265c49dcddd905edb37835af"
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T12:47:25.792Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create one 4:5 portrait abstract artwork, not a scene. Use the reference ONLY for soft lo-fi airbrush language, never copy its composition. Enlarged low-resolution old digital wallpaper: broad diffuse asymmetrical color masses, deeply blurred edges, fine scan grain, chromatic bleeding, subtle compression ghosts. Flat atmospheric color, no rendered objects. A low broad charcoal-violet band thins asymmetrically into dusty pink and soft sky-blue pools toward the upper left. Broken blurred mauve patches recur at different scales around an irregular pale opening. An inward warm rose trace emerges from beneath cool shadow without becoming a symbol. Half-forgotten scenes and broken echoes, hidden romance wanting to reveal itself, heavy public time gradually loosening into the misty colors of art; sadness mixed with curiosity. Large soft forms, no hard marks. Entire frame active but restful, every edge blurred. Exclude text, letters, words, numbers, people, faces, body outlines, scales of justice, domestic props, photography, 3D, torn-paper collage, actual fabric or wood microtexture.",
+    "prompt_sha256": "00107d24269e280aef89cf4bb0d6003af5ed097785d74933638d5522682c46df",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this replacement.",
+    "saved_visual_prompt_sha256": "f0e2c977760b55adf0f5bc1332c130bc862ec8cb15c8738b04065f139d82ac4f",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-21-dream.png",
+        "sha256": "6a6c975421900108df559c4bfff12bb88490d4a92d14ae10e69c40227fffa0ee"
+      }
+    ],
+    "original_png_sha256": "547195e01eea211adcda039457a2cb3ac64d7a0834da137f3ecf899cdda67809",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "63f53baf49f386183214150d491e7aaf27b01142716f70fd348ac9f9980274aa"
+    },
+    "replaces_image_from_commit": "fd5cbaae3eb67c7cbe7bc773865ac0d1b0d1a0c2"
+  }
 }

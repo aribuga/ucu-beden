@@ -4,15 +4,14 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-10-26",
   "title": "birbiriyle kayması",
-  "generated_at": "2026-11-11T07:47:37.813Z",
+  "generated_at": "2026-11-11T12:43:19.324Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of kendi kurgusu seçmek, şefkat, bastırılmış romantizm, değerler, dalgalanan dikkat; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "birbiriyle kayması rüyasından kendi kurgusu seçmek, şefkat, bastırılmış romantizm taşıyan bulanık kayıt.",
   "image_path": "/generated/visuals/2026-10-26-dream.webp",
   "provider": "openai",
-  "model": "gpt-image-2.5-flare-2026-09-08",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
   "output_format": "webp",
   "fallback": false,
   "error": null,
@@ -36,6 +35,34 @@
   ],
   "fallback_seed": 507212622,
   "image_status": "ready",
-  "api_size": "1024x1536",
-  "prompt_hash": "e22d5c897349079dca8456fd9aa0939df717a907e376b747ef693c47a26c8af9"
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T12:43:19.324Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create a new 4:5 portrait abstract image. Reference is STYLE ONLY: soft blurry low-fi airbrush, broad diffused masses, fine grain and faint scan noise, color bleeding, low-resolution enlarged old digital wallpaper. Invent a different composition. No text, letters, glyphs, figures, faces, body outlines, objects, interiors, photography, 3D, hard edges, collage, fabric or wood microtexture. Entire image nonfigurative and softly out of focus, not empty gradient. Nested but incomplete broad drifting hazes of dusty rose, dark petrol and cream move upward from deep violet. A hesitant broken pulse seeks an exit while a heavy soft cloud shelters it. Buried rose warmth returns beneath muted shadow, indirect attention wanders; two opposing color pressures nearly touch then divert, obligation and value colliding. Offset reverberations confuse recurrence with reinvention, small absurd changes of rhythm and fragile unfinished edges, a submerged reflection without any literal mirror.",
+    "prompt_sha256": "66f1d5a47385e35afe1f0fb25e0386575423f386a4cb195630e3062888ab25be",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this replacement.",
+    "saved_visual_prompt_sha256": "39a3c3b5dffa1bdcfe5eebbed4de3b2df3f46953d7a9e068cee3d7434c4635ad",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-21-dream.png",
+        "sha256": "6a6c975421900108df559c4bfff12bb88490d4a92d14ae10e69c40227fffa0ee"
+      }
+    ],
+    "original_png_sha256": "9492e0887acbc3c710b2211d826d995f4a5a44fa26ccd06e3024ca199ac10d0a",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "3c5dc8eb06a90a85e2f836f1f8085dd1658d246fa151ea1811e04a8c40d3171e"
+    },
+    "replaces_image_from_commit": "fd5cbaae3eb67c7cbe7bc773865ac0d1b0d1a0c2"
+  }
 }

@@ -4,15 +4,14 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-10-25",
   "title": "açılan kırılması",
-  "generated_at": "2026-11-11T07:48:02.230Z",
+  "generated_at": "2026-11-11T12:42:03.233Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of absürt dalga, melankoli, politik baskı, sanat, hafıza yükü; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "açılan kırılması rüyasından absürt dalga, melankoli, politik baskı taşıyan bulanık kayıt.",
   "image_path": "/generated/visuals/2026-10-25-dream.webp",
   "provider": "openai",
-  "model": "gpt-image-2.5-flare-2026-09-08",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
   "output_format": "webp",
   "fallback": false,
   "error": null,
@@ -36,6 +35,34 @@
   ],
   "fallback_seed": 3214194549,
   "image_status": "ready",
-  "api_size": "1024x1536",
-  "prompt_hash": "4b542f213a93a43cd1d4b2b180b9b397ad6b0b8c4064c928722d2a075bc3c487"
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T12:42:03.233Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create a new 4:5 portrait abstract image. Reference is STYLE ONLY: soft blurry low-fi airbrush, broad diffused masses, fine grain and faint scan noise, color bleeding, low-resolution enlarged old digital wallpaper. Invent a different composition. No text, letters, glyphs, figures, faces, body outlines, objects, interiors, photography, 3D, hard edges, collage, fabric or wood microtexture. Entire image nonfigurative and softly out of focus, not empty gradient. A tangled broad sideways wave crosses the frame from coral-magenta warmth at left into glacial teal-blue at right, beneath a heavy olive-grey upper cloud. Romantic faded echoes fall behind it, incomplete tiny interruptions and absurd reversals turn into recurrent color residues. Melancholic slow motion meets short offbeat stutters, external dark pressure gently disturbs the flow; half-visible meaning rises from deep haze without becoming readable, unfinished search for explanation.",
+    "prompt_sha256": "525fc56ed48a1abe08667ffae33a5b788c96763c53751cd2485875ed747b29b3",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this replacement.",
+    "saved_visual_prompt_sha256": "7c474c3a1d6b802d4c02c96e1968fff9532f1626f957ffa55b89dfce59a7ddae",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-20-poem.png",
+        "sha256": "9e7ed9389431de0ec72a01226aeaec0a2cc4927579b64ec6a9538d5f38dc40bb"
+      }
+    ],
+    "original_png_sha256": "247509faaf012b58681b2aa0d8296b03a6a92ce3fa2ee029d98de2c7073a04d0",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "8915766919ca57c4b9f9e4add2c791d60614e8e839ec3e8536cef1415e3517ca"
+    },
+    "replaces_image_from_commit": "fd5cbaae3eb67c7cbe7bc773865ac0d1b0d1a0c2"
+  }
 }

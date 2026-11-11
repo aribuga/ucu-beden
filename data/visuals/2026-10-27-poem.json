@@ -4,15 +4,14 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-10-27",
   "title": "Tozlu Fısıltılar",
-  "generated_at": "2026-11-11T07:46:57.764Z",
+  "generated_at": "2026-11-11T12:44:10.268Z",
   "visual_prompt": "4:5 portrait aspect ratio. Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme. Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı. Günlük görsel brief: asıl içerik omurgası budur; aşağıdaki açıklamaları, başlıkları ve kelimeleri görselde yazı olarak üretme. Görsel subject: gövde izinden katlanan yamuk gölge. İçerik dayanağı: gövde, oyalanıyor. Kompozisyon mantığı: günlük fiziksel omurgayı merkeze alıp kenarlara doğru bozulan kırık bir düzen. Malzeme mantığı: seçilen nesne veya beden izini lekeli yüzey, yıpranmış dijital doku ve iç katman gibi dönüştür. Hareket veya gerilim: tanınır sahneye dönüşmeden fiziksel izin belirmesi, yamulması veya dağılması. Bugüne bağ: Bugünkü hali: Yarım kalmış bir direnç, yorgun bir dikkatle yoğrulmuş, umutla kırgın arasında gidip gelen bir ruh hali.. Son günlerden tekrar etme: salondaki gri koltuğun nemle ağırlaşmış yumuşak çöküğünde dağılmış eski ses bantlarından kalan yamulmuş plastik kalıntıları arasında, ince kahverengi / nemli ve ağırlaşmış kumaş dokusuyla solgun gri koltuğun yumuşamış çöküğü; üzerinde eski ses bant kalıntılarının bozulmuş ve çatlamış / gri koltuğun aşınmış yumuşak çöküğü üzerinde biriken hafifçe nemli kahverengi toz zerrecikleri ve iç içe geçmiş eski ses / uykudan yeni çıkmış bacakların sıcaklığını andıran gri koltuğun yumuşamış ve aşınmış yüzeyi; eski ses bantlarının sert plastik parçaları / bacak izinden sızan yüzey / bacak, sesler, vermiyor. Mood yalnızca renk basıncı ve hareket gerilimini ayarlasın: şefkat, yorgunluk, umut. Brief'i gölgelemeyen küçük yüzey notları: arşiv, değiştirirken, sahnesini, yeniden, kurdu / aile, yükü, konaklama, maden, emeği, yağmur / sivil, koridor, protesto, alanı, kültür, takvimi. Kaynak etkileri yalnızca doku ve ritim ayrıntısı olarak kalsın: ipuçları, ağırlaşan, kabaran, sergi, duvarları, görüntü / ipuçları, tekrar, eden, politik, gerilim, vurgusu / kaymaları, politik, haberlerden, sanata, geçiş, sanattan. Oda, koltuk, yatak, masa, pencere, halı, sokak, park, ekran ve apartman gibi ev/yer/yürüyüş izleri bugünkü veriden geliyorsa doğrudan sahne veya tanınır nesne olarak değil; iz, kalıntı, deformasyon, gölge, yüzey, leke, kırık form veya iç doku olarak dönüştür. Gövde kelimesi geçiyorsa insan figürü veya beden konturu üretme; bunu yüzey ağırlığı, kütle baskısı, nesne hacmi veya deforme olmuş ev içi yüzey gibi yorumla. Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık yüzey izleri, deforme olmuş nesne kalıntıları, katmanlı lekeler ve lo-fi yüzey gürültüsüyle doldur. Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay.",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "Tozlu Fısıltılar şiirinin duygusal iklimini ve hafıza basıncını taşıyan soyut lo-fi görsel.",
   "image_path": "/generated/visuals/2026-10-27-poem.webp",
   "provider": "openai",
-  "model": "gpt-image-2.5-flare-2026-09-08",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
   "output_format": "webp",
   "fallback": false,
   "error": null,
@@ -58,6 +57,34 @@
   ],
   "fallback_seed": 2816269661,
   "image_status": "ready",
-  "api_size": "1024x1536",
-  "prompt_hash": "b912f7bd754490b23abc18fe5a82529e0aede9292aa58ae1ebbca3f9057d178c"
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T12:44:10.268Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create a new 4:5 portrait abstract image. Reference is STYLE ONLY: soft blurry low-fi airbrush, broad diffused masses, fine grain and faint scan noise, color bleeding, low-resolution enlarged old digital wallpaper. Invent a different composition. No text, letters, glyphs, figures, faces, body outlines, objects, interiors, photography, 3D, hard edges, collage, fabric or wood microtexture. Entire image nonfigurative and softly out of focus, not empty gradient. A crooked broad olive and aubergine pressure fold breaks outward into displaced smoky ochre strata. Excavated pale bands nearly disappear as layers trade places; two warm and cold masses negotiate across uneasy gaps. Repeated dim pulses stumble diagonally, a muted turquoise pocket struggles beneath dark political weight. Tender pink diffusion refuses to vanish, faint butter-yellow seeps through an irregular opening, fragile hope against disappointment and tired resistance; weathered digital residue, no anatomy or architecture.",
+    "prompt_sha256": "e0b76033ff741a4d6c06e70ca5aeccbc6af7e7add2b29f9dbe2ef76996ffe570",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this replacement.",
+    "saved_visual_prompt_sha256": "39540fb80cc65fbc04e5204a381878a4c892f0c08789002d96d2e78bdfd3a3a3",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-21-dream.png",
+        "sha256": "6a6c975421900108df559c4bfff12bb88490d4a92d14ae10e69c40227fffa0ee"
+      }
+    ],
+    "original_png_sha256": "c691cd1e6b464020ac6d15e2d8e4c40769a01bfb66d180476ef49f4f00f3aecc",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "5ed282f733e9c7b18502992454691f7f03f50ca8ce8d29eee312df3cbb62025f"
+    },
+    "replaces_image_from_commit": "fd5cbaae3eb67c7cbe7bc773865ac0d1b0d1a0c2"
+  }
 }
