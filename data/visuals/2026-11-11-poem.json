@@ -4,18 +4,17 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-11-11",
   "title": "Hafızanın Hafif Çalkantısı",
-  "generated_at": "2026-11-11T12:36:43.051Z",
+  "generated_at": "2026-11-11T13:39:39.339Z",
   "visual_prompt": "4:5 portrait aspect ratio. Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme. Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı. Günlük görsel brief: asıl içerik omurgası budur; aşağıdaki açıklamaları, başlıkları ve kelimeleri görselde yazı olarak üretme. Görsel subject: kapı eşiğinde, çatlamaya başlamış eski metal kilit kalıntılarının arasında, pasla kaplanmış ince toz zerreciklerinin hafifçe savrulması. İçerik dayanağı: kapı eşiğinin nemle yumuşamış plastik yüzeyi; çatlak ve ufalanmış metal kilit parçaları; üzerlerinde birikmiş ince toz zerrecikleri. Kompozisyon mantığı: kompozisyon merkezinde kapı eşiğinin çatlayan ve parçalanan metal kilit kalıntıları yer alır; bu kalıntılar arasında birikmiş toz zerrecikleri hafifçe korunmuş boşluklarda savrulur. Malzeme mantığı: yumuşak ve nemle şişmiş plastik yüzey ile sert, paslanarak bozulan metal kalıntılar arasında fiziksel ve görsel kontrast vardır; ince toz zerrecikleri yarı. Hareket veya gerilim: toz zerreciklerinin esintisiz ortamda bile hafifçe savrulması, durağan sert metal kalıntılarının ve yumuşak plastik yüzeyin baskısı arasında küçük, kırılgan bir gerilim yaratır. Bugüne bağ: günün yoğun hafıza baskısı ve dış dünyadan gelen politik gerilim, kapı eşiğinde eski kilit ve kırık metal parçalarının değişime dirençli ama yorgun halini, toz. Son günlerden tekrar etme: gri koltuğun çöküğü / mavi figürlü halının kenarı / dar yatağın yıpranmış kenarı / eski ses bantları / plastik bant kalıntıları / çekmece kenarı / kapı eşiğinde plastik yüzeyin çatlaması. Mood yalnızca renk basıncı ve hareket gerilimini ayarlasın: şefkat, yorgunluk, absürtlük. Brief'i gölgelemeyen küçük yüzey notları: beden, yavaş, dalga, sönmeyen, ateşi, açık / beden, kilitli, konuşmayı, büyütülmüş, özelliği, uygulama / beden, manyetik, harflerin, ortak, oyununu, duvarda. Kaynak etkileri yalnızca doku ve ritim ayrıntısı olarak kalsın: ipuçları, kabaran, atmosferi, parlayan, sergi, duvarları / ipuçları, gündelik, basıncın, yükselişi, inişi, sanat / kaymaları, politik, olaylardan, kültürel, etkinliklere, geçiş. Oda, koltuk, yatak, masa, pencere, halı, sokak, park, ekran ve apartman gibi ev/yer/yürüyüş izleri bugünkü veriden geliyorsa doğrudan sahne veya tanınır nesne olarak değil; iz, kalıntı, deformasyon, gölge, yüzey, leke, kırık form veya iç doku olarak dönüştür. Gövde kelimesi geçiyorsa insan figürü veya beden konturu üretme; bunu yüzey ağırlığı, kütle baskısı, nesne hacmi veya deforme olmuş ev içi yüzey gibi yorumla. Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık yüzey izleri, deforme olmuş nesne kalıntıları, katmanlı lekeler ve lo-fi yüzey gürültüsüyle doldur. Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay.",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "Hafızanın Hafif Çalkantısı şiirinin duygusal iklimini ve hafıza basıncını taşıyan soyut lo-fi görsel.",
-  "image_path": null,
-  "provider": "metadata-fallback",
-  "model": "gpt-image-1",
+  "image_path": "/generated/visuals/2026-11-11-poem.webp",
+  "provider": "openai",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
-  "output_format": "png",
-  "fallback": true,
-  "error": "The model 'gpt-image-1' does not exist.",
+  "output_format": "webp",
+  "fallback": false,
+  "error": null,
   "visual_brief": {
     "visual_subject": "kapı eşiğinde, çatlamaya başlamış eski metal kilit kalıntılarının arasında, pasla kaplanmış ince toz zerreciklerinin hafifçe savrulması",
     "content_anchor": "kapı eşiğinin nemle yumuşamış plastik yüzeyi; çatlak ve ufalanmış metal kilit parçaları; üzerlerinde birikmiş ince toz zerrecikleri",
@@ -58,7 +57,35 @@
     "#483d78"
   ],
   "fallback_seed": 1238444577,
-  "image_status": "failed",
-  "api_size": "1024x1536",
-  "prompt_hash": "ce59eff5d2884408c50d61ef53fb6093ebe5928f699d4e0ab29b228f053ac9f8"
+  "image_status": "ready",
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T13:39:39.339Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create one new 4:5 portrait nonfigurative abstract artwork for a poetic archive. The reference is STYLE ONLY: enlarged low-resolution old digital wallpaper, soft blurry airbrush, strongly readable soft contours, grainy scan noise and mottled color bleeding. Do not copy the reference's forms or layout. Translate this entire daily content into abstract color and pressure: weary yet caring attention, a slight absurd offbeat sway, fragmented memory reflecting gentle playfulness, heavy words moving slowly, distracted vitality hovering between reality and imagination, small hesitant laughter with doubt. The visual core is a central interrupted cluster of dark rust-brown and smoky navy pressure remnants above a yielding pale grey-lilac swelling field; small dusty ochre flecks drift in sheltered gaps without any wind. Brittle resistance contrasts with soft saturated weight, worn fragments resist change while tender warm light barely persists. Metallic sounds, a deteriorating lock and a damp soft threshold are ONLY sources of these abstract shapes, never recognizable objects or material textures. No door, lock, plastic, fabric, metal, room, mirror, human, figure or text. The day's external pressure becomes heavy peripheral shadows, cultural curiosity a small irregular warm opening. A clearly structured asymmetric broken cluster with a quiet sideways oscillation, not a sweeping S-shaped wave. Restricted palette of deep navy, grey-lilac, rust and muted ochre. Fill the frame with layered blurred masses and visible grain; distinct tonal contrast at thumbnail size, never an empty gradient. No writing, letters, symbols, photography, 3D, hard graphic outlines or collage.",
+    "prompt_sha256": "c8a1a649bbd543aa474ca71e5d34f12d8825f3499a5f648105c0ddc5bd067fd8",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this image.",
+    "saved_visual_prompt_sha256": "7ae0a1e79a29fb6d1e954c3fd428e22a77e47bee203af2a8e0f19a403f36fbd0",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-20-poem.png",
+        "sha256": "9e7ed9389431de0ec72a01226aeaec0a2cc4927579b64ec6a9538d5f38dc40bb"
+      }
+    ],
+    "original_png_sha256": "0bd60b3c5fa2351c4705872fb7d7cd34d9d07252ca6d60aa05f2cecd8b17bf6c",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "f5abe23301247daa93ec154ed65af8afa6611fb4d6ba69a7651843ec473e0cd4"
+    },
+    "fills_missing_image_at_commit": "1c3cf1c8e92e28f9e18ca74267b3a82a4164c088"
+  }
 }
