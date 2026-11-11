@@ -1,5 +1,30 @@
 {
   "currency": "USD",
   "max_micro_usd": 2000000,
-  "entries": []
+  "entries": [
+    {
+      "id": "2026-11-10-poem",
+      "status": "complete",
+      "reserved_micro_usd": 50000,
+      "prompt_sha256": "ee4c1bed4dfe10b6b1d893229b4e63415357fd61d472da94371e16b0ba1d7bd0",
+      "requested_at": "2026-11-11T07:38:15.018Z",
+      "request_id": "req_1d9a0b89f9ed40e2a6e04bf420489d11",
+      "http_status": 200,
+      "usage": {
+        "input_tokens": 1404,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 1404
+        },
+        "output_tokens": 158,
+        "output_tokens_details": {
+          "image_tokens": 158,
+          "text_tokens": 0
+        },
+        "total_tokens": 1562
+      },
+      "cost_micro_usd": 11760,
+      "image_sha256": "4f15e8915fca6e06fd0cb5c24ecc682c9a9da0b27aced66ffc9f4293994ba697"
+    }
+  ]
 }
