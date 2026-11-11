@@ -4,15 +4,14 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-11-01",
   "title": "birleştiği artığı",
-  "generated_at": "2026-11-11T07:45:13.967Z",
+  "generated_at": "2026-11-11T12:44:26.601602Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of gülümseme, şiir, soru, melodi, çiçek; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "birleştiği artığı rüyasından gülümseme, şiir, soru taşıyan bulanık kayıt.",
   "image_path": "/generated/visuals/2026-11-01-dream.webp",
   "provider": "openai",
-  "model": "gpt-image-2.5-flare-2026-09-08",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
   "output_format": "webp",
   "fallback": false,
   "error": null,
@@ -36,6 +35,34 @@
   ],
   "fallback_seed": 154530388,
   "image_status": "ready",
-  "api_size": "1024x1536",
-  "prompt_hash": "39a5419cb84169b64c3052c2dd394bf3d0f73a5268b25828012e8c2a53dece68"
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T12:44:26.601602Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create a new 4:5 portrait Ucu Beden abstract artwork, stylized-concept. Reference is STYLE ONLY; do not copy its composition or objects. Soft blurry lo-fi airbrush, broad diffused abstract pigment masses, fine grain and scan noise, color bleeding, enlarged low-resolution old digital wallpaper. Entire frame layered and active, never an empty gradient. All edges diffuse. No text, letters, words, symbols, people, faces, body outlines, scales-of-justice, domestic props, identifiable objects or scenery, photographs, 3D, crisp torn-paper collage, literal fabric or wood microtexture. Pale peach and lilac diffusions expand quietly from behind muted olive-gray layered haze; a small warm crescent dissolves before closing, with broad dusty rose pulses circling an empty offset interval. Soft golden glow remains suspended along an incomplete boundary. Remote melody becomes drifting repetition, unsaid words become gaps, a cracked smile becomes incomplete warmth, forgotten poetry and flowers become slow color emergence without petals, romance recognized becomes shy glow, unanswered questions become unclosed shapes, memory and present merge as boundaries soften. Gentle melancholic tenderness and a trace of absurdity, not decorative floral art.",
+    "prompt_sha256": "525b6514f353ed3eda0d140b54fe5d94d988af0b6badd66ccd048152e6c1741a",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this replacement.",
+    "saved_visual_prompt_sha256": "6d24de2b05c460f9f864676dbb7c7b1031c62435402b37b8bb7b6fb83af2cac5",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-23-dream.png",
+        "sha256": "d1302e75e47f196b4325b61eb3c838f69e5639952a4bee4ef6d69f5c5c1522c6"
+      }
+    ],
+    "original_png_sha256": "4e1ff3bcdbd60083a2425d4f9ac4b4b73caeb373fad84b6977f0ba4684aaf250",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "f89039966c6d5c40686f8ffb021216279e0bb00c8631189e6b2ff00380e5e1c1"
+    },
+    "replaces_image_from_commit": "fd5cbaae3eb67c7cbe7bc773865ac0d1b0d1a0c2"
+  }
 }

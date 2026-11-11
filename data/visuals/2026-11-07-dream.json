@@ -4,15 +4,14 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-11-07",
   "title": "gündelik sonrası sanat",
-  "generated_at": "2026-11-11T07:42:41.785Z",
+  "generated_at": "2026-11-11T12:44:31.867Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of sessiz şaka, romantik kırıntılar, rüzgarla karışan sesler, koalisyon ritmi, çatlak ağaç gövdesi; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "gündelik sonrası sanat rüyasından sessiz şaka, romantik kırıntılar, rüzgarla karışan sesler taşıyan bulanık kayıt.",
   "image_path": "/generated/visuals/2026-11-07-dream.webp",
   "provider": "openai",
-  "model": "gpt-image-2.5-flare-2026-09-08",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
   "output_format": "webp",
   "fallback": false,
   "error": null,
@@ -36,6 +35,34 @@
   ],
   "fallback_seed": 2110327146,
   "image_status": "ready",
-  "api_size": "1024x1536",
-  "prompt_hash": "d5f9ab97274234e8b2f7d5aa5c68479fdfb88b8a941f448fb8a84654d20eae95"
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T12:44:31.867Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create one 4:5 portrait abstract artwork, not a scene. Use the reference ONLY for soft lo-fi airbrush language, never copy its composition. Enlarged low-resolution old digital wallpaper: broad diffuse asymmetrical color masses, deeply blurred edges, fine scan grain, chromatic bleeding, subtle compression ghosts. Flat atmospheric color, no rendered objects. Tall muted moss and ocean-blue masses split by a very soft uneven apricot seep; upper lavender smudges dissolve laterally while coral haze gathers in a loose low cluster. Vast blurring and granular color bleeding. Old melodies leak through fractured memory, a distant remembered place loses its edges, a silent joke escapes, shadows gather in tentative promises, romantic fragments dance while distant joy and family echoes meet in a quiet uneven rhythm. Neither trees nor cities nor figures, only nonrepresentational masses. Entire frame active but restful, every edge blurred. Exclude text, letters, words, numbers, people, faces, body outlines, scales of justice, domestic props, photography, 3D, torn-paper collage, actual fabric or wood microtexture.",
+    "prompt_sha256": "f76833f0d627b5f5399c3e517964b4d01daf822b8fc279807ed5ad66a535fd04",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this replacement.",
+    "saved_visual_prompt_sha256": "519600b27e77912f27a60faa7e942cd28f1867302380d7c7aa5aedc404fcbdb6",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-23-dream.png",
+        "sha256": "d1302e75e47f196b4325b61eb3c838f69e5639952a4bee4ef6d69f5c5c1522c6"
+      }
+    ],
+    "original_png_sha256": "caed64b1ee8b041f0111199932c692b9de701072afc01cdd5b7b90d8e210af57",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "69d41ac310b035652cef6d06fb4fd5d6c3009f22f03aa30efd44a0897dc8712c"
+    },
+    "replaces_image_from_commit": "fd5cbaae3eb67c7cbe7bc773865ac0d1b0d1a0c2"
+  }
 }

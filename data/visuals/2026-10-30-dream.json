@@ -4,15 +4,14 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-10-30",
   "title": "dokunuşları artığı",
-  "generated_at": "2026-11-11T07:46:00.323Z",
+  "generated_at": "2026-11-11T12:40:05.289445Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of puslu perde, gölge, gizli melodi, soğuk pencere, yorgunluk; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "dokunuşları artığı rüyasından puslu perde, gölge, gizli melodi taşıyan bulanık kayıt.",
   "image_path": "/generated/visuals/2026-10-30-dream.webp",
   "provider": "openai",
-  "model": "gpt-image-2.5-flare-2026-09-08",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
   "output_format": "webp",
   "fallback": false,
   "error": null,
@@ -36,6 +35,34 @@
   ],
   "fallback_seed": 3382892899,
   "image_status": "ready",
-  "api_size": "1024x1536",
-  "prompt_hash": "011d592aef52551185b14b1e660a5d8139108333e7e55f5d83553895504df7ac"
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T12:40:05.289445Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create a new 4:5 portrait wholly abstract dream artwork. Reference image supplies only soft blurry low-fi airbrush style, enlarged low-resolution old digital wallpaper with fine scan noise and bleeding color; invent another composition. Three discontinuous mauve currents tangle below a diffuse pale cyan veil, curling deep into plum and blue-black haze rather than lying on its surface. Muted warm coral traces almost connect but fall apart into irregular soft pulses. A cold blue patch pulls attention sideways; warmth recedes behind the weary veil. Translate broken communication into interrupted rhythm, jokes becoming sadness into warm traces cooling, concealed melody and returning repression into deep inward curls, lost public participation into a gap between masses, technological distance into cold lateral pressure. Broad hazy masses only, no fine linear drawing. Saturated interiors, faded edges, slightly damaged scan texture. No text, letters, words, people, faces, body outlines, scales-of-justice, domestic objects, recognizable props, photos, 3D, crisp collage, literal fabric or wood textures. No scene, no empty gradient.",
+    "prompt_sha256": "1811da6e54dcd509412c69b3910eb4f75fd9e4abe42e11a9827d8878cec4c30e",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this replacement.",
+    "saved_visual_prompt_sha256": "191f9f7bc263554cc541630b913b490ec9087203fb19af76ea21bcd6be1705b8",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-21-dream.png",
+        "sha256": "6a6c975421900108df559c4bfff12bb88490d4a92d14ae10e69c40227fffa0ee"
+      }
+    ],
+    "original_png_sha256": "135fb82cdb455e99d84bd3415f3c8edd97579c7170c9cd7d5c8cb65de1035410",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "755fea3379ee201bc9e4060f7e9251a946590e7018acbc81c16bc8546a9eec84"
+    },
+    "replaces_image_from_commit": "fd5cbaae3eb67c7cbe7bc773865ac0d1b0d1a0c2"
+  }
 }

@@ -4,15 +4,14 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-10-31",
   "title": "absürt tortusu",
-  "generated_at": "2026-11-11T07:45:38.313Z",
+  "generated_at": "2026-11-11T12:43:20.388604Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of yalnızlık, hafıza, absürtlük, politik haber, kültür; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "absürt tortusu rüyasından yalnızlık, hafıza, absürtlük taşıyan bulanık kayıt.",
   "image_path": "/generated/visuals/2026-10-31-dream.webp",
   "provider": "openai",
-  "model": "gpt-image-2.5-flare-2026-09-08",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
   "output_format": "webp",
   "fallback": false,
   "error": null,
@@ -36,6 +35,34 @@
   ],
   "fallback_seed": 129576546,
   "image_status": "ready",
-  "api_size": "1024x1536",
-  "prompt_hash": "97d2a63ea3235c9836380bf3f30fd32977b6c7f2f4c2590ff48b0ca4ac943395"
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T12:43:20.388604Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create a new 4:5 portrait Ucu Beden abstract artwork, stylized-concept. Reference is STYLE ONLY; do not copy its composition or objects. Soft blurry lo-fi airbrush, broad diffused abstract pigment masses, fine grain and scan noise, color bleeding, enlarged low-resolution old digital wallpaper. Entire frame layered and active, never an empty gradient. All edges diffuse. No text, letters, words, symbols, people, faces, body outlines, scales-of-justice, domestic props, identifiable objects or scenery, photographs, 3D, crisp torn-paper collage, literal fabric or wood microtexture. Diagonal opposing currents, luminous soft amber sparks spreading upward across a deep aubergine slope of heavy memory, while watery sea-green masses drift sideways. Fragile peach haze trembles between them like reluctant affection. Broad reflected color fragments almost align and then change shape; restless outer interference migrates to a calmer inner margin. Show energetic but scattered attention versus weight, uncertain romance and loneliness, public noise dissolving into culture, repression trying to find a rhythm, precise recollection becoming shadowed echoes. Everything is soft pigment without objects; no literal river, mirrors, musical marks or beams.",
+    "prompt_sha256": "07e06c2bbce13f8446bf8f3cda1d10ce4de9dc7a6b4c1680499852cdb402e7a7",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this replacement.",
+    "saved_visual_prompt_sha256": "ef128ede012a3f2e90b25f5dd3208956f66367be03f62755adb4305b280a0303",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-21-dream.png",
+        "sha256": "6a6c975421900108df559c4bfff12bb88490d4a92d14ae10e69c40227fffa0ee"
+      }
+    ],
+    "original_png_sha256": "06b6f8a6f2d4370e9d2b462449da5b41eb49d6e6f04f6c8c293c522ca2a0440b",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "0fa2b6d5d969c0fa2aea66623fd38be6c1cafc2de8004d19e684d60468cba582"
+    },
+    "replaces_image_from_commit": "fd5cbaae3eb67c7cbe7bc773865ac0d1b0d1a0c2"
+  }
 }

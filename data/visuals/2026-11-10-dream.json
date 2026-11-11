@@ -4,15 +4,14 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-11-10",
   "title": "ihtimal sonrası denklem",
-  "generated_at": "2026-11-11T07:41:35.856Z",
+  "generated_at": "2026-11-11T13:00:30.567Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of adalet arayışı, kırık kelimeler, bastırılmış anılar, aile bağları, hüzün; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "ihtimal sonrası denklem rüyasından adalet arayışı, kırık kelimeler, bastırılmış anılar taşıyan bulanık kayıt.",
   "image_path": "/generated/visuals/2026-11-10-dream.webp",
   "provider": "openai",
-  "model": "gpt-image-2.5-flare-2026-09-08",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
   "output_format": "webp",
   "fallback": false,
   "error": null,
@@ -36,6 +35,34 @@
   ],
   "fallback_seed": 310702554,
   "image_status": "ready",
-  "api_size": "1024x1536",
-  "prompt_hash": "f29ca12e6e411f9f7d96c28061d629ea46eec8b1c6d11473398c25db3a91d6a8"
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T13:00:30.567Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create one 4:5 portrait abstract artwork, not a scene. Use the reference ONLY for soft lo-fi airbrush language, never copy its composition. Enlarged low-resolution old digital wallpaper: broad diffuse asymmetrical color masses, soft but distinctly separated edges, fine scan grain, chromatic bleeding, subtle compression ghosts. Flat atmospheric color, no rendered objects. Three unequal nebulous plum and blue-grey color islands approach through a soft mauve field but their connections keep fading; small warm amber-coral glows shelter beside the smallest island. Broken echoes lie beneath as faint displaced dark patches; toward one upper corner a gentle pale cyan-to-gold opening begins. Brittle sarcasm and failed promises soften into weary care, suppressed memory and unsaid feeling, fragile family bonds and vulnerable unheard need, justice sought with determined sadness, uncertain possibility turning from political confusion toward scientific and cultural warmth. No symbolic emblems. Entire frame active but restful, edges visibly readable through airbrush softness. Exclude text, letters, words, numbers, people, faces, body outlines, scales of justice, domestic props, photography, 3D, torn-paper collage, actual fabric or wood microtexture. Restrict palette to muted plum and warm slate-grey covering 90%, small dim amber accents, only a faint grey-cyan corner opening. Keep isolated diffuse irregular patches and interrupted short connections; no swirls, no long curves, no teal/coral multicolor flow. Crucial composition correction: strong tonal contrast between near-black and pale masses, distinct soft contours visible even at thumbnail size; layered medium-size broken patches and displaced bands, not a washed-out gradient. Use visible granular scan noise and mottled internal tonal variation. Keep the requested restricted palette and abstract emotional relationships. Soft airbrush, but clearly structured, never featureless.",
+    "prompt_sha256": "c2e4f7b2e97842179141bbb790c0c5781c36aa79d523bfdc7b8104d999ae880d",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this replacement.",
+    "saved_visual_prompt_sha256": "f490b46ce99eb25e43bc6fd94c5fd952a1e991a1fbc22f6851d9a7ae1c268e50",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-23-dream.png",
+        "sha256": "d1302e75e47f196b4325b61eb3c838f69e5639952a4bee4ef6d69f5c5c1522c6"
+      }
+    ],
+    "original_png_sha256": "21633d1accaa2196d54cdbd0caf32c13b9e9abd369f5226ae6dd7da2222ff5a3",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "916b33548cefb84d252655d65274f05c84fba6ec3bdcb2fb1ad3d15e2d0a3dfc"
+    },
+    "replaces_image_from_commit": "fd5cbaae3eb67c7cbe7bc773865ac0d1b0d1a0c2"
+  }
 }

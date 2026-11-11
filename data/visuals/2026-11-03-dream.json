@@ -4,15 +4,14 @@
   "aspect_ratio": "4:5",
   "source_id": "2026-11-03",
   "title": "doğduğu artığı",
-  "generated_at": "2026-11-11T07:44:18.681Z",
+  "generated_at": "2026-11-11T12:47:23.249599Z",
   "visual_prompt": "4:5 portrait aspect ratio; UCU BEDEN dream recorder residue; broken symbolic traces of politik fısıltılar, kırık cümleler, kırık cam, bozuk yankı, kültür kıyısı; unstable subconscious composition, fragmentary airbrush haze, low quality old digital wallpaper, soft blur, chromatic bleeding, scan noise, emotionally correct but logically impossible; no writing, no letters, no readable marks; keep the frame filled with abstract non-text forms and tactile visual noise",
   "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
   "alt_text": "doğduğu artığı rüyasından politik fısıltılar, kırık cümleler, kırık cam taşıyan bulanık kayıt.",
   "image_path": "/generated/visuals/2026-11-03-dream.webp",
   "provider": "openai",
-  "model": "gpt-image-2.5-flare-2026-09-08",
+  "model": null,
   "size": "1024x1280",
-  "quality": "low",
   "output_format": "webp",
   "fallback": false,
   "error": null,
@@ -36,6 +35,34 @@
   ],
   "fallback_seed": 3195447206,
   "image_status": "ready",
-  "api_size": "1024x1536",
-  "prompt_hash": "c012287c39d3124ea9760d8004feddc63519b210c06a480c568383d1378ce253"
+  "image_generation": {
+    "method": "builtin_image_gen",
+    "generated_at": "2026-11-11T12:47:23.249599Z",
+    "model": null,
+    "project_api_used": false,
+    "prompt": "Create a new 4:5 portrait Ucu Beden abstract artwork, stylized-concept. Reference is STYLE ONLY; do not copy its composition or objects. Soft blurry lo-fi airbrush, broad diffused abstract pigment masses, fine grain and scan noise, color bleeding, enlarged low-resolution old digital wallpaper. Entire frame layered and active, never an empty gradient. All edges diffuse. No text, letters, words, symbols, people, faces, body outlines, scales-of-justice, domestic props, identifiable objects or scenery, photographs, 3D, crisp torn-paper collage, literal fabric or wood microtexture. Large soft-edged cool silver-blue patches scatter unevenly outward from a dim plum center, reflected echoes misaligned and dissolving, never sharp shards. Labyrinth-like pressure without drawn lines folds beneath them. A low amber blush gathers where the broken patches nearly join, hinting at mysterious understanding and rebirth; a warm soft arc is incomplete, never a smile or face. Interrupted communication and trembling withheld speech become gaps, hidden memories dark submerged stains, distorted melody irregular repetitions, political pressure shifts toward a tender cultural margin. Repressed residues converge into a nascent pale opening. Fine scan grain through all layers.",
+    "prompt_sha256": "ed82c9fba385573abf33dcb9f8cabb44a3d99e46e18afd8a36928ce6b496222b",
+    "saved_visual_prompt_role": "Preserved historical project prompt; not the prompt used for this replacement.",
+    "saved_visual_prompt_sha256": "0c1814ad124cbe554ed37a557f61eea34216a90b73b5725a2e14b5b873138b10",
+    "reference_images": [
+      {
+        "image_path": "/generated/visuals/2026-10-21-dream.png",
+        "sha256": "6a6c975421900108df559c4bfff12bb88490d4a92d14ae10e69c40227fffa0ee"
+      }
+    ],
+    "original_png_sha256": "e1531c9d2302b65a2228a2f99769c77d0fef230cb61e501e228376d5080a55eb",
+    "original_size": "1122x1402",
+    "delivery": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1280,
+      "resize_fit": "cover",
+      "resize_position": "centre",
+      "quality": 95,
+      "effort": 6,
+      "smart_subsample": true,
+      "sha256": "5e3934cf41f121df74f0f93e27ba9c0adf8d362753b5bd664b7d973aaa134173"
+    },
+    "replaces_image_from_commit": "fd5cbaae3eb67c7cbe7bc773865ac0d1b0d1a0c2"
+  }
 }
