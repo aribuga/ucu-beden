@@ -158,6 +158,37 @@
     },
     {
       "date": "2026-11-22",
+      "source": "dream",
+      "source_ref": "data/dreams/2026-11-22.json",
+      "kind": "dream_return",
+      "text": "enerji: orta; huzursuzluk: düşük; şefkat: orta; öz farkındalık: yüksek; baskın ruh hali: şefkat,yorgunluk,melankoli",
+      "transformed_text": "kabaran: rüyada çağrılırken ilişkisi değişti | açıklarının: rüyada çağrılırken ilişkisi değişti | aktarıyoruz: rüyada çağrılırken ilişkisi değişti | kabaran, açıklarının, aktarıyoruz, gündelik, içeride",
+      "emotional_weight": 0.61,
+      "repression": 0.52,
+      "mutation_rate": 0.82,
+      "linked_traces": [
+        "mem_2026-11-20_daily_life_avoidance_8fc0a94d8aad",
+        "mem_2026-11-21_daily_life_avoidance_7f473d1f56c6",
+        "mem_2026-11-22_daily_life_avoidance_abba7ecd9eeb",
+        "mem_2026-11-22_poem_episodic_1693eefcd068"
+      ],
+      "mood_tags": [
+        "tenderness",
+        "fatigue",
+        "melancholy"
+      ],
+      "origin": "observed",
+      "last_recalled_at": null,
+      "times_recalled": 0,
+      "last_dream_return_at": null,
+      "times_returned_in_dream": 0,
+      "id": "mem_2026-11-22_dream_dream_return_d7ca4a140b89",
+      "recallability": 0.75,
+      "decay": 0,
+      "status": "unstable"
+    },
+    {
+      "date": "2026-11-22",
       "source": "poem",
       "source_ref": "data/generated_poems/2026-11-22.json",
       "kind": "episodic",
