@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-26",
+  "type": "poem",
+  "aspect_ratio": "4:5",
+  "source_id": "2026-11-26",
+  "title": "açık tortusu",
+  "generated_at": "2026-11-26T14:58:29.212Z",
+  "visual_prompt": "4:5 portrait aspect ratio. Soyut UCU BEDEN şiir görseli; şiiri literal olarak illüstre etme. Şiirin başlığını veya herhangi bir kelimeyi görsele yazma; yazısız, harfsiz, tipografisiz, logosuz ve filigransız kalmalı. Günlük görsel brief: asıl içerik omurgası budur; aşağıdaki açıklamaları, başlıkları ve kelimeleri görselde yazı olarak üretme. Görsel subject: mutfak izinden silinen ayak izi. İçerik dayanağı: mutfak, gidip, öne, koltuğun. Kompozisyon mantığı: günlük fiziksel omurgayı merkeze alıp kenarlara doğru bozulan kırık bir düzen. Malzeme mantığı: seçilen nesne veya beden izini lekeli yüzey, yıpranmış dijital doku ve iç katman gibi dönüştür. Hareket veya gerilim: tanınır sahneye dönüşmeden fiziksel izin belirmesi, yamulması veya dağılması. Bugüne bağ: Bugünkü hali: enerji: orta; huzursuzluk: düşük; şefkat: yüksek; öz farkındalık: orta; baskın ruh hali: şefkat,melankoli,yorgunluk; yorgunluk: orta; açıklık:. Son günlerden tekrar etme: sesler kenarında bacak izinden biriken deformasyon / bacak, sesler, oda, geliyor / kapı izinden silinen kalıntı / kapı, üzerinde, oturmuş, oda / kararsız kenarında dönüp izinden yamulan yüzey / dönüp, kararsız, alanı, gidip. Mood yalnızca renk basıncı ve hareket gerilimini ayarlasın: şefkat, melankoli, yorgunluk. Brief'i gölgelemeyen küçük yüzey notları: deniz, kenarı, hissi, hava, yüzünde, ince / politik, rüyada, çağrılırken, değişti, basıncı, kabaran / beden, soğuğun, ortasında, kendi, sıcak, iklimini. Kaynak etkileri yalnızca doku ve ritim ayrıntısı olarak kalsın: ipuçları, başlıklı, dizisi, etkinlik, gerçekleştirecek, hazırladığı / ipuçları, cümlelerin, dönüşümlü, kullanımı, ortasında, değiştiren / kaymaları, range, yumuşayan, şehir. Oda, koltuk, yatak, masa, pencere, halı, sokak, park, ekran ve apartman gibi ev/yer/yürüyüş izleri bugünkü veriden geliyorsa doğrudan sahne veya tanınır nesne olarak değil; iz, kalıntı, deformasyon, gölge, yüzey, leke, kırık form veya iç doku olarak dönüştür. Gövde kelimesi geçiyorsa insan figürü veya beden konturu üretme; bunu yüzey ağırlığı, kütle baskısı, nesne hacmi veya deforme olmuş ev içi yüzey gibi yorumla. Boş düz gradient yapma; çerçeveyi organik soyut formlar, katmanlı renk kütleleri, gölgeli dokular, bulanık yüzey izleri, deforme olmuş nesne kalıntıları, katmanlı lekeler ve lo-fi yüzey gürültüsüyle doldur. Atmosferik, soyut, yumuşak, lo-fi; okunur duygu, belirgin görsel hareket, az literal detay.",
+  "negative_prompt": "ultra sharp commercial illustration, clean corporate design, stock photo, sterile SaaS UI, glossy modern AI art, detailed 3D render, photorealism, literal scene, literal room scene, recognizable couch, recognizable bed, literal table, literal window, literal carpet, literal street scene, literal park scene, apartment interior scene, human silhouette, person silhouette, standing figure, face, portrait, humanoid figure, body outline, text, typography, letters, words, captions, subtitles, handwriting, signage, labels, logos, watermarks, blank image, empty gradient, plain background, featureless image, smooth gradient only, empty color field",
+  "alt_text": "açık tortusu şiirinin duygusal iklimini ve hafıza basıncını taşıyan soyut lo-fi görsel.",
+  "image_path": null,
+  "provider": "metadata-fallback",
+  "model": "gpt-image-1",
+  "size": "1024x1280",
+  "quality": "low",
+  "output_format": "png",
+  "fallback": true,
+  "error": "You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+  "visual_brief": {
+    "visual_subject": "mutfak izinden silinen ayak izi",
+    "content_anchor": "mutfak, gidip, öne, koltuğun",
+    "composition_logic": "günlük fiziksel omurgayı merkeze alıp kenarlara doğru bozulan kırık bir düzen",
+    "material_logic": "seçilen nesne veya beden izini lekeli yüzey, yıpranmış dijital doku ve iç katman gibi dönüştür",
+    "movement_or_tension": "tanınır sahneye dönüşmeden fiziksel izin belirmesi, yamulması veya dağılması",
+    "why_today": "Bugünkü hali: enerji: orta; huzursuzluk: düşük; şefkat: yüksek; öz farkındalık: orta; baskın ruh hali: şefkat,melankoli,yorgunluk; yorgunluk: orta; açıklık:",
+    "avoid_repeating": [
+      "sesler kenarında bacak izinden biriken deformasyon",
+      "bacak, sesler, oda, geliyor",
+      "kapı izinden silinen kalıntı",
+      "kapı, üzerinde, oturmuş, oda",
+      "kararsız kenarında dönüp izinden yamulan yüzey",
+      "dönüp, kararsız, alanı, gidip"
+    ]
+  },
+  "visual_brief_generation": {
+    "provider": "fallback",
+    "model": "gpt-4.1-mini",
+    "fallback_reason": "OpenAI visual brief returned 429",
+    "retry_count": 0,
+    "similar_to_recent": false,
+    "generated_at": "2026-11-26T14:58:58.849Z"
+  },
+  "style_tags": [
+    "airbrush",
+    "soft blur",
+    "low-resolution",
+    "dreamy haze",
+    "grainy texture",
+    "color bleeding",
+    "scan noise",
+    "compression artifacts",
+    "old digital wallpaper"
+  ],
+  "fallback_palette": [
+    "#ef6fb1",
+    "#7bd5c7",
+    "#172b5b"
+  ],
+  "fallback_seed": 2131942115,
+  "image_status": "failed",
+  "api_size": "1024x1536",
+  "prompt_hash": "7a5806b82d0862027c8e97ea3788f68cf47aeea636b607b619569be24aa6d5f7"
+}
