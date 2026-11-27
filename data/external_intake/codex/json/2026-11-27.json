@@ -1,0 +1,1008 @@
+{
+  "version": "2.0",
+  "source": "codex_external_intake",
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T04:10:27.784Z",
+  "timezone": "Europe/Istanbul",
+  "provider": "Codex",
+  "safety": "public-safe",
+  "counts": {
+    "scanned_mail_count": 11,
+    "full_body_count": 11,
+    "snippet_or_subject_count": 0,
+    "multipart_digest_count": 6,
+    "digest_items_count": 60,
+    "curated_rss_source_count": 2,
+    "curated_rss_recent_item_count": 0,
+    "main_item_count": 6,
+    "minor_residue_count": 6,
+    "repeated_signal_count": 4
+  },
+  "reading_summary": {
+    "plain_summary": "Son 72 saatte 11 Gmail mesajı tarandı. Hepsinin düz metin gövdesi okundu; yalnız kısa önizleme veya başlıkla kalan olmadı. Yeni düşünce yazılarından biri şükranı renge, nefese ve aynı masadaki seslere dikkat etmek üzerinden anlatıyordu. Diğeri, bir siyasi sözün kendini tartışmanın dışında ilan ettiğinde itiraza ne yer bıraktığını sorguluyordu. Yeni gündem seçkilerinde şiddete karşı kamusal koruma talebi, okul dışında kalan çocuklar, konuşabilen oyuncaklara ilişkin kurallar, bütçe görüşmeleri, lojistik, müzik ve sergi haberleri vardı.\n\nPencerenin önceki iletileri Herodias'ın kostümle kurulan sahne girişini, Kafka'nın arşivinin nasıl korunduğunu, yerel gıda üreticilerini, çevrimiçi tepki döngülerini ve dans repertuvarının yeni bedenlere aktarılmasını ele alıyordu. 6 çok parçalı ileti 60 alt temaya ayrıldı. İki seçili RSS akışı erişilebilirdi; pencereye giren yeni yayın yoktu.",
+    "what_was_in_the_emails": [
+      "Dikkati bir teşekkür sözünden önce gelen bedensel ve sosyal bir deneyim olarak ele alan yazı.",
+      "Bir iktidar söyleminin kendini tarafsız veya siyaset üstü göstererek itiraza ayırdığı alanı daraltması üzerine deneme.",
+      "Şiddete karşı kamusal koruma, eğitimde kesinti ve çocukların kullandığı bağlantılı nesneler.",
+      "Arşivi koruma kararı, kostümün nefes üzerindeki etkisi ve repertuvarın kuşaklar arasında devri.",
+      "Küçük gıda üreticileri, mutfak ve zanaat; tedarik, hesaplama altyapısı ve sahne dolaşımı."
+    ],
+    "what_was_in_curated_rss": "Grand Text Auto ve Mixed Initiatives akışlarında yayın tarihleri kontrol edildi. Son 72 saatte yeni kayıt bulunmadı.",
+    "dominant_topics": [
+      "dikkat",
+      "kamusal ses",
+      "koruma",
+      "eğitime erişim",
+      "aktarılma"
+    ],
+    "notable_absences": [
+      "İki seçili RSS kaynağında yeni yayın yoktu.",
+      "E-posta içinde kesilen denemenin bağlantı arkasındaki devamı okunmadı."
+    ],
+    "overall_direction": "Duyulmayı tek kişinin konuşmasından ayırıp ortak mekân, zaman ve kurum koşullarıyla birlikte düşünmeye açtı."
+  },
+  "summary": "Aynı masada nefes ve ses duyuldu; başka meydanlar aynı talebi taşıdı; sözün dolaşması ile duyulması birbirinden ayrıldı.",
+  "items": [
+    {
+      "id": "main-2026-11-27-01",
+      "source": "gmail",
+      "source_hint": "David Whyte, Consolations kitabından düşünce yazısı",
+      "public_safe_topic": "Şükranın bir teşekkür sözünden önce dikkat biçimi olması",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Yazı, şükranı hediye alındıktan sonra gösterilen tepkiyle sınırlamıyor; renge, nefese, havaya ve çevredeki seslere duyulan dikkatte başlayan bir hâl olarak anlatıyordu.",
+        "specific_points": [
+          "Maviye dikkat etmek, birine teşekkür etmek zorunda olmadan duyulan şükran örneğiydi.",
+          "Bir nefes, tek kişinin üretmediği çok sayıda yaşam koşulunun bir araya gelmesiyle düşünülüyordu.",
+          "Aynı masada dostun ve yabancının sesini duymak, katılımcı ve tanık olmanın birlikte yaşanabildiği bir sahneydi.",
+          "Deneme dikkati, acı veya umutsuzluğu inkâr eden bir iyimserlikle eşitlemiyordu."
+        ],
+        "why_it_mattered": "Bir duyguyu yalnız dışarı verilen söze değil, bedenin çevresinde neyi fark ettiğine bağladı.",
+        "why_it_became_main": "Nefes, renk ve aynı masada bulunma üzerinden soyut bir kavrama bedensel ve toplumsal biçim verdiği için seçildi."
+      },
+      "residue": "Masada oturan kişi hem ortak anın bir parçasıydı hem onu izliyordu.",
+      "motifs": [
+        "dikkat",
+        "nefes",
+        "katılımcı tanık"
+      ],
+      "possible_influence": "Bir sahnede teşekkür cümlesi yazmadan, masadaki ses ve renklerin fark ediliş sırasıyla şükranı göstermek."
+    },
+    {
+      "id": "main-2026-11-27-02",
+      "source": "gmail",
+      "source_hint": "Slavoj Žižek, bağımsız siyaset ve felsefe denemesi",
+      "public_safe_topic": "Siyaset üstü olma iddiasının tartışmayı nasıl kapatabildiği",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Deneme, güncel bir siyasi polemikten başlayıp dini ve milli otoriteye yaslanarak tarafsızlık iddia etmenin hukuki sınırları ve kamusal itirazı nasıl etkileyebileceğini tartışıyordu.",
+        "specific_points": [
+          "Yazar, bir liderin kişisel inancını tahmin etmekten çok o iddianın kamusal işlevine bakıyordu.",
+          "Düzen ve birlik adına siyasetin dışına çıkıldığını söyleyen dili, otoriter geçmişten bir örnekle karşılaştırıyordu.",
+          "Deneme siyasi ayrışmayı dışarıdan ve tamamen tarafsız biçimde tarif etmenin mümkün olmadığını ileri sürüyordu.",
+          "Kısa vadeli bir sonucun, yöntemin hukukla ve uzun vadeli etkisiyle ilgili soruları ortadan kaldırmadığını savunuyordu."
+        ],
+        "why_it_mattered": "Bir iddianın içtenliğini tartışmak yerine, o iddianın kimin itiraz edebileceğini nasıl değiştirdiğini gösterdi.",
+        "why_it_became_main": "İtirazın bir tartışma içinde duyulmasıyla tartışmanın baştan gereksiz sayılması arasındaki farkı açık bir anlatım sorusu haline getirdi."
+      },
+      "residue": "Tarafsızlık olarak sunulan yerin de belirli bir bakış açısı vardı.",
+      "motifs": [
+        "siyaset üstülük iddiası",
+        "itiraz alanı",
+        "bakış konumu"
+      ],
+      "possible_influence": "Bir anlatıcının kendini tarafsız ilan ettiği yerde, hangi sesleri artık yanıt vermeye değer görmediğini açığa çıkarmak."
+    },
+    {
+      "id": "main-2026-11-27-03",
+      "source": "gmail",
+      "source_hint": "Aposto Gündem, 26 Kasım haber seçkisi",
+      "public_safe_topic": "Şiddete karşı ortak ses ve kamusal koruma",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Bülten, 25 Kasım eylemlerini farklı şehirlerde ortaklaşan koruma talepleriyle anlatıyordu. Dış politika, kültür ve teknoloji başlıkları ayrı alt temalardı.",
+        "specific_points": [
+          "Bülten eylemlerin yalnız bir şehirde gerçekleşmediğini aktarıyordu.",
+          "İstanbul'daki yürüyüşe ilişkin bölümde toplanma koşulları ve yapılan basın açıklaması yer alıyordu; güzergâh ve kişisel ayrıntılar kapsam dışında bırakıldı.",
+          "Katılımcıların talebi, tekil olayları anlatmaktan çok şiddeti önleyecek kamu politikalarının uygulanmasına yöneliyordu."
+        ],
+        "why_it_mattered": "Koruma ihtiyacını istatistikten ibaret bırakmayıp birlikte konuşmanın nasıl kamusal bir talep kurduğuna bağladı.",
+        "why_it_became_main": "Önceki gündem seçkisindeki toplu şiddet kaydına, koruma yükümlülüğü hakkında kamusal ve kolektif bir ses ekledi."
+      },
+      "residue": "Farklı şehirlerin meydanları aynı talebi birbirinden bağımsız olarak duyurdu.",
+      "motifs": [
+        "kamusal ses",
+        "koruma",
+        "ortak talep"
+      ],
+      "possible_influence": "Ortak talebi tek bir anlatıcının cümlesi yerine farklı mekânlardan gelen seslerin ritmiyle kurmak."
+    },
+    {
+      "id": "main-2026-11-27-04",
+      "source": "gmail",
+      "source_hint": "Man of Aran, Beardsley çizimlerinden Salome şiir dizisi",
+      "public_safe_topic": "Dördüncü peçede Herodias'ın sahneye girişi",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Dördüncü şiir, Oscar Wilde'ın oyununa ve Aubrey Beardsley'nin çizimine dönerek odağı Salome'den annesi Herodias'a kaydırıyordu. Sahneye giriş, çevresindekiler, kostüm ve saklanma düzeni şiirin merkezindeydi.",
+        "specific_points": [
+          "Korse, perdenin arkasındaki bir süs değil nefesi kısıtlayan maddi bir nesne olarak öne çıkıyordu.",
+          "Perde, maske ve mum ışığı sahneye girişe eşlik ediyor ama şiire göre karakterin kim olduğunu saklayamıyordu.",
+          "Üçüncü bölümde örtü bakışı yönlendirirken dördüncü bölüm onu bir teşhir sınavına dönüştürüyor."
+        ],
+        "why_it_mattered": "Örtmenin bu bölümde gözden saklamaktan çok sahneye girişin biçimini değiştirdiğini gösteriyor.",
+        "why_it_became_main": "Korse, nefes ve perde gibi somut araçlarla bir karakterin kendini gizleme çabasının tersine çevrilmesi ana seçkiye girdi."
+      },
+      "residue": "Korse daralırken sahne genişledi; karakter saklanmadı, görünür oldu.",
+      "motifs": [
+        "korse",
+        "sahne girişi",
+        "örtünün sınırı"
+      ],
+      "possible_influence": "Aynı girişi önce kostümün ağırlığı, sonra nefesin ritmi üzerinden sahnelemek."
+    },
+    {
+      "id": "main-2026-11-27-05",
+      "source": "gmail",
+      "source_hint": "How To: Exist deneme dizisi",
+      "public_safe_topic": "Utanç ile eserin arşivde kalıp kalmaması arasındaki ilişki",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Denemenin e-postaya alınan girişi, Franz Kafka'nın yazdıklarının yok edilmesi isteğini ve Max Brod'un bu isteğe uymamasını utanç üzerinden yorumluyordu. Yazı, gündelik hayatta kusursuzluk arayışı, görünmekten kaçınma ve dinlenememe gibi davranışları da tartışıyordu.",
+        "specific_points": [
+          "Metin Kafka'nın yok etme isteğini, yalnız edebî kalite ölçüsü değil kişinin kendine yönelttiği yargıyla ilgili bir örnek olarak yorumladı.",
+          "Brod'un metinleri saklayıp yayımlaması, yazanın kendine dair hükmü ile sonradan okunan eseri karşı karşıya getirdi.",
+          "Girişte görünme korkusu kadar, övgüyü geri çevirme ve kusursuzluk baskısı da örnek verildi.",
+          "Giriş sonrasında vaat edilen pratik e-posta gövdesinde yer almıyordu; özeti çıkarılmadı."
+        ],
+        "why_it_mattered": "Bir metnin ortadan kaybolması veya kalması, arşivi tutan kişinin eserle ilişkisine bağlanıyordu.",
+        "why_it_became_main": "Bir arşivi kimin ve hangi yargıyla koruduğu, UCU BEDEN'in hafıza seçimi açısından somut bir soru açtı."
+      },
+      "residue": "Yazanın bırakmak istemediği metin, başka birinin koruma kararıyla kaldı.",
+      "motifs": [
+        "silinmek istenen arşiv",
+        "utanç",
+        "görünmek"
+      ],
+      "possible_influence": "Bir arşiv maddesini önce yazanın, sonra onu saklayanın gözünden okumak."
+    },
+    {
+      "id": "main-2026-11-27-06",
+      "source": "gmail",
+      "source_hint": "apéro, gastronomi ve yemek kültürü seçkisi",
+      "public_safe_topic": "Slow Food mirası ve küçük üreticinin sofra üzerindeki payı",
+      "read_depth": "full_body",
+      "bucket": "main",
+      "content_digest": {
+        "what_it_contained": "Gastronomi seçkisi, Carlo Petrini'nin İstanbul'daki anmasından hareketle yerel gıda kültürü, küçük üreticiler ve biyoçeşitlilik üzerine konuşmaları aktarıyordu. Devamındaki bölümlerde sofra kültürü, bağcılık, ambalaj zanaatı, tadım ve tarımsal tedarik ayrı ele alındı.",
+        "specific_points": [
+          "Anmadaki tartışma, küçük ölçekli üretimin sürmesini çevre koşulları ve üreticinin gelirinden ayırmıyordu.",
+          "Yeryüzü Pazarları, yerel gıdanın üreticiden sofraya ulaşmasındaki somut kanallardan biri olarak geçiyordu.",
+          "Şef seçkisi yemek kültürünün başka mutfaklarda yeniden yorumlanmasını, tedarik bölümü ise malzemenin geldiği ortamı görünür kılıyordu."
+        ],
+        "why_it_mattered": "Yemeği yalnız tüketim ve beğeni meselesi olarak değil, onu mümkün kılan üretim ve aktarma ilişkileriyle birlikte ele aldı.",
+        "why_it_became_main": "Sofradaki sonucun ardındaki üretim zincirini gündelik bir beden deneyimine bağladığı için ana maddeye alındı."
+      },
+      "residue": "Sofrada görünen yiyecek, pazarda kurulan ilişkiyi de taşıdı.",
+      "motifs": [
+        "üretici pazarı",
+        "yerel bilgi",
+        "sofraya aktarım"
+      ],
+      "possible_influence": "Bir yemeği son biçiminden değil, başka ellere hangi sırayla geçtiğinden anlatmak."
+    }
+  ],
+  "minor_residues": [
+    {
+      "id": "minor-2026-11-27-01",
+      "source": "gmail",
+      "residue": "Mikroblog ve kısa video denemesi, hızlı yanıt toplamakla yurttaşın sözünü bir karar merciine ulaştırmanın aynı şey olmadığını ileri sürüyordu.",
+      "motifs": [
+        "geri bildirim",
+        "ölçülen tepki"
+      ],
+      "possible_influence": "Yanıtı bol olup hiçbir şeyi değiştirmeyen bir arayüzle, tek bir yanıtın kararı değiştirebildiği bir sahneyi karşılaştırmak."
+    },
+    {
+      "id": "minor-2026-11-27-02",
+      "source": "gmail",
+      "residue": "Aposto İstanbul'daki dans programı, üç koreografın repertuvarını yeni kuşağın hareketinde bir araya getiriyordu.",
+      "motifs": [
+        "repertuvar",
+        "aktarılan hareket"
+      ],
+      "possible_influence": "Bir hareketi iki farklı bedende tekrarlayarak neyin tutulduğunu göstermek."
+    },
+    {
+      "id": "minor-2026-11-27-03",
+      "source": "gmail",
+      "residue": "Eğitim izleme notunda okul dışında kalma, bölgesel erişim farkları ve iklim nedeniyle kesintiye uğrayan dersler ayrı sorunlar olarak görünüyordu.",
+      "motifs": [
+        "okul eşiği",
+        "kesinti"
+      ],
+      "possible_influence": "Bir takvimin üstünde yalnız yapılan dersleri değil, yarıda kalanları da işaretlemek."
+    },
+    {
+      "id": "minor-2026-11-27-04",
+      "source": "gmail",
+      "residue": "Bir sergi, yeni kapı ve seramikleri eski bronzlar ve doğal taşlarla buluşturdu; başka bir seçkide bir arşiv görüntüsünün resim ve video arasındaki geçişi ele alındı.",
+      "motifs": [
+        "taş",
+        "arşiv yüzeyi"
+      ],
+      "possible_influence": "Yüzeyde kalan ile hareket eden izi aynı mekânda yan yana koymak."
+    },
+    {
+      "id": "minor-2026-11-27-05",
+      "source": "gmail",
+      "residue": "Mesaj zamanlama haberi, sözü yazma ânından alıp onu alıcının başka bir zamanda karşılayacağı bir nesneye çevirdi.",
+      "motifs": [
+        "geciken ses",
+        "gönderim zamanı"
+      ],
+      "possible_influence": "Yazılan sözün ve duyulduğu anın farklı anlatı zamanları olmasını denemek."
+    },
+    {
+      "id": "minor-2026-11-27-06",
+      "source": "gmail",
+      "residue": "Konuşabilen oyuncak ve okulda cihaz haberleri, çocukların dijital ortamını bireysel seçim dışında kurallar ve ürün tasarımı üzerinden ele aldı.",
+      "motifs": [
+        "oyuncak",
+        "okul dikkati"
+      ],
+      "possible_influence": "Koruma sınırını nesnenin biçimiyle değil, çocuktan ne istediği ve ne topladığıyla göstermek."
+    }
+  ],
+  "repeated_signals": [
+    {
+      "signal": "Bir sesi duymak için ona yer açmak gerekiyor",
+      "evidence": [
+        "aynı sofrada farklı kişileri dinleme",
+        "şiddeti önlemek için farklı meydanlardan gelen ortak talep",
+        "çevrimiçi etkileşim ile kamusal geri bildirim arasındaki fark"
+      ]
+    },
+    {
+      "signal": "Saklamak ile devretmek aynı karar değil",
+      "evidence": [
+        "Kafka'nın metinlerinin yazarın isteğine rağmen arşivde kalması",
+        "dans repertuvarının yeni kuşakça yeniden oynanması",
+        "yerel gıda bilgisinin üretici pazarlarında sürmesi"
+      ]
+    },
+    {
+      "signal": "Görünür yüzeyin ardında bir çalışma düzeni var",
+      "evidence": [
+        "sofranın arkasındaki yetiştirme ve taşıma emeği",
+        "ekrandaki hesabın fiziksel altyapısı",
+        "çalışma koşullarını öne çıkaran kent deneyimi"
+      ]
+    },
+    {
+      "signal": "Zaman kesintisi herkesi aynı biçimde etkilemiyor",
+      "evidence": [
+        "eğitim takvimini aksatan iklim olayları",
+        "vize randevusu yüzünden kaçırılabilen eğitim programı",
+        "fırtınayla ertelenen kamusal tören"
+      ]
+    }
+  ],
+  "digest_items": [
+    {
+      "topic": "Avrupa bütçesinde ortak yük paylaşımı",
+      "plain_summary": "Bülten, uzun vadeli bütçe görüşmelerinin Ukrayna için ortak borçlanma ve katkının nasıl bölüşüleceği konusundaki ayrılıkla kesiştiğini bildiriyordu.",
+      "residue": "Ortak karar, yükün hangi kısmını kimin taşıyacağı sorusuna takıldı.",
+      "motifs": [
+        "ortak bütçe",
+        "yük paylaşımı"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 27 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Çözüm sürecinin resmî takip dili",
+      "plain_summary": "Kurul bildirisine ilişkin bölüm, toplumsal bütünleşme çerçevesindeki çalışmaların süreceğini ve ilerlemenin kurumsal olarak değerlendirildiğini aktarıyordu.",
+      "residue": "Bir sürecin devamı, onu takip edecek yapının diliyle kayda geçirildi.",
+      "motifs": [
+        "kurumsal takip",
+        "süreç"
+      ],
+      "bucket": "repeated",
+      "source_hint": "Aposto Gündem, 27 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Oyuncak sohbetinde çocuğun korunması",
+      "plain_summary": "New York'taki düzenlemeyi anlatan haber, çocuklarla konuşabilen bağlantılı oyuncakların dolaşımına sınır getirildiğini; içerik ve veri koruma kaygılarının gerekçe gösterildiğini aktarıyordu.",
+      "residue": "Sarılınan bir nesne veri toplayabilen bir aygıta dönüştüğünde kurallar değişti.",
+      "motifs": [
+        "sohbet oyuncağı",
+        "çocuk mahremiyeti"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto Gündem, 27 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Hesaplama altyapısının yörüngeye taşınması",
+      "plain_summary": "Teknoloji bölümünde uydu ağına dayalı veri merkezi tasarısına verilen şartlı düzenleyici onay anlatılıyordu; proje çalışan bir tesis olarak sunulmadı.",
+      "residue": "Şebekenin yükünü taşıyacak yer olarak yeryüzünün dışı düşünüldü.",
+      "motifs": [
+        "yörünge",
+        "hesaplama altyapısı"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 27 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Mesajı yazmak ile göndermek arasına zaman koymak",
+      "plain_summary": "Bir mesajlaşma özelliği duyurusu, metnin önceden hazırlanıp seçilen zamanda otomatik olarak iletilmesini ele alıyordu.",
+      "residue": "Gönderilen sözün zamanı, yazıldığı andan ayrıldı.",
+      "motifs": [
+        "gecikmeli mesaj",
+        "zaman ayarı"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 27 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Zorunlu eğitimde kesintinin eşitsiz dağılması",
+      "plain_summary": "Eğitim izleme çalışmasına ayrılan bölüm, okul dışında kalan çocuklar arasında ergenlerin ağırlığını, kız çocuklarının ortaöğretime erişimindeki bölgesel farkları ve iklim olaylarının yol açtığı kesintileri aktarıyordu.",
+      "residue": "Okul takvimi herkese aynı açıklıkta işlemedi.",
+      "motifs": [
+        "eğitim eşiği",
+        "kesintili takvim"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto Gündem, 27 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Öğrencinin yolculuğunda randevu ve veri eşiği",
+      "plain_summary": "İki ayrı haber, vize muafiyeti gündemindeki kişisel verilerin korunması ölçütünü ve öğrencilerin başvuru gecikmeleri yüzünden program kaçırmaması için kurulan çalışma grubunu ele alıyordu.",
+      "residue": "Bir eğitim imkânı, ders başlamadan önce randevu ve kural kapısından geçiyordu.",
+      "motifs": [
+        "randevu",
+        "hareket hakkı"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 27 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Taş, bronz ve kapıyla kırk yıllık pratiğe dönüş",
+      "plain_summary": "Sergi notunda yeni resim, kapı ve seramiklerin daha önce gösterilen bronzlarla ve doğal monolitlerle aynı mekânda buluştuğu anlatılıyordu.",
+      "residue": "Eski iş yeni üretimin yanında yeniden okunacak bir yere geçti.",
+      "motifs": [
+        "monolit",
+        "kapı",
+        "yeniden sergileme"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 27 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Bir solo albümün uzun aradan sonra üçlemeye dönmesi",
+      "plain_summary": "Müzik haberi, Atlas Sound'un uzun süre sonra yayımlanan albümünü önceki iki işle birlikte okuyor, çok sayıda çalgı ve sesin aynı müzisyenden geldiğini not ediyordu.",
+      "residue": "Uzun ara, yarım kalan diziyi yeniden kapatan bir parçaya dönüştü.",
+      "motifs": [
+        "uzun ara",
+        "müzik arşivi"
+      ],
+      "bucket": "repeated",
+      "source_hint": "Aposto Gündem, 27 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Hava koşullarının tören takvimini değiştirmesi",
+      "plain_summary": "Bülten, New York'taki kamusal geçit töreninin fırtına nedeniyle ertelendiğini aktarıyordu.",
+      "residue": "Kentin ortak ritmi, programın değil havanın izin verdiği güne kaydı.",
+      "motifs": [
+        "kamusal tören",
+        "ertelenen gün"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 27 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Şiddete karşı kamusal koruma talebi",
+      "plain_summary": "Bülten, 25 Kasım'da Türkiye'nin farklı şehirlerinde yapılan eylemleri ve kamu politikalarının şiddeti önlemedeki rolüne yönelik eleştirileri aktarıyordu.",
+      "residue": "Tekil deneyimlere indirgenmeyen bir talep kamusal alanda dile geldi.",
+      "motifs": [
+        "koruma",
+        "kamusal ses"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto Gündem, 26 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Libya'yla temasın birden çok siyasi kanala yayılması",
+      "plain_summary": "Dış politika bölümü, Ankara'nın Trablus'taki ilişkilerinin yanında Libya'nın doğusundaki yönetimle temas kurmasını ele alıyordu.",
+      "residue": "Aynı ülkeye açılan diplomatik kapılar birden fazlaydı.",
+      "motifs": [
+        "diplomatik temas",
+        "çift kanal"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 26 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Liman ve demiryolunun tek lojistik ağda düşünülmesi",
+      "plain_summary": "Lojistik raporu, limanların demiryolu ve üretim bölgelerine bağlanmasını, sınır ve gümrük işlemlerinde veri paylaşımını öneriyordu.",
+      "residue": "Malın yolu, taşıtlar kadar evrak ve veri akışıyla da çizildi.",
+      "motifs": [
+        "liman",
+        "lojistik veri"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 26 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Sohbet içinde kurulan aracın masaüstüne taşınması",
+      "plain_summary": "Bir ürün duyurusu, yapay zekâ sohbetinde oluşturulan etkileşimli araçların masaüstünde ayrı uygulama olarak açılabilmesini anlatıyordu.",
+      "residue": "Bir konuşmanın içinde başlayan araç, penceresinden çıkıp ayrı bir nesne oldu.",
+      "motifs": [
+        "masaüstü",
+        "etkileşimli araç"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 26 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Hizmet kesintisinden sonra dayanıklılığa ayrılan öncelik",
+      "plain_summary": "Teknoloji bölümünde bir bulut hizmeti kesintisinin ardından arıza önleme ve hizmeti geri getirme çalışmalarının öne alındığı aktarılıyordu.",
+      "residue": "Arayüz geri geldiğinde onarım işi bitmiş değildi.",
+      "motifs": [
+        "hizmet sürekliliği",
+        "onarım"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 26 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Tümüyle yapay üretim için müzik kataloğu sınırı",
+      "plain_summary": "Bir müzik platformuna ilişkin haber, tümüyle yapay zekâ araçlarıyla üretilen parçaların katalogda nasıl ele alınacağını anlatıyordu.",
+      "residue": "Dinleyiciye ulaşmadan önce parçanın nasıl üretildiğine dair bir eşik kondu.",
+      "motifs": [
+        "müzik kataloğu",
+        "üretimin kökeni"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 26 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Çocuk edebiyatı için ayrı bir ödül alanı",
+      "plain_summary": "Kültür bölümü, çocuk edebiyatına ayrılan Booker ödülünün ilk kısa listesini aktarıyordu.",
+      "residue": "Yetişkin kataloğunun kenarında kalan okuma biçimine ayrı bir yer açıldı.",
+      "motifs": [
+        "çocuk edebiyatı",
+        "seçki"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 26 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Sergi değerlendirmesinde ziyaretçi oyunun rolü",
+      "plain_summary": "Venedik Bienali haberinde hem ana seçkiden bir sanatçıya hem ulusal pavyona verilen ziyaretçi ödülleri anlatılıyordu.",
+      "residue": "Serginin kaydı yalnız düzenleyicinin değil onu gezenlerin seçimiyle tutuldu.",
+      "motifs": [
+        "izleyici oyu",
+        "sergi belleği"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 26 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Kentte çalışmayı güvence ve kariyer üzerinden değerlendirmek",
+      "plain_summary": "Uluslararası çalışan anketine ayrılan bölüm, İstanbul'daki deneyimi ücret, çalışma koşulları, iş güvencesi ve kariyer beklentileri üzerinden ele alıyordu.",
+      "residue": "Aynı kent, orada çalışan kişi için koşulların toplamı olarak ölçüldü.",
+      "motifs": [
+        "çalışan gözü",
+        "kent deneyimi"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 26 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Günlük sıcaklık sıçraması ile uzun dönem hedefini ayırmak",
+      "plain_summary": "Bülten, küresel günlük ortalamanın sanayi öncesine göre art arda birkaç gün yüksek seyrettiğini bildirdi. Günlük anomali, uzun dönem iklim eşiğinin kalıcı aşımı olarak yorumlanmadı.",
+      "residue": "Günlük sıcaklık izi, iklimin uzun zaman ölçeğiyle karıştırılmadı.",
+      "motifs": [
+        "günlük anomali",
+        "iklim zamanı"
+      ],
+      "bucket": "repeated",
+      "source_hint": "Aposto Gündem, 26 Kasım haber seçkisi"
+    },
+    {
+      "topic": "Yerel üretim için pazar ve dayanışma",
+      "plain_summary": "Carlo Petrini anmasına ayrılan bölüm, İstanbul'da şef, gönüllü ve küçük üreticileri bir araya getiren programı; Yeryüzü Pazarları, biyoçeşitlilik ve üreticinin emeğinin karşılığı üzerinden anlatıyordu.",
+      "residue": "Bir tarifin geleceği, onu yetiştiren ve pazara taşıyanların çalışmasına bağlandı.",
+      "motifs": [
+        "yerel tohum",
+        "üretici pazarı"
+      ],
+      "bucket": "main",
+      "source_hint": "apéro, gastronomi ve yemek kültürü seçkisi"
+    },
+    {
+      "topic": "Farklı göç ve mutfak geleneklerinin çağdaş yorumu",
+      "plain_summary": "Şef dosyasında Meksika mutfağı ve deniz ürünleri, Japon ve Peru geleneklerini birleştiren Nikkei mutfağı ve İran sofra kültürünü çağdaş tekniklerle taşıyan örnekler vardı.",
+      "residue": "Bir mutfak geleneği yeni tezgâha geçtiğinde yalnız tarif değil misafir ağırlama biçimi de taşıdı.",
+      "motifs": [
+        "sofra kültürü",
+        "mutfakta aktarım"
+      ],
+      "bucket": "minor",
+      "source_hint": "apéro, gastronomi ve yemek kültürü seçkisi"
+    },
+    {
+      "topic": "Şarap mahzeninin bir depodan turizm mekânına dönüşmesi",
+      "plain_summary": "Bağcılık seçkisi, Riesling'e odaklanan tarihî bir üretim alanını ve yerin altında kayaya oyulmuş mahzenini deneyimin parçası olarak ele alıyordu.",
+      "residue": "Tat için gelinen mekânda kaya ve derinlik de hatırda kalıyordu.",
+      "motifs": [
+        "yeraltı mahzeni",
+        "kaya yüzeyi"
+      ],
+      "bucket": "minor",
+      "source_hint": "apéro, gastronomi ve yemek kültürü seçkisi"
+    },
+    {
+      "topic": "Seramik ambalajın el işçiliğini görünür kılması",
+      "plain_summary": "Bir içki duyurusunun tasarım bölümünde gündüz ve gece karşıtlığına dayanan kabartmalı bir şişe ve Tonalá çömlekçiliğinden gelen el işçiliği anlatılıyordu.",
+      "residue": "Kabın dokusu, içindekinden önce ele ulaştı.",
+      "motifs": [
+        "kabartma",
+        "seramik yüzey"
+      ],
+      "bucket": "minor",
+      "source_hint": "apéro, gastronomi ve yemek kültürü seçkisi"
+    },
+    {
+      "topic": "İçecek üretiminde farklı geleneklerin buluşması",
+      "plain_summary": "İskoç bir damıtımevinin köpüklü şarap üretimiyle ilişkilendirilen mayayı malt içeceğine taşıyan bir denemesi aktarılıyordu; odak yöntem tarifi değil gelenekler arası geçişti.",
+      "residue": "Başka bir içeceğin malzemesi tanıdık tat sözlüğünü yerinden oynattı.",
+      "motifs": [
+        "fermantasyon",
+        "çapraz gelenek"
+      ],
+      "bucket": "minor",
+      "source_hint": "apéro, gastronomi ve yemek kültürü seçkisi"
+    },
+    {
+      "topic": "Kör tadımda yeni kategoriye yer açılması",
+      "plain_summary": "Uluslararası bir tadım seçkisinde rakının ayrı bir kategoriye alınması, yerel bir içkiyi değerlendirme dilinin nasıl genişlediğini gösteriyordu.",
+      "residue": "Etiket kapatıldı; yine de yeniyi duymak için ayrı bir kategoriye ihtiyaç vardı.",
+      "motifs": [
+        "kör tadım",
+        "yeni kategori"
+      ],
+      "bucket": "minor",
+      "source_hint": "apéro, gastronomi ve yemek kültürü seçkisi"
+    },
+    {
+      "topic": "Tarım tedarikinin orman kaybıyla ilişkisi",
+      "plain_summary": "Sektör bölümünde bir gıda şirketinin orman kaybıyla ilişkili girdilere dair kendi ilerleme verileri vardı. Hammadde türlerine göre izlenebilirliğin aynı düzeyde olmadığı görülüyordu.",
+      "residue": "Raftaki ürün, tedarik haritasındaki boşlukları göstermiyordu.",
+      "motifs": [
+        "tedarik izi",
+        "orman sınırı"
+      ],
+      "bucket": "minor",
+      "source_hint": "apéro, gastronomi ve yemek kültürü seçkisi"
+    },
+    {
+      "topic": "Yemeğin kokusunun nefesle değişmesi",
+      "plain_summary": "Bültenin okuma notu, kokunun mutfaktan buruna ulaşması, çiğneme sırasında yeniden belirmesi ve yutma sonrasındaki algıyla ilgili bir yazıyı tanıtıyordu. Bağlantıdaki yazı yeniden okunmadı.",
+      "residue": "Bir lokmanın duyusal süresi ağza girip çıkmasıyla bitmedi.",
+      "motifs": [
+        "nefes",
+        "koku izi"
+      ],
+      "bucket": "minor",
+      "source_hint": "apéro, gastronomi ve yemek kültürü seçkisi"
+    },
+    {
+      "topic": "Sofranın sergi mekânına taşınması",
+      "plain_summary": "Gastronomi ajandasında, sonbahar menüsünü bir sergiyle birleştiren akşam ve Ege'nin farklı mutfaklarını ortak menüde buluşturan başka bir örnek vardı.",
+      "residue": "Menü geçici bir sergi düzeni gibi kuruldu.",
+      "motifs": [
+        "ortak mutfak",
+        "geçici sofra"
+      ],
+      "bucket": "minor",
+      "source_hint": "apéro, gastronomi ve yemek kültürü seçkisi"
+    },
+    {
+      "topic": "Mutfak emeğinin gösteri kültüründe tanınması",
+      "plain_summary": "Şeflerin restoran, televizyon ve rehberler arasında nasıl görünürlük kazandığına ilişkin kısa haberler, mutfakla medya arasındaki ilişkiyi taşıyordu.",
+      "residue": "Mutfaktaki iş başka bir mecrada simgeye dönüştü.",
+      "motifs": [
+        "medya görünürlüğü",
+        "mutfak emeği"
+      ],
+      "bucket": "minor",
+      "source_hint": "apéro, gastronomi ve yemek kültürü seçkisi"
+    },
+    {
+      "topic": "Okulda cihaz kullanımının ortak kurala bağlanması",
+      "plain_summary": "Bülten, Danimarka'da okul düzeyinde cep telefonu ve benzer cihazların kullanımına sınır getirilmesini aktarıyordu. Düzenleme, dikkati yalnız öğrencinin seçimi olarak değil okul ortamının özelliği olarak ele alıyordu.",
+      "residue": "Dikkatin koşulları, tek tek öğrenciler yerine sınıf için tartışıldı.",
+      "motifs": [
+        "sınıf dikkati",
+        "cihaz sınırı"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto Gündem, 25 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Oyun girdisinin bedensel arayüzle değişmesi",
+      "plain_summary": "Teknoloji bölümü, beyin-bilgisayar arayüzüyle oyun kontrolü gösteren bir örnek aktarıyordu; kişisel sağlık ve cihaz ayrıntıları dışarıda bırakıldı.",
+      "residue": "Komut ekrana ulaştı; onu ileten alışıldık el hareketi değişti.",
+      "motifs": [
+        "oyun girdisi",
+        "beden arayüzü"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 25 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Otomatik kod incelemesinde ekip kurallarının rolü",
+      "plain_summary": "Bir yazılım aracı duyurusu, önerilen kod değişikliklerini kontrol eden otomasyonu ekibin belirlediği kurallarla ilişkilendiriyordu.",
+      "residue": "Ölçütü yazan ekiple ölçütü uygulayan araç birbirinden ayrıldı.",
+      "motifs": [
+        "ekip kuralları",
+        "kod inceleme"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 25 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "İşyerinde yapay zekâ kullanımı ile eğitim ihtiyacı arasındaki fark",
+      "plain_summary": "Çok ülkeli bir ankette, Türkiye'de katılımcılar arasında sık kullanımın daha fazla teknik eğitim beklentisiyle yan yana bulunduğu aktarılıyordu.",
+      "residue": "Bir aracı her gün kullanmak, onu öğrendiğini düşünmekle aynı şey değildi.",
+      "motifs": [
+        "teknik eğitim",
+        "gündelik otomasyon"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 25 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "İşten ayrılma sıklığının çalışma sürekliliğine etkisi",
+      "plain_summary": "Bir insan kaynakları araştırması, farklı sektörlerde sık çalışan değişimini toplu düzeyde ele alıyordu; tekil işyeri ve çalışan verileri alınmadı.",
+      "residue": "Kadro listesi korunurken onu dolduran kişiler değişiyordu.",
+      "motifs": [
+        "kadro devri",
+        "işin sürekliliği"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 25 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Kadınlara yönelik ölümcül şiddetin kayıt altına alınması",
+      "plain_summary": "Uluslararası rapora ayrılan bölüm, kadınlar ve kız çocuklarına yönelik ölümcül şiddeti toplu ölçekte ele alıyordu. Kişisel vakalar ve şiddet ayrıntıları özetlenmedi.",
+      "residue": "Kayıtlar tekil olayların ardındaki sürekliliği görünür kıldı.",
+      "motifs": [
+        "toplu kayıt",
+        "kamusal koruma"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto Gündem, 25 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Çatışma sonrasında çevresel yükün sürmesi",
+      "plain_summary": "Gazze hakkında aktarılan çevre raporu, yıkım ve altyapı kaybının hava, su ve toprak üzerindeki etkilerinin onarımdan önce halk sağlığı sorunu olarak kalacağını belirtiyordu.",
+      "residue": "Bir olayın bitişi, bıraktığı çevresel yükün bitişi değildi.",
+      "motifs": [
+        "toprak belleği",
+        "onarım süresi"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto Gündem, 25 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Arşiv görüntüsünün resim ile hareket arasında dolaşması",
+      "plain_summary": "Bir sergi notu, aidiyet ve yer değiştirmeyi kişisel arşivi analog ve dijital görüntüye dönüştürerek ele alan, resimle video arasında ilerleyen bir seçkiyi anlatıyordu.",
+      "residue": "Aynı görüntü resimde durdu, videoda yeniden zaman kazandı.",
+      "motifs": [
+        "arşiv görüntüsü",
+        "hareketli yüzey"
+      ],
+      "bucket": "repeated",
+      "source_hint": "Aposto Gündem, 25 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Festival seçkisinin ikinci kentte yeniden izlenmesi",
+      "plain_summary": "Gündem bülteninde İstanbul'daki Locarno gösterimleri yeniden geçti; farklı festival bölümlerinden gelen filmler yerel seyirciyle buluşacak bir programda toplanıyordu.",
+      "residue": "Bir festivalin bakışı başka bir salona taşındı.",
+      "motifs": [
+        "festival dolaşımı",
+        "yeni seyirci"
+      ],
+      "bucket": "repeated",
+      "source_hint": "Aposto Gündem, 25 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Barış sürecinde siyasi izleme ve süreklilik",
+      "plain_summary": "Siyaset bölümündeki açıklamalar, barış görüşmelerinin kırılganlığı ile izleme mekanizmalarına katılım konusundaki ayrılıkları gündeme getiriyordu.",
+      "residue": "Açıklama yapmak ile görüşmenin sürebileceği bir alan kurmak ayrı işlerdi.",
+      "motifs": [
+        "siyasi izleme",
+        "süreklilik"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 25 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Genç dansçıların repertuvarı yeniden yorumlaması",
+      "plain_summary": "Nederlands Dans Theater'ın genç topluluğunun programı, üç farklı koreografın mevcut yapıtlarını yeni kuşağın yorumuyla bir araya getiriyordu.",
+      "residue": "Bir hareket, başka bir bedene geçtiğinde miras olarak kalırken biçim değiştirdi.",
+      "motifs": [
+        "aktarılan hareket",
+        "repertuvar"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto İstanbul, şehir kültürü ve sahne sanatları seçkisi"
+    },
+    {
+      "topic": "Dijital sergiden geçici fiziksel buluşmaya",
+      "plain_summary": "Mamut Limited seçkisi, çevrimiçi sunumun ardından görsel sanatlar, tasarım, müzik ve modada çalışan 22 üreticiyi fiziksel bir sergide buluşturuyordu.",
+      "residue": "Ekranda yan yana gelen işler mekânda birbirine komşu oldu.",
+      "motifs": [
+        "geçici sergi",
+        "çapraz disiplin"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto İstanbul, şehir kültürü ve sahne sanatları seçkisi"
+    },
+    {
+      "topic": "Sahne oyununun sinema perdesindeki ikinci seyircisi",
+      "plain_summary": "National Theatre Live seçkisi, Britanya sahnesinin iki farklı oyununun İstanbul'da kayıt üzerinden gösterilmesini duyuruyordu.",
+      "residue": "Oyuncunun jesti salon değiştirdi; onu izleyen topluluk da değişti.",
+      "motifs": [
+        "kayıtlı sahne",
+        "ikinci seyirci"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto İstanbul, şehir kültürü ve sahne sanatları seçkisi"
+    },
+    {
+      "topic": "Bauhaus mirasını sanatçının yetiştiği ortamdan okumak",
+      "plain_summary": "Moholy-Nagy anması, sanatçının Bauhaus çalışmalarını Macaristan'daki biçimlenme yılları ve dönemin kültürel ortamıyla birlikte ele alıyordu.",
+      "residue": "Okulun yöntemi, öğretmenin yetiştiği çevreyle birlikte okundu.",
+      "motifs": [
+        "atölye",
+        "sanat eğitimi"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto İstanbul, şehir kültürü ve sahne sanatları seçkisi"
+    },
+    {
+      "topic": "Festival filmlerinin yerel dolaşıma girmesi",
+      "plain_summary": "Locarno seçkisinden on filmin İstanbul'da yerel prömiyer yapacağı, kurmaca ve belgesellerin birlikte gösterileceği aktarılıyordu.",
+      "residue": "Festival seçkisi başka bir kentin ortak izleme alanına taşındı.",
+      "motifs": [
+        "film dolaşımı",
+        "ortak izleme"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto İstanbul, şehir kültürü ve sahne sanatları seçkisi"
+    },
+    {
+      "topic": "Neon, korku sineması ve canlı çalgıların birleşmesi",
+      "plain_summary": "Carpenter Brut bölümü, eski korku filmlerinin görsel dilini çağdaş elektronik ritim, canlı gitar ve davulla birleştiren sahne işine odaklanıyordu.",
+      "residue": "Bir film estetiği, ışık ve sesle konser mekânını kapladı.",
+      "motifs": [
+        "neon",
+        "canlı ritim"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto İstanbul, şehir kültürü ve sahne sanatları seçkisi"
+    },
+    {
+      "topic": "Bir yazarı ses, film ve konuşmayla yeniden okumak",
+      "plain_summary": "John Berger anması, kısa filmi, seçilmiş metinlerin seslendirilmesini ve sanat ile edebiyat üzerine konuşmaları aynı programa yerleştiriyordu.",
+      "residue": "Metin sayfadan ayrılıp birden çok sese dağıldı.",
+      "motifs": [
+        "sesli okuma",
+        "kısa film"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto İstanbul, şehir kültürü ve sahne sanatları seçkisi"
+    },
+    {
+      "topic": "Edebî sürgünün şiir ve mekânla hatırlanması",
+      "plain_summary": "Robert Montgomery'nin tabloları ve ışık işleri, James Baldwin'in İstanbul yıllarını dil, edebî sürgün ve kentin ortak hayal gücüyle ilişkilendiriyordu.",
+      "residue": "Sürgünün izi haritada değil, yazı ve ışığın mekânda bıraktığı etkide arandı.",
+      "motifs": [
+        "ışıklı yazı",
+        "kent belleği"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto İstanbul, şehir kültürü ve sahne sanatları seçkisi"
+    },
+    {
+      "topic": "Oz'da iyi ve kötü adları sabitlenmeden önce",
+      "plain_summary": "Müzikal duyurusu, tanıdık hikâyeyi iki kadının ilişkisinden ve ahlaki etiketlerini henüz edinmedikleri dönemden ele alıyordu.",
+      "residue": "Bir hikâye, etiketin kendisinden önceki ilişkiyi geri çağırdı.",
+      "motifs": [
+        "yeniden anlatım",
+        "değişen rol"
+      ],
+      "bucket": "repeated",
+      "source_hint": "Aposto İstanbul, şehir kültürü ve sahne sanatları seçkisi"
+    },
+    {
+      "topic": "Yeni mezunların işlerine ortak sergi alanı",
+      "plain_summary": "BASE seçkisi, farklı şehir ve okullardan yeni mezunların animasyon, seramik, resim ve mimarlık gibi alanlardaki işlerini birlikte gösteriyor; eski katılımcılara da dönüyordu.",
+      "residue": "İlk sergi ile sonraki üretimler aynı on yıllık çizgiye yerleşti.",
+      "motifs": [
+        "ilk sergi",
+        "kuşak arşivi"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto İstanbul, şehir kültürü ve sahne sanatları seçkisi"
+    },
+    {
+      "topic": "Savaş kaybını kayıtların gösterebildiği kadarıyla okumak",
+      "plain_summary": "Bülten, savaşın insani maliyetini ölüm belgelerinden çıkarmaya çalışan araştırmayı aktarıyor; kapsama, kayıp kayıt ve geç kayıt sorunları nedeniyle kesin sayıdan ayrılması gerektiğini belirtiyordu.",
+      "residue": "Kayıtlar uzun bir kayıp çizgisini görünür kıldı, fakat boşluklarını da korudu.",
+      "motifs": [
+        "eksik kayıt",
+        "insani maliyet"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto Gündem, 24 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Türkiye'deki çözüm tartışmasının sivil boyutu",
+      "plain_summary": "Siyasi açıklamalar, devam eden süreci sivil siyasetin rolü, anayasa tartışması ve yasal güvenceler üzerinden farklı biçimlerde çerçeveliyordu.",
+      "residue": "Bir sürecin neyi değiştireceği, onu tarif eden hukuk dilinde tartışıldı.",
+      "motifs": [
+        "sivil siyaset",
+        "yasal güvence"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 24 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Barış için anayasa metninin yeniden yazılması",
+      "plain_summary": "Ermenistan'ın paylaştığı taslağın Azerbaycan'la barış görüşmelerindeki anayasal anlaşmazlığı gidermeyi amaçladığı, fakat içeride onay ve destek gerektirdiği aktarılıyordu.",
+      "residue": "Bir önsöze yapılan müdahale barışın kurumsal eşiğine dönüştü.",
+      "motifs": [
+        "anayasa önsözü",
+        "onay eşiği"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 24 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Genç kullanıcıları koruyan platform tasarımı",
+      "plain_summary": "Okul yönetimleriyle bir video platformu arasındaki davalarda, olası uzlaşmanın genç kullanıcı deneyimine ilişkin tasarım değişikliklerini de içerebileceği bildiriliyordu.",
+      "residue": "Sorun yalnız kullanım süresi değil, bakışı orada tutan tasarımdı.",
+      "motifs": [
+        "tasarım sorumluluğu",
+        "gençlik"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto Gündem, 24 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Veri merkezlerinin elektrik yükü",
+      "plain_summary": "Bülten, veri merkezi talebinin yükselmesiyle elektrik üretiminin nasıl karşılanacağının emisyon görünümünü değiştirebileceğine dair bir projeksiyon aktarıyordu.",
+      "residue": "Hesaplamanın büyümesi elektrik şebekesinde maddi bir yük bıraktı.",
+      "motifs": [
+        "elektrik şebekesi",
+        "hesaplama yükü"
+      ],
+      "bucket": "main",
+      "source_hint": "Aposto Gündem, 24 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Mesajlaşma grubunun küçük topluluktan büyük kalabalığa geçmesi",
+      "plain_summary": "Bir uygulamanın sıradan grup kapasitesini büyütmesiyle sohbet odası ve geniş topluluk duyurusu arasındaki ölçek farkı tekrar gündeme geldi.",
+      "residue": "Aynı sohbet odası daha fazla kişinin sesini taşımak zorunda kaldı.",
+      "motifs": [
+        "grup ölçeği",
+        "kalabalık ses"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 24 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Temassız ödemenin gündelik alışkanlığa dönüşmesi",
+      "plain_summary": "Toplu ödeme verilerine ayrılan bölüm, internet ve mağaza içi kart kullanımını karşılaştırarak mağazada temassız hareketin yaygınlığını anlatıyordu.",
+      "residue": "Ödeme, bakıştan bile kısa süren bir el hareketine sığdı.",
+      "motifs": [
+        "temassız jest",
+        "gündelik altyapı"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 24 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Film dekorunun dolaşımdaki bir nesneye dönüşmesi",
+      "plain_summary": "Sinemada kullanılan özgün bir aracın müze gösteriminden koleksiyon dolaşımına geçişi, sahne nesnesinin çekim sonrasındaki hayatını gündeme getirdi.",
+      "residue": "Kadrajdan çıkan nesne sergiye taşındı; eski işlevi hatıra olarak kaldı.",
+      "motifs": [
+        "sahne nesnesi",
+        "müze belleği"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 24 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Tarihî geminin deniz altında yeni bir işlev edinmesi",
+      "plain_summary": "Gündem seçkisi, seyahat bülteninde de geçen gemi gövdesinin yapay resife dönüştürülmesini, yeni yaşam yüzeyi ve denizcilik belleği açısından taşıyordu.",
+      "residue": "Yolculuk için yapılmış metal, başka canlıların yerleşeceği bir yüzey oldu.",
+      "motifs": [
+        "yapay resif",
+        "işlev değişimi"
+      ],
+      "bucket": "repeated",
+      "source_hint": "Aposto Gündem, 24 Kasım geniş haber seçkisi"
+    },
+    {
+      "topic": "Otobüs renginin ortak kent hafızasına dönüşmesi",
+      "plain_summary": "Yeni otobüslerin renginin bir katılım anketiyle seçildiği ve geçmiş filoyla özdeşleşen kırmızının öne çıktığı aktarılıyordu.",
+      "residue": "Eski renk yeni araçta bir kent hatırası olarak döndü.",
+      "motifs": [
+        "kırmızı otobüs",
+        "ortak seçim"
+      ],
+      "bucket": "minor",
+      "source_hint": "Aposto Gündem, 24 Kasım geniş haber seçkisi"
+    }
+  ],
+  "channels": {
+    "gmail": {
+      "scanned": 11,
+      "full_body": 11,
+      "snippet_or_subject": 0,
+      "main_item_ids": [
+        "main-2026-11-27-01",
+        "main-2026-11-27-02",
+        "main-2026-11-27-03",
+        "main-2026-11-27-04",
+        "main-2026-11-27-05",
+        "main-2026-11-27-06"
+      ]
+    },
+    "curated_rss": {
+      "sources_checked": 2,
+      "recent_items": 0,
+      "health": "all_reachable_no_recent_items"
+    }
+  },
+  "external_weather": "Aynı okuma penceresinde konuşmak, duyulmak ve dinlemek farklı işlerdi. Bir yanda ortak talebi duyuran meydanlar, çocuğu koruyacak kurumlar ve itirazı kapatan iktidar dili vardı; öte yanda bir masada konuşmadan da varlık gösteren kişiler. Mutfak, dans ve arşiv yazıları, bir şeyi korumanın onu kimin yetiştirdiği, devraldığı veya sakladığıyla ilgili olduğunu gösterdi.",
+  "possible_influence_on_ucu_beden": "Bir masada şükranı doğrudan söylemek yerine cümlelerin arasına nefesi, rengi ve başka insanların sesini yerleştirmek mümkün. Aynı sahnede kimin konuşmayı bitirme yetkisine sahip olduğunu, kimin duyulmak için başkasıyla birlikte konuştuğunu ayırmak da beden ile kamusal söz arasındaki ilişkiyi açabilir.",
+  "discarded_summary": "Ham e-posta gövdeleri, uzun alıntılar, adresler, bağlantılar, doğrulama, hesap güvenliği, fatura, kişisel işlem ve takip bilgileri yayımlanmadı. Kişisel iddialar, vaka ve operasyon ayrıntıları, fiyatlar, kampanyalar, piyasa verileri ve bilet bilgileri dışarıda bırakıldı.",
+  "motifs": [
+    "ortak masa",
+    "nefes",
+    "itiraz alanı",
+    "meydan",
+    "kesintili takvim",
+    "monolit"
+  ],
+  "possible_memory_traces": [
+    "Masada başkalarının sesini duyan katılımcı tanık.",
+    "Bir kentten ötekine taşınan ortak koruma talebi.",
+    "Kostümün ağırlığıyla değişen sahne girişi.",
+    "Yazma ânından ayrılan gönderim zamanı."
+  ],
+  "validation": {
+    "json_parse": "passed",
+    "markdown_first_section": "passed",
+    "count_consistency": "passed",
+    "public_safety": "passed",
+    "private_inventory_ignored": true
+  },
+  "automation": {
+    "id": "ucu-beden-daily-codex-external-intake",
+    "run_date": "2026-11-27",
+    "window_hours": 72
+  }
+}
