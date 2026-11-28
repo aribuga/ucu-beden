@@ -11,7 +11,7 @@ import { generateVisualImage } from "../lib/openaiImageProvider";
 import { todayInIstanbul } from "../lib/scheduler";
 import type { DreamRecord, VisualKind, VisualMetadata } from "../lib/types";
 import { createDreamVisual, createPoemVisual } from "../lib/visualEngine";
-import { reconcileVisualImagePath, visualImageIsUsable } from "../lib/visualFileStatus";
+import { findExistingVisualImage, reconcileVisualImagePath, visualImageIsUsable } from "../lib/visualFileStatus";
 
 type BackfillStats = {
   total: number;
@@ -65,10 +65,14 @@ async function wait(ms: number): Promise<void> {
 }
 
 async function main(): Promise<void> {
-  await ensureDataDirs();
+
 
   const args = process.argv.slice(2);
-  const force = args.includes("--force");
+  const dryRun = args.includes("--dry-run");
+  const kindFilter = optionValue(args, "--kind");
+  if (kindFilter && !["poem", "dream"].includes(kindFilter)) throw new Error("Use --kind=poem or --kind=dream");
+  if (args.includes("--force")) throw new Error("Backfill only supports missing images");
+  if (!dryRun) await ensureDataDirs();
   const imagesOnly = args.includes("--images-only");
   const from = optionValue(args, "--from");
   const to = optionValue(args, "--to");
@@ -77,8 +81,8 @@ async function main(): Promise<void> {
   const shouldDelay = Boolean(process.env.OPENAI_API_KEY?.trim());
   const localDate = todayInIstanbul();
   const [allPoems, allDreams] = await Promise.all([listGeneratedPoems(), listDreams()]);
-  const poems = allPoems.filter((poem) => inRange(poem.date, from, to)).sort((a, b) => b.date.localeCompare(a.date));
-  const dreams = allDreams.filter((dream) => inRange(dream.date, from, to)).sort((a, b) => b.date.localeCompare(a.date));
+  const poems = allPoems.filter((poem) => (!kindFilter || kindFilter === "poem") && poem.generation?.provider === "openai" && poem.generation.surface_validation_passed === true && poem.generation.language_validation_passed === true && inRange(poem.date, from, to)).sort((a, b) => b.date.localeCompare(a.date));
+  const dreams = allDreams.filter((dream) => (!kindFilter || kindFilter === "dream") && dream.generation?.provider === "openai" && dream.generation.surface_validation_passed === true && dream.generation.language_validation_passed === true && inRange(dream.date, from, to)).sort((a, b) => b.date.localeCompare(a.date));
   const poemStats = newStats(poems.length);
   const dreamStats = newStats(dreams.length);
   let attempted = 0;
@@ -107,6 +111,21 @@ async function main(): Promise<void> {
       }
       const stored = exists ? await readJsonFile<VisualMetadata | null>(visualPath, null) : null;
       const storedReconciled = stored ? await reconcileVisualImagePath(stored) : null;
+      if (!stored && await findExistingVisualImage(date, kind)) {
+        stats.skipped += 1;
+        stats.skipped_dates.push(date);
+        return;
+      }
+      if (dryRun) {
+        if (storedReconciled?.hadUsableImage) {
+          stats.skipped += 1;
+          stats.skipped_dates.push(date);
+        } else {
+          attempted += 1;
+          console.log(JSON.stringify({ stage: "visual_backfill_item", status: "would_generate", type: kind, date }));
+        }
+        return;
+      }
       if (storedReconciled?.repaired) {
         await writeJsonFile(visualPath, storedReconciled.visual);
         await updateDream?.(storedReconciled.visual);
@@ -127,7 +146,7 @@ async function main(): Promise<void> {
         );
       }
 
-      if (storedReconciled && !force && (await visualImageIsUsable(storedReconciled.visual))) {
+      if (storedReconciled && (await visualImageIsUsable(storedReconciled.visual))) {
         stats.skipped += 1;
         stats.skipped_dates.push(date);
         return;
@@ -147,7 +166,7 @@ async function main(): Promise<void> {
         : refreshed;
       if (!stored) stats.metadata_created += 1;
 
-      const generated = await generateVisualImage(visual, { force });
+      const generated = await generateVisualImage(visual);
       await writeJsonFile(visualPath, generated);
       await updateDream?.(generated);
       attempted += 1;
@@ -198,7 +217,7 @@ async function main(): Promise<void> {
     JSON.stringify(
       {
         status: poemStats.errors + dreamStats.errors ? "completed_with_failures" : "completed",
-        force,
+        dry_run: dryRun,
         images_only: imagesOnly,
         from: from ?? null,
         to: to ?? null,

@@ -1,3 +1,4 @@
+import { providerFailure, retryDelay } from "./providerFailure";
 import { createHash } from "node:crypto";
 import { promises as fs } from "node:fs";
 import path from "node:path";
@@ -173,12 +174,10 @@ async function requestImage(args: {
       return Buffer.from(encoded, "base64");
     }
 
-    const message = body.error?.message ?? `OpenAI image generation returned ${response.status}`;
-    const retryable = response.status === 429 || response.status >= 500;
-    if (!retryable || attempt === RETRY_DELAYS_MS.length) {
-      throw new Error(message);
-    }
-    await new Promise((resolve) => setTimeout(resolve, RETRY_DELAYS_MS[attempt]));
+    const failure = response.ok ? "invalid_image_payload" : providerFailure(response.status, body);
+    const delay = retryDelay(response, failure, attempt + 1);
+    if (delay === null) throw new Error(`openai image HTTP ${response.status} ${failure}`);
+    await new Promise(resolve => setTimeout(resolve, delay));
   }
   throw new Error("OpenAI image generation ended without an image.");
 }
