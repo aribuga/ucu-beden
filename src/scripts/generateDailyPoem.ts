@@ -1,3 +1,4 @@
+import { confirmedMock } from "../lib/fileStorage";
 import { formatAge, nextAgeMonths } from "../lib/age";
 import {
   ensureDataDirs,
@@ -40,6 +41,7 @@ async function main(): Promise<void> {
     const digestResult = await ensureSourceDigest({ source: sources, force: args.force });
     console.log(JSON.stringify({ stage: "source_digest", status: digestResult.status, date, provider: digestResult.digest.provider, safety_valid: digestResult.digest.safety.valid }));
     const existingPoem = await readJsonFile<DailyPoem | null>(poemPath, null);
+    if (existingPoem && confirmedMock(existingPoem)) throw new Error("Existing record quarantined: " + existingPoem.date);
     if (existingPoem) {
       if (!(await pathExists(`${storagePaths.dailyLife}/${date}.json`))) {
         const [state, personality] = await Promise.all([readState(), readPersonalitySettings()]);
@@ -95,6 +97,8 @@ async function main(): Promise<void> {
   }
 
   const existingPoem = args.force ? await readJsonFile<DailyPoem | null>(poemPath, null) : null;
+
+  if (existingPoem && confirmedMock(existingPoem)) throw new Error("Historical quarantine: " + date);
 
   const [world, previousState, inputAnalysis, sources, personalitySettings] = await Promise.all([
     readWorld(),

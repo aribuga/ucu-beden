@@ -1,3 +1,4 @@
+import { providerFailure, retryDelay } from "./providerFailure";
 import { listFiles, readJsonFile, storagePaths } from "./fileStorage";
 import { tokenize, topWords } from "./inputPoems";
 import { seededMany } from "./random";
@@ -615,9 +616,11 @@ export async function generateVisualBriefWithLLM(input: GenerateVisualBriefWithL
         })
       });
       if (!response.ok) {
-        lastError = `OpenAI visual brief returned ${response.status}`;
-        if ((response.status === 429 || response.status >= 500) && attempt < 3) {
-          await new Promise((resolve) => setTimeout(resolve, 1000 * attempt));
+        const failure = providerFailure(response.status, await response.json().catch(() => null));
+        lastError = `openai visual_brief HTTP ${response.status} ${failure}`;
+        const delay = retryDelay(response, failure, attempt);
+        if (delay !== null) {
+          await new Promise((resolve) => setTimeout(resolve, delay));
           continue;
         }
         break;

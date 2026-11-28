@@ -1,8 +1,8 @@
+import { confirmedMock } from "../lib/fileStorage";
 import { createDailyLifeRecord } from "../lib/dayStateEngine";
 import { generateDream } from "../lib/dreamEngine";
 import {
   ensureDataDirs,
-  pathExists,
   readDailyLife,
   readJsonFile,
   readPersonalitySettings,
@@ -26,43 +26,42 @@ async function main(): Promise<void> {
   const dreamPath = `${storagePaths.dreams}/${sourceDate}.json`;
   const visualPath = `${storagePaths.visuals}/${sourceDate}-dream.json`;
 
-  if (!args.force && (await pathExists(dreamPath))) {
-    const existingDream = await readJsonFile<DreamRecord | null>(dreamPath, null);
-    if (existingDream) {
-      const refreshedVisual = createDreamVisual(existingDream);
-      const storedVisual = await readJsonFile<typeof refreshedVisual | null>(visualPath, null);
-      const preparedVisual = await reconcileVisualImagePath(
-        storedVisual
-          ? {
-              ...refreshedVisual,
-              ...storedVisual,
-              visual_prompt: refreshedVisual.visual_prompt,
-              negative_prompt: refreshedVisual.negative_prompt,
-              style_tags: refreshedVisual.style_tags
-            }
-          : refreshedVisual
-      );
-      const visual = preparedVisual.hadUsableImage
-        ? preparedVisual.visual
-        : await generateVisualImage(preparedVisual.visual);
-      await writeJsonFile(visualPath, visual);
-      console.log(
-        JSON.stringify({
-          stage: "dream_visual",
-          status: visualImageStatus(visual) === "ready" ? "ready" : "failed",
-          date: sourceDate,
-          provider: visual.provider,
-          image_status: visualImageStatus(visual),
-          error: visual.error ?? null
-        })
-      );
-    }
+  const existingDream = await readJsonFile<DreamRecord | null>(dreamPath, null);
+  if (existingDream && confirmedMock(existingDream)) throw new Error("Historical quarantine: " + sourceDate);
+  if (!args.force && existingDream) {
+    const refreshedVisual = createDreamVisual(existingDream);
+    const storedVisual = await readJsonFile<typeof refreshedVisual | null>(visualPath, null);
+    const preparedVisual = await reconcileVisualImagePath(
+      storedVisual
+        ? {
+            ...refreshedVisual,
+            ...storedVisual,
+            visual_prompt: refreshedVisual.visual_prompt,
+            negative_prompt: refreshedVisual.negative_prompt,
+            style_tags: refreshedVisual.style_tags
+          }
+        : refreshedVisual
+    );
+    const visual = preparedVisual.hadUsableImage
+      ? preparedVisual.visual
+      : await generateVisualImage(preparedVisual.visual);
+    await writeJsonFile(visualPath, visual);
+    console.log(
+      JSON.stringify({
+        stage: "dream_visual",
+        status: visualImageStatus(visual) === "ready" ? "ready" : "failed",
+        date: sourceDate,
+        provider: visual.provider,
+        image_status: visualImageStatus(visual),
+        error: visual.error ?? null
+      })
+    );
     console.log(JSON.stringify({ stage: "dream", status: "skipped", reason: "already exists", date: sourceDate }));
     return;
   }
 
   const poem = await readJsonFile<DailyPoem | null>(`${storagePaths.generatedPoems}/${sourceDate}.json`, null);
-  if (!poem) {
+  if (!poem || confirmedMock(poem)) {
     throw new Error(`Dream generation needs a completed poem for ${sourceDate}.`);
   }
 

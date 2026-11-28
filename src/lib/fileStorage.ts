@@ -1,8 +1,10 @@
+import quarantine from "../../data/settings/mock_trace_quarantine.json";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
 import type { DailyLifeRecord, DailyPoem, DreamRecord, InputPoemsAnalysis, MemoryIndex, MemoryReport, MemoryTrace, MemoryTraceFile, PersonalitySettings, RssSource, SiteSettings, SourceBundle, SourceDigestRecord, UcuBedenState, VisualMetadata, World, YearlyReport } from "./types";
 
+export const quarantinedTraceIds = new Set<string>(quarantine.trace_ids);
 export const rootDir = process.cwd();
 export const storagePaths = { poemsInput:"poems_input", world:"data/world/ucu_beden_world.json", state:"data/state/ucu_beden_state.json", generatedPoems:"data/generated_poems", dailyLife:"data/daily_life", dreams:"data/dreams", visuals:"data/visuals", yearlyReports:"data/yearly_reports", sources:"data/sources", sourceDigests:"data/source_digests", memoryTraces:"data/memory/traces", memoryIndex:"data/memory/index.json", memoryReport:"data/memory/report.json", siteSettings:"data/settings/site_settings.json", personalitySettings:"data/settings/personality_settings.json", customCode:"data/settings/custom_code.html", rssSources:"data/settings/rss_sources.json", inputAnalysis:"data/analysis/input_poems_analysis.json", vocabularyMemory:"data/analysis/vocabulary_memory.json", imageMutations:"data/analysis/image_mutations.json" } as const;
 const dataDirs=["poems_input","data/world","data/state","data/generated_poems","data/daily_life","data/dreams","data/visuals","data/yearly_reports","data/sources","data/source_digests","data/memory","data/memory/traces","data/settings","data/analysis"];
@@ -15,10 +17,14 @@ export async function readTextFile(relativePath:string):Promise<string>{return f
 export async function readOptionalTextFile(relativePath:string):Promise<string>{try{return await readTextFile(relativePath)}catch{return ""}}
 export async function writeTextFile(relativePath:string,text:string):Promise<void>{const absolutePath=resolvePath(relativePath);await fs.mkdir(path.dirname(absolutePath),{recursive:true});await fs.writeFile(absolutePath,text,"utf8")}
 export async function listFiles(relativeDir:string,extension:string):Promise<string[]>{try{const entries=await fs.readdir(resolvePath(relativeDir),{withFileTypes:true});return entries.filter((entry)=>entry.isFile()&&entry.name.toLocaleLowerCase("tr").endsWith(extension)).map((entry)=>path.join(relativeDir,entry.name).replaceAll("\\","/")).sort()}catch{return []}}
-export async function listGeneratedPoems():Promise<DailyPoem[]>{const files=await listFiles(storagePaths.generatedPoems,".json");const poems=await Promise.all(files.map((file)=>readJsonFile<DailyPoem|null>(file,null)));return poems.filter((poem):poem is DailyPoem=>poem!==null).sort((a,b)=>a.date.localeCompare(b.date))}
+export function confirmedMock(record: DailyPoem | DreamRecord): boolean {
+  const meta = record.generation;
+  return record.date >= "2026-11-21" && record.date <= "2026-11-27" && meta?.provider === "mock" && (meta.surface_validation_passed === false || meta.language_validation_passed === false);
+}
+export async function listGeneratedPoems(includeQuarantined = false):Promise<DailyPoem[]>{const files=await listFiles(storagePaths.generatedPoems,".json");const poems=await Promise.all(files.map((file)=>readJsonFile<DailyPoem|null>(file,null)));return poems.filter((poem):poem is DailyPoem=>poem!==null && (includeQuarantined || !confirmedMock(poem))).sort((a,b)=>a.date.localeCompare(b.date))}
 export async function getLatestPoem():Promise<DailyPoem|null>{return (await listGeneratedPoems()).at(-1)??null}
 export async function readDailyLife(date:string):Promise<DailyLifeRecord|null>{return readJsonFile<DailyLifeRecord|null>(`${storagePaths.dailyLife}/${date}.json`,null)}
-export async function listDreams():Promise<DreamRecord[]>{const files=await listFiles(storagePaths.dreams,".json");const dreams=await Promise.all(files.map((file)=>readJsonFile<DreamRecord|null>(file,null)));return dreams.filter((dream):dream is DreamRecord=>dream!==null).sort((a,b)=>a.date.localeCompare(b.date))}
+export async function listDreams():Promise<DreamRecord[]>{const files=await listFiles(storagePaths.dreams,".json");const dreams=await Promise.all(files.map((file)=>readJsonFile<DreamRecord|null>(file,null)));return dreams.filter((dream):dream is DreamRecord=>dream!==null && !confirmedMock(dream)).sort((a,b)=>a.date.localeCompare(b.date))}
 export async function getLatestDream():Promise<DreamRecord|null>{return (await listDreams()).at(-1)??null}
 export async function readVisual(date:string,type:"poem"|"dream"):Promise<VisualMetadata|null>{return readJsonFile<VisualMetadata|null>(`${storagePaths.visuals}/${date}-${type}.json`,null)}
 export async function readWorld():Promise<World>{return readJsonFile<World>(storagePaths.world,{home:{city:"İstanbul",district:"Kadıköy / Osmanağa",building:"apartman detayı gizli",apartment_type:"1+1",size_m2:35,building_feel:"mütevazı, yeni bir bina",rooms:{living_room:{description:"mutfakla birleşik salon",objects:["tek gri koltuk","üzerinde mavi bir figür olan halı","bilgisayar"],habits:["koltukta uzanmayı seviyor"]},bedroom:{description:"oldukça küçük yatak odası",objects:["çift kişilik sayılabilecek küçük bir yatak"],habits:["dar odada daha içe kapanık şiirler yazıyor"]}}},walking_routes:[]})}
@@ -31,7 +37,17 @@ export async function listYearlyReports():Promise<YearlyReport[]>{const files=aw
 export async function listSources():Promise<SourceBundle[]>{const files=await listFiles(storagePaths.sources,".json");const sources=await Promise.all(files.map((file)=>readJsonFile<SourceBundle|null>(file,null)));return sources.filter((source):source is SourceBundle=>source!==null).sort((a,b)=>a.date.localeCompare(b.date))}
 export async function readSourceDigest(date:string):Promise<SourceDigestRecord|null>{return readJsonFile<SourceDigestRecord|null>(`${storagePaths.sourceDigests}/${date}.json`,null)}
 export async function listSourceDigests():Promise<SourceDigestRecord[]>{const files=await listFiles(storagePaths.sourceDigests,".json");const digests=await Promise.all(files.map((file)=>readJsonFile<SourceDigestRecord|null>(file,null)));return digests.filter((digest):digest is SourceDigestRecord=>digest!==null).sort((a,b)=>a.date.localeCompare(b.date))}
-export async function listMemoryTraceFiles():Promise<MemoryTraceFile[]>{const files=await listFiles(storagePaths.memoryTraces,".json");const traceFiles=await Promise.all(files.map((file)=>readJsonFile<MemoryTraceFile|null>(file,null)));return traceFiles.filter((traceFile):traceFile is MemoryTraceFile=>traceFile!==null).sort((a,b)=>a.date.localeCompare(b.date))}
+export async function listMemoryTraceFiles(): Promise<MemoryTraceFile[]> {
+  const files = await listFiles(storagePaths.memoryTraces, ".json");
+  const records = await Promise.all(files.map(file => readJsonFile<MemoryTraceFile | null>(file, null)));
+  return records.filter((file): file is MemoryTraceFile => file !== null).map(file => ({
+    ...file,
+    traces: file.traces.filter(trace => !quarantinedTraceIds.has(trace.id)).map(trace => ({
+      ...trace,
+      linked_traces: trace.linked_traces.filter(id => !quarantinedTraceIds.has(id))
+    }))
+  })).sort((a,b) => a.date.localeCompare(b.date));
+}
 export async function listMemoryTraces():Promise<MemoryTrace[]>{return (await listMemoryTraceFiles()).flatMap((traceFile)=>traceFile.traces).sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id))}
 export async function readMemoryIndex():Promise<MemoryIndex|null>{return readJsonFile<MemoryIndex|null>(storagePaths.memoryIndex,null)}
 export async function readMemoryReport():Promise<MemoryReport|null>{return readJsonFile<MemoryReport|null>(storagePaths.memoryReport,null)}

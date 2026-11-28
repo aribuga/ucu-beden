@@ -1,3 +1,4 @@
+import { providerFailure, retryDelay } from "./providerFailure";
 import { buildCompactPoemPrompt, buildOrganicFallbackTitle } from "./compactCreativePrompt";
 import {
   buildGenerationContextPacket,
@@ -5,7 +6,6 @@ import {
   formatLivedContextPacket,
   formatSurfacePolicyPacket,
   formatTitlePolicyPacket,
-  generationFallbackTerms,
   type GenerationContextPacketInput
 } from "./generationContextPacket";
 import { listGeneratedPoems } from "./fileStorage";
@@ -13,7 +13,6 @@ import { tokenize, topWords } from "./inputPoems";
 import { buildImageMutations, extractImages } from "./memoryEngine";
 import { formatMoodSentence } from "./moodSentence";
 import { analyzeGeneratedPoemLanguage, formatLanguagePolicy, formatLanguageRetryConstraints, languageMetadata } from "./languageValidator";
-import { seededMany } from "./random";
 import {
   analyzeGeneratedPoemSurface,
   formatStrictSurfaceRetryConstraints,
@@ -286,9 +285,11 @@ async function tryOpenAIPoem(context: GenerationContext, retryReport?: SurfaceVa
         })
       });
       if (!response.ok) {
-        lastError = `OpenAI returned ${response.status}`;
-        if ((response.status === 429 || response.status >= 500) && attempt < 3) {
-          await wait(1000 * attempt);
+        const failure = providerFailure(response.status, await response.json().catch(() => null));
+        lastError = `openai HTTP ${response.status} ${failure}`;
+        const delay = retryDelay(response, failure, attempt);
+        if (delay !== null) {
+          await wait(delay);
           continue;
         }
         return { poem: null, moodSentence: null, model, error: lastError };
@@ -297,8 +298,8 @@ async function tryOpenAIPoem(context: GenerationContext, retryReport?: SurfaceVa
       const text = data.output_text ?? data.output?.flatMap((item) => item.content ?? []).map((content) => content.text).filter(Boolean).join("\n") ?? null;
       if (!text?.trim()) return { poem: null, moodSentence: null, model, error: "OpenAI response had no text output" };
       const structured = parseStructuredPoemResponse(text);
-      if (!structured || typeof structured.poem !== "string" || !structured.poem.trim()) {
-        return { poem: text.trim(), moodSentence: null, model, error: null };
+      if (!structured || typeof structured.poem !== "string" || !structured.poem.trim() || typeof structured.mood_sentence !== "string") {
+        return { poem: null, moodSentence: null, model, error: "invalid_payload" };
       }
       return {
         poem: structured.poem.trim(),
@@ -307,7 +308,7 @@ async function tryOpenAIPoem(context: GenerationContext, retryReport?: SurfaceVa
         error: null
       };
     } catch (error) {
-      lastError = error instanceof Error ? error.message : "OpenAI request failed";
+      lastError = error instanceof SyntaxError ? "invalid_payload" : "transport_error";
       if (attempt < 3) await wait(1000 * attempt);
     }
   }
@@ -347,9 +348,11 @@ export async function generateTitleForPoemWithLLM(params: GenerateTitleForPoemWi
         })
       });
       if (!response.ok) {
-        lastError = `OpenAI title returned ${response.status}`;
-        if ((response.status === 429 || response.status >= 500) && attempt < 3) {
-          await wait(1000 * attempt);
+        const failure = providerFailure(response.status, await response.json().catch(() => null));
+        lastError = `openai HTTP ${response.status} ${failure}`;
+        const delay = retryDelay(response, failure, attempt);
+        if (delay !== null) {
+          await wait(delay);
           continue;
         }
         return { title: null, model, error: lastError };
@@ -384,22 +387,6 @@ export async function generateTitleForPoemWithLLM(params: GenerateTitleForPoemWi
   }
 
   return { title: null, model, error: lastError };
-}
-
-function mockPoem(context: GenerationContext): string {
-  const input = packetInput(context);
-  const packet = buildGenerationContextPacket(input);
-  const moods = Object.entries(context.mood).sort((a, b) => b[1] - a[1]).map(([key]) => turkishMoodLabels[key] ?? key);
-  const pool = generationFallbackTerms(input, 12);
-  const selected = seededMany(pool.length > 0 ? pool : moods, `${context.date}:poem-fallback`, 5);
-  return [
-    `${selected[0] ?? moods[0]} bugünün ritmini değiştirdi`,
-    `${selected[1] ?? moods[1]} dikkat alanında kısa süre kaldı`,
-    `${packet.persona_safe_lived_context.walk_pressure_effect}`,
-    `${selected[2] ?? moods[2]} doğrudan görünmeden basıncı değiştirdi`,
-    `hafıza ${selected[3] ?? moods[0]} ile eksik bir bağ kurdu`,
-    `${packet.persona_safe_lived_context.outside_openness}`
-  ].join("\n");
 }
 
 export function analyzeGeneratedPoem(text: string, context: GenerationContext): PoemAnalysis {
@@ -450,12 +437,10 @@ export async function generatePoemWithLLM(context: GenerationContext): Promise<D
     );
     openAIText = llmResult.poem?.trim();
   }
-  if (openAIText && candidateLanguageReport?.severe) {
-    llmResult = { ...llmResult, poem: null, error: "OpenAI output was rejected because it was not Turkish" };
-    openAIText = undefined;
-  }
-  const poemText = stripGeneratedSignature(openAIText || mockPoem(context));
-  const moodSentence = uniqueMoodSentence(context, openAIText ? validMoodSentence(llmResult.moodSentence) : null);
+  if (!openAIText) throw new Error(`openai poem ${context.date} ${llmResult.error ?? "invalid_payload"}`);
+  if (candidateLanguageReport?.severe || candidateReport?.severe) throw new Error(`openai poem ${context.date} validation_failed`);
+  const poemText = stripGeneratedSignature(openAIText);
+  const moodSentence = uniqueMoodSentence(context, validMoodSentence(llmResult.moodSentence));
   const recentTitles = (await listGeneratedPoems())
     .filter((poem) => poem.date !== context.date)
     .slice(-20)
@@ -478,6 +463,7 @@ export async function generatePoemWithLLM(context: GenerationContext): Promise<D
     { mode: "poem", world: context.world, repetition: context.repetition_pressure }
   );
   const languageReport = analyzeGeneratedPoemLanguage({ title, poem_text: poemText, mood_sentence: moodSentence });
+  if (surfaceReport.severe || languageReport.severe) throw new Error(`openai poem ${context.date} validation_failed`);
   return {
     date: context.date,
     title,
@@ -499,9 +485,9 @@ export async function generatePoemWithLLM(context: GenerationContext): Promise<D
       packet.persona_safe_lived_context.lived_context_effect
     ],
     generation: {
-      provider: openAIText ? "openai" : "mock",
+      provider: "openai",
       model: llmResult.model,
-      fallback_reason: openAIText ? null : llmResult.error,
+      fallback_reason: null,
       ...surfaceMetadata(surfaceReport, retryCount),
       ...languageMetadata(languageReport, languageRetryCount)
     },

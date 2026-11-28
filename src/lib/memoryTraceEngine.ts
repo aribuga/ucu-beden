@@ -1,3 +1,4 @@
+import { quarantinedTraceIds } from "./fileStorage";
 import { createHash } from "node:crypto";
 
 import {
@@ -7,6 +8,7 @@ import {
   unsafeExternalIntakeTextMatches
 } from "./codexExternalIntakeMemory";
 import {
+  confirmedMock,
   listDreams,
   listFiles,
   listGeneratedPoems,
@@ -203,7 +205,7 @@ export async function filterPublicSafeMemoryTraces(traces: MemoryTrace[], rawSou
   const [sources, externalRecords] = await Promise.all([rawSources ? Promise.resolve(rawSources) : listSources(), listCodexExternalIntakeRecords()]);
   const unsafeTerms = promptUnsafeTerms(sources);
   const externalUnsafeTerms = externalIntakeUnsafePublicTerms(externalRecords);
-  return traces.filter((trace) => publicTextUnsafeMatches(`${trace.text} ${trace.transformed_text}`, unsafeTerms, externalUnsafeTerms).length === 0);
+  return traces.filter((trace) => !quarantinedTraceIds.has(trace.id) && publicTextUnsafeMatches(`${trace.text} ${trace.transformed_text}`, unsafeTerms, externalUnsafeTerms).length === 0);
 }
 
 function stableHash(value: string): string {
@@ -609,21 +611,24 @@ async function readDailyLifeRecords(): Promise<DailyLifeRecord[]> {
 }
 
 export async function buildMemoryArchive(): Promise<MemoryArchive> {
-  const [poems, dreams, dailyLife, sources, sourceDigests, externalIntakeRecords] = await Promise.all([
-    listGeneratedPoems(),
+  const [rawPoems, dreams, dailyLife, sources, sourceDigests, externalIntakeRecords] = await Promise.all([
+    listGeneratedPoems(true),
     listDreams(),
     readDailyLifeRecords(),
     listSources(),
     listSourceDigests(),
     listCodexExternalIntakeRecords()
   ]);
+  const poems = rawPoems.filter(poem => !confirmedMock(poem));
   const poemByDate = new Map(poems.map((poem) => [poem.date, poem]));
   const dailyByDate = new Map(dailyLife.map((record) => [record.date, record]));
   const drafts: TraceDraft[] = [];
   for (const poem of poems) {
     const poemItem = poemDraft(poem);
-    const walkItem = walkDraft(poem.date, poem.walk_state, poem.mood);
     if (poemItem) drafts.push(poemItem);
+  }
+  for (const poem of rawPoems) {
+    const walkItem = walkDraft(poem.date, poem.walk_state, poem.mood);
     if (walkItem) drafts.push(walkItem);
   }
   for (const record of dailyLife) drafts.push(...dailyLifeDrafts(record));
@@ -708,7 +713,12 @@ export function previewMemoryCycleEffects(params: {
 
 export async function writeMemoryArchive(archive: MemoryArchive): Promise<void> {
   await Promise.all([
-    ...archive.trace_files.map((traceFile) => writeJsonFile(`${storagePaths.memoryTraces}/${traceFile.date}.json`, traceFile)),
+    ...archive.trace_files.map(async traceFile => {
+      const file = `${storagePaths.memoryTraces}/${traceFile.date}.json`;
+      const original = await readJsonFile<MemoryTraceFile | null>(file, null);
+      if (original?.traces.some(trace => quarantinedTraceIds.has(trace.id))) return;
+      await writeJsonFile(file, traceFile);
+    }),
     writeJsonFile(storagePaths.memoryIndex, archive.index),
     writeJsonFile(storagePaths.memoryReport, archive.report)
   ]);
@@ -825,7 +835,7 @@ export async function selectMemoryForGeneration(params: {
   const externalUnsafeTerms = externalIntakeUnsafePublicTerms(externalRecords);
   const safeForPrompt = (trace: MemoryTrace) => publicTextUnsafeMatches(trace.transformed_text, unsafeTerms, externalUnsafeTerms).length === 0;
   const limit = params.limit ?? (params.mode === "dream" ? 10 : 8);
-  const eligible = traces.filter((trace) => trace.date < params.date);
+  const eligible = traces.filter((trace) => !quarantinedTraceIds.has(trace.id) && trace.date < params.date);
   const ranked = eligible
     .filter((trace) => trace.status !== "overexposed" && safeForPrompt(trace))
     .map((trace) => ({ trace, score: retrievalScore(trace, params) }))
