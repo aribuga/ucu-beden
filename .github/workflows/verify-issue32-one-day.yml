@@ -1,0 +1,67 @@
+name: Verify one day of generation
+on:
+  push:
+    branches: ['verify/issue-32-live-20261128']
+    paths: ['.github/workflows/verify-issue32-one-day.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    if: github.event.before == '9046b10d9f219b26af02272f9d9af0e48e369971' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      DAY: '2026-11-28'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Check single-day inputs
+        run: |
+          test ! -e "data/generated_poems/$DAY.json"
+          test ! -e "data/dreams/$DAY.json"
+          jq -e 'type == "object" and length > 0' "data/external_intake/codex/json/$DAY.json" >/dev/null
+          sha256sum "data/external_intake/codex/json/$DAY.json" > "$RUNNER_TEMP/intake.sha256"
+      - name: Generate poem and image
+        env: &provider
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+          OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
+          OPENAI_IMAGE_SIZE: ${{ vars.OPENAI_IMAGE_SIZE }}
+          OPENAI_IMAGE_QUALITY: ${{ vars.OPENAI_IMAGE_QUALITY }}
+          OPENAI_IMAGE_FORMAT: ${{ vars.OPENAI_IMAGE_FORMAT }}
+          OPENAI_IMAGE_VALIDATION_ATTEMPTS: '1'
+        run: |
+          test -n "$OPENAI_API_KEY" || { echo "::error::OPENAI_API_KEY missing"; exit 1; }
+          npm run generate:today -- --date="$DAY"
+      - name: Generate dream and image
+        env: *provider
+        run: npm run generate:dream -- --date="$DAY"
+      - name: Verify outputs, intake and recall
+        if: always()
+        run: |
+          sha256sum -c "$RUNNER_TEMP/intake.sha256"
+          node --input-type=module <<'JS'
+          import fs from "node:fs";
+          import sharp from "sharp";
+          const day = process.env.DAY;
+          const read = path => JSON.parse(fs.readFileSync(path, "utf8"));
+          const banned = new Set(read("data/settings/mock_trace_quarantine.json").trace_ids);
+          const index = new Set(read("data/memory/index.json").trace_ids);
+          for (const [kind,folder] of [["poem","generated_poems"],["dream","dreams"]]) {
+            const path = "data/"+folder+"/"+day+".json";
+            if (!fs.existsSync(path)) { console.log(kind, "record missing"); process.exitCode=1; continue; }
+            const record = read(path);
+            const text = record.generation?.provider === "openai" && record.generation.surface_validation_passed === true && record.generation.language_validation_passed === true && record.date === day && (kind === "poem" || record.source_date === day);
+            const ids = record.memory_selection?.selected_trace_ids ?? [];
+            const recall = ids.length > 0 && ids.every(id => index.has(id) && !banned.has(id));
+            const visual = read("data/visuals/"+day+"-"+kind+".json");
+            const image = visual.provider === "openai" && visual.image_path && fs.existsSync("public"+visual.image_path) ? await sharp("public"+visual.image_path).metadata() : null;
+            console.log(JSON.stringify({kind,day,text,recall,count:ids.length,width:image?.width,height:image?.height,image_error:visual.error??null}));
+            if (!text || !recall || !image?.width || !image.height) process.exitCode=1;
+          }
+          JS
